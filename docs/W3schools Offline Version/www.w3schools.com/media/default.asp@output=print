@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>Web Multimedia Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>Multimedia <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="media_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3multimedia.gif" height="132" width="100" border="0" alt="Multimedia" /></td><td valign="top"><p class="tutintro">Multimedia is pictures, sound, music, animations, and videos.</p><p class="tutintro">This Multimedia tutorial you will learn how to add multimedia to your web site.</p><p class="tutintro"><a href="media_intro.asp"><b>Start learning Multimedia now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="media_intro.asp">Introduction to Multimedia</a><br />This chapter describes what multimedia is and how multimedia can be handled by web browsers.</p><p><a href="media_soundformats.asp">Sound Formats</a><br />This chapter describes the most common - or popular - sound formats.</p><p><a href="media_videoformats.asp">Video Formats</a><br />This chapter describes the most common - or popular - video formats.</p><p><a href="media_browsersounds.asp">Browser Sounds</a><br />This chapter describes how to play sounds from a web page.</p><p><a href="media_browservideos.asp">Browser Videos</a><br />This chapter describes how to play videos from a web page.</p><p><a href="media_windowsformats.asp">Windows Media Formats</a><br />This chapter describes the new Windows Media formats.</p><p><a href="media_object.asp">Object Intro</a><br />This chapter describes the object element.</p><p><a href="media_quicktime.asp">Object QuickTime</a><br />This chapter describes how to play QuickTime movies with the object element.</p><p><a href="media_realvideo.asp">Object RealMedia</a><br />This chapter describes how to play Real Audio and Real Video with the object element.</p><p><a href="media_tagref.asp">Tag Reference</a><br />The HTML multimedia tag reference.</p><p><a href="media_playerref.asp">Player Reference</a><br />The Windows Media Player reference.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="media_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

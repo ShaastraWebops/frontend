@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>Web Hosting Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Web hosting tutorial from W3Schools HTML, XHTML, XML, JavaScript, ASP, ADO, PHP, SQL, MySQL, FrontPage, Email, Perl, Domain" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>Web Hosting <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="host_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3webhosting.gif" height="132" width="100" border="0" alt="Web Hosting" /></td><td valign="top"><p class="tutintro">To make your Web site visible to the world, it has to be hosted on a Web server.</p><p class="tutintro">In this tutorial we will teach you what Web hosting is, and what Web hosting has to offer.</p><p class="tutintro"><a href="host_intro.asp"><b>Start learning about Web Hosting now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="host_intro.asp">Introduction to Web Hosting</a><br />This chapter explains how the WWW works, how you can publish your own web site, and what an Internet service provider can offer.</p><p><a href="host_providers.asp">Web Hosting Providers</a><br />This chapter explains the difference between hosting your web site on your own server and hosting it with an Internet service provider.</p><p><a href="host_domains.asp">Web Hosting Domains</a><br />This chapter explains how to register your own domain name, and how to use it as your web address.</p><p><a href="host_capacity.asp">Web Hosting Capacities</a><br />This chapter explains about disk space and traffic capacities.</p><p><a href="host_email.asp">Web Hosting Email</a><br />This chapter explains the most common e-mail services an Internet service provider offer.</p><p><a href="host_technologies.asp">Web Hosting Technologies</a><br />This chapter explains some of the most common hosting technologies.</p><p><a href="host_databases.asp">Web Hosting Databases</a><br />This chapter explains some of the most common web database technologies.</p><p><a href="host_types.asp">Web Hosting Types</a><br />This chapter explains the different types of web hosting.</p><p><a href="host_ecommerce.asp">Web Hosting E-commerce</a><br />This chapter describes e-commerce web hosting.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="host_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

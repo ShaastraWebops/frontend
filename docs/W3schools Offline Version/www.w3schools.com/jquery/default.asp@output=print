@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>jQuery Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>jQuery <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="jquery_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="120"><img src="../images/w3jquery.gif" height="132" width="100" border="0" alt="jQuery" /></td><td><p class="tutintro">jQuery is a JavaScript Library.</p><p class="tutintro">jQuery greatly simplifies JavaScript programming.</p><p class="tutintro">jQuery is easy to learn.</p></td></tr></table><h2 class="tutheader">&quot;Try it yourself&quot; Examples in Each Chapter</h2><p>With our online editor, you can edit the code, and click on a button to view the result.</p><table class="example" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h2 class="example">Example</h2><table class="example_code notranslate" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>&lt;html&gt;<p>&lt;head&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />$(document).ready(function(){<br />&nbsp; $(&quot;p&quot;).click(function(){<br />&nbsp; $(this).hide();<br />&nbsp; });<br />});<br />&lt;/script&gt;<br />&lt;/head&gt;</p><p>&lt;body&gt;<br />&lt;p&gt;If you click on me, I will disappear.&lt;/p&gt;<br />&lt;/body&gt;</p><p>&lt;/html&gt;</td></tr></table><br /><a target="_blank" class="tryitbtn" href="tryit.asp@filename=tryjquery_hide">Try it yourself &raquo;</a></td></tr></table><p><b>Click on the &quot;Try it yourself&quot; button to see how it works.</b></p><h2 class="tutheader">jQuery Examples</h2><p>Learn by examples! At W3Schools you will find a lot of jQuery examples to edit and test yourself.</p><ul><li><a href="jquery_examples.asp">jQuery Examples</a></li></ul><br /><h2 class="tutheader">jQuery References</h2><p>At W3Schools you will find a complete reference of all jQuery objects and functions.</p><ul><li><a href="jquery_ref_selectors.asp">jQuery Reference</a></li></ul><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="jquery_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

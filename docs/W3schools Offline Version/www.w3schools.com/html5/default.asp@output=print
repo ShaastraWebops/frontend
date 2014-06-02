@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>HTML5 Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>HTML5 <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="html5_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3html5.gif" height="132" width="100" border="0" alt="HTML" /></td><td valign="top"><p class="tutintro">HTML5 is the next generation of HTML.</p><p class="tutintro">This tutorial teaches you about the new features in HTML5.</p></td></tr></table><h2 class="tutheader">Examples in Each Chapter</h2><p>With our HTML editor, you can edit the HTML, and click on a button to view the result.</p><table class="example" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h2 class="example">Example</h2><table class="example_code notranslate" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>&lt;!DOCTYPE HTML&gt;<br />&lt;html&gt;<br />&lt;body&gt;<br /><br />&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;<br />&nbsp; &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; /&gt;<br />&nbsp; &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;<br />&nbsp; &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;<br />Your browser does not support the video tag.<br />&lt;/video&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;</td></tr></table><br /><a class="tryitbtn" href="tryit.asp@filename=tryhtml5_video_all" target="_blank">Try it yourself &raquo;</a></td></tr></table><p><b>Click on the &quot;Try it yourself&quot; button to see how it works</b></p><p><b><a href="html5_intro.asp">Start learning HTML5 now!</a></b></p><h2 class="tutheader">HTML5 References</h2><p>At W3Schools you will find complete references about tags, standard attributes, standard events, and more.</p><p><a href="html5_reference.asp">HTML5 Tag Reference</a></p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="html5_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

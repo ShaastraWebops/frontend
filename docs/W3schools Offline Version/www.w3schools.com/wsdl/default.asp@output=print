@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>WSDL Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>WSDL <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="wsdl_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3wsdl.gif" height="132" width="100" border="0" alt="WSDL" /></td><td valign="top"><p class="tutintro">WSDL (Web Services Description Language) is an XML-based language for describing Web services and how to access them.</p><p class="tutintro"><a href="wsdl_intro.asp"><b>Start learning WSDL now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="wsdl_intro.asp">Introduction to WSDL</a><br />This introduction to WSDL explains what WSDL is.</p><p><a href="wsdl_documents.asp">WSDL Documents</a><br />This chapter explains the main parts of an WSDL document.</p><p><a href="wsdl_ports.asp">WSDL Ports</a><br />This chapter explains the WSDL port interface.</p><p><a href="wsdl_binding.asp">WSDL Binding</a><br />This chapter explains the WSDL binding interface.</p><p><a href="wsdl_uddi.asp">WSDL and UDDI</a><br />This chapter explains how UDDI (Universal Description Discovery and Integration) is integrated with WSDL.</p><p><a href="wsdl_summary.asp">WSDL Summary</a><br />This chapter contains a recommendation on what subject you should study after the WSDL tutorial.</p><hr /><img border="0" src="../images/altova_xmlspy_2011.gif" alt="XMLSPY" /><br /><p>One of our favorite tools here at W3Schools, Altova XMLSpy, includes a graphical WSDL editor with many useful features:</p><ul><li>Create, edit, visualize, and validate WSDL 1.1 and 2.0 files</li> <li>Graphical user interface with drag-and-drop functionality</li> <li>Context-sensitive windows and entry helpers</li> <li>Full validation and editing guidance</li> <li>One-click conversion between WSDL 1.1 and WSDL 2.0</li> <li>WSDL documentation generation in HTML or Word</li> <li>Graphical XML Schema editor</li> <li>SOAP client, debugger &amp; validator</li></ul><p><b><a target="_blank" href="../../www.altova.com/ref/@s=w3s_wsdl&q=xmlspy">Download a free trial to learn more</a></b></p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="wsdl_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

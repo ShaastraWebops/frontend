@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><head><title>Tryit Editor v1.4</title> <style type="text/css" style="display:none">body{color:#000000;background-color:#ffffff;margin:4px;margin-top:0px;}.maintable{width:100%;background-color:#e5eecc;color:#000000;border:solid #c3c3c3 1px;margin-left:0px;}.code_input,.result_output{border:1px solid #c3c3c3;width:100%;height:400px;background-color:#ffffff;color:#000000;}.toptext{color:#617f10;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:120%;}.result_header{color:#617f10;margin-bottom:12px;margin-top:0px;font-family:verdana;font-size:90%;}.bottomtext_div{margin-right:3px;}.bottomtext{color:#617f10;font-family:verdana;margin-bottom:0px;margin-top:6px;font-size:90%;}
+</style>
+<script type="text/javascript">function displayad()
+{
+var t=document.getElementById("pre_code").value;	
+document.getElementById("code").value=t;
+document.getElementById("adframe").src="../tryitbanner.asp@secid=tryxml&rnd=" + Math.random();
+}
+</script> </head><body><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="center"><iframe id="adframe" style="background-color:#ffffff" height="98" width="960" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" src="../tryitbanner.asp@secid=tryxml&rnd=0.5955011"></iframe></td></tr></table><table border="0" class="maintable" cellpadding="3px" cellspacing="3px"><tr><td width="50%"><form style="margin:0px" action="tryit_view.asp" method="post" target="view"><input style="margin-bottom:5px;font-family:verdana;" name="submit" type="submit" value="Edit and Click Me >>" onclick="displayad()"> <textarea class="code_input" width="100%" height="400px" id="pre_code" wrap="logical">
+<html>
+<head>
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","cd_catalog.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+x=xmlDoc.getElementsByTagName("CD");
+
+function displayCDInfo(i)
+{
+artist=(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+title=(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+year=(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+country=(x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue);
+company=(x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue);
+price=(x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue);
+txt="Artist: "+artist+"<br />Title: "+title+"<br />Year: "+year+"<br />Country: "+country+"<br />Company: "+company+"<br />Price: "+price  ;
+document.getElementById("showCD").innerHTML=txt;
+}
+</script>
+</head>
+
+<body>
+<div id='showCD'>Click on a CD to display album information.</div><br />
+<script type="text/javascript">
+document.write("<table border='1'>");
+for (var i=0;i<x.length;i++)
+  { 
+  document.write("<tr onclick='displayCDInfo(" + i + ")'>");
+  document.write("<td>");
+  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+document.write("</table>");
+</script>
+
+</body>
+</html>
+
+</textarea> <input type="hidden" name="code" id="code" /> <input type="hidden" id="bt" name="bt" /></form></td><td valign="top"><p class="result_header">Your Result:</p><iframe class="result_output" width="100%" height="400px" frameborder="0" name="view" src="tryit_view.asp@filename=tryxml_app"></iframe></td></tr><tr><td align="left" class="bottomtext">Edit the code above and click to see the result.</td><td align="right" class="bottomtext"><a style="color:#617f10" href="../default.htm">W3Schools.com</a> - Try it yourself&nbsp;</td></tr></table></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

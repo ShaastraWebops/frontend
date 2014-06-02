@@ -1,0 +1,419 @@
+<HTML>
+<HEAD>
+<TITLE>w3schools.com - General Forum</TITLE>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF>
+<FONT FACE="Arial" SIZE="2">
+<A HREF="Link Required">
+<IMG BORDER=0 SRC="URL Required" ALT="Title Required">
+</A>
+<BR>RSS Channel:
+<A HREF="index.php">w3schools.com - General Forum</A><BR>
+The complete discussion board conversation RSS Feed - General, Suggestions, Critiques</A>
+<TABLE BORDER=0>
+<TR><TD><FONT FACE="Arial" SIZE="2">Docs:</TD><TD><FONT FACE="Arial" SIZE="2">http://blogs.law.harvard.edu/tech/rss</TD></TR>
+</TABLE>
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36152">HTML - Getting Started Examples--Question on Images</A><BR>
+At: <a href="../www.w3schools.com/html/tryit.asp@filename=tryhtml_basic_img" target="_blank">w3schools HTML Basic-4 Examples--Images </a>, I noticed that the image appears to be square but the width is 104 and the height is 142. Is there a difference in size of the units or is it that they are displayed differently so the end result makes the image square?<br /><br />The info doesn't say at this point if the diminsions are pixels. Are they in pixels?<br /><br />Thanks.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36151">Group of words at the bottom of a Web Page</A><BR>
+Hello, my name is David, I'm new to this forum and all forums for that matter. Anyways I have a question I hope someone can clear up for me. <br /><br />I've noticed on a couple web pages I've visited there is this big list of words and phrases all in a group at the bottom of the page. They look like keywords. What is this list of words/phrase's all about?<br /><br />I have an idea of what they are. I have heard that search engine's don't like it when you use keywords that are not within the content of your page. I'm thinking maybe they use this big group of words/phrase's so they can list keywords in there meta tag's  that maybe have a higher CPC percentage, or lower competition. And the search engine's wont penalize them for it, kind of like a loop-hole. I could be way off base since I really have no clue.<br /><br />If anyone knows the answer, I'd very much like to know. thanks a lot!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36145">It's Live: CyberStream!</A><BR>
+I'm excited to announce that my project is finally online...no, it isn't officially launched yet, but I want you guys to be the first ones to test it. The address is <i>cyberstream dot us</i>. I am intentionally not linking to it because I don't want robots to find it yet. <br /><br />Everything on the website right now is dummy data, so feel free to post test comments, etc. I will truncate all of the tables immediately before the website is launched (besides the table that contains users). Ignore the watermarks and website logos. They were for previous ideas I had, and I haven't created a new logo yet. If you see the text 'arcticimaging' or 'cyberstream.<b>com</b>', please let me know. I think I replaced all of those with the current website name, but I may have missed some. Any other comments regarding security, functionality or presentation are welcome.  <br /><br />Thanks!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36130">For those finding errors</A><BR>
+I see a lot of posts about errors. The W3Schools provides an email address on the <a href="../www.w3schools.com/about/about_helping.asp" target="_blank">About page</a> to report errors to.<br /><br />I have not tried this, so I do not know if/how often these are checked or anything, but I think that anyone who finds errors should take the time to email W3Schools about them directly.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36118">developing a mobile web app for the iPhone and Android phones</A><BR>
+I'm new to developing web apps for mobile devices. Recently I have been tasked to create a simple site based off a Photoshop composition for the iPhone (Safari) and Android phones (Browser and Opera Mini). For those of you who have developed a mobile based site, are there any special considerations I need to take regarding the DOCTYPE, JavaScript limitations, or performance? Or is it pretty similar as to developing a regular desktop web app (disregarding usability since someone else has come up with the design for me)?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36114">Error 404</A><BR>
+I am trying to clean up my website page files.<br />when I added a new folder to group some of the files into I get this error measage<br /><br />Warning: require(header.php) [function.require]: failed to open stream: No such file or directory in C:&#092;xampp&#092;htdocs&#092;Cindy&#092;cookbook&#092;sauces.php on line 1<br /><br />Fatal error: require() [function.require]: Failed opening required 'header.php' (include_path='.;C:&#092;xampp&#092;php&#092;PEAR') in C:&#092;xampp&#092;htdocs&#092;Cindy&#092;cookbook&#092;sauces.php on line 1<br /><br />I changeed the onclick to cookbook/sauces.php but I still get the same Error<br />can you please help <br />here is the code I am using<br /><br />&lt;button style="width:200px;height:40px;font-weight:bold;background-image:url(background/sidebar3.jpg)" onclick="window.location='sauces.php'"&gt;Sauces Dressings and Dips<br />			&lt;/button&gt;<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36110">Tutorial on ADODB (PHP Database Manipulation Library)</A><BR>
+For people who do not know about ADODB:<br /><b>ADODB is an object orientated database manipulation library for PHP, compatible with all major database server types, where you do not need to remember some functions for MySQL and others for Oracle, and you can make your scripts compatible with any database system.</b><br /><br />This PHP script:<br /><br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;?php<br /><br />$con=mysql_connect&#40;'localhost', 'user', 'pass'&#41;;<br />mysql_select_db&#40;'mydb', $con&#41;;<br />mysql_query&#40;'SELECT * FROM mytable'&#41;;<br /><br />$con2=mssql_connect&#40;'localhost', 'user', 'pass'&#41;;<br />mssql_select_db&#40;'mydb', $con&#41;;<br />mssql_query&#40;'SELECT * FROM mytable'&#41;;<br /><br />?&#62;<!--c2--></div><!--ec2--><br /><br />is exactly equal to this ADODB 5 script:<br /><br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;?php<br /><br />include &#40;'adodb5/adodb.inc.php'&#41;;<br /><br />$db=ADONewConnection&#40;'mysql'&#41;;<br />$db-&#62;Connect&#40;'localhost', 'user', 'pass', 'mydb'&#41;;<br />$db-&#62;Execute&#40;'SELECT * FROM mytable'&#41;;<br /><br />$db2=ADONewConnection&#40;'mssql'&#41;;<br />$db2-&#62;Connect&#40;'localhost', 'user', 'pass', 'mydb'&#41;;<br />$db2-&#62;Execute&#40;'SELECT * FROM mytable'&#41;;<br /><br />?&#62;<!--c2--></div><!--ec2--><br /><br />As you can see, in the first script, you need to change the entire code, however in the second it is enough to change the database type of the ADODB object, which you can store in a remote config file.<br /><br />Now many sites use ADODB 5 for compability with other database systems and also for the ability to execute queries on different databases without destroying the connection and reconnecting.<br /><br />I think a tutorial about this on W3Schools would be of great use.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36090">Dealer Locator code</A><BR>
+Hello - <br />I'm a newbie here.  I do web design work, but fairly new at it.<br /><br />I have a customer who would like to add the "Dealer Locator" or "Retail Locator" to his website.  He is a furniture manufacturer, and would like visitors to his site to be able to find a retail store that sells his furniture.<br /><br />This is not something I could code myself, so I've been looking on line, but I'm kind of bouncing around blindly clicking links. <br /><br />Does anyone have experience with a locator package?  Any recommendations of ones to look at?  <br /><br />Any feedback at all will be helpful.<br /><br />Thank you!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36063">Installing PHP and MySQL?</A><BR>
+I have just installed MAMP! Do I also have to install PHP and MySQL?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36050">Passing data from browser to server?</A><BR>
+Hello, <br /><br />Apologies if this is the wrong place, is common knowledge or just a stupid question.<br /><br />As part of a project I'm working on, I need to find a way to pass data from the browser back to the server. Specifically, I'm trying to find a way for the browser to confirm that it has received an image so that the server can then delete it.<br /><br />So far I've used a PHP script to copy a specific image and CSS file from a protected folder into the unprotected folder, renaming it to match the users IP and then to delete it after a two second interval. In most cases, where the internet connection is fast enough, this allows users to view the image but when they try to backtrack to the CSS file or the image they'll find it's not there. In addition to this, there will be the usual "image protection" tricks such as placing an empty repeating .gif file over the top and disabling right click etc. <br /><br />In general this works pretty easily. I use three browsers to test my code regularly, and each has a different way of downloading the picture. Google Chrome is by far the easiest to deal with. It doesn't seem to cache the CSS file, and the lack of "save background image" feature means that most users won't be able to get said image. Firefox does cache the CSS, so when you look at the source code and click on the CSS file, it'll end up showing the path to the image. Once you click on that though, the user just gets pointed to a 404 because the image isn't there. Whereas IE is the only browser that lets you "save background" image, which is where the disable right click comes in.<br /><br />The issue with this is that if the internet connection is slow, or the browser is slow, the image gets deleted before the browser is able to retrieve it. In addition to this the two second interval stops parts of the page from being rendered until the image is delete. I've tried to get around that by using ob_flush and instead of the sleep function I've tried doing a loop which only executes the delete function after two seconds by comparing start time to current time. Neither really solve the problem though.<br /><br />So, with that in mind, is there any way of passing a variable from something like a Javascript back to PHP? I know this can present a bit a of security problem because it could potentially allow people to execute a PHP script directly from their browser, so if possible I'd like to avoid that too. <br /><br />Is Java even the way to go with this?<br /><br />Thanks in advance for any help, tips or suggestions.<br /><br /><br />Cheers,<br />Takuhi<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36007">MySQL</A><BR>
+I have learn HTML,XHTML, and CSS including some basic tutorial MySQL, I did have learned, but one thing I try to learn on the function.  Actually what I try to learn is how you can get automatically value in the row of the table of MySQL. Let say you create a table call Quote list, the column (from,to,mileage,price) let say you insert some value in the from=IL, to=CA,mileage=1000, and then you get the value automatically in the price=??, how we can put some function to be read from mileage&lt;1000, how we can put some value from other table you create the price list. I know how to do with the Microsoft Exel. Do you have any idea, recommendation for me or you can offer me a book how to learn more with function of MySQl or somthing else. if you can't understand please let me know, i can try explain more details what i want actually.  Thank you<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=36002">Site footer text</A><BR>
+Just noticed this in the main site footer and had to laugh:<br /><br />"W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot <b>warrent</b> full <b>correctnes</b> of all content. "<br /><br /><br />warrant <br />correctness<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35996">What can I offer (for free) .....?</A><BR>
+I´ve read and thought about your suggestions of making (for free!) a portfolio. Therefore, I want to offer my services to a local computer shop!<br />But what can I offer him (using PHP, MySQL)  a data-base for the products he has?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35993">New Portfolio Site</A><BR>
+Hello, all.<br /><br />I've been busy working on my portfolio since the last site I posted. <br /><br />Check it out:<br /><a href="../interstylews.rpgmmag.com/default.htm" target="_blank">http://interstylews.rpgmmag.com/</a><br /><br />Any advice or critiques you give, I will listen and be thankful for your time.<br /><br />Note: The site doesn't fully-validate yet. The validator keeps giving weird stuff for the HTML. I may just get rid of the validator icons altogether. <br />Note2: I haven't sent this off yet. I'm just getting some feedback before I shop it around.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35982">Need advice! Please help me out!</A><BR>
+Hello there guys! <br />I have this project in mind, I'm trying to build a website pretty much like craigslist; not that big though, just with 20 "states" total and 6-8 "cities" each. It will have about 60-80% of the ads that craigslist offers, I want some forums and a chat room and It has to be able to accept payments too. User can post their own ads and post in forums as well.<br />I want to bult it myself I've been checking the tutorials in w3s and I think they are great, just need to practice a lot. saying that I would like you guys to help me with the following questions:<br /><br />In order to built a site like this, what type of programming  languages would you guys recommend me to learn, and in what order? (This is the most important question)<br />What type of hosting should I look for a project like this? <br />How long do you guys think will take me to built it?<br />If i decide to hire somebody, how much do you think this will cost me?<br />Excuse my English, I'm not American!!<br /><br />Thanks in advance!!! <br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35965">group buying coupon website</A><BR>
+<a href="../goo.gl/yvHMJ" target="_blank">http://goo.gl/yvHMJ</a><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35959">preference menu css</A><BR>
+Up to now, I have been using 1 CSS file, namely "stylesheet.css". Now that the past few days I have been all over the internet studying navigation menus, seeing that some menus can be long (images and other codes). I am wondering what you guys tend to do? Stay with 1 CSS file and use all the menu and everything within it OR 2 CSS files with 1 being menu.css and other being stylesheet.css (or what other names you use?)?<br /><br />Along with above question, to use 2 CSS files in one HTML page, I would have to use "@import" or can still use below in that order:<br />&lt;link rel="stylesheet" href="menu.css" type="text/css" /&gt;<br />&lt;link rel="stylesheet" href="stylesheet.css" type="text/css" /&gt;<br /><br />Also, XHTML requires lower case HTML name? Like "index.html" instead of "Index.html" ??<br /><br />Correct me... even if I use all lower case for HTML names, others still can use caps to get to my website? Like one types "www.LazyFoxJumps.com" will open with registered "www.lazyfoxjumps.com" ?<br /><br />Chuck<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35944">drop down menu</A><BR>
+hi can anyone tell me how to stop the second img (the one with no href) from leaving a space between the drop down menu.<br /><br />&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br /><br />&lt;title&gt;<br />&lt;/title&gt;<br /><br />&lt;style type="text/css"&gt;<br />* {<br />   padding: 0;<br />   margin: 0;<br />}<br />.navbar ul{<br />	list-style-type:none;<br />	margin:0px;<br />	padding:0;<br />	overflow:hidden;<br />}<br />.navbar li{<br />	float:left;<br />}<br />.navbar a{<br />	display:block;<br />	<br />}	<br />.navbar img{<br />	border:none;	<br />}<br />.navbar li ul {<br />	z-index:100;<br />	visibility:hidden;<br />	position:absolute;<br />}<br />.navbar li:hover ul{<br />	visibility:visible;<br />}<br />.navbar li li {<br />	float:none;<br />}<br />&lt;/style&gt;<br />&lt;body&gt;<br />&lt;div class="navbar"&gt;<br />	&lt;ul&gt;<br />	&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />	&lt;li &gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;<br />                	&lt;ul&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;/ul&gt;<br />		&lt;/li&gt;<br />	&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;<br />                	&lt;ul&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />		&lt;/ul&gt;<br />		&lt;/li&gt;<br />	&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />	&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;<br />	&lt;li &gt;&lt;a href="#"&gt;&lt;img src="button10.gif" alt="" width="150" height="30"&gt;&lt;/a&gt;&lt;/li&gt;	<br />	&lt;/ul&gt;<br />	&lt;/div&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br />thanks<br />jnf555<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35938">Work as ....?</A><BR>
+Although this question doesn´t belong here! For my c. v. As what title can I apply for jobs (Programmer?)<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35929">Error on page?</A><BR>
+I think there may be an error on page:<br /><a href="../http:/www.w3schools.com/php/func_mysql_fetch_row.asp" target="_blank">http://www.w3schools.com/php/func_mysql_fetch_row.asp</a><br />Section:<br /><!--quoteo--><div class='quotetop'>QUOTE </div><div class='quotemain'><!--quotec-->Tips and Notes<br />Note: After the data is retrieved, this function moves to the next row in the recordset. Each subsequent call to mysql_fetch_assoc() returns the next row in the recordset.<!--QuoteEnd--></div><!--QuoteEEnd--><br />refers to <!--quoteo--><div class='quotetop'>QUOTE </div><div class='quotemain'><!--quotec-->assoc<!--QuoteEnd--></div><!--QuoteEEnd--> arrays.  Should it not be numerical arrays?<br />--- Mike<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35922">Tutorial on VB6 and vb.net</A><BR>
+Hiiii. This site is very helpful. I want this site to put vb6 and vb.net tutorial.<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35917">Nav Bar help</A><BR>
+I am building my first web site and I could use some help with a navigation list for a recipe book with links to the recipes.<br />I have tried nav bars with drop down list but there are to many headings to fit in one bar.<br />should I use CSS or XML?<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35910">Question about page on W3Schools Website</A><BR>
+Hey guys!<br /><br />I am learning about the new HTML5 doctype but am confused over several points.<br /><br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;menu&#62;<br />&nbsp;&nbsp; &lt!-- Doesn't show anything on screen --&gt;<br />&nbsp;&nbsp; &#60;command label=&#34;Something&#34; /&#62;<br /><br />&nbsp;&nbsp; &lt!-- Doesn't validate with HTML5 and doesn't work in Chrome &#40;seems to work in FF and IE&#41; --&gt;<br />&nbsp;&nbsp; &#60;command&#62;Something&#60;/command&#62;<br /><br />&nbsp;&nbsp; &lt!-- IE7 doesn't like this&#58; --&gt;<br />&nbsp;&nbsp; &#60;hr role=&#34;separator&#34; /&#62;<br />&#60;/menu&#62;<!--c2--></div><!--ec2--><br /><br />I have been referring to the following page (the "Try it yourself" doesn't seem to work either):<br /><a href="../www.w3schools.com/html5/tag_command.asp" target="_blank">http://www.w3schools.com/html5/tag_command.asp</a><br /><br /><br />- How are menus and commands supposed to be implemented so that they work in all browsers?<br /><br />- How would you add a separator as IE7 doesn't like the HR?<br /><br />- What is the best practice to using these new features of HTML5?<br /><br /><br />So at the moment I have resorted to using the following:<br /><br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;div role=&#34;menu&#34;&#62;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#60;div role=&#34;menuitem&#34;&#62;Something&#60;/div&#62;<br />&#60;/div&#62;<!--c2--></div><!--ec2--><br /><br /><br />Many thanks,<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35902">HTML 5 logo</A><BR>
+thoughts?  I kinda like it.<br /><a href="../www.huffingtonpost.com/2011/01/19/html5-logo-design-w3c_n_810426.html" target="_blank">http://www.huffingtonpost.com/2011/01/19/h...c_n_810426.html</a><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35893">Mobile web development for iPhone and Android</A><BR>
+I am making a small site for mobile devices. What is the best way to locally test in iPhone's Safari and Android's Browser and Opera Mini?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35892">Localized searches</A><BR>
+Does Google localize a persons search even if they don't specifically type in, for example, "personal training topeka, kansas"?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35848">Buying a parked domain</A><BR>
+I have been working through the very difficult process of choosing a domain name. I thought of a good one, but it is parked by godaddy. I'm not going to say which one it is (<img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />), but how do I go about buying the domain name? It isn't something you pick off the store shelf, so how do you prove you own it? Do you have to park it with a particular host? It looks like GoDaddy wants to rent it to me, but I would prefer a once and done deal. Any tips on this would be greatly appreciated.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35836">Errors found in w3schools contents</A><BR>
+I suggest you to take a look at <a href="../w3fools.com/default.htm" target="_blank">http://w3fools.com/</a><br /><br />And try to make your material better.<br /><br />I used the w3schools a lot when I was learning html and css 4 years ago.<br /><br />I wish you luck.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35823">My suggestions</A><BR>
+I really like your site and it has been very helpful for me. But there are a few things that I feel could be added. The first might be an assignment or two that goes along with each section. Like perhaps at the end of the html section create a website that utilizes x, y, z... It might be a nice way to add perspective to the material.  <br /><br />Sometimes as a noob reading this, its difficult to imagine when a certain bit of code is used for example is it a better practice in blank situation to use the &lt;div&gt; or &lt;table&gt; element. So maybe  a screen shot of a professional webpage that utilizes this element, how and then some notes on best practices. Perhaps an example of a professional site and a break down of how it was executed. I feel something like that would really help me see the forest for the trees. I appreciate your site, thanks for making html and css much easier for me.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35799">CSS3 Tutorial Fix</A><BR>
+Well, the title and description say it all...<br /><br />I found that in the CSS3 tutorial, the Transitions page says that Mozilla Firefox does not support it.<br />Firefox 4.0 beta does support it. Older betas need the -moz- prefix, the newer beta does not need -moz-.<br /><br />2D Transform works as well.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35786">Best modern practices for website navigation.</A><BR>
+I've recently returned to web design after a 10 year break - a lot has changed.<br /><br />I've spent the last few weeks learning CSS, some very basic javascript and php and also brushing up on my HTML markup.<br /><br />The one thing that eludes me slightly, are what the best practices are these days for ever-present navigation menus that sit on top of every single page in a website.<br /><br />Naturally no one uses frames anymore, and from what I read iframes aren't so great either - recently I've had a go at automatically creating navigation menus on every page using PHP server side includes and similarly with javascript document.write scripts - both worked perfectly well (and when I wanted to edit the navigation menu for every page - I only had to make the chance once), but it's suggested that both methods would be considered very bad practice.<br /><br />So I guess the question is, what exactly do people do nowadays?<br /><br /><br />Also as a side question - is it still safe to use tables when you need to actually display tabular data? I understand that their use may now be deprecated - (and using tables for layout purposes was never a good idea) but is it ok to use them without fear they're going to suddenly be dropped?<br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35779">CSS3 Gradients Tutorial</A><BR>
+When browsing the internet for research on HTML5 and CSS3 I struggled to find any clear CSS3 gradient tutorials, and I was disappointed not to be able to find anything on W3Schools. I hope that an article could be added soon outlining how to do it in all the major browsers as there are differences.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35748">Web Applications - Help me plan out on what to learn</A><BR>
+Hi I am new to web development and is very keen on learning and to eventually develop web applications.<br /><br />Particularly I want to develop web apps on the Google Chrome platform.<br /><br />Now I know bits and pieces but I am having a hard time prioritising what to learn because I have limited understanding on how it all fits together.  So I am having issues understanding the big picture.<br /><br />Now I have a web host setup and my plan atm is to learn some languages while slowly building something for fun to compliment my meticulous study of e-books.  Right now I plan to learn the following:<br /><br />some time on HTML/XHTML, CSS<br />Javascript<br />PHP<br />mySQL<br /><br />But I don't how these fit together, I don't know what is more important and I sure don't know what to do from here to develop web apps.  I just need some direction and background on this for a noobie.<br /><br />Thanks guys, go easy on me.  Look forward to this discussion<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35727">HTML 5 and CSS 3</A><BR>
+I know some browser have support for these, but I don't have a strong statistic on these per browser or anything.<br /><br />What I'm wondering is when would it be suitable to start developing in these. You see, not only am I a developer myself, but there is a class at a local high school that relies on information from me, and I'm wondering when I should start updating the curriculum to include HTML 5 and CSS 3 standards. As it stands, the curriculum teaches using the XHTML 1.0 and CSS 2 standards.<br /><br />Also, it'd be a nice thing for me to know, so I can be up to date in my own work.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35693">XML Tutorial</A><BR>
+In your XML documentation you never specify the format of the &lt;?xml ... ?&gt; line. You give some examples, but never specifications. The tutorial frequently recommends saving the file in UTF-8 format, but every example of the encoding attribute shows encoding="ISO-8859-1". I can only guess that what I want is &lt;?xml version="1.0" encoding="UTF-8" ?&gt; .<br /><br />Also, it is not clear from your write-up whether single quotes (') are legal as xml quotes, or only double quotes (") are legal. In many languages we use double quotes to surround the entire output string and so single quotes are easier to use inside the string. For exampoe, this PHP statement:<br /><div class='codetop'>CODE</div><div class='codemain' style='height:200px;white-space:pre;overflow:auto'>    echo "&lt;?xml version='1.0' encoding='UTF-8' ?&gt;&#092;n";</div><br />creates an &lt;?xml ... ?&gt; line with apostrophes rather than double quotes. Is this legal XML?<br /><br />Suggestion for improvement: cover the &lt;?xml ... ?&gt; specifications, change your examples to UTF-8, and clarify single versus double quotes.<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35669">Web Development Blogs</A><BR>
+Recently, I've become much more interested in coding conventions, online tools and resources, and other various ways to improve my web work. While W3Schools is a fantastic place to learn, and W3C has everything you "need" to know, neither of these are a one-stop-shop for all of your coding needs.<br /><br />For this reason, I figured I would not only ask for some user-contributed web design and development blogs, but keep a solid, compiled version of it here for anyone who wants to reference it. I will certainly be putting most, if not all, blogs straight into Google Reader though. :] I'll start the list below with the two that I already follow. I'd be very much interested if someone can point me in the direction of a blog that talks about web developing best practices and techniques!<br /><br /><a href="../www.webmonkey.com/default.htm" target="_blank">http://www.webmonkey.com/</a><br />A blog which talks about everything from browser development to new libraries and frameworks for web coding and scripting languages you know and love.<br /><br /><a href="../www.webdevcat.com/default.htm" target="_blank">http://www.webdevcat.com/</a><br />More centered on blog customization and theming, but there are lots of good tools mentioned throughout this blog. Worth checking out.<br /><br /><a href="../www.sitepoint.com/default.htm" target="_blank">http://www.sitepoint.com/</a><br />Their tagline is "Become a better web developer," and as far as I can tell, they hit on all sorts of languages, graphics, programs, productivity, etc... Sort of an all-in-one.<br /><br /><a href="../net.tutsplus.com/default.htm" target="_blank">http://net.tutsplus.com/</a><br />Another all-in-one here, though it seems to focus almost entirely on web development, not so much design.<br /><br /><a href="../tutorialzine.com/default.htm" target="_blank">http://tutorialzine.com/</a><br />As the URL would imply, all about tutorials and implementation examples here. They do them <b>so</b> right. Beautiful demo pages and fairly, if not very useful tutorials.<br /><br /><a href="../www.sophox.com/wordpress/default.htm" target="_blank">http://www.sophox.com/wordpress/</a><br />The ever-knowledgeable <b>Deirdre's Dad</b>'s blog! Great tips on topics that beginning web designers might struggle with, as well as more advanced and specific posts which may help if you're having a problem he's discussed (or maybe will help you avoid ever encountering it)!<br /><br /><a href="../aspektas.com/blog/default.htm" target="_blank">http://aspektas.com/blog/</a><br /><b>Synook</b>'s reppin' the blog community as well. No specific focus other than web development and other assorted technologies in other close fields, but his posts are well written and a pleasure to read. :]<br /><br /><a href="../quirksmode.org/compatibility.html" target="_blank">http://quirksmode.org/compatibility.html</a><br />Great reference for browser compatibility!<br /><br /><a href="../www.alistapart.com/default.htm" target="_blank">http://www.alistapart.com/</a><br />Awesome reference site--check out their "Topics" section for a super, super organized hierarchy-style list of topics.<br /><br /><a href="../https@developer.mozilla.org/en-US/default.htm" target="_blank">https://developer.mozilla.org/en-US/</a><br />As Deirdre's Dad puts it (and I certainly agree), this is an amazing place to get information when you already know what you're looking for. They have extensive coverage of a wide variety of languages and new/up-and-coming practices for web development across the board of languages.<br /><br /><a href="../www.howtocreate.co.uk/default.htm" target="_blank">http://www.howtocreate.co.uk/</a><br />Seems to be a solid place for beginners to look to get acquainted with the basics and a bit beyond of web design.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35664">Outdated Info</A><BR>
+<a href="../centricle.com/ref/css/filters/@highlight_columns=true" target="_blank">Link.</a><br /><br />The link above is an old table which shows how some CSS rules are supported across selected major browsers. Should the data portrayed in that table still be considered accurate, or should I no longer pay attention to it?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35646">What is best practice in HTML/CSS</A><BR>
+Well, what i just recently came across was this, I originally was using the same template for the header and footer for all of the pages on my site "<a href="../hightoleranceband.com/default.htm" target="_blank">here</a>" and i recently came to an epiphany that instead of having the same images saved for each page on each pages directory i can simply link them to the main domain image folder with the "/images/xxx.jpg". Is this a good idea or i should i have a set of images in each directory of the site to load faster. (i may be using the pages directory or sub directory or sub domain names incorrectly, if i am please advise!)<br /><br />Also, what about style sheets. Right now i have pretty much the same exact style sheet linked in each subdomain. should i link them the same way like the head and footer images to the same one in the main directory?<br /><br />Thirdly, since i been involved in web design i have been somewhat graphicly involved... Now this leaves me with what is the best format for images, Just regular images as JPG's? what about if you need a transparent background PNG's?<br /><br />PS i know my gallery is not centered in IE right now it is being addressed in a different post in the appropriate topic.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35640">Mind having a look</A><BR>
+trying to put together a portfolio to get my first web developer job and I have just got my first site for it up and running. its a manga reading site and I built it with the intention of the pages loading as fast as possible.<br /><br /><a href="../neuromanga.com/default.htm" target="_blank">http://neuromanga.com/</a><br /><br />mind telling me what you guys think of it (keeping in my I still do have some design work to do on the page)<br /> <img src="style_emoticons/default/dry.gif" style="vertical-align:middle" emoid="&lt;_&lt;" border="0" alt="dry.gif" /> <br /><br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35638">The 'Space Jam' Website: Untouched Since 1996</A><BR>
+Saw this, immediately felt like sharing it here:<br /><br /><a href="../www.comicsalliance.com/2010/12/29/space-jam-website-belongs-in-a-museum/default.htm" target="_blank">http://www.comicsalliance.com/2010/12/29/s...gs-in-a-museum/</a><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35626">Help me get out</A><BR>
+I have been trying to unsubscribe from W3Schools mailings for more than 3 months now.  I have sent emails to the email address on my emails many times.  I have done the view topics attempt many times.  The page says that I am not subscribed to anything, yet I still keep getting emails.   Does someone know how I can really unsubscribe?<br />Hubert Hickey<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35566">w3schools statistics</A><BR>
+The w3schools Browser and OS statistics are based on the data collected over the w3schools site or do have more sources?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35550">Here we go..</A><BR>
+Have been so busy with coding I haven't had the time to work with the graphics this is the first try on making a layout for a Real Estate Service page..<br /><br />I have aimed for a "Nature friendly" feel for the colors. The image is just there too fill up space but fits really well <img src="style_emoticons/default/wink.gif" style="vertical-align:middle" emoid=";)" border="0" alt="wink.gif" /><br /><br />I'm not satisfied with the icons so I will work some more on them.  <img src="style_emoticons/default/xd.gif" style="vertical-align:middle" emoid="xD" border="0" alt="xd.gif" /> <br /><br />Created with GIMP, INKscape and Notepad++<br /><br /><br />What do you think?<br /><a href="../www.ckrudelux.com/project/default.htm" target="_blank">Project Template</a><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35546">please help me very very very easy HTML question</A><BR>
+how can i make like this boarder line between my posts? ( i want to for the sides and button and hight style and buttom)<br /><a href="../i1140.photobucket.com/albums/n563/yvplayers/line.jpg" target="_blank">http://i1140.photobucket.com/albums/n563/yvplayers/line.jpg</a><br /><br />please check the link to see the pic <br />and please help me and tell me how can i do that through frontpage or expression web or if you can&#96;t help me just give me website can help me  <br />thanks<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35543">registry files</A><BR>
+At work today we were dealing with .reg files and the company that we deal with has set some guide lines to the file names that they recognize therefore we don't have the luxury of just adding blank lines into the mix.. <br /><br />therefore we were hoping to add carriage returns to the end of the string data but for some reason regedit does not recognize any carriage returns that I can come up with.. so i was wondering.. has anyone else ever run into this problem and know how to add carriage returns to the end of the string data?  we are able to change the binary data so that spaces are present.. but when we export and then try to import onto another machine, or the same machine, the spaces are lost - really it seems like regedit completely ignores any line that contains carriage returns and does not update that particular line - any ideas?  It'd be a pain to go to 400+ machines and change the binary..<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35516">Forum Software</A><BR>
+Where does W3Schools get its forum software?<br /><br />I have been going through nothing but pain trying first to get a login feature and then a forum at my site:<br /><br /><a href="../www.globalfreeenterprise.com/default.htm" target="_blank">http://www.globalfreeenterprise.com</a><br /><br />My hosting service is GoDaddy.com and I had a service called JoomGeeks install Joomla as a first step.  These two organizations are not affiliated with each other.  Somehow, Joomla is one of the choices I had to make through GoDaddy.  I am willing to change everything.  I don't know how to set that up or even upgrade the forum (Kunena).  I wasted a year trying to learn MySQL and PHP before that.  I can write html without tables.  That's it.<br /><br />Can anybody recommend a course of action whereby I end up with a controllable forum that works about like this one and has my tiled textured .png as a background?<br /><br />Thank you for your help.<br /><br />Jim Adrian<br /><br />jamesadrian@globalfreeenterprise.com<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35508">.swf file is not loaded in my machine</A><BR>
+Dear All,<br /><br />I am using .swf file in a webbased application.In my machine having internet exploper browser 7.0 and Adobe reader 9.0 version avaiable.<br /><br />But when i running the application in my machine .swf file not loaded properly.<br />But other user((IE 7.0 and Adobe reader 9.0)  in the same network using my machine IP address accessing my application and the .swf file<br />properly loaded and able to visible the image.<br /><br /><b>Could you please suggest what is the root cause of the problem.</b><br /><br /><b>Thanks,</b><br />SKP<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35474">Dreamweaver CS3 help</A><BR>
+Hi there!<br /><br />Im a student at a local school in florida and use CS4 at school. since we are now on vacation im practicing it at home but got some problem, im using CS3, and i cant find in the view menu where i thought i would find it is the split vertically/horizontally the code and design windows, anyone can give me a hand with this?<br />thanks in advance and  happy holidays to all!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35464">Internet Explorer messing up my site.....</A><BR>
+I have a problem with my site when I use Internet Explorer. (big surprise)<br /><br /><a href="../myfirstsite.zxq.net/default.htm" target="_blank">mysite</a><br /><br />When I use the Recipe Box buttons or the Video buttons or any of the Calculator buttons in the info section, I loose my spacing between blocks. <br /><br />If you refresh the page, the spacing comes back and everything looks normal, but I don't want anyone to have to do that.<br /><br />It works fine with Opera and FireFox.<br /><br />Thanks for your help....<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35469">Happy Holidays & Thanks!</A><BR>
+Happy Holidays everyone! Just wanted to take a minute of your time and thank everyone for their help and support over the last year. Many members have posted questions here that were very interesting. I have been writing HTML for 12 years and still find things I didn't know.<br />Peace to all.<br />dink<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35419">Please Point Me To The Right Direction</A><BR>
+<i>Hello,<br />I am curious i wanna start my own site i get domain name template but i don't know where to start from can someone point me to the right direction please? please i don't know if this is the right place to make this post .</i><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35415">Math Template</A><BR>
+Im starting to add new elements to my site with some simple js and stuff like that! Let me know what you think!<br /><br /><a href="../rosstest.herobo.com/default.htm" target="_blank">Visit My Website</a><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35411">need help</A><BR>
+Hey, i am going to make a browser-based web game, but i have no idea where to start, what languages to learn, and, although i have done my research, there has not been a place that could tell me.<br />i still need help with<br />- what languages i should learn<br />- what website i should use to host<br />- what programs i need. (money is no issue, i have access to dreamweaver, photoshop, ect.)<br /><br />thanks<br />      - C4RMA<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35410">W3Schools has some damage to answer for</A><BR>
+Hi folks, <br /><br />  Good of you to provide this section of the forum, but looking down the list I didn't see much actual criticism. <br /><br />  First off let me say that to the extent that you have provide some people with useful information you are to be congratulated, I know it's a big job. But having said that I have to tell you that the reason I joined as a member was to yell at you for some of the worst documentation I've seen in a long time -- and yell at you even louder for making CSS so very much harder to use and learn than it ever needed to be.  I'm guessing that you have put the uptake of CSS as a standard back by several years. <br /><br />  To provide some credibility for my accusations I should tell you that I've been in I.T. for more than 30 years and I began my career in technical documentation at Zilog in Silicon Valley - prior to that I was a student at the University of California (Santa Cruz) where I worked on the campus newspaper. <br /><br />  The documentation failures I've seen on the W3Schools site (and there are many) can be summed up by this little gem: <br /><br />  <img src="../www.hazen.co.nz/14_css1/images/W3example.png" border="0" class="linked-image" /><br /><br />  from: <a href="../www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">http://www.w3schools.com/tags/ref_standardattributes.asp</a> <br /><br />  and I'd like to ask if there is anyone still on your staff that wants to justify this as "documentation" ? <br /><br />  If there is, please fire them as this is not documentation it's just repetition and your web pages are full of it.<br /><br /> My second accusation is that you have perpetuated the belief that CSS is hard, complicated, and very difficult to learn - and indeed it is the way you and many others in the field present it.  I have spent far too many hours searching  for intelligent material to help me get to term with CSS and in all but the most recent case, threw up my hands in frustration and disgust at the impenetrability of the material. <br /><br />  Finally, on my own, I can to an understanding of CSS that now allows me to manipulate my web pages with a bit of confidence. You are welcome to read my story here:  <a href="../www.hazen.co.nz/14_css1/14_index.html" target="_blank">http://www.hazen.co.nz/14_css1/14_index.html</a> <br /><br />  Sorry for being so harsh, I'm sure I'll regret it later, this is many hours of needlessly wasted hours coming through. <br /><br />  To end on a lighter note -  I did offer some useful statistics that you provided on what screen resolutions people are using now. <br /><br />  I look forward to some much improved documentation in the future, <br /><br />                      - Deck<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35407">Keeping page elements in perspective</A><BR>
+<!--sizeo:2--><span style="font-size:10pt;line-height:100%"><!--/sizeo-->How can I, or is it possible, to keep the elements of a page from going out of whack when someone increases the zoom on a page let's say to increase the font size? It would probably be easier if you look at what I'm trying to explain. Here's the <a href="../ftwin-development.ftwin.com/default.htm" target="_blank">link</a> to my page. If you increase the zoom it all goes out of whack. How can I prevent that from happening?<!--sizec--></span><!--/sizec--><br /><br /> <img src="style_emoticons/default/huh.gif" style="vertical-align:middle" emoid=":huh:" border="0" alt="huh.gif" /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35396">2nd CSS Template</A><BR>
+Hi again!<br /><br />Im back with a new CSS Template I made tonight and have started to add more and more skills into my sites as far as design goes. I am still preatty new to this but have made improvements since my last template.<br /><a href="../rosstest.herobo.com/default.htm" target="_blank">Visit My Website</a><br /><br /><br />Please give me you opinions!<br />Ross<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35286">Website Design</A><BR>
+Hey guys, I recently created this fan website for a website design project.<br /><br />I had a brief which consisted of such requirements as:<br /><br />Create at least 4 internal pages<br />Use at least 2 images per page<br />Use of one external link per page<br />Use of tables, lists and links<br />Be W3C valid.<br /><br />Let me know what you think! <a href="../tomhindle.webfreehosting.net/U10347866/main.htm" target="_blank">Click here.</a><br /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35279">Overview for a beginner/advice</A><BR>
+I have a few questions.. and would really appreciate some advice. I would really like to get into Web Design. I have already went through college and got a BFA in Photography and Graphic Design. Unfortunetly, they didn't teach us a thing on Web Design. After my experience I have decided I do not want to go back to school if I can possibly teach myself the things I need to know online and maybe get certified. Is this a bad idea on my part, would I be better off going and trying to get a tech diploma from a local school? (My ultimate goal is to get a job as a web designer in the future). <br /><br />Also, I have come to understand(from various posts) that the best first step is to learn HTML. I am in the process of doing this. Although, I cannot help but get sidetracked by the fact that there is XHTML, HTML 4.0, HTML 5 that I have heard of. So what is it that W3Schools is using for the tutorial? Then there are depreciated tags.. which I understand the issue, and thats just part of tech. But here is my question.. on top of the HTML variences, there is CSS(ya I know, style) but then there is Dreamweaver, ect. that comes in to play & then JavaScript, JQuery, AJAX, and countless other 'things' that I am not even sure of what they are. It all gets a little distracting. I feel like I am getting way ahead ofmyself trying to dive into HTML if I don't really know how any of these other languages ect. play into eachother. Is there any website, book, explaination or advice someone could give me to caregorize these and let me know how they all work with eachother and what there rolls are. Just a basic overview..? <br /><br />Thanks in advance<br />-Steph<br /> <br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35253">Advice for a beginner</A><BR>
+So I the other day I had a good idea for a website that I would like to try to make a reality in my spare time.  Problem is, I have no clue how to create a website.  I am an electrical engineer, and have done a decent amount of coding in assembly, Visual Basic, C and C++, so I would think I could pick up the coding aspect relatively quickly.  What I am hoping to get is some direction on where to focus my efforts and how different tools come together.<br /><br />The site I have in mind (hope this doesn't just turn into a pipe dream) will ultimately have user accounts, incorporate google maps to show locations, have the ability for users to upload/download thier own files, etc.  Given what I have in mind, it would be awesome if I could get some input on what I should be looking to learn.  This site looks like a great resource, but does anyone have suggestions for a good book that might help me out with where I am trying to go?<br /><br />Thanks in advance!!!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35229">iPhone app</A><BR>
+couldn't you release an iPhone app or iPhone version of the site so it's easier to browse on the iPhone?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35214">Any good web host?</A><BR>
+I'm looking for a website host similar to webs.com but that's more built for publishing webcomics. I looked thru google and couldn't find what I was looking for. I'm looking for something that works similar to those online manga reading sites.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35192">My website portfolio</A><BR>
+Hi, i just made a portfolio about myself and i added all the cool features i know to it to make it as good as i possible can.<br />care to tell me what you think?<br /><br /><a href="../portfolio.iwtso.com/default.htm" target="_blank">http://portfolio.iwtso.com</a><br /><br />thanks<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35157">Gathering Emails</A><BR>
+Is it illegal to go onto publically available websites and copy/paste emails from those websites into a mailing list subscription list? They will have the option to unsubscribe once they get the first email.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35127">Zend Studio 8</A><BR>
+I have installed zend studio 8 for 3 days, and it says that it has javascript/ajax and css support but I'm not getting any.<br /><br />I set my workspace to /var/www/ and created a new project (php project) with the name "blogger" where i have my existing files (so the folder already existed). The problem is i have zero support for css and javascript/ajax, there's no code assist or anything, and I'm at a learning stage and really need that <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />. The php support works just fine.<br /><br />So how do I enable it? Do i need to make a clean project and add them manually?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35123">Does anyone use Google adsence?</A><BR>
+if you do could you please tell me if its all its cracked upto be. do you make much, are you clicks or impressions. drop me your link as well so i can check it out<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35102">Javascript Server Pages</A><BR>
+Anyone used it? I saw a page use it today, I was pretty astonished by it. I know that JS is being used and has been using a lot in scripting other things but this is amazing! If you have used it before what the best one to use? I would like to try it out <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35101">Good gift ideas for the webdesigner/developer?</A><BR>
+We have the holiday season commoing up and I figured the people here would know best for any good gift ideas for an aspiring webdesigner / developer.<br /><br />EDIT: Some ideas i thought of were,<br />- a Nice LCD Monitor<br />- an external hardrive<br />- Dreamweaver or software of their choice<br /><br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35073">Possible Error in HTML5 Canvas Example</A><BR>
+Not quit sure where to post this and there doesn't appear to be any contact information on the W3Schools main site...<br /><br />Anyhow, I think there is an error in one of the <a href="../www.w3schools.com/html5/html5_canvas.asp" target="_blank">canvas example </a> where an image is being dawn onto a canvas (<a href="../www.w3schools.com/html5/tryit.asp@filename=tryhtml5_canvas_image" target="_blank">link</a>).<br /><br />If you are already on the page with the list of examples, you may notice that the last example actually shows up as a blank canvas but when you go into the actual example the image shows up.  From here, if you got back to the previous page (Back button, Alt + left arrow, whichever...) then the image would show up.<br /><br />Moreover, I tried copying the code (and the image, of course) onto my machine and then run it - nothing.  After fiddling around a little and Googling for a bit there seems to be a pre-loading problem with the example on W3Schools.<br /><br />One solution I have found so far is to add, after the lines:<br /><br /><i>var img = new Image();<br />img.src = "img_flwr.png"</i><br /><br />The lines:<br /><br /><i>img.onload = function()<br />{<br />    context.drawImage(img, 0, 0);<br />}</i><br /><br /><br /><br />Apologies in advance if I made a mistake - beginner here.  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br />Oh, also, because of that an animation example that I was working on didn't quite work out for me - feel free to drop a hint or two.  <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35069">My first CSS Template</A><BR>
+This is my first template with CSS so please be nice but i do want some ideas on what i can do to improve!<br /><a href="../rosstest.herobo.com/default.htm" target="_blank">Visit My Website</a><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35051">XML Certification</A><BR>
+Hi All,<br /> i want to take xml certification from w3schools but i have some Questions i hope i get answers for it <br />1-I Live in Alexandria - Egypt so is in Egypt Any Place i can pay for it and Take Exam in it <br />2-Is W3Schools Material Enough for That Exam <br />3-Is XML Exam Containes all Sub Tobic in XML Like DTD, XSLT, XPATH, XQUERY, XLINK.........<br />4-If I pay online by visa Card when i will get The Exam immediately or W3Schools will Select Date or I will Select Date for it <br />5-As I said I Live in Alexandria - Egypt so Will I take Hard Copy for Certification or just Soft Copy .. If I will Get Hard Copy ... How ... and How Many Days After Exam i will get it<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35038">activex</A><BR>
+ok so i dont understand ActiveX.<br />What i mean is i built 2 pages with the same type of code. One page when i launch it from my computer IE gives my the is it ok to run ActiveX, while the 2nd page does not.<br /><br />They are both forms with the same code.<br /><br />I have always received the activex when working from my desktop but not from the server. Except this one page. Any ideas to why one page wouldnt and others would?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35018">Newbie with Firefox/IE incompatibility</A><BR>
+Hi all,<br /><br />I've used this code in an attempt to place a navigation image/link on the right col of the site I'm currently putting together and it works in Firefox but not IE. I'm not using CSS just basic HTML, using SBI Blockbuilder tool. Am still waiting for reply in their forum and was hoping someone here could advise a stranded newbie.<br /><br />Also the text appears underlined and off centre in IE, which I did'nt want, but again not in Firefox.<br />This was the code I used:<br /><br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;table width=&#34;175&#34;border=&#34;2&#34;cellpadding=&#34;25&#34;bordercolor=&#34;#OOOO66&#34;bgcolor&#34;#66FFFF&#34;&#62;<br />&#60;tr&#62;<br />&#60;td&#62;&#60;a href=&#34;http&#58;//mydomainname.com/destinationpage.html&#34;&#62;text here&#60;/a&#62;&#60;/td&#62;<br />&#60;/tr&#62;<br />&#60;/table&#62;<!--c2--></div><!--ec2--><br /><br />I've tried putting spaces after "175" "2" and "25" but it made no diff, link works in Firefox but not IE.<br /><br />Any help gratefully appreciated,<br /><br />Kennym                  <a href="../self-hypnosis-the-key.com/default.htm" target="_blank">http://self-hypnosis-the-key.com</a> <br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35015">How to make my webpage not to scroll?</A><BR>
+Hello,<br /><br />On every webpage i have i can scroll a little bit down while there is no purphose for it, because i can see the full page without having to scroll.<br /><br />What can i do to disable to scroll on a webpage?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=35002">e-commerce solution / Magento?</A><BR>
+I am totally new to the e-commerce stuff, but I'm looking for something that allows me to easily post new products and remove them, and send out a <i>unique</i> confirmation to the buyer and to the site owner/webmaster. Anyone know of an easy and cheap solution? I did some research and Magento looks good. Anyone have any thoughts on it? or recommendations of another CMS/platform?<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34980">Suggestion for Javascript reference</A><BR>
+This is regarding the reference page...<br /><a href="../www.w3schools.com/jsref/default.asp" target="_blank">http://www.w3schools.com/jsref/default.asp</a><br /><br />I suggest you put the word "statement" on this page somewhere.  As a newbie, I don't know if statements are a part of JS or not, but in either case the topic should appear on the main reference page.  After all this is a school, right?  If you want to refer visitors to another page, that's great, but please say something.  My understanding is that the following are statements, but it is impossible to tell from the reference pages...<br /><br />counter.number.value<br />document.write<br />document.layers.cust.document.write<br />window.alert<br />window.location<br /><br />Makes it really frustrating for newcomers.  Thanks.<br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34965">Website Taxonomy</A><BR>
+OK, I'm currently filling in as a web designer at my work. Basically, I'm getting on the job training. That said, my company is small. I'm having to fill out a survey for a service we are going to be using and in it they ask "Does your local web content use a taxonomy?"<br /><br />Can someone explain what they are asking? We use a CMS system if that matters. Any help? Thanks/<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34954">JavaScript Cookies Tutorial</A><BR>
+Hello W3Schools,  <img src="style_emoticons/default/blush.gif" style="vertical-align:middle" emoid=":blush:" border="0" alt="blush.gif" /> <br /><br />The JavaScript Cookies tutorial lacks information.<br /><br />There is no theory, like the "syntax" and its explanation.<br /><br />Also, in the example, there is no "path" defined, which is really important, otherwise you get a cookie for each subdirectory of the URL.<br /><br />In order to contribute,<br /><br />Hughes<br /> <img src="style_emoticons/default/happy.gif" style="vertical-align:middle" emoid="^_^" border="0" alt="happy.gif" /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34952">I blogged about w3schools!</A><BR>
+Hey fellow students!<br /><br />Check out the blog I made about how awesome w3schools is!<br /><br />Don't forget to comment!<br /><br /><a href="../msiers.blogspot.com/2010/11/w3schools.html" target="_blank">http://msiers.blogspot.com/2010/11/w3schools.html</a><br /><br />Catch you on the flippy!<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34939">php, mysql and java help. image upload and url in database</A><BR>
+Im trying to arrange it so that when i upload an image using a php java script file uploader i wrote the image then becomes a url in a database as ive been reading the benefits of not storing the files in  a database if its gonna be a lot of them. what is the code i should use to create a url that is then written to the database.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34937">Commercials before videos</A><BR>
+Hello,<br /><br />I was wondering, how to I play commercials before a flash video or Mpeg 4? I know I could edit the commercial into the the beginning of the video. but is there another way? Or do I have to go with a pay service? Thanks so much.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34936">Grammar error on HTML 5 Standard Attributes page</A><BR>
+Hi!<br /><br />Normally I'm not a fan of the grammar correction post, but I thought I'd point this one out. I can't decide whether it's supposed to be funny or if it's a genuine mistake!<br /><br />On the <a href="../www.w3schools.com/html5/html5_ref_standardattributes.asp" target="_blank">HTML 5 Standard Attributes</a> page, there's a mistake in the description of the "spellcheck" attribute. The description reads, "Specifies if the element must have it's spelling and grammar checked".<br /><br />Of course, this <i>should</i> read, "Specifies if the element must have <b>its</b> spelling and grammar checked". (No apostrophe, because "its" is possessive here, not a contraction of "it is".)<br /><br />You can see why I might have thought this was supposed to be a joke.<br /><br />I hope this is helpful,<br /><br />JT.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34915">Random Background Image</A><BR>
+So I've been using webs.com as my webhost and sitebuilder and managed to accomplish alot. What I'd like to do at the moment is to be able to have a random background everytime the page refreshs or the individual navigates thru my website. I googled for javascript codes to do this but they don't seem to work properly with my site builder. So does anyone know how I can have a random background on webs?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34876">Forum copyright?</A><BR>
+Hello, I have found a copy of a post from my writing, somewhere on the net.<br /><br />I am claiming the text there, I wish it to be removed, as I wish not to be not credited for any texts I write here.<br /><br />Still I wonder how copyright is handled on these forums, and what my rights are...<br />Can anyone help me?<br /><br />Reference: <a href="../ebookslab.info/free-tutorials/doctype-addition.html" target="_blank">http://ebookslab.info/free-tutorials/doctype-addition.html</a><br />Original: <a href="index.php@s=&showtopic=32497&view=findpost&p=177738" target="_blank">http://w3schools.invisionzone.com/index.ph...st&p=177738</a><br /><br />Edit:<br />Another reference of the same post somewhere else: <a href="../www.globberstack.com/Questions/doctype-addition-1/default.htm" target="_blank">http://www.globberstack.com/Questions/doctype-addition-1/</a><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34857">.</A><BR>
+Edit for google results.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34812">I need a.. counselor? I guess you'd say</A><BR>
+Hello all,<br />  I realize this forum is the general discussion forum for w3schools.com (Great site, btw) so I apologize if this is the inappropriate place, but I have a simple request/question.<br /><br />I haven't done any real web scripting/design in almost 8 years, if I had to guess.<br />I originally worked with a lot of HTML, PHP, MySQL, a little perl. No wysiwyg editors. <br /><br />I have to projects I need to work on. I would like to emphasize, heavily, I do not want anyone writing anything for me. I want to get back into design myself, learning it myself, doing it myself. My linux/unix LAMP server management skillset has not atrophied, but unfortunately the web page design and deployment side has... almost completely. Can't even get my old web site running correctly anymore (though I have a general idea, that's another story).<br /><br />The projects.<br /><br />One is for my folks. They need help with something, and I need to create a page that lets them enter in numbers that I'll store on a rig I have in their house (no internet access, just lan) and they can pull the numbers back up at any time. I believe they want a method of keeping track of their expenses on their computer, and I have a lot of ideas on a simple page that I could write to do this. This seems relatively easy, and I know I could do it with my prehistorical html, php and mysql knowledge, however I would like to breach the 21st century. I feel like there's probably better, or more options for designing it than I am currently aware of.<br /><br />Second is a character builder for a game called "Exalted" my coworkers and I play. Yes, it's nerdy, I apologize. There are a few out there but none of them do what I need to do. Ideally, I'd like to build it to be something like the character builder used here <a href="../www.mobafire.com/league-of-legends/edit-build" target="_blank">http://www.mobafire.com/league-of-legends/edit-build</a> but I have no interest in stealing their code or even their methodology. My real problem is, when I view their code, I can't even figure out what I'm looking at. I believe it's a blend of javascript and css, but I feel like I'm missing something.<br /><br />Essentially, what I would really appreciate, is someone to give me an idea of what I should study in order to accomplish these two goals.<br />I know I should run through some HTML/PHP refreshers, but what else would you advise I learn? I'm a quick learner, and I learn even better by -doing-, so these projects will help me get back into it a lot if someone can just... point me in the right direction, I guess you'd say. I'm feeling very overwhelmed by the sheer amount of options you have for scripting and coding front and back end information on pages now, to the point that I'm not even sure what the limitations are anymore.<br /><br />If someone could take a moment of their time to be my personal "w3school counselor", I would be in your debt.<br /><br />Thank you everyone.<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34808">Facebook Markup Language</A><BR>
+So I'm tring to do this to get more fans on my page<br /><br /><a href="../returnonsubscriber.com/2010/07/06/get-more-fans-by-emailing-a-fans-only-facebook-coupon/default.htm" target="_blank">http://returnonsubscriber.com/2010/07/06/g...acebook-coupon/</a><br /><br /><br />This is the code you use<br /><!--c1--><div class='codetop'>CODE</div><div class='codemain'><!--ec1-->&#60;table width=&#34;516&#34; height=&#34;732&#34; border=&#34;0&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&#62; &#60;tr&#62; &#60;td background=&#34;http&#58;//www.yoursite.com/images/not-like.jpg&#34;&#62; &#60;fb&#58;visible-to-connection&#62; &#60;img src=&#34;http&#58;//www.yoursite.com/images/like.jpg&#34; height=&#34;732&#34; width=&#34;516&#34; /&#62; &#60;/fb&#58;visible-to-connection&#62;&#60;/td&#62;&#60;/tr&#62;&#60;/table&#62;<!--c2--></div><!--ec2--><br /><br /><br />I already hosted the images on imagestack with the right height and width added, but it didn't work anyone know what to do? <br /><br /><br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34805">PHP if statement or CSS values</A><BR>
+Hi, <br /><br />I'm makeing login and cpanel which depends of cookie what should it show.<br />Currently I'm using standard php statement <br /><br />if cookie {<br />  show cpanel<br />}<br />else if !cookie {<br />  show login<br />}<br /><br />But, what do you think about using css values, like this:<br /><br />div login with css visibility visible<br />div cpanel with css visiblity hidden<br /><br />after success login, visibility of elements is revrsed<br />and so on on logout.<br /><br />So we can make it without reload page.<br /><br />Could this be hackable?? <br /><br />Regards<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34770">Copyright Information</A><BR>
+In according with Copyright Information from <a href="../w3schools.com/about/about_copyright.asp" target="_blank">http://w3schools.com/about/about_copyright.asp</a><br />"Pages, code or other content from W3Schools may not be redistributed or reproduced in any way, shape, or form without the written permission of Refsnes Data."<br />How does the contents from your site may be used??<br />And if i learn the contents and later have used what I have learned for make profit??<br />Sincerely,<br />Vitalie<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34763">what to learn next?</A><BR>
+Does anyone have any recommendations on new things to learn regarding programming / web development? Any videos, books, or other tutorials I should dive into? I feel like I've mastered html/css. I've done plenty of javascript, ajax, and jquery, and i think i am pretty well versed in php, oop, using an mvc framework (i chose codeigniter), mysql, and using a variety of web services. My latest site (followthenookie.com) utilizes all of the above, so im not really sure what i should start learning next. any suggestions?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34759">Evaluate my blog</A><BR>
+I would like to receive some feedback from you guys, but unlike other people i don't have a DNS and would like keep my address hidden + I haven't implemented a javascript function yet to restrict the comment size and some other vulnerabilities<br /><br />My source code is also published on SourceForge and I've included a README.pdf file for people to see the infrastructure of my page. Btw i forgot to give a legend on how to interpret the pdf: Blue circles and Black lines - Visible to anyone, Red Circles and gray lines - only to admin, Circles with no outline: frontend, Circles with outline: backend.<br /><br />I would like to receive feedback from these points of view:<br /><br />- web-site organization<br />- my PHP scripts organization<br />- scalability of the system<br />- security<br />- functionality<br />- some feedback on my design is not necessary but feel free to comment...I'm not a web designer, i actually ###### at designing web pages.<br /><br />The website hasn't got much content. This is a small web-site... it only has 19KBs of code in 10 files (images not included)<br /><br />If you are really bored (or kind or both), PM me and I will send you my sourceforge project link and my website link.<br /><br />I'm mentioning that I just started learning PHP and javascript and css in the middle of September (2 months ago), so I'm not actually very experienced.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34756">Why learn html ?</A><BR>
+Im new to the world of html , css and so on and i just learnt today what deprecated tags are and that basically the html (4.0)  tags that im using may not be used in the near future and replaced with html 5 or something else. <br /><br />Also ive learnt that as a whole it may be better to just use css - is all of this true and what type of html should i learn ? i dont want to learn something that will eventually be replaced with something else and having to redo all the code again for my future website. <br /><br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34754">Forums</A><BR>
+So as you can tell I'm new but I have a question how are forums actually made is it done with php?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34752">Okay, I'm ready to show it off.</A><BR>
+This is the biggest project I've ever completed. It took me 11 months in my spare time to create from concept to today. I was 100% responsible for graphic design of this site (new to me, since usually there's been someone to handle graphics) and the backend design.<br /><br /><a href="../www.radio1617.com/default.htm" target="_blank">http://www.radio1617.com</a><br /><br />I'm open to critiques, but please, not the face. <img src="style_emoticons/default/Pleased.gif" style="vertical-align:middle" emoid=":Pleased:" border="0" alt="Pleased.gif" /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34740">Fixed Heading</A><BR>
+A few months ago I was reading through the W3Schools tutorials on HTML, CSS, XML, JAVASCRIPT, & PHP and I "think" I recall a page that scrolled but the heading with some text remained fixed.   I have searched those tutorials recently looking for that page but the best I can find is on <a href="../www.w3schools.com/css/tryit.asp@filename=trycss_position_fixed" target="_blank">http://www.w3schools.com/css/tryit.asp?fil..._position_fixed</a> and I'm now not sure if it was a fixed heading or if my mind started wondering after seeing that page.   Can anybody tell me if there is such a function within the tutorials and guide me to it?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34733">Help with session cookie</A><BR>
+I want to put up a lightbox on a homepage that only pops up the first time they visit the homepage. I've written a session cookie but it won't work with the script (fancy box). Can anyone help?<br /><br />&lt;html&gt;<br />&lt;head&gt;<br /><br />&lt;script type = "text/javascript"&gt;<br /><br />function setCookie(isName,isVal) {<br />document.cookie = isName + "=" + isVal + ";expires="  + "path=/";<br />}<br /><br />function getCookie(isName){<br />cookieStr = document.cookie;<br />startSlice = cookieStr.indexOf(isName+"=");<br />if (startSlice == -1) {return false}<br />endSlice = cookieStr.indexOf(";",startSlice+1);<br />if (endSlice == -1){endSlice = cookieStr.length}<br />isData = cookieStr.substring(startSlice,endSlice)<br />isValue = isData.substring(isData.indexOf("=")+1,isData.length);<br />return isValue;<br />}<br /><br />function dispCookie(isName) {<br />nValue = getCookie(isName);<br />if (nValue) {<br />alert ("Cookie Found");  // so do nothing<br />}<br /><br />else {<br />alert ("The Cookie was not found");<br />&lt;script type="text/javascript" src="./javascript/jquery/fancybox/jquery.mousewheel-3.0.4.pack.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="./javascript/jquery/fancybox/jquery.fancybox-1.3.4.pack.js"&gt;&lt;/script&gt;<br />&lt;p&gt;<br />&lt;link media="screen" href="./themes/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" /&gt;            	  &lt;script type="text/javascript"&gt;<br />  $(document).ready(function() {<br />	$("a#onload").fancybox({<br />		'frameHeight':	390,<br />		'frameWidth':	640,<br />		'hideOnContentClick': false,<br />		'easingIn': 2000<br />			}).trigger('click'); <br />		});<br />	&lt;/script&gt;&lt;/p&gt;<br />&lt;div style="display: none;" id="lightbox_content"&gt;<br />&lt;div id="data"&lt;img height="333px" width="700px" src="/images/filecabinet/folder50/lightbox.jpg" title="Lightbox" alt="Double Your Donation: November 17-December 17" /&gt;&lt;/a&gt;<br /><br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;p&gt;&lt;/p&gt;<br />&lt;p&gt;&lt!-- PLEDGE LIGHTBOX CODE ENDS HERE --&gt;&lt;/p&gt;<br /><br />}<br />}<br /><br />&lt;/script&gt;<br /><br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&lt;input type = "button" value = 'Set Cookie' onclick = "setCookie('myCookie','myCookieValue')"&gt;<br />&lt;br&gt;&lt;br&gt;<br />&lt;input type = "button" value = 'Read Cookie' onclick = "dispCookie('myCookie')"&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34731">suggestions, improvements?</A><BR>
+I created a mash-up for one of my favorite bands (limp bizkit) and just wanted to see what other developers thought of it in any aspect (usability, new features, likes, dislikes, confusion, etc). The site uses web services from Google Maps, YouTube, Flickr, Twitter, and Tiny Geocoder, all within the CodeIgniter PHP framework.<br /><br />EDIT: forgot the link lol.<br /><br /><a href="../followthenookie.com/default.htm" target="_blank">http://followthenookie.com</a><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34729">Comment boxes</A><BR>
+I have seen a comment box which is basically what I want but, I was wondering if there was anything on w3schools that tells you how to make a comments box in javascript or weather anyone could explain to me at all, much appriciated.<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34727">css validater</A><BR>
+hi i am haveing a problem understanding why the css validater gave me these three warnings,<br />can anyone help please<br /><br />12  	 	Same colors for color and background-color in two contexts .bottomboxleftstyle a:hover and #container<br />73 		Same colors for color and background-color in two contexts .bottomboxleftstyle a:hover and .bottomboxleftstyle a<br />94 		Same colors for color and background-color in two contexts .bottomboxleftstyle a:hover and .bottomboxmiddlestyle a<br /><br />&#8593; Top<br />Valid CSS information<br />* {<br />padding : 0;<br />margin : 0;<br />}<br />body {<br />background-color : #0b3861;<br />}<br />#container {<br />width : 960px;<br />margin : auto;<br />overflow : hidden;<br />color : white;<br />}<br />#topboxleft {<br />width : 33.3%;<br />height : 280px;<br />float : left;<br />}<br />#topboxmiddle {<br />width : 33.3%;<br />height : 280px;<br />float : left;<br />}<br />#topboxright {<br />width : 33.3%;<br />height : 280px;<br />float : left;<br />}<br />#bottomboxleft {<br />width : 15%;<br />height : 300px;<br />float : left;<br />}<br />#bottomboxmiddle {<br />width : 40%;<br />height : 300px;<br />float : left;<br />}<br />#bottomboxright {<br />width : 45%;<br />height : 300px;<br />float : left;<br />}<br />#bottombox {<br />width : 100%;<br />clear : both;<br />border-top : 2px solid white;<br />}<br />.topboxleft {<br />margin-top : 10px;<br />}<br />.topboxmiddlestyle {<br />font-family : "Castellar";<br />padding : 12%;<br />text-align : center;<br />font-weight : bold;<br />}<br />.topboxrightstyle {<br />font-family : "Bradley Hand ITC";<br />padding-top : 10%;<br />text-align : center;<br />font-weight : bold;<br />}<br />.bottomboxleftstyle a {<br />display : block;<br />text-decoration : none;<br />font-family : "comic sans ms";<br />width : 95%;<br />height : 25px;<br />font-size : 15px;<br />border : 1px solid white;<br />margin-bottom : 4px;<br />text-align : center;<br />color : white;<br />}<br />.bottomboxleftstyle a:hover {<br />color : red;<br />background-color : white;<br />}<br />.bottomboxleftstyle ul {<br />list-style-type : none;<br />}<br />.menutitle {<br />color : #04b4ae;<br />text-align : center;<br />font-size : 18px;<br />}<br />.bottomboxmiddlestyle a {<br />display : block;<br />text-decoration : none;<br />font-family : "comic sans ms";<br />font-size : 20px;<br />margin-left : 30px;<br />outline : none;<br />color : white;<br />}<br />.bottomboxmiddlestyle a:hover {<br />color : red;<br />}<br />.bottomboxmiddlestyle ul {<br />list-style : none;<br />}<br />.bottomboxmiddlemenutitle {<br />color : #04b4ae;<br />text-align : center;<br />font-size : 20px;<br />font-family : "comic sans ms";<br />width : 50%;<br />}<br />.bottomboxrightstyle {<br />padding : 15px;<br />font-family : "Times New Roman";<br />}<br />.bottomboxstyle {<br />text-align : center;<br />padding : 10px;<br />}<br />.bottomboxnavstyle a {<br />text-decoration : none;<br />color : #04b4ae;<br />font-family : "comic sans ms";<br />font-size : 15px;<br />}<br />.bottomboxnavstyle a:hover {<br />color : red;<br />}<br />.bottomboxnavstyle ul {<br />list-style-type : none;<br />background-color : #a9f5f2;<br />width : 100%;<br />text-align : center;<br />}<br />.bottomboxnavstyle li {<br />padding : 0 8% 0% 8%;<br />display : inline;<br />}<br /><br /><br />jnf555<br /><BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34708">CSS3 animation; Mind == blown</A><BR>
+What the ###### is CSS3 turning out to be? A friendly more visual Javascript? I stumbled along a website using some of these odd features and my head almost exploded.<br /><br /><a href="../css3.bradshawenterprises.com/default.htm" target="_blank">http://css3.bradshawenterprises.com/ </a> &lt;-- Chrome seems to be the most ahead browser in terms of CSS3, so use it.<br /><br />What are you're views on CSS3 and where it's heading?<BR>
+
+<HR SIZE=1>
+<A HREF="index.php@showtopic=34706">web designers vs. web developers</A><BR>
+<a href="../www.huffingtonpost.com/2010/11/16/web-designers-vs-web-developers-infographic_n_783854.html" target="_blank">http://www.huffingtonpost.com/2010/11/16/w...c_n_783854.html</a><br />Although to most of the seasoned vets here, most, if not all of this stuff, applies equally across the board, or we're definitely a lot of column A and B, I sure know I am.  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br />my favorite part is the developers t-shirt<br /><!--quoteo--><div class='quotetop'>QUOTE </div><div class='quotemain'><!--quotec-->there's no place like 127.0.0.1<!--QuoteEnd--></div><!--QuoteEEnd--><BR>
+
+<HR SIZE=1>
+</FONT>
+</BODY>
+</HTML>

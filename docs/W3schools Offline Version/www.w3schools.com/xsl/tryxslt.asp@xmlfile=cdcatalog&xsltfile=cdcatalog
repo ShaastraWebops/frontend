@@ -1,0 +1,314 @@
+
+<html><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script>
+<head>
+<title>XSLT Tryit Editor v1.0</title>
+<style type="text/css" style="display:none">body{color:#000000;background-color:#ffffff;margin:4px;margin-top:0px;}.maintable{width:100%;background-color:#e5eecc;color:#000000;border:solid #c3c3c3 1px;margin-left:0px;}.code_input,.result_output{border:1px solid #c3c3c3;width:100%;height:400px;background-color:#ffffff;color:#000000;}.toptext{color:#617f10;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:120%;}.result_header{color:#617f10;margin-bottom:12px;margin-top:0px;font-family:verdana;font-size:90%;}.bottomtext_div{margin-right:3px;}.bottomtext{color:#617f10;font-family:verdana;margin-bottom:0px;margin-top:6px;font-size:90%;}
+</style>
+
+<script type="text/javascript">
+function displayad()
+{
+document.getElementById("adframe").src="../tryitbanner.asp@secid=tryxslt&rnd=" + Math.random()
+}
+
+function submitReady()
+{
+document.forms["codeform"]["submitOK"].value="OK"
+displayad()
+}
+</script>
+</head>
+
+<body xonload="load_xsltResult()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<iframe id="adframe" style="background-color:#ffffff" height="98" width="890" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" 
+src="../tryitbanner.asp@secid=tryxslt&rnd=0.5705988"></iframe>
+</td>
+</tr>
+</table>
+
+<form name="codeform" id="codeform" style="margin:0px" action="tryxslt_result.asp" method="post" target="view">
+
+<table border="0" class="maintable" cellpadding="3" cellspacing="3">
+<tr>
+<td colspan="2">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" valign="bottom"><p style="margin-bottom:0px;" class="result_header">XML Code:</p></td>
+<td align="center" valign="bottom"><input style="margin-bottom:5px;font-family:verdana;" type="submit" value="Edit and Click Me >>" onclick="submitReady()"></td>
+<td align="right" valign="bottom"><p style="margin-bottom:0px;" class="result_header">XSLT Code:</p></td>
+</tr>
+</table>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="bottom">
+<textarea class="code_input" width="100%" height="250px" id="xml_input" name="xml_input" wrap="logical">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Edited by XMLSpy® -->
+<catalog>
+	<cd>
+		<title>Empire Burlesque</title>
+		<artist>Bob Dylan</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price>10.90</price>
+		<year>1985</year>
+	</cd>
+	<cd>
+		<title>Hide your heart</title>
+		<artist>Bonnie Tyler</artist>
+		<country>UK</country>
+		<company>CBS Records</company>
+		<price>9.90</price>
+		<year>1988</year>
+	</cd>
+	<cd>
+		<title>Greatest Hits</title>
+		<artist>Dolly Parton</artist>
+		<country>USA</country>
+		<company>RCA</company>
+		<price>9.90</price>
+		<year>1982</year>
+	</cd>
+	<cd>
+		<title>Still got the blues</title>
+		<artist>Gary Moore</artist>
+		<country>UK</country>
+		<company>Virgin records</company>
+		<price>10.20</price>
+		<year>1990</year>
+	</cd>
+	<cd>
+		<title>Eros</title>
+		<artist>Eros Ramazzotti</artist>
+		<country>EU</country>
+		<company>BMG</company>
+		<price>9.90</price>
+		<year>1997</year>
+	</cd>
+	<cd>
+		<title>One night only</title>
+		<artist>Bee Gees</artist>
+		<country>UK</country>
+		<company>Polydor</company>
+		<price>10.90</price>
+		<year>1998</year>
+	</cd>
+	<cd>
+		<title>Sylvias Mother</title>
+		<artist>Dr.Hook</artist>
+		<country>UK</country>
+		<company>CBS</company>
+		<price>8.10</price>
+		<year>1973</year>
+	</cd>
+	<cd>
+		<title>Maggie May</title>
+		<artist>Rod Stewart</artist>
+		<country>UK</country>
+		<company>Pickwick</company>
+		<price>8.50</price>
+		<year>1990</year>
+	</cd>
+	<cd>
+		<title>Romanza</title>
+		<artist>Andrea Bocelli</artist>
+		<country>EU</country>
+		<company>Polydor</company>
+		<price>10.80</price>
+		<year>1996</year>
+	</cd>
+	<cd>
+		<title>When a man loves a woman</title>
+		<artist>Percy Sledge</artist>
+		<country>USA</country>
+		<company>Atlantic</company>
+		<price>8.70</price>
+		<year>1987</year>
+	</cd>
+	<cd>
+		<title>Black angel</title>
+		<artist>Savage Rose</artist>
+		<country>EU</country>
+		<company>Mega</company>
+		<price>10.90</price>
+		<year>1995</year>
+	</cd>
+	<cd>
+		<title>1999 Grammy Nominees</title>
+		<artist>Many</artist>
+		<country>USA</country>
+		<company>Grammy</company>
+		<price>10.20</price>
+		<year>1999</year>
+	</cd>
+	<cd>
+		<title>For the good times</title>
+		<artist>Kenny Rogers</artist>
+		<country>UK</country>
+		<company>Mucik Master</company>
+		<price>8.70</price>
+		<year>1995</year>
+	</cd>
+	<cd>
+		<title>Big Willie style</title>
+		<artist>Will Smith</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price>9.90</price>
+		<year>1997</year>
+	</cd>
+	<cd>
+		<title>Tupelo Honey</title>
+		<artist>Van Morrison</artist>
+		<country>UK</country>
+		<company>Polydor</company>
+		<price>8.20</price>
+		<year>1971</year>
+	</cd>
+	<cd>
+		<title>Soulsville</title>
+		<artist>Jorn Hoel</artist>
+		<country>Norway</country>
+		<company>WEA</company>
+		<price>7.90</price>
+		<year>1996</year>
+	</cd>
+	<cd>
+		<title>The very best of</title>
+		<artist>Cat Stevens</artist>
+		<country>UK</country>
+		<company>Island</company>
+		<price>8.90</price>
+		<year>1990</year>
+	</cd>
+	<cd>
+		<title>Stop</title>
+		<artist>Sam Brown</artist>
+		<country>UK</country>
+		<company>A and M</company>
+		<price>8.90</price>
+		<year>1988</year>
+	</cd>
+	<cd>
+		<title>Bridge of Spies</title>
+		<artist>T`Pau</artist>
+		<country>UK</country>
+		<company>Siren</company>
+		<price>7.90</price>
+		<year>1987</year>
+	</cd>
+	<cd>
+		<title>Private Dancer</title>
+		<artist>Tina Turner</artist>
+		<country>UK</country>
+		<company>Capitol</company>
+		<price>8.90</price>
+		<year>1983</year>
+	</cd>
+	<cd>
+		<title>Midt om natten</title>
+		<artist>Kim Larsen</artist>
+		<country>EU</country>
+		<company>Medley</company>
+		<price>7.80</price>
+		<year>1983</year>
+	</cd>
+	<cd>
+		<title>Pavarotti Gala Concert</title>
+		<artist>Luciano Pavarotti</artist>
+		<country>UK</country>
+		<company>DECCA</company>
+		<price>9.90</price>
+		<year>1991</year>
+	</cd>
+	<cd>
+		<title>The dock of the bay</title>
+		<artist>Otis Redding</artist>
+		<country>USA</country>
+		<company>Atlantic</company>
+		<price>7.90</price>
+		<year>1987</year>
+	</cd>
+	<cd>
+		<title>Picture book</title>
+		<artist>Simply Red</artist>
+		<country>EU</country>
+		<company>Elektra</company>
+		<price>7.20</price>
+		<year>1985</year>
+	</cd>
+	<cd>
+		<title>Red</title>
+		<artist>The Communards</artist>
+		<country>UK</country>
+		<company>London</company>
+		<price>7.80</price>
+		<year>1987</year>
+	</cd>
+	<cd>
+		<title>Unchain my heart</title>
+		<artist>Joe Cocker</artist>
+		<country>USA</country>
+		<company>EMI</company>
+		<price>8.20</price>
+		<year>1987</year>
+	</cd>
+</catalog>
+
+</textarea>
+</td>
+<td width="50%" valign="bottom">
+<textarea class="code_input" width="100%" height="250px" id="xslt_input" name="xslt_input" wrap="logical">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Edited by XMLSpy® -->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+  <h2>My CD Collection</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+        <th>Title</th>
+        <th>Artist</th>
+      </tr>
+      <xsl:for-each select="catalog/cd">
+      <tr>
+        <td><xsl:value-of select="title"/></td>
+        <td><xsl:value-of select="artist"/></td>
+      </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet>
+
+</textarea>
+<input type="hidden" name="submitOK" id="submitOK" value="" />
+</td>
+</tr>
+<td colspan="2" valign="top">
+<p style="margin-bottom:0px;" class="result_header">Your Result:</p>
+<iframe class="result_output" width="100%" height="250px" frameborder="0" name="view" src="tryxslt_result.asp@xmlfile=cdcatalog&xsltfile=cdcatalog"></iframe>
+</td>
+</tr>
+<tr>
+<td align="left" class="bottomtext">
+Edit the code above and click to see the result.
+</td>
+<td align="right" class="bottomtext">
+<a style="color:#617f10" href="../default.htm">W3Schools.com</a> - Try it yourself&nbsp;
+</td>
+</tr>
+</table>
+</form>
+
+</body>
+</html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

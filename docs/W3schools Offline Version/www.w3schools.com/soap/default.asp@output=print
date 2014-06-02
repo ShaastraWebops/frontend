@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>SOAP Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>SOAP <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="soap_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3soap.gif" height="132" width="100" border="0" alt="SOAP" /></td><td valign="top"><p class="tutintro">SOAP is a simple XML-based protocol to let applications exchange information over HTTP.</p><p class="tutintro">In our SOAP tutorial, you will learn what SOAP is, and how it uses XML to exchange information between applications.</p><p class="tutintro"><a href="soap_intro.asp"><b>Start learning SOAP now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="soap_intro.asp">Introduction to SOAP</a><br />This chapter explains what SOAP is and why SOAP is useful.</p><p><a href="soap_syntax.asp">SOAP Syntax</a>&nbsp;<br />This chapter describes the building blocks of SOAP and SOAP syntax rules.</p><p><a href="soap_envelope.asp">SOAP Envelope</a><br />This chapter describes the SOAP Envelope element.</p><p><a href="soap_header.asp">SOAP Header</a><br />This chapter describes the SOAP Header element.</p><p><a href="soap_body.asp">SOAP Body</a><br />This chapter describes the SOAP Body element.</p><p><a href="soap_fault.asp">SOAP Fault</a><br />This chapter describes the SOAP Fault element.</p><p><a href="soap_httpbinding.asp">SOAP HTTP Binding</a><br />This chapter is an introduction to the SOAP HTTP binding.</p><p><a href="soap_example.asp">SOAP Example</a><br />This chapter describes a SOAP example.</p><p><a href="soap_summary.asp">SOAP Summary</a><br />This chapter contains a summary on what you have learned in this tutorial and a recommendation on what subject you should study next.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="soap_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

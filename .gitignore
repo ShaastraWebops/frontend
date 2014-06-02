@@ -1,0 +1,30 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+*.sass-cache
+*.pot
+*.pyc
+*.py~
+*.html~
+*.sublime-project
+*.sublime-workspace
+.AppleDouble
+.DS_Store
+.c9revisions
+
+# Server config files
+restart-project.sh
+
+# Local config files
+venv
+deps
+tmp
+temp

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>W3C Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>W3C <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="w3c_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3w3c.gif" height="132" width="100" border="0" alt="W3C" /></td><td valign="top"><p class="tutintro">W3C Stands for the World Wide Web Consortium.</p><p class="tutintro">W3C is working to make the Web accessible to all users (despite differences in culture, education, ability, resources, and physical limitations).</p><p class="tutintro"><a href="w3c_intro.asp"><b>Start learning about W3C now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="w3c_intro.asp">Introduction to W3C<br /></a>This chapter explains what the W3C is, how it works, and how the Web is standardized.</p><p><a href="w3c_process.asp">W3C Process<br /></a>This chapter explains the W3C standardizing process.</p><p><a href="w3c_html.asp">W3C HTML<br /></a>This chapter summarizes the HTML activities at the W3C.</p><p><a href="w3c_xhtml.asp">W3C XHTML<br /></a>This chapter summarizes the XHTML activities at the W3C.</p><p><a href="w3c_xml.asp">W3C XML<br /></a>This chapter summarizes the XML activities at the W3C.</p><p><a href="w3c_css.asp">W3C CSS<br /></a>This chapter summarizes the CSS activities at the W3C.</p><p><a href="w3c_xsl.asp">W3C XSL<br /></a>This chapter summarizes the XSL activities at the W3C.</p><p><a href="w3c_schema.asp">W3C XML Schema</a><br />This chapter summarizes the XML Schema activities at the W3C.</p><p><a href="w3c_xpath.asp">W3C XPath</a><br />This chapter summarizes the XPath activities at the W3C.</p><p><a href="w3c_xquery.asp">W3C XQuery</a><br />This chapter summarizes the XQuery activities at the W3C.</p><p><a href="w3c_dom.asp">W3C DOM<br /></a>This chapter summarizes the DOM activities at the W3C.</p><p><a href="w3c_soap.asp">W3C SOAP<br /></a>This chapter summarizes the SOAP activities at the W3C.</p><p><a href="w3c_wsdl.asp">W3C WSDL</a><br />This chapter summarizes the WSDL activities at the W3C.</p><p><a href="w3c_rdf.asp">W3C RDF</a><br />This chapter summarizes the RDF activities at the W3C.</p><p><a href="w3c_smil.asp">W3C SMIL</a><br />This chapter summarizes the SMIL activities at the W3C.</p><p><a href="w3c_other.asp">W3C Other<br /></a>This chapter summarizes other activities at the W3C.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="w3c_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

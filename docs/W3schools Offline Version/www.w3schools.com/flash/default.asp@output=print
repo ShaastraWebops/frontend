@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>Flash Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>Flash <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="flash_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3flash.gif" height="132" width="100" border="0" alt="Flash" /></td><td valign="top"><p class="tutintro">Flash is a tool for creating interactive and animated Web sites!</p><p class="tutintro">This Flash tutorial will teach you how to use Flash in your applications.</p><p class="tutintro"><a href="flash_intro.asp"><b>Start learning Flash now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="flash_intro.asp">Introduction to Flash</a><br />What is Flash? Advantages of Flash compared to animated images and Java Applets.</p><p><a href="flash_howto.asp">Flash How to</a><br />What do you need to view Flash? What do you need to create Flash movies? Where to start?</p><p><a href="flash_inhtml.asp">Flash in HTML<br /></a>How to embed a Flash movie into an HTML page.</p><p><a href="flash_tweening.asp">Flash Tweening<br /></a>With Tweening you can create movements and changes in a Flash movie. In this chapter you will learn how to make an object move across the screen.</p><p><a href="flash_guidetween.asp">Flash Guide Tween<br /></a>How to move an object from one location to another along a specified path.</p><p><a href="flash_tinttween.asp">Flash Tint Tween<br /></a>How to change the color of an object.</p><p><a href="flash_shapetween.asp">Flash Shape Tween<br /></a>How to change one object into another.</p><p><a href="flash_button.asp">Flash Button 1<br /></a>How to insert an image, convert it to a button, and add a URL to it so it becomes a link.</p><p><a href="flash_button2.asp">Flash Button 2<br /></a>How to create your own button and add a URL to it so it becomes a link.</p><p><a href="flash_animation.asp">Flash Animation<br /></a>How to make a symbol turn around while moving from one location to another.</p><p><a href="flash_sound.asp">Flash Sound<br /></a>How to deal with sound files in Flash.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="flash_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

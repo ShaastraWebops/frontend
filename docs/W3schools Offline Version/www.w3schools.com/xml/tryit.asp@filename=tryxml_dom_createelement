@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><head><title>Tryit Editor v1.4</title> <style type="text/css" style="display:none">body{color:#000000;background-color:#ffffff;margin:4px;margin-top:0px;}.maintable{width:100%;background-color:#e5eecc;color:#000000;border:solid #c3c3c3 1px;margin-left:0px;}.code_input,.result_output{border:1px solid #c3c3c3;width:100%;height:400px;background-color:#ffffff;color:#000000;}.toptext{color:#617f10;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:120%;}.result_header{color:#617f10;margin-bottom:12px;margin-top:0px;font-family:verdana;font-size:90%;}.bottomtext_div{margin-right:3px;}.bottomtext{color:#617f10;font-family:verdana;margin-bottom:0px;margin-top:6px;font-size:90%;}
+</style>
+<script type="text/javascript">function displayad()
+{
+var t=document.getElementById("pre_code").value;	
+document.getElementById("code").value=t;
+document.getElementById("adframe").src="../tryitbanner.asp@secid=tryxml&rnd=" + Math.random();
+}
+</script> </head><body><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="center"><iframe id="adframe" style="background-color:#ffffff" height="98" width="960" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" src="../tryitbanner.asp@secid=tryxml&rnd=0.8564875"></iframe></td></tr></table><table border="0" class="maintable" cellpadding="3px" cellspacing="3px"><tr><td width="50%"><form style="margin:0px" action="tryit_view.asp" method="post" target="view"><input style="margin-bottom:5px;font-family:verdana;" name="submit" type="submit" value="Edit and Click Me >>" onclick="displayad()"> <textarea class="code_input" width="100%" height="400px" id="pre_code" wrap="logical">
+<html>
+<body>
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","books.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+newel=xmlDoc.createElement("edition");
+newtext=xmlDoc.createTextNode("First");
+newel.appendChild(newtext);
+x=xmlDoc.getElementsByTagName("book");
+x[0].appendChild(newel);
+
+for (i=0;i<x[0].childNodes.length;i++)
+{
+if (x[0].childNodes[i].nodeType==1)
+  { 
+  document.write(x[0].childNodes[i].nodeName);
+  document.write(": ");
+  document.write(x[0].childNodes[i].childNodes[0].nodeValue);
+  document.write("<br />");
+  }
+}
+</script>
+</body>
+</html>
+
+</textarea> <input type="hidden" name="code" id="code" /> <input type="hidden" id="bt" name="bt" /></form></td><td valign="top"><p class="result_header">Your Result:</p><iframe class="result_output" width="100%" height="400px" frameborder="0" name="view" src="tryit_view.asp@filename=tryxml_dom_createelement"></iframe></td></tr><tr><td align="left" class="bottomtext">Edit the code above and click to see the result.</td><td align="right" class="bottomtext"><a style="color:#617f10" href="../default.htm">W3Schools.com</a> - Try it yourself&nbsp;</td></tr></table></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

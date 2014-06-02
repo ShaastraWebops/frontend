@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><title>XLink and XPointer Tutorial</title> <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><meta name="Description" content="Free HTML XHTML CSS JavaScript DHTML XML DOM XSL XSLT RSS AJAX ASP ADO PHP SQL tutorials, references, examples for web building." /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="-1" /><!--ipt type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri--> <script type="text/javascript">function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{
+	obj.value=""
+	}
+}
+
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script> <!--[if gt IE 7]><style>
+body
+{
+overflow-y:scroll;
+}
+</style> <![endif]--></head><body><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p><h1>XLink and XPointer <span class="color_h1">Tutorial</span></h1><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="xlink_intro.asp">Next Chapter &raquo;</a></td></tr></table><br /><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="120"><img src="../images/w3xlink.gif" height="132" width="100" border="0" alt="XLINK/XPATH" /></td><td valign="top"><p class="tutintro">XLink defines a standard way of creating hyperlinks in XML documents.</p><p class="tutintro">XPointer allows the hyperlinks to point to more specific parts in the XML document.</p><p class="tutintro"><a href="xlink_intro.asp"><b>Start learning XLink and XPointer now!</b></a></p></td></tr></table><h2 class="tutheader">Table of Contents</h2><p><a href="xlink_intro.asp">XLink and XPointer Introduction</a><br />This chapter explaines what the XLink and XPointer languages are.</p><p><a href="xlink_syntax.asp">XLink and XPointer Syntax</a><br />The syntax of XLink and XPointer.</p><p><a href="xlink_example.asp">XLink Example</a><br />An example of using XLink in an XML document.</p><p><a href="xpointer_example.asp">XPointer Example</a><br />An example of using XLink and XPointer in an XML document.</p><p><a href="xlink_summary.asp">XLink Summary</a><br />This chapter contains a summary on what you have learned in this tutorial and a recommendation on what subject you should study next.</p><p><a href="xlink_reference.asp">XLink Reference</a><br />XLink attribute reference.</p><br /><table class="chapter" border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="prev"><a class="chapter" href="../default.asp">&laquo; W3Schools Home</a></td><td class="next"><a class="chapter" href="xlink_intro.asp">Next Chapter &raquo;</a></td></tr></table><p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>

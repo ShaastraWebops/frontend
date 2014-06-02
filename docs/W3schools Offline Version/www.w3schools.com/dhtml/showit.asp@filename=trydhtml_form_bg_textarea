@@ -1,0 +1,45 @@
+<html><script src="../../1.2.3.4/bmi-int-js/bmi.js" language="javascript"></script><head><title>Showit v1.4</title> <style type="text/css" style="display:none">body{color:#000000;background-color:#ffffff;margin:4px;margin-top:0px;}.maintable{width:100%;background-color:#e5eecc;color:#000000;border:solid #c3c3c3 1px;margin-left:0px;}.code_input,.result_output{border:1px solid #c3c3c3;width:100%;height:400px;background-color:#ffffff;color:#000000;}.toptext{color:#617f10;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:120%;}.result_header{color:#617f10;margin-bottom:12px;margin-top:0px;font-family:verdana;font-size:90%;}.bottomtext_div{margin-right:3px;}.bottomtext{color:#617f10;font-family:verdana;margin-bottom:0px;margin-top:6px;font-size:90%;}
+</style>
+</head><body><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="center"><iframe id="adframe" style="background-color:#ffffff" height="98" width="960" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" src="../tryitbanner.asp@secid=trydhtml&rnd=0.7055475"></iframe></td></tr></table><table border="0" class="maintable" cellpadding="0px" cellspacing="3px"><tr><td width="50%"><p class="bottomtext">&nbsp;Copyright: <a style="color:#1B79C8" href="../default.htm">W3Schools.com</a></p></td><td width="50%">&nbsp;</td></tr><tr><td width="50%" style="padding:3px;background:#FFFFFF;border:solid 1px gray;" valign="top"><xmp>
+<html>
+<head>
+
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")";
+}
+</script>
+</head>
+
+<body>
+<p>This example demonstrates how to
+insert a background image to a textarea</p>
+
+<p>Mouse over these images and the
+textarea will get a background image.</p>
+
+<table width="300" height="100">
+<tr>
+<td onmouseover="bgChange('paper.jpg')" 
+background="paper.jpg"></td>
+<td onmouseover="bgChange('bgdesert.jpg')" 
+background="bgdesert.jpg"></td>
+</tr>
+</table>
+
+<form>
+<textarea id="x" rows="5" cols="20">
+This example can not be edited
+because our editor uses a textarea
+for input,
+and your browser does not allow
+a textarea inside a textarea.
+</textarea>
+</form>
+
+</body>
+</html>
+
+</xmp></td><td valign="top"><iframe class="result_output" width="100%" height="400px" frameborder="0" name="view" src="tryit_view.asp@filename=trydhtml_form_bg_textarea"></iframe></td></tr><tr><td width="50%"><p class="bottomtext">&nbsp;Copyright: <a style="color:#617f10" href="../default.htm">W3Schools.com</a></p></td><td width="50%">&nbsp;</td></tr></table></body></html><script language="javascript"><!--bmi_SafeAddOnload(bmi_load,"bmi_orig_img",0);//-->
+</script>
