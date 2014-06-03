@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="menu/js/modernizr.custom.js"></script>
+        <script src="jquery.min.js"></script>  
+        <script src="js.js"></script>
         <link href="gen_css/resp.css" rel="stylesheet">
         <link href="gen_css/component_hexagon.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="menu/css/component_menu.css" />      
-        <script src="menu/js/modernizr.custom.js"></script>
-        <script src="jquery.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="menu/css/component_menu.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
-    <body style="background-image:url('pics/new_black.png')">  
+    <body style="background-image:url('pics/background.jpg')">  
 		<div>
             <section>
 				<nav class="cl-effect-21" id="cl-effect-21">
-					<a id="events" href="#" style="position:absolute; top:7%; left:44%; z-index:2">EVENTS</a>
-					<a id="spons" href="#" style="position:absolute; top:26%; left:22%; z-index:2">SPONSORS</a>
-					<a id="shows" href="#" style="position:absolute; top:26%; left:64%; z-index:2">SHOWS</a>
-					<a id="lectures" href="#" style="position:absolute; top:63%; left:23%; z-index:2">LECTURES</a>
-					<a id="contacts" href="#" style="position:absolute; top:63%; left:63%; z-index:2">CONTACT</a>
-					<a id="about_us" href="#" style="position:absolute; top:87%; left:43%; z-index:2">ABOUT US</a>
+					<b id="events" href="#" style="position:absolute; top:7%; left:44%; z-index:2">EVENTS</b>
+					<b id="spons" href="#" style="position:absolute; top:26%; left:22%; z-index:2">SPONSORS</b>
+					<b id="shows" href="#" style="position:absolute; top:26%; left:64%; z-index:2">SHOWS</b>
+					<b id="lectures" href="#" style="position:absolute; top:63%; left:23%; z-index:2">LECTURES</b>
+					<b id="contacts" href="#" style="position:absolute; top:63%; left:63%; z-index:2">CONTACT</b>
+					<b id="about_us" href="#" style="position:absolute; top:81%; left:43%; z-index:2">ABOUT US</b>
 				</nav>
 			</section>
         </div>  
@@ -30,11 +32,11 @@
         
 		<section id="set-7">
             <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                <a id="menu_icon" style="position:absolute; top:0%; left:0%; z-index:3" class="hi-icon hi-icon-list">List</a>
+                <c id="menu_icon" style="position:absolute; top:0%; left:0%; z-index:399" class="hi-icon hi-icon-list"></c>
              </div>    
         </section>
                 
-        <div id="menu_popup" style="position:absolute; background-color:black; z-index:4; height:100%; width:30%; top:0%; left:-30%; opacity:0">
+        <div id="menu_popup" style="position:absolute; background-color:black; z-index:400; height:100%; width:30%; top:0%; left:-30%; opacity:0">
             <table style="color:white; width:100%">
                 <tr>
                     <th class="header">SHAASTRA 2015</th>
@@ -77,7 +79,7 @@
                     
                 
                 <tr>
-                    <td class="header" style="font-family: Cursive; font-size:2em"><i>follow us on</i></td>
+                    <td class="header" style="font-family: Cursive"><i>follow us on</i></td>
                 </tr>  
                 <tr>
                     <td id="facebook" class="menu_options" style="color:#0020C2">Facebook</td>
@@ -90,77 +92,10 @@
                 </tr>                        
             </table>            
         </div> 
- scale:auto;        
-        <div id="menu_rhs" style="position:absolute; z-index:5; height:100%; width:0%; top:0%; right:-70%; opacity:0.5">
+     
+        <div id="menu_rhs" style="position:absolute; z-index:401; height:100%; width:0%; top:0%; right:-70%; opacity:0.5">
             <img style="width:100%; height:100%" src="pics/right_side_image.jpg">    
         </div>
         
-        
-        <script>
-            $(document).ready(function(){
-               $("#menu_icon").click(function(){
-                  $("#menu_popup").animate({
-                      left: '0%',
-                      opacity: '1'                  
-                  },"slow");  
-                 $("#menu_rhs").animate({
-                      right: '0%',
-                      opacity: '1',
-                      width: '70%'
-                  },"slow");  
-               });  
-               $(".menu_options").hover(function(){
-                  $(this).css("background-color","#EBF4FA");
-                  $(this).css("color","black");
-                  $("#you_tube").css("color","#F62217");
-                  $("#facebook").css("color","#0020C2");
-                  $("#twitter").css("color","#38ACEC"); 
-                  $("#close_menu").css("color","#99C68E"); 
-                  $(this).css("font-size","1.5em"); 
-                  $(this).css("font-weight","bolder"); 
-                },function(){
-                  $(this).css("background-color","black"); 
-                  $(this).css("color","white"); 
-                  $("#you_tube").css("color","#F62217");
-                  $("#facebook").css("color","#0020C2");
-                  $("#twitter").css("color","#38ACEC"); 
-                  $("#close_menu").css("color","#99C68E");    
-                  $(this).css("font-size","1.3"); 
-                  $(this).css("font-weight","initial");    
-               });
-               $("#close_menu").click(function(){
-                    $("#menu_rhs").animate({
-                      right: '-70%',
-                      opacity: '0',
-                      width: '0%'
-                    },"slow");  
-                    $("#menu_popup").animate({
-                      left: '-30%',
-                      opacity: '0'                  
-                    },"slow");                      
-                });
-                $("#spons").hover(function(){
-                    $("#spons_img").css("opacity","1");
-                },function(){
-                    $("#spons_img").css("opacity","0");
-                });
-                $("#lectures").hover(function(){
-                    $("#lectures_img").css("opacity","1");
-                },function(){
-                    $("#lectures_img").css("opacity","0");
-                });
-                $("#events").hover(function(){
-                    $("#events_img").css("opacity","1");
-                },function(){
-                    $("#events_img").css("opacity","0");
-                });                
-                $("#contacts").hover(function(){
-                    $("#contacts_img").css("opacity","1");
-                },function(){
-                    $("#contacts_img").css("opacity","0");
-                });                                
-                
-            });   
-        </script>
 	</body>
 </html>

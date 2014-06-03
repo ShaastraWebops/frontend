@@ -5,21 +5,47 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+/*
 .hi-icon {
 	display: inline-block;
 	font-size: 0px;
 	cursor: pointer;
-	margin: 15px 30px;
-	width: 90px;
-	height: 90px;
+	margin: 1.5% 3%;
+    width: 90px;
+    height: 90px;   
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
 	z-index: 1;
 	color: white;
-}
+    
+ 
+    @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
+      
+    }
+    
 
+    @media all and (min-width: pem(900)) and (max-width: pem(1000)){
+       
+     
+    }
+    
+
+    @media all and (min-width: pem(680)) and (max-width: pem(900)){
+          
+    }
+    
+  
+    @media all and (min-width: pem(500)) and (max-width: pem(680)){
+        
+    }
+    
+
+    @media all and (min-width: pem(350)) and (max-width: pem(500)){
+        
+    }     
+}*/
+/*
 .hi-icon:after {
 	pointer-events: none;
 	position: absolute;
@@ -29,9 +55,39 @@
 	content: '';
 	-webkit-box-sizing: content-box; 
 	-moz-box-sizing: content-box; 
-	box-sizing: content-box;
-}
+	box-sizing: content-box;  
+    
+ 
+    @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
+        width: 0%;
+	    height: 0%;      
+    }
+    
 
+    @media all and (min-width: pem(900)) and (max-width: pem(1000)){
+        width: 10%;
+	    height: 10%;           
+    }
+    
+
+    @media all and (min-width: pem(680)) and (max-width: pem(900)){
+        width: 10%;
+	    height: 10%;            
+    }
+    
+  
+    @media all and (min-width: pem(500)) and (max-width: pem(680)){
+        width: 10%;
+	    height: 10%;          
+    }
+    
+
+    @media all and (min-width: pem(350)) and (max-width: pem(500)){
+        width: 10%;
+	    height: 10%;          
+    }         
+}
+*/
 .hi-icon:before {
 	font-family: 'ecoicon';
 	speak: none;
@@ -118,7 +174,7 @@
 */
 /* General Demo Style */
 
-a {
+c {
 	color: #ccc;
 	text-decoration: none;
 }
@@ -132,7 +188,7 @@ a {
 }
 
 /* Menu options */
-
+/*
 .menu_options{
     color: white;
     font-family: Verdana;
@@ -145,9 +201,9 @@ a {
     text-align: center;
     height: 5%;
 }    
-
+*/
 /* Menu headers */
-
+/*
 .header{
     color: white;
     font-family: Verdana;
@@ -159,4 +215,4 @@ a {
     padding-bottom: 4%;
 }  
 
-
+*/

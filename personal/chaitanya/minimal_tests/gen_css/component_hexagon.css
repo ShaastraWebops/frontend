@@ -15,8 +15,8 @@ nav a {
 }
 */
 /* Effect 21: borders slight translate */
-.cl-effect-21 a {
-	padding: 15px;
+.cl-effect-21 b {
+/*	padding: 15px;   */
 /*	color: #237546;  */
     color: white;
 	font-weight: 200;
@@ -25,13 +25,13 @@ nav a {
 	-moz-transition: color 0.3s;
 	transition: color 0.3s;
 }
-
+/*
 .cl-effect-21 a::before,
 .cl-effect-21 a::after {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	height: 2px;
+	height: 4%;
 	background: #fff;
 	content: '';
 	opacity: 1;
@@ -42,15 +42,15 @@ nav a {
 	-moz-transform: translateY(-10px);
 	transform: translateY(-10px);
 }
-
-.cl-effect-21 a::before {
+*/
+.cl-effect-21 b::before {
 	top: 0;
 	-webkit-transform: translateY(10px);
 	-moz-transform: translateY(10px);
 	transform: translateY(10px);
 }
 
-.cl-effect-21 a::after {
+.cl-effect-21 b::after {
 	bottom: 0;
 	-webkit-transform: translateY(-10px);
 	-moz-transform: translateY(-10px);
@@ -58,10 +58,10 @@ nav a {
 }
 
 
-.cl-effect-21 a:hover::before,
-.cl-effect-21 a:focus::before,
-.cl-effect-21 a:hover::after,
-.cl-effect-21 a:focus::after {
+.cl-effect-21 b:hover::before,
+.cl-effect-21 b:focus::before,
+.cl-effect-21 b:hover::after,
+.cl-effect-21 b:focus::after {
 	opacity: 0;
 	-webkit-transform: translateY(0px);
 	-moz-transform: translateY(0px);
