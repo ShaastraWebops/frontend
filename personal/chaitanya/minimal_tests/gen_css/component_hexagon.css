@@ -1,23 +1,5 @@
-/*
-nav a {
-	position: relative;
-	display: inline-block;
-	margin: 15px 25px;
-	outline: none;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 400;
-	text-shadow: 0 0 1px rgba(255,255,255,0.3);
-	font-size: 1.5em;
-    font-family: Verdana;
-}
-*/
 /* Effect 21: borders slight translate */
 .cl-effect-21 b {
-/*	padding: 15px;   */
-/*	color: #237546;  */
     color: white;
 	font-weight: 200;
 	text-shadow: none;
@@ -25,24 +7,7 @@ nav a {
 	-moz-transition: color 0.3s;
 	transition: color 0.3s;
 }
-/*
-.cl-effect-21 a::before,
-.cl-effect-21 a::after {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 4%;
-	background: #fff;
-	content: '';
-	opacity: 1;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(-10px);
-	-moz-transform: translateY(-10px);
-	transform: translateY(-10px);
-}
-*/
+
 .cl-effect-21 b::before {
 	top: 0;
 	-webkit-transform: translateY(10px);
@@ -56,7 +21,6 @@ nav a {
 	-moz-transform: translateY(-10px);
 	transform: translateY(-10px);
 }
-
 
 .cl-effect-21 b:hover::before,
 .cl-effect-21 b:focus::before,

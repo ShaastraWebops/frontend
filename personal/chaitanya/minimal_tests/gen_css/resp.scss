@@ -132,13 +132,7 @@ nav b{
 	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
 	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
 	transition: transform 0.2s, opacity 0.2s;
-/*    
-    @media all and (max-width: pem(600)){
-        -webkit-transform: scale(0.4);
-        -moz-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);        
-    }  */  
+
 // for 125    
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
         -webkit-transform: scale(0.7);
@@ -182,13 +176,7 @@ nav b{
 	-ms-transform: scale(1);
 	transform: scale(1);
 	opacity: 1;
- /*   
-    @media all and (max-width: pem(600)){
-        -webkit-transform: scale(0.625);
-        -moz-transform: scale(0.625);
-        -ms-transform: scale(0.625);
-        transform: scale(0.625);
-    }    */
+
 // for 125    
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
         -webkit-transform: scale(0.875);
@@ -232,8 +220,6 @@ nav b{
 	font-size: 0px;
 	cursor: pointer;
 	margin: 1.5% 3%;
-/*	width: 6%;
-	height: 12%;   */
     width: 90px;
     height: 90px;   
 	border-radius: 50%;
@@ -497,10 +483,6 @@ nav b{
 
 #spons_img{
 
-/*    @media all and (max-width: pem(680)){
-        height: 50%;
-        width: 50%;
-    }      */
 /* for 125   */ 
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
         height: 75%;
@@ -533,11 +515,7 @@ nav b{
 }
 
 #events_img{
-/*    @media all and (max-width: pem(680)){
-        height: 50%;
-        width: 50%;
-    }   */
-    
+
 /* for 125   */ 
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
         height: 60%;
@@ -570,9 +548,7 @@ nav b{
 }
 
 #lectures_img{
-/*    @media all and (max-width: pem(680)){
-        height: 50%;   
-    }   */
+
 /* for 125   */ 
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
         height: 65%;
@@ -605,9 +581,7 @@ nav b{
 }
 
 #contacts_img{
-/*    @media all and (max-width: pem(680)){
-        height: 50%;
-    }   */
+
     height: 65%;
     
 /* for 125   */ 

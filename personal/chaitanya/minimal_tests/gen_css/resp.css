@@ -19,7 +19,6 @@
 nav b {
   position: relative;
   display: inline-block;
-  /*	margin: 15px 25px;   */
   margin: 2% 1.5%;
   outline: none;
   color: #fff;
@@ -108,14 +107,7 @@ nav b {
   opacity: 0.7;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-  transition: transform 0.2s, opacity 0.2s;
-  /*    
-      @media all and (max-width: pem(600)){
-          -webkit-transform: scale(0.4);
-          -moz-transform: scale(0.4);
-          -ms-transform: scale(0.4);
-          transform: scale(0.4);        
-      }  */ }
+  transition: transform 0.2s, opacity 0.2s; }
   @media all and (min-width: 62.5em) and (max-width: 75em) {
     .hi-icon-effect-7b .hi-icon:before {
       -webkit-transform: scale(0.7);
@@ -153,14 +145,7 @@ nav b {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
-  /*   
-     @media all and (max-width: pem(600)){
-         -webkit-transform: scale(0.625);
-         -moz-transform: scale(0.625);
-         -ms-transform: scale(0.625);
-         transform: scale(0.625);
-     }    */ }
+  opacity: 1; }
   @media all and (min-width: 62.5em) and (max-width: 75em) {
     .no-touch .hi-icon-effect-7b .hi-icon:hover:before {
       -webkit-transform: scale(0.875);
@@ -415,10 +400,6 @@ nav b {
     margin: 0.5% 0.3%; } }
 
 #spons_img {
-  /*    @media all and (max-width: pem(680)){
-          height: 50%;
-          width: 50%;
-      }      */
   /* for 125   */
   /* for 150  */
   /* for 175   */
@@ -446,10 +427,6 @@ nav b {
       width: 30%; } }
 
 #events_img {
-  /*    @media all and (max-width: pem(680)){
-          height: 50%;
-          width: 50%;
-      }   */
   /* for 125   */
   /* for 150  */
   /* for 175   */
@@ -477,9 +454,6 @@ nav b {
       width: 32%; } }
 
 #lectures_img {
-  /*    @media all and (max-width: pem(680)){
-          height: 50%;   
-      }   */
   /* for 125   */
   /* for 150  */
   /* for 175   */
@@ -507,9 +481,6 @@ nav b {
       width: 15%; } }
 
 #contacts_img {
-  /*    @media all and (max-width: pem(680)){
-          height: 50%;
-      }   */
   height: 65%;
   /* for 125   */
   /* for 150  */
