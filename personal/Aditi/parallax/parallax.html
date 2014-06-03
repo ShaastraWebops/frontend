@@ -1,0 +1,43 @@
+<head>
+
+<link href="parallax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+<div class="bg">
+
+
+	 <ul id="scene"
+		data-fricion-x="0.8"
+		data-scalar-x="25"
+		data-scalar-y="15"
+		invert-x:"true"
+		invert-y:"true">
+		</li>	
+ 		<li class="layer" data-depth="0.20"><div class="wave p1"></div></li>
+		<li class="layer" data-depth="0.50"><div class="wave p2"></div></li>
+		<li class="layer" data-depth="0.80"><div class="wave p3"></div></li>
+		<li class="layer" data-depth="0.40">
+		
+			<ul class="rope">
+				<li><img src="images/rope.png"><li>
+				<li class="hanger-p1"><div class="cloud1"></div></li>
+				<li class="hanger-p2"><div class="cloud2"></div></li>
+				<li class="hanger-p3"><div class="cloud3"></div></li>
+			</ul>
+		</li>	
+ 		<li class="layer" data-depth="0.60"><div class="wave p4"></div></li>
+		<li class="layer" data-depth="0.30"><div class="wave p5"></div></li>
+		<li class="layer" data-depth="0.50"><div class="wave p6"></div></li>
+	</ul>
+</div>
+</div>
+<script src="deploy/parallax.js"></script>
+<script>
+var scene=document.getElementById('scene');
+var parallax = new Parallax(scene);
+</script>
+ </body>
+
+
