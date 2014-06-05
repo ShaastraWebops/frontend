@@ -3,58 +3,28 @@ body {
   background-image: url("../images/new black.png");
 }
 
-/* line 5, ../sass/mainPage.scss */
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 4em;
-}
-
-/* line 10, ../sass/mainPage.scss */
-a:hover {
-  text-decoration: none;
-  color: #01415c;
-}
-
-/* line 14, ../sass/mainPage.scss */
-#links {
-  position: relative;
-}
-
-/* line 23, ../sass/mainPage.scss */
-#events,
-#shows,
-#sponsors,
-#lectures,
-#contact,
-#aboutUs {
-  text-align: center;
-  text-decoration: underline;
-  font-family: "AR Destine";
-}
-
-/* line 55, ../sass/mainPage.scss */
+/* line 4, ../sass/mainPage.scss */
 #cubeBorder {
   stroke: #00425a;
   stroke-width: 2px;
   fill: #00425a;
 }
 
-/* line 60, ../sass/mainPage.scss */
+/* line 9, ../sass/mainPage.scss */
 #cubeDots {
   stroke: white;
   fill: white;
 }
 
 @-webkit-keyframes textAnimate {
-  /* line 66, ../sass/mainPage.scss */
+  /* line 15, ../sass/mainPage.scss */
   80% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
     stroke-opacity: 1;
   }
 
-  /* line 71, ../sass/mainPage.scss */
+  /* line 20, ../sass/mainPage.scss */
   100% {
     stroke-dashoffset: 0;
     fill-opacity: 1;
@@ -63,18 +33,18 @@ a:hover {
 }
 
 @-webkit-keyframes cubeAnimate {
-  /* line 79, ../sass/mainPage.scss */
+  /* line 28, ../sass/mainPage.scss */
   10% {
     fill-opacity: 0;
     stroke-opacity: 1;
   }
 
-  /* line 83, ../sass/mainPage.scss */
+  /* line 32, ../sass/mainPage.scss */
   60% {
     stroke-dashoffset: 0;
   }
 
-  /* line 86, ../sass/mainPage.scss */
+  /* line 35, ../sass/mainPage.scss */
   100% {
     stroke-dashoffset: 0;
     fill-opacity: 1;
@@ -82,8 +52,10 @@ a:hover {
   }
 }
 
-/* line 92, ../sass/mainPage.scss */
-svg {
-  position: relative;
-  top: 50px;
+/* line 41, ../sass/mainPage.scss */
+#logoSVG {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 36.5%;
 }

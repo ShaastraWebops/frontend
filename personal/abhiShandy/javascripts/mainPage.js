@@ -2,19 +2,6 @@
 // window.innerWidth
 var sWidth = window.innerWidth;
 var sHeight = window.innerHeight;
-// var logoHeight = document.getElementById("mainLogo").height;
-
-// document.getElementById("mainLogo").style.position = "relative";
-// document.getElementById("mainLogo").style.top = (sHeight - logoHeight)/2+"px";
-
-// document.getElementById("events").style.position = "relative";
-// document.getElementById("events").style.top = "-300px";
-
-// document.getElementById("shows").style.position = "relative";
-// document.getElementById("shows").style.top = "-300px";
-
-// document.getElementById("sponsors").style.position = "relative";
-// document.getElementById("sponsors").style.top = "-300px";
 var tAnimate = function(id){
 	var x = document.getElementById(id);
 	x.style.fillOpacity = 0;
@@ -23,7 +10,7 @@ var tAnimate = function(id){
 	x.style.strokeDasharray = pathLength+" "+pathLength;
 	var duration = 3;
 	var delay = 3;
-	x.style.WebkitAnimation = "textAnimate "+duration+"s ease-in "+delay+"s forwards";
+	x.style.WebkitAnimation = "textAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 }
 var cAnimate = function(id){
 	var x = document.getElementById(id);
@@ -31,9 +18,9 @@ var cAnimate = function(id){
 	var pathLength = x.getTotalLength();
 	x.style.strokeDashoffset = pathLength;
 	x.style.strokeDasharray = pathLength+" "+pathLength;
-	var duration = 5;
+	var duration = 10;
 	var delay = 1;
-	x.style.WebkitAnimation = "cubeAnimate "+duration+"s ease-in "+delay+"s forwards";
+	x.style.WebkitAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 }
 tAnimate("s2");
 tAnimate("s0");
