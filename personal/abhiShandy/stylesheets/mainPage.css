@@ -33,352 +33,57 @@ a:hover {
   font-family: "AR Destine";
 }
 
-/* line 59, ../sass/mainPage.scss */
-#sS1,
-#sS2 {
-  stroke-dashoffset: 149;
-  stroke-dasharray: 149 149;
-  fill-opacity: 0;
-  -webkit-animation: borderS 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderS {
-  /* line 67, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 149;
-  }
-
-  /* line 70, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 74, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 81, ../sass/mainPage.scss */
-#sA1,
-#sA2,
-#sA3 {
-  stroke-dashoffset: 118;
-  stroke-dasharray: 118 118;
-  fill-opacity: 0;
-  -webkit-animation: borderA 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderA {
-  /* line 89, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 118;
-  }
-
-  /* line 92, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 96, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 101, ../sass/mainPage.scss */
-#sH {
-  stroke-dashoffset: 121;
-  stroke-dasharray: 121 121;
-  fill-opacity: 0;
-  -webkit-animation: borderH 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderH {
-  /* line 109, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 121;
-  }
-
-  /* line 112, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 116, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 122, ../sass/mainPage.scss */
-#sT {
-  stroke-dashoffset: 89;
-  stroke-dasharray: 89 89;
-  fill-opacity: 0;
-  -webkit-animation: borderT 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderT {
-  /* line 130, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 89;
-  }
-
-  /* line 133, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 137, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 143, ../sass/mainPage.scss */
-#sR {
-  stroke-dashoffset: 147;
-  stroke-dasharray: 147 147;
-  fill-opacity: 0;
-  -webkit-animation: borderR 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderR {
-  /* line 151, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 147;
-  }
-
-  /* line 154, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 158, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 164, ../sass/mainPage.scss */
-#s2 {
-  stroke-dashoffset: 146;
-  stroke-dasharray: 146 146;
-  fill-opacity: 0;
-  -webkit-animation: borderTwo 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderTwo {
-  /* line 172, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 146;
-  }
-
-  /* line 175, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 179, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 185, ../sass/mainPage.scss */
-#s0 {
-  stroke-dashoffset: 84;
-  stroke-dasharray: 84 84;
-  fill-opacity: 0;
-  -webkit-animation: borderZero 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderZero {
-  /* line 193, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 84;
-  }
-
-  /* line 196, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 200, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 207, ../sass/mainPage.scss */
-#s00 {
-  stroke-dashoffset: 45;
-  stroke-dasharray: 45 45;
-  -webkit-animation: borderZeroI 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderZeroI {
-  /* line 214, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 45;
-  }
-
-  /* line 217, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* line 222, ../sass/mainPage.scss */
-#s1 {
-  stroke-dashoffset: 61;
-  stroke-dasharray: 61 61;
-  fill-opacity: 0;
-  -webkit-animation: borderOne 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderOne {
-  /* line 230, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 61;
-  }
-
-  /* line 233, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 237, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 243, ../sass/mainPage.scss */
-#s5 {
-  stroke-dashoffset: 149;
-  stroke-dasharray: 149 149;
-  fill-opacity: 0;
-  -webkit-animation: borderFive 4s linear 2s forwards;
-}
-
-@-webkit-keyframes borderFive {
-  /* line 251, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 149;
-  }
-
-  /* line 254, ../sass/mainPage.scss */
-  80% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-  }
-
-  /* line 258, ../sass/mainPage.scss */
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
-}
-
-/* line 264, ../sass/mainPage.scss */
-#text {
-  position: relative;
-  z-index: 1;
-}
-
-/* line 269, ../sass/mainPage.scss */
-#cube {
-  position: absolute;
-  z-index: 2;
-  top: -6em;
-  left: 21em;
-}
-
-/* line 277, ../sass/mainPage.scss */
+/* line 55, ../sass/mainPage.scss */
 #cubeBorder {
-  position: absolute;
-  z-index: 4;
   stroke: #00425a;
   stroke-width: 2px;
   fill: #00425a;
-  fill-opacity: 0;
-  stroke-dashoffset: 2457;
-  stroke-dasharray: 2457 2457;
-  -webkit-animation: borderCB 6s linear forwards;
 }
 
-@-webkit-keyframes borderCB {
-  /* line 290, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 2457;
-  }
+/* line 60, ../sass/mainPage.scss */
+#cubeDots {
+  stroke: white;
+  fill: white;
+}
 
-  /* line 293, ../sass/mainPage.scss */
-  10% {
-    fill-opacity: 0;
-  }
-
-  /* line 296, ../sass/mainPage.scss */
+@-webkit-keyframes textAnimate {
+  /* line 66, ../sass/mainPage.scss */
   80% {
     stroke-dashoffset: 0;
+    fill-opacity: 0;
+    stroke-opacity: 1;
   }
 
-  /* line 299, ../sass/mainPage.scss */
+  /* line 71, ../sass/mainPage.scss */
   100% {
     stroke-dashoffset: 0;
     fill-opacity: 1;
+    stroke-opacity: 0;
   }
 }
 
-/* line 306, ../sass/mainPage.scss */
-#cubeDots {
-  position: relative;
-  z-index: 5;
-  stroke: white;
-  fill: white;
-  fill-opacity: 0;
-  stroke-dashoffset: 986;
-  stroke-dasharray: 986 986;
-  -webkit-animation: borderCD 4s ease-in 1s forwards;
-}
-
-@-webkit-keyframes borderCD {
-  /* line 318, ../sass/mainPage.scss */
-  0% {
-    stroke-dashoffset: 986;
-  }
-
-  /* line 321, ../sass/mainPage.scss */
+@-webkit-keyframes cubeAnimate {
+  /* line 79, ../sass/mainPage.scss */
   10% {
     fill-opacity: 0;
+    stroke-opacity: 1;
   }
 
-  /* line 324, ../sass/mainPage.scss */
+  /* line 83, ../sass/mainPage.scss */
   60% {
     stroke-dashoffset: 0;
   }
 
-  /* line 327, ../sass/mainPage.scss */
+  /* line 86, ../sass/mainPage.scss */
   100% {
     stroke-dashoffset: 0;
     fill-opacity: 1;
+    stroke-opacity: 0;
   }
+}
+
+/* line 92, ../sass/mainPage.scss */
+svg {
+  position: relative;
+  top: 50px;
 }
