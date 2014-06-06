@@ -55,9 +55,9 @@
                     $("#spons_img").css("opacity","0");
                 });
                 $("#lectures").hover(function(){
-                    $("#lectures_img").css("opacity","1");
+                    $("#mikeSVG").css("opacity","1");
                 },function(){
-                    $("#lectures_img").css("opacity","0");
+                    $("#mikeSVG").css("opacity","0");
                 });
                 $("#events").hover(function(){
                     $("#events_img").css("opacity","1");

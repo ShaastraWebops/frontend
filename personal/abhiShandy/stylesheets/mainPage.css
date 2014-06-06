@@ -59,3 +59,18 @@ body {
   top: 35%;
   left: 36.5%;
 }
+
+/* line 47, ../sass/mainPage.scss */
+#mikeSVG {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 42%;
+  opacity: 0;
+}
+/* line 53, ../sass/mainPage.scss */
+#mikeSVG svg {
+  height: 475px;
+  width: 200px;
+  transform: scale(0.8);
+}
