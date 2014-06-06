@@ -50,19 +50,19 @@
                     },"slow");                      
                 });
                 $("#spons").hover(function(){
-                    $("#spons_img").css("opacity","1");
+                    $("#dollarSVG").css("opacity","0.4");
                 },function(){
-                    $("#spons_img").css("opacity","0");
+                    $("#dollarSVG").css("opacity","0");
                 });
                 $("#lectures").hover(function(){
-                    $("#mikeSVG").css("opacity","1");
+                    $("#mikeSVG").css("opacity","0.4");
                 },function(){
                     $("#mikeSVG").css("opacity","0");
                 });
                 $("#events").hover(function(){
-                    $("#events_img").css("opacity","1");
+                    $("#toolSVG").css("opacity","0.4");
                 },function(){
-                    $("#events_img").css("opacity","0");
+                    $("#toolSVG").css("opacity","0");
                 });                
                 $("#contacts").hover(function(){
                     $("#contacts_img").css("opacity","1");
