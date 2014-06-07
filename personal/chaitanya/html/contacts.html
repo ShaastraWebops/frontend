@@ -7,6 +7,7 @@
         <script src="../js/googleMap.js"></script>
         
         <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="../stylesheets/contact_css.css" rel="stylesheet">
     </head>
     
     <body style="background-image:url('../pics/background.jpg'); height:97%">
@@ -16,45 +17,74 @@
         
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-2" style="color:white; top:30%; left:7%">
-                    <p style="font-size:1.3em">Co-Curricular</p>
+                <div class="col-sm-2" style="color:white; top:20%; left:7%">
+                    <p style="font-size:1.3em; background-color:red">Co-Curricular</p>    
                     <p style="font-size:1.3em">Affairs</p>
                     <p style="font-size:1.3em">Secretary</p>
                 </div>    
                 
-                <div class="col-sm-2" style="color:white; top:30%; left:25%">
+                <div class="col-sm-2" style="color:white; top:20%; left:25%">
                     <p style="font-size:1.3em">Sponsorships,</p>
                     <p style="font-size:1.3em">PR and</p>
                     <p style="font-size:1.3em">Networking</p>
                 </div>    
-
-                <div class="col-sm-2" style="color:white; top:62%; left:7%">
+                
+                <div class="col-sm-2" style="color:white; top:52%; left:7%">
                     <p style="font-size:1.3em">Events</p>
                     <p style="font-size:1.3em">Queries</p>
                 </div>    
                 
-                <div class="col-sm-2" style="color:white; top:62%; left:25%">
+                <div class="col-sm-2" style="color:white; top:52%; left:25%">
                     <p style="font-size:1.3em">Student</p>
                     <p style="font-size:1.3em">Relations</p>
                 </div>   
                 
-                <div id="map_canvas" class="col-sm-5 col-sm-offset-6" style="position:absolute; height:45%; top:30%">
+                <div id="map_canvas" class="col-sm-5 col-sm-offset-6" style="position:absolute; height:45%; top:20%">
                     <!--For google map-->              
                 </div>
-    
-                <div class="row" style="color:white">
-                    <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:75%; height:10%">
-                        <p style="font-size:1.3em">Facebook</p>    
-                    </div>
-                    <div class="col-sm-1 col-sm-offset-8" style="position:absolute; top:75%; height:10%">
-                        <p style="font-size:1.3em">Twitter</p>    
-                    </div>
-                    <div class="col-sm-1 col-sm-offset-9" style="position:absolute; top:75%; height:10%">
-                        <p style="font-size:1.3em">Youtube</p>    
-                    </div>                    
-                </div>                
             </div>
+        </div>    
+            
+        <div class="container-fluid">
+            <div class="row" style="color:white">
+                <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:65%; height:10%">
+                    <p style="font-size:1.3em">Facebook</p>    
+                </div>
+                <div class="col-sm-1 col-sm-offset-8" style="position:absolute; top:65%; height:10%">
+                    <p style="font-size:1.3em">Twitter</p>    
+                </div>
+                <div class="col-sm-1 col-sm-offset-9" style="position:absolute; top:65%; height:10%">
+                    <p style="font-size:1.3em">Youtube</p>    
+                </div>                    
+            </div>                
         </div>
+        
+        <div class="container-fluid" style="position:absolute; top:90%; width:100%">
+            <div class="msg">
+                <h1 style="color:white; font-family:Candara">Couldn't find what you are looking for?</h1>
+            </div>
+            <div class="msg">
+                <h1 style="color:white; font-family:Candara">Leave us a message</h1>
+            </div>
+            
+            <div class="hr" style="background-color:white"></div>
+            
+            <div class="row" style="padding-top:4%; padding-bottom:2%">
+                <div class="col-sm-3 col-sm-push-i1">
+                    <input style="border-radius:5px; height:46px; font-size:18px" type="text" class="form-control" placeholder="Username">
+                </div>   
+                <div class="col-sm-3 col-sm-push-i2">
+                    <input style="border-radius:5px; height:46px; font-size:18px" type="email" class="form-control" placeholder="Email ID">
+                </div>  
+                <div class="col-sm-3 col-sm-push-i3">
+                    <input style="border-radius:5px; height:46px; font-size:18px" type="number" class="form-control" placeholder="Mobile (Optional)">
+                </div>    
+            </div>
+            
+            <div style="padding:2%">
+                <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; margin-left:0%" placeholder="Your Message..."></textarea>   
+            </div>    
+        </div>  
     </body>
     
     <script>

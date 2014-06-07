@@ -11,6 +11,12 @@
                   },"slow");  
                });  
                $(".menu_options").hover(function(){
+                  
+                  font_size_em = parseFloat($(this).css("font-size"));   
+                  xyz = (font_size_em) * (1.5/1.3);
+                  act = xyz + 'px';   
+                   console.log(act);
+                   
                   $(this).css("background-color","#EBF4FA");
                   $(this).css("color","black");
                   $("#you_tube").css("color","#F62217");
@@ -20,13 +26,17 @@
                   $(this).css("font-size",""); 
                   $(this).css("font-weight","bolder"); 
                 },function(){
+                    console.log(act);
                   $(this).css("background-color","black"); 
                   $(this).css("color","white"); 
                   $("#you_tube").css("color","#F62217");
                   $("#facebook").css("color","#0020C2");
                   $("#twitter").css("color","#38ACEC"); 
                   $("#close_menu").css("color","#99C68E");    
+//                  $(this).css("font-size",font_size_em + "px"); 
+//                  $(this).css("font-size","act");    
                   $(this).css("font-weight","initial");    
+                    console.log(act);
                });
                $("#close_menu").click(function(){
                     $("#menu_rhs").animate({

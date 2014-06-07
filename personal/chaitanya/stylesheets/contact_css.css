@@ -1,0 +1,67 @@
+.msg {
+    display:block;
+    text-align: center;
+}   
+
+.hr {
+    display: block;
+    margin: 0 auto;
+    height: 5px;
+    width: 35%;
+}    
+
+
+.col-sm-push-i1 {
+    left: 4%;   
+}      
+.col-sm-push-i5 {
+/*    left: 37.500000005%;   */
+    left: 39%;  
+}      
+.col-sm-push-i9 {
+    left: 74.166666665%;  
+}      
+.col-sm-push-i3 {
+    left: 21%;   
+}
+.col-sm-push-i2 {
+    left: 12.5%;   
+}
+
+textarea {  
+    width: 100%;  
+    min-height: 100px;  
+    font-family: ;  
+    font-size: 18px;  
+    color: #444;  
+    padding: 5px;
+    word-wrap: break-word;
+}  
+  
+.noscroll {  
+    overflow: hidden;  
+}  
+
+.hiddendiv {  
+    display: none;  
+    white-space: pre-wrap;  
+    width: 100%px;  
+    min-height: 100px;  
+    font-family: ;  
+    font-size: 18px;  
+    padding: 5px;  
+    word-wrap: break-word;  
+}  
+
+.common {
+    width: 100%;
+    min-height: 100px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.lbr {
+    line-height: 3px;
+}
+

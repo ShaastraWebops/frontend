@@ -932,6 +932,7 @@ pre code {
   }
   .col-sm-12 {
     width: 100%;
+    margin: 0 auto;  
   }
   .col-sm-11 {
     width: 91.66666667%;
@@ -967,6 +968,7 @@ pre code {
     padding: 5%;
     height: 32%;  
     text-align: center;   
+    vertical-align: middle;
     background-color: rgba(14, 99, 133, 0.3);  
     border: 1px solid rgba(0, 0, 0, 0);  
     -webkit-background-clip: padding-box;
@@ -1043,17 +1045,18 @@ pre code {
     left: 33.33333333%;
   }
   .col-sm-push-3 {
-    left: 25%;
+    left: 23%;
   }
   .col-sm-push-2 {
-    left: 16.66666667%;
+/*    left: 16.66666667%; */
+      left: 14%;
   }
   .col-sm-push-1 {
     left: 8.33333333%;
   }
   .col-sm-push-0 {
     left: 0;
-  }
+  }    
   .col-sm-offset-12 {
     margin-left: 100%;
   }
