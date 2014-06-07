@@ -57,7 +57,7 @@ body {
   position: absolute;
   z-index: 2;
   top: 36.3%;
-  left: 35%;
+  left: 34%;
 }
 /* line 50, ../sass/mainPage.scss */
 #logoSVG svg {
@@ -75,43 +75,102 @@ body {
 /* line 61, ../sass/mainPage.scss */
 #mikeSVG {
   position: absolute;
-  top: 20%;
+  top: 16%;
   left: 42%;
+  z-index: 1;
   opacity: 0;
 }
-/* line 66, ../sass/mainPage.scss */
+/* line 67, ../sass/mainPage.scss */
 #mikeSVG svg {
-  height: 475px;
+  height: 471px;
   width: 200px;
 }
 
-/* line 71, ../sass/mainPage.scss */
+/* line 72, ../sass/mainPage.scss */
 #toolSVG {
   position: absolute;
   opacity: 0;
   top: 23%;
   left: 36%;
+  z-index: 1;
 }
-/* line 76, ../sass/mainPage.scss */
+/* line 78, ../sass/mainPage.scss */
 #toolSVG svg {
-  height: 365px;
+  height: 350px;
   width: 390px;
 }
 
-/* line 81, ../sass/mainPage.scss */
+/* line 83, ../sass/mainPage.scss */
 #dollarSVG {
   position: absolute;
   opacity: 0;
   top: 18%;
   left: 38%;
+  z-index: 1;
 }
-/* line 86, ../sass/mainPage.scss */
+/* line 89, ../sass/mainPage.scss */
 #dollarSVG svg {
   height: 505px;
   width: 337px;
 }
 
-/* line 91, ../sass/mainPage.scss */
+/* line 94, ../sass/mainPage.scss */
+#phoneSVG {
+  position: absolute;
+  opacity: 0;
+  top: 17%;
+  left: 39%;
+  z-index: 1;
+}
+/* line 100, ../sass/mainPage.scss */
+#phoneSVG svg {
+  width: 251px;
+  height: 455px;
+}
+
+/* line 105, ../sass/mainPage.scss */
+#rupeeSVG {
+  position: absolute;
+  opacity: 0;
+  top: 19%;
+  left: 36%;
+  z-index: 1;
+}
+/* line 111, ../sass/mainPage.scss */
+#rupeeSVG svg {
+  width: 325px;
+  height: 450px;
+}
+
+/* line 116, ../sass/mainPage.scss */
+#musicSVG {
+  position: absolute;
+  opacity: 0;
+  top: 19%;
+  left: 38%;
+  z-index: 1;
+}
+/* line 122, ../sass/mainPage.scss */
+#musicSVG svg {
+  width: 286px;
+  height: 402px;
+}
+
+/* line 127, ../sass/mainPage.scss */
+#groupSVG {
+  position: absolute;
+  opacity: 0;
+  top: 19%;
+  left: 33%;
+  z-index: 1;
+}
+/* line 133, ../sass/mainPage.scss */
+#groupSVG svg {
+  width: 450px;
+  height: 325px;
+}
+
+/* line 138, ../sass/mainPage.scss */
 #menu_popup {
   position: absolute;
   background-color: black;
@@ -123,7 +182,7 @@ body {
   opacity: 1;
 }
 
-/* line 102, ../sass/mainPage.scss */
+/* line 149, ../sass/mainPage.scss */
 .menu_options {
   color: white;
   font-family: Arial;
@@ -137,7 +196,7 @@ body {
   height: 5%;
 }
 
-/* line 114, ../sass/mainPage.scss */
+/* line 161, ../sass/mainPage.scss */
 .header {
   color: white;
   font-family: Arial;
@@ -149,7 +208,7 @@ body {
   padding-bottom: 4%;
 }
 
-/* line 124, ../sass/mainPage.scss */
+/* line 171, ../sass/mainPage.scss */
 #menu_icon {
   position: absolute;
   top: 0%;
@@ -157,7 +216,7 @@ body {
   z-index: 399;
 }
 
-/* line 130, ../sass/mainPage.scss */
+/* line 177, ../sass/mainPage.scss */
 #menu_rhs {
   position: absolute;
   z-index: 401;
@@ -168,27 +227,27 @@ body {
   opacity: 1;
 }
 
-/* line 140, ../sass/mainPage.scss */
+/* line 187, ../sass/mainPage.scss */
 #hexagon {
+  z-index: 3;
   opacity: 0;
   -webkit-animation: fadeIn 3s ease-in 4s forwards;
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 145, ../sass/mainPage.scss */
+  /* line 193, ../sass/mainPage.scss */
   to {
     opacity: 1;
   }
 }
 
-/* line 149, ../sass/mainPage.scss */
-.cl-effect-21 b {
+/* line 197, ../sass/mainPage.scss */
+.cl-effect-21 a {
   position: absolute;
   z-index: 3;
   color: white;
   font-weight: 200;
   padding: 1%;
-  margin: 2% 1.5%;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1%;
@@ -199,54 +258,16 @@ body {
   -moz-transition: color 0.3s;
   transition: color 0.3s;
 }
-
-/* line 168, ../sass/mainPage.scss */
-.cl-effect-21 b::before {
-  top: 0;
-  height: 1%;
-  -webkit-transform: translateY(10px);
-  -moz-transform: translateY(10px);
-  transform: translateY(10px);
+/* line 212, ../sass/mainPage.scss */
+.cl-effect-21 a p {
+  margin: 2% 1.5%;
 }
 
-/* line 177, ../sass/mainPage.scss */
-#events::before,
-#spons::before,
-#shows::before {
-  height: 2%;
-}
-
-/* line 181, ../sass/mainPage.scss */
-.cl-effect-21 b::after {
-  bottom: 0;
-  height: 1%;
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px);
-}
-
-/* line 190, ../sass/mainPage.scss */
-#contacts::after,
-#lectures::after,
-#about_us::after {
-  height: 2%;
-}
-
-/* line 197, ../sass/mainPage.scss */
-.cl-effect-21 b:hover::before,
-.cl-effect-21 b:focus::before,
-.cl-effect-21 b:hover::after,
-.cl-effect-21 b:focus::after {
-  opacity: 0;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  transform: translateY(0px);
-}
-
-/* line 205, ../sass/mainPage.scss */
-.cl-effect-21 b::before,
-.cl-effect-21 b::after {
+/* line 219, ../sass/mainPage.scss */
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
   position: absolute;
+  z-index: 3;
   left: 0;
   width: 100%;
   background: #fff;
@@ -255,4 +276,47 @@ body {
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
+}
+
+/* line 231, ../sass/mainPage.scss */
+.cl-effect-21 a::before {
+  top: 0;
+  height: 1%;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+/* line 240, ../sass/mainPage.scss */
+#events::before,
+#spons::before,
+#shows::before {
+  height: 2%;
+}
+
+/* line 244, ../sass/mainPage.scss */
+.cl-effect-21 a::after {
+  bottom: 0;
+  height: 1%;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+/* line 253, ../sass/mainPage.scss */
+#contacts::after,
+#lectures::after,
+#about_us::after {
+  height: 2%;
+}
+
+/* line 260, ../sass/mainPage.scss */
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
 }

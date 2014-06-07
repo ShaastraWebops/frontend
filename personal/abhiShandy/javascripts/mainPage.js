@@ -86,4 +86,24 @@ $(document).ready(function(){
 	},function(){
     	$("#toolSVG").css("opacity","0");
   	});
+  	$("#contacts").hover(function(){
+    	$("#phoneSVG").css("opacity",fOpacity);
+	},function(){
+    	$("#phoneSVG").css("opacity","0");
+  	});
+  	$("#spons").hover(function(){
+    	$("#rupeeSVG").css("opacity",fOpacity);
+	},function(){
+    	$("#rupeeSVG").css("opacity","0");
+  	});
+  	$("#about_us").hover(function(){
+    	$("#groupSVG").css("opacity",fOpacity);
+	},function(){
+    	$("#groupSVG").css("opacity","0");
+  	});
+  	$("#shows").hover(function(){
+    	$("#musicSVG").css("opacity",fOpacity);
+	},function(){
+    	$("#musicSVG").css("opacity","0");
+  	});
 });
