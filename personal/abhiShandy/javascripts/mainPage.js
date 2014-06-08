@@ -1,5 +1,7 @@
 // screen.width
 // window.innerWidth
+
+// center aligning code
 var sWidth = window.innerWidth;
 var sHeight = window.innerHeight;
 var tAnimate = function(id){
@@ -38,6 +40,20 @@ cAnimate("cubeBorder");
 cAnimate("cubeDots");
 
 $(document).ready(function(){
+	$("body").css("display", "none");
+    
+    $("body").fadeIn(1000);
+
+    $(".nextPage").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(1000, redirectPage);      
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+
 	$(".menu_options").hover(function(){
 		$(this).css("background-color","#EBF4FA");
 		$(this).css("color","black");
@@ -55,7 +71,7 @@ $(document).ready(function(){
 		$(this).css("font-weight","normal"); 		
 		$("#close_menu").css("color","#99C68E");    
 	});
-	$("#logoSVG").click(function(){
+	$("#mainLogo").click(function(){
 	    $("#menu_popup").animate({      
 	      left: '0%'
 	    },"slow");  
@@ -102,8 +118,81 @@ $(document).ready(function(){
     	$("#groupSVG").css("opacity","0");
   	});
   	$("#shows").hover(function(){
-    	$("#musicSVG").css("opacity",fOpacity);
+    	$("#planeSVG").css("opacity",fOpacity);
 	},function(){
-    	$("#musicSVG").css("opacity","0");
+    	$("#planeSVG").css("opacity","0");
   	});
 });
+
+function pageCenter (id, z) {
+	x = document.getElementById(id);
+	x.style.position = "absolute";
+	x.style.zIndex = z;
+	x.style.top = (sHeight - x.clientHeight)/2+"px";
+	x.style.left = (sWidth - x.clientWidth)/2+"px";
+}
+function pageCenter2 (id, z) {
+	x = document.getElementById(id);
+	x.style.position = "absolute";
+	x.style.zIndex = z;
+	x.style.top = (1-(x.clientHeight/sHeight))*50+"%";	
+	x.style.left = (1-(x.clientWidth/sWidth))*50+"%";
+	// x.style.left = "50%";
+}
+pageCenter2("mainLogo",2);
+
+pageCenter("planeSVG",1);
+pageCenter("rupeeSVG",1);
+pageCenter("mikeSVG",1);
+pageCenter("phoneSVG",1);
+pageCenter("groupSVG",1);
+pageCenter("toolSVG",1);
+
+function hexaStr(id, n) {
+	x = document.getElementById(id);
+	x.style.position = "absolute"
+	a = 13;
+	b = 5;
+	c = 2;
+	d= 4;
+	switch(n){
+		case 1:
+		x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
+		x.style.left = (sWidth - x.clientWidth)*(1/c) +"px";
+		// console.leftog(x.style.top);
+		// console.log(x.style.left);		
+		break;
+
+		case 2:
+		x.style.top = (sHeight - x.clientHeight)*(1/d)	 + "px";		
+		x.style.left = (sWidth - x.clientWidth)*((b-1)/b) +"px";
+		break;
+
+		case 3:
+		x.style.top = (sHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+		x.style.left = (sWidth - x.clientWidth)*((b-1)/b) +"px";
+		break;
+
+		case 4:
+		x.style.top = (sHeight - x.clientHeight)*((a-1)/a) + "px";
+		x.style.left = (sWidth - x.clientWidth)*((c-1)/c) +"px";
+		break;
+
+		case 5:
+		x.style.top = (sHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+		x.style.left = (sWidth - x.clientWidth)/5+"px";
+		break;
+
+		case 6:
+		x.style.top = (sHeight - x.clientHeight)*(1/d)	 + "px";				
+		x.style.left = (sWidth - x.clientWidth)/5+"px";
+		break;		
+	}
+}
+// pageCenter("eventsB",5);
+hexaStr("events",1);
+hexaStr("shows",2);
+hexaStr("contacts",3);
+hexaStr("about_us",4);
+hexaStr("lectures",5);
+hexaStr("spons",6);
