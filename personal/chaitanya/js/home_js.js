@@ -68,6 +68,10 @@
                     $("#contacts_img").css("opacity","1");
                 },function(){
                     $("#contacts_img").css("opacity","0");
-                });                                
+                });   
+                
+                $("#contacts").click(function(){
+                    window.location.href = "contacts.html";
+                });
                 
             });   
