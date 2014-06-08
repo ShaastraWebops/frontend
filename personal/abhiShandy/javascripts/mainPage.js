@@ -71,7 +71,7 @@ $(document).ready(function(){
 		$(this).css("font-weight","normal"); 		
 		$("#close_menu").css("color","#99C68E");    
 	});
-	$("#logoSVG").click(function(){
+	$("#mainLogo").click(function(){
 	    $("#menu_popup").animate({      
 	      left: '0%'
 	    },"slow");  
@@ -118,9 +118,9 @@ $(document).ready(function(){
     	$("#groupSVG").css("opacity","0");
   	});
   	$("#shows").hover(function(){
-    	$("#musicSVG").css("opacity",fOpacity);
+    	$("#planeSVG").css("opacity",fOpacity);
 	},function(){
-    	$("#musicSVG").css("opacity","0");
+    	$("#planeSVG").css("opacity","0");
   	});
 });
 
@@ -131,8 +131,17 @@ function pageCenter (id, z) {
 	x.style.top = (sHeight - x.clientHeight)/2+"px";
 	x.style.left = (sWidth - x.clientWidth)/2+"px";
 }
-pageCenter("mainLogo",2);
-pageCenter("musicSVG",1);
+function pageCenter2 (id, z) {
+	x = document.getElementById(id);
+	x.style.position = "absolute";
+	x.style.zIndex = z;
+	x.style.top = (1-(x.clientHeight/sHeight))*50+"%";	
+	x.style.left = (1-(x.clientWidth/sWidth))*50+"%";
+	// x.style.left = "50%";
+}
+pageCenter2("mainLogo",2);
+
+pageCenter("planeSVG",1);
 pageCenter("rupeeSVG",1);
 pageCenter("mikeSVG",1);
 pageCenter("phoneSVG",1);
@@ -150,8 +159,8 @@ function hexaStr(id, n) {
 		case 1:
 		x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
 		x.style.left = (sWidth - x.clientWidth)*(1/c) +"px";
-		console.log(x.style.top);
-		console.log(x.style.left);		
+		// console.leftog(x.style.top);
+		// console.log(x.style.left);		
 		break;
 
 		case 2:
