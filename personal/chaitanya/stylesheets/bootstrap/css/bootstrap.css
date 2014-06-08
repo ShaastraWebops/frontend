@@ -972,6 +972,7 @@ pre code {
     background-color: rgba(14, 99, 133, 0.3);  
     border: 1px solid rgba(0, 0, 0, 0);  
     -webkit-background-clip: padding-box;
+      background-clip: padding-box;
   }
   .col-sm-1 {
     width: 10%;
