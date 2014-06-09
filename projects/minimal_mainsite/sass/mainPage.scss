@@ -1,0 +1,277 @@
+//Primary SASS file for the Mainpage
+// madeby: abhiShandy
+
+body{
+	background-image: url("../images/new black.png");
+  // replace with svg
+}
+#cubeBorder{
+	stroke:#00425a;
+	stroke-width:2px;
+	fill:#00425a;
+}
+#cubeDots{
+	stroke: white;
+	fill:white;
+}
+
+@-webkit-keyframes textAnimate{
+  80%{
+    stroke-dashoffset: 0;
+    fill-opacity:0;
+    stroke-opacity:1;
+  }
+  100% {    
+    stroke-dashoffset: 0;
+    fill-opacity:1;
+    stroke-opacity:0;
+  }
+}
+
+@-webkit-keyframes cubeAnimate{
+  10%{
+  	fill-opacity:0;
+    stroke-opacity:1;
+  }
+  60%{
+    stroke-dashoffset: 0;  	
+  }
+  100% {  	
+  	stroke-dashoffset: 0;
+    fill-opacity:1;
+    stroke-opacity:0;
+  }
+}
+
+#watermark{    
+  opacity: 0;
+  -webkit-animation: fadeIn 2s ease-in 5s forwards;
+}
+#mikeSVG,
+#toolSVG,
+#phoneSVG,
+#rupeeSVG,
+#planeSVG,
+#groupSVG{
+  opacity: 0;  
+}
+
+#menu_popup{
+  position:absolute; 
+  background-color:black; 
+  z-index:400; 
+  height:100%; 
+  width:30%; 
+  top:0%; 
+  left:-30%; 
+  opacity:1;
+}
+
+$font: "TakaoPGothic","Century Schoolbook L",Verdana;
+.menu_options{
+  color: white;
+  font-family: $font;
+  font-size: 1.5em;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  cursor: pointer;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+.menu_options:hover{
+  a{
+    color: black;
+  }
+}
+.header{
+  color: white;
+  font-family: $font;
+  font-size: 2em;    
+  width: 100%;
+  text-align: center;
+  height: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;  
+}
+#menu_icon{
+  position:absolute; 
+  top:0%; 
+  left:0%; 
+  z-index:399;
+}
+#menu_rhs{
+  position:absolute; 
+  z-index:401; 
+  height:100%; 
+  width:0%; 
+  top:0%; 
+  right:-70%; 
+  opacity:1;
+}
+// ------------Hexagon Menu-------------------
+#hexaMenu{
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+}
+@-webkit-keyframes fadeIn{
+  to{
+    opacity: 1;
+  }
+}
+.cl-effect a{
+  position: absolute;
+  z-index: 3;
+  color: white;
+  font-weight: 100;
+  padding:1%;  
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1%;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 2em;
+  font-family: $font;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;  
+}
+
+$h:2%;
+.cl-effect a::before,
+.cl-effect a::after {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  content: '';
+  opacity: 1;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.cl-effect a::before {
+  top: 0;
+  height: $h;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+// #events::before,
+// #spons::before,
+// #shows::before{
+//   height: 1*$h;
+// }
+
+.cl-effect a::after {
+  bottom: 0;
+  height: $h;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+// #contacts::after,
+// #lectures::after,
+// #about_us::after{
+//   height: 1*$h;
+// }
+// #events::after{
+//   height: 2*$h;
+// }
+// #about_us::before{
+//   height: 2*$h;
+// }
+
+.cl-effect a:hover::before,
+.cl-effect a:focus::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::after {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+// #events{
+//   top:7%; left:43%;
+// }
+// #spons{
+//   top:26%; left:18%;
+// }
+// #shows{
+//   top:26%; left:68%;
+// }
+// #lectures{
+//   top:63%; left:18%;
+// }
+// #contacts{
+//   top:63%; left:66%;
+// }
+// #about_us{
+//   top:83%; left:41%;
+// }
+
+
+@font-face {
+  font-family: 'ecoicon';
+  src:url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.menuB{
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;  
+}
+#menu_icon:before {
+  font-family: 'ecoicon';
+  speak: none;
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+#menu_icon:before {
+  content: "\e006";
+}
+#menu_icon:hover {
+  color: #00425a;
+}
+
+#menu_icon:after {
+  top: -8%;
+  left: -8%;
+  padding: 8%;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+/* Effect 7b */
+#menu_icon:after {
+  box-shadow: 3px 3px rgba(255,255,255,1);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  -moz-transition: opacity 0.2s, -moz-transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+#menu_icon:hover:after {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
