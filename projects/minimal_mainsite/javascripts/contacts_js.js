@@ -63,22 +63,7 @@ $(document).ready(function(){
        $("#div").load("contacts_click.html #target_logo", function() {
         $("#details").css("background","url('../pics/evolve.png') no-repeat top center");   
        }); 
-    }); 
-    
-    $("#contacts_facebook").click(function(){
-       $(location).attr('href', 'https://www.facebook.com/Shaastra'); 
-    });
-    $("#contacts_youtube").click(function(){
-       $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra'); 
-    });
-    $("#contacts_twitter").click(function(){
-       $(location).attr('href', 'https://twitter.com/ShaastraIITM'); 
-    });
-    
-    $("#contacts_facebook, #contacts_twitter, #contacts_youtube, #co-curricular_affairs, #pr_spons_networking, #sr, #events").hover(function(){
-       $(this).css("cursor","pointer");   
-    });
-    
+    });    
 });  
 
 
