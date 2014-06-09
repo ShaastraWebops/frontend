@@ -1,4 +1,18 @@
 $(document).ready(function(){
+    //added by abhiShandy, start
+    $("body").css("display", "none");    
+    $("body").fadeIn(1000);
+    $(".nextPage").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(1000, redirectPage);      
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+    //added by abhiShandy, end
+
    $(".col-sm-2").hover(function(){
       $(this).css("background-color","rgba(14, 99, 133, 1)");
     },function(){

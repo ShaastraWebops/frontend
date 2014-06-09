@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$("#facebook").css("color","#3b5998");    
 		$("#twitter").css("color","#428bca"); 
 		$("#you_tube").css("color","#cc181e");
-		$("#close_menu").css("color","#99C68E"); 
+		$("#close_menu").css("color","#00425a"); 
 		$(this).css("font-weight","bold"); 
 	},function(){
 		$(this).css("background-color","black"); 
@@ -69,9 +69,9 @@ $(document).ready(function(){
 		$("#twitter").css("color","#428bca"); 
 		$("#you_tube").css("color","#cc181e");
 		$(this).css("font-weight","normal"); 		
-		$("#close_menu").css("color","#99C68E");    
+		$("#close_menu").css("color","#00425a");    
 	});
-	$("#mainLogo").click(function(){
+	$("#menu_icon").click(function(){
 	    $("#menu_popup").animate({      
 	      left: '0%'
 	    },"slow");  
@@ -96,7 +96,7 @@ $(document).ready(function(){
     	$("#mikeSVG").css("opacity",fOpacity);
   	},function(){
     	$("#mikeSVG").css("opacity","0");
-  	});
+  	});  	
   	$("#events").hover(function(){
     	$("#toolSVG").css("opacity",fOpacity);
 	},function(){

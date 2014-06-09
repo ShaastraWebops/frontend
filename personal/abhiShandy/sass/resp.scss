@@ -2,7 +2,7 @@
     @return #{$pixels/16.0}em   
 }
 
-.cl-effect-21 b {
+.cl-effect a{
     padding: 1%; 
     
 // for 125    
@@ -31,11 +31,11 @@
     }
 }
 
-nav b{
+.cl-effect a{
     position: relative;
-	display: inline-block;
+	display: inline-block; 
 /*	margin: 15px 25px;   */
-    margin: 2% 1.5%;
+    // margin: 2% 1.5%;
 	outline: none;
 	color: #fff;
 	text-decoration: none;
@@ -123,7 +123,7 @@ nav b{
 
 
 /*  ----------------increase size of menu--------- */
-.hi-icon-effect-7b .hi-icon:before {
+#menu_icon:before {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-ms-transform: scale(0.8);
@@ -170,7 +170,7 @@ nav b{
     }    
 }
 /* --------------------------------------------------- */
-.no-touch .hi-icon-effect-7b .hi-icon:hover:before {
+#menu_icon:hover:before {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
@@ -214,14 +214,13 @@ nav b{
     }    
 }
 
-
-.hi-icon {
+#menu_icon {
 	display: inline-block;
 	font-size: 0px;
 	cursor: pointer;
 	margin: 1.5% 3%;
     width: 90px;
-    height: 90px;   
+    height: 95px;   
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
@@ -255,7 +254,7 @@ nav b{
 }
 
 
-.hi-icon:after {
+#menu_icon:after {
 	pointer-events: none;
 	position: absolute;
 	width: 100%;
@@ -298,8 +297,8 @@ nav b{
     }         
 }
 
-.cl-effect-21 b::before,
-.cl-effect-21 b::after {
+.cl-effect a::before,
+.cl-effect a::after {
 	position: absolute;
 	left: 0;
 	width: 100%;
