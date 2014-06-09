@@ -74,4 +74,27 @@
                     window.location.href = "contacts.html";
                 });
                 
+                
+                $("#menu_contacts").click(function(){
+                    window.location.href = "contacts.html";
+                });
+                $("#menu_home").click(function(){
+                    window.location.href = "home.html";
+                });
+                
+                
+                $("#events, #spons, #shows, #lectures, #contacts, #about_us, #close_menu, .menu_options").hover(function(){
+                    $(this).css("cursor","pointer");
+                });
+                
+                $("#facebook").click(function(){
+                    $(location).attr('href', 'https://www.facebook.com/Shaastra');                        
+                });
+                $("#twitter").click(function(){
+                    $(location).attr('href', 'https://twitter.com/ShaastraIITM');                        
+                });
+                $("#you_tube").click(function(){
+                    $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');                        
+                });
+                
             });   
