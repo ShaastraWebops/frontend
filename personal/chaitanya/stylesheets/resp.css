@@ -99,9 +99,6 @@ nav b {
       font-size: 0.6em;
       font-family: Verdana; } }
 
-nav b:hover {
-  color: rgba(31, 185, 255, 0.7); }
-
 /*  ----------------increase size of menu--------- */
 .hi-icon-effect-7b .hi-icon:before {
   -webkit-transform: scale(0.8);

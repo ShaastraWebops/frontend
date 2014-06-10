@@ -33,7 +33,6 @@
 */
 .no-touch .hi-icon-effect-7 .hi-icon:hover {
 	color: white;
-    text-shadow: 0 0 15px rgba(53,123,255,1);      
 }
 
 .hi-icon-effect-7 .hi-icon:after {
@@ -47,7 +46,6 @@
 
 /* Effect 7b */
 .hi-icon-effect-7b .hi-icon:after {
-	box-shadow: 3px 3px rgba(255,255,255,1);
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
@@ -59,7 +57,7 @@
 
 .no-touch .hi-icon-effect-7b .hi-icon:hover:after {
 	opacity: 1;
-	box-shadow: 5px 3px 3px rgba(53,123,255,0.5);    
+	box-shadow: 3px 3px rgba(255,255,255,1);    
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
