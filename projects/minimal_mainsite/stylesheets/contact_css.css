@@ -8,8 +8,7 @@
     margin: 0 auto;
     height: 5px;
     width: 35%;
-}    
-
+}  
 
 .col-sm-push-i1 {
     left: 4%;   
@@ -64,4 +63,40 @@ textarea {
 .lbr {
     line-height: 3px;
 }
+
+
+#co-curricular_affairs,
+#pr_spons_networking,
+#events,
+#sr {
+  text-shadow: 0 0 10px rgba(255,255,255,1);    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
