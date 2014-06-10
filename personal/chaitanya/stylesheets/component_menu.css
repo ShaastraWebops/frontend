@@ -16,6 +16,9 @@
 	text-transform: none;
 	display: block;
 	-webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 
@@ -30,6 +33,7 @@
 */
 .no-touch .hi-icon-effect-7 .hi-icon:hover {
 	color: white;
+    text-shadow: 0 0 15px rgba(53,123,255,1);      
 }
 
 .hi-icon-effect-7 .hi-icon:after {
@@ -55,10 +59,11 @@
 
 .no-touch .hi-icon-effect-7b .hi-icon:hover:after {
 	opacity: 1;
+	box-shadow: 5px 3px 3px rgba(53,123,255,0.5);    
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
-	transform: rotate(0deg);
+	transform: rotate(0deg);    
 }
 
 /* General Demo Style */

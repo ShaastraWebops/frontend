@@ -19,6 +19,7 @@
 nav b {
   position: relative;
   display: inline-block;
+  /*	margin: 15px 25px;   */
   margin: 2% 1.5%;
   outline: none;
   color: #fff;
@@ -97,6 +98,9 @@ nav b {
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
       font-size: 0.6em;
       font-family: Verdana; } }
+
+nav b:hover {
+  color: rgba(31, 185, 255, 0.7); }
 
 /*  ----------------increase size of menu--------- */
 .hi-icon-effect-7b .hi-icon:before {
@@ -182,8 +186,6 @@ nav b {
   font-size: 0px;
   cursor: pointer;
   margin: 1.5% 3%;
-  /*	width: 6%;
-  	height: 12%;   */
   width: 90px;
   height: 90px;
   border-radius: 50%;
