@@ -29,7 +29,7 @@ nav b {
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 1.5em;
-  font-family: Verdana;
+  font-family: 'Titillium Web', sans-serif;
   /*  
       @media all and (min-width: pem(1024)){
           float: none;
@@ -58,8 +58,7 @@ nav b {
       letter-spacing: 0.04%;
       font-weight: 100;
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-      font-size: 1.3em;
-      font-family: Verdana; } }
+      font-size: 1.3em; } }
   @media all and (min-width: 56.25em) and (max-width: 62.5em) {
     nav b {
       float: left;
@@ -68,16 +67,14 @@ nav b {
       letter-spacing: 0.0035%;
       font-weight: 80;
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-      font-size: 1.05em;
-      font-family: Verdana; } }
+      font-size: 1.05em; } }
   @media all and (min-width: 42.5em) and (max-width: 56.25em) {
     nav b {
       width: auto;
       letter-spacing: 0.02%;
       font-weight: 100;
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-      font-size: 0.9em;
-      font-family: Verdana; } }
+      font-size: 0.9em; } }
   @media all and (min-width: 31.25em) and (max-width: 42.5em) {
     nav b {
       float: left;
@@ -86,8 +83,7 @@ nav b {
       letter-spacing: 0.01%;
       font-weight: 30;
       text-shadow: 0 0 0% rgba(255, 255, 255, 0.3);
-      font-size: 0.7em;
-      font-family: Verdana; } }
+      font-size: 0.7em; } }
   @media all and (min-width: 21.875em) and (max-width: 31.25em) {
     nav b {
       width: auto;
@@ -96,8 +92,7 @@ nav b {
       letter-spacing: 0.002%;
       font-weight: 20;
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-      font-size: 0.6em;
-      font-family: Verdana; } }
+      font-size: 0.6em; } }
 
 /*  ----------------increase size of menu--------- */
 .hi-icon-effect-7b .hi-icon:before {
@@ -290,7 +285,7 @@ nav b {
 
 .menu_options {
   color: white;
-  font-family: Verdana;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 1.3em;
   padding-left: 4%;
   padding-right: 4%;
@@ -347,13 +342,13 @@ nav b {
 
 .header {
   color: white;
-  font-family: Verdana;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2em;
   width: 100%;
   text-align: center;
   height: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%;
+  padding-top: 0.2%;
+  padding-bottom: 0.3%;
   /* for 125   */
   /* for 150  */
   /* for 175   */

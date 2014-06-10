@@ -6,6 +6,7 @@ body {
 /* line 8, ../sass/mainPage.scss */
 #notice {
   color: white;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 @-webkit-keyframes textAnimate {
@@ -203,12 +204,13 @@ body {
   top: 0%;
   left: -30%;
   opacity: 1;
+  font-family: 'Titillium Web', sans-serif;    
 }
 
 /* line 173, ../sass/mainPage.scss */
 .menu_options {
   color: white;
-  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 1.5em;
   padding-left: 4%;
   padding-right: 4%;
@@ -223,6 +225,7 @@ body {
 .menu_options a {
   text-decoration: none;
   color: white;
+  font-family: 'Titillium Web', sans-serif;    
 }
 
 /* line 191, ../sass/mainPage.scss */
@@ -233,7 +236,7 @@ body {
 /* line 195, ../sass/mainPage.scss */
 .header {
   color: white;
-  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2em;
   width: 100%;
   text-align: center;
@@ -294,7 +297,7 @@ body {
   letter-spacing: 0.1%;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 2em;
-  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   transition: color 0.3s;

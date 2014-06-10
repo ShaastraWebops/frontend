@@ -174,7 +174,8 @@
     </body>
     
     <script>
-    /* GoogleMaps code start */    
+    $(document).ready(function(){    
+    /* GoogleMaps code start */  
       function initialize() {
         var map_canvas = document.getElementById('map_canvas');
         var map_options = {
@@ -185,6 +186,7 @@
         var map = new google.maps.Map(map_canvas, map_options)
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    /* GoogleMaps code end */    
+    /* GoogleMaps code end */ 
+    });    
     </script>
 </html>

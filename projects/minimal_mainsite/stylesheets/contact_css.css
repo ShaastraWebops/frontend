@@ -30,7 +30,7 @@
 textarea {  
     width: 100%;  
     min-height: 100px;  
-    font-family: ;  
+    font-family: 'Titillium Web', sans-serif;  
     font-size: 18px;  
     color: #444;  
     padding: 5px;
@@ -46,7 +46,7 @@ textarea {
     white-space: pre-wrap;  
     width: 100%px;  
     min-height: 100px;  
-    font-family: ;  
+    font-family: 'Titillium Web', sans-serif;  
     font-size: 18px;  
     padding: 5px;  
     word-wrap: break-word;  
@@ -55,7 +55,7 @@ textarea {
 .common {
     width: 100%;
     min-height: 100px;
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     overflow: hidden;
 }

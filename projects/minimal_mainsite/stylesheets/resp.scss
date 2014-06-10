@@ -44,7 +44,7 @@ nav b{
 	font-weight: 400;
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	font-size: 1.5em;
-    font-family: Verdana;
+    font-family: 'Titillium Web', sans-serif;
 /*  
     @media all and (min-width: pem(1024)){
         float: none;
@@ -75,8 +75,7 @@ nav b{
 	    letter-spacing: 0.04%;
         font-weight: 100;
 	    text-shadow: 0 0 1px rgba(255,255,255,0.3);
-        font-size: 1.3em;
-        font-family: Verdana;        
+        font-size: 1.3em;        
     }
 // for 150
     @media all and (min-width: pem(900)) and (max-width: pem(1000)){
@@ -87,7 +86,6 @@ nav b{
 	    font-weight: 80;
         text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	    font-size: 1.05em;
-        font-family: Verdana;        
     }    
 // for 175    
     @media all and (min-width: pem(680)) and (max-width: pem(900)){
@@ -96,7 +94,6 @@ nav b{
         font-weight: 100;
 	    text-shadow: 0 0 1px rgba(255,255,255,0.3);
         font-size: 0.9em;
-        font-family: Verdana;            
     }
 // for 250    
     @media all and (min-width: pem(500)) and (max-width: pem(680)){
@@ -107,7 +104,6 @@ nav b{
         font-weight: 30;
 	    text-shadow: 0 0 0% rgba(255,255,255,0.3);
         font-size: 0.7em;
-        font-family: Verdana;         
     }
 // for 300
     @media all and (min-width: pem(350)) and (max-width: pem(500)){
@@ -118,7 +114,6 @@ nav b{
 	    font-weight: 20;
         text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	    font-size: 0.6em;
-        font-family: Verdana;                
     }
 }  
 
@@ -343,7 +338,7 @@ nav b{
 
 .menu_options{
     color: white;
-    font-family: Verdana;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 1.3em;
     padding-left: 4%;
     padding-right: 4%;
@@ -406,13 +401,13 @@ nav b{
 
 .header{
     color: white;
-    font-family: Verdana;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 2em;    
     width: 100%;
     text-align: center;
     height: 10%;
-    padding-top: 4%;
-    padding-bottom: 4%;  
+    padding-top: 0.2%;
+    padding-bottom: 0.3%;  
     
 /* for 125   */ 
     @media all and (min-width: pem(1000)) and (max-width: pem(1200)){

@@ -13,7 +13,8 @@
         
         <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="../stylesheets/contact_css.css" rel="stylesheet">
-        <link href="../stylesheets/resp.css" rel="stylesheet">                
+        <link href="../stylesheets/resp.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>                
 	    <link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />        
     </head>
     
@@ -70,7 +71,7 @@
                     
                 
                 <tr>
-                    <td class="header" style="font-family: Cursive"><i>follow us on</i></td>
+                    <td class="header" style="font-family: 'Titillium Web', sans-serif"><i>follow us on</i></td>
                 </tr>  
                 <tr>
                     <td id="facebook" class="menu_options" style="color:#0020C2">Facebook</td>
@@ -91,12 +92,12 @@
 
         
         <div style="color:rgba(255,255,255,1); text-align:centre">
-            <h1 style="text-decoration:underline; text-align:center; font-family: Candara">CONTACT US</h1>
+            <h1 style="text-decoration:underline; text-align:center; font-family: 'Titillium Web', sans-serif">CONTACT US</h1>
         </div>
         
         <div id="div">        
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="font-family: 'Titillium Web', sans-serif">
                     <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:20%; left:7%">
                         <p style="font-size:1.3em">Co-Curricular</p>    
                         <p style="font-size:1.3em">Affairs</p>
@@ -126,7 +127,7 @@
             </div>    
             
             <div class="container-fluid">
-                <div class="row" style="color:white">
+                <div class="row" style="color:white; font-family: 'Titillium Web', sans-serif">
                     <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:65%; height:10%">
                         <p id="contacts_facebook" style="font-size:1.3em">Facebook</p>    
                     </div>
@@ -141,32 +142,32 @@
         
             <div class="container-fluid" style="position:absolute; top:90%; width:100%">
                 <div class="msg">
-                    <h1 style="color:white; font-family:Candara">Couldn't find what you are looking for?</h1>
+                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Couldn't find what you are looking for?</h1>
                 </div>
                 <div class="msg">
-                    <h1 style="color:white; font-family:Candara">Leave us a message</h1>
+                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Leave us a message</h1>
                 </div>
             
                 <div class="hr" style="background-color:white"></div>
             
                 <div class="row" style="padding-top:4%; padding-bottom:2%">
                     <div class="col-sm-3 col-sm-push-i1">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="text" class="form-control" placeholder="Username">
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="text" class="form-control" placeholder="Username">
                     </div>   
                     <div class="col-sm-3 col-sm-push-i2">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="email" class="form-control" placeholder="Email ID">
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="email" class="form-control" placeholder="Email ID">
                     </div>  
                     <div class="col-sm-3 col-sm-push-i3">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="number" class="form-control" placeholder="Mobile (Optional)">
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="number" class="form-control" placeholder="Mobile (Optional)">
                     </div>    
                 </div>
             
                 <div style="padding:2%">
-                    <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; margin-left:0%" placeholder="Your Message..."></textarea>   
+                    <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>   
                 </div>
             
                 <div class="btn-group" style="position:absolute; width:95%; padding:2.5%">
-                    <button type="button" class="btn btn-primary" style="margin-left:46%; width:12%; font-size:18px; padding:1%; text-align:center; float:left">Submit</button>
+                    <button type="button" class="btn btn-primary" style="margin-left:46%; width:12%; font-size:18px; font-family: 'Titillium Web', sans-serif; padding:1%; text-align:center; float:left">Submit</button>
                 </div> 
             </div>  
         </div>
@@ -174,6 +175,7 @@
     </body>
     
     <script>
+    $(document).ready(function(){    
     /* GoogleMaps code start */    
       function initialize() {
         var map_canvas = document.getElementById('map_canvas');
@@ -186,5 +188,6 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     /* GoogleMaps code end */    
+    });    
     </script>
 </html>
