@@ -1,4 +1,7 @@
-.container{
+body{
+	margin: 0;
+}
+#container{
 	position:fixed;
 	display: table;
 	top:0%;
@@ -9,10 +12,12 @@
 }
 
 
+
 ul{
 	list-style-type:none;
 	display: block;
 	margin:0;
+	margin: auto;
 	padding:0;
 }
 
@@ -24,7 +29,35 @@ img{
 	image-rendering: -moz-crisp-edges;
 }
 
+#scene{
+	display: block;
+	margin: 0;
+	padding: 0;	
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	position: relative;
+	
+}
+
+.layer div {
+
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
 .layer{
+	margin: 0;
+	padding: 0;
 	display: block;
 	height:100%;
 	width:100%;
@@ -34,8 +67,10 @@ img{
 .bg{
 	top:0%;
 	left:0%;
-	width:100%;
-	bottom: 90px;
+	right: 0%;
+	width:120%;
+	height: 100%;
+	bottom: 96px;
 	position:absolute;
 	background:url(../parallax/images/background.jpg) no-repeat 50% 170%;
 	background-size: cover;
@@ -52,7 +87,7 @@ img{
 
 .hanger-p1{
 	position:absolute;
-	top:13%;
+	top:11%;
 	left:5%;
 	
 }
@@ -67,7 +102,7 @@ img{
 .hanger-p2{
 	position:absolute;
 	left:38%;
-	top:25%;
+	top:22%;
 }
 
 .cloud2{
@@ -78,8 +113,8 @@ img{
 
 .hanger-p3{
 	position:absolute;
-	left:65%;
-	top:20%;
+	left:64%;
+	top:18%;
 }
 .cloud3{
 	background: url(../parallax/images/board-cloud-3.png) no-repeat;
@@ -92,29 +127,29 @@ img{
 .wave{
 	position:absolute;
 	height:320px;
-	width:200%;
-	
-
+	width:300%;
+	margin:0;
+	padding:0;
 }
 
 .wave.p1{
 	background: url(../parallax/images/wave-plain.png) repeat-x;
-	top:68%;
-	left:-10%;
+	top:53%;
+	left:-20%;
 	background-size: 400px 200px;
 }
 
 .wave.p2{
 	background: url(../parallax/images/wave-plain.png) repeat-x;
-	top:76%;
-	left:-25%;
+	top:57%;
+	left:-20%;
 	background-size: 450px 200px;
 	
 }
 
 .wave.p3{
 	background: url(../parallax/images/wave-plain.png) repeat-x;
-	top:80%;
+	top:60%;
 	left:-35%;
 	background-size: 500px 250px;
 		
@@ -122,8 +157,8 @@ img{
 
 .wave.p4{
 	background: url(../parallax/images/wave-paint.png) repeat-x;
-	top:83%;
-	left:-19%;
+	top:63%;
+	left:-40%;
 	background-size: 600px 280px;
 	
 
@@ -131,7 +166,7 @@ img{
 
 .wave.p5{
 	background: url(../parallax/images/wave-plain.png) repeat-x;
-	top:85%;
+	top:67%;
 	left:-20%;
 	background-size: 600px 280px;
 	
@@ -139,9 +174,9 @@ img{
 
 .wave.p6{
 	background: url(../parallax/images/wave-paint.png) repeat-x;
-	top:90%;
+	top:71%;
 	left:-28%;
-	background-size: 600px 280px;
+	background-size: 600px 320px;
 	
 }
 

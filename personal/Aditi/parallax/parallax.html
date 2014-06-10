@@ -1,21 +1,22 @@
 <head>
 
 <link href="parallax.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-<div class="container">
-<div class="bg">
+<div class="wrapper" id="container">
 
 
 	 <ul id="scene"
-		data-fricion-x="0.8"
-		data-scalar-x="25"
-		data-scalar-y="15"
-		invert-x:"true"
-		invert-y:"true">
-		</li>	
- 		<li class="layer" data-depth="0.20"><div class="wave p1"></div></li>
+	 	data-friction-x="0.1"
+		data-friction-y="0.1"
+		data-scalar-x="40"
+		data-scalar-y="22"
+		>
+		<li class="layer" data-depth="0.00"><div class="bg"></div></li>
+		<li class="layer" data-depth="0.20"><div class="wave p1"></div></li>
 		<li class="layer" data-depth="0.50"><div class="wave p2"></div></li>
 		<li class="layer" data-depth="0.80"><div class="wave p3"></div></li>
 		<li class="layer" data-depth="0.40">
@@ -32,12 +33,11 @@
 		<li class="layer" data-depth="0.50"><div class="wave p6"></div></li>
 	</ul>
 </div>
-</div>
-<script src="deploy/parallax.js"></script>
+<script src="deploy/parallax.min.js"></script>
 <script>
 var scene=document.getElementById('scene');
 var parallax = new Parallax(scene);
 </script>
- </body>
+</body>
 
 
