@@ -4,12 +4,14 @@
         <script src="../javascripts/jquery.min.js"></script>  
         <script src="../javascripts/contacts_js.js"></script> 
         <script src="../javascripts/modernizr.custom.js"></script>        
+        <script src="../stylesheets/bootstrap/js/bootstrap.js"></script>        
         <script src="../javascripts/home_js.js"></script>        
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         
 		<link rel="shortcut icon" href="../pics/favicon.ico"> 
         
         
+        <link href="../stylesheets/font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet">
         <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="../stylesheets/contact_css.css" rel="stylesheet">
         <link href="../stylesheets/resp.css" rel="stylesheet">
@@ -151,19 +153,29 @@
             
                 <div class="row" style="padding-top:4%; padding-bottom:2%">
                     <div class="col-sm-3 col-sm-push-i1">
-                        <span class="input-group-addon">@@@</span>
-                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="text" class="form-control" placeholder="Username">
+                        <div class="left-inner-addon">
+                            <i class="fa fa-user" style="font-size:23px"></i></i>
+                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="text" class="form-control" placeholder="Username">
+                        </div>    
                     </div>   
                     <div class="col-sm-3 col-sm-push-i2">
-                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="email" class="form-control" placeholder="Email ID">
+                        <div class="left-inner-addon">
+                            <i class="fa fa-envelope" style="font-size:19px; padding: 13px 10px"></i>
+                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="email" class="form-control" placeholder="Email ID">
+                        </div>    
                     </div>  
                     <div class="col-sm-3 col-sm-push-i3">
-                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="number" class="form-control" placeholder="Mobile (Optional)">
+                        <div class="left-inner-addon">
+                            <i class="fa fa-mobile" style="font-size:25px; padding: 10px 12px"></i>
+                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="number" class="form-control" placeholder="Mobile (Optional)">
+                        </div>    
                     </div>    
                 </div>
             
                 <div style="padding:2%">
-                    <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>   
+                    <div class="left-inner-addon">
+                        <i class="fa fa-comments" style="font-size:20px"></i>
+                        <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>                      </div>
                 </div>
             
                 <div class="btn-group" style="position:absolute; width:95%; padding:2.5%">
