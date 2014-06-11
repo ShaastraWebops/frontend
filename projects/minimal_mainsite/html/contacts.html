@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="height:100%">
     <head>
-        <script src="../javascripts/jquery.min.js"></script>  
+        <!--shuld remove when hosting--><script src="../javascripts/jquery.min.js"></script> <!--shuld remove when hosting--> 
         <script src="../javascripts/contacts_js.js"></script> 
         <script src="../javascripts/modernizr.custom.js"></script>        
         <script src="../stylesheets/bootstrap/js/bootstrap.js"></script>        
@@ -15,11 +15,12 @@
         <link href="../stylesheets/contact_css.css" rel="stylesheet">
         <link href="../stylesheets/resp.css" rel="stylesheet">
         <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>                
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 	    <link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />        
     </head>
     
-    <body style="background-image:url('../images/background.jpg'); height:97%; font-family: 'Titillium Web', sans-serif">
+    <body style="background-image:url('../images/background.jpg'); height:93%; font-family: 'Titillium Web', sans-serif">
         <div id="contacts_page">        
 		<section id="set-7">
             <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
@@ -93,35 +94,40 @@
 
         
         <div style="color:rgba(255,255,255,1); text-align:centre">
-            <h1 style="text-align:center">CONTACT US</h1>
+            <h1 style="text-align:center; font-family: 'Dosis', sans-serif; margin-top:3.5%">CONTACT US</h1>
+            <div class="white breaker">
+                <span class="left"></span>
+                <div class="dice white"></div>
+                <span class="right"></span>
+            </div>    
         </div>
         
         <div id="div">        
             <div class="container-fluid">
                 <div class="row">
-                    <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:20%; left:7%" data-toggle="modal" data-target="#co-curricular">
+                    <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:24%; left:7%" data-toggle="modal" data-target="#co-curricular">
                         <p style="font-size:1.3em">Co-Curricular</p>    
                         <p style="font-size:1.3em">Affairs</p>
                         <p style="font-size:1.3em">Secretary</p>
                     </div>    
                     
-                    <div id="pr_spons_networking" class="col-sm-2" style="color:white; top:20%; left:26%" data-toggle="modal" data-target="#spons_pr">
+                    <div id="pr_spons_networking" class="col-sm-2" style="color:white; top:24%; left:26%" data-toggle="modal" data-target="#spons_pr">
                         <p style="font-size:1.3em">Sponsorships,</p>
                         <p style="font-size:1.3em">PR and</p>
                         <p style="font-size:1.3em">Networking</p>
                     </div>    
                 
-                    <div id="events" class="col-sm-2" style="color:white; top:54%; left:7%" data-toggle="modal" data-target="#events_queries">
+                    <div id="events" class="col-sm-2" style="color:white; top:58%; left:7%" data-toggle="modal" data-target="#events_queries">
                         <p style="font-size:1.3em">Events</p>
                         <p style="font-size:1.3em">Queries</p>
                     </div>    
                 
-                    <div id="sr" class="col-sm-2" style="color:white; top:54%; left:26%" data-toggle="modal" data-target="#student_relations">
+                    <div id="sr" class="col-sm-2" style="color:white; top:58%; left:26%" data-toggle="modal" data-target="#student_relations">
                         <p style="font-size:1.3em">Student</p>
                         <p style="font-size:1.3em">Relations</p>
                     </div>   
                 
-                    <div id="map_canvas" class="col-sm-5 col-sm-offset-6" style="position:absolute; height:45%; top:20%">
+                    <div id="map_canvas" class="col-sm-5 col-sm-offset-6" style="position:absolute; height:45%; top:24%">
                         <!--For google map-->              
                     </div>                    
                 </div>
@@ -129,19 +135,19 @@
             
             <div class="container-fluid">
                 <div class="row" style="color:white">
-                    <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:65%; height:10%">
+                    <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:68%; height:10%">
                         <p id="contacts_facebook" style="font-size:1.3em">Facebook</p>    
                     </div>
-                    <div class="col-sm-1 col-sm-offset-8" style="position:absolute; top:65%; height:10%">
+                    <div class="col-sm-1 col-sm-offset-8" style="position:absolute; top:68%; height:10%">
                         <p id="contacts_twitter" style="font-size:1.3em">Twitter</p>    
                     </div>
-                    <div class="col-sm-1 col-sm-offset-9" style="position:absolute; top:65%; height:10%">
+                    <div class="col-sm-1 col-sm-offset-9" style="position:absolute; top:68%; height:10%">
                         <p id="contacts_youtube" style="font-size:1.3em">Youtube</p>    
                     </div>                    
                 </div> 
                 
                 <div class="row">
-                    <div class="msg col-sm-5 col-sm-offset-6" style="position:absolute; top:75%">
+                    <div class="msg col-sm-5 col-sm-offset-6" style="position:absolute; top:79%">
                         <button class="btn btn-primary" style="margin-top:2%"  data-toggle="modal" data-target="#comments"><h3 style="color:black">Couldn't find what you are looking for?</h3></button>
                     </div>     
                 </div>    
@@ -157,7 +163,6 @@
                             <div class="msg">
                                 <h1 style="color:black">Leave us a message</h1>
                             </div>
-                            <div class="hr" style="background-color:black"></div>
                         </div>  
 
                         <div class="modal-body" style="background-image:url('../images/background.jpg')">
@@ -201,7 +206,6 @@
                              <div class="msg">
                                 <h1 style="color:black">Co-Curricular Affais Secretary</h1>
                             </div>
-                            <div class="hr" style="background-color:black"></div>                            
                         </div>
                         
                         <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
@@ -225,7 +229,6 @@
                             <div class="msg">
                                 <h1 style="color:black">Sponsorships, PR and Networking</h1>
                             </div>
-                            <div class="hr" style="background-color:black"></div>                           
                         </div>
                         
                         <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
@@ -249,7 +252,6 @@
                             <div class="msg">
                                 <h1 style="color:black">Events</h1>
                             </div>
-                            <div class="hr" style="background-color:black"></div>                           
                         </div>
                         
                         <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
@@ -273,7 +275,6 @@
                             <div class="msg">
                                 <h1 style="color:black">Student Relations</h1>
                             </div>
-                            <div class="hr" style="background-color:black"></div>                            
                         </div>
                         
                         <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
