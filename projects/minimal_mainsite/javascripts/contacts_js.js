@@ -5,52 +5,6 @@ $(document).ready(function(){
       $(this).css("background-color","");        
    });   
     
-
-    $(function() {  
-        var txt = $('#comments'),  
-            hiddenDiv = $(document.createElement('div')),  
-            content = null;  
-  
-        txt.addClass('txtstuff');  
-        hiddenDiv.addClass('hiddendiv common');  
-  
-        $('body').append(hiddenDiv);  
-  
-        txt.on('keyup', function () {  
-  
-            content = $(this).val();  
-  
-            content = content.replace(/\n/g, '<br>');  
-            hiddenDiv.html(content + '<br class="lbr">');  
-  
-            $(this).css('height', hiddenDiv.height());  
-  
-        }); 
-    });
-    
-    
-    $("#co-curricular_affairs").click(function(){
-       $("#div").load("contacts_click.html #target_logo", function() {
-        $("#details").css("background","url('../images/co-curricular_affairs.png') no-repeat top center");
-       }); 
-//        $("#div").append($("<div>").load("contacts_click.html #evolve"));        
-    });
-    $("#pr_spons_networking").click(function(){
-       $("#div").load("contacts_click.html #target_logo", function() {
-        $("#details").css("background","url('../images/pr_spons_etc.png') no-repeat top center");
-       }); 
-    });
-    $("#events").click(function(){
-       $("#div").load("contacts_click.html #target_logo", function() {
-        $("#details").css("background","url('../images/events.png') no-repeat top center");
-       }); 
-    });
-    $("#sr").click(function(){
-       $("#div").load("contacts_click.html #target_logo", function() {
-        $("#details").css("background","url('../images/evolve.png') no-repeat top center");   
-       }); 
-    }); 
-    
     $("#contacts_facebook").click(function(){
        $(location).attr('href', 'https://www.facebook.com/Shaastra'); 
     });

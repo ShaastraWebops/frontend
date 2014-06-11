@@ -19,7 +19,7 @@
 	    <link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />        
     </head>
     
-    <body style="background-image:url('../images/background.jpg'); height:97%">
+    <body style="background-image:url('../images/background.jpg'); height:97%; font-family: 'Titillium Web', sans-serif">
         <div id="contacts_page">        
 		<section id="set-7">
             <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
@@ -72,7 +72,7 @@
                     
                 
                 <tr>
-                    <td class="header" style="font-family: 'Titillium Web', sans-serif"><i>follow us on</i></td>
+                    <td class="header"><i>follow us on</i></td>
                 </tr>  
                 <tr>
                     <td id="facebook" class="menu_options" style="color:#0020C2">Facebook</td>
@@ -93,30 +93,30 @@
 
         
         <div style="color:rgba(255,255,255,1); text-align:centre">
-            <h1 style="text-decoration:underline; text-align:center; font-family: 'Titillium Web', sans-serif">CONTACT US</h1>
+            <h1 style="text-decoration:underline; text-align:center">CONTACT US</h1>
         </div>
         
         <div id="div">        
             <div class="container-fluid">
-                <div class="row" style="font-family: 'Titillium Web', sans-serif">
-                    <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:20%; left:7%">
+                <div class="row">
+                    <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:20%; left:7%" data-toggle="modal" data-target="#co-curricular">
                         <p style="font-size:1.3em">Co-Curricular</p>    
                         <p style="font-size:1.3em">Affairs</p>
                         <p style="font-size:1.3em">Secretary</p>
                     </div>    
                     
-                    <div id="pr_spons_networking" class="col-sm-2" style="color:white; top:20%; left:26%">
+                    <div id="pr_spons_networking" class="col-sm-2" style="color:white; top:20%; left:26%" data-toggle="modal" data-target="#spons_pr">
                         <p style="font-size:1.3em">Sponsorships,</p>
                         <p style="font-size:1.3em">PR and</p>
                         <p style="font-size:1.3em">Networking</p>
                     </div>    
                 
-                    <div id="events" class="col-sm-2" style="color:white; top:54%; left:7%">
+                    <div id="events" class="col-sm-2" style="color:white; top:54%; left:7%" data-toggle="modal" data-target="#events_queries">
                         <p style="font-size:1.3em">Events</p>
                         <p style="font-size:1.3em">Queries</p>
                     </div>    
                 
-                    <div id="sr" class="col-sm-2" style="color:white; top:54%; left:26%">
+                    <div id="sr" class="col-sm-2" style="color:white; top:54%; left:26%" data-toggle="modal" data-target="#student_relations">
                         <p style="font-size:1.3em">Student</p>
                         <p style="font-size:1.3em">Relations</p>
                     </div>   
@@ -128,7 +128,7 @@
             </div>    
             
             <div class="container-fluid">
-                <div class="row" style="color:white; font-family: 'Titillium Web', sans-serif">
+                <div class="row" style="color:white">
                     <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:65%; height:10%">
                         <p id="contacts_facebook" style="font-size:1.3em">Facebook</p>    
                     </div>
@@ -142,101 +142,160 @@
                 
                 <div class="row">
                     <div class="msg col-sm-7 col-sm-offset-5" style="position:absolute; top:75%">
-                        <h1 style="color:white; font-family: 'Titillium Web', sans-serif" data-toggle="modal" data-target="#comments">Couldn't find what you are looking for?</h1>
+                        <button class="btn btn-default" style="margin-top:2%"><h1 style="color:black" data-toggle="modal" data-target="#comments">Couldn't find what you are looking for?</h1></button>
                     </div>     
                 </div>    
             </div>
+            
+    <!-- modal for comments start -->                        
             
             <div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="comments" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <div class="modal-title">
-                                <div class="msg">
-                                    <h1 style="color:black; font-family: 'Titillium Web', sans-serif">Leave us a message</h1>
-                                </div>
-                                <div class="hr" style="background-color:black"></div>
-                            </div>  
-                            
-                            <div class="modal-body">
-                                <div class="input-group merged col-xs-6">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user">        </span></span>
-                                    <input type="text" class="form-control" placeholder="Username" onkeydown="return ignoreEnter(event)"/>
-                                    </div>
-    
-                                <div class="input-group merged col-xs-6">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                    <input type="text" class="form-control" placeholder="Email ID" onkeydown="return ignoreEnter(event)"/>
-                                 </div>
-                                
-                                <div class="input-group merged col-xs-6">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-                                    <input type="number" class="form-control" placeholder="Mobile (optional)" onkeydown="return ignoreEnter(event)"/>
-                                 </div>
-                                
-                                <div>
-                    <div class="left-inner-addon">
-                        <i class="fa fa-comments" style="font-size:20px"></i>
-                        <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>                      </div>
+                            <div class="msg">
+                                <h1 style="color:black">Leave us a message</h1>
+                            </div>
+                            <div class="hr" style="background-color:black"></div>
+                        </div>  
 
-                                </div>    
+                        <div class="modal-body" style="background-image:url('../images/background.jpg')">
+                            <div class="input-group merged col-xs-6" style="margin: 10px auto">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user">        </span></span>
+                                <input type="text" class="form-control" style="font-weight:500" placeholder="Username"/>
+                            </div>
+    
+                            <div class="input-group merged col-xs-6" style="margin: 10px auto">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                <input type="text" class="form-control" style="font-weight:500" placeholder="Email ID"/>
+                             </div>
                                 
-                            </div>  
+                            <div class="input-group merged col-xs-6" style="margin: 10px auto">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                                <input type="number" class="form-control" style="font-weight:500" placeholder="Mobile (optional)"/>
+                             </div>
+                                
+                             <div>
+                                <div class="left-inner-addon" style="margin: 10px auto">
+                                    <i class="fa fa-comments" style="font-size:20px"></i>
+                                    <textarea id="comments" class="form-control" style="border-radius:5px; font-size:18px; font-weight:500; margin-left:0%" placeholder="Your Message..."></textarea>                         
+                                </div>
+                            </div>        
+                        </div>  
                             
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>       
-                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>       
                     </div>
                 </div>
+            </div>
+    <!-- modal for comments end -->
             
+    <!-- modals for boxes start -->        
+            <div class="modal fade" id="co-curricular" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
+                <div class="modal-dialog" style="width:75%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                            
+                             <div class="msg">
+                                <h1 style="color:black">Co-Curricular Affais Secretary</h1>
+                            </div>
+                            <div class="hr" style="background-color:black"></div>                            
+                        </div>
+                        
+                        <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
+                            <div style="position:absolute; width:100%; height:50%; background:url('../images/shaa2015_logo_75.png') no-repeat top center; top:10%">
+                            </div>
+        
+                            <div id="details" style="position:absolute; width:100%; height:30%; top:60%; background:url('../images/co-curricular_affairs.png') no-repeat top center;"></div>                                         
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>                            
+                        </div>    
+                    </div>
+                </div>
             </div>
             
-<!--        
-            <div class="container-fluid" style="position:absolute; top:90%; width:100%">
- 
-                <div class="msg">
-                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Couldn't find what you are looking for?</h1>
-                </div>
-                <div class="msg">
-                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Leave us a message</h1>
-                </div>
-            
-                <div class="hr" style="background-color:white"></div>
-            
-                <div class="row" style="padding-top:4%; padding-bottom:2%">
-                    <div class="col-sm-3 col-sm-push-i1">
-                        <div class="left-inner-addon">
-                            <i class="fa fa-user" style="font-size:23px"></i>
-                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="text" class="form-control" placeholder="Username">
+            <div class="modal fade" id="spons_pr" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
+                <div class="modal-dialog" style="width:75%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                            
+                            <div class="msg">
+                                <h1 style="color:black">Sponsorships, PR and Networking</h1>
+                            </div>
+                            <div class="hr" style="background-color:black"></div>                           
+                        </div>
+                        
+                        <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
+                            <div style="position:absolute; width:100%; height:50%; background:url('../images/shaa2015_logo_75.png') no-repeat top center; top:10%">
+                            </div>
+        
+                            <div id="details" style="position:absolute; width:100%; height:30%; top:60%; background:url('../images/pr_spons_etc.png') no-repeat top center;"></div>                                         
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>         
                         </div>    
-                    </div>   
-                    <div class="col-sm-3 col-sm-push-i2">
-                        <div class="left-inner-addon">
-                            <i class="fa fa-envelope" style="font-size:19px; padding: 13px 10px"></i>
-                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="email" class="form-control" placeholder="Email ID">
-                        </div>    
-                    </div>  
-                    <div class="col-sm-3 col-sm-push-i3">
-                        <div class="left-inner-addon">
-                            <i class="fa fa-mobile" style="font-size:25px; padding: 10px 12px"></i>
-                            <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="number" class="form-control" placeholder="Mobile (Optional)">
-                        </div>    
-                    </div>    
+                    </div>
                 </div>
+            </div>
+
+            <div class="modal fade" id="events_queries" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
+                <div class="modal-dialog" style="width:75%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <div class="msg">
+                                <h1 style="color:black">Events</h1>
+                            </div>
+                            <div class="hr" style="background-color:black"></div>                           
+                        </div>
+                        
+                        <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
+                            <div style="position:absolute; width:100%; height:50%; background:url('../images/shaa2015_logo_75.png') no-repeat top center; top:10%">
+                            </div>
+        
+                            <div id="details" style="position:absolute; width:100%; height:30%; top:60%; background:url('../images/events.png') no-repeat top center;"></div>                                         
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>                            
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="student_relations" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
+                <div class="modal-dialog" style="width:75%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                            
+                            <div class="msg">
+                                <h1 style="color:black">Student Relations</h1>
+                            </div>
+                            <div class="hr" style="background-color:black"></div>                            
+                        </div>
+                        
+                        <div class="modal-body" style="background-image:url('../images/background.jpg'); height:500px">
+                            
+                            <div style="position:absolute; width:100%; height:50%; background:url('../images/shaa2015_logo_75.png') no-repeat top center; top:10%">
+                            </div>
+        
+                            <div id="details" style="position:absolute; width:100%; height:30%; top:60%; background:url('../images/evolve.png') no-repeat top center;"></div>             
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>                            
+                        </div>    
+                    </div>
+                </div>
+            </div>
             
-                <div style="padding:2%">
-                    <div class="left-inner-addon">
-                        <i class="fa fa-comments" style="font-size:20px"></i>
-                        <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>                      </div>
-                </div>            
-                <div class="btn-group" style="position:absolute; width:95%; padding:2.5%">
-                    <button type="button" class="btn btn-primary" style="margin-left:46%; width:12%; font-size:18px; font-family: 'Titillium Web', sans-serif; padding:1%; text-align:center; float:left">Submit</button>
-                </div> 
-           </div>  
--->
+    <!-- modals for boxes end -->        
         </div>
         </div>    
     </body>
@@ -257,7 +316,7 @@
     /* GoogleMaps code end */    
         
     
-        
+   /* jQuery for merging glyphicons and input start */     
         $(function() {
             $(".merged input").on({
                 // can't simply toggle class because 
@@ -270,7 +329,7 @@
                 }
             });            
         });  
-
+    /* jQuery for merging glyphicons and input end */    
         
     });    
     </script>

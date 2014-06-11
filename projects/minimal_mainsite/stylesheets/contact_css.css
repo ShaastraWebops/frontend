@@ -30,40 +30,11 @@
 textarea {  
     width: 100%;  
     min-height: 100px;  
-    font-family: 'Titillium Web', sans-serif;  
     font-size: 18px;  
     color: #444;  
     padding: 5px;
     word-wrap: break-word;
 }  
-  
-.noscroll {  
-    overflow: hidden;  
-}  
-
-.hiddendiv {  
-    display: none;  
-    white-space: pre-wrap;  
-    width: 100%px;  
-    min-height: 100px;  
-    font-family: 'Titillium Web', sans-serif;  
-    font-size: 18px;  
-    padding: 5px;  
-    word-wrap: break-word;  
-}  
-
-.common {
-    width: 100%;
-    min-height: 100px;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 18px;
-    overflow: hidden;
-}
-
-.lbr {
-    line-height: 3px;
-}
-
 
 #co-curricular_affairs,
 #pr_spons_networking,
