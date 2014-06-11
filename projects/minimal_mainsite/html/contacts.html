@@ -12,9 +12,9 @@
         
         
         <link href="../stylesheets/font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet">
-        <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="../stylesheets/contact_css.css" rel="stylesheet">
         <link href="../stylesheets/resp.css" rel="stylesheet">
+        <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>                
 	    <link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />        
     </head>
@@ -141,12 +141,59 @@
                 </div> 
                 
                 <div class="row">
-                <div class="msg col-sm-7 col-sm-offset-5" style="position:absolute; top:75%">
-                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Couldn't find what you are looking for?</h1>
-                </div>
-                    
+                    <div class="msg col-sm-7 col-sm-offset-5" style="position:absolute; top:75%">
+                        <h1 style="color:white; font-family: 'Titillium Web', sans-serif" data-toggle="modal" data-target="#comments">Couldn't find what you are looking for?</h1>
+                    </div>     
                 </div>    
             </div>
+            
+            <div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="comments" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <div class="modal-title">
+                                <div class="msg">
+                                    <h1 style="color:black; font-family: 'Titillium Web', sans-serif">Leave us a message</h1>
+                                </div>
+                                <div class="hr" style="background-color:black"></div>
+                            </div>  
+                            
+                            <div class="modal-body">
+                                <div class="input-group merged col-xs-6">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user">        </span></span>
+                                    <input type="text" class="form-control" placeholder="Username" onkeydown="return ignoreEnter(event)"/>
+                                    </div>
+    
+                                <div class="input-group merged col-xs-6">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                    <input type="text" class="form-control" placeholder="Email ID" onkeydown="return ignoreEnter(event)"/>
+                                 </div>
+                                
+                                <div class="input-group merged col-xs-6">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                                    <input type="number" class="form-control" placeholder="Mobile (optional)" onkeydown="return ignoreEnter(event)"/>
+                                 </div>
+                                
+                                <div>
+                    <div class="left-inner-addon">
+                        <i class="fa fa-comments" style="font-size:20px"></i>
+                        <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>                      </div>
+
+                                </div>    
+                                
+                            </div>  
+                            
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
 <!--        
             <div class="container-fluid" style="position:absolute; top:90%; width:100%">
  
@@ -211,18 +258,20 @@
         
     
         
-$(function() {
-    $(".merged input").on({
-        // can't simply toggle class because 
-        // events can be called multiple times
-        focus: function() {
-            $(this).prev().addClass("focusedInput")
-        },
-        blur: function() {
-            $(this).prev().removeClass("focusedInput")
-        }
-    });
-});        
+        $(function() {
+            $(".merged input").on({
+                // can't simply toggle class because 
+                // events can be called multiple times
+                focus: function() {
+                    $(this).prev().addClass("focusedInput")
+                },
+                blur: function() {
+                    $(this).prev().removeClass("focusedInput")
+                }
+            });            
+        });  
+
+        
     });    
     </script>
 </html>

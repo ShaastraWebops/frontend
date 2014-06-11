@@ -110,7 +110,7 @@ textarea {
     border-right: 0px;
     background-color: #FFFFFF;
 }
-.merged input {
+.merged input,{
     border-left: 0px;
     background-color: #FFFFFF;
 }
