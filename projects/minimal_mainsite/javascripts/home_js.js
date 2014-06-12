@@ -63,7 +63,9 @@
                 $("#contacts").click(function(){
                     window.location.href = "contacts.html";
                 });
-                
+                $("#menu_envisage").click(function(){
+                    window.location.href = "envisage.htm";
+                });
                 
                 $("#menu_contacts").click(function(){
                     window.location.href = "contacts.html";
