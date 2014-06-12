@@ -16,8 +16,8 @@
 	text-transform: none;
 	display: block;
 	-webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
+/*    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased; */
     font-smoothing: antialiased;
 }
 
