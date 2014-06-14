@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) format("woff");
-}
-
-@font-face {
   font-family: 'ecoicon';
   src: url("../fonts/ecoicons/ecoicon.svg#ecoicon") format("svg");
   font-weight: normal;
@@ -204,61 +197,35 @@
   }
 }
 
-/* line 2, ../sass/_cl-effect.scss */
+/* line 1, ../sass/_cl-effect2.scss */
 .cl-effect a {
-  position: absolute;
-  z-index: 3;
   color: white;
   font-weight: 100;
-  padding: 1%;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Titillium Web", "TakaoPGothic", "Century Schoolbook L", Verdana;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
-/* line 20, ../sass/_cl-effect.scss */
-.cl-effect a:hover {
-  color: #005574;
-}
-
-/* line 25, ../sass/_cl-effect.scss */
-.cl-effect a::before,
-.cl-effect a::after {
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  content: '';
-  opacity: 1;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-/* line 37, ../sass/_cl-effect.scss */
+/* line 10, ../sass/_cl-effect2.scss */
 .cl-effect a::before {
   top: 0;
-  height: 2%;
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
+  -o-transform: translateY(10px);
   transform: translateY(10px);
 }
 
-/* line 50, ../sass/_cl-effect.scss */
+/* line 19, ../sass/_cl-effect2.scss */
 .cl-effect a::after {
   bottom: 0;
-  height: 2%;
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
   transform: translateY(-10px);
 }
 
-/* line 71, ../sass/_cl-effect.scss */
+/* line 30, ../sass/_cl-effect2.scss */
 .cl-effect a:hover::before,
 .cl-effect a:focus::before,
 .cl-effect a:hover::after,
@@ -266,9 +233,205 @@
   opacity: 0;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
   transform: translateY(0px);
 }
 
+/* line 38, ../sass/_cl-effect2.scss */
+.cl-effect a {
+  padding: 1%;
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 41, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.1%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 44, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.3%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 47, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.5%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 50, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.9%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 53, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 2.5%;
+  }
+}
+/* line 56, ../sass/_cl-effect2.scss */
+div a {
+  position: relative;
+  display: inline-block;
+  /*	margin: 15px 25px;   */
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1%;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.5em;
+  font-family: Verdana;
+  /*  
+      @media all and (min-width: pem(1024)){
+          float: none;
+      }
+  */
+}
+
+@media all and (max-width: 37.5em) {
+  /* line 76, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-size: 0.7em;
+    font-weight: 100;
+    left-margin: 70%;
+    float: left;
+  }
+}
+@media all and (max-height: 37.5em) {
+  /* line 84, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-size: 0.7em;
+    font-weight: 100;
+    top-margin: 0%;
+    float: top;
+  }
+}
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 92, ../sass/_cl-effect2.scss */
+  div a {
+    float: none;
+    width: auto;
+    letter-spacing: 0.04%;
+    font-weight: 100;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.3em;
+    font-family: Verdana;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 101, ../sass/_cl-effect2.scss */
+  div a {
+    float: left;
+    width: auto;
+    margin: 2% 2.5%;
+    letter-spacing: 0.0035%;
+    font-weight: 80;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.05em;
+    font-family: Verdana;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 111, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-weight: 100;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+    font-family: Verdana;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 119, ../sass/_cl-effect2.scss */
+  div a {
+    float: left;
+    width: auto;
+    margin: 0% 0.5%;
+    letter-spacing: 0.01%;
+    font-weight: 30;
+    text-shadow: 0 0 0% rgba(255, 255, 255, 0.3);
+    font-size: 0.7em;
+    font-family: Verdana;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 129, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    height: auto;
+    margin: 0% 0.5%;
+    letter-spacing: 0.002%;
+    font-weight: 20;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 0.6em;
+    font-family: Verdana;
+  }
+}
+/* line 140, ../sass/_cl-effect2.scss */
+.cl-effect a::before,
+.cl-effect a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  background: #fff;
+  content: '';
+  opacity: 1;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  /* for 125   */
+  /* for 150  */
+  /* for 175   */
+  /* for 250  */
+  /* for 300  */
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 161, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 3.75%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 165, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 3.5%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 169, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.75%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 173, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.5%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 177, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.25%;
+  }
+}
 @media all and (min-width: 62.5em) and (max-width: 75em) {
   /* line 8, ../sass/_responsiveSVG.scss */
   #plane, #phone, #tools, #mike, #group, #rupee {
@@ -286,29 +449,29 @@
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
   /* line 8, ../sass/_responsiveSVG.scss */
   #plane, #phone, #tools, #mike, #group, #rupee {
-    height: 315px;
-    width: 287px;
+    height: 225px;
+    width: 205px;
   }
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
   /* line 8, ../sass/_responsiveSVG.scss */
   #plane, #phone, #tools, #mike, #group, #rupee {
-    height: 225px;
-    width: 205px;
+    height: 135px;
+    width: 123px;
   }
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
   /* line 8, ../sass/_responsiveSVG.scss */
   #plane, #phone, #tools, #mike, #group, #rupee {
-    height: 180px;
-    width: 164px;
+    height: 90px;
+    width: 82px;
   }
 }
 @media all and (max-width: 21.875em) {
   /* line 8, ../sass/_responsiveSVG.scss */
   #plane, #phone, #tools, #mike, #group, #rupee {
-    height: 135px;
-    width: 123px;
+    height: 45px;
+    width: 41px;
   }
 }
 
@@ -317,39 +480,42 @@
   height: 250px;
   width: 400px;
 }
+/* line 68, ../sass/_responsiveSVG.scss */
+#mainLogo svg {
+  height: 250px;
+  width: 400px;
+}
 
-/* line 33, ../sass/mainPage.scss */
+/* line 35, ../sass/mainPage.scss */
 body {
   background-image: url("../images/new black.png");
 }
 
-/* line 38, ../sass/mainPage.scss */
+/* line 40, ../sass/mainPage.scss */
 #notice {
   color: white;
-  display: none;
 }
 
-/* line 44, ../sass/mainPage.scss */
+/* line 46, ../sass/mainPage.scss */
 #watermark div {
-  opacity: 0;
-  -webkit-animation: fadeIn 2s ease-in 10s forwards;
+  opacity: 1;
   -moz-animation: fadeIn 2s ease-in 10s forwards;
   -o-animation: fadeIn 2s ease-in 10s forwards;
   animation: fadeIn 2s ease-in 10s forwards;
 }
 
-/* line 52, ../sass/mainPage.scss */
+/* line 55, ../sass/mainPage.scss */
 #mainLogo {
   opacity: 1;
 }
-/* line 55, ../sass/mainPage.scss */
+/* line 58, ../sass/mainPage.scss */
 #mainLogo #cubeDots {
   fill: white;
   fill-opacity: 1;
   stroke: white;
   stroke-width: 2px;
 }
-/* line 61, ../sass/mainPage.scss */
+/* line 64, ../sass/mainPage.scss */
 #mainLogo #cubeBorder {
   fill: #00425a;
   fill-opacity: 1;
@@ -357,7 +523,7 @@ body {
   stroke-width: 2px;
 }
 
-/* line 68, ../sass/mainPage.scss */
+/* line 71, ../sass/mainPage.scss */
 #mainLogo image {
   position: absolute;
   z-index: 4;
@@ -370,8 +536,9 @@ body {
   animation: fadeIn 2s ease-in 8s forwards;
 }
 
-/* line 80, ../sass/mainPage.scss */
+/* line 83, ../sass/mainPage.scss */
 .menuB {
+  display: none;
   opacity: 0;
   -webkit-animation: fadeIn 3s ease-in 5s forwards;
   -moz-animation: fadeIn 3s ease-in 5s forwards;
@@ -379,7 +546,7 @@ body {
   animation: fadeIn 3s ease-in 5s forwards;
 }
 
-/* line 88, ../sass/mainPage.scss */
+/* line 92, ../sass/mainPage.scss */
 #menu_icon:before {
   font-family: 'ecoicon';
   speak: none;
@@ -389,28 +556,20 @@ body {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  content: "\e006";
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
 }
 
-/* line 102, ../sass/mainPage.scss */
-#menu_icon:before {
-  content: "\e006";
-}
-
-/* line 105, ../sass/mainPage.scss */
+/* line 107, ../sass/mainPage.scss */
 #menu_icon:after {
   top: -8%;
   left: -8%;
   padding: 8%;
   z-index: -1;
   opacity: 0;
-}
-
-/* line 112, ../sass/mainPage.scss */
-#menu_icon:after {
   box-shadow: 3px 3px white;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -436,6 +595,7 @@ body {
 
 /* line 134, ../sass/mainPage.scss */
 #menu_icon {
+  display: none;
   position: absolute;
   z-index: 1;
   top: 0%;
@@ -451,14 +611,15 @@ body {
   color: white;
 }
 
-/* line 149, ../sass/mainPage.scss */
+/* line 150, ../sass/mainPage.scss */
 #menu_icon:hover {
   color: #00425a;
   font-size: 2px;
 }
 
-/* line 154, ../sass/mainPage.scss */
+/* line 155, ../sass/mainPage.scss */
 #menu_popup {
+  display: none;
   position: absolute;
   background-color: black;
   z-index: 400;
@@ -469,10 +630,10 @@ body {
   opacity: 1;
 }
 
-/* line 165, ../sass/mainPage.scss */
+/* line 167, ../sass/mainPage.scss */
 .menu_options {
   color: white;
-  font-family: "Titillium Web", "TakaoPGothic", "Century Schoolbook L", Verdana;
+  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
   font-size: 1.5em;
   padding-left: 4%;
   padding-right: 4%;
@@ -483,21 +644,21 @@ body {
   height: 5%;
   cursor: pointer;
 }
-/* line 177, ../sass/mainPage.scss */
+/* line 179, ../sass/mainPage.scss */
 .menu_options a {
   text-decoration: none;
   color: white;
 }
 
-/* line 183, ../sass/mainPage.scss */
+/* line 185, ../sass/mainPage.scss */
 .menu_options:hover a {
   color: black;
 }
 
-/* line 187, ../sass/mainPage.scss */
+/* line 189, ../sass/mainPage.scss */
 .header {
   color: white;
-  font-family: "Titillium Web", "TakaoPGothic", "Century Schoolbook L", Verdana;
+  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
   font-size: 2em;
   width: 100%;
   text-align: center;
@@ -506,7 +667,7 @@ body {
   padding-bottom: 4%;
 }
 
-/* line 197, ../sass/mainPage.scss */
+/* line 199, ../sass/mainPage.scss */
 #menu_rhs {
   position: absolute;
   z-index: 401;
@@ -517,10 +678,9 @@ body {
   opacity: 1;
 }
 
-/* line 207, ../sass/mainPage.scss */
+/* line 209, ../sass/mainPage.scss */
 #hexaMenu {
-  opacity: 0;
-  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+  opacity: 1;
   -moz-animation: fadeIn 3s ease-in 5s forwards;
   -o-animation: fadeIn 3s ease-in 5s forwards;
   animation: fadeIn 3s ease-in 5s forwards;

@@ -5,7 +5,67 @@ var sWidth = window.innerWidth;
 var sHeight = window.innerHeight;
 
 $(document).ready(function(){
-	//pageTransition
+	//functions
+	function pageCenterPx (id, z) {
+		x = document.getElementById(id);
+		x.style.position = "absolute";
+		x.style.zIndex = z;
+		x.style.top = (window.innerHeight - x.clientHeight)/2+"px";
+		x.style.left = (window.innerWidth - x.clientWidth)/2+"px";
+	}
+	function redirectPage () {
+		window.location = linkLocation;
+	}
+    function pageCenterPercent (id, z) {
+		x = document.getElementById(id);
+		x.style.position = "absolute";
+		x.style.zIndex = z;
+		x.style.top = (1-(x.clientHeight/window.innerHeight))*50+"%";	
+		x.style.left = (1-(x.clientWidth/window.innerWidth))*50+"%";
+	}
+	function hexaStr(id, n) {
+		x = document.getElementById(id);
+		x.style.position = "absolute"
+		a = 11;
+		b = 5;
+		c = 2;
+		d= 4;
+		switch(n){
+			case 1:
+			x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
+			x.style.left = (window.innerWidth - x.clientWidth)*(1/c) +"px";
+			// console.leftog(x.style.top);
+			// console.log(x.style.left);		
+			break;
+
+			case 2:
+			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";		
+			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
+			break;
+
+			case 3:
+			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
+			break;
+
+			case 4:
+			x.style.top = (window.innerHeight - x.clientHeight)*((a-1)/a) + "px";
+			x.style.left = (window.innerWidth - x.clientWidth)*((c-1)/c) +"px";
+			break;
+
+			case 5:
+			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
+			break;
+
+			case 6:
+			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";				
+			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
+			break;		
+		}
+	}
+
+	//pageTransition - Common
 	$("body").css("display", "none");    
     $("body").fadeIn(1000);
     $(".nextPage").click(function(event){
@@ -13,9 +73,7 @@ $(document).ready(function(){
         linkLocation = this.href;
         $("body").fadeOut(2000, redirectPage);      
     });         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
+    
     //Sliding Menu -- Common for all pages
 	$(".menu_options").hover(function(){
 		$(this).css("background-color","#EBF4FA");
@@ -34,7 +92,6 @@ $(document).ready(function(){
 		$(this).css("font-weight","normal"); 		
 		$("#close_menu").css("color","#00425a");    
 	});
-
 	$("#menu_icon").click(function(){
 	    $("#menu_popup").animate({      
 	      left: '0%'
@@ -44,7 +101,6 @@ $(document).ready(function(){
 	      width: '70%'
 	    },"slow");  
   	});
-
 	$("#close_menu").click(function(){  
 		$("#menu_popup").animate({
 			left: '-30%'
@@ -54,7 +110,7 @@ $(document).ready(function(){
 		    width: '0%'
   		},"slow");
 	});
-  	//respond to ESC keydown
+  			//respond to ESC keydown
   	$('body').keydown(function(e){
 	    // alert(e.which);
 	    if(e.which == 27){
@@ -120,108 +176,59 @@ $(document).ready(function(){
 	sWidth = window.innerWidth;
 	sHeight = window.innerHeight;
 	sWidth_em = sWidth/16;
-	if(sWidth_em>80){
+
+	if(sWidth>1000){
 		s = 1;
 		fontSize = 1.5;
 		lHeight = "2%";
 		padding = "1.1%";
 	}
-	else if(sWidth_em>75){
+	else if(sWidth>900){
 		s = 0.8;
 		fontSize = 1.4;
 		lHeight = "1.75%";
 		padding = "1.3%";
 	}
-	else if(sWidth_em>62.5){
-		s = 0.6;
+	else if(sWidth>680){
+		s = 0.5;
 		fontSize = 1.3;
 		lHeight = "1.5%";
 		padding = "1.5%";
 	}
-	else if(sWidth_em>56.25){
-		s= 0.4;
+	else if(sWidth>500){
+		s= 0.3;
 		fontSize = 1.2;
 		lHeight = "1.25%";
 		padding = "1.9%";
 	}
-	else if(sWidth_em>31.25){
+	else if(sWidth_em>350){
 		s=0.2;
 		fontSize = 1.1;
 		lHeight = "1%";
 		padding = "2.5%";
 	}
 	else{
-		s=0.2;
-		fontSize = 1.1;
-		padding = "2.5%";
+		s=0.1;
+		fontSize = 1.0;
 		lHeight = "0.75%";
-	}	
-	$(".cl-effect a").css("font-size",fontSize+"em");
-	$(".cl-effect a::before").css("height",lHeight);
-	$(".cl-effect a::after").css("height",lHeight);  	
+		padding = "2.5%";
+	}
+	document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
+	$("#mainLogo").css("height",(250*s)+"px");
+	$("#mainLogo").css("width",(400*s)+"px");	
+	pageCenterPercent("mainLogo",2);
+	// $(".cl-effect a").css("font-size",fontSize+"em");
+	// $(".cl-effect a::before").css("height",lHeight);
+	// $(".cl-effect a::after").css("height",lHeight);  	
+
   	//initial positioning
   	hexaStr("events",1);
 	hexaStr("shows",2);
 	hexaStr("contacts",3);
 	hexaStr("about_us",4);
 	hexaStr("lectures",5);
-	hexaStr("spons",6);
-	function hexaStr(id, n) {
-		x = document.getElementById(id);
-		x.style.position = "absolute"
-		a = 13;
-		b = 5;
-		c = 2;
-		d= 4;
-		switch(n){
-			case 1:
-			x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
-			x.style.left = (window.innerWidth - x.clientWidth)*(1/c) +"px";
-			// console.leftog(x.style.top);
-			// console.log(x.style.left);		
-			break;
-
-			case 2:
-			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";		
-			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
-			break;
-
-			case 3:
-			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
-			break;
-
-			case 4:
-			x.style.top = (window.innerHeight - x.clientHeight)*((a-1)/a) + "px";
-			x.style.left = (window.innerWidth - x.clientWidth)*((c-1)/c) +"px";
-			break;
-
-			case 5:
-			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
-			break;
-
-			case 6:
-			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
-			break;		
-		}
-	}
-	function pageCenterPx (id, z) {
-		x = document.getElementById(id);
-		x.style.position = "absolute";
-		x.style.zIndex = z;
-		x.style.top = (sHeight - x.clientHeight)/2+"px";
-		x.style.left = (sWidth - x.clientWidth)/2+"px";
-	}
-	function pageCenterPercent (id, z) {
-		x = document.getElementById(id);
-		x.style.position = "absolute";
-		x.style.zIndex = z;
-		x.style.top = (1-(x.clientHeight/sHeight))*50+"%";	
-		x.style.left = (1-(x.clientWidth/sWidth))*50+"%";
-	}
-	pageCenterPercent("mainLogo",2);
+	hexaStr("spons",6);	
+	
 	// pageCenterPercent("ms",2);
 	pageCenterPercent("planeSVG",1);
 	pageCenterPx("rupeeSVG",1);
@@ -230,7 +237,7 @@ $(document).ready(function(){
 	pageCenterPx("groupSVG",1);
 	pageCenterPx("toolSVG",1);
 	// fontSize = 1.5;
-	// $(".cl-effect a").css("font-size",fontSize+"em");
+	$(".cl-effect a").css("font-size",fontSize+"em");
   	mainLogoR = 255/399;
   	//adjustment done on resizing window 
 
@@ -240,48 +247,49 @@ $(document).ready(function(){
   		sWidth = window.innerWidth;
   		sHeight = window.innerHeight;
   		sWidth_em = sWidth/16;
-  		if(sWidth_em>80){
-  			s = 1;
-  			fontSize = 1.5;
-  			lHeight = "2%";
-  			padding = "1.1%";
-  		}
-  		else if(sWidth_em>75){
-  			s = 0.8;
-  			fontSize = 1.4;
-  			lHeight = "1.75%";
-  			padding = "1.3%";
-  		}
-  		else if(sWidth_em>62.5){
-  			s = 0.6;
-  			fontSize = 1.3;
-  			lHeight = "1.5%";
-  			padding = "1.5%";
-  		}
-  		else if(sWidth_em>56.25){
-  			s= 0.4;
-  			fontSize = 1.2;
-  			lHeight = "1.25%";
-  			padding = "1.9%";
-  		}
-  		else if(sWidth_em>31.25){
-  			s=0.2;
-  			fontSize = 1.1;
-  			lHeight = "1%";
-  			padding = "2.5%";
-  		}
-  		else{
-  			s=0.2;
-  			fontSize = 1.1;
-  			lHeight = "0.75%";
-  			padding = "2.5%";
-  		}
-  		$(".cl-effect a").css("font-size",fontSize+"em");
-  		$(".cl-effect a::before").css("height",lHeight);
-		$(".cl-effect a::after").css("height",lHeight);
+  		if(sWidth>1000){
+			s = 1;
+			fontSize = 1.5;
+			lHeight = "2%";
+			padding = "1.1%";
+		}
+		else if(sWidth>900){
+			s = 0.8;
+			fontSize = 1.4;
+			lHeight = "1.75%";
+			padding = "1.3%";
+		}
+		else if(sWidth>680){
+			s = 0.5;
+			fontSize = 1.3;
+			lHeight = "1.5%";
+			padding = "1.5%";
+		}
+		else if(sWidth>500){
+			s= 0.3;
+			fontSize = 1.2;
+			lHeight = "1.25%";
+			padding = "1.9%";
+		}
+		else if(sWidth_em>350){
+			s=0.2;
+			fontSize = 1.1;
+			lHeight = "1%";
+			padding = "2.5%";
+		}
+		else{
+			s=0.1;
+			fontSize = 1.0;
+			lHeight = "0.75%";
+			padding = "2.5%";
+		}
+		document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
+		$("#mainLogo").css("height",(250*s)+"px");
+		$("#mainLogo").css("width",(400*s)+"px");
+  		// $(".cl-effect a").css("font-size",fontSize+"em");
+  		// $(".cl-effect a::before").css("height",lHeight);
+		// $(".cl-effect a::after").css("height",lHeight);
   		// $(".cl-effect a").css("letter-spacing",fontSize/10+"em");
-  		//complement this method
-  		// document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
 
 		pageCenterPercent("mainLogo",2);
 		pageCenterPx("planeSVG",1);
@@ -297,7 +305,17 @@ $(document).ready(function(){
 		hexaStr("lectures",5);
 		hexaStr("spons",6);
   	});  	
-});
+	// Cross-browser compatibilty
+	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
+	if(ifChrome){
+	   	// $.browser.safari = false;
+   		$("#notice").css("opacity","0");
+   		// alert(1);
+	}
+	else{
+    	$("#notice").css("opacity","1");
+	}
+});//end of ready function
 
 var cAnimate = function(id,duration,delay){
 	var x = document.getElementById(id);
@@ -309,8 +327,6 @@ var cAnimate = function(id,duration,delay){
 	x.style.mozAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 	x.style.oAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 	x.style.animation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
-	// x.style.MozAnimation = "cubeAnimate 8s ease-in-out 1s forwards";	
-	// console.log("testing in Mozilla");
 }
 cAnimate("cubeBorder",10,1);
 cAnimate("cubeDots",10,1);
@@ -327,16 +343,3 @@ cAnimate("sA3",10,1);
 cAnimate("sR",10,1);
 cAnimate("sT",10,1);
 
-// document.getElementById("logoSize").setAttribute("transform","scale(0.5)");
-// document.getElementById("mike").style.height = "5%";
-function reScale (id, scale) {
-	x = document.getElementById(id);
-	x.setAttribute("transform","scale("+scale+")");	
-	y = document.getElementById(id+"2");
-	nh = y.getAttribute("height")*scale;
-	y.setAttribute("height",nh+"px");
-	nw = y.getAttribute("width")*scale;
-	y.setAttribute("width",nw+"px");
-}
-
-// reScale("rupee",0.5);
