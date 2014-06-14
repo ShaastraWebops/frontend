@@ -1,0 +1,71 @@
+@function pem($pixels){
+    @return #{$pixels/16.0}em   
+}
+
+//parameters for #plane - (don't interfere)
+$h: 450px;
+$w: 410px;
+#plane{
+  @media all and (min-width: pem(1000)) and (max-width: pem(1200)){
+    $scale: 1;
+    height: $scale*$h;
+    width: $scale*$w;
+  }
+  @media all and (min-width: pem(900)) and (max-width: pem(1000)){
+    $scale: 0.8;
+    height: $scale*$h;
+    width: $scale*$w;
+  }
+  @media all and (min-width: pem(680)) and (max-width: pem(900)){
+    $scale: 0.7;
+    height: ($scale)*$h;
+    width: ($scale)*$w;
+  }
+  @media all and (min-width: pem(500)) and (max-width: pem(680)){
+    $scale: 0.5;
+    height: ($scale)*$h;
+    width: ($scale)*$w;
+  }
+  @media all and (min-width: pem(350)) and (max-width: pem(500)){
+    $scale: 0.4;
+    height: ($scale)*$h;
+    width: ($scale)*$w;
+  }
+  @media all and(max-width: pem(350)){
+    $scale: 0.3;
+    height: ($scale)*$h;
+    width: ($scale)*$w; 
+  }
+}
+#phone{
+  $h: 480px;
+  $w: 266px;
+  @extend #plane;
+}
+#tools{
+  $h: 450px;
+  $w: 440px;
+  @extend #plane;
+}
+#mike{
+  $h: 477px;
+  $w: 195px;
+  @extend #plane;
+}
+#group{
+  $h: 350px;
+  $w: 490px;
+  @extend #plane;
+}
+#rupee{
+  $h: 455px;
+  $w: 325px;
+  @extend #plane;
+}
+#mainLogo{
+ height: 250px;
+ width: 400px; 
+ $h: 250px;
+ $w: 400px;
+ // @extend #plane;
+}
