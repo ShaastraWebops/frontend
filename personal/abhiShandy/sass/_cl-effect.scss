@@ -1,0 +1,95 @@
+// $fsize: 1.5em;
+.cl-effect a{
+  // display: none;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  font-weight: 100;
+  padding:1%;  
+  text-decoration: none;
+  text-transform: uppercase;
+  // letter-spacing: 0.1%;
+  // text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  // font-size: $fsize;
+  font-family: $font;
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;  
+}
+.cl-effect a:hover{
+    color: lighten($blue,5%);
+  }
+$h:2%;
+.cl-effect a::before,
+.cl-effect a::after {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  content: '';
+  opacity: 1;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.cl-effect a::before {
+  top: 0;
+  height: $h;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+// #events::before,
+// #spons::before,
+// #shows::before{
+//   height: 1*$h;
+// }
+
+.cl-effect a::after {
+  bottom: 0;
+  height: $h;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+// #contacts::after,
+// #lectures::after,
+// #about_us::after{
+//   height: 1*$h;
+// }
+// #events::after{
+//   height: 2*$h;
+// }
+// #about_us::before{
+//   height: 2*$h;
+// }
+.cl-effect a:hover::before,
+.cl-effect a:focus::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::after {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+// #events{
+//   top:7%; left:43%;
+// }
+// #spons{
+//   top:26%; left:18%;
+// }
+// #shows{
+//   top:26%; left:68%;
+// }
+// #lectures{
+//   top:63%; left:18%;
+// }
+// #contacts{
+//   top:63%; left:66%;
+// }
+// #about_us{
+//   top:83%; left:41%;
+// }

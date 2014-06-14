@@ -8,8 +8,7 @@
     margin: 0 auto;
     height: 5px;
     width: 35%;
-}    
-
+}  
 
 .col-sm-push-i1 {
     left: 4%;   
@@ -31,7 +30,7 @@
 textarea {  
     width: 100%;  
     min-height: 100px;  
-    font-family: ;  
+    font-family: 'Titillium Web', sans-serif;  
     font-size: 18px;  
     color: #444;  
     padding: 5px;
@@ -47,7 +46,7 @@ textarea {
     white-space: pre-wrap;  
     width: 100%px;  
     min-height: 100px;  
-    font-family: ;  
+    font-family: 'Titillium Web', sans-serif;  
     font-size: 18px;  
     padding: 5px;  
     word-wrap: break-word;  
@@ -56,7 +55,7 @@ textarea {
 .common {
     width: 100%;
     min-height: 100px;
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     overflow: hidden;
 }
@@ -64,4 +63,40 @@ textarea {
 .lbr {
     line-height: 3px;
 }
+
+
+#co-curricular_affairs,
+#pr_spons_networking,
+#events,
+#sr {
+  text-shadow: 0 0 10px rgba(255,255,255,1);    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

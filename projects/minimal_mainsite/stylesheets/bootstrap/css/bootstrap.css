@@ -969,7 +969,7 @@ pre code {
     height: 34%;  
     text-align: center;   
     vertical-align: middle;
-    background-color: rgba(14, 99, 133, 0.3);  
+    background-color: rgba(14, 99, 133, 0.5);  
     border: 1px solid rgba(0, 0, 0, 0);  
     -webkit-background-clip: padding-box;
       background-clip: padding-box;
@@ -3379,7 +3379,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control {
-  display: table-cell;
+  display: inline;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),

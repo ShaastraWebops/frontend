@@ -1,26 +1,102 @@
 <!DOCTYPE html>
 <html style="height:101%">
     <head>
-        <title>SHAASTRA'15: Contacts</title>        
         <script src="../javascripts/jquery.min.js"></script>  
-        <script src="../javascripts/contacts_js.js"></script>  
-<!--        <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+        <script src="../javascripts/contacts_js.js"></script> 
+        <script src="../javascripts/modernizr.custom.js"></script>        
+        <script src="../javascripts/home_js.js"></script>        
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         
-        <script src="../javascripts/googleMap.js"></script>
-        <link rel="shortcut icon" href="../images/favicon.ico">        
+		<link rel="shortcut icon" href="../pics/favicon.ico"> 
+        
+        
         <link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="../stylesheets/contact_css.css" rel="stylesheet">
+        <link href="../stylesheets/resp.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>                
+	    <link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />        
     </head>
     
-    <body style="background-image:url('../images/new black.png'); height:101%">
-        <div id="contacts_page">
-        <div style="color:white; text-align:centre">
-            <h1 style="text-decoration:underline; text-align:center; font-family: Candara">CONTACT US</h1>
+    <body style="background-image:url('../images/background.jpg'); height:101%">
+        <div id="contacts_page">        
+		<section id="set-7">
+            <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                <c id="menu_icon" style="position:absolute; top:0%; left:0%; z-index:399" class="hi-icon hi-icon-list"></c>
+             </div>    
+        </section>
+    
+<!-- menu popup start -->        
+        
+        <div id="menu_popup" style="position:absolute; background-color:black; z-index:400; height:100%; width:30%; top:0%; left:-30%; opacity:0">
+            <table style="color:white; width:100%">
+                <tr>
+                    <th class="header">SHAASTRA 2015</th>
+                </tr>
+<!--gap1-->               
+                <tr>
+                    <td class="gap"></td>
+                </tr>
+<!--gap1-->              
+                <tr>
+                    <td id="close_menu" class="menu_options" style="color:#99C68E"><span class="glyphicon glyphicon-chevron-left"></span>Back to Website</td>
+                </tr>
+<!--gap2-->               
+                <tr>
+                    <td class="gap"></td>
+                </tr>    
+<!--gap2-->                
+                <tr>
+                    <td id="menu_home" class="menu_options">Home</td>
+                </tr>
+                <tr>
+                    <td class="menu_options">About Us</td>
+                </tr>
+                <tr>
+                    <td class="menu_options">Events</td>
+                </tr>
+                <tr>
+                    <td class="menu_options">Envisage</td>
+                </tr>
+                <tr>
+                    <td class="menu_options">Lectures</td>
+                </tr>
+                <tr>
+                    <td class="menu_options">Sponsors</td>
+                </tr>
+                <tr>
+                    <td id="menu_contacts" class="menu_options">Contact Us</td>
+                </tr>   
+
+                    
+                
+                <tr>
+                    <td class="header" style="font-family: 'Titillium Web', sans-serif"><i>follow us on</i></td>
+                </tr>  
+                <tr>
+                    <td id="facebook" class="menu_options" style="color:#0020C2">Facebook</td>
+                </tr>
+                <tr>
+                    <td id="twitter" class="menu_options" style="color:#38ACEC">Twitter</td>
+                </tr>
+                <tr>
+                    <td id="you_tube" class="menu_options" style="color:#F62217">You Tube</td>
+                </tr>                        
+            </table>            
+        </div> 
+     
+        <div id="menu_rhs" style="position:absolute; z-index:401; height:100%; width:0%; top:0%; right:-70%; opacity:0.5">
+            <img style="width:100%; height:100%" src="../images/right_side_image.jpg">    
+        </div>
+<!-- menu popup end -->        
+
+        
+        <div style="color:rgba(255,255,255,1); text-align:centre">
+            <h1 style="text-decoration:underline; text-align:center; font-family: 'Titillium Web', sans-serif">CONTACT US</h1>
         </div>
         
-        <div id="div" style="opacity:1">        
+        <div id="div">        
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="font-family: 'Titillium Web', sans-serif">
                     <div id="co-curricular_affairs" class="col-sm-2" style="color:white; top:20%; left:7%">
                         <p style="font-size:1.3em">Co-Curricular</p>    
                         <p style="font-size:1.3em">Affairs</p>
@@ -50,47 +126,48 @@
             </div>    
             
             <div class="container-fluid">
-                <div class="row" style="color:white">
+                <div class="row" style="color:white; font-family: 'Titillium Web', sans-serif">
                     <div class="col-sm-1 col-sm-offset-7" style="position:absolute; top:65%; height:10%">
-                        <p style="font-size:1.3em">Facebook</p>    
+                        <p id="contacts_facebook" style="font-size:1.3em">Facebook</p>    
                     </div>
                     <div class="col-sm-1 col-sm-offset-8" style="position:absolute; top:65%; height:10%">
-                        <p style="font-size:1.3em">Twitter</p>    
+                        <p id="contacts_twitter" style="font-size:1.3em">Twitter</p>    
                     </div>
                     <div class="col-sm-1 col-sm-offset-9" style="position:absolute; top:65%; height:10%">
-                        <p style="font-size:1.3em">Youtube</p>    
+                        <p id="contacts_youtube" style="font-size:1.3em">Youtube</p>    
                     </div>                    
                 </div>                
             </div>
         
             <div class="container-fluid" style="position:absolute; top:90%; width:100%">
                 <div class="msg">
-                    <h1 style="color:white; font-family:Candara">Couldn't find what you are looking for?</h1>
+                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Couldn't find what you are looking for?</h1>
                 </div>
                 <div class="msg">
-                    <h1 style="color:white; font-family:Candara">Leave us a message</h1>
+                    <h1 style="color:white; font-family: 'Titillium Web', sans-serif">Leave us a message</h1>
                 </div>
             
                 <div class="hr" style="background-color:white"></div>
             
                 <div class="row" style="padding-top:4%; padding-bottom:2%">
                     <div class="col-sm-3 col-sm-push-i1">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="text" class="form-control" placeholder="Username">
+                        <span class="input-group-addon">@@@</span>
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="text" class="form-control" placeholder="Username">
                     </div>   
                     <div class="col-sm-3 col-sm-push-i2">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="email" class="form-control" placeholder="Email ID">
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="email" class="form-control" placeholder="Email ID">
                     </div>  
                     <div class="col-sm-3 col-sm-push-i3">
-                        <input style="border-radius:5px; height:46px; font-size:18px" type="number" class="form-control" placeholder="Mobile (Optional)">
+                        <input style="border-radius:5px; height:46px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600" type="number" class="form-control" placeholder="Mobile (Optional)">
                     </div>    
                 </div>
             
                 <div style="padding:2%">
-                    <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; margin-left:0%" placeholder="Your Message..."></textarea>   
+                    <textarea id="comments" class="common form-control" style="border-radius:5px; font-size:18px; font-family: 'Titillium Web', sans-serif; font-weight:600; margin-left:0%" placeholder="Your Message..."></textarea>   
                 </div>
             
                 <div class="btn-group" style="position:absolute; width:95%; padding:2.5%">
-                    <button type="button" class="btn btn-primary" style="margin-left:46%; width:12%; font-size:18px; padding:1%; text-align:center; float:left">Submit</button>
+                    <button type="button" class="btn btn-primary" style="margin-left:46%; width:12%; font-size:18px; font-family: 'Titillium Web', sans-serif; padding:1%; text-align:center; float:left">Submit</button>
                 </div> 
             </div>  
         </div>
@@ -98,6 +175,7 @@
     </body>
     
     <script>
+    $(document).ready(function(){    
     /* GoogleMaps code start */    
       function initialize() {
         var map_canvas = document.getElementById('map_canvas');
@@ -110,5 +188,6 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     /* GoogleMaps code end */    
+    });    
     </script>
 </html>
