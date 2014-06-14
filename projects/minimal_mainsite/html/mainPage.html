@@ -11,19 +11,18 @@
 		<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/css/bootstrap.css">
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>                
         
-		<script src="../javascripts/jquery-1.11.0.js"></script>		
-		<script src="../javascripts/jquery.min.js"></script>		
+		<script src="../javascripts/jquery-1.11.0.js"></script>
 		<script src="../javascripts/jquery_migrate.js"></script>		
 		<script src="../javascripts/modernizr.custom.js"></script>		
 	</head>
-	<body>
+	<body style="font-family: 'Titillium Web', sans-serif">
         <div id="hexaMenu" class="cl-effect">  
-			<a id="events" style="font-family: 'Titillium Web', sans-serif" href="#">EVENTS</a>
-			<a id="spons" style="font-family: 'Titillium Web', sans-serif" href="#">SPONSORS</a>
-			<a id="shows" style="font-family: 'Titillium Web', sans-serif" href="#">SHOWS</a>
-			<a id="lectures" style="font-family: 'Titillium Web', sans-serif" href="#">LECTURES</a>
-			<a id="contacts" style="font-family: 'Titillium Web', sans-serif" class="nextPage" href="contacts.html">CONTACT</a>
-			<a id="about_us" style="font-family: 'Titillium Web', sans-serif" href="#">ABOUT US</a>
+			<a id="events" href="#">EVENTS</a>
+			<a id="spons" href="#">SPONSORS</a>
+			<a id="shows" href="#">SHOWS</a>
+			<a id="lectures" href="#">LECTURES</a>
+			<a id="contacts" class="nextPage" href="contacts.html">CONTACT</a>
+			<a id="about_us" href="#">ABOUT US</a>
         </div>
         <div id="notice" style="opacity:1" align="center">
             <p>Best when viewed on latest Chrome/Chromium</p>
@@ -166,6 +165,9 @@
                 <tr>
                     <td class="menu_options">Shows</td>
                 </tr>
+				<tr>
+                    <td id="menu_envisage" class="menu_options"><a class="nextPage" href="envisage.htm">Envisage</a></td>
+                </tr>
                 <tr>
                     <td class="menu_options">Lectures</td>
                 </tr>
@@ -179,13 +181,13 @@
                     <td class="header" style="font-family: Cursive"><i>---follow us on---</i></td>
                 </tr>  
                 <tr>
-                    <td id="facebook" class="menu_options"><a style="color:#3b5998" href="http://facebook.com/Shaastra" target="_blank">Facebook</a></td>
+                    <td id="facebook" class="menu_options"><a style="color:#3b5998" href="http://facebook.com/iitmshaastra" target="_blank">Facebook</a></td>
                 </tr>
                 <tr>
-                    <td id="twitter" class="menu_options" ><a style="color:#428bca" href="http://twitter.com/ShaastraIITM" target="_blank">Twitter</a></td>
+                    <td id="twitter" class="menu_options" ><a style="color:#428bca" href="http://twitter.com/iitmshaastra" target="_blank">Twitter</a></td>
                 </tr>
                 <tr>
-                    <td id="you_tube" class="menu_options"><a  style="color:#cc181e" href="http://youtube.com/user/iitmshaastra" target="_blank">YouTube</a></td>
+                    <td id="you_tube" class="menu_options"><a  style="color:#cc181e" href="http://youtube.com/iitmshaastra" target="_blank">YouTube</a></td>
                 </tr>                        
             </table>            
         </div> 
@@ -193,18 +195,23 @@
 		<div id="menu_rhs">
         	<img style="width:100%; height:100%" src="../images/right_side_image.jpg"/>    
         </div>
-	<script src="../javascripts/mainPage.js">
+            
+            
+    <script src="../javascripts/mainPage.js"></script>
+            
+    <script>
         $(document).ready(function(){
+        /* code for browser detection start */            
             $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
            if($.browser.chrome){
                $.browser.safari = false;
                $("#notice").css("opacity","0");
-               alert(1);
            }
             else{
                 $("#notice").css("opacity","1");
             }
-        });
-    </script>		
+        /* code for browser detection end */            
+        });            
+    </script>        
 	</body>
 </html>

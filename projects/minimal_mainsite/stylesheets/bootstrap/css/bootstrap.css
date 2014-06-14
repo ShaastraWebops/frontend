@@ -401,7 +401,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 h1 small,
@@ -1714,16 +1714,16 @@ output {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 100px 100px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 100px 100px rgba(0, 0, 0, .075);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 100px rgba(102, 175, 233, 1);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 100px rgba(102, 175, 233, 1);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 1);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 1);
 }
 .form-control::-moz-placeholder {
   color: #999;
@@ -2095,13 +2095,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: rgba(102, 175, 233, 1);
-  border-color: #2b60de;
-}
-
-.btn-primary:hover {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 100px rgba(102, 175, 233, 1);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 100px rgba(102, 175, 233, 1);    
+  background-color: #428bca;
+  border-color: #357ebd;
 }
 
 .btn-primary:hover,
@@ -2110,8 +2105,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #1569c7;
-  border-color: #285e8e;    
+  background-color: #3276b1;
+  border-color: #285e8e;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3379,7 +3374,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control {
-  display: inline;
+  display: table-cell;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
