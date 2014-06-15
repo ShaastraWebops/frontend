@@ -315,6 +315,16 @@ $(document).ready(function(){
 	else{
     	$("#notice").css("opacity","1");
 	}
+
+	$(".facebook").click(function(){
+        $(location).attr('href', 'https://www.facebook.com/Shaastra');                        
+    });
+    $(".twitter").click(function(){
+        $(location).attr('href', 'https://twitter.com/ShaastraIITM');                        
+    });
+    $(".youtube").click(function(){
+        $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');
+    });
 });//end of ready function
 
 var cAnimate = function(id,duration,delay){
