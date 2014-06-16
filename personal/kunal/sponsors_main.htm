@@ -1,0 +1,447 @@
+<link rel="stylesheet" href="css.css" media="screen" />
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script>
+	$(document).ready(function() {
+    $('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = $(this).attr('href');
+        $('.tabs ' + currentAttrValue).show().siblings().hide();
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+        e.preventDefault();
+    });
+});
+	$(document).ready(function() {
+	$("#tab1").html(
+            "<center><div><h3 id='sponshead'>Associate Sponsor</h3>" +
+                "<a href='http://sparklab.in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/sparklab_logo_only_small.png\" /></a>" +
+            "</div> <hr />" +
+            "<div><h3 id='sponshead'>Presenting Partner</h3>" +
+                "<a href='http://www.thehindu.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/pres1.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Research Partner</h3>" +
+                "<a href='http://www.ge.com/in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/ge_logo.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Co Sponsors</h3>" +
+              "<a href='http://www.tcs.com/research'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/tcs.png\" /></a>" +
+               "<a href='http://www.vmware.com/in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/vmware.png\" /></a>" +
+               "<a href='http://http://www.microsoft.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/microsoft_small.png\" /></a>" +
+               "<a href='http://www.eaton.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/cos1.jpg\" /></a>" +
+               "<a href='http://www.boeing.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/boeing_converted.png\" /></a><br />" +
+               "<a href='http://www.paypal.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/paypal.png\" /></a>" +
+
+            "</div><hr />" +
+              "<div><h3 id='sponshead'>Hospitality Partner</h3>" +
+                "<a href='https://www.onlinesbi.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/SBI.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>IDP Partner</h3>" +
+                "<a href='http://www.ericsson.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/idp1.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Symposium Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/tafe.jpg\" /></a>" +
+            "</div><hr />" +
+             
+            "<div><h3 id='sponshead'>Event Partners</h3>" +
+                       "<a href='http://www.verisigninc.com/net-india'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/verisign.png\" /></a>" +
+                "<a href='http://www.mu-sigma.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/mu_sigma.png\" /></a>" +
+            "<a href='http://www.nrdave.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/dave.png\" /></a>" +
+             "<a href='http://www.ifmr.ac.in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/ifmr.png\" /></a>" +
+              "<a href='http://www.airbus.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/airbus_converted.png\" /></a>" +    
+               
+                "<a href='http://www.saggezza.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/sagezza.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Solutions Partner</h3>" +
+                "<a href='http://www.honeywell.com/sites/htsl/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/Honeywell_converted.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Eye Care Partner</h3>" +
+                "<a href='http://essilorindia.com/crizal'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/crizal.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Green Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/gre1.jpg\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Knowledge Partner</h3>" +
+                "<a href='http://www.knimbus.com/user/auth.do'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/knimbus.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Education Partner</h3>" +
+                "<a href='https://www.daad.de/en/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/edu1.png\" /></a>" +
+                "<a href='http://www.studyinholland.nl'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/edu2.png\" /></a>" +
+                "<a href='http://www.educationusa.info'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/edusa.jpg\" /></a>" +
+                "<a href='http://www.bcu.ac.uk'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/birmingham_city_converted.png\" /></a><br />" +
+                "<a href='http://www.campusfrance.org/en'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/campus_france.jpg\" /></a>" +
+
+                "</div><hr />" +
+            "<div><h3 id='sponshead'>Jotting Partner</h3>" +
+                "<a href='http://www.uniball.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/jot1.png\" /></a>" +
+            "</div><hr />" +
+              "<div><h3 id='sponshead'>Style Partner</h3>" +
+                "<a href='http://www.spykar.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/sty1.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Outdoor Gear Partner</h3>" +
+                "<a href='http://www.wildcraft.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/og1.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Learning Partner</h3>" +
+                "<a href='http://www.pearsoned.co.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/pearson.png\" /></a>" +
+            "</div><hr />" +
+
+            "<div><h3 id='sponshead'>Cubing Partner</h3>" +
+                "<a href='http://www.thinkntwist.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/TNTLogo.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Engagement Partner</h3>" +
+                "<a href='http://treashare.co/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/treashare.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Youth Opportunity Partner</h3>" +
+                "<a href='http://www.letmeknow.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/letmeknow.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Internship Partner</h3>" +
+                "<a href='http://www.internshala.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/internshala.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Workshop Partner</h3>" +
+                "<a href='http://www.telelabs.in'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/wor1.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Gift Partner</h3>" +
+                "<a href='http://www.giftxoxo.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/gift1.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Media Partner</h3>" +
+                "<a href='http://electronicsforu.com/newelectronics/default.asp'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/efy.png\" /></a>" +
+            "</div><hr />" +
+
+            "<div><h3 id='sponshead'>Programming Partner</h3>" +
+                "<a href='www.codechef.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/code.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Competition Partner</h3>" +
+                "<a href='http://www.dare2compete.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/dare2compete.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Student Opportunity Partner</h3>" +
+                "<a href='http://www.twenty19.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/twenty19.jpg\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Official Blogging Partner</h3>" +
+                "<a href='http://www.campuswhizz.in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/campuswhizz.jpg\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Sustainability Partner</h3>" +
+                "<a href='http://thealternative.in/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/ta.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Gadget Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/ms.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Adventure Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/jbl.jpg\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>SMS Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/kap.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Green Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/green.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Waste Management Partner</h3>" +
+                "<a href=''><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/capture.png\" /></a>" +
+            "</div><hr />" +
+            
+            "<div><h3 id='sponshead'>Online Media Partners</h3>" +
+                "<a href='http://www.techtree.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/techtree_logo.png\" /></a>" +
+                "<a href='http://www.festpav.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/festpav.png\" /></a>" +
+                "<a href='http://www.vertexplus.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/vertexplus.jpg\" /></a>" +
+                "<a href='http://www.knowafest.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/knowafest.png\" /></a>" +
+                 "<a href='http://www.markmyfest.com'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/markmyfest_converted.png\" /></a>" +
+            "</div><hr />" +
+            "<div><h3 id='sponshead'>Web Hosting Partner Partner</h3>" +
+                "<a href='http://znetlive.com/'><img src=\"http://www.shaastra.org/2014/main/static/img/logo/spons/znet.png\" /></a>" +
+            "</div><hr />" +
+            
+            "</center>"
+        )
+	//$("[id=sponshead]").css({"text-decoration":"underline"});
+        $("#tab2").html(
+            '<center><h3 id="sponscat">Presenting Partner</h3><br>' +
+            '<a href="http://www.thehindu.com/"><img id="Presenting Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/The_Hindu_logo.jpg"></a><br>' +
+            '<h3 id="sponscat">Associate Sponsor</h3><br>' +
+            '<a href="http://www.robosapiensindia.com/"><img id="Associate Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Logo-Robosapiens.gif"></a><br>' +
+            '<h3 id="sponscat">Research Partner</h3><br>' +
+            '<a href="http://www.ge.com/in/"><img id="Research Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/ge_researchpartner.jpg"></a><br>' +
+            '<h3 id="sponscat">Co Sponsor</h3><br>' +
+            '<a href="http://www.vmware.com/"><img id="Co Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/vmware_4.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://en.wikipedia.org/wiki/Eaton_Corporation" ><img id="Co Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Eaton_Blue.jpg.jpg"></a>' +
+            '<br><br> ' +
+            '<a href="http://www.boschindia.com/"><img id="Co Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/bosch_logo.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.honeywell.com/htsl"><img id="Co Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Honeywell.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.qualcomm.co.in/"><img id="Co Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Qualcomm-Logo.jpg"></a>' +
+            '<br><br>' +
+            '<h3 id="sponscat">Hospitality Sponsor</h3><br>' +
+            '<a href="https://www.onlinesbi.com/"><img id="Hospitality Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/images.jpg"></a>' +
+            '<br><br><h3 id="sponscat">Telecom Partner</h3><br>' +
+            '<a href="http://www.ericsson.com/in"><img id="Telecom Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Ericsson_telecompartner.png"></a>' +
+                '<br><br><h3 id="sponscat">Event Sponsor</h3><br>' +
+            '<a href="http://www.cerachemindia.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/cera_logo.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.airbus.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/airbus_events.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.mathworks.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/09_MW_logo_tagline_CMYK_LG.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.tiindia.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/download.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.tiindia.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/TI-Logo.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://i.imgur.com/fgttn.jpg" onclick="javascript:openWindow(this.href);return false;"><img id="Event Sponsor" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Master_DotNet_Logo_RGB_WithTagline_Versign.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Envisage Partner</h3><br>' +
+            '<a href="http://www.iitm.ac.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Envisage Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Logo_I_AR.JPG"></a>' +
+                '<br><br><h3 id="sponscat">Analytics Partner</h3><br>' +
+            '<a href="http://www.reverseinformatics.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Analytics Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/download_1.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Exhibition Partner</h3><br>' +
+            '<a href="http://www.netapp.com/in/" onclick="javascript:openWindow(this.href);return false;"><img id="Exhibition Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/netapp.png"></a>' +
+                '<br><br><h3 id="sponscat">Knowledge Partner</h3><br>' +
+            '<a href="https://www.daad.org/index.v3page" onclick="javascript:openWindow(this.href);return false;"><img id="Knowledge Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/DAAD_200-51_HKS44.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.campusfrance.org/en" onclick="javascript:openWindow(this.href);return false;"><img id="Knowledge Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/campus_france.jpg.png"></a>' +
+            '<br><br>' +
+            '<a href="http://www.knowledgemagazine.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Knowledge Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/BBC_Knowledge_Vertical_Unit.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Education Partner</h3><br>' +
+            '<a href="http://www.studyinholland.nl/" onclick="javascript:openWindow(this.href);return false;"><img id="Education Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/label_1.png"></a>' +
+            '<br><br>' +
+            '<a href="http://educationpoland.pl/" onclick="javascript:openWindow(this.href);return false;"><img id="Education Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Education_Poland_logo_Final_Logo.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Internship Partner</h3><br>' +
+            '<a href="http://blog.internshala.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Internship Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Internshala_Logo.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Publicity Partner</h3><br>' +
+            '<a href="http://www.avocarbon.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Publicity Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/AVOCarbon_India.JPG"></a>' +
+            '<br><br>' +
+            '<a href="http://sunovatech.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Publicity Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/sunovatech.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Print Solutions Partner</h3><br>' +
+            '<a href="http://www.perceptprintsolutions.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Print Solutions Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/perept_printing.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Online Merchandize Partner</h3><br>' +
+            '<a href="http://www.almamaterstore.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Online Merchandize Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/ALMA_MATER_LOGO.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Workshop Partner</h3><br>' +
+            '<a href="http://www.dypdc.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Workshop Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/logo.gif"></a>' +
+                '<br><br><h3 id="sponscat">Magazine Partner</h3><br>' +
+            '<a href="http://www.chip.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Magazine Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/CHIP_Logo.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.t3india.in/" onclick="javascript:openWindow(this.href);return false;"><img id="Magazine Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/T3_India_logo.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Online Collaboration Partner</h3><br>' +
+            '<a href="http://conceptboard.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Online Collaboration Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/logo_conceptboard.png"></a>' +
+                '<br><br><h3 id="sponscat">Web Hosting Partner</h3><br>' +
+            '<a href="http://www.znetlive.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Web Hosting Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/znetlivelogohih_res.png"></a>' +
+                '<br><br><h3 id="sponscat">Online Media Partner</h3><br>' +
+            '<a href="http://www.whitedrums.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Online Media Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/logo_1.gif"></a>' +
+            '<br><br>' +
+            '<a href="http://www.hook2events.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Online Media Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/h2e-logo004.jpg"></a>' +
+            '<br><br>' +
+            '<a href="http://www.knowafest.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Online Media Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/knowafest.png"></a>' +
+                '<br><br><h3 id="sponscat">Engineering &amp; Technology Partner</h3><br>' +
+            '<a href="http://www.faadooengineers.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Engineering &amp; Technology Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Med-REs-Logo_1.png"></a>' +
+                '<br><br><h3 id="sponscat">Green Partner</h3><br>' +
+            '<a href="http://www.greenvironmentindia.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Green Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Greenvironment_logo.jpg"></a>' +
+                '<br><br><h3 id="sponscat">Student Opportunity Partner</h3><br>' +
+            '<a href="http://www.twenty19.com/" onclick="javascript:openWindow(this.href);return false;"><img id="Student Opportunity Partner" class="sponsor" src="http://spons.shaastra.org/media/present_sponsors/Twenty19_logoInternStudEvents_trans.png"></a>' +
+            '<br><br><h3 id="sponscat">Apparel Sponsor</h3><br>' +
+            '<a href="http://www.spectrumcasuals.com/" onclick="javascript:openWindow(this.href);return false;"><img id="" class="sponsor" src="http://www.shaastra.org/2013/main//http://www.shaastra.org/2014/main/static/img/spectrum.jpg" width="300"></a>' +
+            "</center>"
+        )
+        
+        $("#tab3").html(
+            "<center><div><h3>Co Sponsors</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/5_murugappa.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/7_boeing.jpg' /></a>" +
+            "</div>" +
+            "<div><h3>Event Sponsor</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/11_amanda.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/12_durr.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/13_alstrut.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/17_vestas.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/20_british_council.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/19_google.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/21_i3indya.jpg' /></a>" +
+            "</div>" +
+            "<div><h3>Outreach Sponsors</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/10_contactSingapore.png' /></a>" +
+            "</div>" +
+            "<div><h3>Apparel Sponsors</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/4_derby.jpg' /></a>" +
+            "</div>" +
+            "<div><h3>Gift Sponsors</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/14_ongc.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/15_sail.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/22_alienware.png' /></a>" +
+            "</div>" +
+            "<div><h3>Data Partner</h3>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/16_futuresfirst.jpg' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/23_NAL.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/26_suryanFM.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/27_ntpc.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/28_unionBank.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/29_nmdc.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/30_indianAutosBlog.png' /></a>" +
+                "<a href=''><img src='http://spons.shaastra.org/media/sponsors/31_freecharge.jpg' /></a>" +
+            "</div>" +
+            "</center> "
+        )
+/*		$("#tab4").html(
+		"<center>"
+				+"<br><font size='3'><strong>Main sponsor:</strong></font><br>"
+				+"<a href='http://www.vmware.com/' target='_blank'><img alt='VMware' src='http://www.shaastra.org/2010/main/sites/default/files/images/VMWare_black.png' style='width: 373px; height: 62px;' /></a>"
+				+"<br><font size='3'><strong>Associate sponsor:</strong></font><br>"
+				+"<a href='http://www.vestas.com/' target='_blank'><img alt='Vestas' src='http://www.shaastra.org/2010/main/sites/default/files/images/vestaslogo.png' style='width: 286px; height: 56px;' /></a>"
+				+"<br><font size='3'><strong>Co sponsor:</strong></font><br>"
+				+"<a href='http://www.ge.com/in/' target='_blank'><img alt='GE' src='http://www.shaastra.org/2010/main/sites/default/files/images/ge.png' style='width: 226px; height: 69px;' /></a>"
+				+"<a href='http://www.boeing.co.in/' target='_blank'><img alt='Boeing' src='http://www.shaastra.org/2010/main/sites/default/files/images/boeing.png' style='width: 226px; height: 90px;' /></a>"
+				+"<a href='http://www.boschindia.com/' target='_blank'><img alt='Bosch' src='http://www.shaastra.org/2010/main/sites/default/files/images/bosch.png' style='height: 60px; width: 166px;' /></a>"
+				+"<a href='http://www.wipro.com/' target='_blank'><img alt='Wipro' src='http://www.shaastra.org/2010/main/sites/default/files/images/Wipro_Logo_1.png' style='height: 125px; width: 117px;' /></a>"
+				+"<br><font size='3'><strong>Hospitality sponsor:</strong></font><br>"
+				+"<a href='http://www.boschindia.com/' target='_blank'><img alt='SBI' src='http://www.shaastra.org/2010/main/sites/default/files/images/Sbi.png' style='height: 60px; width: 188px;' /></a>"
+				+"<br><font size='3'><strong>Print Media Sponsor</strong></font><br>"
+				+"<br><font size='3'><strong>Television Media Sponsor</strong></font><br>"
+				+"<a href='http://www.thehindu.com/' target='_blank'><img alt='Hindu' src='http://www.shaastra.org/2010/main/sites/default/files/images/Hindu.png' style='height: 30px; width: 238px;' /></a>"
+				+"<a href='http://www.ndtv.com/' target='_blank'><img alt='NDTV' src='http://www.shaastra.org/2010/main/sites/default/files/images/NDTV.png' style='width: 140px; height: 70px;' /></a>"
+				+"<br><font size='3'><strong>Radio Partner</strong></font><br>"
+				+"<img alt='BigFM' src='http://www.shaastra.org/2010/main/sites/default/files/images/bigfm.jpg' style='width: 204px; height: 72px;' />"
+				+"<br><font size='3'><strong>Telecom Partner:</strong></font><br>"
+				+"<br><font size='3'><strong>Outreach Partner:</strong></font><br>"
+				+"<a href='http://www.ericsson.com/' target='_blank'><img alt='Telecom Partner' src='http://www.shaastra.org/2010/main/sites/default/files/images/ericson.png' style='width: 103px; height: 90px;' title='Ericsson' /></a>"
+				+"<a href='http://www.canarabank.com/' target='_blank'><img alt='canara bank' jpg='' src='http://www.shaastra.org/2010/main/sites/default/files/images/CanaraBank.jpg' style='width: 209px; height: 50px;' /></a>"
+				+"<br><font size='3'><strong>Event Sponsor:</strong></font><br>"
+				+"<a href='http://www.google.co.in/' target='_blank'><img alt='Google' src='http://www.shaastra.org/2010/main/sites/default/files/images/google1.png' style='width: 200px; height: 80px;' /></a>"
+				+"<a href='http://www.durr.com/worldwide2/india.html' target='_blank'><img alt='Durr' src='http://www.shaastra.org/2010/main/sites/default/files/images/durr.png' style='width: 140px; height: 70px;' /></a>"
+				+"<a href='http://www.shell.com/' target='_blank'><img alt='shell' src='http://www.shaastra.org/2010/main/sites/default/files/images/Shell1.png' style='height: 90px; width: 162px;' /></a>"
+				+"<a href='http://www.eaton.com/EatonCom/index.htm' target='_blank'><img alt='Eaton' src='http://www.shaastra.org/2010/main/sites/default/files/images/eaton_logoPBWW.png' style='width: 213px; height: 90px;' /></a>"
+				+"<a href='http://www.tiindia.com/' target='_blank'><img alt='TI' src='http://www.shaastra.org/2010/main/sites/default/files/images/ti-logo.png' style='height: 100px;' /></a>"
+				+"<a href='http://www.murugappa.com/' target='_blank'><img alt='Murugappa' src='http://www.shaastra.org/2010/main/sites/default/files/images/murugappa-logo.png' style='width: 137px; height: 84px;' /></a>"
+				+"<a href='http://www.airbus.com/' target='_blank'><img alt='Airbus' src='http://www.shaastra.org/2010/main/sites/default/files/images/airbus.png' style='width: 103px; height: 90px;' /></a><br />"
+				+"<br><font size='3'><strong>Travel Partner:</strong></font><br>"
+				+"<br><font size='3'><strong>Knowledge Partner:</strong></font><br>"
+				+"<a href='http://www.cleartrip.com/' target='_blank'><img alt='' src='http://www.shaastra.org/2010/main/sites/default/files/images/CTlogo.png' style='width: 214px; height: 60px;' /></a>"
+				+"<a href='http://www.studyinholland.nl/' target='_blank'><img alt='Study in Holland' src='http://www.shaastra.org/2010/main/sites/default/files/images/study_holl_wen_logo1.png' style='width: 110px; height: 110px;' /></a>"
+				+"<br><font size='3'><strong>Publicity Partner:</strong></font><br>"
+				+"<br><font size='3'><strong>Global Media Partner:</strong></font><br>"
+				+"<a href='http://www.contactsingapore.sg/' target='_blank'><img alt='CS-Logo' src='http://www.shaastra.org/2010/main/sites/default/files/images/CS-Logo.png' style='width: 213px; height: 80px;' /></a>"
+				+"<a href='http://www.studentcompetitions.com/' target='_blank'><img alt='SC Logo' src='http://www.shaastra.org/2010/main/sites/default/files/images/SC_logo_black_highres1.png' style='width: 221px; height: 75px;' /></a>"
+				+"<br><font size='3'><strong>Lecture Sponsor:</strong></font><br>"
+				+"<br><font size='3'><strong>University Partner:</strong></font><br>"
+				+"<a href='http://www.swissnex.org/' target='_blank'><img alt='Swissnex' src='http://www.shaastra.org/2010/main/sites/default/files/images/IND_logo1.jpg' style='width: 250px; height: 68px;' /></a>"
+				+"<a href='http://www.campusfrance.org/en' target='_blank'><img alt='TMB' src='http://www.shaastra.org/2010/main/sites/default/files/images/inde.png' style='width: 250px; height: 77px;' /></a>"
+				+"<br><font size='3'><strong>Event Partners:</strong></font><br>"
+				+"<a href='http://www.iocl.com/' target='_blank'><img alt='IOC' src='http://www.shaastra.org/2010/main/sites/default/files/images/IOC.png' style='width: 74px; height: 90px;' /></a>"
+				+"<a href='http://www.gmrgroup.in/' target='_blank'><img alt='GMR' src='http://www.shaastra.org/2010/main/sites/default/files/images/GMR.png' style='width: 130px; height: 68px;' /></a>"
+				+"<a href='http://www.netapp.com/' target='_blank'><img alt='Netapp' src='http://www.shaastra.org/2010/main/sites/default/files/images/Netapp.png' style='width: 75px; height: 90px;' /></a>"
+				+"<br><font size='3'><strong>Symposium Prize Sponsor:</strong></font><br>"
+				+"<a href='http://www.tmb.in/' target='_blank'><img alt='TMB' src='http://www.shaastra.org/2010/main/sites/default/files/images/TMB_Logo.png' style='height: 50px; width: 233px;' /></a>"
+				+"<a href='http://www.zoho.com/' target='_blank'><img alt='Zoho' src='http://www.shaastra.org/2010/main/sites/default/files/images/zoho1.png' style='width: 118px; height: 75px;' /></a>"
+				+"<br><font size='3'><strong>Hospitality Sponsor: Al Gore Sustainable Technology Venture Competition 2010</strong></font><br>"
+				+"<a href='http://www.marriott.com/default.mi' target='_blank'><img alt='Marriot' src='http://www.shaastra.org/2010/main/sites/default/files/images/Marriott.png' style='width: 115px; height: 90px;' /></a>"
+				+"<br><font size='3'><strong>Gift Sponsor:</strong></font><br>"
+				+"<a href='http://www.quickheal.com/' target='_blank'><img alt='' src='http://www.shaastra.org/2010/main/sites/default/files/qh_logo.jpg' style='width: 150px; height: 41px;' /></a>"
+				+"<a href='http://www.bhel.com/home.php' target='_blank'><img alt='BHEL' src='http://www.shaastra.org/2010/main/sites/default/files/images/bhel.png' style='width: 106px; height: 80px;' /></a>"
+				+"<a href='http://pantaloon.futurebazaar.com/indexPantaloon.jsp' target='_blank'><img alt='Pantaloons' src='http://www.shaastra.org/2010/main/sites/default/files/images/pantaloon.png' style='width: 160px; height: 60px;' /></a>"
+				+"<a href='http://www.wildcraft.in/' target='_blank'><img alt='Wildcraft' src='http://www.shaastra.org/2010/main/sites/default/files/images/wildcraft1.png' style='height: 40px; width: 265px;' /></a>"
+				+"<a href='http://www.iradiopop.com/index_noflash.html' target='_blank'><img alt='Radiopopp' src='http://www.shaastra.org/2010/main/sites/default/files/images/radiopop.png' style='height: 60px; width: 128px;' /></a>"
+			+"</center>"
+		)*/
+	});
+
+/*	window.onload=
+		function(e){
+		j=[0,2014,2013,2011,2010];
+		l=[0,0,0,0,0];
+		for(var k=1;k<=4;k++){
+			for(var i=1;i<=l[k];i++){
+			document.getElementById('tab'+k).innerHTML+="<center><img src='img"+j[k]+"/"+i+".png'></center><br>";
+			}
+		}
+	}
+*/
+</script>
+<body style="background-image:url('new_black.png');font-family:Titillium Web;">
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">2014</a></li>
+        <li><a href="#tab2">2013</a></li>
+        <li><a href="#tab3">2011</a></li>
+        <li><a href="#tab4">2010</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+			
+		</div>
+ 
+        <div id="tab2" class="tab">
+			
+        </div>
+
+        <div id="tab3" class="tab">
+			
+        </div>
+ 
+        <div id="tab4" class="tab">
+			<center>
+				<br><font size="3"><strong>Main sponsor:</strong></font><br>
+				<a href="http://www.vmware.com/" target="_blank"><img alt="VMware" src="http://www.shaastra.org/2010/main/sites/default/files/images/VMWare_black.png" style="width: 373px; height: 62px;" /></a>
+				<br><font size="3"><strong>Associate sponsor:</strong></font><br>
+				<a href="http://www.vestas.com/" target="_blank"><img alt="Vestas" src="http://www.shaastra.org/2010/main/sites/default/files/images/vestaslogo.png" style="width: 286px; height: 56px;" /></a>
+				<br><font size="3"><strong>Co sponsor:</strong></font><br>
+				<a href="http://www.ge.com/in/" target="_blank"><img alt="GE" src="http://www.shaastra.org/2010/main/sites/default/files/images/ge.png" style="width: 226px; height: 69px;" /></a>
+				<a href="http://www.boeing.co.in/" target="_blank"><img alt="Boeing" src="http://www.shaastra.org/2010/main/sites/default/files/images/boeing.png" style="width: 226px; height: 90px;" /></a>
+				<a href="http://www.boschindia.com/" target="_blank"><img alt="Bosch" src="http://www.shaastra.org/2010/main/sites/default/files/images/bosch.png" style="height: 60px; width: 166px;" /></a>
+				<a href="http://www.wipro.com/" target="_blank"><img alt="Wipro" src="http://www.shaastra.org/2010/main/sites/default/files/images/Wipro_Logo_1.png" style="height: 125px; width: 117px;" /></a>
+				<br><font size="3"><strong>Hospitality sponsor:</strong></font><br>
+				<a href="http://www.boschindia.com/" target="_blank"><img alt="SBI" src="http://www.shaastra.org/2010/main/sites/default/files/images/Sbi.png" style="height: 60px; width: 188px;" /></a>
+				<br><font size="3"><strong>Print Media Sponsor</strong></font><br>
+				<br><font size="3"><strong>Television Media Sponsor</strong></font><br>
+				<a href="http://www.thehindu.com/" target="_blank"><img alt="Hindu" src="http://www.shaastra.org/2010/main/sites/default/files/images/Hindu.png" style="height: 30px; width: 238px;" /></a>
+				<a href="http://www.ndtv.com/" target="_blank"><img alt="NDTV" src="http://www.shaastra.org/2010/main/sites/default/files/images/NDTV.png" style="width: 140px; height: 70px;" /></a>
+				<br><font size="3"><strong>Radio Partner</strong></font><br>
+				<img alt="BigFM" src="http://www.shaastra.org/2010/main/sites/default/files/images/bigfm.jpg" style="width: 204px; height: 72px;" />
+				<br><font size="3"><strong>Telecom Partner:</strong></font><br>
+				<br><font size="3"><strong>Outreach Partner:</strong></font><br>
+				<a href="http://www.ericsson.com/" target="_blank"><img alt="Telecom Partner" src="http://www.shaastra.org/2010/main/sites/default/files/images/ericson.png" style="width: 103px; height: 90px;" title="Ericsson" /></a>
+				<a href="http://www.canarabank.com/" target="_blank"><img alt="canara bank" jpg="" src="http://www.shaastra.org/2010/main/sites/default/files/images/CanaraBank.jpg" style="width: 209px; height: 50px;" /></a>
+				<br><font size="3"><strong>Event Sponsor:</strong></font><br>
+				<a href="http://www.google.co.in/" target="_blank"><img alt="Google" src="http://www.shaastra.org/2010/main/sites/default/files/images/google1.png" style="width: 200px; height: 80px;" /></a>
+				<a href="http://www.durr.com/worldwide2/india.html" target="_blank"><img alt="Durr" src="http://www.shaastra.org/2010/main/sites/default/files/images/durr.png" style="width: 140px; height: 70px;" /></a>
+				<a href="http://www.shell.com/" target="_blank"><img alt="shell" src="http://www.shaastra.org/2010/main/sites/default/files/images/Shell1.png" style="height: 90px; width: 162px;" /></a>
+				<a href="http://www.eaton.com/EatonCom/index.htm" target="_blank"><img alt="Eaton" src="http://www.shaastra.org/2010/main/sites/default/files/images/eaton_logoPBWW.png" style="width: 213px; height: 90px;" /></a>
+				<a href="http://www.tiindia.com/" target="_blank"><img alt="TI" src="http://www.shaastra.org/2010/main/sites/default/files/images/ti-logo.png" style="height: 100px;" /></a>
+				<a href="http://www.murugappa.com/" target="_blank"><img alt="Murugappa" src="http://www.shaastra.org/2010/main/sites/default/files/images/murugappa-logo.png" style="width: 137px; height: 84px;" /></a>
+				<a href="http://www.airbus.com/" target="_blank"><img alt="Airbus" src="http://www.shaastra.org/2010/main/sites/default/files/images/airbus.png" style="width: 103px; height: 90px;" /></a><br />
+				<br><font size="3"><strong>Travel Partner:</strong></font><br>
+				<br><font size="3"><strong>Knowledge Partner:</strong></font><br>
+				<a href="http://www.cleartrip.com/" target="_blank"><img alt="" src="http://www.shaastra.org/2010/main/sites/default/files/images/CTlogo.png" style="width: 214px; height: 60px;" /></a>
+				<a href="http://www.studyinholland.nl/" target="_blank"><img alt="Study in Holland" src="http://www.shaastra.org/2010/main/sites/default/files/images/study_holl_wen_logo1.png" style="width: 110px; height: 110px;" /></a>
+				<br><font size="3"><strong>Publicity Partner:</strong></font><br>
+				<br><font size="3"><strong>Global Media Partner:</strong></font><br>
+				<a href="http://www.contactsingapore.sg/" target="_blank"><img alt="CS-Logo" src="http://www.shaastra.org/2010/main/sites/default/files/images/CS-Logo.png" style="width: 213px; height: 80px;" /></a>
+				<a href="http://www.studentcompetitions.com/" target="_blank"><img alt="SC Logo" src="http://www.shaastra.org/2010/main/sites/default/files/images/SC_logo_black_highres1.png" style="width: 221px; height: 75px;" /></a>
+				<br><font size="3"><strong>Lecture Sponsor:</strong></font><br>
+				<br><font size="3"><strong>University Partner:</strong></font><br>
+				<a href="http://www.swissnex.org/" target="_blank"><img alt="Swissnex" src="http://www.shaastra.org/2010/main/sites/default/files/images/IND_logo1.jpg" style="width: 250px; height: 68px;" /></a>
+				<a href="http://www.campusfrance.org/en" target="_blank"><img alt="TMB" src="http://www.shaastra.org/2010/main/sites/default/files/images/inde.png" style="width: 250px; height: 77px;" /></a>
+				<br><font size="3"><strong>Event Partners:</strong></font><br>
+				<a href="http://www.iocl.com/" target="_blank"><img alt="IOC" src="http://www.shaastra.org/2010/main/sites/default/files/images/IOC.png" style="width: 74px; height: 90px;" /></a>
+				<a href="http://www.gmrgroup.in/" target="_blank"><img alt="GMR" src="http://www.shaastra.org/2010/main/sites/default/files/images/GMR.png" style="width: 130px; height: 68px;" /></a>
+				<a href="http://www.netapp.com/" target="_blank"><img alt="Netapp" src="http://www.shaastra.org/2010/main/sites/default/files/images/Netapp.png" style="width: 75px; height: 90px;" /></a>
+				<br><font size="3"><strong>Symposium Prize Sponsor:</strong></font><br>
+				<a href="http://www.tmb.in/" target="_blank"><img alt="TMB" src="http://www.shaastra.org/2010/main/sites/default/files/images/TMB_Logo.png" style="height: 50px; width: 233px;" /></a>
+				<a href="http://www.zoho.com/" target="_blank"><img alt="Zoho" src="http://www.shaastra.org/2010/main/sites/default/files/images/zoho1.png" style="width: 118px; height: 75px;" /></a>
+				<br><font size="3"><strong>Hospitality Sponsor: Al Gore Sustainable Technology Venture Competition 2010</strong></font><br>
+				<a href="http://www.marriott.com/default.mi" target="_blank"><img alt="Marriot" src="http://www.shaastra.org/2010/main/sites/default/files/images/Marriott.png" style="width: 115px; height: 90px;" /></a>
+				<br><font size="3"><strong>Gift Sponsor:</strong></font><br>
+				<a href="http://www.quickheal.com/" target="_blank"><img alt="" src="http://www.shaastra.org/2010/main/sites/default/files/qh_logo.jpg" style="width: 150px; height: 41px;" /></a>
+				<a href="http://www.bhel.com/home.php" target="_blank"><img alt="BHEL" src="http://www.shaastra.org/2010/main/sites/default/files/images/bhel.png" style="width: 106px; height: 80px;" /></a>
+				<a href="http://pantaloon.futurebazaar.com/indexPantaloon.jsp" target="_blank"><img alt="Pantaloons" src="http://www.shaastra.org/2010/main/sites/default/files/images/pantaloon.png" style="width: 160px; height: 60px;" /></a>
+				<a href="http://www.wildcraft.in/" target="_blank"><img alt="Wildcraft" src="http://www.shaastra.org/2010/main/sites/default/files/images/wildcraft1.png" style="height: 40px; width: 265px;" /></a>
+				<a href="http://www.iradiopop.com/index_noflash.html" target="_blank"><img alt="Radiopopp" src="http://www.shaastra.org/2010/main/sites/default/files/images/radiopop.png" style="height: 60px; width: 128px;" /></a>
+			</center>
+        </div>
+    </div>
+</div>
+</body>
