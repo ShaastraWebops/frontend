@@ -22,17 +22,17 @@
             <p>Best when viewed on latest Chrome/Chromium</p>
         </div>
         <div id="social_icons">
-            <p>
-                <a href='https://twitter.com/ShaastraIITM'>
-                    <i class="fa fa-twitter fa-2x"></i>
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href='https://www.facebook.com/Shaastra'>
-                    <i class="fa fa-facebook fa-2x"></i>
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href='https://www.youtube.com/user/iitmshaastra'>
-                    <i class="fa fa-youtube fa-2x"></i>
-                </a>
-            </p>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a class="social" href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
+                </div>
+                <div class="col-xs-4">
+                    <a class="social" href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
+                </div>
+                <div class="col-xs-4">
+                    <a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
+                </div>
+            </div>
         </div>
     
         <div id="mainLogo">
