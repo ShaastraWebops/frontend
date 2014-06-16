@@ -12,7 +12,17 @@ body {
 
 /* line 9, ../sass/events.scss */
 .container {
-  font-size: 1em;
+  font-size: 1.5em;
   color: white;
+  text-align: justify;
   text-align: center;
+}
+/* line 14, ../sass/events.scss */
+.container .row {
+  margin-bottom: 2%;
+}
+/* line 16, ../sass/events.scss */
+.container .row div {
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
