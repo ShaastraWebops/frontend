@@ -12,9 +12,11 @@
 //Variables
 $font: "Titillium Web","TakaoPGothic","Century Schoolbook L",Verdana;
 // $font: "TakaoPGothic","Century Schoolbook L",Verdana;
+
 $scale: 0.1;
 $blue: #00425a;
 //importing fonts
+
 @font-face {
   font-family: 'ecoicon';
   src:url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
@@ -33,7 +35,7 @@ $blue: #00425a;
 }
 
 body{
-  background-image: url("../images/new black.png");
+  background-image: url("../img/bg.png");
   line-height: 1.42857;
   font-family: "Titillium Web";
   // replace with svg
