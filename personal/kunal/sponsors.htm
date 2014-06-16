@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="css.css" media="screen" />
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script>
+	$(document).ready(function() {
+    $('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = $(this).attr('href');
+        $('.tabs ' + currentAttrValue).show().siblings().hide();
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+        e.preventDefault();
+    });
+});
+	window.onload=
+		function(e){
+		j=[0,2014,2013,2011,2010];
+		l=[0,53,40,0,0];
+		for(var k=1;k<=4;k++){
+			for(var i=1;i<=l[k];i++){
+			document.getElementById('tab'+k).innerHTML+="<center><img src='img"+j[k]+"/"+i+".png'></center><br>";
+			}
+		}
+	}
+</script>
+<body style="background-image:url('new_black.png');font-family:Titillium Web;">
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">2014</a></li>
+        <li><a href="#tab2">2013</a></li>
+        <li><a href="#tab3">2011</a></li>
+        <li><a href="#tab4">2010</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+        </div>
+ 
+        <div id="tab2" class="tab">
+		
+        </div>
+ 
+        <div id="tab3" class="tab">
+        </div>
+ 
+        <div id="tab4" class="tab">
+        </div>
+    </div>
+</div>
+</body>
