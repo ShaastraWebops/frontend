@@ -14,7 +14,7 @@
             <a id="spons" class="spons next_page" href="spons.php">SPONSORS</a>
             <a id="shows" class="shows next_page" href="shows.php">SHOWS</a>
             <a id="lectures" class="lectures next_page" href="lectures.php">LECTURES</a>
-            <a id="contacts" class="contacts next_page" href="contacts.html">CONTACT</a>
+            <a id="contact" class="contact next_page" href="contact.php">CONTACT</a>
             <a id="about" class="about next_page" href="about.php">ABOUT US</a>
         </div>
 
@@ -155,6 +155,7 @@
         </div>
 
         <?php include 'foot.php'; ?>
+        <script src="../js/home.js"></script>
         
         <script>
             $(document).ready(function(){

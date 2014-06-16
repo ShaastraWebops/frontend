@@ -68,48 +68,12 @@ $(document).ready(function(){
 	//pageTransition - Common
 	$("body").css("display", "none");    
     $("body").fadeIn(1000);
-    $(".nextPage").click(function(event){
+    $(".next_page").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
         $("body").fadeOut(2000, redirectPage);      
     });         
     
-    //Sliding Menu -- Common for all pages
-	$(".menu_options").hover(function(){
-		$(this).css("background-color","#EBF4FA");
-		$(this).css("color","black");
-		$("#facebook").css("color","#3b5998");    
-		$("#twitter").css("color","#428bca"); 
-		$("#you_tube").css("color","#cc181e");
-		$("#close_menu").css("color","#00425a"); 
-		$(this).css("font-weight","bold"); 
-	},function(){
-		$(this).css("background-color","black"); 
-		$(this).css("color","white"); 
-		$("#facebook").css("color","#3b5998");
-		$("#twitter").css("color","#428bca"); 
-		$("#you_tube").css("color","#cc181e");
-		$(this).css("font-weight","normal"); 		
-		$("#close_menu").css("color","#00425a");    
-	});
-	$("#menu_icon").click(function(){
-	    $("#menu_popup").animate({      
-	      left: '0%'
-	    },"slow");  
-	    $("#menu_rhs").animate({
-	      right: '0%',
-	      width: '70%'
-	    },"slow");  
-  	});
-	$("#close_menu").click(function(){  
-		$("#menu_popup").animate({
-			left: '-30%'
-		},"slow");                      
-		$("#menu_rhs").animate({
-		    right: '-70%',
-		    width: '0%'
-  		},"slow");
-	});
   			//respond to ESC keydown
   	$('body').keydown(function(e){
 	    // alert(e.which);
@@ -146,7 +110,7 @@ $(document).ready(function(){
   	},function(){
 		x.style.WebkitAnimation = "fadeOut "+fOut+"s ease-in forwards";    	
   	});
-  	$(".contacts").hover(function(){
+  	$(".contact").hover(function(){
 		x = document.getElementById("phone");
 		x.style.WebkitAnimation = "watermarkFadeIn "+fIn+"s ease-in forwards";
   	},function(){
@@ -224,7 +188,7 @@ $(document).ready(function(){
   	//initial positioning
   	hexaStr("events",1);
 	hexaStr("shows",2);
-	hexaStr("contacts",3);
+	hexaStr("contact",3);
 	hexaStr("about",4);
 	hexaStr("lectures",5);
 	hexaStr("spons",6);	
@@ -300,7 +264,7 @@ $(document).ready(function(){
 		pageCenterPx("toolSVG",1);  		
 		hexaStr("events",1);
 		hexaStr("shows",2);
-		hexaStr("contacts",3);
+		hexaStr("contact",3);
 		hexaStr("about",4);
 		hexaStr("lectures",5);
 		hexaStr("spons",6);

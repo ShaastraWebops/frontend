@@ -14,3 +14,6 @@
 
 <!-- Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+
+<!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
+<script src="../js/jquery-1.11.0.js"></script>

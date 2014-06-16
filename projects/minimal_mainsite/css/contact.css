@@ -7,6 +7,9 @@
 .margin-top-2 {
     margin-top: 2%;
 }
+.margin-bottom-5 {
+    margin-bottom: 5%;
+}
 
 .btn.btn-bluebox {
     background-color: rgba(14, 99, 133, 0.5);
@@ -34,23 +37,6 @@
     width: 35%;
 }  
 
-.col-sm-push-i1 {
-    left: 4%;   
-}      
-.col-sm-push-i5 {
-/*    left: 37.500000005%;   */
-    left: 39%;  
-}      
-.col-sm-push-i9 {
-    left: 74.166666665%;  
-}      
-.col-sm-push-i3 {
-    left: 21%;   
-}
-.col-sm-push-i2 {
-    left: 12.5%;   
-}
-
 textarea {  
     width: 100%;  
     min-height: 100px;  
@@ -60,8 +46,6 @@ textarea {
     word-wrap: break-word;
     resize: vertical;
 }  
-
-
 
 .left-inner-addon {
     position: relative;
@@ -88,30 +72,6 @@ textarea {
     padding: 10px 12px;
     pointer-events: none;
 }
-
-
-
-
-.merged {
-    margin:10px;
-}
-.merged .input-group-addon {
-    border-right: 0px;
-    background-color: #FFFFFF;
-}
-.merged input,{
-    border-left: 0px;
-    background-color: #FFFFFF;
-}
-.focusedInput {
-    border-color: rgba(82,168,236,.8) ;
-    outline: 0;
-    outline: thin dotted \9;
-    -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
-         box-shadow: 0 0 8px rgba(82,168,236,.6);
-}
-
-
 
 
 
@@ -146,10 +106,10 @@ textarea {
     margin:0 8px;
 }
 .dice {
-    background:url(../images/dice.png) no-repeat;
+    background:url(../img/dice.png) no-repeat;
 }
 .dice.white {
-    background:url(../images/dice_white.png) no-repeat;
+    background:url(../img/dice_white.png) no-repeat;
 }
 
 .breaker span {
@@ -175,20 +135,5 @@ textarea {
     float: right;
     background: linear-gradient(to right, #fff, transparent);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

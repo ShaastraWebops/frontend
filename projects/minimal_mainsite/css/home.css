@@ -520,7 +520,7 @@ div a {
 }
 
 /* line 71, ../sass/_hiddenMenu.scss */
-#menu_popup {
+.menu_popup {
   position: absolute;
   background-color: black;
   z-index: 400;
@@ -543,7 +543,7 @@ div a {
 }
 
 /* line 92, ../sass/_hiddenMenu.scss */
-.menu_options {
+.menu_popup .row {
   color: white;
   font-size: 1.3em;
   padding-left: 4%;
@@ -559,7 +559,7 @@ div a {
 
 @media all and (min-width: 62.5em) and (max-width: 75em) {
   /* line 106, ../sass/_hiddenMenu.scss */
-  .menu_options {
+  .menu_popup .row {
     font-size: 1.3em;
     padding-left: 3%;
     padding-right: 3%;
@@ -570,7 +570,7 @@ div a {
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
   /* line 116, ../sass/_hiddenMenu.scss */
-  .menu_options {
+  .menu_popup .row {
     font-size: 1em;
     padding-left: 3%;
     padding-right: 3%;
@@ -581,7 +581,7 @@ div a {
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
   /* line 126, ../sass/_hiddenMenu.scss */
-  .menu_options {
+  .menu_popup .row {
     font-size: 0.8em;
     padding-left: 3%;
     padding-right: 3%;

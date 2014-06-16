@@ -3,14 +3,13 @@
 	<head>
 
 		<title>Contact Us | Shaastra 2015</title>		
-		<!-- CSS -->
-		<link href="../stylesheets/contact.css" rel="stylesheet">
-		<link href="../stylesheets/resp.css" rel="stylesheet">
-		<link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../stylesheets/component_menu.css" />
+
+		<?php include 'head.php' ?>
+		<link href="../css/contact.css" rel="stylesheet">
+		<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />
+		
 		<style>
 			body {
-				background-image:url('../images/background.jpg');
 				font-family: 'Titillium Web', sans-serif;
 				height : 100%;
 				width : 100%;
@@ -22,85 +21,11 @@
 				margin-bottom: 2%;
 			}
 		</style>
-
-		<!-- Metas -->
-		<link rel="shortcut icon" href="../pics/favicon.ico" />
-
-		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
 	</head>
 	
 	<body>
-		<section id="set-7">
-			<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-				<c id="menu_icon" style="position:absolute; top:0%; left:0%; z-index:399" class="hi-icon hi-icon-list"></c>
-			</div>
-		</section>
-		
-		<!-- menu popup start -->
-		
-		<div id="menu_popup" style="position:absolute; background-color:black; z-index:400; height:100%; width:30%; top:0%; left:-30%; opacity:0">
-			<table style="color:white; width:100%">
-				<tr>
-					<th class="header">SHAASTRA 2015</th>
-				</tr>
-				<!--gap1-->
-				<tr>
-					<td class="gap"></td>
-				</tr>
-				<!--gap1-->
-				<tr>
-					<td id="close_menu" class="menu_options" style="color:#99C68E"><span class="glyphicon glyphicon-chevron-left"></span>Back to Website</td>
-				</tr>
-				<!--gap2-->
-				<tr>
-					<td class="gap"></td>
-				</tr>
-				<!--gap2-->
-				<tr>
-					<td id="menu_home" class="menu_options">Home</td>
-				</tr>
-				<tr>
-					<td class="menu_options">About Us</td>
-				</tr>
-				<tr>
-					<td class="menu_options">Events</td>
-				</tr>
-				<tr>
-					<td id="menu_envisage" class="menu_options">Envisage</td>
-				</tr>
-				<tr>
-					<td class="menu_options">Lectures</td>
-				</tr>
-				<tr>
-					<td class="menu_options">Sponsors</td>
-				</tr>
-				<tr>
-					<td id="menu_contacts" class="menu_options">Contact Us</td>
-				</tr>
-				
-				
-				<tr>
-					<td class="header"><i>follow us on</i></td>
-				</tr>
-				<tr>
-					<td id="facebook" class="menu_options" style="color:#0020C2">Facebook</td>
-				</tr>
-				<tr>
-					<td id="twitter" class="menu_options" style="color:#38ACEC">Twitter</td>
-				</tr>
-				<tr>
-					<td id="you_tube" class="menu_options" style="color:#F62217">You Tube</td>
-				</tr>
-			</table>
-		</div>
-		
-		<div id="menu_rhs" style="position:absolute; z-index:401; height:100%; width:0%; top:0%; right:-70%; opacity:0.5">
-			<img style="width:100%; height:100%" src="../images/right_side_image.jpg">
-		</div>
-		<!-- menu popup end -->
-		
+		<?php include 'menu.php' ?>		
 		<div class="container-fluid title white centered">
 			<div class="row">
 				<div class="col-xs-12">
@@ -183,7 +108,7 @@
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-1">
 								<button class="btn btn-lg btn-primary margin-top-2" data-toggle="modal" data-target="#comments">
-									Couldn't find what you are looking for?
+									Could not find what you are looking for?
 								</button>
 							</div>
 						</div>
@@ -205,7 +130,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="row">
-							<div class="input-group merged col-xs-6 col-xs-offset-3">
+							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-user"></span>
 								</span>
@@ -213,7 +138,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="input-group merged col-xs-6 col-xs-offset-3">
+							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
@@ -221,7 +146,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="input-group merged col-xs-6 col-xs-offset-3">
+							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-phone"></span>
 								</span>
@@ -419,10 +344,7 @@
 	</body>
 	
 	<!-- JS -->
-	<script src="../javascripts/jquery.min.js"></script>
-	<!--<script src="../javascripts/modernizr.custom.js"></script>-->
-	<script src="../stylesheets/bootstrap/js/bootstrap.js"></script>
-	<script src="../javascripts/home_js.js"></script>
+	<?php include 'foot.php' ?>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	
 	<script>

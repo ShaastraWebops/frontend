@@ -17,9 +17,6 @@
        -o-transition: color 0.3s;
           transition: color 0.3s;  
 }
-.cl-effect a:hover{
-    color: lighten($blue,5%);
-  }
 $h:2%;
 .cl-effect a::before,
 .cl-effect a::after {
