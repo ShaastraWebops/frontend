@@ -1,8 +1,6 @@
-<section id="set-7">
-    <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-        <c id="menu_icon" style="position:absolute; top:0%; left:0%; z-index:399" class="hi-icon hi-icon-list"></c>
-    </div>
-</section>
+<div class="menuB">
+    <c id="menu_icon" class="hi-icon hi-icon-list"></c>
+</div>
 
 <!-- menu popup start -->
 
@@ -82,36 +80,22 @@
                 opacity: '1'                  
             },"slow");
         });  
-        $(".menu_options").hover(function(){
-            $(this).css("color","#00425a");
-        }, function(){
-            $(this).css("color","white"); 
-        });
         $(".close_menu").click(function(){
-            $(".menu_popup").animate({
-                left: '-30%',
-                opacity: '0'                  
-            },"slow");                      
+            hideMenu();                      
         });
         $('body').keydown(function(e){
-            // alert(e.which);
             if(e.which == 27){
-                $(".menu_popup").animate({
-                    left: '-30%',
-                    opacity: '0'                  
-                },"slow");                  
+                hideMenu(); 
             }
         });
-        // $('body').onclick(function(){
-        //     $(".menu_popup").animate({
-        //         left: '-30%',
-        //         opacity: '0'                  
-        //     },"slow");                              
-        // }); 
+        $('body').click(function(e){
+            console.log(e.clientX)
+            // hideMenu();
+        });         
     });   
 </script>
 <style type="text/css">
-    .menu_popup.col-xs-12:hover{
-        color: #00425a;
+    .menu_options{
+        color: white;
     }
 </style>

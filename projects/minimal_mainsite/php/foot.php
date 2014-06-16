@@ -7,6 +7,7 @@ $(document).ready(function(){
 	$(".next_page").click(function(event){
 		event.preventDefault();
 		linkLocation = this.href;
+		hideMenu();
 		$("body").fadeOut(1000, redirectPage);      
 	});
 	function redirectPage () {

@@ -79,3 +79,10 @@
 <!-- Fonts -->
 <!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
 <script src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	function hideMenu () {
+        $(".menu_popup").animate({
+            left: '-30%'
+        },"slow");
+    }	
+</script>
