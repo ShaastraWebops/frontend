@@ -5,10 +5,12 @@
 		<?php include 'head.php' ?>
 		<link rel="stylesheet" type="text/css" href="../css/component_carousel.css">
         <style type="text/css">
-			#title {
+			.title {
 				color: white;
 	    		font-family: 'Titillium Web', sans-serif;
-	    		font-size: 5em
+			}
+			.container.title, .container-fluid.title {
+				margin-bottom: 2%;
 			}
 			.subtitle{
 				color: white;
@@ -30,6 +32,7 @@
 		
 	</head>
 	<body>
+		<?php include 'menu.php' ?>
 		<div class="container-fluid title white centered">
             <div class="row">
                 <div class="col-xs-12">
