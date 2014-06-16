@@ -3,7 +3,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="../css/respAbhi.css">
-<link rel="stylesheet" type="text/css" href="../css/mainPage.css">
+<link rel="stylesheet" type="text/css" href="../css/home.css">
 <link rel="stylesheet" type="text/css" href="../css/resp.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
 <style>

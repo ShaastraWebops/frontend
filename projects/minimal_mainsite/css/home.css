@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) format("woff");
+}
+
+@font-face {
   font-family: 'ecoicon';
   src: url("../fonts/ecoicons/ecoicon.svg#ecoicon") format("svg");
   font-weight: normal;
@@ -289,7 +296,6 @@ div a {
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 1.5em;
-  font-family: Verdana;
   /*  
       @media all and (min-width: pem(1024)){
           float: none;
@@ -298,7 +304,7 @@ div a {
 }
 
 @media all and (max-width: 37.5em) {
-  /* line 80, ../sass/_cl-effect2.scss */
+  /* line 79, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
@@ -309,7 +315,7 @@ div a {
   }
 }
 @media all and (max-height: 37.5em) {
-  /* line 88, ../sass/_cl-effect2.scss */
+  /* line 87, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
@@ -320,7 +326,7 @@ div a {
   }
 }
 @media all and (min-width: 62.5em) and (max-width: 75em) {
-  /* line 96, ../sass/_cl-effect2.scss */
+  /* line 95, ../sass/_cl-effect2.scss */
   div a {
     float: none;
     width: auto;
@@ -328,11 +334,10 @@ div a {
     font-weight: 100;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 1.3em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
-  /* line 105, ../sass/_cl-effect2.scss */
+  /* line 104, ../sass/_cl-effect2.scss */
   div a {
     float: left;
     width: auto;
@@ -341,22 +346,20 @@ div a {
     font-weight: 80;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 1.05em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
-  /* line 115, ../sass/_cl-effect2.scss */
+  /* line 114, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
     font-weight: 100;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 0.9em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  /* line 123, ../sass/_cl-effect2.scss */
+  /* line 122, ../sass/_cl-effect2.scss */
   div a {
     float: left;
     width: auto;
@@ -365,11 +368,10 @@ div a {
     font-weight: 30;
     text-shadow: 0 0 0% rgba(255, 255, 255, 0.3);
     font-size: 0.7em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  /* line 133, ../sass/_cl-effect2.scss */
+  /* line 132, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     height: auto;
@@ -378,10 +380,9 @@ div a {
     font-weight: 20;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 0.6em;
-    font-family: Verdana;
   }
 }
-/* line 144, ../sass/_cl-effect2.scss */
+/* line 143, ../sass/_cl-effect2.scss */
 .cl-effect a::before,
 .cl-effect a::after {
   position: absolute;
@@ -405,38 +406,249 @@ div a {
 }
 
 @media all and (min-width: 62.5em) and (max-width: 75em) {
-  /* line 168, ../sass/_cl-effect2.scss */
+  /* line 167, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 3.75%;
   }
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
-  /* line 172, ../sass/_cl-effect2.scss */
+  /* line 171, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 3.5%;
   }
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
-  /* line 176, ../sass/_cl-effect2.scss */
+  /* line 175, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.75%;
   }
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  /* line 180, ../sass/_cl-effect2.scss */
+  /* line 179, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.5%;
   }
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  /* line 184, ../sass/_cl-effect2.scss */
+  /* line 183, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.25%;
+  }
+}
+/* line 1, ../sass/_hiddenMenu.scss */
+.menuB {
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+  -moz-animation: fadeIn 3s ease-in 5s forwards;
+  -o-animation: fadeIn 3s ease-in 5s forwards;
+  animation: fadeIn 3s ease-in 5s forwards;
+}
+
+/* line 9, ../sass/_hiddenMenu.scss */
+#menu_icon {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  z-index: 399;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 1.5% 3%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  color: white;
+}
+
+/* line 25, ../sass/_hiddenMenu.scss */
+#menu_icon:hover {
+  color: #00425a;
+  font-size: 2px;
+}
+
+/* line 29, ../sass/_hiddenMenu.scss */
+#menu_icon:before {
+  font-family: 'ecoicon';
+  speak: none;
+  font-size: 32px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  content: "\e006";
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+/* line 44, ../sass/_hiddenMenu.scss */
+#menu_icon:after {
+  top: -8%;
+  left: -8%;
+  padding: 8%;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 3px 3px white;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  -moz-transition: opacity 0.2s,    -moz-transform 0.2s;
+  -o-transform: rotate(-90deg), -o-transform 0.2s;
+  transition: opacity 0.2s,         transform 0.2s;
+}
+
+/* line 62, ../sass/_hiddenMenu.scss */
+#menu_icon:hover:after {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 71, ../sass/_hiddenMenu.scss */
+#menu_popup {
+  position: absolute;
+  background-color: black;
+  z-index: 400;
+  height: 100%;
+  width: 30%;
+  top: 0%;
+  left: -30%;
+  opacity: 1;
+}
+
+/* line 82, ../sass/_hiddenMenu.scss */
+#menu_rhs {
+  position: absolute;
+  z-index: 401;
+  height: 100%;
+  width: 0%;
+  top: 0%;
+  right: -70%;
+  opacity: 1;
+}
+
+/* line 92, ../sass/_hiddenMenu.scss */
+.menu_options {
+  color: white;
+  font-size: 1.3em;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 106, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 1.3em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 5%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 116, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 1em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 4.5%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 126, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 0.8em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    height: 4%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 136, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 0.6em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    height: 3%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 146, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 0.5em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+    height: 3.5%;
+  }
+}
+/* line 155, ../sass/_hiddenMenu.scss */
+.menu_options a {
+  font-size: 1.3em;
+}
+
+/* line 158, ../sass/_hiddenMenu.scss */
+.menu_options:hover a {
+  color: black;
+}
+
+/* line 161, ../sass/_hiddenMenu.scss */
+.header {
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  height: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 171, ../sass/_hiddenMenu.scss */
+  .header {
+    font-size: 1em;
+    height: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 177, ../sass/_hiddenMenu.scss */
+  .header {
+    font-size: 0.8em;
+    height: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
   }
 }
 @media all and (min-width: 62.5em) and (max-width: 75em) {
@@ -493,18 +705,19 @@ div a {
   width: 400px;
 }
 
-/* line 36, ../sass/home.scss */
+/* line 35, ../sass/mainPage.scss */
 body {
   background-image: url("../img/bg.png");
   line-height: 1.42857;
+  font-family: "Titillium Web";
 }
 
-/* line 42, ../sass/home.scss */
+/* line 42, ../sass/mainPage.scss */
 #notice {
   color: white;
 }
 
-/* line 47, ../sass/home.scss */
+/* line 47, ../sass/mainPage.scss */
 #social_icons {
   position: absolute;
   right: 5%;
@@ -512,7 +725,7 @@ body {
   color: white;
 }
 
-/* line 55, ../sass/home.scss */
+/* line 55, ../sass/mainPage.scss */
 #watermark div {
   opacity: 1;
   -moz-animation: fadeIn 2s ease-in 10s forwards;
@@ -520,18 +733,18 @@ body {
   animation: fadeIn 2s ease-in 10s forwards;
 }
 
-/* line 64, ../sass/home.scss */
+/* line 64, ../sass/mainPage.scss */
 #mainLogo {
   opacity: 1;
 }
-/* line 67, ../sass/home.scss */
+/* line 67, ../sass/mainPage.scss */
 #mainLogo #cubeDots {
   fill: white;
   fill-opacity: 1;
   stroke: white;
   stroke-width: 2px;
 }
-/* line 73, ../sass/home.scss */
+/* line 73, ../sass/mainPage.scss */
 #mainLogo #cubeBorder {
   fill: #00425a;
   fill-opacity: 1;
@@ -539,7 +752,7 @@ body {
   stroke-width: 2px;
 }
 
-/* line 80, ../sass/home.scss */
+/* line 80, ../sass/mainPage.scss */
 #mainLogo image {
   position: absolute;
   z-index: 4;
@@ -552,147 +765,7 @@ body {
   animation: fadeIn 2s ease-in 8s forwards;
 }
 
-/* line 92, ../sass/home.scss */
-.menuB {
-  display: none;
-  opacity: 0;
-  -webkit-animation: fadeIn 3s ease-in 5s forwards;
-  -moz-animation: fadeIn 3s ease-in 5s forwards;
-  -o-animation: fadeIn 3s ease-in 5s forwards;
-  animation: fadeIn 3s ease-in 5s forwards;
-}
-
-/* line 101, ../sass/home.scss */
-#menu_icon:before {
-  font-family: 'ecoicon';
-  speak: none;
-  font-size: 48px;
-  line-height: 90px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  content: "\e006";
-  display: block;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-}
-
-/* line 116, ../sass/home.scss */
-#menu_icon:after {
-  top: -8%;
-  left: -8%;
-  padding: 8%;
-  z-index: -1;
-  opacity: 0;
-  box-shadow: 3px 3px white;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-  -moz-transition: opacity 0.2s,    -moz-transform 0.2s;
-  -o-transform: rotate(-90deg), -o-transform 0.2s;
-  transition: opacity 0.2s,         transform 0.2s;
-}
-
-/* line 134, ../sass/home.scss */
-#menu_icon:hover:after {
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-/* line 143, ../sass/home.scss */
-#menu_icon {
-  position: absolute;
-  z-index: 1;
-  top: 0%;
-  left: 0%;
-  z-index: 399;
-  display: inline-block;
-  font-size: 0px;
-  cursor: pointer;
-  margin: 1.5% 3%;
-  width: 90px;
-  height: 90px;
-  text-align: center;
-  color: white;
-}
-
-/* line 159, ../sass/home.scss */
-#menu_icon:hover {
-  color: #00425a;
-  font-size: 2px;
-}
-
-/* line 164, ../sass/home.scss */
-#menu_popup {
-  position: absolute;
-  background-color: black;
-  z-index: 400;
-  height: 100%;
-  width: 30%;
-  top: 0%;
-  left: -30%;
-  opacity: 1;
-}
-
-/* line 176, ../sass/home.scss */
-.menu_options {
-  color: white;
-  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
-  font-size: 1.5em;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  width: 100%;
-  text-align: center;
-  height: 5%;
-  cursor: pointer;
-}
-/* line 188, ../sass/home.scss */
-.menu_options a {
-  text-decoration: none;
-  color: white;
-}
-
-/* line 194, ../sass/home.scss */
-.menu_options:hover a {
-  color: black;
-}
-
-/* line 198, ../sass/home.scss */
-.header {
-  color: white;
-  font-family: "TakaoPGothic", "Century Schoolbook L", Verdana;
-  font-size: 2em;
-  width: 100%;
-  text-align: center;
-  height: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-}
-
-/* line 208, ../sass/home.scss */
-#menu_rhs {
-  position: absolute;
-  z-index: 401;
-  height: 100%;
-  width: 0%;
-  top: 0%;
-  right: -70%;
-  opacity: 1;
-}
-
-/* line 219, ../sass/home.scss */
+/* line 93, ../sass/mainPage.scss */
 #hexaMenu,
 #social_icons {
   opacity: 0;
