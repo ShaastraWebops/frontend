@@ -1,0 +1,58 @@
+/*
+Syntax error: File to import not found or unreadable: navs.
+              Load paths:
+                /home/abhishandy/Documents/GitHub/frontend/projects/minimal_mainsite
+                /home/abhishandy/Documents/GitHub/frontend/projects/minimal_mainsite/sass
+        on line 24 of sass/bootstrap-sass/bootstrap.scss
+
+19: // Components
+20: @import "component-animations";
+21: @import "dropdowns";
+22: @import "button-groups";
+23: @import "input-groups";
+24: @import "navs";
+25: @import "navbar";
+26: @import "breadcrumbs";
+27: @import "pagination";
+28: @import "pager";
+29: @import "labels";
+
+Backtrace:
+sass/bootstrap-sass/bootstrap.scss:24
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/import_node.rb:45:in `import'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+/var/lib/gems/1.9.1/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: navs.\A               Load paths:\A                 /home/abhishandy/Documents/GitHub/frontend/projects/minimal_mainsite\A                 /home/abhishandy/Documents/GitHub/frontend/projects/minimal_mainsite/sass\A         on line 24 of sass/bootstrap-sass/bootstrap.scss\A \A 19: // Components\A 20: @import \"component-animations\";\A 21: @import \"dropdowns\";\A 22: @import \"button-groups\";\A 23: @import \"input-groups\";\A 24: @import \"navs\";\A 25: @import \"navbar\";\A 26: @import \"breadcrumbs\";\A 27: @import \"pagination\";\A 28: @import \"pager\";\A 29: @import \"labels\";"; }

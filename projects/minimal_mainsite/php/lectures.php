@@ -12,10 +12,7 @@
 				color: white;
 	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 2.5em
-			}
-			.white {
-				color: #ffffff;
-			}
+			}			
 			.text {
 				color: white;
 	    		/*font-family: 'Titillium Web', sans-serif;*/

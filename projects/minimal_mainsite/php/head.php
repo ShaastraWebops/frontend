@@ -16,6 +16,9 @@
     .title{
 		font-family: 'Dosis', sans-serif;
 	}
+	.white {
+		color: #ffffff;
+	}
 	.breaker {
 	width:387px;
 	height:14px;

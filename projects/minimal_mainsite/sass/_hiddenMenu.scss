@@ -13,7 +13,6 @@
 #menu_icon{
   // display: none;
   position:absolute; 
-  z-index: 1;
   top:0%; 
   left:0%; 
   z-index:399;
@@ -28,13 +27,13 @@
 }
 #menu_icon:hover {
   color: #00425a;
-  font-size: 2px;
+  font-size: 2em;
 }
 #menu_icon:before {
   font-family: 'ecoicon';
   speak: none;
   font-size: 32px;
-  line-height: 90px;
+  line-height: 100px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
