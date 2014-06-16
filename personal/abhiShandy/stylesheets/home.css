@@ -289,7 +289,6 @@ div a {
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 1.5em;
-  font-family: Verdana;
   /*  
       @media all and (min-width: pem(1024)){
           float: none;
@@ -298,7 +297,7 @@ div a {
 }
 
 @media all and (max-width: 37.5em) {
-  /* line 80, ../sass/_cl-effect2.scss */
+  /* line 79, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
@@ -309,7 +308,7 @@ div a {
   }
 }
 @media all and (max-height: 37.5em) {
-  /* line 88, ../sass/_cl-effect2.scss */
+  /* line 87, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
@@ -320,7 +319,7 @@ div a {
   }
 }
 @media all and (min-width: 62.5em) and (max-width: 75em) {
-  /* line 96, ../sass/_cl-effect2.scss */
+  /* line 95, ../sass/_cl-effect2.scss */
   div a {
     float: none;
     width: auto;
@@ -328,11 +327,10 @@ div a {
     font-weight: 100;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 1.3em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
-  /* line 105, ../sass/_cl-effect2.scss */
+  /* line 104, ../sass/_cl-effect2.scss */
   div a {
     float: left;
     width: auto;
@@ -341,22 +339,20 @@ div a {
     font-weight: 80;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 1.05em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
-  /* line 115, ../sass/_cl-effect2.scss */
+  /* line 114, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     letter-spacing: 0.02%;
     font-weight: 100;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 0.9em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  /* line 123, ../sass/_cl-effect2.scss */
+  /* line 122, ../sass/_cl-effect2.scss */
   div a {
     float: left;
     width: auto;
@@ -365,11 +361,10 @@ div a {
     font-weight: 30;
     text-shadow: 0 0 0% rgba(255, 255, 255, 0.3);
     font-size: 0.7em;
-    font-family: Verdana;
   }
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  /* line 133, ../sass/_cl-effect2.scss */
+  /* line 132, ../sass/_cl-effect2.scss */
   div a {
     width: auto;
     height: auto;
@@ -378,10 +373,9 @@ div a {
     font-weight: 20;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     font-size: 0.6em;
-    font-family: Verdana;
   }
 }
-/* line 144, ../sass/_cl-effect2.scss */
+/* line 143, ../sass/_cl-effect2.scss */
 .cl-effect a::before,
 .cl-effect a::after {
   position: absolute;
@@ -405,35 +399,35 @@ div a {
 }
 
 @media all and (min-width: 62.5em) and (max-width: 75em) {
-  /* line 168, ../sass/_cl-effect2.scss */
+  /* line 167, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 3.75%;
   }
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
-  /* line 172, ../sass/_cl-effect2.scss */
+  /* line 171, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 3.5%;
   }
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
-  /* line 176, ../sass/_cl-effect2.scss */
+  /* line 175, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.75%;
   }
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  /* line 180, ../sass/_cl-effect2.scss */
+  /* line 179, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.5%;
   }
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  /* line 184, ../sass/_cl-effect2.scss */
+  /* line 183, ../sass/_cl-effect2.scss */
   .cl-effect a::before,
   .cl-effect a::after {
     height: 2.25%;
@@ -554,7 +548,6 @@ body {
 
 /* line 92, ../sass/home.scss */
 .menuB {
-  display: none;
   opacity: 0;
   -webkit-animation: fadeIn 3s ease-in 5s forwards;
   -moz-animation: fadeIn 3s ease-in 5s forwards;
