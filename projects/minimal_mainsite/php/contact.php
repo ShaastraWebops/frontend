@@ -95,13 +95,13 @@
 						</div>
 						<div class="row">
 							<div class="col-sm-2 col-md-offset-3">
-								<a href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
+								<a class="social" href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
 							</div>
 							<div class="col-sm-2">
-								<a href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
+								<a class="social" href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
 							</div>
 							<div class="col-sm-2">
-								<a href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
+								<a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
 							</div>
 						</div>
 						
