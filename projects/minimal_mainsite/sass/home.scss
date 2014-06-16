@@ -1,0 +1,102 @@
+//Primary SASS file for the Mainpage
+// madeby: abhiShandy
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web'), local('TitilliumWeb-Regular'), 
+    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) 
+    format('woff');
+}
+//Variables
+$font: "Titillium Web","TakaoPGothic","Century Schoolbook L",Verdana;
+// $font: "TakaoPGothic","Century Schoolbook L",Verdana;
+
+$scale: 0.1;
+$blue: #00425a;
+//importing fonts
+
+@font-face {
+  font-family: 'ecoicon';
+  src:url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+//importing partials
+@import "Animation";
+@import "cl-effect2";
+// @import "social";
+@import "hiddenMenu";
+@import "responsiveSVG";
+
+@function pem($pixels){
+    @return #{$pixels/16.0}em   
+}
+
+body{
+  background-image: url("../img/bg.png");
+  line-height: 1.42857;
+  font-family: "Titillium Web";
+  // replace with svg
+}
+
+#notice{
+  color: white;
+  // display: none;
+}
+
+#social_icons{
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  color: white;
+  $space: 0.5em;  
+}
+
+#watermark div{    
+  opacity: 1;
+  // display: none;
+  // -webkit-animation: fadeIn 2s ease-in 10s forwards;
+     -moz-animation: fadeIn 2s ease-in 10s forwards;
+       -o-animation: fadeIn 2s ease-in 10s forwards;
+          animation: fadeIn 2s ease-in 10s forwards;      
+}
+
+#mainLogo{
+  // display: none;
+  opacity: 1;
+  #cubeDots{
+    fill: white;
+    fill-opacity:1;
+    stroke: white;
+    stroke-width: 2px;
+  }
+  #cubeBorder{
+    fill: #00425a;
+    fill-opacity:1;
+    stroke: #00425a;
+    stroke-width: 2px;
+  }
+}
+#mainLogo image{
+  position: absolute;
+  z-index: 4;
+  top: 33.4%;  
+  left: 33.8%;
+  opacity: 0;
+  -webkit-animation: fadeIn 2s ease-in 8s forwards;
+     -moz-animation: fadeIn 2s ease-in 8s forwards;
+       -o-animation: fadeIn 2s ease-in 8s forwards;
+          animation: fadeIn 2s ease-in 8s forwards;  
+}
+// ------------Hexagon Menu-------------------
+#hexaMenu,
+#social_icons{
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+     -moz-animation: fadeIn 3s ease-in 5s forwards;
+       -o-animation: fadeIn 3s ease-in 5s forwards;
+          animation: fadeIn 3s ease-in 5s forwards;
+}
+//other css code is in _cl-effect.scss

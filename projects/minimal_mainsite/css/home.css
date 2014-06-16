@@ -1,0 +1,776 @@
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'ecoicon';
+  src: url("../fonts/ecoicons/ecoicon.svg#ecoicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@-webkit-keyframes watermarkFadeIn {
+  /* line 4, ../sass/_Animation.scss */
+  to {
+    opacity: 0.4;
+  }
+}
+
+@-moz-keyframes watermarkFadeIn {
+  /* line 9, ../sass/_Animation.scss */
+  to {
+    opacity: 0.4;
+  }
+}
+
+@-o-keyframes watermarkFadeIn {
+  /* line 14, ../sass/_Animation.scss */
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes watermarkFadeIn {
+  /* line 19, ../sass/_Animation.scss */
+  to {
+    opacity: 0.4;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 26, ../sass/_Animation.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 31, ../sass/_Animation.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 36, ../sass/_Animation.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 41, ../sass/_Animation.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 47, ../sass/_Animation.scss */
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 52, ../sass/_Animation.scss */
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 57, ../sass/_Animation.scss */
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 62, ../sass/_Animation.scss */
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cubeAnimate {
+  /* line 101, ../sass/_Animation.scss */
+  10% {
+    stroke-opacity: 1;
+  }
+
+  /* line 104, ../sass/_Animation.scss */
+  40% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 107, ../sass/_Animation.scss */
+  60% {
+    fill-opacity: 0;
+    stroke-opacity: 1;
+  }
+
+  /* line 111, ../sass/_Animation.scss */
+  80% {
+    fill-opacity: 0.5;
+  }
+
+  /* line 114, ../sass/_Animation.scss */
+  90% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0;
+  }
+
+  /* line 118, ../sass/_Animation.scss */
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+}
+
+@-moz-keyframes cubeAnimate {
+  /* line 125, ../sass/_Animation.scss */
+  10% {
+    stroke-opacity: 1;
+  }
+
+  /* line 128, ../sass/_Animation.scss */
+  40% {
+    fill-opacity: 0;
+  }
+
+  /* line 131, ../sass/_Animation.scss */
+  80% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 134, ../sass/_Animation.scss */
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 0;
+  }
+}
+
+@-o-keyframes cubeAnimate {
+  /* line 141, ../sass/_Animation.scss */
+  10% {
+    stroke-opacity: 1;
+  }
+
+  /* line 144, ../sass/_Animation.scss */
+  40% {
+    fill-opacity: 0;
+  }
+
+  /* line 147, ../sass/_Animation.scss */
+  80% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 150, ../sass/_Animation.scss */
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes cubeAnimate {
+  /* line 157, ../sass/_Animation.scss */
+  10% {
+    stroke-opacity: 1;
+  }
+
+  /* line 160, ../sass/_Animation.scss */
+  40% {
+    fill-opacity: 0;
+  }
+
+  /* line 163, ../sass/_Animation.scss */
+  80% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 166, ../sass/_Animation.scss */
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 0;
+  }
+}
+
+/* line 1, ../sass/_cl-effect2.scss */
+.cl-effect a {
+  color: white;
+  background: transparent;
+  font-weight: 100;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+/* line 14, ../sass/_cl-effect2.scss */
+.cl-effect a::before {
+  top: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+/* line 23, ../sass/_cl-effect2.scss */
+.cl-effect a::after {
+  bottom: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+/* line 34, ../sass/_cl-effect2.scss */
+.cl-effect a:hover::before,
+.cl-effect a:focus::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::after {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* line 42, ../sass/_cl-effect2.scss */
+.cl-effect a {
+  padding: 1%;
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 45, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.1%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 48, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.3%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 51, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.5%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 54, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 1.9%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 57, ../sass/_cl-effect2.scss */
+  .cl-effect a {
+    padding: 2.5%;
+  }
+}
+/* line 60, ../sass/_cl-effect2.scss */
+div a {
+  position: relative;
+  display: inline-block;
+  /*	margin: 15px 25px;   */
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1%;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.5em;
+  /*  
+      @media all and (min-width: pem(1024)){
+          float: none;
+      }
+  */
+}
+
+@media all and (max-width: 37.5em) {
+  /* line 79, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-size: 0.7em;
+    font-weight: 100;
+    left-margin: 70%;
+    float: left;
+  }
+}
+@media all and (max-height: 37.5em) {
+  /* line 87, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-size: 0.7em;
+    font-weight: 100;
+    top-margin: 0%;
+    float: top;
+  }
+}
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 95, ../sass/_cl-effect2.scss */
+  div a {
+    float: none;
+    width: auto;
+    letter-spacing: 0.04%;
+    font-weight: 100;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.3em;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 104, ../sass/_cl-effect2.scss */
+  div a {
+    float: left;
+    width: auto;
+    margin: 2% 2.5%;
+    letter-spacing: 0.0035%;
+    font-weight: 80;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.05em;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 114, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    letter-spacing: 0.02%;
+    font-weight: 100;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 122, ../sass/_cl-effect2.scss */
+  div a {
+    float: left;
+    width: auto;
+    margin: 0% 0.5%;
+    letter-spacing: 0.01%;
+    font-weight: 30;
+    text-shadow: 0 0 0% rgba(255, 255, 255, 0.3);
+    font-size: 0.7em;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 132, ../sass/_cl-effect2.scss */
+  div a {
+    width: auto;
+    height: auto;
+    margin: 0% 0.5%;
+    letter-spacing: 0.002%;
+    font-weight: 20;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 0.6em;
+  }
+}
+/* line 143, ../sass/_cl-effect2.scss */
+.cl-effect a::before,
+.cl-effect a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  background: #fff;
+  content: '';
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  /* for 125   */
+  /* for 150  */
+  /* for 175   */
+  /* for 250  */
+  /* for 300  */
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 167, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 3.75%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 171, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 3.5%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 175, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.75%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 179, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.5%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 183, ../sass/_cl-effect2.scss */
+  .cl-effect a::before,
+  .cl-effect a::after {
+    height: 2.25%;
+  }
+}
+/* line 1, ../sass/_hiddenMenu.scss */
+.menuB {
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+  -moz-animation: fadeIn 3s ease-in 5s forwards;
+  -o-animation: fadeIn 3s ease-in 5s forwards;
+  animation: fadeIn 3s ease-in 5s forwards;
+}
+
+/* line 9, ../sass/_hiddenMenu.scss */
+#menu_icon {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  z-index: 399;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 1.5% 3%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  color: white;
+}
+
+/* line 25, ../sass/_hiddenMenu.scss */
+#menu_icon:hover {
+  color: #00425a;
+  font-size: 2px;
+}
+
+/* line 29, ../sass/_hiddenMenu.scss */
+#menu_icon:before {
+  font-family: 'ecoicon';
+  speak: none;
+  font-size: 32px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  content: "\e006";
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+/* line 44, ../sass/_hiddenMenu.scss */
+#menu_icon:after {
+  top: -8%;
+  left: -8%;
+  padding: 8%;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 3px 3px white;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  -moz-transition: opacity 0.2s,    -moz-transform 0.2s;
+  -o-transform: rotate(-90deg), -o-transform 0.2s;
+  transition: opacity 0.2s,         transform 0.2s;
+}
+
+/* line 62, ../sass/_hiddenMenu.scss */
+#menu_icon:hover:after {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 71, ../sass/_hiddenMenu.scss */
+.menu_popup {
+  position: absolute;
+  background-color: black;
+  z-index: 400;
+  height: 100%;
+  width: 30%;
+  top: 0%;
+  left: -30%;
+  opacity: 1;
+}
+
+/* line 82, ../sass/_hiddenMenu.scss */
+#menu_rhs {
+  position: absolute;
+  z-index: 401;
+  height: 100%;
+  width: 0%;
+  top: 0%;
+  right: -70%;
+  opacity: 1;
+}
+
+/* line 92, ../sass/_hiddenMenu.scss */
+.menu_popup .row {
+  color: white;
+  font-size: 1.3em;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 106, ../sass/_hiddenMenu.scss */
+  .menu_popup .row {
+    font-size: 1.3em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 5%;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 116, ../sass/_hiddenMenu.scss */
+  .menu_popup .row {
+    font-size: 1em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 4.5%;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 126, ../sass/_hiddenMenu.scss */
+  .menu_popup .row {
+    font-size: 0.8em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    height: 4%;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 136, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 0.6em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    height: 3%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 146, ../sass/_hiddenMenu.scss */
+  .menu_options {
+    font-size: 0.5em;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+    height: 3.5%;
+  }
+}
+/* line 155, ../sass/_hiddenMenu.scss */
+.menu_options a {
+  font-size: 1.3em;
+}
+
+/* line 158, ../sass/_hiddenMenu.scss */
+.menu_options:hover a {
+  color: black;
+}
+
+/* line 161, ../sass/_hiddenMenu.scss */
+.header {
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  height: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 171, ../sass/_hiddenMenu.scss */
+  .header {
+    font-size: 1em;
+    height: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 177, ../sass/_hiddenMenu.scss */
+  .header {
+    font-size: 0.8em;
+    height: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+}
+@media all and (min-width: 62.5em) and (max-width: 75em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 450px;
+    width: 410px;
+  }
+}
+@media all and (min-width: 56.25em) and (max-width: 62.5em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 360px;
+    width: 328px;
+  }
+}
+@media all and (min-width: 42.5em) and (max-width: 56.25em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 225px;
+    width: 205px;
+  }
+}
+@media all and (min-width: 31.25em) and (max-width: 42.5em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 135px;
+    width: 123px;
+  }
+}
+@media all and (min-width: 21.875em) and (max-width: 31.25em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 90px;
+    width: 82px;
+  }
+}
+@media all and (max-width: 21.875em) {
+  /* line 8, ../sass/_responsiveSVG.scss */
+  #plane, #phone, #tools, #mike, #group, #rupee {
+    height: 45px;
+    width: 41px;
+  }
+}
+
+/* line 65, ../sass/_responsiveSVG.scss */
+#mainLogo {
+  height: 250px;
+  width: 400px;
+}
+/* line 68, ../sass/_responsiveSVG.scss */
+#mainLogo svg {
+  height: 250px;
+  width: 400px;
+}
+
+/* line 35, ../sass/mainPage.scss */
+body {
+  background-image: url("../img/bg.png");
+  line-height: 1.42857;
+  font-family: "Titillium Web";
+}
+
+/* line 42, ../sass/mainPage.scss */
+#notice {
+  color: white;
+}
+
+/* line 47, ../sass/mainPage.scss */
+#social_icons {
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  color: white;
+}
+
+/* line 55, ../sass/mainPage.scss */
+#watermark div {
+  opacity: 1;
+  -moz-animation: fadeIn 2s ease-in 10s forwards;
+  -o-animation: fadeIn 2s ease-in 10s forwards;
+  animation: fadeIn 2s ease-in 10s forwards;
+}
+
+/* line 64, ../sass/mainPage.scss */
+#mainLogo {
+  opacity: 1;
+}
+/* line 67, ../sass/mainPage.scss */
+#mainLogo #cubeDots {
+  fill: white;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-width: 2px;
+}
+/* line 73, ../sass/mainPage.scss */
+#mainLogo #cubeBorder {
+  fill: #00425a;
+  fill-opacity: 1;
+  stroke: #00425a;
+  stroke-width: 2px;
+}
+
+/* line 80, ../sass/mainPage.scss */
+#mainLogo image {
+  position: absolute;
+  z-index: 4;
+  top: 33.4%;
+  left: 33.8%;
+  opacity: 0;
+  -webkit-animation: fadeIn 2s ease-in 8s forwards;
+  -moz-animation: fadeIn 2s ease-in 8s forwards;
+  -o-animation: fadeIn 2s ease-in 8s forwards;
+  animation: fadeIn 2s ease-in 8s forwards;
+}
+
+/* line 93, ../sass/mainPage.scss */
+#hexaMenu,
+#social_icons {
+  opacity: 0;
+  -webkit-animation: fadeIn 3s ease-in 5s forwards;
+  -moz-animation: fadeIn 3s ease-in 5s forwards;
+  -o-animation: fadeIn 3s ease-in 5s forwards;
+  animation: fadeIn 3s ease-in 5s forwards;
+}
