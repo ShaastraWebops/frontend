@@ -5,16 +5,12 @@
 		<?php include 'head.php' ?>
 		<link rel="stylesheet" type="text/css" href="../css/component_carousel.css">
         <style type="text/css">
-			.title {
-				color: white;
-	    		font-family: 'Titillium Web', sans-serif;
-			}
 			.container.title, .container-fluid.title {
 				margin-bottom: 2%;
 			}
 			.subtitle{
 				color: white;
-	    		font-family: 'Titillium Web', sans-serif;
+	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 2.5em
 			}
 			.white {
@@ -22,8 +18,9 @@
 			}
 			.text {
 				color: white;
-	    		font-family: 'Titillium Web', sans-serif;
-	    		font-size: 1.15em
+	    		/*font-family: 'Titillium Web', sans-serif;*/
+	    		font-size: 1.15em;
+	    		text-align: justify;
 			}
 			.profile{
 				height: 34%;
@@ -33,10 +30,10 @@
 	</head>
 	<body>
 		<?php include 'menu.php' ?>
-		<div class="container-fluid title white centered">
+		<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center">LECTURES</h1>
+                    <h1 class="text-center title">LECTURES</h1>
                     <div class="white breaker">
                         <span class="left"></span>
                         <div class="dice white"></div>

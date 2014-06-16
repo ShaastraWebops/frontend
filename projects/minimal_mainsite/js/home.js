@@ -12,10 +12,7 @@ $(document).ready(function(){
 		x.style.zIndex = z;
 		x.style.top = (window.innerHeight - x.clientHeight)/2+"px";
 		x.style.left = (window.innerWidth - x.clientWidth)/2+"px";
-	}
-	function redirectPage () {
-		window.location = linkLocation;
-	}
+	}	
     function pageCenterPercent (id, z) {
 		x = document.getElementById(id);
 		x.style.position = "absolute";
@@ -64,30 +61,6 @@ $(document).ready(function(){
 			break;		
 		}
 	}
-
-	//pageTransition - Common
-	$("body").css("display", "none");    
-    $("body").fadeIn(1000);
-    $(".next_page").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $("body").fadeOut(2000, redirectPage);      
-    });         
-    
-  			//respond to ESC keydown
-  	$('body').keydown(function(e){
-	    // alert(e.which);
-	    if(e.which == 27){
-	    	$("#menu_popup").animate({
-				left: '-30%'
-			},"slow");                      
-			$("#menu_rhs").animate({
-			    right: '-70%',
-			    width: '0%'
-	  		},"slow");
-	    }
-	});	
-
   	//Hover effect on HomePage Navigation
 	fIn = 0.4;
 	fOut = 1;
@@ -291,11 +264,13 @@ $(document).ready(function(){
     });
 });//end of ready function
 
-var cAnimate = function(id,duration,delay){
+var cAnimate = function(id){
 	var x = document.getElementById(id);
 	x.style.fillOpacity = 0;
 	var pathLength = x.getTotalLength();
 	x.style.strokeDashoffset = pathLength;
+	duration = 6;
+	delay = 1;
 	x.style.strokeDasharray = pathLength+" "+pathLength;
 	x.style.WebkitAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 	x.style.mozAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
@@ -304,20 +279,20 @@ var cAnimate = function(id,duration,delay){
 	// x.style.MozAnimation = "cubeAnimate 8s ease-in-out 1s forwards";	
 	// console.log("testing in Mozilla");
 }
-cAnimate("cubeBorder",10,1);
-cAnimate("cubeDots",10,1);
-cAnimate("s2",10,1);
-cAnimate("s0",10,1);
-cAnimate("s1",10,1);
-cAnimate("s5",10,1);
-cAnimate("sS1",10,1);
-cAnimate("sS2",10,1);
-cAnimate("sH",10,1);
-cAnimate("sA1",10,1);
-cAnimate("sA2",10,1);
-cAnimate("sA3",10,1);
-cAnimate("sR",10,1);
-cAnimate("sT",10,1);
+cAnimate("cubeBorder");
+cAnimate("cubeDots");
+cAnimate("s2");
+cAnimate("s0");
+cAnimate("s1");
+cAnimate("s5");
+cAnimate("sS1");
+cAnimate("sS2");
+cAnimate("sH");
+cAnimate("sA1");
+cAnimate("sA2");
+cAnimate("sA3");
+cAnimate("sR");
+cAnimate("sT");
 
 // document.getElementById("mike").style.height = "5%";
 function reScale (id, scale) {

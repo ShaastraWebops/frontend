@@ -55,9 +55,9 @@ body{
 }
 
 #watermark div{    
-  opacity: 1;
+  opacity: 0;
   // display: none;
-  // -webkit-animation: fadeIn 2s ease-in 10s forwards;
+  -webkit-animation: fadeIn 2s ease-in 10s forwards;
      -moz-animation: fadeIn 2s ease-in 10s forwards;
        -o-animation: fadeIn 2s ease-in 10s forwards;
           animation: fadeIn 2s ease-in 10s forwards;      
@@ -85,10 +85,11 @@ body{
   top: 33.4%;  
   left: 33.8%;
   opacity: 0;
-  -webkit-animation: fadeIn 2s ease-in 8s forwards;
-     -moz-animation: fadeIn 2s ease-in 8s forwards;
-       -o-animation: fadeIn 2s ease-in 8s forwards;
-          animation: fadeIn 2s ease-in 8s forwards;  
+  $dur: 5s;
+  -webkit-animation: fadeIn 2s ease-in $dur forwards;
+     -moz-animation: fadeIn 2s ease-in $dur forwards;
+       -o-animation: fadeIn 2s ease-in $dur forwards;
+          animation: fadeIn 2s ease-in $dur forwards;  
 }
 // ------------Hexagon Menu-------------------
 #hexaMenu,

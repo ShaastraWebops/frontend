@@ -4,6 +4,8 @@
 		<title>Shaastra 15</title>
 
         <?php include 'head.php'; ?>
+        <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
 
 	</head>
 	<body>
@@ -160,11 +162,12 @@
         <script>
             $(document).ready(function(){
             /* code for browser detection start */            
-                $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
-               if($.browser.chrome){
-                   $.browser.safari = false;
-                   $("#notice").css("opacity","0");
-               }
+               ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());   
+                if(ifChrome){
+                    // $.browser.safari = false;
+                    $("#notice").css("opacity","0");
+                    // alert(1);
+                }
                 else{
                     $("#notice").css("opacity","1");
                 }

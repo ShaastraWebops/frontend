@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		
-		<div class="container-fluid" style="height : 100%;">
+		<div class="container-fluid" style="height:100%;">
 			<div class="row white" style="height : 70%;">
 				<div class="col-md-5 col-md-offset-1" style="height : 100%;">
 					<div class="container-fluid text-center white" style="height : 100%;">
