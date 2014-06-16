@@ -1,0 +1,194 @@
+.white {
+    color : #ffffff;
+}
+.margin-1 {
+    margin: 1%;
+}
+.margin-top-2 {
+    margin-top: 2%;
+}
+
+.btn.btn-bluebox {
+    background-color: rgba(14, 99, 133, 0.5);
+    height : 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.btn.btn-bluebox:hover,
+.btn.btn-bluebox:focus,
+.btn.btn-bluebox:active,
+.btn.btn-bluebox.active {
+    color: #ffffff;
+    background-color: rgba(14, 99, 133, 1);
+    border-color: #285e8e;
+}
+
+
+.hr {
+    display: block;
+    margin: 0 auto;
+    height: 5px;
+    width: 35%;
+}  
+
+.col-sm-push-i1 {
+    left: 4%;   
+}      
+.col-sm-push-i5 {
+/*    left: 37.500000005%;   */
+    left: 39%;  
+}      
+.col-sm-push-i9 {
+    left: 74.166666665%;  
+}      
+.col-sm-push-i3 {
+    left: 21%;   
+}
+.col-sm-push-i2 {
+    left: 12.5%;   
+}
+
+textarea {  
+    width: 100%;  
+    min-height: 100px;  
+    font-size: 18px;  
+    color: #444;  
+    padding: 5px;
+    word-wrap: break-word;
+    resize: vertical;
+}  
+
+
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input,
+.left-inner-addon textarea {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 10px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+
+
+
+.merged {
+    margin:10px;
+}
+.merged .input-group-addon {
+    border-right: 0px;
+    background-color: #FFFFFF;
+}
+.merged input,{
+    border-left: 0px;
+    background-color: #FFFFFF;
+}
+.focusedInput {
+    border-color: rgba(82,168,236,.8) ;
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+         box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+
+
+
+
+
+
+
+
+.breaker {
+    width:387px;
+    height:14px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+.breaker span {
+    width:160px;
+    height:1px;
+    display:inline-block;
+    margin:14px 0 6px 0;
+    color : #000;
+}
+.dice {
+    width : 51px;
+    height : 28px;
+    margin : 0 8px;
+}
+
+.breaker .dice {
+    width:51px;
+    height:28px;
+    float:left;
+    margin:0 8px;
+}
+.dice {
+    background:url(../images/dice.png) no-repeat;
+}
+.dice.white {
+    background:url(../images/dice_white.png) no-repeat;
+}
+
+.breaker span {
+    background: #d5d5d5;
+    background: #000;
+}
+.breaker.white span {
+    background: #fff;
+}
+.breaker .left{
+    float: left;
+    background: linear-gradient(to left, #000, transparent);
+}
+.breaker .right{
+    float: right;
+    background: linear-gradient(to right, #000, transparent);
+}
+.breaker.white .left{
+    float: left;
+    background: linear-gradient(to left, #fff, transparent);
+}
+.breaker.white .right{
+    float: right;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
