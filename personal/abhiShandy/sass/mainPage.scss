@@ -6,11 +6,12 @@
   font-style: normal;
   font-weight: 400;
   src: local('Titillium Web'), local('TitilliumWeb-Regular'), 
-      url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) 
-      format('woff');
+    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) 
+    format('woff');
 }
 //Variables
 $font: "Titillium Web","TakaoPGothic","Century Schoolbook L",Verdana;
+// $font: "TakaoPGothic","Century Schoolbook L",Verdana;
 $scale: 0.1;
 $blue: #00425a;
 //importing fonts
@@ -22,8 +23,9 @@ $blue: #00425a;
 }
 //importing partials
 @import "Animation";
-@import "cl-effect";
-// @import "responsive";
+@import "cl-effect2";
+// @import "social";
+@import "hiddenMenu";
 @import "responsiveSVG";
 
 @function pem($pixels){
@@ -32,18 +34,28 @@ $blue: #00425a;
 
 body{
   background-image: url("../images/new black.png");
+  line-height: 1.42857;
+  font-family: "Titillium Web";
   // replace with svg
 }
 
 #notice{
   color: white;
-  display: none;
+  // display: none;
 }
 
+#social_icons{
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  color: white;
+  $space: 0.5em;  
+}
 
 #watermark div{    
-  opacity: 0;
-  -webkit-animation: fadeIn 2s ease-in 10s forwards;
+  opacity: 1;
+  // display: none;
+  // -webkit-animation: fadeIn 2s ease-in 10s forwards;
      -moz-animation: fadeIn 2s ease-in 10s forwards;
        -o-animation: fadeIn 2s ease-in 10s forwards;
           animation: fadeIn 2s ease-in 10s forwards;      
@@ -76,138 +88,13 @@ body{
        -o-animation: fadeIn 2s ease-in 8s forwards;
           animation: fadeIn 2s ease-in 8s forwards;  
 }
-//Sliding Menu
-.menuB{
-  opacity: 0;
-  -webkit-animation: fadeIn 3s ease-in 5s forwards;  
-     -moz-animation: fadeIn 3s ease-in 5s forwards; 
-       -o-animation: fadeIn 3s ease-in 5s forwards; 
-          animation: fadeIn 3s ease-in 5s forwards; 
-}
-
-#menu_icon:before {
-  font-family: 'ecoicon';
-  speak: none;
-  font-size: 48px;
-  line-height: 90px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  display: block;
-  -webkit-font-smoothing: antialiased;
-     -moz-font-smoothing: antialiased;
-       -o-font-smoothing: antialiased;
-}
-#menu_icon:before {
-  content: "\e006";
-}
-#menu_icon:after {
-  top: -8%;
-  left: -8%;
-  padding: 8%;
-  z-index: -1;
-  opacity: 0;
-}
-#menu_icon:after {
-  box-shadow: 3px 3px rgba(255,255,255,1);
-  -webkit-transform: rotate(-90deg);
-     -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-       -o-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-     -moz-transition: opacity 0.2s,    -moz-transform 0.2s;
-        -o-transform: rotate(-90deg),    -o-transform 0.2s;
-          transition: opacity 0.2s,         transform 0.2s;
-}
-#menu_icon:hover:after {
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-       -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-#menu_icon{
-  position:absolute; 
-  z-index: 1;
-  top:0%; 
-  left:0%; 
-  z-index:399;
-  display: inline-block;
-  font-size: 0px;
-  cursor: pointer;
-  margin: 1.5% 3%;
-  width: 90px;
-  height: 90px;
-  text-align: center;
-  color: white;
-}
-#menu_icon:hover {
-  color: #00425a;
-  font-size: 2px;
-}
-
-#menu_popup{
-  position:absolute; 
-  background-color:black; 
-  z-index:400; 
-  height:100%; 
-  width:30%; 
-  top:0%; 
-  left:-30%; 
-  opacity:1;
-}
-
-.menu_options{
-  color: white;
-  font-family: $font;
-  font-size: 1.5em;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  width: 100%;
-  text-align: center;
-  height: 5%;
-  cursor: pointer;
-  a{
-    text-decoration: none;
-    color: white;
-  }
-}
-.menu_options:hover{
-  a{
-    color: black;
-  }
-}
-.header{
-  color: white;
-  font-family: $font;
-  font-size: 2em;    
-  width: 100%;
-  text-align: center;
-  height: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%;  
-}
-#menu_rhs{
-  position:absolute; 
-  z-index:401; 
-  height:100%; 
-  width:0%; 
-  top:0%; 
-  right:-70%; 
-  opacity:1;
-}
 // ------------Hexagon Menu-------------------
-#hexaMenu{
+#hexaMenu,
+#social_icons{
   opacity: 0;
   -webkit-animation: fadeIn 3s ease-in 5s forwards;
      -moz-animation: fadeIn 3s ease-in 5s forwards;
        -o-animation: fadeIn 3s ease-in 5s forwards;
           animation: fadeIn 3s ease-in 5s forwards;
 }
+//other css code is in _cl-effect.scss

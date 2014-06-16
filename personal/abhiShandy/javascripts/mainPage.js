@@ -315,6 +315,16 @@ $(document).ready(function(){
 	else{
     	$("#notice").css("opacity","1");
 	}
+
+	$(".facebook").click(function(){
+        $(location).attr('href', 'https://www.facebook.com/Shaastra');                        
+    });
+    $(".twitter").click(function(){
+        $(location).attr('href', 'https://twitter.com/ShaastraIITM');                        
+    });
+    $(".youtube").click(function(){
+        $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');
+    });
 });//end of ready function
 
 var cAnimate = function(id,duration,delay){
@@ -327,6 +337,8 @@ var cAnimate = function(id,duration,delay){
 	x.style.mozAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 	x.style.oAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
 	x.style.animation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
+	// x.style.MozAnimation = "cubeAnimate 8s ease-in-out 1s forwards";	
+	// console.log("testing in Mozilla");
 }
 cAnimate("cubeBorder",10,1);
 cAnimate("cubeDots",10,1);
@@ -343,3 +355,19 @@ cAnimate("sA3",10,1);
 cAnimate("sR",10,1);
 cAnimate("sT",10,1);
 
+// document.getElementById("mike").style.height = "5%";
+function reScale (id, scale) {
+	x = document.getElementById(id);
+	x.setAttribute("transform","scale("+scale+")");	
+	y = document.getElementById(id+"2");
+	nh = y.getAttribute("height")*scale;
+	y.setAttribute("height",nh+"px");
+	nw = y.getAttribute("width")*scale;
+	y.setAttribute("width",nw+"px");
+}
+
+// reScale("rupee",0.5);
+$(document).ready(function(){
+/* code for browser detection start */            
+
+});

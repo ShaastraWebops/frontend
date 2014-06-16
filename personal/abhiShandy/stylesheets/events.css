@@ -1,0 +1,18 @@
+/* line 1, ../sass/events.scss */
+body {
+  background: url("../images/new black.png");
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* line 5, ../sass/events.scss */
+#title {
+  color: white;
+  font-size: 5em;
+}
+
+/* line 9, ../sass/events.scss */
+.container {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
