@@ -1,5 +1,5 @@
 <div class="menuB">
-    <c id="menu_icon" class="hi-icon hi-icon-list"></c>
+    <span class="glyphicon glyphicon-list"></span>
 </div>
 
 <!-- menu popup start -->
@@ -74,7 +74,16 @@
 
 <script>
     $(document).ready(function(){
-        $("#menu_icon").click(function(){
+        $(".menuB span").hover(function(){
+            $(this).css("color","#00425a");
+            $(this).removeClass("glyphicon-list");
+            $(this).addClass("glyphicon-th-large");
+        },function(){
+            $(this).css("color","white");
+            $(this).removeClass("glyphicon-th-large");
+            $(this).addClass("glyphicon-list");
+        });
+        $(".menuB").click(function(){
             $(".menu_popup").animate({
                 left: '0%',
                 opacity: '1'                  

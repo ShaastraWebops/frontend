@@ -299,9 +299,12 @@ div a {
     height: 2.25%; } }
 .menuB {
   opacity: 0;
+  color: white;
+  font-size: 3em;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  cursor: pointer;
+  top: 5%;
+  left: 5%;
   z-index: 399;
   -webkit-animation: fadeIn 2s ease-in forwards;
   -moz-animation: fadeIn 2s ease-in forwards;
