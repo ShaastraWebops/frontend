@@ -720,8 +720,8 @@ body {
 /* line 47, ../sass/mainPage.scss */
 #social_icons {
   position: absolute;
-  right: 5%;
-  top: 2%;
+  right: 2%;
+  bottom: 2%;
   color: white;
 }
 
