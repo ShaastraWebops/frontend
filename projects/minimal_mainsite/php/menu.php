@@ -99,8 +99,6 @@
                     <div class="col-xs-12">
                         <a class="next_page" href="lectures.php">Lectures</a>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-xs-12">
                         <a class="next_page" href="spons.php">Sponsors</a>
                     </div>
@@ -110,16 +108,18 @@
                         <a class="next_page" href="contact.php">Contact Us</a>
                     </div>
                 </div>
-
+                <div class="row margin-bottom-1">
+                    <hr />
+                </div>
                 <div class="row">
                     <div class="col-xs-4">
-                        Facebook
+                        <a href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
                     </div>
                     <div class="col-xs-4">
-                        Twitter
+                        <a href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
                     </div>
                     <div class="col-xs-4">
-                        Youtube
+                        <a href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
                     </div>
                 </div>
             </div>
