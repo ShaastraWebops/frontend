@@ -22,7 +22,7 @@ body {
   margin-bottom: 2%;
 }
 /* line 16, ../sass/events.scss */
-.container .row div {
-  margin-top: 1%;
-  margin-bottom: 1%;
+.container .row button {
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
 }
