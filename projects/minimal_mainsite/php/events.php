@@ -1,156 +1,336 @@
-<!DOCtype html>
-<html>
-	<head>
-		<title>Shaastra'15: Events</title>
-		<link rel="shortcut icon" href="../images/favicon.ico">
-        <!-- <link href="../stylesheets/font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet">         -->
-        <link rel="stylesheet" type="text/css" href="../stylesheets/events.css">
-        <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/eventsBootstrap.css">
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-        <script src="../javascripts/jquery-1.11.0.js"></script>   
-	</head>
-	<body>
-		<header id="title" align="center">Events</header>
-		<div class="white breaker">
-            <span class="left"></span>
-            <div class="dice white"></div>
-            <span class="right"></span>
+<html lang="en"><head>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <title>Shaastra Events</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      body{
+        font-family:'Titillium Web', sans-serif;
+        color:#BBB;
+      }
+      p{
+        font-family: 'Titillium Web', sans-serif;
+      }
+      p:hover{
+        opacity:0.6;
+      }
+      .jumbotron p{
+        color: black;
+        font-weight:400;
+      }
+      .jumbotron p:hover{
+        opacity: 0.6
+      }
+      .jumbotron{
+        background-color: rgba(238, 238, 238, 0.46)
+      }
+
+      .btn-grey{
+        background-color: rgb(150,150,150);
+        border-color: rgb(150,150,150);
+      }
+      .btn-grey:hover{
+        opacity: 0.5;
+        background-color: rgb(150,150,150);
+      }
+      .white-logo:hover{
+        opacity: 0.5
+      }
+    </style>
+ </head><body background="../img/bg.png">
+
+
+
+ <!-- Bootstrap modals for events -->
+
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- End modals-->
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container" style="
+    text-align: center;
+">
+  <div class='row'>
+        <div class="col-md-4 col-md-offset-4" style="
+    text-align: center;
+">
+  <a href='#events_main'><img class='white-logo' src="../img/dice_white.png" style="
+    padding-top: 10px;
+"></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
         </div>
-        <div class="container">
-        	<div class="row">
-        		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/aerofest.png">
-        		</div>
-	        	<button class="btn btn-primary col-md-3">Aerobotics</button>
-	        	<button class="btn btn-primary col-md-3">Wright Design</button>
-	        	<button class="btn btn-primary col-md-3">Paper Planes</button>
-	        	<button class="btn btn-primary col-md-3">Top Gun</button>
-	    		<button class="btn btn-primary col-md-3">AirShow</button>
-	    		<button class="btn btn-primary col-md-3">Boeing National Aeromodelling Competition</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/coding.png">
-        		</div>
-                <button class="btn btn-primary col-md-2">Reverse Coding</button>
-                <button class="btn btn-primary col-md-2">Triathlon</button>
-                <button class="btn btn-primary col-md-2">Debugging</button>
-                <button class="btn btn-primary col-md-3">Code Obfuscation</button>
-                <button class="btn btn-primary col-md-2">Automania</button>
-                <button class="btn btn-primary col-md-2">Hackfest Workshop</button>
-                <button class="btn btn-primary col-md-2">Paypal Hackfest</button>
-                <button class="btn btn-primary col-md-3">Open Programming Contest</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/design.png">
-        		</div>
-                <button class="btn btn-primary col-md-2">Fire N Ice</button>
-                <button class="btn btn-primary col-md-2">Robotics</button>
-                <button class="btn btn-primary col-md-2">Junkyard Wars</button>
-                <button class="btn btn-primary col-md-3">Robowars</button>
-                <button class="btn btn-primary col-md-2">Robo Oceana</button>
-                <button class="btn btn-primary col-md-2">Contraptions</button>
-                <button class="btn btn-primary col-md-2">Ultimate Engineer</button>
-                <button class="btn btn-primary col-md-3">Master Builder</button>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive" src="../images/events/involve.png">
-                </div>
-                <button class="btn btn-primary col-md-2">Project X</button>
-                <button class="btn btn-primary col-md-2">Shaastra Cube Open</button>
-                <button class="btn btn-primary col-md-2">Math Modelling</button>
-                <button class="btn btn-primary col-md-2">Puzzle Champ</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/quiz.png">
-        		</div>
-                <button class="btn btn-primary col-md-2">Shaastra Junior Quiz</button>
-                <button class="btn btn-primary col-md-2">Shaastra main Quiz</button>
-                <button class="btn btn-primary col-md-2">How Things Work</button>
-                <button class="btn btn-primary col-md-2">Auto Quiz</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/online.png">
-        		</div>
-                <button class="btn btn-primary col-md-3">Online Math Modelling</button>
-                <button class="btn btn-primary col-md-3">Online Puzzle Champ</button>
-                <button class="btn btn-primary col-md-3">Finance and Consultancy</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/dept.png">
-        		</div>
-                <button class="btn btn-primary col-md-2">Robo Oceana</button>
-                <button class="btn btn-primary col-md-2">Desmod</button>
-                <button class="btn btn-primary col-md-2">Onspot Desmod</button>
-                <button class="btn btn-primary col-md-2">Chemical X</button>
-                <button class="btn btn-primary col-md-2">Forensics</button>
-                <button class="btn btn-primary col-md-2">Master Builder</button>
-                <button class="btn btn-primary col-md-3">Shaastra Circuit Design Contest</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/spotlight.png">
-        		</div>
-                <button class="btn btn-primary col-md-3">Sustainable Cityscape</button>
-                <button class="btn btn-primary col-md-3">Shaastra Junior</button>
-                <button class="btn btn-primary col-md-3">IIT Madras Symposium</button>
-                <button class="btn btn-primary col-md-3">Ideas Challenge</button>                
-                <button class="btn btn-primary col-md-3">Education Fair</button>
-                <button class="btn btn-primary col-md-3">Pan IIT Research Expo</button>
-                <button class="btn btn-primary col-md-3 col-md-offset-3">Paper and Poster Presentation</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/workshop.png">
-        		</div>
-                <!-- Too many events, thus problematic -->
-                <button class="btn btn-primary col-md-3">Autonomous Robotics Workshop</button>
-                <button class="btn btn-primary col-md-3">Chuckglider Workshop</button>
-                <button class="btn btn-primary col-md-3">Hovercraft Workshop</button>
-                <button class="btn btn-primary col-md-2">3D Animation Workshop</button>
-                <button class="btn btn-primary col-md-2">Forensics Workshop</button>
-                <button class="btn btn-primary col-md-2">Rubiks Cube Workshop</button>    
-                <button class="btn btn-primary col-md-3">Boeing Aeromodelling Workshop</button>
-                <button class="btn btn-primary col-md-2">Robosoccer Workshop</button>
-                <button class="btn btn-primary col-md-2">Paper-plane Workshop</button>
-                <button class="btn btn-primary col-md-2">Network Security Workshop</button>
-                <button class="btn btn-primary col-md-3">Android Development Workshop</button>
-                <button class="btn btn-primary col-md-4 col-md-offset-3">Digital Fabrication and Prototyping Workshop</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/shows.png">
-        		</div>
-                <button class="btn btn-primary col-md-3">Product Launch</button>
-                <button class="btn btn-primary col-md-3">Tech Lounge</button>
-                <button class="btn btn-primary col-md-3">Magic Materials</button>
-                <button class="btn btn-primary col-md-3 col-md-offset-1">Shaastra Exhibitions</button>
-                <button class="btn btn-primary col-md-3">Space Trek Planetarium</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/bevent.png">
-        		</div>
-                <button class="btn btn-primary col-md-2">Case Study</button>
-                <button class="btn btn-primary col-md-2">Vitanetti</button>
-                <button class="btn btn-primary col-md-2">Estimus</button>
-                <button class="btn btn-primary col-md-2">Art of Business</button>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/misc.png">
-        		</div>
-                <button class="btn btn-primary col-md-4">Ericson Industry Defined Problem</button>
-                <button class="btn btn-primary col-md-4">Eaton Industry Defined Problem</button>
-                <button class="btn btn-primary col-md-4">GE Industry Defined Problem</button>
-                <button class="btn btn-primary col-md-4">Research Confluence</button>
-        	</div>
         </div>
-	<script type="text/javascript" src="../javascripts/bootstrap.js"></script>
-	</body>
-</html>
+      <div class="row" style='padding-top:10px;margin-bottom:5px'>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#aerofest'>Aerofest</a>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#design'>Design and Build</a>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#coding'>Coding</a>
+        
+      </div>
+
+      </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" id='events_main'>
+      <div class="container" style="
+    text-align: center;margin-top:20px
+">
+        <h1>Events</h1>
+        <p>Events. The essence of Shaastra.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+
+      <hr>
+
+      
+    </div>
+<div class="jumbotron" id='aerofest'>
+      <div class="container" style="
+    text-align: center;
+    /* opacity: 1; */
+">
+        <h1><img src="../img/events/aerofest.png"></h1>
+        <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+      </div>
+    </div><div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Aerobotics</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Wright Design</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Paper Planes</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>TopGun</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Airshow</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Boeing National Aeromodelling Competition</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+
+      <hr>
+
+      
+    </div>
+
+  <!-- END Aero-->
+  <!-- START Design&Build-->
+  <div class="jumbotron" id='design'>
+      <div class="container" style="
+    text-align: center;
+    /* opacity: 1; */
+">
+        <h1><img src="../img/events/design.png"></h1>
+        <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+      </div>
+    </div><div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Fire and Ice</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Ultimate Engineer</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Lunar Rover Challenge</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Contraptions</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>RoboWars</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Junkyard Wars</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Robotics</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Robo Oceana</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Master Builder</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+      <hr>
+
+      
+    </div>
+  <!-- END Design&Build-->
+
+<!-- START Coding -->
+<div class="jumbotron" id='coding'>
+      <div class="container" style="
+    text-align: center;
+">
+        <h1><img src="../img/events/coding.png"></h1>
+        <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+      </div>
+    </div><div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Open Programming Contest</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Reverse Coding</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Automania</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Code Obfuscation</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Triahlon </h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Debugging</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+        </div>
+      </div>
+
+      <hr>
+
+      
+    </div>
+<!-- END Coding -->
+ <!-- container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+  
+</body></html>
