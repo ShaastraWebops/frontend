@@ -8,7 +8,7 @@
         style="position:absolute; background-color:black; z-index:400; height:100%; width:30%; top:0%; left:-30%; opacity:0">
     <div class="white container-fluid">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 cl-effect-12">
                 <a class="header menu_options" href="home.php">SHAASTRA 2015</a>
             </div>
         </div>
@@ -19,38 +19,38 @@
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <a class="next_page current_page disable menu_options" href="home.php">Home</a>
+        <div class="row" id="home-menu">
+            <div class="col-xs-12 link-braces">
+                <a class="next_page menu_options" href="home.php">Home</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="about-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="about.php">About Us</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="events-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="events.php">Events</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="shows-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="shows.php">Shows</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="lecture-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="lectures.php">Lectures</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="spons-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="spons.php">Sponsors</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="contact-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="contact.php">Contact Us</a>
             </div>
         </div>

@@ -13,23 +13,28 @@
        -o-animation: fadeIn 2s ease-in forwards; 
           animation: fadeIn 2s ease-in forwards; 
 }
-a.current_page{
-  font-size: 3.2em;
-  color: lighten(#00425a, 20%);
+.current_page{
+  background-color: #fff;
+  border: solid #00425a 2px;
+  a{
+    // font-size: 3.2em;
+    color: lighten(#00425a, 20%);    
+    pointer-events: none;
+    cursor: default;
+  } 
 }
 .menu_popup {
   position: absolute;
   background-color: black;
   z-index: 400;
   height: 100%;
-  width: 30%;
   top: 0%;
   left: -30%;
   opacity: 1;
 }
 .header{
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   width: 100%;
   text-align: center;
   height: 10%;
@@ -112,14 +117,154 @@ a.current_page{
     height: 3.5%; 
   } 
 }
-.menu_popup .row a {
- font-size: 1.3em;
-}
-.menu_popup .row:hover a {
-  color: #00425a;
-}
-.menu_popup .row:hover a:hover {
-  text-decoration : none;
-  color: $blue;
 
+.menu_popup.col-xs-12 {
+  position: relative;
+  z-index: 1; /* needed for setting pseudo-element z-index */
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.menu_popup.col-xs-12 a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  vertical-align: bottom;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu_popup.col-xs-12 a::before,
+.menu_popup.col-xs-12 a::after {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+.link-braces a {
+  padding: 0 0.25em;
+  font-weight: 500;
+  -webkit-transition: color 0.2s;
+          transition: color 0.2s;
+}
+
+.link-braces a:hover {
+  color: #00425a;
+  // font-size: 4em;
+}
+
+.link-braces a::before,
+.link-braces a::after {
+  position: absolute;
+  top: 0;
+  font-weight: 100;
+  font-size: 150%;
+  line-height: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+          transition: opacity 0.2s,         transform 0.2s;
+}
+
+.link-braces a::before {
+  left: -0.1em;
+  content: '[';
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.link-braces a::after {
+  right: -0.1em;
+  content: ']';
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.link-braces a:hover::before,
+.link-braces a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.close_menu:hover span{
+  position: relative;
+  -webkit-animation: arrow_left 1s ease-in-out infinite; 
+}
+@-webkit-keyframes arrow_left{
+  from{
+    left: 0em;
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+    left: -0.5em;
+  }
+}
+
+
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div a {
+  position: relative;
+  display: inline-block;
+  // margin: 15px 25px;
+  outline: none;
+  // color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  // font-weight: 400;
+  // text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  // font-size: 2em;
+}
+
+div a:hover,
+div a:focus {
+  outline: none;
+}
+.cl-effect-12 a::before,
+.cl-effect-12 a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8.5em;
+  height: 2em;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 0%;
+  content: '';
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.cl-effect-12 a::after {
+  width: 8em;
+  height: 1.5em;
+  border-width: 5px;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.cl-effect-12 a:hover::before,
+.cl-effect-12 a:hover::after,
+.cl-effect-12 a:focus::before,
+.cl-effect-12 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%) scale(1);
 }

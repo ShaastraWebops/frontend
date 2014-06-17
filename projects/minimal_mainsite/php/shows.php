@@ -64,7 +64,9 @@
                 </div>
     		</div>
         </div>
-          
+        <script type="text/javascript">
+            $("#shows-menu").addClass("current_page");
+        </script>
     </body>
     <?php include 'base.php' ?>
 </html>

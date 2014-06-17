@@ -361,6 +361,7 @@
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 			/* GoogleMaps code end */
+			$("#contact-menu").addClass("current_page");
 		});
 	</script>
 </html>

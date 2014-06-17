@@ -211,5 +211,8 @@
 			</div>
 		</div>
 		<?php include 'foot.php' ?>
+		<script type="text/javascript">
+			$("#lecture-menu").addClass("current_page");
+		</script>
 	</body>
 </html>
