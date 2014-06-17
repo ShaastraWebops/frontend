@@ -11,7 +11,7 @@
 			.subtitle{
 				color: white;
 	    		/*font-family: 'Titillium Web', sans-serif;*/
-	    		font-size: 2.5em
+	    		font-size: 2.5em;
 			}			
 			.text {
 				color: white;

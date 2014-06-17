@@ -1,5 +1,6 @@
 <div class="menuB">
-    <span class="glyphicon glyphicon-list"></span>
+    <!-- <span class="glyphicon glyphicon-list"></span> -->
+    <i class="fa fa-angle-right fa-2x"></i>
 </div>
 
 <!-- menu popup start -->
@@ -15,7 +16,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <a class="close_menu menu_options" href="javascript:void(0);">
-                    <span class="glyphicon glyphicon-chevron-left"></span> Back to Website
+                    <!-- <span class="glyphicon glyphicon-chevron-left"></span> -->
+                    <i class="fa fa-angle-left"></i>
+                     Back to Website
                 </a>
             </div>
         </div>
@@ -74,14 +77,14 @@
 
 <script>
     $(document).ready(function(){
-        $(".menuB span").hover(function(){
+        $(".menuB i").hover(function(){
             $(this).css("color","#00425a");
-            $(this).removeClass("glyphicon-list");
-            $(this).addClass("glyphicon-th-large");
+            // $(this).removeClass("fa-angle-right");
+            // $(this).addClass("fa-angle-double-right");
         },function(){
             $(this).css("color","white");
-            $(this).removeClass("glyphicon-th-large");
-            $(this).addClass("glyphicon-list");
+            // $(this).removeClass("fa-angle-double-right");
+            // $(this).addClass("fa-angle-right");
         });
         $(".menuB").click(function(){
             $(".menu_popup").animate({

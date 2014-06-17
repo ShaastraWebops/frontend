@@ -464,7 +464,7 @@ div a {
   -webkit-transform: translateX(0);
   transform: translateX(0); }
 
-.close_menu:hover span {
+.close_menu:hover i {
   position: relative;
   -webkit-animation: arrow_left 1s ease-in-out infinite; }
 
@@ -476,6 +476,19 @@ div a {
   to {
     opacity: 0;
     left: -0.5em; } }
+
+.menuB:hover i {
+  position: relative;
+  -webkit-animation: arrow_right 1s ease-in-out infinite; }
+
+@-webkit-keyframes arrow_right {
+  from {
+    right: 0em;
+    opacity: 1; }
+
+  to {
+    opacity: 0;
+    right: -0.2em; } }
 
 *,
 *:after,
