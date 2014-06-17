@@ -10,7 +10,6 @@
 	</head>
 	<body>
         <?php include 'menu.php'; ?>
-
         <div id="hexaMenu" class="cl-effect">  
             <a id="events" class="events next_page" href="events.php">EVENTS</a>
             <a id="spons" class="spons next_page" href="spons.php">SPONSORS</a>
@@ -162,7 +161,7 @@
         <script>
             $(document).ready(function(){
             /* code for browser detection start */            
-               ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());   
+                ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());   
                 if(ifChrome){
                     // $.browser.safari = false;
                     $("#notice").css("opacity","0");
@@ -171,6 +170,7 @@
                 else{
                     $("#notice").css("opacity","1");
                 }
+                $("#home-menu").addClass("current_page");
             /* code for browser detection end */            
             });            
         </script>        

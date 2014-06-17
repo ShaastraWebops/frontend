@@ -1,5 +1,6 @@
 <div class="menuB">
-    <span class="glyphicon glyphicon-list"></span>
+    <!-- <span class="glyphicon glyphicon-list"></span> -->
+    <i class="fa fa-angle-right fa-2x"></i>
 </div>
 
 <!-- menu popup start -->
@@ -8,49 +9,51 @@
         style="position:absolute; background-color:black; z-index:400; height:100%; width:30%; top:0%; left:-30%; opacity:0">
     <div class="white container-fluid">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 cl-effect-12">
                 <a class="header menu_options" href="home.php">SHAASTRA 2015</a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
                 <a class="close_menu menu_options" href="javascript:void(0);">
-                    <span class="glyphicon glyphicon-chevron-left"></span> Back to Website
+                    <!-- <span class="glyphicon glyphicon-chevron-left"></span> -->
+                    <i class="fa fa-angle-left"></i>
+                     Back to Website
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="home-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="home.php">Home</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="about-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="about.php">About Us</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="events-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="events.php">Events</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="shows-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="shows.php">Shows</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="lecture-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="lectures.php">Lectures</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="spons-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="spons.php">Sponsors</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row" id="contact-menu">
+            <div class="col-xs-12 link-braces">
                 <a class="next_page menu_options" href="contact.php">Contact Us</a>
             </div>
         </div>
@@ -74,14 +77,14 @@
 
 <script>
     $(document).ready(function(){
-        $(".menuB span").hover(function(){
+        $(".menuB i").hover(function(){
             $(this).css("color","#00425a");
-            $(this).removeClass("glyphicon-list");
-            $(this).addClass("glyphicon-th-large");
+            // $(this).removeClass("fa-angle-right");
+            // $(this).addClass("fa-angle-double-right");
         },function(){
             $(this).css("color","white");
-            $(this).removeClass("glyphicon-th-large");
-            $(this).addClass("glyphicon-list");
+            // $(this).removeClass("fa-angle-double-right");
+            // $(this).addClass("fa-angle-right");
         });
         $(".menuB").click(function(){
             $(".menu_popup").animate({

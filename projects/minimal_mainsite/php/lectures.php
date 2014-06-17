@@ -11,7 +11,7 @@
 			.subtitle{
 				color: white;
 	    		/*font-family: 'Titillium Web', sans-serif;*/
-	    		font-size: 2.5em
+	    		font-size: 2.5em;
 			}			
 			.text {
 				color: white;
@@ -211,5 +211,8 @@
 			</div>
 		</div>
 		<?php include 'foot.php' ?>
+		<script type="text/javascript">
+			$("#lecture-menu").addClass("current_page");
+		</script>
 	</body>
 </html>

@@ -70,7 +70,9 @@
                 </div>
             </div>
         </div>
-          
+        <script type="text/javascript">
+            $("#about-menu").addClass("current_page");
+        </script>
     </body>
     <?php include 'base.php' ?>
 </html>

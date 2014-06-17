@@ -5,6 +5,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/respAbhi.css"> -->
 <link rel="stylesheet" type="text/css" href="../css/home.css">
 <!-- <link rel="stylesheet" type="text/css" href="../CSS/resp.css"> -->
+<link href="../css/font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
 
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
