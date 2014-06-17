@@ -1,25 +1,28 @@
 <!DOCtype html>
 <html>
 	<head>
-		<title>Shaastra'15: Events</title>
-		<link rel="shortcut icon" href="../images/favicon.ico">
-        <!-- <link href="../stylesheets/font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet">         -->
-        <link rel="stylesheet" type="text/css" href="../stylesheets/events.css">
-        <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/eventsBootstrap.css">
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-        <script src="../javascripts/jquery-1.11.0.js"></script>   
+		<title>Events | Shaastra '15</title>
+        <?php include 'head.php' ?>
+        <link rel="stylesheet" type="text/css" href="../css/events.css">
 	</head>
 	<body>
-		<header id="title" align="center">Events</header>
-		<div class="white breaker">
-            <span class="left"></span>
-            <div class="dice white"></div>
-            <span class="right"></span>
+        <?php include 'menu.php' ?>
+		<div class="container-fluid white centered">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center title">EVENTS</h1>
+                    <div class="white breaker">
+                        <span class="left"></span>
+                        <div class="dice white"></div>
+                        <span class="right"></span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
         	<div class="row">
         		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/aerofest.png">
+        			<img class="img-responsive" src="../img/events/aerofest.png">
         		</div>
 	        	<button class="btn btn-primary col-md-3">Aerobotics</button>
 	        	<button class="btn btn-primary col-md-3">Wright Design</button>
@@ -30,7 +33,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/coding.png">
+        			<img class="img-responsive" src="../img/events/coding.png">
         		</div>
                 <button class="btn btn-primary col-md-2">Reverse Coding</button>
                 <button class="btn btn-primary col-md-2">Triathlon</button>
@@ -43,7 +46,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-        			<img class="img-responsive" src="../images/events/design.png">
+        			<img class="img-responsive" src="../img/events/design.png">
         		</div>
                 <button class="btn btn-primary col-md-2">Fire N Ice</button>
                 <button class="btn btn-primary col-md-2">Robotics</button>
@@ -56,7 +59,7 @@
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive" src="../images/events/involve.png">
+                    <img class="img-responsive" src="../img/events/involve.png">
                 </div>
                 <button class="btn btn-primary col-md-2">Project X</button>
                 <button class="btn btn-primary col-md-2">Shaastra Cube Open</button>
@@ -65,7 +68,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/quiz.png">
+    				<img class="img-responsive" src="../img/events/quiz.png">
         		</div>
                 <button class="btn btn-primary col-md-2">Shaastra Junior Quiz</button>
                 <button class="btn btn-primary col-md-2">Shaastra main Quiz</button>
@@ -74,7 +77,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/online.png">
+    				<img class="img-responsive" src="../img/events/online.png">
         		</div>
                 <button class="btn btn-primary col-md-3">Online Math Modelling</button>
                 <button class="btn btn-primary col-md-3">Online Puzzle Champ</button>
@@ -82,7 +85,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/dept.png">
+    				<img class="img-responsive" src="../img/events/dept.png">
         		</div>
                 <button class="btn btn-primary col-md-2">Robo Oceana</button>
                 <button class="btn btn-primary col-md-2">Desmod</button>
@@ -94,7 +97,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/spotlight.png">
+    				<img class="img-responsive" src="../img/events/spotlight.png">
         		</div>
                 <button class="btn btn-primary col-md-3">Sustainable Cityscape</button>
                 <button class="btn btn-primary col-md-3">Shaastra Junior</button>
@@ -106,7 +109,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/workshop.png">
+    				<img class="img-responsive" src="../img/events/workshop.png">
         		</div>
                 <!-- Too many events, thus problematic -->
                 <button class="btn btn-primary col-md-3">Autonomous Robotics Workshop</button>
@@ -124,7 +127,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/shows.png">
+    				<img class="img-responsive" src="../img/events/shows.png">
         		</div>
                 <button class="btn btn-primary col-md-3">Product Launch</button>
                 <button class="btn btn-primary col-md-3">Tech Lounge</button>
@@ -134,7 +137,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/bevent.png">
+    				<img class="img-responsive" src="../img/events/bevent.png">
         		</div>
                 <button class="btn btn-primary col-md-2">Case Study</button>
                 <button class="btn btn-primary col-md-2">Vitanetti</button>
@@ -143,7 +146,7 @@
         	</div>
         	<div class="row">
         		<div class="col-md-3">
-    				<img class="img-responsive" src="../images/events/misc.png">
+    				<img class="img-responsive" src="../img/events/misc.png">
         		</div>
                 <button class="btn btn-primary col-md-4">Ericson Industry Defined Problem</button>
                 <button class="btn btn-primary col-md-4">Eaton Industry Defined Problem</button>
@@ -151,6 +154,6 @@
                 <button class="btn btn-primary col-md-4">Research Confluence</button>
         	</div>
         </div>
-	<script type="text/javascript" src="../javascripts/bootstrap.js"></script>
+        <?php include 'foot.php' ?>
 	</body>
 </html>
