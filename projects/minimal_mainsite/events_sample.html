@@ -1,6 +1,6 @@
 <html lang="en"><head>
-  <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-  <script src="http://d.moviemodeapp.com/l/load.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Shaastra Events</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,16 +28,37 @@
 
     <style>
       body{
-        font-family:'Oswald';
+        font-family:'Titillium Web', sans-serif;
         color:#BBB;
       }
       p{
-        font-family: 'Oswald';
+        font-family: 'Titillium Web', sans-serif;
+      }
+      p:hover{
+        opacity:0.6;
+      }
+      .jumbotron p{
+        color: black;
+        font-weight:400;
+      }
+      .jumbotron p:hover{
+        opacity: 0.6
       }
       .jumbotron{
         background-color: rgba(238, 238, 238, 0.46)
       }
 
+      .btn-grey{
+        background-color: rgb(150,150,150);
+        border-color: rgb(150,150,150);
+      }
+      .btn-grey:hover{
+        opacity: 0.5;
+        background-color: rgb(150,150,150);
+      }
+      .white-logo:hover{
+        opacity: 0.5
+      }
     </style>
  </head><body background="img/bg.png">
 
@@ -69,12 +90,13 @@
       <div class="container" style="
     text-align: center;
 ">
+  <div class='row'>
         <div class="col-md-4 col-md-offset-4" style="
     text-align: center;
 ">
-  <img src="img/dice_white.png" style="
+  <a href='#events_main'><img class='white-logo' src="img/dice_white.png" style="
     padding-top: 10px;
-">
+"></a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -83,14 +105,23 @@
           </button>
           
         </div>
+        </div>
+      <div class="row" style='padding-top:10px;margin-bottom:5px'>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#aerofest'>Aerofest</a>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#design'>Design and Build</a>
+          <a class="btn btn-primary btn-sm btn-grey" role="button" href='#coding'>Coding</a>
+        
+      </div>
+
+      </div>
         <!--/.navbar-collapse -->
       </div>
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" id='events_main'>
       <div class="container" style="
-    text-align: center;
+    text-align: center;margin-top:20px
 ">
         <h1>Events</h1>
         <p>Events. The essence of Shaastra.</p>
@@ -122,7 +153,7 @@
 
       
     </div>
-<div class="jumbotron">
+<div class="jumbotron" id='aerofest'>
       <div class="container" style="
     text-align: center;
     /* opacity: 1; */
@@ -175,7 +206,7 @@
 
   <!-- END Aero-->
   <!-- START Design&Build-->
-  <div class="jumbotron">
+  <div class="jumbotron" id='design'>
       <div class="container" style="
     text-align: center;
     /* opacity: 1; */
@@ -244,10 +275,9 @@
   <!-- END Design&Build-->
 
 <!-- START Coding -->
-<div class="jumbotron">
+<div class="jumbotron" id='coding'>
       <div class="container" style="
     text-align: center;
-    /* opacity: 1; */
 ">
         <h1><img src="img/events/coding.png"></h1>
         <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
