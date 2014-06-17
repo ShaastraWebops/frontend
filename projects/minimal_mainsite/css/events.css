@@ -3,8 +3,5 @@
   color: white;
   text-align: justify;
   text-align: center; }
-  .container .row {
-    margin-bottom: 2%; }
-    .container .row button {
-      margin-top: 0.5%;
-      margin-bottom: 0.5%; }
+  .container img {
+    margin-bottom: 5%; }

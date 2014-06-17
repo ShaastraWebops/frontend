@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <a class="next_page menu_options" href="home.php">Home</a>
+                <a class="next_page current_page disable menu_options" href="home.php">Home</a>
             </div>
         </div>
         <div class="row">

@@ -311,38 +311,9 @@ div a {
   -o-animation: fadeIn 2s ease-in forwards;
   animation: fadeIn 2s ease-in forwards; }
 
-#menu_icon {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 399;
-  display: inline-block;
-  font-size: 0px;
-  cursor: pointer;
-  margin: 1.5% 3%;
-  width: 90px;
-  height: 90px;
-  text-align: center;
-  color: white; }
-
-#menu_icon:hover {
-  color: #00425a;
-  font-size: 2em; }
-
-#menu_icon:before {
-  font-family: 'ecoicon';
-  speak: none;
-  font-size: 32px;
-  line-height: 100px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  content: "\e006";
-  display: block;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased; }
+a.current_page {
+  font-size: 3.2em;
+  color: #008dc0; }
 
 .menu_popup {
   position: absolute;
