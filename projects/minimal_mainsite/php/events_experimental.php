@@ -30,6 +30,10 @@
           font-family:'Titillium Web', sans-serif;
           color:#BBB;
         }
+        div {
+          -webkit-transition: background-position-y 0s linear; /* For Safari 3.1 to 6.0 */
+          transition: background-position-y 0s linear;
+        }
         p{
           font-family: 'Titillium Web', sans-serif;
         }
