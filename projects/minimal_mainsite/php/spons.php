@@ -622,7 +622,9 @@
         </div>
     </div>
 </div>
-	
+<script type="text/javascript">
+$("#spons-menu").addClass("current_page");
+</script>
 </body>
 <?php include 'foot.php' ?>
 </html>
