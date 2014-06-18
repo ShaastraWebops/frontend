@@ -40,6 +40,7 @@
           color: black;
           font-weight:400;
         }
+
         .jumbotron p:hover{
           opacity: 0.6
         }
@@ -67,6 +68,9 @@
         }
         .event-info{
           text-align:center;
+        }
+        .event-info p{
+          opacity:0;
         }
 
         *{
@@ -141,9 +145,12 @@
         }
 
       </style>
-    </head><body background="../img/bg.png">
+    </head>
 
+<body background="../img/bg.png">
 
+  <!-- Invisible Signals element for global signals. -->
+  <div class='signal-hub' style='display:none'></div>
 
     <!-- Bootstrap modals for events -->
 
@@ -182,12 +189,6 @@
             <span class="right"></span>
           </div>
         </a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
 
       </div>
     </div>
@@ -215,9 +216,7 @@
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron" id='events_main'>
-  <div class="container" style="
-  text-align: center;margin-top:20px
-  ">
+  <div class="container" style="text-align: center;margin-top:20px">
   <h1>Events</h1>
   <p>Events. The essence of Shaastra.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
@@ -257,7 +256,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='aerofest-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -310,7 +309,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='design-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -378,7 +377,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='coding-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -442,7 +441,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='involve-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -483,7 +482,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='quiz-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -525,7 +524,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='online-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -559,7 +558,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='flagship-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -610,7 +609,8 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div>
+<div class="container" id='spotlight-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -671,7 +671,8 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div>
+<div class="container" id='workshops-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -756,7 +757,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='shows-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -803,7 +804,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='bevent-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -844,7 +845,7 @@
   <p>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container">
+</div><div class="container" id='misc-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
@@ -873,7 +874,7 @@
 
 <hr>
 
-
+<footer style='text-align:center'> &copy; 2015 Shaastra Webops </footer>
 </div>
 <!-- END Misc -->
 
@@ -886,12 +887,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type='text/javascript'>
+      //  Sensitive Scroll Levels.
       var scrollLevels = [];
       var scrollTargets = [];
+
+      //  Parallax Helpers.
       var parallaxFuncs = [];
       var parallaxTargets = [];
       var parallaxComputeRefs = [];
 
+      //  Rolldown helpers.
+      // event based.
+      var rolldownSensor = 'scrolled';
+      var rolldownTargets = [];
+
+      // current Scroll state.. used by more that one functionality.
       var currState = -1;
       $(document).ready(function(){
         scrollTargets.push('#aerofest-nav');
@@ -915,26 +925,25 @@
 
       $(window).resize(function(){
         scrollLevels = [];
-        scrollLevels.push($('#aerofest').position().top);
-        scrollLevels.push($('#design').position().top);
-        scrollLevels.push($('#coding').position().top);
-        scrollLevels.push($('#involve').position().top);
-        scrollLevels.push($('#quiz').position().top);
-        scrollLevels.push($('#online').position().top);
-        scrollLevels.push($('#flagship').position().top);
-        scrollLevels.push($('#spotlight').position().top);
-        scrollLevels.push($('#workshops').position().top);
-        scrollLevels.push($('#shows').position().top);
-        scrollLevels.push($('#bevent').position().top);
-        scrollLevels.push($('#misc').position().top);
+        scrollLevels.push('#aerofest');
+        scrollLevels.push('#design');
+        scrollLevels.push('#coding');
+        scrollLevels.push('#involve');
+        scrollLevels.push('#quiz');
+        scrollLevels.push('#online');
+        scrollLevels.push('#flagship');
+        scrollLevels.push('#spotlight');
+        scrollLevels.push('#workshops');
+        scrollLevels.push('#shows');
+        scrollLevels.push('#bevent');
+        scrollLevels.push('#misc');
+        scrollLevels.push('footer'); //base case
 
 
 
-        scrollLevels.push($('body').position().top + $('body').height());// base case.
 
-        // for a more realistic effect.
-        for(var j = 0;j<scrollLevels.length;j++)
-          scrollLevels[j] -= parseInt(window.innerHeight/2);
+        //scrollLevels.push($('body').position().top + $('body').height());// base case.
+
       });
       
       $(window).scroll(function(){
@@ -942,7 +951,7 @@
         var i,j;
         for(i = 0;i<scrollLevels.length;i++){
 
-          if(scrollLevels[i]>height){
+          if($(scrollLevels[i]).position().top-parseInt(window.innerHeight/2)>height){
 
             if(currState == i)
               // same state.. exit..
@@ -953,6 +962,7 @@
               $(scrollTargets[j]).removeClass('navbar-selected');
 
             $(scrollTargets[i-1]).addClass('navbar-selected')
+            $('.signal-hub').trigger('scroll-changed')
             break;
           }
         }
@@ -1002,16 +1012,39 @@
         $(window).resize();
       })
 
+      $(document).ready(function(){
+        rolldownTargets = [];
+
+        rolldownTargets.push('#aerofest-events .event-info p');
+        rolldownTargets.push('#design-events .event-info  p');
+        rolldownTargets.push('#coding-events .event-info  p');
+        rolldownTargets.push('#involve-events .event-info  p');
+        rolldownTargets.push('#quiz-events .event-info  p');
+        rolldownTargets.push('#online-events .event-info  p');
+        rolldownTargets.push('#flagship-events .event-info  p');
+        rolldownTargets.push('#spotlight-events .event-info  p');
+        rolldownTargets.push('#workshops-events .event-info  p');
+        rolldownTargets.push('#shows-events .event-info  p');
+        rolldownTargets.push('#bevent-events .event-info  p');
+        rolldownTargets.push('#misc-events .event-info  p');
+
+        for (var i = 0; i < rolldownTargets.length; i++) {
+          $(rolldownTargets[i]).slideUp();
+        };
+        $(window).resize();
+      })
+
+
       $(window).resize(function(){
 
         // recompute linear functions for parallax displacement.
 
         var sensorOffset = 0; //deliberate offset in pixels for the parallax effect.
         for (var i = 0; i < parallaxTargets.length; i++) {
-          var scrollTop1 = $(parallaxComputeRefs[i]).position().top - parseInt(window.innerHeight/2) + 100;
+          var scrollTop1 = $(parallaxComputeRefs[i]).position().top - parseInt(window.innerHeight/2);
           var dispTop1 = 0;
 
-          var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2) - 100
+          var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2)
           var dispTop2 = 100;
 
           var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
@@ -1027,7 +1060,24 @@
 
         };
       })
+      $(document).ready(function(){
+         $('.signal-hub').on('scroll-changed',function(){
+            /*for (var i = 0; i < rolldownTargets.length; i++) {
+                if(i == currState-1)continue;
+                $(rolldownTargets[i]).slideUp();
+                $(rolldownTargets[i]).animate({opacity:0});
+              };*/
+        $(window).resize();
 
+          setTimeout(function(){
+              
+              $(rolldownTargets[currState-1]).slideDown(300,"swing",function(){
+                $(rolldownTargets[currState-1]).animate({opacity:1},300);
+              });
+            }
+          ,500);
+         });
+      })
 
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
