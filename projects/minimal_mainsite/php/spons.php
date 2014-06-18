@@ -40,10 +40,12 @@
 	padding: 10px 10px;
 	border-radius: 5px;
 	border: 1px solid white;
+	opacity:0.8;
 	}
 	.d4:hover, .d8:hover, .d12:hover, .d6:hover{
 	border: 1px solid #a1a1a1;
 	background-color: #eee; 
+	opacity:1;
 	}
 	img.sponsor{
 	margin: 15px;
