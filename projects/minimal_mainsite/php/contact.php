@@ -349,6 +349,7 @@
 	
 	<script>
 		$(document).ready(function() {
+			$("#contact-menu").addClass("current_page");
 			/* GoogleMaps code start */
 			function initialize() {
 				var map_canvas = document.getElementById('map_canvas');
@@ -361,7 +362,6 @@
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 			/* GoogleMaps code end */
-			$("#contact-menu").addClass("current_page");
 		});
 	</script>
 </html>

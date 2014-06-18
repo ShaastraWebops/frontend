@@ -23,14 +23,24 @@
     cursor: default;
   } 
 }
-.menu_popup {
+#menu_popup {
   position: absolute;
   background-color: black;
   z-index: 400;
   height: 100%;
+  $w: 30%;
+  width:$w;
   top: 0%;
-  left: -30%;
-  opacity: 1;
+  left: -$w;
+  opacity: 1; 
+}
+@media all and (max-width: 42.5em) {
+  #menu_popup{
+    $w: 100%;
+    width:$w;
+    left: -$w;
+    font-size: 4em;
+  }        
 }
 .header{
   color: white;
@@ -54,9 +64,9 @@
   //     padding-top: 0.5%;
   //     padding-bottom: 0.5%; } }
 
-.menu_popup .row {
+#menu_popup .row {
   color: white;
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding-left: 4%;
   padding-right: 4%;
   padding-top: 2%;
@@ -68,8 +78,8 @@
   cursor: pointer;
 }
 @media all and (min-width: 62.5em) and (max-width: 75em) {
-  .menu_popup .row {
-    font-size: 1.3em;
+  #menu_popup .row {
+    font-size: 1.2em;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 1%;
@@ -78,7 +88,7 @@
   } 
 }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
-  .menu_popup .row {
+  #menu_popup .row {
     font-size: 1em;
     padding-left: 3%;
     padding-right: 3%;
@@ -88,7 +98,7 @@
   } 
 }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
-  .menu_popup .row {
+  #menu_popup .row {
     font-size: 0.8em;
     padding-left: 3%;
     padding-right: 3%;
@@ -98,7 +108,7 @@
   } 
 }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  .menu_popup .row {
+  #menu_popup .row {
     font-size: 0.6em;
     padding-left: 3%;
     padding-right: 3%;
@@ -108,7 +118,7 @@
   } 
 }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  .menu_popup .row {
+  #menu_popup .row {
     font-size: 0.5em;
     padding-left: 3%;
     padding-right: 3%;
@@ -118,7 +128,7 @@
   } 
 }
 
-.menu_popup.col-xs-12 {
+#menu_popup.col-xs-12 {
   position: relative;
   z-index: 1; /* needed for setting pseudo-element z-index */
   overflow: hidden;
@@ -126,7 +136,7 @@
   backface-visibility: hidden;
 }
 
-.menu_popup.col-xs-12 a {
+#menu_popup.col-xs-12 a {
   position: relative;
   display: inline-block;
   outline: none;
@@ -135,8 +145,8 @@
   white-space: nowrap;
 }
 
-.menu_popup.col-xs-12 a::before,
-.menu_popup.col-xs-12 a::after {
+#menu_popup.col-xs-12 a::before,
+#menu_popup.col-xs-12 a::after {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -217,14 +227,13 @@
   }
 }
 
-
-*,
-*:after,
-*::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+// *,
+// *:after,
+// *::before {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
 
 div a {
   position: relative;
