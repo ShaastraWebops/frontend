@@ -39,6 +39,7 @@
         .jumbotron p{
           color: black;
           font-weight:400;
+
         }
 
         .jumbotron p:hover{
@@ -51,6 +52,9 @@
           background-color: rgba(238, 238, 238, 0.86);
           position:relative;
           overflow:hidden;
+          background-image:url('../img/events/cloudysky.png');
+          background-size:1920px auto;
+          background-repeat: :no-repeat;
         }
 
         .btn-grey{
