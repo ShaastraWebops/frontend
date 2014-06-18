@@ -333,22 +333,11 @@ div a {
 
 .header {
   color: white;
-  font-size: 2em;
   width: 100%;
   text-align: center;
   padding-top: 4%;
   padding-bottom: 4%; }
 
-@media all and (min-width: 31.25em) and (max-width: 42.5em) {
-  .header {
-    font-size: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%; } }
-@media all and (min-width: 21.875em) and (max-width: 31.25em) {
-  .header {
-    font-size: 0.8em;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%; } }
 .menu_popup .row {
   color: white;
   font-size: 1.3em;
@@ -374,32 +363,28 @@ div a {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    height: 4.5%; } }
+    padding-bottom: 0.5%; } }
 @media all and (min-width: 42.5em) and (max-width: 56.25em) {
   .menu_popup .row {
     font-size: 0.8em;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 0.3%;
-    padding-bottom: 0.3%;
-    height: 4%; } }
+    padding-bottom: 0.3%; } }
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
   .menu_popup .row {
     font-size: 0.6em;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 0.2%;
-    padding-bottom: 0.2%;
-    height: 3%; } }
+    padding-bottom: 0.2%; } }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
   .menu_popup .row {
     font-size: 0.5em;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 0.05%;
-    padding-bottom: 0.05%;
-    height: 3.5%; } }
+    padding-bottom: 0.05%; } }
 .menu_popup.col-xs-12 {
   position: relative;
   z-index: 1;
@@ -462,7 +447,7 @@ div a {
   -webkit-transform: translateX(0);
   transform: translateX(0); }
 
-.close_menu:hover i {
+.close_menu:hover span {
   position: relative;
   -webkit-animation: arrow_left 1s ease-in-out infinite; }
 
@@ -475,7 +460,7 @@ div a {
     opacity: 0;
     left: -0.5em; } }
 
-.menuB:hover i {
+.menuB:hover span {
   position: relative;
   -webkit-animation: arrow_right 1s ease-in-out infinite; }
 

@@ -175,7 +175,9 @@ $(document).ready(function(){
   	//Responsive behaviour
   	//initial size
 	reScale();
-  	$(window).resize(reScale());
+  	$(window).resize(function(){
+  		reScale();  	
+  	});
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
