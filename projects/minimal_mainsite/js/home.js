@@ -61,6 +61,70 @@ $(document).ready(function(){
 			break;		
 		}
 	}
+	function reScale () {
+		console.log("rescaled");
+		alert("rescaled");
+		sWidth = window.innerWidth;
+		sHeight = window.innerHeight;
+		sWidth_em = sWidth/16;
+		if(sWidth>1000){
+		s = 1;
+		fontSize = 1.5;
+		lHeight = "2%";
+		padding = "1.1%";
+		}
+		else if(sWidth>900){
+			s = 0.8;
+			fontSize = 1.4;
+			lHeight = "1.75%";
+			padding = "1.3%";
+		}
+		else if(sWidth>680){
+			s = 0.5;
+			fontSize = 1.3;
+			lHeight = "1.5%";
+			padding = "1.5%";
+		}
+		else if(sWidth>500){
+			s= 0.3;
+			fontSize = 1.2;
+			lHeight = "1.25%";
+			padding = "1.9%";
+		}
+		else if(sWidth_em>350){
+			s=0.2;
+			fontSize = 1.1;
+			lHeight = "1%";
+			padding = "2.5%";
+		}
+		else{
+			s=0.1;
+			fontSize = 1.0;
+			lHeight = "0.75%";
+			padding = "2.5%";
+		}
+		document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
+		$("#mainLogo").css("height",(250*s)+"px");
+		$("#mainLogo").css("width",(400*s)+"px");
+			// $(".cl-effect a").css("font-size",fontSize+"em");
+			// $(".cl-effect a::before").css("height",lHeight);
+		// $(".cl-effect a::after").css("height",lHeight);
+			// $(".cl-effect a").css("letter-spacing",fontSize/10+"em");
+
+		pageCenterPercent("mainLogo",2);
+		pageCenterPercent("planeSVG",1);
+		pageCenterPercent("rupeeSVG",1);
+		pageCenterPercent("mikeSVG",1);
+		pageCenterPercent("phoneSVG",1);
+		pageCenterPercent("groupSVG",1);
+		pageCenterPercent("toolSVG",1);  		
+		hexaStr("events",1);
+		hexaStr("shows",2);
+		hexaStr("contact",3);
+		hexaStr("about",4);
+		hexaStr("lectures",5);
+		hexaStr("spons",6);
+	}
   	//Hover effect on HomePage Navigation
 	fIn = 0.4;
 	fOut = 1;
@@ -110,138 +174,8 @@ $(document).ready(function(){
 
   	//Responsive behaviour
   	//initial size
-	sWidth = window.innerWidth;
-	sHeight = window.innerHeight;
-	sWidth_em = sWidth/16;
-
-	if(sWidth>1000){
-		s = 1;
-		fontSize = 1.5;
-		lHeight = "2%";
-		padding = "1.1%";
-	}
-	else if(sWidth>900){
-		s = 0.8;
-		fontSize = 1.4;
-		lHeight = "1.75%";
-		padding = "1.3%";
-	}
-	else if(sWidth>680){
-		s = 0.5;
-		fontSize = 1.3;
-		lHeight = "1.5%";
-		padding = "1.5%";
-	}
-	else if(sWidth>500){
-		s= 0.3;
-		fontSize = 1.2;
-		lHeight = "1.25%";
-		padding = "1.9%";
-	}
-	else if(sWidth_em>350){
-		s=0.2;
-		fontSize = 1.1;
-		lHeight = "1%";
-		padding = "2.5%";
-	}
-	else{
-		s=0.1;
-		fontSize = 1.0;
-		lHeight = "0.75%";
-		padding = "2.5%";
-	}
-	document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
-	$("#mainLogo").css("height",(250*s)+"px");
-	$("#mainLogo").css("width",(400*s)+"px");	
-	pageCenterPercent("mainLogo",2);
-	// $(".cl-effect a").css("font-size",fontSize+"em");
-	// $(".cl-effect a::before").css("height",lHeight);
-	// $(".cl-effect a::after").css("height",lHeight);  	
-
-  	//initial positioning
-  	hexaStr("events",1);
-	hexaStr("shows",2);
-	hexaStr("contact",3);
-	hexaStr("about",4);
-	hexaStr("lectures",5);
-	hexaStr("spons",6);	
-	
-	// pageCenterPercent("ms",2);
-	pageCenterPercent("planeSVG",1);
-	pageCenterPx("rupeeSVG",1);
-	pageCenterPx("mikeSVG",1);
-	pageCenterPx("phoneSVG",1);
-	pageCenterPx("groupSVG",1);
-	pageCenterPx("toolSVG",1);
-	// fontSize = 1.5;
-	$(".cl-effect a").css("font-size",fontSize+"em");
-  	mainLogoR = 255/399;
-  	//adjustment done on resizing window 
-
-  	$(window).resize(function(){
-  		// x=1;
-  		// console.log("resized"+(x++));
-  		sWidth = window.innerWidth;
-  		sHeight = window.innerHeight;
-  		sWidth_em = sWidth/16;
-  		if(sWidth>1000){
-			s = 1;
-			fontSize = 1.5;
-			lHeight = "2%";
-			padding = "1.1%";
-		}
-		else if(sWidth>900){
-			s = 0.8;
-			fontSize = 1.4;
-			lHeight = "1.75%";
-			padding = "1.3%";
-		}
-		else if(sWidth>680){
-			s = 0.5;
-			fontSize = 1.3;
-			lHeight = "1.5%";
-			padding = "1.5%";
-		}
-		else if(sWidth>500){
-			s= 0.3;
-			fontSize = 1.2;
-			lHeight = "1.25%";
-			padding = "1.9%";
-		}
-		else if(sWidth_em>350){
-			s=0.2;
-			fontSize = 1.1;
-			lHeight = "1%";
-			padding = "2.5%";
-		}
-		else{
-			s=0.1;
-			fontSize = 1.0;
-			lHeight = "0.75%";
-			padding = "2.5%";
-		}
-		document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
-		$("#mainLogo").css("height",(250*s)+"px");
-		$("#mainLogo").css("width",(400*s)+"px");
-  		// $(".cl-effect a").css("font-size",fontSize+"em");
-  		// $(".cl-effect a::before").css("height",lHeight);
-		// $(".cl-effect a::after").css("height",lHeight);
-  		// $(".cl-effect a").css("letter-spacing",fontSize/10+"em");
-
-		pageCenterPercent("mainLogo",2);
-		pageCenterPx("planeSVG",1);
-		pageCenterPx("rupeeSVG",1);
-		pageCenterPx("mikeSVG",1);
-		pageCenterPx("phoneSVG",1);
-		pageCenterPx("groupSVG",1);
-		pageCenterPx("toolSVG",1);  		
-		hexaStr("events",1);
-		hexaStr("shows",2);
-		hexaStr("contact",3);
-		hexaStr("about",4);
-		hexaStr("lectures",5);
-		hexaStr("spons",6);
-  	});  	
+	reScale();
+  	$(window).resize(reScale());
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
@@ -295,18 +229,4 @@ cAnimate("sR");
 cAnimate("sT");
 
 // document.getElementById("mike").style.height = "5%";
-function reScale (id, scale) {
-	x = document.getElementById(id);
-	x.setAttribute("transform","scale("+scale+")");	
-	y = document.getElementById(id+"2");
-	nh = y.getAttribute("height")*scale;
-	y.setAttribute("height",nh+"px");
-	nw = y.getAttribute("width")*scale;
-	y.setAttribute("width",nw+"px");
-}
 
-// reScale("rupee",0.5);
-$(document).ready(function(){
-/* code for browser detection start */            
-
-});
