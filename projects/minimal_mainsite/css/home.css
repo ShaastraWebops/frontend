@@ -162,6 +162,9 @@
   -o-transform: translateY(0px);
   transform: translateY(0px); }
 
+.cl-effect a:hover {
+  color: #fff; }
+
 .cl-effect a {
   padding: 1%; }
 
@@ -333,20 +336,17 @@ div a {
   font-size: 2em;
   width: 100%;
   text-align: center;
-  height: 10%;
   padding-top: 4%;
   padding-bottom: 4%; }
 
 @media all and (min-width: 31.25em) and (max-width: 42.5em) {
   .header {
     font-size: 1em;
-    height: 2%;
     padding-top: 1%;
     padding-bottom: 1%; } }
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
   .header {
     font-size: 0.8em;
-    height: 1%;
     padding-top: 0.5%;
     padding-bottom: 0.5%; } }
 .menu_popup .row {
@@ -358,7 +358,6 @@ div a {
   padding-bottom: 2%;
   width: 100%;
   text-align: center;
-  height: 5%;
   text-decoration: none;
   cursor: pointer; }
 
@@ -368,8 +367,7 @@ div a {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 1%;
-    padding-bottom: 1%;
-    height: 5%; } }
+    padding-bottom: 1%; } }
 @media all and (min-width: 56.25em) and (max-width: 62.5em) {
   .menu_popup .row {
     font-size: 1em;
@@ -592,10 +590,10 @@ body {
 
 #watermark div {
   opacity: 0;
-  -webkit-animation: fadeIn 2s ease-in 6s forwards;
-  -moz-animation: fadeIn 2s ease-in 6s forwards;
-  -o-animation: fadeIn 2s ease-in 6s forwards;
-  animation: fadeIn 2s ease-in 6s forwards; }
+  -webkit-animation: fadeIn 2s ease-in 5s forwards;
+  -moz-animation: fadeIn 2s ease-in 5s forwards;
+  -o-animation: fadeIn 2s ease-in 5s forwards;
+  animation: fadeIn 2s ease-in 5s forwards; }
 
 #mainLogo {
   opacity: 1; }

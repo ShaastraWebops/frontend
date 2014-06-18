@@ -62,8 +62,8 @@ $(document).ready(function(){
 		}
 	}
 	function reScale () {
-		console.log("rescaled");
-		alert("rescaled");
+		// console.log("rescaled");
+		// alert("rescaled");
 		sWidth = window.innerWidth;
 		sHeight = window.innerHeight;
 		sWidth_em = sWidth/16;

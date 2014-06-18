@@ -57,11 +57,12 @@ body{
 #watermark div{    
   opacity: 0;
   // display: none;
-  $delay: 6s;
-  -webkit-animation: fadeIn 2s ease-in $delay forwards;
-     -moz-animation: fadeIn 2s ease-in $delay forwards;
-       -o-animation: fadeIn 2s ease-in $delay forwards;
-          animation: fadeIn 2s ease-in $delay forwards;      
+  $delay: 5s;
+  $dur: 2s;
+  -webkit-animation: fadeIn $dur ease-in $delay forwards;
+     -moz-animation: fadeIn $dur ease-in $delay forwards;
+       -o-animation: fadeIn $dur ease-in $delay forwards;
+          animation: fadeIn $dur ease-in $delay forwards;      
 }
 
 #mainLogo{
