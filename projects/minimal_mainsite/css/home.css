@@ -592,10 +592,10 @@ body {
 
 #watermark div {
   opacity: 0;
-  -webkit-animation: fadeIn 2s ease-in 10s forwards;
-  -moz-animation: fadeIn 2s ease-in 10s forwards;
-  -o-animation: fadeIn 2s ease-in 10s forwards;
-  animation: fadeIn 2s ease-in 10s forwards; }
+  -webkit-animation: fadeIn 2s ease-in 6s forwards;
+  -moz-animation: fadeIn 2s ease-in 6s forwards;
+  -o-animation: fadeIn 2s ease-in 6s forwards;
+  animation: fadeIn 2s ease-in 6s forwards; }
 
 #mainLogo {
   opacity: 1; }
