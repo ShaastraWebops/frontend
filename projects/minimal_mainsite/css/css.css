@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 .tabs {
-    margin-left:130px;
+    margin-left:65px;
+	margin-right:65px;;
 	margin-top:10px;
 	width:90%;
     display:inline-block;
