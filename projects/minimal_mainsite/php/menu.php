@@ -101,8 +101,10 @@
             }
         });
         $('body').click(function(e){
-            console.log(e.clientX)
-            // hideMenu();
+            // console.log(e.clientX)
+            if(e.clientX>0.3*(window.innerWidth)){
+                hideMenu();                
+            }
         });         
     });   
 </script>
