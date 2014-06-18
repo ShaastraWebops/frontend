@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 .tabs {
-    width:100%;
+    margin-left:130px;
+	margin-top:10px;
+	width:90%;
     display:inline-block;
 }
 .tab-links:after {

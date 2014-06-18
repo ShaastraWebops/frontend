@@ -69,7 +69,22 @@
 <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
 </head>	
 <body style="font-family:Titillium Web;">
-<?php include 'menu.php' ?>		
+<?php include 'menu.php' ?>	
+
+<div class="container-fluid title white centered">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">SPONSORS</h1>
+                    <div class="white breaker">
+                        <span class="left"></span>
+                        <div class="dice white"></div>
+                        <span class="right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+	
 		<div class="tabs">
     
 	<ul class="tab-links"><strong>
