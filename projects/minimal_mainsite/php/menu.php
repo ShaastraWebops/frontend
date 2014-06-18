@@ -100,9 +100,9 @@
                 hideMenu(); 
             }
         });
-        $('body').click(function(e){
-            // console.log(e.clientX)
-            if(e.clientX>0.3*(window.innerWidth)){
+        $('*').click(function(e){
+            console.log(e.clientX+","+window.innerWidth)
+            if(e.clientX > 0.3*(window.innerWidth)){
                 hideMenu();                
             }
         });         
