@@ -62,8 +62,8 @@ $(document).ready(function(){
 		}
 	}
 	function reScale () {
-		console.log("rescaled");
-		alert("rescaled");
+		// console.log("rescaled");
+		// alert("rescaled");
 		sWidth = window.innerWidth;
 		sHeight = window.innerHeight;
 		sWidth_em = sWidth/16;
@@ -175,7 +175,9 @@ $(document).ready(function(){
   	//Responsive behaviour
   	//initial size
 	reScale();
-  	$(window).resize(reScale());
+  	$(window).resize(function(){
+  		reScale();  	
+  	});
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
