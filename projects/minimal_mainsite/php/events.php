@@ -70,7 +70,7 @@
           text-align:center;
         }
         .event-info p{
-          opacity:0;
+          opacity:1;
         }
 
         *{
@@ -962,7 +962,7 @@
               $(scrollTargets[j]).removeClass('navbar-selected');
 
             $(scrollTargets[i-1]).addClass('navbar-selected')
-            $('.signal-hub').trigger('scroll-changed')
+            //$('.signal-hub').trigger('scroll-changed')
             break;
           }
         }
@@ -977,8 +977,13 @@
 
       $(window).scroll(function(){
         var height = $(window).scrollTop();
+        var bgOffset = -100 //offset in px to be applied to background images for parallax
         for (var i = 0; i < parallaxFuncs.length; i++) {
-          $(parallaxTargets[i]).css('top',parallaxFuncs[i].calc.call(parallaxFuncs[i],height)+'px');
+          var absDisp = parallaxFuncs[i].calc.call(parallaxFuncs[i],height);
+          $(parallaxTargets[i]).css('top',absDisp+'px');
+          // CHANGE THIS ASAP
+          $(parallaxComputeRefs[i]).css('background-position-y',(bgOffset+absDisp)+'px');
+
         };
       })
       $(document).ready(function(){
@@ -1028,9 +1033,9 @@
         rolldownTargets.push('#bevent-events .event-info  p');
         rolldownTargets.push('#misc-events .event-info  p');
 
-        for (var i = 0; i < rolldownTargets.length; i++) {
+        /*for (var i = 0; i < rolldownTargets.length; i++) {
           $(rolldownTargets[i]).slideUp();
-        };
+        };*/
         $(window).resize();
       })
 
@@ -1041,11 +1046,11 @@
 
         var sensorOffset = 0; //deliberate offset in pixels for the parallax effect.
         for (var i = 0; i < parallaxTargets.length; i++) {
-          var scrollTop1 = $(parallaxComputeRefs[i]).position().top - parseInt(window.innerHeight/2);
+          var scrollTop1 = $(parallaxComputeRefs[i]).position().top - parseInt(window.innerHeight/8);
           var dispTop1 = 0;
 
           var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2)
-          var dispTop2 = 100;
+          var dispTop2 = 300;
 
           var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
           var offset = -slope*scrollTop1;
