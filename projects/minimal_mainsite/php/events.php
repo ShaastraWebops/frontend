@@ -43,22 +43,31 @@
         .jumbotron p:hover{
           opacity: 0.6
         }
+        .jumbotron .container{
+          position:relative;
+        }
         .jumbotron{
-          background-color: rgba(238, 238, 238, 0.46)
+          background-color: rgba(238, 238, 238, 0.86);
+          position:relative;
+          margin-bottom:150px;
+          overflow:hidden;
         }
 
         .btn-grey{
-          background-color: rgb(150,150,150);
-          border-color: rgb(150,150,150);
+          background-color: transparent;
+          border-color: none;
+          border: 2px solid transparent;
         }
         .btn-grey:hover{
-          opacity: 0.5;
-          background-color: rgb(150,150,150);
+          background-color: transparent;
+          border-color: rgb(150,150,150)
         }
         .white-logo:hover{
           opacity: 0.5
         }
-
+        .event-info{
+          text-align:center;
+        }
 
         *{
           font-family: 'Titillium Web', sans-serif
@@ -127,7 +136,8 @@
           background: linear-gradient(to right, #fff, transparent);
         }
         .navbar-selected{
-          background-color: #3276b1;
+          background-color: transparent;
+          border-color: white;
         }
 
       </style>
@@ -217,17 +227,17 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 event-info">
       <h2>Heading</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
       <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 event-info">
       <h2>Heading</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
       <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 event-info">
       <h2>Heading</h2>
       <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -250,34 +260,34 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Aerobotics</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Wright Design</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Paper Planes</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>TopGun</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Airshow</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Boeing National Aeromodelling Competition</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -303,51 +313,51 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Fire and Ice</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Ultimate Engineer</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Lunar Rover Challenge</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Contraptions</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>RoboWars</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Junkyard Wars</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Robotics</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Robo Oceana</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Master Builder</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -371,46 +381,46 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Open Programming Contest</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Reverse Coding</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Automania</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Code Obfuscation</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Triathlon </h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Debugging</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Hackfest Workshop</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Paypal Hackfest</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -435,24 +445,24 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Project X</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Cube Open</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Puzzle Champ</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Math Modelling</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -476,24 +486,24 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Auto Quiz</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Junior Quiz</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Main Quiz</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>How Things Work</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -518,17 +528,17 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Online Puzzle Champ</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Online Math Modelling</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Finance &amp; Consultancy</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -552,34 +562,34 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Robo Oceana</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Forensics</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Circuit Design Challenge</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Chemical X</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Master Builder</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Desmod</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -603,41 +613,41 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Junior</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>IIT Madras Symposium</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Sustainable Cityscape</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Paper &amp; Poster Presentation</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Ideas Challenge</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Pan IIT Research Expo</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Education Fair</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -664,68 +674,68 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Autonomous Robotics</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Chuckglider</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Paper Planes</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>3D Animation</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Hovercraft</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>RoboSoccer</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Network Security</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Digital Fabrication &amp; Prototyping</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Android Development</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Rubik's Cube</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Forensics</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Boeing Aeromodelling</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -749,29 +759,29 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Product Launch</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Tech Lounge</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Magic Materials</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Shaastra Exhibitions</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Space Trek Planetarium</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -796,24 +806,24 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Case Study</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Vittaneeti</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Estimus</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Art of Business</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -837,24 +847,24 @@
 </div><div class="container">
 <!-- Example row of columns -->
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Ericsson Industry Defined Problem</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Eaton Industry Defined Problem</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>GE Industry Defined Problem</h2>
     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 event-info">
     <h2>Research Confluence</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -878,6 +888,10 @@
     <script type='text/javascript'>
       var scrollLevels = [];
       var scrollTargets = [];
+      var parallaxFuncs = [];
+      var parallaxTargets = [];
+      var parallaxComputeRefs = [];
+
       var currState = -1;
       $(document).ready(function(){
         scrollTargets.push('#aerofest-nav');
@@ -898,6 +912,7 @@
         $(window).resize();
       });
 
+
       $(window).resize(function(){
         scrollLevels = [];
         scrollLevels.push($('#aerofest').position().top);
@@ -917,6 +932,7 @@
 
         scrollLevels.push($('body').position().top + $('body').height());// base case.
 
+        // for a more realistic effect.
         for(var j = 0;j<scrollLevels.length;j++)
           scrollLevels[j] -= parseInt(window.innerHeight/2);
       });
@@ -942,13 +958,77 @@
         }
       });
 
-
       $(document).ready(function(){
         var scrollOffset = 40;// deliberate offset in pixels to make the scroll look better.
         $('.scroll-to').click(function(){
           $('html,body').animate({scrollTop:$($(this).data('href')).position().top - scrollOffset} );
         })
       });
+
+      $(window).scroll(function(){
+        var height = $(window).scrollTop();
+        for (var i = 0; i < parallaxFuncs.length; i++) {
+          $(parallaxTargets[i]).css('top',parallaxFuncs[i].calc.call(parallaxFuncs[i],height)+'px');
+        };
+      })
+      $(document).ready(function(){
+        parallaxTargets = [];
+        parallaxTargets.push('#aerofest .container');
+        parallaxTargets.push('#design .container');
+        parallaxTargets.push('#coding .container');
+        parallaxTargets.push('#involve .container');
+        parallaxTargets.push('#quiz .container');
+        parallaxTargets.push('#online .container');
+        parallaxTargets.push('#flagship .container');
+        parallaxTargets.push('#spotlight .container');
+        parallaxTargets.push('#workshops .container');
+        parallaxTargets.push('#shows .container');
+        parallaxTargets.push('#bevent .container');
+        parallaxTargets.push('#misc .container');
+
+        parallaxComputeRefs.push('#aerofest');
+        parallaxComputeRefs.push('#design');
+        parallaxComputeRefs.push('#coding');
+        parallaxComputeRefs.push('#involve');
+        parallaxComputeRefs.push('#quiz');
+        parallaxComputeRefs.push('#online');
+        parallaxComputeRefs.push('#flagship');
+        parallaxComputeRefs.push('#spotlight');
+        parallaxComputeRefs.push('#workshops');
+        parallaxComputeRefs.push('#shows');
+        parallaxComputeRefs.push('#bevent');
+        parallaxComputeRefs.push('#misc');
+
+        $(window).resize();
+      })
+
+      $(window).resize(function(){
+
+        // recompute linear functions for parallax displacement.
+
+        var sensorOffset = 0; //deliberate offset in pixels for the parallax effect.
+        for (var i = 0; i < parallaxTargets.length; i++) {
+          var scrollTop1 = $(parallaxComputeRefs[i]).position().top - parseInt(window.innerHeight/2) + 100;
+          var dispTop1 = 0;
+
+          var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2) - 100
+          var dispTop2 = 100;
+
+          var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
+          var offset = -slope*scrollTop1;
+
+          parallaxFuncs[i] = {
+            slope: slope,
+            offset: offset,
+            calc:function( x ){
+              return parseInt(this.slope*x + this.offset)
+            }
+          }
+
+        };
+      })
+
+
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 
