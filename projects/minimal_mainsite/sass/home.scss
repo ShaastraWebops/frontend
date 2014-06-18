@@ -1,28 +1,12 @@
 //Primary SASS file for the Mainpage
 // madeby: abhiShandy
 
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Titillium Web'), local('TitilliumWeb-Regular'), 
-    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) 
-    format('woff');
-}
 //Variables
 $font: "Titillium Web","TakaoPGothic","Century Schoolbook L",Verdana;
 // $font: "TakaoPGothic","Century Schoolbook L",Verdana;
 
 $scale: 0.1;
 $blue: #00425a;
-//importing fonts
-
-@font-face {
-  font-family: 'ecoicon';
-  src:url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 //importing partials
 @import "Animation";
 @import "cl-effect2";
