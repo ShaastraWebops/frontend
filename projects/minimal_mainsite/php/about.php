@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-7">
                     <p>
-                    Mark the four days from January 4th to January 7th, 2015 on your calendars, as Shaastra will keep you engrossed in a plethora of professional shows, competitions and lectures that have something for everybody. With some of the sharpest minds of the nation converging under one banner, one can expect to go back inspired.
+                    Mark the four days from January 3rd to January 6th, 2015 on your calendars, as Shaastra will keep you engrossed in a plethora of professional shows, competitions and lectures that have something for everybody. With some of the sharpest minds of the nation converging under one banner, one can expect to go back inspired.
                     </p>
                     <br />
                     <p>

@@ -171,7 +171,7 @@
 @media all and (min-width: 21.875em) and (max-width: 31.25em) {
   .cl-effect a {
     padding: 2.5%; } }
-div a {
+#hexaMenu a {
   position: relative;
   display: inline-block;
   /*	margin: 15px 25px;   */
@@ -188,6 +188,20 @@ div a {
           float: none;
       }
   */ }
+a {
+  position: relative;
+  display: inline-block;
+  /*  margin: 15px 25px;   */
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1%;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+a.white {
+  color : #fff;
+}
 
 @media all and (max-width: 37.5em) {
   div a {
@@ -489,8 +503,8 @@ div a {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
-div a:hover,
-div a:focus {
+a:hover,
+a:focus {
   outline: none; }
 
 .cl-effect-12 a::before,
@@ -632,7 +646,14 @@ border-radius: 1px;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  outline : 0;
 }
 .menu .icon-bar + .icon-bar {
 margin-top: 4px;
+}
+.social {
+  width : 100%;
+}
+.social img {
+  margin : auto;
 }
