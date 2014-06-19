@@ -1090,7 +1090,9 @@
           ,500);
          });
       })
-
+      $(window).load(function(){
+        $(window).resize();
+      })
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 
