@@ -169,7 +169,9 @@
                 }
                 $("#home-menu").addClass("current_page");
             /* code for browser detection end */            
-            });            
-        </script>        
+                $(window).load($(window).resize); 
+            });        
+               
+        </script>
 	</body>
 </html>

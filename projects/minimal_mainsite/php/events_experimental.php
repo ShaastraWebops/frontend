@@ -45,7 +45,6 @@
           font-weight:400;
 
         }
-
         .jumbotron p:hover{
           opacity: 0.6
         }
