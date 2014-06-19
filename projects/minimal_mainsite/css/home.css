@@ -318,6 +318,8 @@ div a {
   top: 0%;
   left: -30%;
   opacity: 1; }
+  #menu_popup a {
+    float: left; }
 
 @media all and (max-width: 42.5em) {
   #menu_popup {

@@ -125,6 +125,6 @@
            menu_rescale();
         });
     });   
-        // document.getElementById("menu_popup").style.height = screen.availHeight+"px";
+        document.getElementById("menu_popup").style.height = screen.availHeight+"px";
         // document.getElementById("menu_popup").style.height = "100%";
 </script>
