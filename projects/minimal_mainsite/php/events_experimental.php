@@ -31,8 +31,8 @@
           color:#BBB;
         }
         div.jumbotron *, div.jumbotron {
-          -webkit-transition: all 0.3s linear; /* For Safari 3.1 to 6.0 */
-          transition: all 0.3s linear;
+          -webkit-transition: all 0s linear; /* For Safari 3.1 to 6.0 */
+          transition: all 0s linear;
         }
         p{
           font-family: 'Titillium Web', sans-serif;
