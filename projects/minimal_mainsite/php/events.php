@@ -120,23 +120,19 @@
     <!-- End modals-->
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container" style="
-      text-align: center;
-      ">
-      <div class='row'>
-        <div class="col-md-4 col-md-offset-4" style="
-        text-align: center;
-        ">
-        <a class='scroll-to' data-href='#events_main'>
-          <div class="white breaker white-logo">
-            <span class="left"></span>
-            <div class="dice white"></div>
-            <span class="right"></span>
+      <?php include 'menu.php' ?>
+      <div class="container text-center">
+        <div class='row'>
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <a class='scroll-to' data-href='#events_main'>
+              <div class="white breaker white-logo">
+                <span class="left"></span>
+                <div class="dice white"></div>
+                <span class="right"></span>
+              </div>
+            </a>
           </div>
-        </a>
-
-      </div>
-    </div>
+        </div>
     <div class="row" style='padding-top:10px;margin-bottom:5px'>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='aerofest-nav' data-href='#aerofest'>Aerofest</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='design-nav' data-href='#design'>Design and Build</a>

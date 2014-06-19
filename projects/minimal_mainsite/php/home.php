@@ -4,6 +4,34 @@
 		<title>Shaastra 15</title>
 
         <?php include 'head.php'; ?>
+        <style>
+        .tooltip.top .tooltip-arrow {
+          bottom: 0;
+          left: 50%;
+          margin-left: -5px;
+          border-top-color: #fff;
+          border-width: 5px 5px 0;
+        }
+        .tooltip-inner {
+          color: #000;
+          background: #fff;
+          border: solid 1px #fff;
+        }
+        .tooltip.left .tooltip-arrow {
+          bottom: 0;
+          left: 50%;
+          margin-left: -5px;
+          border-top-color: #fff;
+          border-width: 5px 5px 0;
+        }
+        .tooltip.right .tooltip-arrow {
+          top: 50%;
+          left: 0;
+          margin-top: -5px;
+          border-right-color: #000000;
+          border-width: 5px 5px 5px 0;
+        }
+        </style>
 	</head>
 	<body>
         <?php include 'menu.php'; ?>
@@ -21,14 +49,20 @@
         </div>
         <div id="social_icons">
             <div class="row">
-                <div class="col-xs-4">
-                    <a class="social" href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
+                <div class="col-xs-3 col-xs-offset-2">
+                    <a class="social bs-tooltip" href="https://www.facebook.com/Shaastra" data-toggle="tooltip" data-placement="top" title="Like Us">
+                        <img src="../img/social/facebook.png" />
+                    </a>
                 </div>
-                <div class="col-xs-4">
-                    <a class="social" href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
+                <div class="col-xs-3">
+                    <a class="social bs-tooltip" href="https://twitter.com/ShaastraIITM" data-toggle="tooltip" data-placement="top" title="Follow Us">
+                        <img src="../img/social/twitter.png" />
+                    </a>
                 </div>
-                <div class="col-xs-4">
-                    <a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
+                <div class="col-xs-3">
+                    <a class="social bs-tooltip" href="https://www.youtube.com/user/iitmshaastra" data-toggle="tooltip" data-placement="top" title="Subscribe">
+                        <img src="../img/social/youtube.png" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -168,6 +202,7 @@
                     $("#notice").css("opacity","1");
                 }
                 $("#home-menu").addClass("current_page");
+                $(".bs-tooltip").tooltip()
             /* code for browser detection end */            
                 $(window).load($(window).resize); 
             });        
