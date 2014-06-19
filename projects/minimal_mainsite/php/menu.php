@@ -1,7 +1,11 @@
 <div class="menuB">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
-    <!-- <i class="fa fa-angle-right fa-2x"></i> -->
+    <!--<span class="glyphicon glyphicon-tasks"></span>-->
+    <span>MENU</span>
+    <button class="menu" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 </div>
 
 <!-- menu popup start -->

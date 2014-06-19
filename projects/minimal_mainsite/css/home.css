@@ -291,7 +291,6 @@ div a {
 .menuB {
   opacity: 0;
   color: white;
-  font-size: 3em;
   position: absolute;
   cursor: pointer;
   top: 5%;
@@ -455,19 +454,33 @@ div a {
     opacity: 0;
     left: -0.5em; } }
 
-.menuB:hover span {
+.menuB:hover .icon-bar {
   position: relative;
-  -webkit-animation: arrow_right 1s ease-in-out infinite; }
+}
+.menuB:hover .icon-bar:nth-child(1) {
+  -webkit-animation: go_up_A 0.5s ease-in-out both;
+}
+.menuB:hover .icon-bar:nth-child(2) {
+  -webkit-animation: go_up_B 0.5s ease-in-out both;
+}
+.menuB:hover .icon-bar:nth-child(3) {
+  -webkit-animation: go_up_C 0.5s ease-in-out both;
+}
 
-@-webkit-keyframes arrow_right {
-  from {
-    right: 0em;
-    opacity: 1; }
-
-  to {
-    opacity: 0;
-    right: -0.2em; } }
-
+@-webkit-keyframes go_up_A { 
+  0% { top: 0em; opacity: 1; }
+  80% { top: -0.5em; opacity: 1; } 
+  100% { top: -0.5em; opacity: 1; } 
+}
+@-webkit-keyframes go_up_B { 
+  10% { top: 0em; opacity: 1; }
+  90% { top: -0.5em; opacity: 1; } 
+  100% { top: -0.5em; opacity: 1; } 
+}
+@-webkit-keyframes go_up_C { 
+  20% { top: 0em; opacity: 1; }
+  100% { top: -0.5em; opacity: 1; } 
+}
 div a {
   position: relative;
   display: inline-block;
@@ -599,3 +612,27 @@ body {
   -moz-animation: fadeIn 3s ease-in 5s forwards;
   -o-animation: fadeIn 3s ease-in 5s forwards;
   animation: fadeIn 3s ease-in 5s forwards; }
+.menu .icon-bar {
+background-color: white;
+}
+.menu .icon-bar {
+display: block;
+width: 22px;
+height: 2px;
+border-radius: 1px;
+}
+
+.menu {
+  position: relative;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.menu .icon-bar + .icon-bar {
+margin-top: 4px;
+}

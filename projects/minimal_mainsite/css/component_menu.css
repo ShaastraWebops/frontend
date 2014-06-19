@@ -76,3 +76,35 @@ c {
 #set-7 {
 	background: none;
 }
+
+.menu .icon-bar {
+background-color: white;
+}
+.menu .icon-bar {
+display: block;
+width: 22px;
+height: 2px;
+border-radius: 1px;
+}
+
+.menu:hover, .menu:focus {
+  background-color: #333333;
+}
+.menu {
+  border-color: #333333;
+}
+.menu:focus {
+  outline: 0;
+}
+.menu {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
