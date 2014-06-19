@@ -4,9 +4,6 @@
 		<title>Shaastra 15</title>
 
         <?php include 'head.php'; ?>
-        <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
-
 	</head>
 	<body>
         <?php include 'menu.php'; ?>

@@ -24,15 +24,19 @@
   } 
 }
 #menu_popup {
-  position: absolute;
+  position: fixed;
   background-color: black;
   z-index: 400;
-  height: 100%;
+  // height: 100%
+  // float: left;
   $w: 30%;
   width:$w;
   top: 0%;
   left: -$w;
   opacity: 1; 
+  a{
+    float: left;
+  }
 }
 @media all and (max-width: 42.5em) {
   #menu_popup{
@@ -71,6 +75,7 @@
   padding-right: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
+  // float: left;
   width: 100%;
   text-align: center;
   // height: 5%;
@@ -161,8 +166,8 @@
 }
 
 .link-braces a:hover {
-  color: #00425a;
-  // font-size: 4em;
+  color: #fff;
+  // font-size: 4em;  
 }
 
 .link-braces a::before,
@@ -258,7 +263,7 @@ div a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 8.5em;
+  width: 9.7em;
   height: 2em;
   border: 2px solid rgba(255,255,255,0.1);
   border-radius: 0%;
@@ -273,7 +278,7 @@ div a:focus {
 }
 
 .cl-effect-12 a::after {
-  width: 8em;
+  width: 9em;
   height: 1.5em;
   border-width: 5px;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);

@@ -43,7 +43,7 @@
         </div>
         <div class="row" id="lecture-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page" href="lectures.php">Lectures</a>
+                <a class="col-xs-8 col-xs-offset-2 next_page" href="lectures.php">Lectures</a>
             </div>
         </div>
         <div class="row" id="spons-menu">
@@ -76,15 +76,15 @@
 
 <script>
     $(document).ready(function(){        
-        $(".menuB").hover(function(){
-            $(".menuB span").css("color","#00425a");
+        // $(".menuB").hover(function(){
+            // $(".menuB span").css("color","#00425a");
             // $(this).removeClass("fa-angle-right");
             // $(this).addClass("fa-angle-double-right");
-        },function(){
-            $(".menuB span").css("color","white");
+        // },function(){
+            // $(".menuB span").css("color","white");
             // $(this).removeClass("fa-angle-double-right");
             // $(this).addClass("fa-angle-right");
-        });
+        // });
         $(".menuB").click(function(){
             $("#menu_popup").animate({
                 left: '0%',
@@ -100,7 +100,7 @@
             }
         });
         $('*').click(function(e){
-            console.log(e.clientX+","+window.innerWidth)
+            // console.log(e.clientX+","+window.innerWidth)
             if(e.clientX > 0.3*(window.innerWidth)){
                 hideMenu();                
             }
@@ -123,6 +123,8 @@
         menu_rescale();
         $(window).resize(function(){
            menu_rescale();
-        });         
+        });
     });   
+        document.getElementById("menu_popup").style.height = screen.availHeight+"px";
+        // document.getElementById("menu_popup").style.height = "100%";
 </script>
