@@ -976,8 +976,11 @@
 
       $(document).ready(function(){
         var scrollOffset = 40;// deliberate offset in pixels to make the scroll look better.
+        var scrollSpeed = 2;// speed in pixel per ms
         $('.scroll-to').click(function(){
-          $('html,body').animate({scrollTop:$($(this).data('href')).position().top - scrollOffset} );
+          var destScroll = $($(this).data('href')).position().top - scrollOffset;
+          var currentScroll = $(window).scrollTop();
+          $('html,body').animate({scrollTop:destScroll},parseInt(Math.abs(destScroll-currentScroll)/scrollSpeed),'swing');
         })
       });
 
