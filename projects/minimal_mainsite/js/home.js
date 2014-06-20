@@ -179,8 +179,12 @@ $(document).ready(function(){
   		reScale();  	
   	});
   	i=0;
-  	// setInterval(function(){reScale(); i=i+1;},500+1000*i);
-  	setTimeout(function(){reScale()},500);
+  	// setInterval(function(){reScale(); i=i+1;},500+5000*i);
+  	// setTimeout(function(){reScale()},500);
+  	setTimeout(function(){reScale()},2000);
+  	// setTimeout(function(){reScale()},5000);
+  	// setTimeout(function(){reScale()},10000);
+  	reScale();
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
