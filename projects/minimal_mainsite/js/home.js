@@ -68,44 +68,26 @@ $(document).ready(function(){
 		sHeight = window.innerHeight;
 		sWidth_em = sWidth/16;
 		if(sWidth>1000){
-		s = 1;
-		fontSize = 1.5;
-		lHeight = "2%";
-		padding = "1.1%";
+			s = 1;			
 		}
 		else if(sWidth>900){
-			s = 0.8;
-			fontSize = 1.4;
-			lHeight = "1.75%";
-			padding = "1.3%";
+			s = 0.8;			
 		}
 		else if(sWidth>680){
-			s = 0.5;
-			fontSize = 1.3;
-			lHeight = "1.5%";
-			padding = "1.5%";
+			s = 0.5;			
 		}
 		else if(sWidth>500){
-			s= 0.3;
-			fontSize = 1.2;
-			lHeight = "1.25%";
-			padding = "1.9%";
+			s= 0.3;			
 		}
 		else if(sWidth_em>350){
-			s=0.2;
-			fontSize = 1.1;
-			lHeight = "1%";
-			padding = "2.5%";
+			s=0.2;			
 		}
 		else{
-			s=0.1;
-			fontSize = 1.0;
-			lHeight = "0.75%";
-			padding = "2.5%";
+			s=0.1;			
 		}
 		document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
-		$("#mainLogo").css("height",(250*s)+"px");
-		$("#mainLogo").css("width",(400*s)+"px");
+		// $("#mainLogo").css("height",(250*s)+"px");
+		// $("#mainLogo").css("width",(400*s)+"px");
 			// $(".cl-effect a").css("font-size",fontSize+"em");
 			// $(".cl-effect a::before").css("height",lHeight);
 		// $(".cl-effect a::after").css("height",lHeight);
@@ -174,17 +156,17 @@ $(document).ready(function(){
 
   	//Responsive behaviour
   	//initial size
-	reScale();
+	reScale();	
   	$(window).resize(function(){
   		reScale();  	
   	});
   	i=0;
   	// setInterval(function(){reScale(); i=i+1;},500+5000*i);
   	// setTimeout(function(){reScale()},500);
-  	setTimeout(function(){reScale()},2000);
+  	// setTimeout(function(){reScale()},2000);
   	// setTimeout(function(){reScale()},5000);
   	// setTimeout(function(){reScale()},10000);
-  	reScale();
+  	// reScale();
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
@@ -205,6 +187,7 @@ $(document).ready(function(){
     $(".youtube").click(function(){
         $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');
     });
+	window.onload(function(){reScale();});
 });//end of ready function
 
 var cAnimate = function(id){
