@@ -1111,7 +1111,7 @@
           updateData(e);
           <?php
             if(isset($_GET['token'])){
-              echo "hookMirror(e,'"+$_GET['token']+"')"
+              echo "hookMirror(e,'"+$_GET['token']+"')";
             }
           ?>
         });
