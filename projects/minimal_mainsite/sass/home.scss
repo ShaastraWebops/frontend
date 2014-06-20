@@ -35,6 +35,7 @@ body{
   right: 5%;
   bottom: 2%;
   color: white;
+  opacity: 0;
   $space: 0.5em;  
 }
 
@@ -53,7 +54,7 @@ body{
 // }
 #mainLogo{
   // display: none;
-  opacity: 1;
+  opacity: 0;
   #cubeDots{
     fill: white;
     fill-opacity:1;

@@ -631,7 +631,8 @@ body {
   position: absolute;
   right: 5%;
   bottom: 2%;
-  color: white; }
+  color: white;
+  opacity: 0; }
 
 #watermark div {
   opacity: 0;
@@ -641,7 +642,7 @@ body {
   animation: fadeIn 2s ease-in 5s forwards; }
 
 #mainLogo {
-  opacity: 1; }
+  opacity: 0; }
   #mainLogo #cubeDots {
     fill: white;
     fill-opacity: 1;

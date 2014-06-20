@@ -61,7 +61,7 @@ function hexaStr(id, n) {
 	}
 }
 function reScale () {
-	// console.log("rescaled");
+	console.log("rescaled");
 	// alert("rescaled");
 	sWidth = window.innerWidth;
 	sHeight = window.innerHeight;
@@ -98,6 +98,41 @@ function reScale () {
 	hexaStr("about",4);
 	hexaStr("lectures",5);
 	hexaStr("spons",6);
+}
+function cAnimate(id){
+	var x = document.getElementById(id);
+	x.style.fillOpacity = 0;
+	var pathLength = x.getTotalLength();
+	x.style.strokeDashoffset = pathLength;
+	duration = 6;
+	delay = 1;
+	x.style.strokeDasharray = pathLength+" "+pathLength;
+	x.style.WebkitAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
+	x.style.mozAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
+	x.style.oAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
+	x.style.animation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
+	// x.style.MozAnimation = "cubeAnimate 8s ease-in-out 1s forwards";	
+	// console.log("testing in Mozilla");
+}
+function loadImages(){
+	document.getElementById("mainLogo").style.opacity = 1;
+	document.getElementById("social_icons").style.opacity = 1;
+}
+function logoAnimate (){
+	cAnimate("cubeBorder");
+	cAnimate("cubeDots");
+	cAnimate("s2");
+	cAnimate("s0");
+	cAnimate("s1");
+	cAnimate("s5");
+	cAnimate("sS1");
+	cAnimate("sS2");
+	cAnimate("sH");
+	cAnimate("sA1");
+	cAnimate("sA2");
+	cAnimate("sA3");
+	cAnimate("sR");
+	cAnimate("sT");
 }
 $(document).ready(function(){
   	//Hover effect on HomePage Navigation
@@ -181,37 +216,3 @@ $(document).ready(function(){
         $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');
     });
 });//end of ready function
-// window.onload(function(){reScale();});
-
-var cAnimate = function(id){
-	var x = document.getElementById(id);
-	x.style.fillOpacity = 0;
-	var pathLength = x.getTotalLength();
-	x.style.strokeDashoffset = pathLength;
-	duration = 6;
-	delay = 1;
-	x.style.strokeDasharray = pathLength+" "+pathLength;
-	x.style.WebkitAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
-	x.style.mozAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
-	x.style.oAnimation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
-	x.style.animation = "cubeAnimate "+duration+"s ease-in-out "+delay+"s forwards";
-	// x.style.MozAnimation = "cubeAnimate 8s ease-in-out 1s forwards";	
-	// console.log("testing in Mozilla");
-}
-cAnimate("cubeBorder");
-cAnimate("cubeDots");
-cAnimate("s2");
-cAnimate("s0");
-cAnimate("s1");
-cAnimate("s5");
-cAnimate("sS1");
-cAnimate("sS2");
-cAnimate("sH");
-cAnimate("sA1");
-cAnimate("sA2");
-cAnimate("sA3");
-cAnimate("sR");
-cAnimate("sT");
-
-// document.getElementById("mike").style.height = "5%";
-

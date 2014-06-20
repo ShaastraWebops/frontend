@@ -33,7 +33,7 @@
         }
         </style>
 	</head>
-	<body onload="reScale()">
+	<body onload="reScale(); logoAnimate();">
         <?php include 'menu.php'; ?>
         <div id="hexaMenu" class="cl-effect">  
             <a id="events" class="events next_page" href="events.php">EVENTS</a>
