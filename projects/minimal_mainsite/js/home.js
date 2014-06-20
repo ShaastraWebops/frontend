@@ -4,109 +4,102 @@
 var sWidth = window.innerWidth;
 var sHeight = window.innerHeight;
 
+//functions
+function pageCenterPx (id, z) {
+	x = document.getElementById(id);
+	x.style.position = "absolute";
+	x.style.zIndex = z;
+	x.style.top = (window.innerHeight - x.clientHeight)/2+"px";
+	x.style.left = (window.innerWidth - x.clientWidth)/2+"px";
+}	
+function pageCenterPercent (id, z) {
+	x = document.getElementById(id);
+	x.style.position = "absolute";
+	x.style.zIndex = z;
+	x.style.top = (1-(x.clientHeight/window.innerHeight))*50+"%";	
+	x.style.left = (1-(x.clientWidth/window.innerWidth))*50+"%";
+}
+function hexaStr(id, n) {
+	x = document.getElementById(id);
+	x.style.position = "absolute"
+	a = 11;
+	b = 5;
+	c = 2;
+	d= 4;
+	switch(n){
+		case 1:
+		x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
+		x.style.left = (window.innerWidth - x.clientWidth)*(1/c) +"px";
+		// console.leftog(x.style.top);
+		// console.log(x.style.left);		
+		break;
+
+		case 2:
+		x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";		
+		x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
+		break;
+
+		case 3:
+		x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+		x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
+		break;
+
+		case 4:
+		x.style.top = (window.innerHeight - x.clientHeight)*((a-1)/a) + "px";
+		x.style.left = (window.innerWidth - x.clientWidth)*((c-1)/c) +"px";
+		break;
+
+		case 5:
+		x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
+		x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
+		break;
+
+		case 6:
+		x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";				
+		x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
+		break;		
+	}
+}
+function reScale () {
+	// console.log("rescaled");
+	// alert("rescaled");
+	sWidth = window.innerWidth;
+	sHeight = window.innerHeight;
+	sWidth_em = sWidth/16;
+	if(sWidth>1000){
+		s = 1;			
+	}
+	else if(sWidth>900){
+		s = 0.8;			
+	}
+	else if(sWidth>680){
+		s = 0.5;			
+	}
+	else if(sWidth>500){
+		s= 0.3;			
+	}
+	else if(sWidth_em>350){
+		s=0.2;			
+	}
+	else{
+		s=0.1;			
+	}
+	document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
+	pageCenterPercent("mainLogo",2);
+	pageCenterPercent("planeSVG",1);
+	pageCenterPercent("rupeeSVG",1);
+	pageCenterPercent("mikeSVG",1);
+	pageCenterPercent("phoneSVG",1);
+	pageCenterPercent("groupSVG",1);
+	pageCenterPercent("toolSVG",1);  		
+	hexaStr("events",1);
+	hexaStr("shows",2);
+	hexaStr("contact",3);
+	hexaStr("about",4);
+	hexaStr("lectures",5);
+	hexaStr("spons",6);
+}
 $(document).ready(function(){
-	//functions
-	function pageCenterPx (id, z) {
-		x = document.getElementById(id);
-		x.style.position = "absolute";
-		x.style.zIndex = z;
-		x.style.top = (window.innerHeight - x.clientHeight)/2+"px";
-		x.style.left = (window.innerWidth - x.clientWidth)/2+"px";
-	}	
-    function pageCenterPercent (id, z) {
-		x = document.getElementById(id);
-		x.style.position = "absolute";
-		x.style.zIndex = z;
-		x.style.top = (1-(x.clientHeight/window.innerHeight))*50+"%";	
-		x.style.left = (1-(x.clientWidth/window.innerWidth))*50+"%";
-	}
-	function hexaStr(id, n) {
-		x = document.getElementById(id);
-		x.style.position = "absolute"
-		a = 11;
-		b = 5;
-		c = 2;
-		d= 4;
-		switch(n){
-			case 1:
-			x.style.top = (sHeight - x.clientHeight)*(1/a)	 + "px";
-			x.style.left = (window.innerWidth - x.clientWidth)*(1/c) +"px";
-			// console.leftog(x.style.top);
-			// console.log(x.style.left);		
-			break;
-
-			case 2:
-			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";		
-			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
-			break;
-
-			case 3:
-			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)*((b-1)/b) +"px";
-			break;
-
-			case 4:
-			x.style.top = (window.innerHeight - x.clientHeight)*((a-1)/a) + "px";
-			x.style.left = (window.innerWidth - x.clientWidth)*((c-1)/c) +"px";
-			break;
-
-			case 5:
-			x.style.top = (window.innerHeight - x.clientHeight)*((d-1)/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
-			break;
-
-			case 6:
-			x.style.top = (window.innerHeight - x.clientHeight)*(1/d)	 + "px";				
-			x.style.left = (window.innerWidth - x.clientWidth)/5+"px";
-			break;		
-		}
-	}
-	function reScale () {
-		// console.log("rescaled");
-		// alert("rescaled");
-		sWidth = window.innerWidth;
-		sHeight = window.innerHeight;
-		sWidth_em = sWidth/16;
-		if(sWidth>1000){
-			s = 1;			
-		}
-		else if(sWidth>900){
-			s = 0.8;			
-		}
-		else if(sWidth>680){
-			s = 0.5;			
-		}
-		else if(sWidth>500){
-			s= 0.3;			
-		}
-		else if(sWidth_em>350){
-			s=0.2;			
-		}
-		else{
-			s=0.1;			
-		}
-		document.getElementById("logoSize").setAttribute("transform","scale("+s+")");
-		// $("#mainLogo").css("height",(250*s)+"px");
-		// $("#mainLogo").css("width",(400*s)+"px");
-			// $(".cl-effect a").css("font-size",fontSize+"em");
-			// $(".cl-effect a::before").css("height",lHeight);
-		// $(".cl-effect a::after").css("height",lHeight);
-			// $(".cl-effect a").css("letter-spacing",fontSize/10+"em");
-
-		pageCenterPercent("mainLogo",2);
-		pageCenterPercent("planeSVG",1);
-		pageCenterPercent("rupeeSVG",1);
-		pageCenterPercent("mikeSVG",1);
-		pageCenterPercent("phoneSVG",1);
-		pageCenterPercent("groupSVG",1);
-		pageCenterPercent("toolSVG",1);  		
-		hexaStr("events",1);
-		hexaStr("shows",2);
-		hexaStr("contact",3);
-		hexaStr("about",4);
-		hexaStr("lectures",5);
-		hexaStr("spons",6);
-	}
   	//Hover effect on HomePage Navigation
 	fIn = 0.4;
 	fOut = 1;
@@ -187,8 +180,8 @@ $(document).ready(function(){
     $(".youtube").click(function(){
         $(location).attr('href', 'https://www.youtube.com/user/iitmshaastra');
     });
-	window.onload(function(){reScale();});
 });//end of ready function
+// window.onload(function(){reScale();});
 
 var cAnimate = function(id){
 	var x = document.getElementById(id);
