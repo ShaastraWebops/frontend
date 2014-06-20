@@ -627,13 +627,6 @@ body {
 #notice {
   color: white; }
 
-#social_icons {
-  position: absolute;
-  right: 5%;
-  bottom: 2%;
-  color: white;
-  opacity: 0; }
-
 #watermark div {
   opacity: 0;
   -webkit-animation: fadeIn 2s ease-in 5s forwards;
@@ -664,6 +657,12 @@ body {
   -moz-animation: fadeIn 2s ease-in 5s forwards;
   -o-animation: fadeIn 2s ease-in 5s forwards;
   animation: fadeIn 2s ease-in 5s forwards; }
+
+#social_icons {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  color: white; }
 
 #hexaMenu,
 #social_icons {

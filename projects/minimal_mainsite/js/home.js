@@ -116,7 +116,7 @@ function cAnimate(id){
 }
 function loadImages(){
 	document.getElementById("mainLogo").style.opacity = 1;
-	document.getElementById("social_icons").style.opacity = 1;
+	document.getElementById("social_icons").style.opacity = 0;
 }
 function logoAnimate (){
 	cAnimate("cubeBorder");

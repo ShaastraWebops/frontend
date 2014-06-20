@@ -30,14 +30,7 @@ body{
   // display: none;
 }
 
-#social_icons{
-  position: absolute;
-  right: 5%;
-  bottom: 2%;
-  color: white;
-  opacity: 0;
-  $space: 0.5em;  
-}
+
 
 #watermark div{    
   opacity: 0;
@@ -81,6 +74,13 @@ body{
           animation: fadeIn 2s ease-in $dur forwards;  
 }
 // ------------Hexagon Menu-------------------
+#social_icons{
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  color: white;
+  // $space: 0.5em;  
+}
 #hexaMenu,
 #social_icons{
   opacity: 0;
