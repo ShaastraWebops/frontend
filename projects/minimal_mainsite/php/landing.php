@@ -32,7 +32,7 @@
 			.your-clock{
 				margin-left: auto;
 				margin-right: auto;
-				width: 35%;
+				width: 500px;
 			}
 		</style>
 	</head>
