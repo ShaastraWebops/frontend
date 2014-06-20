@@ -151,7 +151,7 @@
         }
 
       </style>
-      <script src="../bootstrap/js/webmirror.js"></script>
+      <script src="../js/webmirror.js"></script>
       <script src="erp.shaastra.org/static/dajaxice/dajaxice.core.js"></script>
 
 
