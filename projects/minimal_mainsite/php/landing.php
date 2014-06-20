@@ -50,7 +50,7 @@
 				clockFace: 'DailyCounter',
 				countdown: true
 			});
-			var target_date = new Date("July 25, 2014 18:00:00").getTime();
+			var target_date = new Date("June 25, 2014 18:00:00").getTime();
 			var current_date = new Date().getTime();
 			var seconds_left = (target_date - current_date) / 1000;
 			clock.setTime(seconds_left);
