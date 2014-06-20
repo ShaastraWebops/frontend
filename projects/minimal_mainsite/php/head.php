@@ -12,8 +12,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+<!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' /> -->
 <style>
     *{
         font-family: 'Titillium Web', sans-serif
@@ -86,7 +86,7 @@
 
 <!-- Fonts -->
 <!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
-<script src="../js/jquery-1.11.0.js"></script>
+<script src="../js/jquery-1.11.1.js"></script>
 <script type="text/javascript">	
 	function hideMenu () {
 		// l = (x.clienWidth/window.innerWidth)*100;		
