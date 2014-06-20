@@ -178,6 +178,8 @@ $(document).ready(function(){
   	$(window).resize(function(){
   		reScale();  	
   	});
+  	i=0;
+  	setInterval(function(){reScale(); i=i+1;},5000+1000*i);
 	// Cross-browser compatibilty
 	ifChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());	
 	if(ifChrome){
