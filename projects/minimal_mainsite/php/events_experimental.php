@@ -58,6 +58,7 @@
           background-image:url('../img/events/cloudysky.png');
           background-size:1920px auto;
           background-repeat: :no-repeat;
+          padding:0px;
         }
 
         .btn-grey{

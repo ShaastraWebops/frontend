@@ -204,7 +204,10 @@
                 $("#home-menu").addClass("current_page");
                 $(".bs-tooltip").tooltip()
             /* code for browser detection end */            
-                $(window).load($(window).resize); 
+                $(window).load(function(){
+                    console.log('resizing')
+                    $(window).resize();
+                })
             });        
                
         </script>
