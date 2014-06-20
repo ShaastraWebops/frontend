@@ -86,7 +86,7 @@
 
 <!-- Fonts -->
 <!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
-<script src="../js/jquery-1.11.0.js"></script>
+<script src="../js/jquery-1.11.1.js"></script>
 <script type="text/javascript">	
 	function hideMenu () {
 		// l = (x.clienWidth/window.innerWidth)*100;		

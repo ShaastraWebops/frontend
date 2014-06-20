@@ -5,7 +5,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+        <span class="icon-bar"></span>
+    </button>
 </div>
 
 <!-- menu popup start -->
@@ -87,15 +88,6 @@
 
 <script>
     $(document).ready(function(){        
-        // $(".menuB").hover(function(){
-            // $(".menuB span").css("color","#00425a");
-            // $(this).removeClass("fa-angle-right");
-            // $(this).addClass("fa-angle-double-right");
-        // },function(){
-            // $(".menuB span").css("color","white");
-            // $(this).removeClass("fa-angle-double-right");
-            // $(this).addClass("fa-angle-right");
-        // });
         $(".menuB").click(function(){
             $("#menu_popup").animate({
                 left: '0%',
@@ -111,7 +103,6 @@
             }
         });
         $('*').click(function(e){
-            // console.log(e.clientX+","+window.innerWidth)
             if(e.clientX > 0.3*(window.innerWidth)){
                 hideMenu();                
             }
@@ -119,13 +110,6 @@
         function menu_rescale () {
             if(window.innerWidth<680){
                 $(".close_menu").addClass("col-xs-10 col-xs-offset-1");
-                // $("#home-menu,
-                //     #about-menu a,
-                //     #events-menu a,
-                //     #shows-menu a,
-                //     #lecture-menu a,
-                //     a.social").addClass("col-xs-6 col-xs-offset-3");
-                // $("#spons-menu a,#contact-menu a").addClass("col-xs-8 col-xs-offset-2");
             }
             else{
                 $(".close_menu").removeClass("col-xs-10 col-xs-offset-1");
@@ -137,5 +121,4 @@
         });
     });   
         document.getElementById("menu_popup").style.height = screen.availHeight+"px";
-        // document.getElementById("menu_popup").style.height = "100%";
 </script>

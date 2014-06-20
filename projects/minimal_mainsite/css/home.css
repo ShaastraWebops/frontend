@@ -456,39 +456,62 @@ div a {
   position: relative; }
 
 .menuB:hover .icon-bar:nth-child(1) {
-  -webkit-animation: go_up_A 0.5s ease-in-out both; }
+  -webkit-animation: go_up_A 0.4s ease-in-out forwards; }
 
 .menuB:hover .icon-bar:nth-child(2) {
-  -webkit-animation: go_up_B 0.5s ease-in-out both; }
+  -webkit-animation: go_up_B 0.4s ease-in-out forwards; }
 
 .menuB:hover .icon-bar:nth-child(3) {
-  -webkit-animation: go_up_C 0.5s ease-in-out both; }
+  -webkit-animation: go_up_C 0.4s ease-in-out forwards; }
+
+.icon-bar:nth-child(4) {
+  opacity: 0; }
+
+.menuB:hover .icon-bar:nth-child(4) {
+  -webkit-animation: go_up_D 0.4s ease-in-out forwards; }
 
 @-webkit-keyframes go_up_A {
   0% {
-    top: 0em;
+    top: 0.5em;
     opacity: 1; }
 
   80% {
-    top: -0.5em;
-    opacity: 1; } }
+    top: 0em;
+    opacity: 0; }
+
+  100% {
+    top: 0em;
+    opacity: 0; } }
 
 @-webkit-keyframes go_up_B {
   10% {
-    top: 0em;
+    top: 0.5em;
     opacity: 1; }
 
   90% {
-    top: -0.5em;
-    opacity: 1; } }
-
-@-webkit-keyframes go_up_C {
-  20% {
     top: 0em;
     opacity: 1; }
 
   100% {
-    top: -0.5em;
+    top: 0em;
+    opacity: 1; } }
+
+@-webkit-keyframes go_up_C {
+  0% {
+    top: 0.5em;
+    opacity: 1; }
+
+  100% {
+    top: 0em;
+    opacity: 1; } }
+
+@-webkit-keyframes go_up_D {
+  0% {
+    top: 0.5em;
+    opacity: 0; }
+
+  100% {
+    top: 0em;
     opacity: 1; } }
 
 div a {
@@ -545,7 +568,9 @@ div a:focus {
   display: block;
   width: 22px;
   height: 2px;
-  border-radius: 1px; }
+  border-radius: 1px;
+  position: relative;
+  top: 6px; }
 
 .menu .icon-bar + .icon-bar {
   margin-top: 4px; }
@@ -602,12 +627,6 @@ body {
 #notice {
   color: white; }
 
-#social_icons {
-  position: absolute;
-  right: 5%;
-  bottom: 2%;
-  color: white; }
-
 #watermark div {
   opacity: 0;
   -webkit-animation: fadeIn 2s ease-in 5s forwards;
@@ -616,7 +635,7 @@ body {
   animation: fadeIn 2s ease-in 5s forwards; }
 
 #mainLogo {
-  opacity: 1; }
+  opacity: 0; }
   #mainLogo #cubeDots {
     fill: white;
     fill-opacity: 1;
@@ -638,6 +657,12 @@ body {
   -moz-animation: fadeIn 2s ease-in 5s forwards;
   -o-animation: fadeIn 2s ease-in 5s forwards;
   animation: fadeIn 2s ease-in 5s forwards; }
+
+#social_icons {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  color: white; }
 
 #hexaMenu,
 #social_icons {
