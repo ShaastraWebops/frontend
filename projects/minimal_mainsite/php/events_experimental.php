@@ -153,7 +153,7 @@
       </style>
     </head>
 
-<body background="../img/bg2.jpg">
+<body background="../img/bg.png">
 
   <!-- Invisible Signals element for global signals. -->
   <div class='signal-hub' style='display:none'></div>
