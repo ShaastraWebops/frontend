@@ -13,9 +13,16 @@ function hookMirror( el, webtoken ){
 
 // call this function anyways.
 function updateData( el ){
-	var $el = $(el)
-	var pk = parseInt($el.data('mirror'))
-	Dajaxice.apps.webmirror.get_data(function(response){
+	var $el = $(el);
+	var pk = parseInt($el.data('mirror'));
+	/*Dajaxice.apps.webmirror.get_data(function(response){
 		$el.html(response.content)
-	},{'pk':pk})
+	},{'pk':pk})*/
+	$.ajax({
+		url:'http://erp.shaastra.org/dajaxice/apps.webmirror.get_data/',
+		type:'POST',
+		data:'{"pk":'+pk+\'}'
+	}).done(function(data){
+		console.log(data);
+	});
 }
