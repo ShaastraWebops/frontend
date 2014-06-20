@@ -32,7 +32,7 @@
 			.your-clock{
 				margin-left: auto;
 				margin-right: auto;
-				width: 500px;
+				width: 650px;
 			}
 		</style>
 	</head>
@@ -47,9 +47,14 @@
 		<script src="../js/flipclock.min.js"></script>
 		<script type="text/javascript">
 			var clock = new FlipClock($('.your-clock'), {
+				clockFace: 'DailyCounter',
+				countdown: true
 			});
-			clock.setCountdown(true);
-			clock.setTime(3600);
+			var target_date = new Date("July 25, 2014 18:00:00").getTime();
+			var current_date = new Date().getTime();
+			var seconds_left = (target_date - current_date) / 1000;
+			clock.setTime(seconds_left);
+			clock.start();
 		</script>
 	</body>
 </html>
