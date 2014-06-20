@@ -152,7 +152,7 @@
 
       </style>
       <script src="../js/webmirror.js"></script>
-      <script src="erp.shaastra.org/static/dajaxice/dajaxice.core.js"></script>
+      <script src="http://erp.shaastra.org/static/dajaxice/dajaxice.core.js"></script>
 
 
     </head>
