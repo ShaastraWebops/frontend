@@ -48,7 +48,9 @@ body{
        -o-animation: fadeIn $dur ease-in $delay forwards;
           animation: fadeIn $dur ease-in $delay forwards;      
 }
-
+// .spons:hover #rupee{
+//   -webkit-animation: watermarkFadeIn 1s ease-in forwards;
+// }
 #mainLogo{
   // display: none;
   opacity: 1;
