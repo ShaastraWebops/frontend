@@ -18,7 +18,7 @@ function updateData( el ){
 	
 	xhr = new XMLHttpRequest();
 	xhr.open('GET','http://erp.shaastra.org/webmirror/get/'+pk+'/');
-	xhr.onreadystatechange = function(data){
+	xhr.onload = function(data){
 		obj = JSON.parse(data);
 		$el.html(obj.content);
 	}
