@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>Landing|Shaastra 2015</title>
 		<link rel="stylesheet" href="../css/flipclock.css">
 		<?php include 'head.php' ?>
 		<style type="text/css">
