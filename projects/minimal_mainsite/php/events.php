@@ -1109,11 +1109,13 @@
       $(document).ready(function(){
         $('[data-mirror]').each(function( i, e ){
           updateData(e);
+
           <?php
-            if(isset($_GET['token'])){
-              echo "hookMirror(e,'"+$_GET['token']+"')";
+            if(isset($_GET["token"])){
+              echo "hookMirror(e,'" . $_GET["token"] . "')";
             }
           ?>
+
         });
       })
     </script>

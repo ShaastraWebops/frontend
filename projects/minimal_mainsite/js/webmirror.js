@@ -7,7 +7,12 @@ function hookMirror( el, webtoken ){
 	var pk = parseInt($el.data('mirror'))
 	var token = webtoken
 	$el.blur(function(){
-		Dajaxice.apps.webmirror.set_data(function(){},{'data':$(this).html(),'pk':pk,'token':token})
+		xhr = new XMLHttpRequest();
+		xhr.open('POST','http://erp.shaastra.org/webmirror/set/'+pk+'/');
+		xhr.onload = function(data){
+
+		}
+		xhr.send('pk='+pk+'&token='+token+'&data='+$el.html());
 	});
 }
 
