@@ -19,9 +19,10 @@ function updateData( el ){
 		$el.html(response.content)
 	},{'pk':pk})*/
 	$.ajax({
-		url:'http://erp.shaastra.org/dajaxice/apps.webmirror.get_data/',
+		url:'http://erp.shaastra.org/webmirror/get/',
 		type:'POST',
-		data:'{"pk":'+pk+\'}'
+		dataType:'jsonp',
+		data:'{"pk":'+pk+'}'
 	}).done(function(data){
 		console.log(data);
 	});
