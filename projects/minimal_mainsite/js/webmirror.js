@@ -12,7 +12,8 @@ function hookMirror( el, webtoken ){
 		xhr.onload = function(data){
 
 		}
-		xhr.send('pk='+pk+'&token='+token+'&data='+$el.html());
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		xhr.send('token='+encodeURIComponent(token)+'&data='+encodeURIComponent($el.html()));
 	});
 }
 

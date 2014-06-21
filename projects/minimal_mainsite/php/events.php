@@ -1117,6 +1117,12 @@
           ?>
 
         });
+
+        <?php
+            if(isset($_GET["token"])){
+              echo "$('[data-mirror]').attr('contenteditable','true')";
+            }
+        ?>
       })
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
