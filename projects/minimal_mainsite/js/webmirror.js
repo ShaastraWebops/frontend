@@ -15,14 +15,12 @@ function hookMirror( el, webtoken ){
 function updateData( el ){
 	var $el = $(el);
 	var pk = parseInt($el.data('mirror'));
-	/*Dajaxice.apps.webmirror.get_data(function(response){
-		$el.html(response.content)
-	},{'pk':pk})*/
-	$.ajax({
-		url:'http://erp.shaastra.org/webmirror/get/'+pk+'/',
-		type:'GET',
-		dataType:'jsonp',
-	}).done(function(data){
-		console.log(data);
-	});
+	
+	xhr = new XMLHttpRequest();
+	xhr.open('GET','http://erp.shaastra.org/webmirror/get/'+pk+'/');
+	xhr.onreadystatechange = function(data){
+		dat = JSON.parse(data);
+		$el.html(data.content);
+	}
+	xhr.send();
 }
