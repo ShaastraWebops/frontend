@@ -18,7 +18,7 @@ function hookMirror( el, webtoken ){
 }
 
 // call this function anyways.
-function updateData( el ){
+function updateData( el, callback ){
 	var $el = $(el);
 	var pk = parseInt($el.data('mirror'));
 	
@@ -27,6 +27,7 @@ function updateData( el ){
 	xhr.onload = function(data){
 		obj = JSON.parse(data.currentTarget.response);
 		$el.html(obj.content);
+		callback();
 	}
 	xhr.send();
 }

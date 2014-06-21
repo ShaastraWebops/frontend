@@ -1108,7 +1108,9 @@
 
       $(document).ready(function(){
         $('[data-mirror]').each(function( i, e ){
-          updateData(e);
+          updateData(e,function(){
+            $(window).resize()
+          });
 
           <?php
             if(isset($_GET["token"])){
