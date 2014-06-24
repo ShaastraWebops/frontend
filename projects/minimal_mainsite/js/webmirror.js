@@ -165,6 +165,10 @@ var UIMirror = function(){
 	this.pk_key = 'mirror'
 	this.cluster_key = 'cluster'
 
+	this.transform = function( text ){
+		return text
+	}
+
 	// Return a self-reference to enable currying.
 	this.setPKKey = function( val ){
 		this.pk_key = val;
@@ -176,26 +180,48 @@ var UIMirror = function(){
 		return this
 	}
 
+	this.setTransform = function( func ){
+		this.transform = func
+	}
+
 	this.make = function( el ){
 
 		var $el = $(el)
-		var pk = $el.data(this.pk_key)
-		var cluster = $el.data(this.cluster_key)
-
 		var self = this
 
-		$el.on('blur',function(){
-			console.log('focus lost. setting state')	
+		$el.on('blur',function(evt){
+			console.log('focus lost. setting state')
+
+			// we do variable retrival in here so that the function changes if the data values change.
+			var pk = $el.data(self.pk_key)
+			var cluster = $el.data(self.cluster_key)
+
+			if(!!parseInt($el.data('transform')))
+				return
+
 			self.setKey( pk, cluster, $el.html(), function(){
 
 			})
+
+			// prevent multiple instances of this event from making a difference.
+			evt.stopPropagation();
 		});
+
 
 		$el.on('ready',function(){
 			console.log('element ready. getting state')
+
+			var pk = $el.data(self.pk_key)
+			var cluster = $el.data(self.cluster_key)
+
 			self.getKey( pk, cluster, function( value ){
+
+				if( !!parseInt($el.data('transform')) && value )
+					value = self.transform( value )
+
 				$el.html( value );
 				$(window).resize()
+
 			});
 		});
 
@@ -241,6 +267,80 @@ function updateData( el, callback ){
 
 }*/
 
+var TextProcessor = function(){
 
+	this.maxLength = 100;
+	this.setMaxLength = function( maxLength ){
+		this.maxLength = maxLength
+	}
 
+	this.process = function( text ){
+		if(text.length>this.maxLength)
+			return this._shortenWithEllipsis( text )
+	}
+
+	this._shortenWithEllipsis = function( text ){
+		return text.substring(0,100) + '...'
+	}
+
+}
+
+var ModalMirrorHandler = function( modal ){
+	this.$modal = $(modal)
+
+	this.$head = null
+	this.$body = null
+	this.$foot = null
+
+	this.setHead = function( head ){
+		this.$head = $(head)
+		return this;
+	}
+
+	this.setBody = function( body ){
+		this.$body = $(body)
+		return this;
+	}
+
+	this.process = function( headString, bodyMirror, bodyCluster ){
+		this._copyHeadString( headString )
+		this._copyBodyMirror( bodyMirror, bodyCluster )
+	}
+
+	this._copyBodyMirror = function( bodyMirror, bodyCluster ){
+		this.$body.attr('data-mirror',bodyMirror);
+		this.$body.attr('data-cluster',bodyCluster);
+	}
+
+	this._copyHeadString = function( headString ){
+		this.$head.html(headString);
+	}
+
+}
+
+var EventWriteupHandler = function( modal ){
+	this.modalHandler = new ModalMirrorHandler( modal )
+
+	this.modalHandler.setHead($(modal).find('.modal-header')).setBody($(modal).find('.modal-body'));
+
+	this.processText = function( text ){
+		processor = new TextProcessor()
+		return processor.process( text )
+	}
+
+	this.processOnClick = function( el ){
+		var $event = $(el).closest('.event-info')
+		var $body = $event.find('p[data-mirror]')
+		var $head = $event.find('h2')
+
+		var bodyMirror = $body.data('mirror')
+		var bodyCluster = $body.data('cluster')
+
+		var headString = $head.html()
+
+		this.modalHandler.process( headString, bodyMirror, bodyCluster )
+
+	}
+
+}
 
