@@ -60,6 +60,35 @@
           background-repeat: :no-repeat;
         }
 
+        #quiz{
+          background-image:url('../img/events/parallax/quiz.png');
+        }
+        #bevent{
+          background-image:url('../img/events/parallax/bevent.png');
+        }
+        #aerofest{
+          background-image:url('../img/events/parallax/aero.png');
+        }
+        #flagship{
+          background-image:url('../img/events/parallax/dept.png');
+        }
+        #elec{
+          background-image:url('../img/events/parallax/elec.png');
+        }
+        #workshops{
+          background-image:url('../img/events/parallax/ws2.jpg'); 
+        }
+        #coding{
+          background-image:url('../img/events/parallax/coding.png');
+        }
+        #quiz{
+          background-image:url('../img/events/parallax/involve.png');
+        }
+        #design{
+          background-image:url('../img/events/parallax/design.png');
+        }
+
+
         .btn-grey{
           background-color: transparent;
           border-color: none;
@@ -211,7 +240,7 @@
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='design-nav' data-href='#design'>Design and Build</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='coding-nav' data-href='#coding'>Coding</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='quiz-nav' data-href='#quiz'>Involve &amp; Quizzes</a>
-      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='online-nav' data-href='#online'>Online</a>
+      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='elec-nav' data-href='#elec'>Electrical</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='flagship-nav' data-href='#flagship'>Flagship</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='spotlight-nav' data-href='#spotlight'>Spotlight</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='workshops-nav' data-href='#workshops'>Workshops</a>
@@ -473,7 +502,7 @@
 <!-- END Quizzes -->
 
 <!-- START Online -->
-<div class="jumbotron" id='online'>
+<div class="jumbotron" id='elec'>
   <div class="container" style="
   text-align: center;
   ">
@@ -481,22 +510,39 @@
   <p data-cluster="EVNT" data-mirror=80>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
-</div><div class="container" id='online-events'>
+</div><div class="container" id='elec-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>Online Puzzle Champ</h2>
+    <h2>Fun with Oscilloscopes</h2>
     <p data-cluster="EVNT" data-mirror=34>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Online Math Modelling</h2>
+    <h2>Shaastra Electronics Store</h2>
     <p data-cluster="EVNT" data-mirror=35>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Finance &amp; Consultancy</h2>
+    <h2>Arduino Programmer's Challenge</h2>
     <p data-cluster="EVNT" data-mirror=36>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 event-info">
+    <h2>PCB Design Workshop</h2>
+    <p data-cluster="EVNT" data-mirror=88>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+  </div>
+  <div class="col-md-4 event-info">
+    <h2>Workshops by TI</h2>
+    <p data-cluster="EVNT" data-mirror=89>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+  </div>
+  <div class="col-md-4 event-info">
+    <h2>Shaastra Circuit Design Challenge</h2>
+    <p data-cluster="EVNT" data-mirror=39>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
 </div>
@@ -794,7 +840,7 @@
         scrollTargets.push('#design-nav');
         scrollTargets.push('#coding-nav');
         scrollTargets.push('#quiz-nav');
-        scrollTargets.push('#online-nav');
+        scrollTargets.push('#elec-nav');
         scrollTargets.push('#flagship-nav');
         scrollTargets.push('#spotlight-nav');
         scrollTargets.push('#workshops-nav');
@@ -813,7 +859,7 @@
         scrollLevels.push('#design');
         scrollLevels.push('#coding');
         scrollLevels.push('#quiz');
-        scrollLevels.push('#online');
+        scrollLevels.push('#elec');
         scrollLevels.push('#flagship');
         scrollLevels.push('#spotlight');
         scrollLevels.push('#workshops');
@@ -877,7 +923,7 @@
         parallaxTargets.push('#design .container');
         parallaxTargets.push('#coding .container');
         parallaxTargets.push('#quiz .container');
-        parallaxTargets.push('#online .container');
+        parallaxTargets.push('#elec .container');
         parallaxTargets.push('#flagship .container');
         parallaxTargets.push('#spotlight .container');
         parallaxTargets.push('#workshops .container');
@@ -888,7 +934,7 @@
         parallaxComputeRefs.push('#design');
         parallaxComputeRefs.push('#coding');
         parallaxComputeRefs.push('#quiz');
-        parallaxComputeRefs.push('#online');
+        parallaxComputeRefs.push('#elec');
         parallaxComputeRefs.push('#flagship');
         parallaxComputeRefs.push('#spotlight');
         parallaxComputeRefs.push('#workshops');
@@ -972,7 +1018,14 @@
         // enable uplink and attach mirror to all elements with the data-mirror attribute
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
         UM.autoDiscover('[data-mirror]')
-        //$('[data-mirror]').attr('contenteditable','true')
+
+        <?php
+          if(isset($_GET["token"])){
+            echo "$('[data-mirror]').attr('contenteditable','true');"
+            echo "UM.setToken('" . $_GET["token"] . "');"
+          }
+        ?>
+
       });
 
       
