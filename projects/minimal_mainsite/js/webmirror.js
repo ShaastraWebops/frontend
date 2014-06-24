@@ -195,6 +195,7 @@ var UIMirror = function(){
 			console.log('element ready. getting state')
 			self.getKey( pk, cluster, function( value ){
 				$el.html( value );
+				$(window).resize()
 			});
 		});
 

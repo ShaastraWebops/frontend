@@ -972,7 +972,7 @@
         // enable uplink and attach mirror to all elements with the data-mirror attribute
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
         UM.autoDiscover('[data-mirror]')
-        $('[data-mirror]').attr('contenteditable','true')
+        //$('[data-mirror]').attr('contenteditable','true')
       });
 
       
