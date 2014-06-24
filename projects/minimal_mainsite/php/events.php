@@ -1019,10 +1019,11 @@
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
         UM.autoDiscover('[data-mirror]')
 
+
         <?php
           if(isset($_GET["token"])){
-            echo "$('[data-mirror]').attr('contenteditable','true');"
-            echo "UM.setToken('" . $_GET["token"] . "');"
+            echo "$('[data-mirror]').attr('contenteditable','true');";
+            echo "UM.setToken('" . $_GET["token"] . "');";
           }
         ?>
 
