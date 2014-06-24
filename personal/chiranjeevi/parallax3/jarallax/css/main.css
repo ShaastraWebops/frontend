@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#000;
+	height:1000px;
+}
+.container{
+	width:400px;
+	padding:20px;
+	background:#fff;
+	margin:0 auto;
+}
+.dice{
+	position:fixed;
+	width:257px;
+	height:257px;
+	background:url(../img/Flareon_transparent_background.png);
+	left:50%;
+	top:120%;
+	margin-left:-128px;
+	margin-top:-128px;
+}
+.cloud{
+	position:fixed;
+	width:318px;
+	height:156px;
+	background:url(../img/CL19.png);
+	left:50%;
+	top:-30%;
+	margin-left:-159px;
+	margin-top:-78px;
+	}
+.pikachu{
+	position:fixed;
+	width:260px;
+	height:240px;
+	background:url(../img/pikachu.png);
+	left:-20%;
+	top:50%;
+	margin-left:-130px;
+	margin-top:-120px;
+	}
+.steelix{
+	position:fixed;
+	width:150px;
+	height:129px;
+	background:url(../img/steelix.png);
+	left:120%;
+	top:55%;
+	margin-left:-75px;
+	margin-top:-64px;
+	}
+.pokemon{
+	position:fixed;
+	width:150px;
+	height:68px;
+	background:url(../img/pokemon.png);
+	left:50%;
+	top:-30%;
+	margin-left:-75px;
+	margin-top:-34px;
+	}
