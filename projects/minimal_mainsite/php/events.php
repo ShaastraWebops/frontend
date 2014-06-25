@@ -513,24 +513,20 @@
     <p data-transform=1 data-cluster="EVNT" data-mirror=34>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
-  <div class="col-md-4 event-info">
-    <h2>Shaastra Electronics Store</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=35>  Loading. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-  </div>
+  
   <div class="col-md-4 event-info">
     <h2>Arduino Programmer's Challenge</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=36>  Loading.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-4 event-info">
     <h2>PCB Design Workshop</h2>
 
     <p data-transform=1 data-cluster="EVNT" data-mirror=88>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
+</div>
+<div class="row">
   <div class="col-md-4 event-info">
     <h2>Workshops by TI</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=89>  Loading. </p>
@@ -541,6 +537,11 @@
     <p data-transform=1 data-cluster="EVNT" data-mirror=39>  Loading.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
+  <!--<div class="col-md-4 event-info">
+    <h2>Shaastra Electronics Store</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=35>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+  </div>-->
 </div>
 
 <hr>
