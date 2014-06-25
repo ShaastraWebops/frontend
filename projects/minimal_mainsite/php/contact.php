@@ -6,7 +6,7 @@
 
 		<?php include 'head.php' ?>
 		<link href="../css/contact.css" rel="stylesheet">
-		<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />
+		<!--<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />-->
 		
 		<style>
 			body {
