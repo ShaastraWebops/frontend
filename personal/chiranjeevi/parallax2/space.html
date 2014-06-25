@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jarallax-0.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    
+    <script type="text/javascript">
+      init = function(){
+        var jarallax = new Jarallax();
+        jarallax.setDefault('h2, h1, p', {display:'none'});
+        
+        
+        jarallax.addAnimation('.big_moon', [{progress:'0%', top:'120%'}, {progress:'100%', top:'-10%'}]);
+        jarallax.addAnimation('.small_moon', [{progress:'0%', top:'70%'}, {progress:'100%', top:'40%'}])
+        jarallax.addAnimation('.background', [{progress:'0%', top:'0px'}, {progress:'100%', top:'-10px'}]);
+        
+        jarallax.addAnimation('h1', [{progress:'0', top:'50px', opacity:'1', display:'block'}, {progress:'10', top:'0px', opacity:'0'}]);
+        
+        
+        jarallax.addAnimation('.head1', [{progress:'10', left:'-20%', display:'block'}, 
+                                         {progress:'12', left:'50%', display:'block'},
+                                         {progress:'24', left:'55%'}]);
+                                     
+        jarallax.addAnimation('.head1', [{progress:'20', opacity:'1'}, 
+                                         {progress:'24', opacity:'0'}]);
+                                     
+        jarallax.addAnimation('.par1', [{progress:'13', opacity:'0', display:'block'}, 
+                                        {progress:'15', opacity:'1', display:'block'},
+                                        {progress:'18', opacity:'1', display:'block'},
+                                        {progress:'22', opacity:'0'},]);
+                                        
+        jarallax.addAnimation('.head2', [{progress:'20', left:'-20%', display:'block'}, 
+                                         {progress:'22', left:'50%', display:'block'},
+                                         {progress:'34', left:'55%'}]);
+                                     
+        jarallax.addAnimation('.head2', [{progress:'30', opacity:'1'}, 
+                                         {progress:'34', opacity:'0'}]);
+                                     
+        jarallax.addAnimation('.par2', [{progress:'23', opacity:'0', display:'block'}, 
+                                        {progress:'25', opacity:'1', display:'block'},
+                                        {progress:'28', opacity:'1', display:'block'},
+                                        {progress:'32', opacity:'0'},]);
+                                        
+        jarallax.addAnimation('.head3', [{progress:'30', left:'-20%', display:'block'}, 
+                                         {progress:'32', left:'50%', display:'block'},
+                                         {progress:'44', left:'55%'}]);
+                                     
+        jarallax.addAnimation('.head3', [{progress:'40', opacity:'1'}, 
+                                         {progress:'44', opacity:'0'}]);
+                                     
+        jarallax.addAnimation('.par3', [{progress:'33', opacity:'0', display:'block'}, 
+                                        {progress:'35', opacity:'1', display:'block'},
+                                        {progress:'38', opacity:'1', display:'block'},
+                                        {progress:'42', opacity:'0'},]);
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div class="background"></div>
+    <div class="big_moon"></div>
+    <div class="small_moon"></div>
+    <h1>Head1</h1>
+    <h2 class="head1">Head2</h2>
+    <p class="par1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi felis velit, venenatis sit amet tincidunt vel, vehicula sit amet sapien. Phasellus ultricies commodo justo, ut sodales nisi dapibus id. In aliquam lectus id magna gravida a lobortis sem venenatis. Morbi et interdum ante. Nunc sollicitudin magna ac turpis fringilla fermentum. Sed vulputate dolor at urna ornare eleifend. Suspendisse potenti. Etiam eget erat erat.</p>
+    <h2 class="head2">Head3</h2>
+    <p class="par2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi felis velit, venenatis sit amet tincidunt vel, vehicula sit amet sapien. Phasellus ultricies commodo justo, ut sodales nisi dapibus id. In aliquam lectus id magna gravida a lobortis sem venenatis. Morbi et interdum ante. Nunc sollicitudin magna ac turpis fringilla fermentum. Sed vulputate dolor at urna ornare eleifend. Suspendisse potenti. Etiam eget erat erat.</p>
+    <h2 class="head3">Head4</h2>
+    <p class="par3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi felis velit, venenatis sit amet tincidunt vel, vehicula sit amet sapien. Phasellus ultricies commodo justo, ut sodales nisi dapibus id. In aliquam lectus id magna gravida a lobortis sem venenatis. Morbi et interdum ante. Nunc sollicitudin magna ac turpis fringilla fermentum. Sed vulputate dolor at urna ornare eleifend. Suspendisse potenti. Etiam eget erat erat.</p>
+  </body>
+</html>
