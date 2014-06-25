@@ -28,37 +28,37 @@
         </div>
         <div class="row" id="home-menu">
             <div class="col-xs-12 link-braces text-center">
-                <a class="next_page white" href="home.php">Home</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="home.php">Home</a>
             </div>
         </div>
         <div class="row" id="about-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="about.php">About Us</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="about.php">About Us</a>
             </div>
         </div>
         <div class="row" id="events-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="events.php">Events</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="events.php">Events</a>
             </div>
         </div>
         <div class="row" id="shows-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="shows.php">Shows</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="shows.php">Shows</a>
             </div>
         </div>
         <div class="row" id="lecture-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="lectures.php">Lectures</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="lectures.php">Lectures</a>
             </div>
         </div>
         <div class="row" id="spons-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="spons.php">Sponsors</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="spons.php">Sponsors</a>
             </div>
         </div>
         <div class="row" id="contact-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="contact.php">Contact Us</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="contact.php">Contact Us</a>
             </div>
         </div>
         <div class="row margin-bottom-1">
