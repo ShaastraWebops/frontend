@@ -349,7 +349,7 @@ var EventWriteupHandler = function( modal ){
 		var bodyMirror = $body.data('mirror')
 		var bodyCluster = $body.data('cluster')
 
-		var headString = $head.html()
+		var headString = '<h3>' + $head.html() + '</h3>';
 
 		this.modalHandler.process( headString, bodyMirror, bodyCluster )
 
