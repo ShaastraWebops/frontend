@@ -62,7 +62,6 @@
         #elec{
           background-image:url('../img/events/parallax/elec.png');
           background-position-y: 0px;
-          abcdef:200px;
 
         }
         #workshops{
