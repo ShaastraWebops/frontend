@@ -248,7 +248,7 @@ var UIMirror = function(){
 	}
 
 	this.refreshAllWithKey = function( pk, cluster ){
-		this.refresh('[data-mirror='+pk+'][data-cluster'+cluster+']');
+		this.refresh('[data-mirror='+pk+'][data-cluster='+cluster+']');
 	}
 }
 
