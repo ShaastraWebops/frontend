@@ -786,7 +786,7 @@
 
 </div>
 <hr>
-<footer style='text-align:center'> &copy; 2015 Shaastra Webops </footer>
+<footer style='text-align:center'> 2015 Shaastra Webops </footer>
 
 <!-- END BEvent -->
 
