@@ -99,7 +99,12 @@
         #design{
           background-image:url('../img/events/parallax/design.png');
         }
-
+        #spotlight{
+          background-image:url('../img/events/parallax/ws.png');
+        }
+        #shows{
+          background-image:url('../img/events/parallax/ws3.png');
+        }
 
         .btn-grey{
           background-color: transparent;
@@ -190,8 +195,12 @@
           background-color: transparent;
           border-color: white;
         }
+        /* menu adjustment. not really clean but since it's getting in the way..*/
         .menuB{
           z-index: 5000;
+          position:fixed;
+          left: 15px;
+          top: 5px;
         }
       </style>
 
@@ -603,7 +612,7 @@
 </div>
 <!-- END Flagship -->
 <!-- START Spotlight -->
-<div class="jumbotron" data-offset=0 id='spotlight'>
+<div class="jumbotron" data-offset="-100" id='spotlight'>
   <div class="container" style="
   text-align: center;
   ">
@@ -711,7 +720,7 @@
 <!-- END Design&Build-->
 
 <!-- START Exhibitions -->
-<div class="jumbotron" data-offset=0 id='shows'>
+<div class="jumbotron" data-offset="-150" id='shows'>
   <div class="container" style="
   text-align: center;
   ">
