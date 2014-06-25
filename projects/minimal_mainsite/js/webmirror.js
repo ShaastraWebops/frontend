@@ -92,6 +92,10 @@ var DocumentMirror = function( service_url ){
 	}
 
 	this.setKey = function ( pk, cluster, value, callback ){
+
+		var self = this
+
+		
 		if(!this.enable_uplink){
 			console.log('Uplink disabled. aborting uplink')
 			return
@@ -99,8 +103,10 @@ var DocumentMirror = function( service_url ){
 
 		xhr = new XMLHttpRequest();
 		xhr.open('POST',this.service_url+'/set/'+pk+'/');
+
+
 		xhr.onload = function(data){
-			this._setKeyIntoCluster( pk, cluster, value )
+			self._setKeyIntoCluster( pk, cluster, value )
 		}
 		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		xhr.send('token='+encodeURIComponent(this.token)+'&data='+encodeURIComponent(value)+'&cluster='+encodeURIComponent(cluster));
