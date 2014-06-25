@@ -215,7 +215,6 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-12">
 							<div class="col-md-6">
 								<div class="col-md-8 col-md-offset-2">
 									<h4>SHUBHAM JAIN</h4>
@@ -242,7 +241,9 @@
 									</p>
 								</div>
 							</div>
-							</div>
+						</div>
+						
+						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2">
 									<h4>DEVAANSH SAMANT</h4>
