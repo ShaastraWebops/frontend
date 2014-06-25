@@ -623,13 +623,6 @@
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>Industry Defined Problem</h2>
-
-    <p data-transform=1 data-cluster="EVNT" data-mirror=46>  Loading. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-
-  </div>
-  <div class="col-md-4 event-info">
     <h2>Pan IIT Research Expo</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=48>  Loading.</p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
