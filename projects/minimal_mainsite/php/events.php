@@ -871,7 +871,7 @@
         scrollLevels.push('#bevent');
 
 
-        //scrollLevels.push($('body').position().top + $('body').height());// base case.
+        scrollLevels.push($('body').position().top + $('body').height());// base case.
 
       });
       
