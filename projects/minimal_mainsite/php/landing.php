@@ -40,9 +40,14 @@
 	<body>
 		<img id="logo" src="../img/landing/logo.png">
 		<img id="tools" src="../img/landing/tools.png">
-		<p>We will be live in</p>
+		<p>We are now live: </p>
+		<a href="http://www.shaastra.org/2015/main/php/home.php">
+			HERE
+		</a>
 		<br>
-		<div class="your-clock"></div>
+		<a href="http://www.shaastra.org/2015/main/php/home.php">
+			<div class="your-clock"></div>
+		</a>
 		
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/flipclock.min.js"></script>
@@ -51,10 +56,8 @@
 				clockFace: 'DailyCounter',
 				countdown: true
 			});
-			var target_date = new Date("June 25, 2014 18:00:00").getTime();
-			var current_date = new Date().getTime();
-			var seconds_left = (target_date - current_date) / 1000;
-			clock.setTime(seconds_left);
+			
+			clock.setTime(0);
 			clock.start();
 		</script>
 	</body>
