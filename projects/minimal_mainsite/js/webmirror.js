@@ -193,9 +193,10 @@ var UIMirror = function(){
 			console.log('focus lost. setting state')
 
 			// we do variable retrival in here so that the function changes if the data values change.
-			var pk = $el.data(self.pk_key)
-			var cluster = $el.data(self.cluster_key)
+			var pk = $el.attr('data-'+self.pk_key)
+			var cluster = $el.attr('data-'+self.cluster_key)
 
+			
 			if(!!parseInt($el.data('transform')))
 				return
 
@@ -211,8 +212,8 @@ var UIMirror = function(){
 		$el.on('ready',function(){
 			console.log('element ready. getting state')
 
-			var pk = $el.data(self.pk_key)
-			var cluster = $el.data(self.cluster_key)
+			var pk = $el.attr('data-'+self.pk_key)
+			var cluster = $el.attr('data-'+self.cluster_key)
 
 			self.getKey( pk, cluster, function( value ){
 
