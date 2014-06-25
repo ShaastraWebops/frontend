@@ -177,7 +177,6 @@
         }
         /* menu adjustment. not really clean but since it's getting in the way..*/
         .menuB{
-          z-index: 5000;
           position:fixed;
           left: 15px;
           top: 5px;
