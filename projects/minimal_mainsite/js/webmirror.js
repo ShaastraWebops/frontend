@@ -337,9 +337,9 @@ var EventWriteupHandler = function( modal ){
 
 	this.processText = function( text, maxLengh ){
 		processor = new TextProcessor()
-		if( maxLenth )
-			processor.setMaxLength( maxLenth )
-		
+		if( maxLength )
+			processor.setMaxLength( maxLength )
+
 		return processor.process( text )
 	}
 
