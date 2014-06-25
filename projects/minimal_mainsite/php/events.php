@@ -272,7 +272,7 @@
 </div>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron" id='events_main'>
+<div class="jumbotron" data-offset=0 id='events_main'>
   <div class="container" style="text-align: center;margin-top:20px">
   <h1>Events</h1>
   <p>Events. The essence of Shaastra.</p>
@@ -304,7 +304,7 @@
 
 
 </div>
-<div class="jumbotron" id='aerofest'>
+<div class="jumbotron" data-offset=0 id='aerofest'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
@@ -348,7 +348,7 @@
 
 <!-- END Aero-->
 <!-- START Design&Build-->
-<div class="jumbotron" id='design'>
+<div class="jumbotron" data-offset="-200" id='design'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
@@ -408,7 +408,7 @@
 <!-- END Design&Build-->
 
 <!-- START Coding -->
-<div class="jumbotron" id='coding'>
+<div class="jumbotron" data-offset="-200" id='coding'>
   <div class="container" style="
   text-align: center;
   ">
@@ -455,7 +455,7 @@
 <!-- END Coding -->
 
 <!-- START Quizzes -->
-<div class="jumbotron" id='quiz'>
+<div class="jumbotron" data-offset=0 id='quiz'>
   <div class="container" style="
   text-align: center;
   ">
@@ -518,11 +518,11 @@
 <!-- END Quizzes -->
 
 <!-- START Online -->
-<div class="jumbotron" id='elec'>
+<div class="jumbotron" data-offset="-100" id='elec'>
   <div class="container" style="
   text-align: center;
   ">
-  <h1><img src="../img/events/online.png"></h1>
+  <h1><img src="../img/events/elec.png"></h1>
   <p data-cluster="EVNT" data-mirror=80>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
@@ -569,7 +569,7 @@
 </div>
 <!-- END Online -->
 <!-- START Flagship -->
-<div class="jumbotron" id='flagship'>
+<div class="jumbotron" data-offset="-150" id='flagship'>
   <div class="container" style="
   text-align: center;
   ">
@@ -615,7 +615,7 @@
 </div>
 <!-- END Flagship -->
 <!-- START Spotlight -->
-<div class="jumbotron" id='spotlight'>
+<div class="jumbotron" data-offset=0 id='spotlight'>
   <div class="container" style="
   text-align: center;
   ">
@@ -664,7 +664,7 @@
 
 
 <!-- START Workshops-->
-<div class="jumbotron" id='workshops'>
+<div class="jumbotron" data-offset="-100" id='workshops'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
@@ -725,7 +725,7 @@
 <!-- END Design&Build-->
 
 <!-- START Exhibitions -->
-<div class="jumbotron" id='shows'>
+<div class="jumbotron" data-offset=0 id='shows'>
   <div class="container" style="
   text-align: center;
   ">
@@ -772,7 +772,7 @@
 <!-- END Exhibitions -->
 
 <!-- START BEvents -->
-<div class="jumbotron" id='bevent'>
+<div class="jumbotron" data-offset=0 id='bevent'>
   <div class="container" style="
   text-align: center;
   ">
@@ -997,7 +997,7 @@
           var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2)
           var dispTop2 = 300;
 
-          var origin = parseInt($(parallaxComputeRefs[i]).css('background-position-y'))
+          var origin = parseInt($(parallaxComputeRefs[i]).data('offset'))
           console.log(origin);
 
           var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
@@ -1045,12 +1045,12 @@
           return EWH.processText( text )
         })
 
-        <?php
+        /*<?php
           if(isset($_GET["token"])){
             echo "$('.modal-body').attr('contenteditable','true');";
             echo "UM.setToken('" . $_GET["token"] . "');";
           }
-        ?>
+        ?>*/
 
         UM.autoDiscover('[data-mirror]')
         UM.autoDiscover('.modal-body')
