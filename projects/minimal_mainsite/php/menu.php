@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="row" id="home-menu">
-            <div class="col-xs-12 link-braces">
-                <a class="next_page col-xs-6 col-xs-offset-3 white" href="home.php">Home</a>
+            <div class="col-xs-12 link-braces text-center">
+                <a class="next_page white" href="home.php">Home</a>
             </div>
         </div>
         <div class="row" id="about-menu">
