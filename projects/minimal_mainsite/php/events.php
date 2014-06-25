@@ -275,13 +275,13 @@
 <div class="jumbotron" data-offset=0 id='events_main'>
   <div class="container" style="text-align: center;margin-top:20px">
   <h1>Events</h1>
-  <p>Events. The essence of Shaastra.</p>
+  <p data-mirror=90 data-cluster="EVNT">Events. The essence of Shaastra.</p>
 </div>
 </div>
 
 <div class="container">
   <!-- Example row of columns -->
-  <div class="row">
+  <div class="row" style='opacity:0'>
     <div class="col-md-4 event-info">
       <h2>Heading</h2>
       <p data-mirror=1>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
