@@ -182,7 +182,7 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-8 col-md-offset-4">
+							<div class="col-md-8 col-md-offset-2">
 								<h4>SIDDHARTH DIALANI</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
@@ -217,7 +217,7 @@
 						<div class="row">
 							<div class="col-md-12">
 							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-4">
+								<div class="col-md-8 col-md-offset-2">
 									<h4>SHUBHAM JAIN</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
@@ -230,7 +230,7 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-4">
+								<div class="col-md-8 col-md-offset-2">
 									<h4>NEHA ASHOK</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
@@ -244,7 +244,7 @@
 							</div>
 							</div>
 							<div class="col-md-12">
-								<div class="col-md-8 col-md-offset-4">
+								<div class="col-md-8 col-md-offset-2">
 									<h4>DEVAANSH SAMANT</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
@@ -276,7 +276,7 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-8 col-md-offset-4">
+							<div class="col-md-8 col-md-offset-2">
 								<h4>SHIVAPRASAD TR</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
@@ -308,7 +308,7 @@
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="col-md-8 col-md-offset-4">
+								<div class="col-md-8 col-md-offset-2">
 									<h4>NAMIT CHAUDHARY</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
