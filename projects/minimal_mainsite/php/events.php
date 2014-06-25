@@ -80,10 +80,10 @@
           background-image:url('../img/events/parallax/design.png');
         }
         #spotlight{
-          background-image:url('../img/events/parallax/ws.png');
+          background-image:url('../img/events/parallax/spotlight.png');
         }
         #shows{
-          background-image:url('../img/events/parallax/ws3.png');
+          background-image:url('../img/events/parallax/exhibitions.png');
         }
 
         .btn-grey{
