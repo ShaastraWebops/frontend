@@ -107,10 +107,11 @@ var DocumentMirror = function( service_url ){
 
 		xhr.onload = function(data){
 			self._setKeyIntoCluster( pk, cluster, value )
+			callback();
 		}
 		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		xhr.send('token='+encodeURIComponent(this.token)+'&data='+encodeURIComponent(value)+'&cluster='+encodeURIComponent(cluster));
-		callback();
+		
 	}
 	this._setKeyIntoCluster = function( pk, cluster, value ){
 		console.log('setting value')
