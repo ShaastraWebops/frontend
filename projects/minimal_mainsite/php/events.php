@@ -784,11 +784,9 @@
   </div>-->
 </div>
 
-
+<footer>&copy; Shaastra 2015 Web Operations </footer>
 </div>
 <!-- END BEvent -->
-
-
 
 
 <!-- container -->
@@ -849,9 +847,10 @@
         scrollLevels.push('#workshops');
         scrollLevels.push('#shows');
         scrollLevels.push('#bevent');
+        scrollLevels.push('footer');
 
 
-        scrollLevels.push($('body').position().top + $('body').height());// base case.
+        //scrollLevels.push($('body').position().top + $('body').height());// base case.
 
       });
       
@@ -1026,7 +1025,7 @@
 
       });
 
-      
+        
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 
