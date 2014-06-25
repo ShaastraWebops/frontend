@@ -46,21 +46,22 @@
         <div class="container-fluid main white">
             <div class="row">
                 <div class="col-md-6">
-            		Roddam Narasimha (born 20 July 1933) is an Indian aerospace scientist and fluid dynamicist. He was a Professor of Aerospace Engineering at the Indian Institute of Science (IISc), Director of National Aerospace Laboratories (NAL) and the Chairman of Engineering Mechanics Unit at Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore, India.
+            		Shaastra, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology. After the overwhelming responses to the previous editions, Envisage is back, Bigger and Better! This time, Sit back and get ready to experience an adrenalin rush like you have never experienced before. Soak in the awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. 
                     <br />
-                    He is now an Honorary Professor at JNCASR and concurrently holds the Pratt &amp; Whitney Chair in Science and Engineering at the University of Hyderabad. Narasimha has been awarded the Padma Vibushan, India's second highest civilian award, in 2013.As Director of NAL he initiated and oversaw several major technological programmes. He served on the Board of Directors of Hindustan Aeronautics Limited for several years. As a member of Prime Minister Rajiv Gandhi's Scientific Advisory Council he was instrumental in establishing a major parallel computing initiative in the country. He was the President of the Indian Academy of Sciences during 1992 till 1994 and spearheaded a new programme on university education in science, leading to the establishment of the science journal Resonance and other Academy programmes involving teachers and students. He has served on the National Security Advisory Board and the Scientific Advisory Committee to the Prime Minister Cabinet. He was a member of the Space Commission, and co-chairs the Joint Steering Committee and the Joint Scientific Working Group for the Indo-French atmospheric research satellite Megha-Tropiques.
+                    Being the only student organized event of its kind in the Whole Country, We proudly bet you will never ever forget your journey into Neverland, giving a new meaning to your idea of entertainment and turning projects undertaken by us into a memory you will long cherish! 
                     <br />
-                    
+                    The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. You will know which boxes to blame if you are unable to get sleep that night. Get ready to witness people around you floating in air. After you have a taste of the Virtual Music and Video Mixing we offer, DJs will seem old school. Ever wanted to take a selfie with a superhero, this might well be the chance. You will witness a new groundbreaking performance after watching our techno cultural show.
+                   <br />
+                   
                 </div>
                 <div class="col-md-6">
-                    <iframe style="margin: 10px;" width="100%" height="315" src="http://www.youtube.com/embed/Ci5i6Ali07I" frameborder="0" allowfullscreen align="right"></iframe>
+                    <iframe style="margin: 10px;" width="100%" height="315" src="http://www.youtube.com/embed/yOYbyjE3Vtw" frameborder="0" allowfullscreen align="right"></iframe>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                	As Director of NIAS Narasimha initiated a series of major dialogues on International Security issues with the US National Academy of Sciences and other bodies, and pursued his interests in the history of science and technology.
-                    <br />
-                	In February 2012, Narasimha resigned from his post as the longest serving member of the Indian Space Commission in protest to the blacklisting of three former ISRO technocrats including G. Madhavan Nair, former ISRO Chairman, for their perceived role in the controversial agreement of 2005.
+                Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success. Join us at Shaastra 2015 to share the awe and experience the Dream Kingdom!
+                <br />
                 </div>
     		</div>
         </div>
