@@ -1,29 +1,9 @@
 <html lang="en"><head>
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-
-
-
-<title>Shaastra Events</title>
-
-<!-- Bootstrap core CSS -->
-<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom styles for this template -->
+<title>Events | Shaastra '15</title>
 
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
       <?php include 'head.php' ?>
 
       <style>
@@ -805,9 +785,6 @@
   </div>
 </div>
 
-<hr>
-
-<footer style='text-align:center'> &copy; 2015 Shaastra Webops </footer>
 
 </div>
 <!-- END BEvent -->
@@ -818,11 +795,6 @@
 <!-- container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type='text/javascript'>
       //  Sensitive Scroll Levels.
       var scrollLevels = [];
@@ -878,9 +850,6 @@
         scrollLevels.push('#workshops');
         scrollLevels.push('#shows');
         scrollLevels.push('#bevent');
-        scrollLevels.push('footer'); //base case
-
-
 
 
         //scrollLevels.push($('body').position().top + $('body').height());// base case.
