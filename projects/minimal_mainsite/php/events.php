@@ -590,7 +590,7 @@
 </div>
 <!-- END Flagship -->
 <!-- START Spotlight -->
-<div class="jumbotron" data-offset="-100" id='spotlight'>
+<div class="jumbotron" data-offset="-300" id='spotlight'>
   <div class="container" style="
   text-align: center;
   ">
@@ -698,7 +698,7 @@
 <!-- END Design&Build-->
 
 <!-- START Exhibitions -->
-<div class="jumbotron" data-offset="-300" id='shows'>
+<div class="jumbotron" data-offset="-150" id='shows'>
   <div class="container" style="
   text-align: center;
   ">
