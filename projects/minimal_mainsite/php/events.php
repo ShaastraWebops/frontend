@@ -1047,7 +1047,7 @@
 
         <?php
           if(isset($_GET["token"])){
-            echo "$('[data-mirror]').attr('contenteditable','true');";
+            echo "$('.modal-body').attr('contenteditable','true');";
             echo "UM.setToken('" . $_GET["token"] . "');";
           }
         ?>
