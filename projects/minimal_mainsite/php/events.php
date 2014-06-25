@@ -225,7 +225,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -276,7 +275,6 @@
   <div class="container" style="text-align: center;margin-top:20px">
   <h1>Events</h1>
   <p>Events. The essence of Shaastra.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div>
 
@@ -311,7 +309,6 @@
   ">
   <h1><img src="../img/events/aerofest.png"></h1>
   <p data-cluster='EVNT' data-mirror=75>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='aerofest-events'>
 <!-- Example row of columns -->
@@ -355,7 +352,6 @@
   ">
   <h1><img src="../img/events/design.png"></h1>
   <p data-cluster='EVNT' data-mirror=76>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='design-events'>
 <!-- Example row of columns -->
@@ -414,7 +410,6 @@
   ">
   <h1><img src="../img/events/coding.png"></h1>
   <p data-cluster='EVNT' data-mirror=77>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='coding-events'>
 <!-- Example row of columns -->
@@ -461,7 +456,6 @@
   ">
   <h1><img src="../img/events/quiz.png"></h1>
   <p data-cluster="EVNT" data-mirror=79>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='quiz-events'>
 <!-- Example row of columns -->
@@ -524,7 +518,6 @@
   ">
   <h1><img src="../img/events/online.png"></h1>
   <p data-cluster="EVNT" data-mirror=80>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='elec-events'>
 <!-- Example row of columns -->
@@ -575,7 +568,6 @@
   ">
   <h1><img src="../img/events/dept.png"></h1>
   <p data-cluster="EVNT" data-mirror=81>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='flagship-events'>
 <!-- Example row of columns -->
@@ -621,7 +613,6 @@
   ">
   <h1><img src="../img/events/spotlight.png"></h1>
   <p data-cluster="EVNT" data-mirror=82>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div>
 <div class="container" id='spotlight-events'>
@@ -671,7 +662,6 @@
   ">
   <h1><img src="../img/events/workshop.png"></h1>
   <p data-cluster="EVNT" data-mirror=83>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div>
 <div class="container" id='workshops-events'>
@@ -731,7 +721,6 @@
   ">
   <h1><img src="../img/events/shows.png"></h1>
   <p data-cluster="EVNT" data-mirror=84>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='shows-events'>
 <!-- Example row of columns -->
@@ -778,7 +767,6 @@
   ">
   <h1><img src="../img/events/bevent.png"></h1>
   <p data-cluster="EVNT" data-mirror=85>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 </div>
 </div><div class="container" id='bevent-events'>
 <!-- Example row of columns -->
