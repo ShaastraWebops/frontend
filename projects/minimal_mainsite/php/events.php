@@ -682,13 +682,6 @@
 
   </div>
   <div class="col-md-4 event-info">
-    <h2>SPAD</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=55>  Loading.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4 event-info">
     <h2>Digital Fabrication &amp; Rapid Prototyping</h2>
 
     <p data-transform=1 data-cluster="EVNT" data-mirror=56>  Loading. </p>
@@ -738,12 +731,6 @@
     <p data-transform=1 data-cluster="EVNT" data-mirror=65>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
-  <div class="col-md-4 event-info">
-    <h2>Space Trek Planetarium</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=66>  Loading. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-
-  </div>
 </div>
 
 <hr>
@@ -789,11 +776,11 @@
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Big Data Challenge</h2>
+    <!--<h2>Big Data Challenge</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=87>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
 
-  </div>
+  </div>-->
 </div>
 
 
