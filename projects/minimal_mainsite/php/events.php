@@ -291,7 +291,7 @@
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/aerofest.png"></h1>
-  <p data-cluster='EVNT' data-mirror=75>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster='EVNT' data-mirror=75></p>
 </div>
 </div><div class="container" id='aerofest-events'>
 <!-- Example row of columns -->
@@ -334,7 +334,7 @@
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/design.png"></h1>
-  <p data-cluster='EVNT' data-mirror=76>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster='EVNT' data-mirror=76></p>
 </div>
 </div><div class="container" id='design-events'>
 <!-- Example row of columns -->
@@ -392,7 +392,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/coding.png"></h1>
-  <p data-cluster='EVNT' data-mirror=77>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster='EVNT' data-mirror=77></p>
 </div>
 </div><div class="container" id='coding-events'>
 <!-- Example row of columns -->
@@ -438,7 +438,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/quiz.png"></h1>
-  <p data-cluster="EVNT" data-mirror=79>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=79></p>
 </div>
 </div><div class="container" id='quiz-events'>
 <!-- Example row of columns -->
@@ -478,12 +478,6 @@
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>ScEnt Quiz</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=29>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-  </div>
-
-  <div class="col-md-4 event-info">
     <h2>How Things Work</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=33>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
@@ -500,7 +494,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/elec.png"></h1>
-  <p data-cluster="EVNT" data-mirror=80>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=80></p>
 </div>
 </div><div class="container" id='elec-events'>
 <!-- Example row of columns -->
@@ -550,7 +544,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/dept.png"></h1>
-  <p data-cluster="EVNT" data-mirror=81>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=81></p>
 </div>
 </div><div class="container" id='flagship-events'>
 <!-- Example row of columns -->
@@ -566,17 +560,12 @@
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Shaastra Circuit Design Challenge</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=39>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4 event-info">
     <h2>Master Builder</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=41>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
+</div>
+<div class="row">
   <div class="col-md-4 event-info">
     <h2>Desmod</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=42>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -595,7 +584,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/spotlight.png"></h1>
-  <p data-cluster="EVNT" data-mirror=82>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=82></p>
 </div>
 </div>
 <div class="container" id='spotlight-events'>
@@ -644,7 +633,7 @@
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/workshop.png"></h1>
-  <p data-cluster="EVNT" data-mirror=83>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=83></p>
 </div>
 </div>
 <div class="container" id='workshops-events'>
@@ -703,7 +692,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/shows.png"></h1>
-  <p data-cluster="EVNT" data-mirror=84>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=84></p>
 </div>
 </div><div class="container" id='shows-events'>
 <!-- Example row of columns -->
@@ -749,7 +738,7 @@
   text-align: center;
   ">
   <h1><img src="../img/events/bevent.png"></h1>
-  <p data-cluster="EVNT" data-mirror=85>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
+  <p data-cluster="EVNT" data-mirror=85></p>
 </div>
 </div><div class="container" id='bevent-events'>
 <!-- Example row of columns -->
