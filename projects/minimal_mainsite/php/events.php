@@ -1031,8 +1031,9 @@
       $(document).ready(function(){
         // enable uplink and attach mirror to all elements with the data-mirror attribute
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
+
         UM.setTransform(function( text ){
-          return EWH.processText( text )
+          return EWH.processText( text, 400 )
         })
 
         <?php
