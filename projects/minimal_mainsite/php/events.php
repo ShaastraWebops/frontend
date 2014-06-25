@@ -38,9 +38,6 @@
         p{
           font-family: 'Titillium Web', sans-serif;
         }
-        p:hover{
-          opacity:0.6;
-        }
         .jumbotron p{
           color: white;
           font-weight:500;
