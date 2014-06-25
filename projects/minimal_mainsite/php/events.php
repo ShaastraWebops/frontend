@@ -783,9 +783,10 @@
 
   </div>-->
 </div>
+
+</div>
 <hr>
 <footer>&copy; Shaastra 2015 Web Operations </footer>
-</div>
 <!-- END BEvent -->
 
 
