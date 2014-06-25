@@ -186,11 +186,11 @@
 								<h4>SIDDHARTH DIALANI</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
-									Contact :
+									Contact : 9884308764
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail :
+									E-Mail : siddharthdialani@gmail.com
 								</p>
 							</div>
 						</div>
@@ -217,40 +217,40 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+									<h4>SHUBHAM JAIN</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
+										Contact : 9962035992
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : shubhamj2919@gmail.com
 									</p>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+									<h4>NEHA ASHOK</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
+										Contact : 9840922780
+									</p> 
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : nehaashok1408@gmail.com
 									</p>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+									<h4>DEVAANSH SAMANT</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
+										Contact : 9871077607
+									</p> 
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : devaanshsamant@gmail.com
 									</p>
 								</div>
 							</div>
@@ -275,15 +275,15 @@
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-4">
-								<h4>SIDDHARTH DIALANI</h4>
+								<h4>SHIVAPRASAD TR</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
-									Contact :
+									Contact : 9176014050
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail :
-								</p>
+									E-Mail : trshivaprasad@gmail.com
+								</p> 
 							</div>
 						</div>
 					</div>
@@ -305,29 +305,16 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+									<h4>NAMIT CHAUDHARY</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
+										Contact : 9962878704
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
-									</p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
-									<p>
-										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : namit91@gmail.com
 									</p>
 								</div>
 							</div>
