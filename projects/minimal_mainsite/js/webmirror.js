@@ -64,10 +64,6 @@ var LocalCluster = function( clusterID, serviceURL ){
 
 }
 
-var LocalObject = function(){
-
-}
-
 var DocumentMirror = function( service_url ){
 
 	this.enable_uplink = false;
@@ -188,6 +184,19 @@ var UIMirror = function(){
 		this.transform = func
 	}
 
+	
+	this.autoDiscover = function( selector ){
+
+		var self = this
+
+		$(selector).each(
+			function( index, el ){
+				self.make(el)
+			}
+		);
+
+	}
+
 	this.make = function( el ){
 
 		var $el = $(el)
@@ -232,25 +241,15 @@ var UIMirror = function(){
 
 		$el.trigger('ready');
 	}
-	this.autoDiscover = function( selector ){
 
-		var self = this
-
-		$(selector).each(
-			function( index, el ){
-				self.make(el)
-			}
-		);
-
+	this.refreshAllWithKey = function( pk, cluster ){
+		this.refresh('[data-'+this.pk_key+'='+pk+'][data-'+this.cluster_key+'='+cluster+']');
 	}
-
+	
 	this.refresh = function( selector ){
 		$(selector).trigger('ready');
 	}
-
-	this.refreshAllWithKey = function( pk, cluster ){
-		this.refresh('[data-mirror='+pk+'][data-cluster='+cluster+']');
-	}
+	
 }
 
 // Inherit UIMirror from DocumentMirror

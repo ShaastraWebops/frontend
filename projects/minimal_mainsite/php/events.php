@@ -195,19 +195,18 @@
         }
 
       </style>
+      <?php include 'menu.php' ?>
+
       <script type='text/javascript'>
         // Requirement for webmirror.js
         var WEB_MIRROR_SERVICE_URL = 'http://erp.shaastra.org/webmirror/'
       </script>
       <script src="../js/webmirror.js"></script>
 
-      <script src="erp.shaastra.org/static/dajaxice/dajaxice.core.js"></script>
-
-
     </head>
 
 <body background="../img/bg.png">
-
+  <?php include 'menu.php' ?>
   <!-- Invisible Signals element for global signals. -->
   <div class='signal-hub' style='display:none'></div>
 
@@ -450,7 +449,7 @@
 <!-- END Coding -->
 
 <!-- START Quizzes -->
-<div class="jumbotron" data-offset=0 id='quiz'>
+<div class="jumbotron" data-offset="-100" id='quiz'>
   <div class="container" style="
   text-align: center;
   ">
@@ -1036,6 +1035,7 @@
         <?php
           if(isset($_GET["token"])){
             echo "$('.modal-body').attr('contenteditable','true');";
+            echo "$('.jumbotron [data-mirror]').attr('contenteditable','true');";
             echo "UM.setToken('" . $_GET["token"] . "');";
           }
         ?>
