@@ -44,7 +44,9 @@
         .jumbotron p{
           color: white;
           font-weight:500;
-          
+          border: 1px solid #444;
+          background: rgba(0, 0, 0, 0.51);
+          border-radius: 5px;
         }
         .jumbotron p:hover{
           opacity: 0.6
@@ -274,7 +276,7 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron" data-offset=0 id='events_main'>
   <div class="container" style="text-align: center;margin-top:20px">
-  <h1>Events</h1>
+  <h1 style="color:black">Events</h1>
   <p data-mirror=90 data-cluster="EVNT">Events. The essence of Shaastra.</p>
 </div>
 </div>
@@ -299,7 +301,6 @@
     </div>
   </div>
 
-  <hr>
 
 
 </div>
