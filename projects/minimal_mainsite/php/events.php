@@ -194,7 +194,9 @@
           background-color: transparent;
           border-color: white;
         }
-
+        .menuB{
+          z-index: 5000;
+        }
       </style>
 
       <script type='text/javascript'>
