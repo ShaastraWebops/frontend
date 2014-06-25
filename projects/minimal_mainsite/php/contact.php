@@ -129,12 +129,13 @@
 						</div>
 					</div>
 					<div class="modal-body">
+					<form name='contact' action='contact_submit.php' method='post'>
 						<div class="row">
 							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-user"></span>
 								</span>
-								<input type="text" class="form-control" placeholder="Name"/>
+								<input type="text" name='name' class="form-control" placeholder="Name" required/>
 							</div>
 						</div>
 						<div class="row">
@@ -142,7 +143,7 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="text" class="form-control" placeholder="Email ID"/>
+								<input type="text" name='email' class="form-control" placeholder="Email ID" required/>
 							</div>
 						</div>
 						<div class="row">
@@ -150,12 +151,12 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-phone"></span>
 								</span>
-								<input type="tel" class="form-control" placeholder="Mobile (optional)"/>
+								<input type="tel" name='mobile' class="form-control" placeholder="Mobile (optional)"/>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-xs-8 col-xs-offset-2">
-								<textarea id="comments" rows="3" class="form-control" placeholder="Your Message..."></textarea>
+								<textarea id="comments" name='msg' rows="3" class="form-control" placeholder="Your Message..." required></textarea>
 							</div>
 						</div>
 					</div>
