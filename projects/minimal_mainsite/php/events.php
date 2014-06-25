@@ -398,6 +398,7 @@
   ">
   <h1><img src="../img/events/coding.png"></h1>
   <p data-cluster='EVNT' data-mirror=77>Loading.</p>
+
 </div>
 </div><div class="container" id='coding-events'>
 <!-- Example row of columns -->
@@ -486,12 +487,6 @@
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>ScEnt Quiz</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=29>  Loading. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-
-  <div class="col-md-4 event-info">
     <h2>How Things Work</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=33>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
@@ -577,19 +572,14 @@
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Shaastra Circuit Design Challenge</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=39>  Loading.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4 event-info">
     <h2>Master Builder</h2>
 
     <p data-transform=1 data-cluster="EVNT" data-mirror=41>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
 
   </div>
+</div>
+<div class="row">
   <div class="col-md-4 event-info">
     <h2>Desmod</h2>
     <p data-transform=1 data-cluster="EVNT" data-mirror=42>  Loading.</p>
