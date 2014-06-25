@@ -1,3 +1,5 @@
+<?php error_reporting(0); ?>
+
 <!-- Meta -->
 <link rel="shortcut icon" href="../img/favicon.ico">
 
