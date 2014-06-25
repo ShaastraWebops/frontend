@@ -54,19 +54,11 @@ var LocalCluster = function( clusterID, serviceURL ){
 
 	
 
-	/*
-	this.setKey = function( key, value, token, callback ){
-		xhr = new XMLHttpRequest();
-		xhr.open('POST',this.service_url+'/set/'+key+'/');
-		xhr.onload = function(data){
-			this.data[key] = value;
-			if(callback)
-				callback();
-		}
-		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		xhr.send('token='+encodeURIComponent(token)+'&data='+encodeURIComponent(value));
+	
+	this.setKey = function( key, value ){
+		this.data[key] = value;
 	}
-	*/
+	
 
 	return this
 
@@ -108,11 +100,16 @@ var DocumentMirror = function( service_url ){
 		xhr = new XMLHttpRequest();
 		xhr.open('POST',this.service_url+'/set/'+pk+'/');
 		xhr.onload = function(data){
-
+			this._setKeyIntoCluster( pk, cluster, value )
 		}
 		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		xhr.send('token='+encodeURIComponent(this.token)+'&data='+encodeURIComponent(value)+'&cluster='+encodeURIComponent(cluster));
 		callback();
+	}
+	this._setKeyIntoCluster = function( pk, cluster, value ){
+		console.log('setting value')
+		if(this.documentClusterList[cluster])
+			this.documentClusterList[cluster].setKey( pk, value )
 	}
 	this.getKey = function( pk, cluster, callback ){
 
