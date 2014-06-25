@@ -1057,9 +1057,8 @@
 
         $('.btn[data-toggle=modal]').click(function(){
           EWH.processOnClick(this)// Invoke to set data variables.
-          $('.modal-body').trigger('ready');  // Refresh content..
+          UM.refresh('.modal-body')  // Refresh content..
         })
-
         
 
       });

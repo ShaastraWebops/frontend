@@ -95,7 +95,7 @@ var DocumentMirror = function( service_url ){
 
 		var self = this
 
-		
+
 		if(!this.enable_uplink){
 			console.log('Uplink disabled. aborting uplink')
 			return
@@ -204,7 +204,7 @@ var UIMirror = function(){
 				return
 
 			self.setKey( pk, cluster, $el.html(), function(){
-
+				self.refreshAllWithKey( pk, cluster );
 			})
 
 			// prevent multiple instances of this event from making a difference.
@@ -241,6 +241,14 @@ var UIMirror = function(){
 			}
 		);
 
+	}
+
+	this.refresh = function( selector ){
+		$(selector).trigger('ready');
+	}
+
+	this.refreshAllWithKey = function( pk, cluster ){
+		this.refresh('[data-mirror='+pk+'][data-cluster'+cluster+']');
 	}
 }
 
@@ -284,7 +292,7 @@ var TextProcessor = function(){
 	}
 
 	this._shortenWithEllipsis = function( text ){
-		return text.substring(0,100) + '...'
+		return text.substring(0,this.maxLength) + '...'
 	}
 
 }
