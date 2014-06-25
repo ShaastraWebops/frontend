@@ -1033,12 +1033,12 @@
           return EWH.processText( text )
         })
 
-        /*<?php
+        <?php
           if(isset($_GET["token"])){
             echo "$('.modal-body').attr('contenteditable','true');";
             echo "UM.setToken('" . $_GET["token"] . "');";
           }
-        ?>*/
+        ?>
 
         UM.autoDiscover('[data-mirror]')
         UM.autoDiscover('.modal-body')
