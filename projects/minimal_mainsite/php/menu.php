@@ -14,7 +14,7 @@
 <div id="menu_popup">
     <div class="white container-fluid">
         <div class="row">
-            <div class="col-xs-12 cl-effect-12">
+            <div class="col-xs-12">
                 <a class="header h2 white" href="home.php"><img src='../img/logo/250x50_white.png' style='width : 100%; height : auto;' /></a>
             </div>
         </div>
