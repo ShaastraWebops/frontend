@@ -289,6 +289,7 @@ var TextProcessor = function(){
 	this.process = function( text ){
 		if(text.length>this.maxLength)
 			return this._shortenWithEllipsis( text )
+		return text
 	}
 
 	this._shortenWithEllipsis = function( text ){
