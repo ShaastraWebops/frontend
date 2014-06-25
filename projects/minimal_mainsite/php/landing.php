@@ -36,14 +36,19 @@
 				width: 650px;
 			}
 		</style>
+		<script type="text/javascript">
+			// Redirect
+			window.location = "http://www.shaastra.org/2015/main/php/home.php"
+		</script>
 	</head>
 	<body>
 		<img id="logo" src="../img/landing/logo.png">
 		<img id="tools" src="../img/landing/tools.png">
-		<p>We are now live: </p>
-		<a href="http://www.shaastra.org/2015/main/php/home.php">
+		<p>We are now live: <a href="http://www.shaastra.org/2015/main/php/home.php">
 			HERE
 		</a>
+		</p>
+		
 		<br>
 		<a href="http://www.shaastra.org/2015/main/php/home.php">
 			<div class="your-clock"></div>
@@ -52,6 +57,7 @@
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/flipclock.min.js"></script>
 		<script type="text/javascript">
+
 			var clock = new FlipClock($('.your-clock'), {
 				clockFace: 'DailyCounter',
 				countdown: true
