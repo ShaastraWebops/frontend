@@ -48,9 +48,6 @@
           background: rgba(0, 0, 0, 0.51);
           border-radius: 5px;
         }
-        .jumbotron p:hover{
-          opacity: 0.6
-        }
         .jumbotron .container{
           position:relative;
         }
