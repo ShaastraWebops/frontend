@@ -239,7 +239,7 @@
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='design-nav' data-href='#design'>Design and Build</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='coding-nav' data-href='#coding'>Coding</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='quiz-nav' data-href='#quiz'>Involve &amp; Quizzes</a>
-      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='elec-nav' data-href='#elec'>Electrical</a>
+      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='elec-nav' data-href='#elec'>Electronics</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='flagship-nav' data-href='#flagship'>Flagship</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='spotlight-nav' data-href='#spotlight'>Spotlight</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='workshops-nav' data-href='#workshops'>Workshops</a>
