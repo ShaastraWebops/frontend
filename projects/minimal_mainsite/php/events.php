@@ -24,6 +24,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+      <?php include 'head.php' ?>
 
       <style>
         body{
@@ -195,7 +196,6 @@
         }
 
       </style>
-      <?php include 'menu.php' ?>
 
       <script type='text/javascript'>
         // Requirement for webmirror.js
@@ -1055,4 +1055,7 @@
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 
-  </body></html>
+  </body>
+      <?php include 'base.php' ?>
+
+  </html>
