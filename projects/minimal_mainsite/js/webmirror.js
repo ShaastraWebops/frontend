@@ -335,7 +335,7 @@ var EventWriteupHandler = function( modal ){
 
 	this.modalHandler.setHead($(modal).find('.modal-header')).setBody($(modal).find('.modal-body'));
 
-	this.processText = function( text, maxLengh ){
+	this.processText = function( text, maxLength ){
 		processor = new TextProcessor()
 		if( maxLength )
 			processor.setMaxLength( maxLength )
