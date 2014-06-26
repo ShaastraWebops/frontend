@@ -4,7 +4,7 @@
 <title>Spons | Shaastra 2015</title>		
 <?php include 'head.php' ?>
 <link href="../css/contact.css" rel="stylesheet">
-<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />
+<!--<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />-->
 <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
 <link href="../css/css.css" rel="stylesheet">
 <script src="../js/jquery.min.js"></script>

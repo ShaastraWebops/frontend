@@ -69,7 +69,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item">
+							<!--<div class="item">
 								<div class="row">
 									<div class="col-md-6 col-md-offset-2"><p class="subtitle">AJIT NARAYAN</p></div>
 								</div>
@@ -93,7 +93,7 @@
 								<div class="row">
 									<div class="col-md-6 col-md-offset-4"><p class="subtitle">RAJAGOPALA CHIDAMBARAM</p></div>
 								</div>
-							</div>
+							</div>-->
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
@@ -196,7 +196,7 @@
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 							<li data-target="#myCarousel" data-slide-to="4"></li>
-							<li data-target="#myCarousel" data-slide-to="5"></li>
+							<!--<li data-target="#myCarousel" data-slide-to="5"></li>-->
 						</ol>
 						<nav class="nav-circlepop">
 							<a class="prev" href="#myCarousel" data-slide="prev">

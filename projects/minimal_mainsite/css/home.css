@@ -295,7 +295,7 @@ div a {
   cursor: pointer;
   top: 5%;
   left: 5%;
-  z-index: 399;
+  z-index: 1999;
   -webkit-animation: fadeIn 2s ease-in forwards;
   -moz-animation: fadeIn 2s ease-in forwards;
   -o-animation: fadeIn 2s ease-in forwards;
@@ -312,7 +312,7 @@ div a {
 #menu_popup {
   position: fixed;
   background-color: black;
-  z-index: 400;
+  z-index: 2000;
   width: 30%;
   top: 0%;
   left: -30%;

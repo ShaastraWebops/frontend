@@ -1,29 +1,10 @@
 <html lang="en"><head>
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-
-
-
-<title>Shaastra Events</title>
-
-<!-- Bootstrap core CSS -->
-<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom styles for this template -->
+<title>Events | Shaastra '15</title>
 
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+      <?php include 'head.php' ?>
 
       <style>
         body{
@@ -37,16 +18,12 @@
         p{
           font-family: 'Titillium Web', sans-serif;
         }
-        p:hover{
-          opacity:0.6;
-        }
         .jumbotron p{
-          color: black;
-          font-weight:400;
-
-        }
-        .jumbotron p:hover{
-          opacity: 0.6
+          color: white;
+          font-weight:500;
+          border: 1px solid #444;
+          background: rgba(0, 0, 0, 0.51);
+          border-radius: 5px;
         }
         .jumbotron .container{
           position:relative;
@@ -58,6 +35,54 @@
           background-image:url('../img/events/cloudysky.png');
           background-size:1920px auto;
           background-repeat: :no-repeat;
+          background-position-y: 0px
+        }
+
+        .modal-body{
+          color: black;
+        }
+        .modal-header{
+          color:black;
+        }
+
+        #quiz{
+          background-image:url('../img/events/parallax/quiz.png');
+        }
+        #bevent{
+          background-image:url('../img/events/parallax/bevent.png');
+        }
+        #aerofest{
+          background-image:url('../img/events/parallax/aero.png');
+        }
+        #flagship{
+          background-image:url('../img/events/parallax/dept.png');
+          background-position-y: 0px
+
+        }
+        #elec{
+          background-image:url('../img/events/parallax/elec.png');
+          background-position-y: 0px;
+
+        }
+        #workshops{
+          background-image:url('../img/events/parallax/ws2.jpg');
+          background-position-y: -200px
+
+        }
+        #coding{
+          background-image:url('../img/events/parallax/coding.png');
+        }
+        #quiz{
+          background-image:url('../img/events/parallax/involve.png');
+        }
+        #design{
+          background-image:url('../img/events/parallax/design.png');
+        }
+        #spotlight{
+          background-image:url('../img/events/parallax/spotlight.png');
+        }
+        #shows{
+          background-image:url('../img/events/parallax/exhibitions.png');
         }
 
         .btn-grey{
@@ -149,20 +174,24 @@
           background-color: transparent;
           border-color: white;
         }
-
+        /* menu adjustment. not really clean but since it's getting in the way..*/
+        .menuB{
+          position:fixed;
+          left: 15px;
+          top: 5px;
+        }
       </style>
+
       <script type='text/javascript'>
         // Requirement for webmirror.js
         var WEB_MIRROR_SERVICE_URL = 'http://erp.shaastra.org/webmirror/'
       </script>
       <script src="../js/webmirror.js"></script>
-      <script src="erp.shaastra.org/static/dajaxice/dajaxice.core.js"></script>
-
 
     </head>
 
 <body background="../img/bg.png">
-
+  <?php include 'menu.php' ?>
   <!-- Invisible Signals element for global signals. -->
   <div class='signal-hub' style='display:none'></div>
 
@@ -180,7 +209,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -211,7 +239,7 @@
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='design-nav' data-href='#design'>Design and Build</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='coding-nav' data-href='#coding'>Coding</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='quiz-nav' data-href='#quiz'>Involve &amp; Quizzes</a>
-      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='online-nav' data-href='#online'>Online</a>
+      <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='elec-nav' data-href='#elec'>Electronics</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='flagship-nav' data-href='#flagship'>Flagship</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='spotlight-nav' data-href='#spotlight'>Spotlight</a>
       <a class="btn btn-primary btn-sm btn-grey scroll-to" role="button" id='workshops-nav' data-href='#workshops'>Workshops</a>
@@ -227,72 +255,71 @@
 </div>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron" id='events_main'>
+<div class="jumbotron" data-offset=0 id='events_main'>
   <div class="container" style="text-align: center;margin-top:20px">
-  <h1>Events</h1>
-  <p>Events. The essence of Shaastra.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <h1 style="color:black">Events</h1>
+  <p data-mirror=90 data-cluster="EVNT">Events. The essence of Shaastra.</p>
 </div>
 </div>
 
 <div class="container">
   <!-- Example row of columns -->
-  <div class="row">
+  <div class="row" style='opacity:0'>
     <div class="col-md-4 event-info">
       <h2>Heading</h2>
-      <p data-mirror=1>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+      <p data-mirror=1>Donec Loading. </p>
+      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
     </div>
     <div class="col-md-4 event-info">
       <h2>Heading</h2>
-      <p data-mirror=2>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+      <p data-mirror=2>Donec Loading. </p>
+      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
     </div>
     <div class="col-md-4 event-info">
       <h2>Heading</h2>
-      <p data-mirror=3>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+      <p data-mirror=3>Donec Loading.</p>
+      <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
     </div>
   </div>
 
-  <hr>
 
 
 </div>
-<div class="jumbotron" id='aerofest'>
+<div class="jumbotron" data-offset=0 id='aerofest'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/aerofest.png"></h1>
-  <p data-cluster='EVNT' data-mirror=75>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster='EVNT' data-mirror=75>Loading.</p>
 </div>
 </div><div class="container" id='aerofest-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Aerobotics</h2>
-    <p data-cluster="EVNT" data-mirror=4>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=4>Donec Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Wright Design</h2>
-    <p data-cluster="EVNT" data-mirror=5>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=5>Donec Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Airshow</h2>
-    <p data-cluster="EVNT" data-mirror=8>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=8>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
 </div>
 <div class="row">
   
   <div class="col-md-4 event-info">
     <h2>Boeing National Aeromodelling Competition</h2>
-    <p data-cluster="EVNT" data-mirror=9>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=9>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 
@@ -303,56 +330,57 @@
 
 <!-- END Aero-->
 <!-- START Design&Build-->
-<div class="jumbotron" id='design'>
+<div class="jumbotron" data-offset="-200" id='design'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/design.png"></h1>
-  <p data-cluster='EVNT' data-mirror=76>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster='EVNT' data-mirror=76>Loading.</p>
 </div>
 </div><div class="container" id='design-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Fire and Ice</h2>
-    <p data-cluster="EVNT" data-mirror=10>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=10>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Ultimate Engineer</h2>
-    <p data-cluster="EVNT" data-mirror=11>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=11>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Master Builder</h2>
-    <p data-cluster="EVNT" data-mirror=17>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=17>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Contraptions</h2>
-    <p data-cluster="EVNT" data-mirror=1>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=1>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>RoboWars</h2>
-    <p data-cluster="EVNT" data-mirror=13>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=13>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Junkyard Wars</h2>
-    <p data-cluster="EVNT" data-mirror=14>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=14>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Robotics</h2>
-    <p data-cluster="EVNT" data-mirror=15>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=15>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
   
 </div>
@@ -363,43 +391,46 @@
 <!-- END Design&Build-->
 
 <!-- START Coding -->
-<div class="jumbotron" id='coding'>
+<div class="jumbotron" data-offset="-200" id='coding'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/coding.png"></h1>
-  <p data-cluster='EVNT' data-mirror=77>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster='EVNT' data-mirror=77>Loading.</p>
+
 </div>
 </div><div class="container" id='coding-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Open Programming Contest</h2>
-    <p data-cluster="EVNT" data-mirror=18>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=18>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Reverse Coding</h2>
-    <p data-cluster="EVNT" data-mirror=19>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=19>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Hackfest Workshop</h2>
-    <p data-cluster="EVNT" data-mirror=24>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=24>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Code Obfuscation</h2>
-    <p data-cluster="EVNT" data-mirror=21>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=21>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Triathlon </h2>
-    <p data-cluster="EVNT" data-mirror=22>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=22>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
 </div>
 
@@ -410,61 +441,54 @@
 <!-- END Coding -->
 
 <!-- START Quizzes -->
-<div class="jumbotron" id='quiz'>
+<div class="jumbotron" data-offset="-100" id='quiz'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/quiz.png"></h1>
-  <p data-cluster="EVNT" data-mirror=79>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=79>Loading.</p>
 </div>
 </div><div class="container" id='quiz-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Auto Quiz</h2>
-    <p data-cluster="EVNT" data-mirror=30>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=30>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Shaastra Junior Quiz</h2>
-    <p data-cluster="EVNT" data-mirror=31>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=31>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Shaastra Main Quiz</h2>
-    <p data-cluster="EVNT" data-mirror=32>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=32>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Project X</h2>
-    <p data-cluster="EVNT" data-mirror=26>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=26>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Shaastra Cube Open</h2>
-    <p data-cluster="EVNT" data-mirror=27>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=27>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Puzzle Champ</h2>
-    <p data-cluster="EVNT" data-mirror=28>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=28>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>ScEnt Quiz</h2>
-    <p data-cluster="EVNT" data-mirror=29>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-
-  <div class="col-md-4 event-info">
     <h2>How Things Work</h2>
-    <p data-cluster="EVNT" data-mirror=33>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=33>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <hr>
@@ -473,32 +497,51 @@
 <!-- END Quizzes -->
 
 <!-- START Online -->
-<div class="jumbotron" id='online'>
+<div class="jumbotron" data-offset="-100" id='elec'>
   <div class="container" style="
   text-align: center;
   ">
-  <h1><img src="../img/events/online.png"></h1>
-  <p data-cluster="EVNT" data-mirror=80>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <h1><img src="../img/events/elec.png"></h1>
+  <p data-cluster="EVNT" data-mirror=80>Loading.</p>
 </div>
-</div><div class="container" id='online-events'>
+</div><div class="container" id='elec-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>Online Puzzle Champ</h2>
-    <p data-cluster="EVNT" data-mirror=34>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <h2>Fun with Oscilloscopes</h2>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=34>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+  </div>
+  
+  <div class="col-md-4 event-info">
+    <h2>Arduino Programmer's Challenge</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=36>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Online Math Modelling</h2>
-    <p data-cluster="EVNT" data-mirror=35>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <h2>PCB Design Workshop</h2>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=88>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 event-info">
+    <h2>Workshops by TI</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=89>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Finance &amp; Consultancy</h2>
-    <p data-cluster="EVNT" data-mirror=36>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <h2>Shaastra Circuit Design Challenge</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=39>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
+  <!--<div class="col-md-4 event-info">
+    <h2>Shaastra Electronics Store</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=35>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+  </div>-->
 </div>
 
 <hr>
@@ -507,43 +550,40 @@
 </div>
 <!-- END Online -->
 <!-- START Flagship -->
-<div class="jumbotron" id='flagship'>
+<div class="jumbotron" data-offset="-150" id='flagship'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/dept.png"></h1>
-  <p data-cluster="EVNT" data-mirror=81>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=81>Loading.</p>
 </div>
 </div><div class="container" id='flagship-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Robo Oceana</h2>
-    <p data-cluster="EVNT" data-mirror=37>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=37>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Forensics</h2>
-    <p data-cluster="EVNT" data-mirror=38>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=38>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Shaastra Circuit Design Challenge</h2>
-    <p data-cluster="EVNT" data-mirror=39>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <h2>Master Builder</h2>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=41>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>Master Builder</h2>
-    <p data-cluster="EVNT" data-mirror=41>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-  <div class="col-md-4 event-info">
     <h2>Desmod</h2>
-    <p data-cluster="EVNT" data-mirror=42>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=42>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 
@@ -553,13 +593,12 @@
 </div>
 <!-- END Flagship -->
 <!-- START Spotlight -->
-<div class="jumbotron" id='spotlight'>
+<div class="jumbotron" data-offset="-300" id='spotlight'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/spotlight.png"></h1>
-  <p data-cluster="EVNT" data-mirror=82>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=82>Loading.</p>
 </div>
 </div>
 <div class="container" id='spotlight-events'>
@@ -567,30 +606,27 @@
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Shaastra Junior</h2>
-    <p data-cluster="EVNT" data-mirror=43>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=43>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Tech and Innovation Fair</h2>
-    <p data-cluster="EVNT" data-mirror=44>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=44>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
   <div class="col-md-4 event-info">
     <h2>Sustainable Cityscape</h2>
-    <p data-cluster="EVNT" data-mirror=45>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=45>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
-    <h2>Industry Defined Problem</h2>
-    <p data-cluster="EVNT" data-mirror=46>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-  <div class="col-md-4 event-info">
     <h2>Pan IIT Research Expo</h2>
-    <p data-cluster="EVNT" data-mirror=48>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=48>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 
@@ -602,14 +638,13 @@
 
 
 <!-- START Workshops-->
-<div class="jumbotron" id='workshops'>
+<div class="jumbotron" data-offset="-100" id='workshops'>
   <div class="container" style="
   text-align: center;
   /* opacity: 1; */
   ">
   <h1><img src="../img/events/workshop.png"></h1>
-  <p data-cluster="EVNT" data-mirror=83>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=83>Loading.</p>
 </div>
 </div>
 <div class="container" id='workshops-events'>
@@ -617,43 +652,42 @@
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>RoboSoccer and Line Follower</h2>
-    <p data-cluster="EVNT" data-mirror=50>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=50>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Boeing AeroModelling</h2>
-    <p data-cluster="EVNT" data-mirror=53>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=53>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
   <div class="col-md-4 event-info">
     <h2>Rubik's Cube </h2>
-    <p data-cluster="EVNT" data-mirror=52>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=52>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   
   <div class="col-md-4 event-info">
     <h2>Web &amp; Mobile Applications</h2>
-    <p data-cluster="EVNT" data-mirror=51>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=51>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Hovercraft</h2>
-    <p data-cluster="EVNT" data-mirror=54>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=54>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
-  <div class="col-md-4 event-info">
-    <h2>SPAD</h2>
-    <p data-cluster="EVNT" data-mirror=55>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-</div>
-<div class="row">
   <div class="col-md-4 event-info">
     <h2>Digital Fabrication &amp; Rapid Prototyping</h2>
-    <p data-cluster="EVNT" data-mirror=56>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=56>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
 </div>
 <hr>
@@ -663,43 +697,40 @@
 <!-- END Design&Build-->
 
 <!-- START Exhibitions -->
-<div class="jumbotron" id='shows'>
+<div class="jumbotron" data-offset="-150" id='shows'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/shows.png"></h1>
-  <p data-cluster="EVNT" data-mirror=84>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=84>Loading.</p>
 </div>
 </div><div class="container" id='shows-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Product Launch</h2>
-    <p data-cluster="EVNT" data-mirror=62>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=62>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Tech Lounge</h2>
-    <p data-cluster="EVNT" data-mirror=63>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=63>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
   <div class="col-md-4 event-info">
     <h2>Magic Materials</h2>
-    <p data-cluster="EVNT" data-mirror=64>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=64>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Shaastra Exhibitions</h2>
-    <p data-cluster="EVNT" data-mirror=65>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
-  <div class="col-md-4 event-info">
-    <h2>Space Trek Planetarium</h2>
-    <p data-cluster="EVNT" data-mirror=66>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=65>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 
@@ -710,64 +741,59 @@
 <!-- END Exhibitions -->
 
 <!-- START BEvents -->
-<div class="jumbotron" id='bevent'>
+<div class="jumbotron" data-offset=0 id='bevent'>
   <div class="container" style="
   text-align: center;
   ">
   <h1><img src="../img/events/bevent.png"></h1>
-  <p data-cluster="EVNT" data-mirror=85>Aerofest. Enticed by unidentified/identified flying objects? Events in this category include the Boeing National Aeromodelling competition.</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+  <p data-cluster="EVNT" data-mirror=85>Loading.</p>
 </div>
 </div><div class="container" id='bevent-events'>
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Case Study</h2>
-    <p data-cluster="EVNT" data-mirror=67>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=67>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
     <h2>Vittaneeti</h2>
-    <p data-cluster="EVNT" data-mirror=68>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=68>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
   </div>
   <div class="col-md-4 event-info">
     <h2>Estimus</h2>
-    <p data-cluster="EVNT" data-mirror=74>  sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=74>  Loading.</p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4 event-info">
     <h2>Art of Business</h2>
-    <p data-cluster="EVNT" data-mirror=69>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
+
+    <p data-transform=1 data-cluster="EVNT" data-mirror=69>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <h2>Big Data Challenge</h2>
-    <p data-cluster="EVNT" data-mirror=87>  id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details »</button></p>
-  </div>
+    <!--<h2>Big Data Challenge</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=87>  Loading. </p>
+    <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
+
+  </div>-->
 </div>
 
+</div>
 <hr>
+<footer style='text-align:center'> 2015 Shaastra Webops </footer>
 
-<footer style='text-align:center'> &copy; 2015 Shaastra Webops </footer>
-
-</div>
 <!-- END BEvent -->
 
-
-<!-- END Misc -->
 
 <!-- container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type='text/javascript'>
       //  Sensitive Scroll Levels.
       var scrollLevels = [];
@@ -789,12 +815,16 @@
       // WebMirror constants
       
 
+        
+      var EWH = new EventWriteupHandler("#myModal")
+      
+
       $(document).ready(function(){
         scrollTargets.push('#aerofest-nav');
         scrollTargets.push('#design-nav');
         scrollTargets.push('#coding-nav');
         scrollTargets.push('#quiz-nav');
-        scrollTargets.push('#online-nav');
+        scrollTargets.push('#elec-nav');
         scrollTargets.push('#flagship-nav');
         scrollTargets.push('#spotlight-nav');
         scrollTargets.push('#workshops-nav');
@@ -813,15 +843,13 @@
         scrollLevels.push('#design');
         scrollLevels.push('#coding');
         scrollLevels.push('#quiz');
-        scrollLevels.push('#online');
+        scrollLevels.push('#elec');
         scrollLevels.push('#flagship');
         scrollLevels.push('#spotlight');
         scrollLevels.push('#workshops');
         scrollLevels.push('#shows');
         scrollLevels.push('#bevent');
-        scrollLevels.push('footer'); //base case
-
-
+        scrollLevels.push('footer');
 
 
         //scrollLevels.push($('body').position().top + $('body').height());// base case.
@@ -867,7 +895,7 @@
           var absDisp = parallaxFuncs[i].calc.call(parallaxFuncs[i],height);
           $(parallaxTargets[i]).css('top',absDisp+'px');
           // CHANGE THIS ASAP
-          $(parallaxComputeRefs[i]).css('background-position-y',(bgOffset+absDisp)+'px');
+          $(parallaxComputeRefs[i]).css('background-position-y',(bgOffset+absDisp+parallaxFuncs[i].backgoundOrigin)+'px');
 
         };
       })
@@ -877,7 +905,7 @@
         parallaxTargets.push('#design .container');
         parallaxTargets.push('#coding .container');
         parallaxTargets.push('#quiz .container');
-        parallaxTargets.push('#online .container');
+        parallaxTargets.push('#elec .container');
         parallaxTargets.push('#flagship .container');
         parallaxTargets.push('#spotlight .container');
         parallaxTargets.push('#workshops .container');
@@ -888,7 +916,7 @@
         parallaxComputeRefs.push('#design');
         parallaxComputeRefs.push('#coding');
         parallaxComputeRefs.push('#quiz');
-        parallaxComputeRefs.push('#online');
+        parallaxComputeRefs.push('#elec');
         parallaxComputeRefs.push('#flagship');
         parallaxComputeRefs.push('#spotlight');
         parallaxComputeRefs.push('#workshops');
@@ -931,12 +959,16 @@
           var scrollTop2 = $(parallaxComputeRefs[i]).position().top + parseInt(window.innerHeight/2)
           var dispTop2 = 300;
 
+          var origin = parseInt($(parallaxComputeRefs[i]).data('offset'))
+          console.log(origin);
+
           var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
           var offset = -slope*scrollTop1;
 
           parallaxFuncs[i] = {
             slope: slope,
             offset: offset,
+            backgoundOrigin: origin,
             calc:function( x ){
               return parseInt(this.slope*x + this.offset)
             }
@@ -971,12 +1003,35 @@
       $(document).ready(function(){
         // enable uplink and attach mirror to all elements with the data-mirror attribute
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
+
+        UM.setTransform(function( text ){
+          return EWH.processText( text, 400 )
+        })
+
+        <?php
+          if(isset($_GET["token"])){
+            echo "$('.modal-body').attr('contenteditable','true');";
+            echo "$('.jumbotron [data-mirror]').attr('contenteditable','true');";
+            echo "UM.setToken('" . $_GET["token"] . "');";
+          }
+        ?>
+
         UM.autoDiscover('[data-mirror]')
-        //$('[data-mirror]').attr('contenteditable','true')
+        UM.autoDiscover('.modal-body')
+
+        $('.btn[data-toggle=modal]').click(function(){
+          EWH.processOnClick(this)// Invoke to set data variables.
+          UM.refresh('.modal-body')  // Refresh content..
+        })
+        
+
       });
 
-      
+        
     </script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 
-  </body></html>
+  </body>
+      <?php include 'base.php' ?>
+
+  </html>

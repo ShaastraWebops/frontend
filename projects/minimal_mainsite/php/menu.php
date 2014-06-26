@@ -14,8 +14,8 @@
 <div id="menu_popup">
     <div class="white container-fluid">
         <div class="row">
-            <div class="col-xs-12 cl-effect-12">
-                <a class="header h2 white" href="home.php">SHAASTRA 2015</a>
+            <div class="col-xs-12">
+                <a class="header h2 white" href="home.php"><img src='../img/logo/250x50_white.png' style='width : 100%; height : auto;' /></a>
             </div>
         </div>
         <div class="row">
@@ -27,38 +27,38 @@
             </div>
         </div>
         <div class="row" id="home-menu">
-            <div class="col-xs-12 link-braces">
-                <a class="next_page col-xs-6 col-xs-offset-3 white" href="home.php">Home</a>
+            <div class="col-xs-12 link-braces text-center">
+                <a class="next_page white" style="padding: 0px 30px;" href="home.php">Home</a>
             </div>
         </div>
         <div class="row" id="about-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="about.php">About Us</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="about.php">About Us</a>
             </div>
         </div>
         <div class="row" id="events-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="events.php">Events</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="events.php">Events</a>
             </div>
         </div>
         <div class="row" id="shows-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-6 col-xs-offset-3 next_page white" href="shows.php">Shows</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="shows.php">Shows</a>
             </div>
         </div>
         <div class="row" id="lecture-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="lectures.php">Lectures</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="lectures.php">Lectures</a>
             </div>
         </div>
         <div class="row" id="spons-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="spons.php">Sponsors</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="spons.php">Sponsors</a>
             </div>
         </div>
         <div class="row" id="contact-menu">
             <div class="col-xs-12 link-braces">
-                <a class="col-xs-8 col-xs-offset-2 next_page white" href="contact.php">Contact Us</a>
+                <a class="next_page white" style="padding: 0px 30px;" href="contact.php">Contact Us</a>
             </div>
         </div>
         <div class="row margin-bottom-1">

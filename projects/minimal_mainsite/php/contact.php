@@ -6,7 +6,7 @@
 
 		<?php include 'head.php' ?>
 		<link href="../css/contact.css" rel="stylesheet">
-		<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />
+		<!--<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />-->
 		
 		<style>
 			body {
@@ -129,12 +129,13 @@
 						</div>
 					</div>
 					<div class="modal-body">
+					<form name='contact' action='contact_submit.php' method='post'>
 						<div class="row">
 							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-user"></span>
 								</span>
-								<input type="text" class="form-control" placeholder="Name"/>
+								<input type="text" name='name' class="form-control" placeholder="Name" required/>
 							</div>
 						</div>
 						<div class="row">
@@ -142,7 +143,7 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="text" class="form-control" placeholder="Email ID"/>
+								<input type="text" name='email' class="form-control" placeholder="Email ID" required/>
 							</div>
 						</div>
 						<div class="row">
@@ -150,12 +151,12 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-phone"></span>
 								</span>
-								<input type="tel" class="form-control" placeholder="Mobile (optional)"/>
+								<input type="tel" name='mobile' class="form-control" placeholder="Mobile (optional)"/>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-xs-8 col-xs-offset-2">
-								<textarea id="comments" rows="3" class="form-control" placeholder="Your Message..."></textarea>
+								<textarea id="comments" name='msg' rows="3" class="form-control" placeholder="Your Message..." required></textarea>
 							</div>
 						</div>
 					</div>
@@ -182,15 +183,15 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-8 col-md-offset-4">
+							<div class="col-md-8 col-md-offset-2 text-center">
 								<h4>SIDDHARTH DIALANI</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
-									Contact :
+									Contact : 9884308764
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail :
+									E-Mail : siddharthdialani@gmail.com
 								</p>
 							</div>
 						</div>
@@ -215,42 +216,45 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-4">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+							<div class="col-md-6">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>SHUBHAM JAIN</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
+										Contact : 9962035992
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : shubhamj2919@gmail.com
 									</p>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+							<div class="col-md-6">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>NEHA ASHOK</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
+										Contact : 9840922780
+									</p> 
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : nehaashok1408@gmail.com
 									</p>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>DEVAANSH SAMANT</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
+										Contact : 9871077607
+									</p> 
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : devaanshsamant@gmail.com
 									</p>
 								</div>
 							</div>
@@ -274,16 +278,16 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-8 col-md-offset-4">
-								<h4>SIDDHARTH DIALANI</h4>
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<h4>SHIVAPRASAD TR</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
-									Contact :
+									Contact : 9176014050
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail :
-								</p>
+									E-Mail : trshivaprasad@gmail.com
+								</p> 
 							</div>
 						</div>
 					</div>
@@ -305,29 +309,16 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>NAMIT CHAUDHARY</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
+										Contact : 9962878704
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
-									</p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-4">
-									<h4>SIDDHARTH DIALANI</h4>
-									<p>
-										<span class="glyphicon glyphicon-phone"></span>
-										Contact :
-									</p>
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail :
+										E-Mail : namit91@gmail.com
 									</p>
 								</div>
 							</div>

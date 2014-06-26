@@ -54,25 +54,13 @@ var LocalCluster = function( clusterID, serviceURL ){
 
 	
 
-	/*
-	this.setKey = function( key, value, token, callback ){
-		xhr = new XMLHttpRequest();
-		xhr.open('POST',this.service_url+'/set/'+key+'/');
-		xhr.onload = function(data){
-			this.data[key] = value;
-			if(callback)
-				callback();
-		}
-		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		xhr.send('token='+encodeURIComponent(token)+'&data='+encodeURIComponent(value));
+	
+	this.setKey = function( key, value ){
+		this.data[key] = value;
 	}
-	*/
+	
 
 	return this
-
-}
-
-var LocalObject = function(){
 
 }
 
@@ -100,6 +88,10 @@ var DocumentMirror = function( service_url ){
 	}
 
 	this.setKey = function ( pk, cluster, value, callback ){
+
+		var self = this
+
+
 		if(!this.enable_uplink){
 			console.log('Uplink disabled. aborting uplink')
 			return
@@ -107,12 +99,20 @@ var DocumentMirror = function( service_url ){
 
 		xhr = new XMLHttpRequest();
 		xhr.open('POST',this.service_url+'/set/'+pk+'/');
-		xhr.onload = function(data){
 
+
+		xhr.onload = function(data){
+			self._setKeyIntoCluster( pk, cluster, value )
+			callback();
 		}
 		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		xhr.send('token='+encodeURIComponent(this.token)+'&data='+encodeURIComponent(value)+'&cluster='+encodeURIComponent(cluster));
-		callback();
+		
+	}
+	this._setKeyIntoCluster = function( pk, cluster, value ){
+		console.log('setting value')
+		if(this.documentClusterList[cluster])
+			this.documentClusterList[cluster].setKey( pk, value )
 	}
 	this.getKey = function( pk, cluster, callback ){
 
@@ -165,6 +165,10 @@ var UIMirror = function(){
 	this.pk_key = 'mirror'
 	this.cluster_key = 'cluster'
 
+	this.transform = function( text ){
+		return text
+	}
+
 	// Return a self-reference to enable currying.
 	this.setPKKey = function( val ){
 		this.pk_key = val;
@@ -176,31 +180,11 @@ var UIMirror = function(){
 		return this
 	}
 
-	this.make = function( el ){
-
-		var $el = $(el)
-		var pk = $el.data(this.pk_key)
-		var cluster = $el.data(this.cluster_key)
-
-		var self = this
-
-		$el.on('blur',function(){
-			console.log('focus lost. setting state')	
-			self.setKey( pk, cluster, $el.html(), function(){
-
-			})
-		});
-
-		$el.on('ready',function(){
-			console.log('element ready. getting state')
-			self.getKey( pk, cluster, function( value ){
-				$el.html( value );
-				$(window).resize()
-			});
-		});
-
-		$el.trigger('ready');
+	this.setTransform = function( func ){
+		this.transform = func
 	}
+
+	
 	this.autoDiscover = function( selector ){
 
 		var self = this
@@ -212,6 +196,60 @@ var UIMirror = function(){
 		);
 
 	}
+
+	this.make = function( el ){
+
+		var $el = $(el)
+		var self = this
+
+		$el.on('blur',function(evt){
+			console.log('focus lost. setting state')
+
+			// we do variable retrival in here so that the function changes if the data values change.
+			var pk = $el.attr('data-'+self.pk_key)
+			var cluster = $el.attr('data-'+self.cluster_key)
+
+			
+			if(!!parseInt($el.data('transform')))
+				return
+
+			self.setKey( pk, cluster, $el.html(), function(){
+				self.refreshAllWithKey( pk, cluster );
+			})
+
+			// prevent multiple instances of this event from making a difference.
+			evt.stopPropagation();
+		});
+
+
+		$el.on('ready',function(){
+			console.log('element ready. getting state')
+
+			var pk = $el.attr('data-'+self.pk_key)
+			var cluster = $el.attr('data-'+self.cluster_key)
+
+			self.getKey( pk, cluster, function( value ){
+
+				if( !!parseInt($el.data('transform')) && value )
+					value = self.transform( value )
+
+				$el.html( value );
+				$(window).resize()
+
+			});
+		});
+
+		$el.trigger('ready');
+	}
+
+	this.refreshAllWithKey = function( pk, cluster ){
+		this.refresh('[data-'+this.pk_key+'='+pk+'][data-'+this.cluster_key+'='+cluster+']');
+	}
+	
+	this.refresh = function( selector ){
+		$(selector).trigger('ready');
+	}
+	
 }
 
 // Inherit UIMirror from DocumentMirror
@@ -241,6 +279,84 @@ function updateData( el, callback ){
 
 }*/
 
+var TextProcessor = function(){
 
+	this.maxLength = 100;
+	this.setMaxLength = function( maxLength ){
+		this.maxLength = maxLength
+	}
 
+	this.process = function( text ){
+		if(text.length>this.maxLength)
+			return this._shortenWithEllipsis( text )
+		return text
+	}
+
+	this._shortenWithEllipsis = function( text ){
+		return text.substring(0,this.maxLength) + '...'
+	}
+
+}
+
+var ModalMirrorHandler = function( modal ){
+	this.$modal = $(modal)
+
+	this.$head = null
+	this.$body = null
+	this.$foot = null
+
+	this.setHead = function( head ){
+		this.$head = $(head)
+		return this;
+	}
+
+	this.setBody = function( body ){
+		this.$body = $(body)
+		return this;
+	}
+
+	this.process = function( headString, bodyMirror, bodyCluster ){
+		this._copyHeadString( headString )
+		this._copyBodyMirror( bodyMirror, bodyCluster )
+	}
+
+	this._copyBodyMirror = function( bodyMirror, bodyCluster ){
+		this.$body.attr('data-mirror',bodyMirror);
+		this.$body.attr('data-cluster',bodyCluster);
+	}
+
+	this._copyHeadString = function( headString ){
+		this.$head.html(headString);
+	}
+
+}
+
+var EventWriteupHandler = function( modal ){
+	this.modalHandler = new ModalMirrorHandler( modal )
+
+	this.modalHandler.setHead($(modal).find('.modal-header')).setBody($(modal).find('.modal-body'));
+
+	this.processText = function( text, maxLength ){
+		processor = new TextProcessor()
+		if( maxLength )
+			processor.setMaxLength( maxLength )
+
+		return processor.process( text )
+	}
+
+	this.processOnClick = function( el ){
+		var $event = $(el).closest('.event-info')
+		var $body = $event.find('p[data-mirror]')
+		var $head = $event.find('h2')
+
+		var bodyMirror = $body.data('mirror')
+		var bodyCluster = $body.data('cluster')
+
+		var headString = '<h3>' + $head.html() + '</h3>';
+
+		this.modalHandler.process( headString, bodyMirror, bodyCluster )
+
+	}
+
+}
 
