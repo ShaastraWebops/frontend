@@ -3,3 +3,33 @@ body {
   background-color: #333;
   color: white;
 }
+
+/* line 5, ../sass/lecturesMOS.scss */
+#i2 {
+  -webkit-transform-origin: center top;
+}
+
+@-webkit-keyframes rt {
+  /* line 13, ../sass/lecturesMOS.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes sc {
+  /* line 18, ../sass/lecturesMOS.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+/* line 22, ../sass/lecturesMOS.scss */
+#ii {
+  -webkit-perspective: 500px;
+  -webkit-perspective-origin: right center;
+}
+
+/* line 26, ../sass/lecturesMOS.scss */
+#i3 {
+  -webkit-transform: rotateY(90deg);
+}

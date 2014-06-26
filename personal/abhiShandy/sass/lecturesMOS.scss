@@ -2,7 +2,34 @@ body{
 	background-color: #333;
 	color: white;
 }
-img{
-	// 3D Transform
-	// -webkit-transform: rotateX(60deg) rotateY(60deg) rotateZ(60deg);
+#i2{
+	-webkit-transform-origin: center top;
+	// -webkit-transform: rotateY(90deg);
+	// -webkit-transform: scale(0,0);
+	// -webkit-animation: rt 0.5s linear 1s forwards;
+	// -webkit-animation: sc 0.5s linear 1s forwards;	
+}
+@-webkit-keyframes rt{	
+	to{
+		-webkit-transform: rotateY(0deg);
+	}
+}
+@-webkit-keyframes sc{	
+	to{
+		-webkit-transform: scale(1,1);
+	}
+}
+#ii{
+	-webkit-perspective: 500px;	
+	-webkit-perspective-origin: right center;
+}
+#i3{
+	// -webkit-transform-origin: left bottom;
+	-webkit-transform: rotateY(90deg);
+	// -webkit-perspective-origin: 0 50%;
+			// perspective: 500px;
+	// -webkit-transform: rotateY(90deg);
+	// -webkit-transform: skew(0,45deg);
+	// -webkit-perspective: 500;
+	// -webkit-animation: rt 5s linear 2s forwards;
 }
