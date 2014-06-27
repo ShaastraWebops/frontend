@@ -55,12 +55,12 @@
 			</div>
 			<div class="col-xs-4">
 				<center>
-					<img src="./symposium_files/logo.png">
+					<img src="../img/logo.png">
 				</center>
 			</div>
 			<div class="col-xs-4">
-				<img src="./symposium_files/shaastra.png" style="height:40%;width:40%;">
-				<img src="./symposium_files/iitm.png" style="height:25%;width:25%;">
+				<img src="../img/shaastra.png" style="height:40%;width:40%;">
+				<img src="../img/iitm.png" style="height:25%;width:25%;">
 			</div>
 		</div>
 		<br>
