@@ -1,0 +1,43 @@
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+  /*background-color:#F28A02;*/
+  background-image:url(../img/arrow.png);
+  background-size:20px 9px;
+  background-repeat:no-repeat;
+  background-position:bottom center;
+  }
+  .active{
+  border-bottom:thick solid #00A3E8;
+  }
+  .navbar-inverse .navbar-nav>li>a{
+  /*color:#F7F711;*/
+  font-size:130%;
+  }
+  .navbar-nav>li.default>a:hover{
+  /*background-color:#F2A62C;*/
+  }
+  .default{
+  border-bottom:thick solid transparent;
+  }
+  .default:hover{
+  border-bottom:thick solid #09E65A;
+  }
+  .navbar{
+  /*background-color:#F5B056;*/
+  }
+  .welcome{
+  border-radius:5px;
+  background-color:white;
+  border:1px solid #BDB8B1;
+  font-size:150%;
+  font-weight:bold;
+  padding:5px;
+  }
+  .welcome:hover{
+  background-color:#ABD4ED;
+  }
+  .footer {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  height: 60px;
+  }

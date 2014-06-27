@@ -3,7 +3,7 @@
 	<head>
     <?php include 'head.php' ?>	
 	<!--Personalised styling-->
-	<link href="../css/symposium.main.css" rel="stylesheet">
+	<link href="../css/style.main.css" rel="stylesheet">
 
 	
   </head>
