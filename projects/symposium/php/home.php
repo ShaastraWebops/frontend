@@ -7,7 +7,7 @@
 	
   </head>
 
-  <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;">
+  <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;font-family: 'Roboto', sans-serif;">
   <script>
   $( document ).ready(function() {
   $("#home").addClass("active");
