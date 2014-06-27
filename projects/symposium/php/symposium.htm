@@ -31,20 +31,45 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/docs.min.js"></script>
 	<style id="holderjs-style" type="text/css"></style>
+	<!--<script src="../js/jquery-1.11.1.js"></script>-->
+    
 	
 	<!--Personalised styling-->
 	<link href="../css/symposium.css" rel="stylesheet">
+	<script src="../js/jquery-ui.js"></script>
+
 	
   </head>
 
   <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;font-family: 'Roboto', sans-serif;">
   <script>
-  $( document ).ready(function() {
-  $("#home").addClass("active");
-  $("#home").removeClass("default");
+  $(document).ready(function() {
+  $("#home").addClass("active");$("#home_sidebar").addClass("active");
+  $("#home").removeClass("default");$("#home_sidebar").removeClass("default");
   });
   </script>
-  
+  <!--<script>	
+	$(document).ready(function(){
+		$('.sidebar').hide();
+		$('.menu').on('click', function(){
+		$('.sidebar').toggle('slide', { direction: 'left' }, 600);
+		});
+		$('.main-content').on('click', function(){
+		$('.sidebar').hide('slide', { direction: 'left' }, 400);
+		});
+	});
+	</script>-->
+	<script> 
+		$(document).ready(function(){
+		$(".sidebar").hide();
+		$(".cover").on('mouseover',function(){
+		$(".sidebar").show('slide', { direction: 'left' }, 600);
+		});
+		$(".main-content").on('mouseover',function(){
+		$(".sidebar").hide('slide', { direction: 'left' }, 600);
+		});
+		});
+	</script>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -55,7 +80,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Symposium 2015</a>
+          <a class="navbar-brand menu">Symposium 2015</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -76,53 +101,82 @@
       </div>
     </div>
 	
+	<div class="cover">
+		<!--Cover-->
+		<img style="height:70px;width:70px;" src="../img/home.png">
+		<img style="height:70px;width:70px;" src="../img/document.png">
+		<img style="height:70px;width:70px;" src="../img/calendar.png">
+		<img style="height:70px;width:70px;" src="../img/comment.png">
+		<img style="height:70px;width:70px;" src="../img/user.png">
+		<img style="height:70px;width:70px;" src="../img/tag.png">
+		<img style="height:70px;width:70px;" src="../img/mail3.png">
+		<img style="height:70px;width:70px;" src="../img/search.png">
+	</div>
+	<div class="sidebar">
+		<!--Sidebar content-->
+		<div class="default" id="home_sidebar">HOME</div>
+		<div class="default" id="about_sidebar">ABOUT</div>
+		<div class="default" id="schedule_sidebar">SCHEDULE</div>
+		<div class="default" id="speakers_sidebar">SPEAKERS</div>
+		<div class="default" id="partners_sidebar">PARTNERS</div>
+		<div class="default" id="register_sidebar">REGISTER</div>
+		<div class="default" id="contact_sidebar">CONTACT</div>
+		<div class="default" id="search_sidebar">SEARCH</div>
+	</div>
 	
-	<div class="container-fluid">
-		<br><br>
-		<div class="row">
-			<div class="col-xs-4">
-				<!--blank space-->
+	<div class="main-content">
+		<div class="container-fluid">
+			<br><br>
+			<div class="row">
+				<div class="col-xs-4">
+					<!--blank space-->
+				</div>
+				<div class="col-xs-4">
+					<center>
+						<img src="../img/logo.png">
+					</center>
+				</div>
+				<div class="col-xs-4">
+					<center>
+						<img src="../img/shaastra.png" style="height:40%;width:40%;align:right;"><br><br>
+						<img src="../img/iitm.png" style="height:25%;width:25%;">
+					</center>
+				</div>
 			</div>
-			<div class="col-xs-4">
-				<center>
-					<img src="../img/logo.png">
-				</center>
+			<br>
+			<div class="row">
+				<div class="col-xs-3">
+					<!--blank space-->
+				</div>
+				<div class="col-xs-6">
+					<center>
+						<div class="welcome">
+							Indian Institute of Technology, Madras welcomes you to Symposium 2015...
+						</div>
+					</center>
+				</div>
+				<div class="col-xs-3">
+					<!--blank space-->
+				</div>
 			</div>
-			<div class="col-xs-4">
-				<img src="../img/shaastra.png" style="height:40%;width:40%;">
-				<img src="../img/iitm.png" style="height:25%;width:25%;">
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-xs-3">
-				<!--blank space-->
-			</div>
-			<div class="col-xs-6">
-				<center>
-					<div class="welcome">
-						Indian Institute of Technology, Madras welcomes you to Symposium 2015...
-					</div>
-				</center>
-			</div>
-			<div class="col-xs-3">
-				<!--blank space-->
-			</div>
-		</div>
-		
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-6">
-						<a href="http://www.twitter.com"><img src="../img/twitter.png"></a>
-						<a href="http://www.facebook.com"><img src="../img/facebook.png"></a>
-						<a href="http://www.youtube.com"><img src="../img/youtube.png"></a>
-					</div>
-					<div class="col-xs-6">
-						<!--(c)Copyright 2015 blah blah-->
-					</div>
+			
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-xs-6">
+							<!--(c)Copyright 2015 blah blah-->
+						</div>
+						<div class="col-xs-6">
+							<a href="http://www.twitter.com"><img src="../img/twitter.png"></a>
+							<a href="http://www.facebook.com"><img src="../img/facebook.png"></a>
+							<a href="http://www.youtube.com"><img src="../img/youtube.png"></a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	
 </body></html>

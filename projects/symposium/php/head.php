@@ -28,3 +28,4 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/docs.min.js"></script>
 	<style id="holderjs-style" type="text/css"></style>
+	<script src="../js/jquery-ui.js"></script>

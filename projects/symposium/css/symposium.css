@@ -5,7 +5,7 @@
   background-repeat:no-repeat;
   background-position:bottom center;
   }
-  .active{
+  .navbar-nav>li.active{
   border-bottom:thick solid #00A3E8;
   }
   .navbar-inverse .navbar-nav>li>a{
@@ -16,14 +16,67 @@
   .navbar-nav>li.default>a:hover{
   /*background-color:#F2A62C;*/
   }
-  .default{
+  .navbar-nav>li.default{
   border-bottom:thick solid transparent;
   }
-  .default:hover{
+  .navbar-nav>li.default:hover{
   border-bottom:thick solid #09E65A;
   }
   .navbar{
   /*background-color:#F5B056;*/
+  }
+  .cover{
+  width: 70px;
+  height: 560px;
+  position: fixed;
+  top:55px;left:0px;
+  background-color:#333;
+  }
+ .sidebar{
+  width: 250px;
+  height: 560px;
+  position: fixed;
+  top:55px;left:70px;
+  background-color:#333;
+  border:none;padding:0;
+  }
+  .sidebar>div{
+  width: 250px;
+  height:70px;
+  background-color:#333;
+  font-family: 'Oswald';
+  font-size:125%;
+  color:white;
+  text-align:center;
+  padding-top:20px;
+  }
+  .sidebar>div.active{
+  background-color:white;
+  color:#333;
+  }
+  .sidebar>div.default#home_sidebar:hover{
+  background-color:#27AE61;
+  }
+  .sidebar>div.default#about_sidebar:hover{
+  background-color:rgb(41,128,185);
+  }
+  .sidebar>div.default#schedule_sidebar:hover{
+  background-color:rgb(192,57,43);
+  }
+  .sidebar>div.default#speakers_sidebar:hover{
+  background-color:#89BFC9;
+  }
+  .sidebar>div.default#partners_sidebar:hover{
+  background-color:#20618B;
+  }
+  .sidebar>div.default#register_sidebar:hover{
+  background-color:#EE753E;
+  }
+  .sidebar>div.default#contact_sidebar:hover{
+  background-color:rgb(237,173,21);
+  }
+  .sidebar>div.default#search_sidebar:hover{
+  background-color:#88D6C6;
   }
   .welcome{
   border-radius:5px;
@@ -35,7 +88,7 @@
   font-family: 'Lobster', cursive;
   }
   .welcome:hover{
-  opacity:1;
+  opacity:0.85;
   background-color:#ABD4ED;
   }
   .footer {
