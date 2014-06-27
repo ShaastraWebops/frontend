@@ -1,3 +1,5 @@
+	<title>Symposium 2015</title>
+	<link rel="shortcut icon" href="../img/favicon.ico">
 	<!-- Bootstrap core CSS -->
 	<!--fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
