@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    	<!-- Bootstrap core CSS -->
 	<!--fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	
-    <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -31,12 +32,9 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/docs.min.js"></script>
 	<style id="holderjs-style" type="text/css"></style>
-	<!--<script src="../js/jquery-1.11.1.js"></script>-->
-    
-	
+	<script src="../js/jquery-ui.js"></script>	
 	<!--Personalised styling-->
-	<link href="../css/symposium.css" rel="stylesheet">
-	<script src="../js/jquery-ui.js"></script>
+	<link href="../css/symposium.main.css" rel="stylesheet">
 
 	
   </head>
@@ -59,17 +57,7 @@
 		});
 	});
 	</script>-->
-	<script> 
-		$(document).ready(function(){
-		$(".sidebar").hide();
-		$(".cover").on('mouseover',function(){
-		$(".sidebar").show('slide', { direction: 'left' }, 600);
-		});
-		$(".main-content").on('mouseover',function(){
-		$(".sidebar").hide('slide', { direction: 'left' }, 600);
-		});
-		});
-	</script>
+	
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -101,6 +89,73 @@
       </div>
     </div>
 	
+		<script> 
+		$(document).ready(function(){
+		$(".sidebar").hide();
+		$(".cover").on('mouseover',function(){
+		$(".sidebar").show('slide', { direction: 'left' }, 600);
+		});
+		$(".main-content").on('mouseover',function(){
+		$(".sidebar").hide('slide', { direction: 'left' }, 600);
+		});
+		});
+	</script>
+	
+	<style>
+		 .cover{
+		  width: 70px;
+		  height: 560px;
+		  position: fixed;
+		  top:55px;left:0px;
+		  background-color:#333;
+		  }
+		 .sidebar{
+		  width: 250px;
+		  height: 560px;
+		  position: fixed;
+		  top:55px;left:70px;
+		  background-color:#333;
+		  border:none;padding:0;
+		  }
+		  .sidebar>div{
+		  width: 250px;
+		  height:70px;
+		  background-color:#333;
+		  font-family: 'Oswald';
+		  font-size:125%;
+		  color:white;
+		  text-align:center;
+		  padding-top:20px;
+		  }
+		  .sidebar>div.active{
+		  background-color:white;
+		  color:#333;
+		  }
+		  .sidebar>div.default#home_sidebar:hover{
+		  background-color:#27AE61;
+		  }
+		  .sidebar>div.default#about_sidebar:hover{
+		  background-color:rgb(41,128,185);
+		  }
+		  .sidebar>div.default#schedule_sidebar:hover{
+		  background-color:rgb(192,57,43);
+		  }
+		  .sidebar>div.default#speakers_sidebar:hover{
+		  background-color:#89BFC9;
+		  }
+		  .sidebar>div.default#partners_sidebar:hover{
+		  background-color:#20618B;
+		  }
+		  .sidebar>div.default#register_sidebar:hover{
+		  background-color:#EE753E;
+		  }
+		  .sidebar>div.default#contact_sidebar:hover{
+		  background-color:rgb(237,173,21);
+		  }
+		  .sidebar>div.default#search_sidebar:hover{
+		  background-color:#88D6C6;
+		  }
+	</style>
 	<div class="cover">
 		<!--Cover-->
 		<img style="height:70px;width:70px;" src="../img/Home.png">
@@ -122,7 +177,7 @@
 		<div class="default" id="register_sidebar">REGISTER</div>
 		<div class="default" id="contact_sidebar">CONTACT</div>
 		<div class="default" id="search_sidebar">SEARCH</div>
-	</div>
+	</div>	
 	
 	<div class="main-content">
 		<div class="container-fluid">
@@ -159,7 +214,16 @@
 					<!--blank space-->
 				</div>
 			</div>
-			
+		
+					
+	<style>
+	  .footer {
+		  position: absolute;
+		  bottom: 0;
+		  width: auto;
+		  height: 60px;
+		}
+	</style>
 			<div class="footer">
 				<div class="container">
 					<div class="row">
@@ -174,9 +238,4 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-</body></html>
+			</div></body></html>
