@@ -67,14 +67,14 @@
 	</style>
 	<div class="cover">
 		<!--Cover-->
-		<img style="height:70px;width:70px;" src="../img/home.png">
-		<img style="height:70px;width:70px;" src="../img/document.png">
-		<img style="height:70px;width:70px;" src="../img/calendar.png">
-		<img style="height:70px;width:70px;" src="../img/comment.png">
-		<img style="height:70px;width:70px;" src="../img/user.png">
-		<img style="height:70px;width:70px;" src="../img/tag.png">
-		<img style="height:70px;width:70px;" src="../img/mail3.png">
-		<img style="height:70px;width:70px;" src="../img/search.png">
+		<img style="height:70px;width:70px;" src="../img/Home.png">
+		<img style="height:70px;width:70px;" src="../img/Document.png">
+		<img style="height:70px;width:70px;" src="../img/Calendar.png">
+		<img style="height:70px;width:70px;" src="../img/Comment.png">
+		<img style="height:70px;width:70px;" src="../img/User.png">
+		<img style="height:70px;width:70px;" src="../img/Tag.png">
+		<img style="height:70px;width:70px;" src="../img/Mail3.png">
+		<img style="height:70px;width:70px;" src="../img/Search.png">
 	</div>
 	<div class="sidebar">
 		<!--Sidebar content-->
