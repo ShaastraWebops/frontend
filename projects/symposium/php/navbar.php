@@ -19,7 +19,7 @@
 		  /*background-color:#F2A62C;*/
 		  }
 		  .navbar-nav>li.default{
-		  border-bottom:thick solid transparent;
+		  border-bottom:thick solid #777;
 		  }
 		  .navbar-nav>li.default:hover{
 		  border-bottom:thick solid #09E65A;
