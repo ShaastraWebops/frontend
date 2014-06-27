@@ -1,38 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <!-- Bootstrap core CSS -->
-    <link href="./symposium_files/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./symposium_files/dashboard.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./symposium_files/ie-emulation-modes-warning.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./symposium_files/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<script src="./symposium_files/jquery.min.js"></script>
-    <script src="./symposium_files/bootstrap.min.js"></script>
-    <script src="./symposium_files/docs.min.js"></script>
-	<style id="holderjs-style" type="text/css"></style>
-	
+    <?php include 'head.php' ?>	
 	<!--Personalised styling-->
-	<link href="./symposium_files/symposium.css" rel="stylesheet">
+	<link href="../css/symposium.css" rel="stylesheet">
 	
   </head>
 
-  <body style="background-image:url('./symposium_files/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;">
+  <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;">
   <script>
   $( document ).ready(function() {
   $("#home").addClass("active");
@@ -105,19 +80,5 @@
 			</div>
 		</div>
 		
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-6">
-						<a href="http://www.twitter.com"><img src="./symposium_files/twitter.png"></a>
-						<a href="http://www.facebook.com"><img src="./symposium_files/facebook.png"></a>
-						<a href="http://www.youtube.com"><img src="./symposium_files/youtube.png"></a>
-					</div>
-					<div class="col-xs-6">
-						<!--(c)Copyright 2015 blah blah-->
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php include 'footer.php' ?>
 </body></html>
