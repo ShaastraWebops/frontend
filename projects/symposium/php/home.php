@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <?php include 'head.php' ?>	
-	<!--Personalised styling-->
-	<link href="../css/style.main.css" rel="stylesheet">
+    <?php include 'head.php' ?>
+	<link href="../css/home.main.css" rel="stylesheet">
 
-	
-  </head>
+	</head>
 
   <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;font-family: 'Roboto', sans-serif;">
+  
   <script>
   $(document).ready(function() {
+  <!--for present page-->
   $("#home").addClass("active");$("#home_sidebar").addClass("active");
   $("#home").removeClass("default");$("#home_sidebar").removeClass("default");
+  <!--replace #home with the actual page-->
   });
   </script>
-  <!--<script>	
-	$(document).ready(function(){
-		$('.sidebar').hide();
-		$('.menu').on('click', function(){
-		$('.sidebar').toggle('slide', { direction: 'left' }, 600);
-		});
-		$('.main-content').on('click', function(){
-		$('.sidebar').hide('slide', { direction: 'left' }, 400);
-		});
-	});
-	</script>-->
-	
-
+  
     <?php include 'navbar.php' ?>
 	
 	<?php include 'sidebar.php' ?>	
@@ -67,6 +56,8 @@
 					<!--blank space-->
 				</div>
 			</div>
+		</div>
+	</div>
 		
-		<?php include 'footer.php' ?>
+	<?php include 'footer.php' ?>
 </body></html>
