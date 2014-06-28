@@ -1,4 +1,4 @@
-			
+	<!--footer start-->
 	<style>
 	  .footer {
 		  position: absolute;
@@ -22,3 +22,4 @@
 					</div>
 				</div>
 			</div>
+	<!--footer end-->

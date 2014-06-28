@@ -1,3 +1,4 @@
+	<!--sidebar start-->
 	<script> 
 		$(document).ready(function(){
 		$(".sidebar").hide();
@@ -87,3 +88,4 @@
 		<div class="default" id="contact_sidebar">CONTACT</div>
 		<div class="default" id="search_sidebar">SEARCH</div>
 	</div>
+	<!--sidebar end-->

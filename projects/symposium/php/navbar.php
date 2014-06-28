@@ -1,4 +1,4 @@
-	
+	<!--navbar start-->
 	<style>
 		  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
 		  /*background-color:#F28A02;*/
@@ -58,3 +58,4 @@
         </div>
       </div>
     </div>
+	<!--navbar end-->
