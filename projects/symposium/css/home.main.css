@@ -1,0 +1,13 @@
+.welcome{
+  border-radius:5px;
+  background-color:white;
+  border:1px solid #BDB8B1;
+  font-size:150%;
+  padding:5px;
+  opacity:0.5;
+  font-family: 'Lobster', cursive;
+  }
+  .welcome:hover{
+  opacity:0.85;
+  background-color:#ABD4ED;
+  }

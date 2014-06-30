@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Symposium 2015</title>
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	
+    	<!-- Bootstrap core CSS -->
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+
+	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/docs.min.js"></script>
+	<script src="../js/jquery-ui.js"></script>	
+	<!--Personalised styling-->
+	<link href="../css/style.main.css" rel="stylesheet">
+
+	
+  </head>
+
+  <body style="background-image:url('../img/gc3.jpg');background-repeat:no-repeat;background-size:100%;margin-bottom:60px;font-family: 'Roboto', sans-serif;">
+  <script>
+  $(document).ready(function() {
+  $("#home").addClass("active");$("#home_sidebar").addClass("active");
+  $("#home").removeClass("default");$("#home_sidebar").removeClass("default");
+  });
+  </script>
+  <!--<script>	
+	$(document).ready(function(){
+		$('.sidebar').hide();
+		$('.menu').on('click', function(){
+		$('.sidebar').toggle('slide', { direction: 'left' }, 600);
+		});
+		$('.main-content').on('click', function(){
+		$('.sidebar').hide('slide', { direction: 'left' }, 400);
+		});
+	});
+	</script>-->
+	
+
+    	
+	<style>
+		  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+		  /*background-color:#F28A02;*/
+		  background-image:url(../img/arrow.png);
+		  background-size:20px 9px;
+		  background-repeat:no-repeat;
+		  background-position:bottom center;
+		  }
+		  .navbar-nav>li.active{
+		  border-bottom:thick solid #00A3E8;
+		  }
+		  .navbar-inverse .navbar-nav>li>a{
+		  font-size:125%;
+		  text-transform:uppercase;
+		  font-family: 'Oswald';
+		  }
+		  .navbar-nav>li.default>a:hover{
+		  /*background-color:#F2A62C;*/
+		  }
+		  .navbar-nav>li.default{
+		  border-bottom:thick solid transparent;
+		  }
+		  .navbar-nav>li.default:hover{
+		  border-bottom:thick solid #09E65A;
+		  }
+		  .navbar{
+		  /*background-color:#F5B056;*/
+		  }
+	</style>
+	
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand menu">Symposium 2015</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="default" id="home"><a href="">Home</a></li>
+			<li class="default" id="about"><a href="">About</a></li>
+            <li class="default" id="schedule"><a href="">Schedule</a></li>
+            <li class="default" id="speakers"><a href="">Speakers</a></li>
+            <li class="default" id="partners"><a href="">Partners</a></li>
+			<li class="default" id="faq"><a href="">FAQ</a></li>
+			<li class="default" id="register"><a href="">Register</a></li>
+			<li class="default" id="hospitality"><a href="">Hospitality</a></li>
+			<li class="default" id="contact"><a href="">Contact</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </div>	
+		<script> 
+		$(document).ready(function(){
+		$(".sidebar").hide();
+		$(".cover").on('mouseover',function(){
+		$(".sidebar").show('slide', { direction: 'left' }, 600);
+		});
+		$(".main-content").on('mouseover',function(){
+		$(".sidebar").hide('slide', { direction: 'left' }, 600);
+		});
+		});
+	</script>
+	
+	<style>
+		 .cover{
+		  width: 70px;
+		  height: 560px;
+		  position: fixed;
+		  top:55px;left:0px;
+		  background-color:#333;
+		  }
+		 .sidebar{
+		  width: 250px;
+		  height: 560px;
+		  position: fixed;
+		  top:55px;left:70px;
+		  background-color:#333;
+		  border:none;padding:0;
+		  }
+		  .sidebar>div{
+		  width: 250px;
+		  height:70px;
+		  background-color:#333;
+		  font-family: 'Oswald';
+		  font-size:125%;
+		  color:white;
+		  text-align:center;
+		  padding-top:20px;
+		  }
+		  .sidebar>div.active{
+		  background-color:white;
+		  color:#333;
+		  }
+		  .sidebar>div.default#home_sidebar:hover{
+		  background-color:#27AE61;
+		  }
+		  .sidebar>div.default#about_sidebar:hover{
+		  background-color:rgb(41,128,185);
+		  }
+		  .sidebar>div.default#schedule_sidebar:hover{
+		  background-color:rgb(192,57,43);
+		  }
+		  .sidebar>div.default#speakers_sidebar:hover{
+		  background-color:#89BFC9;
+		  }
+		  .sidebar>div.default#partners_sidebar:hover{
+		  background-color:#20618B;
+		  }
+		  .sidebar>div.default#register_sidebar:hover{
+		  background-color:#EE753E;
+		  }
+		  .sidebar>div.default#contact_sidebar:hover{
+		  background-color:rgb(237,173,21);
+		  }
+		  .sidebar>div.default#search_sidebar:hover{
+		  background-color:#88D6C6;
+		  }
+	</style>
+	<div class="cover">
+		<!--Cover-->
+		<img style="height:70px;width:70px;" src="../img/Home.png">
+		<img style="height:70px;width:70px;" src="../img/Document.png">
+		<img style="height:70px;width:70px;" src="../img/Calendar.png">
+		<img style="height:70px;width:70px;" src="../img/Comment.png">
+		<img style="height:70px;width:70px;" src="../img/User.png">
+		<img style="height:70px;width:70px;" src="../img/Tag.png">
+		<img style="height:70px;width:70px;" src="../img/Mail3.png">
+		<img style="height:70px;width:70px;" src="../img/Search.png">
+	</div>
+	<div class="sidebar">
+		<!--Sidebar content-->
+		<div class="default" id="home_sidebar">HOME</div>
+		<div class="default" id="about_sidebar">ABOUT</div>
+		<div class="default" id="schedule_sidebar">SCHEDULE</div>
+		<div class="default" id="speakers_sidebar">SPEAKERS</div>
+		<div class="default" id="partners_sidebar">PARTNERS</div>
+		<div class="default" id="register_sidebar">REGISTER</div>
+		<div class="default" id="contact_sidebar">CONTACT</div>
+		<div class="default" id="search_sidebar">SEARCH</div>
+	</div>	
+	
+	<div class="main-content">
+		<div class="container-fluid">
+			<br><br>
+			<div class="row">
+				<div class="col-xs-4">
+					<!--blank space-->
+				</div>
+				<div class="col-xs-4">
+					<center>
+						<img src="../img/logo.png">
+					</center>
+				</div>
+				<div class="col-xs-4">
+					<center>
+						<img src="../img/shaastra.png" style="height:40%;width:40%;align:right;"><br><br>
+						<img src="../img/iitm.png" style="height:25%;width:25%;">
+					</center>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-3">
+					<!--blank space-->
+				</div>
+				<div class="col-xs-6">
+					<center>
+						<div class="welcome">
+							Indian Institute of Technology, Madras welcomes you to Symposium 2015...
+						</div>
+					</center>
+				</div>
+				<div class="col-xs-3">
+					<!--blank space-->
+				</div>
+			</div>
+		
+					
+	<style>
+	  .footer {
+		  position: absolute;
+		  bottom: 0;
+		  width: auto;
+		  height: 60px;
+		}
+	</style>
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-xs-6">
+							<!--(c)Copyright 2015 blah blah-->
+						</div>
+						<div class="col-xs-6">
+							<a href="http://www.twitter.com"><img src="../img/twitter.png"></a>
+							<a href="http://www.facebook.com"><img src="../img/facebook.png"></a>
+							<a href="http://www.youtube.com"><img src="../img/youtube.png"></a>
+						</div>
+					</div>
+				</div>
+			</div></body></html>
