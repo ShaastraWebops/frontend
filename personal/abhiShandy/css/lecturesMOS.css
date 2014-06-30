@@ -5,7 +5,7 @@ body {
 }
 
 @-webkit-keyframes rt {
-  /* line 6, ../sass/lecturesMOS.scss */
+  /* line 7, ../sass/lecturesMOS.scss */
   to {
     opacity: 1;
     -webkit-transform: rotateY(0deg);
@@ -13,40 +13,154 @@ body {
 }
 
 @-webkit-keyframes sc {
-  /* line 12, ../sass/lecturesMOS.scss */
+  /* line 13, ../sass/lecturesMOS.scss */
   to {
     -webkit-transform: scale(1, 1);
   }
 }
 
-/* line 16, ../sass/lecturesMOS.scss */
+/* line 17, ../sass/lecturesMOS.scss */
 #ii {
   display: none;
   -webkit-perspective: 500px;
 }
 
-/* line 20, ../sass/lecturesMOS.scss */
-#i3, #i2 {
+/* line 26, ../sass/lecturesMOS.scss */
+#i2, #i3 {
   -webkit-transform-origin: left bottom;
   -webkit-transform: rotateY(90deg);
   opacity: 0;
-  -webkit-animation: rt 1s linear 2s forwards;
-}
-
-/* line 26, ../sass/lecturesMOS.scss */
-#i2 {
   -webkit-animation: rt 1s linear 1s forwards;
 }
 
-/* line 30, ../sass/lecturesMOS.scss */
-#i1 {
-  -webkit-transform-origin: left center;
-  -webkit-transform: scale(0, 0);
-  -webkit-animation: sc 1s linear forwards;
+/* line 32, ../sass/lecturesMOS.scss */
+#i3 {
+  -webkit-animation: rt 1s linear 2s forwards;
 }
 
-/* line 36, ../sass/lecturesMOS.scss */
+/* line 37, ../sass/lecturesMOS.scss */
 #all {
   -webkit-transform: scale(2, 2);
   -webkit-animation: sc 5s ease-in-out forwards;
+}
+
+/* line 43, ../sass/lecturesMOS.scss */
+#p1,
+#p2,
+#p3 {
+  width: 33.33333%;
+}
+
+/* line 46, ../sass/lecturesMOS.scss */
+#p1 {
+  position: relative;
+  z-index: 1;
+  background-color: #444;
+  -webkit-transform: scale(1, 1);
+}
+
+/* line 55, ../sass/lecturesMOS.scss */
+#p2 {
+  position: relative;
+  z-index: 4;
+  background-color: #555;
+  -webkit-transform: scale(3, 0);
+  -webkit-transform-origin: center top;
+  -webkit-animation: animate_p2 3s linear 1s forwards;
+}
+
+/* line 63, ../sass/lecturesMOS.scss */
+#p3 {
+  position: relative;
+  z-index: 1;
+  background-color: #666;
+  -webkit-transform: scale(1, 1);
+}
+
+/* line 72, ../sass/lecturesMOS.scss */
+#p4,
+#p5 {
+  width: 50%;
+}
+
+/* line 75, ../sass/lecturesMOS.scss */
+#p4 {
+  position: relative;
+  z-index: 5;
+  background-color: #00425a;
+  -webkit-transform-origin: left bottom;
+  -webkit-transform: scale(2, 2);
+  -webkit-animation: animate_p4 2s linear 1s forwards;
+}
+
+/* line 83, ../sass/lecturesMOS.scss */
+#p5 {
+  position: relative;
+  z-index: 1;
+  background-color: #00430b;
+  -webkit-transform: scale(1, 1);
+  -webkit-transform-origin: right center;
+}
+
+@-webkit-keyframes animate_p4 {
+  /* line 92, ../sass/lecturesMOS.scss */
+  0% {
+    -webkit-transform: scale(2, 2);
+  }
+
+  /* line 95, ../sass/lecturesMOS.scss */
+  50% {
+    -webkit-transform: scale(2, 1);
+  }
+
+  /* line 98, ../sass/lecturesMOS.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animate_p2 {
+  /* line 103, ../sass/lecturesMOS.scss */
+  0% {
+    -webkit-transform: scale(3, 0);
+  }
+
+  /* line 106, ../sass/lecturesMOS.scss */
+  33.33% {
+    -webkit-transform: scale(3, 1);
+  }
+
+  /* line 109, ../sass/lecturesMOS.scss */
+  66.67% {
+    -webkit-transform: scale(3, 1);
+  }
+
+  /* line 112, ../sass/lecturesMOS.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animate_p13 {
+  /* line 117, ../sass/lecturesMOS.scss */
+  from {
+    -webkit-transform: scale(0, 1);
+  }
+
+  /* line 120, ../sass/lecturesMOS.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animate_p5 {
+  /* line 125, ../sass/lecturesMOS.scss */
+  to {
+    -webkit-transform: scale(0, 1);
+  }
+
+  /* line 128, ../sass/lecturesMOS.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+  }
 }

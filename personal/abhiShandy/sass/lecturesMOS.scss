@@ -1,5 +1,6 @@
 body{
 	background-color: #333;
+	// background: url("../img/lectures/all.jpg");
 	color: white;
 }
 @-webkit-keyframes rt{	
@@ -17,23 +18,114 @@ body{
 	display: none;
 	-webkit-perspective: 500px;	
 }
-#i3{
+#i1{
+	// -webkit-transform-origin: left top;
+	// -webkit-transform: scale(2,2);
+	// -webkit-animation: sc 1s linear forwards;
+}
+#i2{
 	-webkit-transform-origin: left bottom;
 	-webkit-transform: rotateY(90deg);
 	opacity: 0;
-	-webkit-animation: rt 1s linear 2s forwards;
-}
-#i2{
-	@extend #i3;
 	-webkit-animation: rt 1s linear 1s forwards;
 }
-#i1{
-	-webkit-transform-origin: left center;
-	-webkit-transform: scale(0,0);
-	-webkit-animation: sc 1s linear forwards;
+#i3{
+	@extend #i2;
+	-webkit-animation: rt 1s linear 2s forwards;
 }
 $s: 2;
 #all{
 	-webkit-transform: scale($s,$s);
 	-webkit-animation: sc 5s ease-in-out forwards;
+}
+#p1,
+#p2,
+#p3{
+	width: (100%/3);
+}
+#p1{	
+	position: relative;
+	z-index: 1;
+	background-color: #444;
+	// background: url("../img/lectures/vinodKhosla.jpg");
+	-webkit-transform: scale(1,1);
+	// -webkit-transform-origin: left center;
+	// -webkit-animation: animate_p13 1s linear 3s forwards;
+}
+#p2{
+	position: relative;
+	z-index: 4;
+	background-color: #555;
+	-webkit-transform: scale(3,0);
+	-webkit-transform-origin: center top;
+	-webkit-animation: animate_p2 3s linear 1s forwards;	
+}
+#p3{
+	position: relative;
+	z-index: 1;
+	background-color: #666;
+	-webkit-transform: scale(1,1);
+	// -webkit-transform-origin: right center;
+	// -webkit-animation: animate_p13 1s linear 3s forwards;
+}
+#p4,
+#p5{	
+	width: 50%;	
+}
+#p4{
+	position: relative;
+	z-index: 5;
+	background-color: #00425a;
+	-webkit-transform-origin: left bottom;
+	-webkit-transform: scale(2,2);
+	-webkit-animation: animate_p4 2s linear 1s forwards;
+}
+#p5{
+	position: relative;
+	z-index: 1;
+	background-color: #00430b;
+	-webkit-transform: scale(1,1);
+	-webkit-transform-origin: right center;
+	// -webkit-animation: animate_p5 1s linear 2s forwards;
+}
+@-webkit-keyframes animate_p4{
+	0%{
+		-webkit-transform: scale(2,2);
+	}
+	50%{
+		-webkit-transform: scale(2,1);		
+	}
+	100%{
+		-webkit-transform: scale(1,1);
+	}
+}
+@-webkit-keyframes animate_p2{
+	0%{
+		-webkit-transform: scale(3,0);
+	}
+	33.33%{
+		-webkit-transform: scale(3,1);
+	}	
+	66.67%{
+		-webkit-transform: scale(3,1);
+	}
+	100%{
+		-webkit-transform: scale(1,1);
+	}
+}
+@-webkit-keyframes animate_p13{
+	from{
+		-webkit-transform: scale(0,1);
+	}
+	to{
+		-webkit-transform: scale(1,1);
+	}
+}
+@-webkit-keyframes animate_p5{
+	to{
+		-webkit-transform: scale(0,1);
+	}
+	from{
+		-webkit-transform: scale(1,1);
+	}
 }
