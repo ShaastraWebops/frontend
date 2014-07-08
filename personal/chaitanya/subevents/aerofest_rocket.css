@@ -62,11 +62,11 @@
     -ms-perspective: 600;
     -o-perspective: 600;
     perspective: 600;
-    -webkit-perspective-origin: 200px 131px;
+    -webkit-perspective-origin: 20% 131px;
     -moz-perspective-origin: 200px 131px;
     -ms-perspective-origin: 200px 131px;
     -o-perspective-origin: 200px 131px;
-    perspective-origin: 200px 131px;
+    perspective-origin: 20% 131px;
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -108,7 +108,7 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 7%;
     text-align: center;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -136,7 +136,7 @@
     height: 260px;
     display: block;
     position: absolute;
-    top: 0px;
+    top: 150px;
 
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -157,7 +157,7 @@
     -o-transform-origin: 100% 50% 0;
     -ms-transform-origin: 100% 50% 0;
     transform-origin: 100% 50% 0;
-    left: 0;
+    left: 100px;
 }
 
 #right-wing {
@@ -172,7 +172,7 @@
     -o-transform-origin: 0% 50%;
     -ms-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    left: 199px;
+    left: 299px;
 }
 
 .wing1 {    
@@ -201,7 +201,7 @@
     -o-transform-origin: 100% 100%;
     -ms-transform-origin: 100% 100%;
     transform-origin: 100% 100%;
-    border-left: 100px solid rgba(2, 0, 100, 1);
+    border-left: 100px solid hsl(0, 0%, 88%);
     border-right: none;
     left: 100px;
 }
@@ -218,7 +218,7 @@
     -o-transform-origin: 0% 100%;
     -ms-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
-    border-right: 100px solid rgba(100, 255, 0, 1);
+    border-right: 100px solid hsl(0, 0%, 88%);
 }
 
 .wing4 {
@@ -234,7 +234,7 @@
     -ms-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     border-right: none;
-    border-left: 100px solid rgba(255, 100, 0, 1);
+    border-left: 100px solid hsl(0, 0%, 88%);
     left: 100px;
 }
 
@@ -255,11 +255,11 @@
 }
 
 #container.hover.fly_away_first {
-    -webkit-transform: translatex(50px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
-    -moz-transform: translatex(50px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
-    -o-transform: translatex(50px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
-    -ms-transform: translatex(50px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
-    transform: translatex(50px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
+    -webkit-transform: translatex(250px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
+    -moz-transform: translatex(250px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
+    -o-transform: translatex(250px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
+    -ms-transform: translatex(250px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
+    transform: translatex(250px) translateY(250px) translateZ(300px) rotateX(100deg) rotateY(-30deg) rotateZ(100deg);
 
     -webkit-transition-delay: 0;
     -moz-transition-delay: 0;
@@ -320,15 +320,15 @@ body {
     -o-transform: translateY(-38px) translateX(8px) rotateZ(22.62deg) rotateY(-60deg) skewY(-22.62deg);
     -ms-transform: translateY(-38px) translateX(8px) rotateZ(22.62deg) rotateY(-60deg) skewY(-22.62deg);
     transform: translateY(-38px) translateX(8px) rotateZ(22.62deg) rotateY(-60deg) skewY(-22.62deg);
-    border-right: 100px solid rgba(100, 100, 100, 1);
+    border-right: 100px solid hsl(0, 0%, 95%);
 }
 
 #container.hover .wing2 {
-    border-left: 100px solid rgba(0, 100, 100, 1);
+    border-left: 100px solid hsl(0, 0%, 85%);
 }
 
 #container.hover .wing3 {
-    border-right: 100px solid rgba(1, 1, 1, 1);
+    border-right: 100px solid hsl(0, 0%, 71%);
 }
 
 #container.hover .wing4 {
@@ -337,7 +337,7 @@ body {
     -o-transform: translateY(-38px) translateX(-8px) rotateZ(-22.62deg) rotateY(60deg) skewY(20deg);
     -ms-transform: translateY(-38px) translateX(-8px) rotateZ(-22.62deg) rotateY(60deg) skewY(20deg);
     transform: translateY(-38px) translateX(-8px) rotateZ(-22.62deg) rotateY(60deg) skewY(20deg);
-    border-left: 100px solid rgba(100, 100, 200, 1);
+    border-left: 100px solid hsl(0, 0%, 95%);
 }
 
 #container.hover {

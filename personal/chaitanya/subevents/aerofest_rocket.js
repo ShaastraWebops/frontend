@@ -23,7 +23,7 @@
                 });
                 
                 $('#close_aerofest').click(function() {
-                   $('#aerofest').fadeOut(1000); 
+                   $('#aerofest').animate({ left: '-100%' },"slow"); 
                 });
                 
             });
