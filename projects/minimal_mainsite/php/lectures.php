@@ -187,6 +187,30 @@
 										</div>
 								</div>
 							</div>
+                            <div class="item">
+                                <div class="row">
+									<div class="col-md-3 col-md-offset-1 col-xs-5">
+										<img src="../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
+									</div>
+									<div class="col-md-7 col-xs-5">
+										<p class="subtitle" align="left">JOHN C. MATHER	</p>
+										<p class="text" align="left">
+											
+										</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-7 col-md-offset-1 col-xs-5">
+										<p class="subtitle" align="right">RAIF TALKS</p>
+										<p class="text" align="right">
+											
+										</p>
+									</div>
+									<div class="col-md-3 col-xs-5">
+										<img src="../img/lectures/6_2.jpg" class="profile img-responsive" align="left" />
+										</div>
+								</div>
+                            </div>
 
 						</div>
 						<!-- Carousel nav -->
@@ -196,6 +220,7 @@
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 							<li data-target="#myCarousel" data-slide-to="4"></li>
+                            <li data-target="#myCarousel" data-slide-to="5"></li>
 							<!--<li data-target="#myCarousel" data-slide-to="5"></li>-->
 						</ol>
 						<nav class="nav-circlepop">
