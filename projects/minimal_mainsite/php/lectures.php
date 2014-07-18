@@ -87,7 +87,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-6">
-										<p class="subtitle">KRISHNA BHARAT</p>
+							r			<p class="subtitle">KRISHNA BHARAT</p>
 									</div>
 								</div>
 								<div class="row">
@@ -203,7 +203,17 @@
 									<div class="col-md-7 col-md-offset-1 col-xs-5">
 										<p class="subtitle" align="right">RAIF</p>
 										<p class="text" align="right">
-											 The Robotics and Artificial Intelligence Foundation is back with its unique competition RobotzIndia which puts the best and the most innovative minds of India in one place. This time we have two themes to choose from: Land and Space. The finals will be held at IIT Madras, during Shaastra 2015. <br> More details can be found at <a href="www.robotzindia.com">www.robotzindia.com</a>
+											 The Robotics and Artificial Intelligence Foundation is 
+											 back with its unique competition RobotzIndia which puts 
+											 the best and the most innovative minds of India in one 
+											 place. This time we have two themes to choose from: Land 
+											 and Space. The finals will be held at IIT Madras, during 
+											 Shaastra 2015. 
+											 <br> 
+											 More details can be found at <a href="http://www.robotzindia.com">www.robotzindia.com</a>
+											 <br>
+											 View pictures of their lecture at IIT Madras <a href='http://www.shaastra.org/2015/frontend/projects/minimal_mainsite/php/raif_gallery.php'>Here</a>
+											 
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
