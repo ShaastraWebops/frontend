@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Lectures | SHAASTRA '15</title>
+		<title>Gallery | SHAASTRA '15</title>
 		
 		<?php include 'head.php' ?>
 		<link rel="stylesheet" type="text/css" href="../css/component_carousel.css">
@@ -30,7 +30,7 @@
 		<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center title">LECTURES</h1>
+                    <h1 class="text-center title">RAIF</h1>
                     <div class="white breaker">
                         <span class="left"></span>
                         <div class="dice white"></div>
