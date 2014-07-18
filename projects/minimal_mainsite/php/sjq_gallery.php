@@ -48,42 +48,28 @@
 						<!-- Carousel items -->
 						<div class="carousel-inner" align="center">
 							<div class="active item">
-                                <img src="../img/sjq/sjq%20(1).jpg">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(1).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(2).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(2).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(3).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(3).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(4).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(4).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="active item">
-                                <img src="../img/sjq/sjq%20(5).jpg">
+                        	<div class="active item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(5).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(6).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(6).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(7).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(7).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(8).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(8).jpg">
                             </div>
                         </div>
                         
@@ -101,8 +87,5 @@
 			</div>
 		</div>
 		<?php include 'foot.php' ?>
-		<script type="text/javascript">
-			$("#lecture-menu").addClass("current_page");
-		</script>
 	</body>
 </html>
