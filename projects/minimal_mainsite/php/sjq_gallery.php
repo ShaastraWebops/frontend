@@ -47,7 +47,7 @@
 			        <div id="myCarousel" class="carousel slide">
 						<!-- Carousel items -->
 						<div class="carousel-inner" align="center">
-							<div class="active item">
+							<div class="item">
                                 <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(1).jpg">
                             </div>
                         	<div class="item">
