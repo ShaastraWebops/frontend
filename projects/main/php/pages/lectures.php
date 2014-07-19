@@ -5,25 +5,19 @@
 		<?php include '../base/head.php' ?>
 		
         <style type="text/css">
-			nav a {
+			.nav-circlepop a {
 				position: absolute;
 				top: 50%;
 				z-index: 100;
 			}
 
-			nav a.prev {
+			.nav-circlepop a.prev {
 				left: 0;
 			}
 
-			nav a.next {
+			.nav-circlepop a.next {
 				right: 0;
 			}
-
-			/* Individual styles */
-
-			/*--------------------*/
-			/* Circle pop */
-			/*--------------------*/
 			.nav-circlepop a {
 				margin: 0 30px;
 				width: 50px;
@@ -111,17 +105,12 @@
 
 
 
-			.container.title, .container-fluid.title {
-				margin-bottom: 2%;
-			}
 			.subtitle{
 				color: white;
-	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 2.5em;
 			}			
 			.text {
 				color: white;
-	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 1.15em;
 	    		text-align: justify;
 			}
@@ -175,31 +164,6 @@
 									</div>
 								</div>
 							</div>
-							<!--<div class="item">
-								<div class="row">
-									<div class="col-md-6 col-md-offset-2"><p class="subtitle">AJIT NARAYAN</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-5"><p class="subtitle">TYLER COWEN</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-2"><p class="subtitle">AMITABH SHAH</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-4"><p class="subtitle">MANOJ PANT</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-6"><p class="subtitle">SIR HARRY KROTO</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<p class="subtitle">KRISHNA BHARAT</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-4"><p class="subtitle">RAJAGOPALA CHIDAMBARAM</p></div>
-								</div>
-							</div>-->
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
