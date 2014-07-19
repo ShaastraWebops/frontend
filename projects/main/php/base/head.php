@@ -86,8 +86,36 @@
 		background: linear-gradient(to left, #fff, transparent);
 	}
 	.breaker.white .right{
-	float: right;
-	background: linear-gradient(to right, #fff, transparent);
+		float: right;
+		background: linear-gradient(to right, #fff, transparent);
+	}
+	blockquote{
+  		padding: 15px 20px 15px 45px;
+  		margin: 0 0 20px;
+  		position: relative;
+  
+  		/*Font*/
+  		font-size: 16px;
+  		line-height: 1.2;
+  
+  	}
+
+	blockquote::before{
+  		content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  		/*Font*/
+  		font-family: Georgia, serif;
+  		font-size: 40px;
+  		font-weight: bold;
+  		color: #999;
+  
+  		position: absolute;
+  		left: 10px;
+  		top:5px;
+	}
+
+	blockquote::after{
+  		content: "";
 	}
 
 </style>
