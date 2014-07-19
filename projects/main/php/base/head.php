@@ -22,6 +22,10 @@
     *{
         font-family: 'Titillium Web', sans-serif
     }
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
     body {
 	  	background-image: url("../../img/bg.png");
   		line-height: 1.42857;
@@ -30,6 +34,7 @@
 
     .title{
 		font-family: 'Dosis', sans-serif;
+        font-weight: bold;
 	}
 	.white {
 		color: #ffffff;
@@ -47,7 +52,7 @@
 	}
 	.breaker span {
 		width:160px;
-		height:1px;
+		height:2px;
 		display:inline-block;
 		margin:14px 0 6px 0;
 		color : #000;
@@ -65,14 +70,13 @@
 		margin:0 8px;
 	}
 	.dice {
-		background:url(../img/dice.png) no-repeat;
+		background:url(../../img/dice.png) no-repeat;
 	}
 	.dice.white {
-		background:url(../img/dice_white.png) no-repeat;
+		background:url(../../img/dice_white.png) no-repeat;
 	}
 
 	.breaker span {
-		background: #d5d5d5;
 		background: #000;
 	}
 	.breaker.white span {

@@ -154,7 +154,7 @@
         background-color: rgba(0, 0, 0, 0.7);
         width: 100%;
         height: 100%;
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
         z-index: -1;
@@ -493,7 +493,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="#donatingMore" class="table">
+                <a href="../pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
                             <span class="small">Know our</span>
@@ -504,7 +504,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="#donatingMore" class="table">
+                <a href="../pages/shows.php" class="table">
                     <span class="table-cell">
                         <span>
                             <span class="small">Be fascinated by</span>
@@ -515,7 +515,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="#donatingMore" class="table">
+                <a href="../pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
                             <span class="small">Reach out to</span>
@@ -565,8 +565,7 @@
         $('body').removeClass('no-scroll')
     }
 
-    $(document).ready(function(){        
-        show_menu();
+    $(document).ready(function(){
         $("#menu-btn").click(function(){ show_menu(); });  
         $("#menu_btn.menu-open").click(function(){ hide_menu(); });
         $('body').keydown(function(e){

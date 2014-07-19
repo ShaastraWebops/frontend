@@ -1,32 +1,79 @@
 <!DOCTYPE html>
-<html style="height:100%">
+<html>
 	<head>
 
 		<title>Contact Us | Shaastra 2015</title>		
 
-		<?php include 'head.php' ?>
-		<link href="../css/contact.css" rel="stylesheet">
-		<!--<link href="../css/component_menu.css" rel="stylesheet" type="text/css" />-->
-		
+		<?php include '../base/head.php' ?>
 		<style>
-			body {
-				font-family: 'Titillium Web', sans-serif;
-				height : 100%;
-				width : 100%;
-			}
-			.title *, .title * {
-				font-family: 'Dosis', sans-serif;
-			}
-			.container.title, .container-fluid.title {
-				margin-bottom: 2%;
-			}
+		.btn.btn-bluebox {
+		    background-color: rgba(14, 99, 133, 0.5);
+		    height : 100%;
+		    display: table-cell;
+		    vertical-align: middle;
+		    text-align: center;
+		    border-radius: 0px;
+		}
+
+		.btn.btn-bluebox:hover,
+		.btn.btn-bluebox:focus,
+		.btn.btn-bluebox:active,
+		.btn.btn-bluebox.active {
+		    color: #ffffff;
+		    background-color: rgba(14, 99, 133, 1);
+		    border-color: #285e8e;
+		}
+
+
+		.hr {
+		    display: block;
+		    margin: 0 auto;
+		    height: 5px;
+		    width: 35%;
+		}  
+
+		textarea {  
+		    width: 100%;  
+		    min-height: 100px;  
+		    font-size: 18px;  
+		    color: #444;  
+		    padding: 5px;
+		    word-wrap: break-word;
+		    resize: vertical;
+		}  
+
+		.left-inner-addon {
+		    position: relative;
+		}
+		.left-inner-addon input,
+		.left-inner-addon textarea {
+		    padding-left: 30px;    
+		}
+		.left-inner-addon i {
+		    position: absolute;
+		    padding: 10px 10px;
+		    pointer-events: none;
+		}
+
+		.right-inner-addon {
+		    position: relative;
+		}
+		.right-inner-addon input {
+		    padding-right: 30px;    
+		}
+		.right-inner-addon i {
+		    position: absolute;
+		    right: 0px;
+		    padding: 10px 12px;
+		    pointer-events: none;
+		}
 		</style>
-		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+		
 	</head>
 	
 	<body>
-		<?php include 'menu.php' ?>		
-		<div class="container-fluid title white centered">
+		<?php include '../base/menu.php' ?>		
+		<div class="container-fluid title white centered" style="margin-bottom:2%;">
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="text-center">CONTACT US</h1>
@@ -46,42 +93,66 @@
 						<div class="row" style="padding: 0.3%; height : 50%;">
 							<div 
 								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
-								style="margin: 1%; padding-top : 15%;"
+								style="margin: 1px;"
 								data-toggle="modal" 
 								data-target="#co-curricular">
-								Co-Curricular<br />
-								Affairs<br />
-								Secretary
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+										Co-Curricular<br />
+										Affairs<br />
+										Secretary
+										</span>
+									</span>
+								</span>
 							</div>
 								
 							<div 
 								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
-								style="margin: 1%; padding-top : 15%"
+								style="margin: 1px;"
 								data-toggle="modal" 
 								data-target="#spons_pr">
-								Sponsorships,<br />
-								PR and<br />
-								Networking
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Sponsorships,<br />
+											PR and<br />
+											Networking
+										</span>
+									</span>
+								</span>
 							</div>
 						</div>
 
 						<div class="row" style="padding: 0.3%; height : 50%;">
 							<div 
 								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
-								style="margin: 1%; padding-top : 15%;"
+								style="margin: 1px;"
 								data-toggle="modal" 
 								data-target="#events_queries">
-								Event<br />
-								Queries
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Event<br />
+											Queries
+										</span>
+									</span>
+								</span>
 							</div>
 							
 							<div 
 								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
-								style="margin: 1%; padding-top : 15%;"
+								style="margin: 1px;"
 								data-toggle="modal" 
 								data-target="#student_relations">
-								Student<br />
-								Relations
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Student<br />
+											Relations
+										</span>
+									</span>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -95,19 +166,19 @@
 						</div>
 						<div class="row">
 							<div class="col-xs-2 col-xs-offset-3">
-								<a class="social" href="https://www.facebook.com/Shaastra"><img src="../img/social/facebook.png" /></a>
+								<a class="social" href="https://www.facebook.com/Shaastra"><img src="../../img/icons/facebook.png" /></a>
 							</div>
 							<div class="col-xs-2">
-								<a class="social" href="https://twitter.com/ShaastraIITM"><img src="../img/social/twitter.png" /></a>
+								<a class="social" href="https://twitter.com/ShaastraIITM"><img src="../../img/icons/twitter.png" /></a>
 							</div>
 							<div class="col-xs-2">
-								<a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../img/social/youtube.png" /></a>
+								<a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../../img/icons/youtube.png" /></a>
 							</div>
 						</div>
 						
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-1">
-								<button class="btn btn-lg btn-primary margin-top-2" data-toggle="modal" data-target="#comments">
+								<button class="btn btn-lg btn-primary" style="margin-top: 2%" data-toggle="modal" data-target="#comments">
 									Could not find what you are looking for?
 								</button>
 							</div>
@@ -159,8 +230,8 @@
 								<textarea id="comments" name='msg' rows="3" class="form-control" placeholder="Your Message..." required></textarea>
 							</div>
 						</div>
+					</form>
 					</div>
-					
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Submit</button>
@@ -205,7 +276,7 @@
 		</div>
 		
 		<div class="modal fade" id="spons_pr" tabindex="-1" role="dialog" aria-labelledby="spons_pr" aria-hidden="true">
-			<div class="modal-dialog" style="width:75%">
+			<div class="modal-dialog" >
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -216,47 +287,43 @@
 					
 					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>SHUBHAM JAIN</h4>
-									<p>
-										<span class="glyphicon glyphicon-phone"></span>
-										Contact : 9962035992
-									</p>
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail : shubhamj2919@gmail.com
-									</p>
-								</div>
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<h4>SHUBHAM JAIN</h4>
+								<p>
+									<span class="glyphicon glyphicon-phone"></span>
+									Contact : 9962035992
+								</p>
+								<p>
+									<span class="glyphicon glyphicon-envelope"></span>
+									E-Mail : shubhamj2919@gmail.com
+								</p>
 							</div>
-							<div class="col-md-6">
-								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>NEHA ASHOK</h4>
-									<p>
-										<span class="glyphicon glyphicon-phone"></span>
-										Contact : 9840922780
-									</p> 
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail : nehaashok1408@gmail.com
-									</p>
-								</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<h4>NEHA ASHOK</h4>
+								<p>
+									<span class="glyphicon glyphicon-phone"></span>
+									Contact : 9840922780
+								</p> 
+								<p>
+									<span class="glyphicon glyphicon-envelope"></span>
+									E-Mail : nehaashok1408@gmail.com
+								</p>
 							</div>
 						</div>
 						
 						<div class="row">
-							<div class="col-md-12">
-								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>DEVAANSH SAMANT</h4>
-									<p>
-										<span class="glyphicon glyphicon-phone"></span>
-										Contact : 9871077607
-									</p> 
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail : devaanshsamant@gmail.com
-									</p>
-								</div>
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<h4>DEVAANSH SAMANT</h4>
+								<p>
+									<span class="glyphicon glyphicon-phone"></span>
+									Contact : 9871077607
+								</p> 
+								<p>
+									<span class="glyphicon glyphicon-envelope"></span>
+									E-Mail : devaanshsamant@gmail.com
+								</p>
 							</div>
 						</div>
 					</div>
@@ -332,27 +399,28 @@
 		</div>
 		
 		<!-- modals for boxes end -->
+
+		<!-- JS -->
+		<?php include '../base/foot.php' ?>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				$("#contact-menu").addClass("current_page");
+				/* GoogleMaps code start */
+				function initialize() {
+					var map_canvas = document.getElementById('map_canvas');
+					var map_options = {
+						center: new google.maps.LatLng(13.006387, 80.24258),
+						zoom: 16,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(map_canvas, map_options)
+				}
+				google.maps.event.addDomListener(window, 'load', initialize);
+				/* GoogleMaps code end */
+			});
+		</script>
 	</body>
 	
-	<!-- JS -->
-	<?php include 'foot.php' ?>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	
-	<script>
-		$(document).ready(function() {
-			$("#contact-menu").addClass("current_page");
-			/* GoogleMaps code start */
-			function initialize() {
-				var map_canvas = document.getElementById('map_canvas');
-				var map_options = {
-					center: new google.maps.LatLng(13.006387, 80.24258),
-					zoom: 16,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				}
-				var map = new google.maps.Map(map_canvas, map_options)
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-			/* GoogleMaps code end */
-		});
-	</script>
 </html>

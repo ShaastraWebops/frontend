@@ -41,7 +41,6 @@
             background-color : #888888;
             background-color : rgba(0, 0, 0, 0.5);
             border : 2px solid #dddddd;
-            padding : 10px;
             border-radius : 10px;
             color : #ffffff;
         }
@@ -256,20 +255,22 @@
 	<!-- MAIN CONTENT FO A TAB -->
 	<div class="main-content" style='margin:75px 75px 0 75px; height : 80%'>
 		<div class="container-fluid">
-			<?php if ($editable) { ?>
-                <form method="post" action='../scripts/save_to_file.php'>
-    				<div class='data'>
-    					<input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
-    					<textarea name="data" id='data' style='min-height : 100px;'>
-    					 	<?php echo $data; ?>
-    					</textarea>
-    				</div>
-                </form> 
-            <?php } else { ?>
-                <div class='data'>
-                    <?php echo $data; ?>
-                </div>
-            <?php } ?>
+            <div class='row'>
+    			<?php if ($editable) { ?>
+                    <form method="post" action='../scripts/save_to_file.php'>
+        				<div class='data col-md-offset-1 col-md-10'>
+        					<input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
+        					<textarea name="data" id='data' style='min-height : 100px;'>
+        					 	<?php echo $data; ?>
+        					</textarea>
+        				</div>
+                    </form> 
+                <?php } else { ?>
+                    <div class='data col-md-offset-1 col-md-10'>
+                        <?php echo $data; ?>
+                    </div>
+                <?php } ?>
+            </div>
 		</div>
 	</div>
 	<!-- END MAIN CONTENT OF A TAB -->
