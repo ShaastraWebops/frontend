@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html style="height:100%">
+<html>
     <head>
         <title>Shows | Shaatsra '15</title>
-        <?php include 'head.php' ?>
+        <?php include '../base/head.php' ?>
         <style>
             .main {
                 color : #ffffff;
@@ -15,22 +15,13 @@
                 font-size: 20px 0px;
                 text-align: justify;
             }
-            .white {
-                color : #ffffff;
-            }
-            .title *, .title * {
-                font-family: 'Dosis', sans-serif;
-            }
-            .container.title, .container-fluid.title {
-                margin-bottom: 2%;
-            }
         </style>
     </head>
     
     <body>
-        <?php include 'menu.php' ?>
+        <?php include '../base/menu.php' ?>
         
-        <div class="container-fluid title white centered">
+        <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center">SHOWS</h1>
@@ -46,7 +37,7 @@
         <div class="container-fluid main white">
             <div class="row">
                 <div class="col-md-6">
-            		Shaastra, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology. After the overwhelming responses to the previous editions, Envisage is back, Bigger and Better! This time, Sit back and get ready to experience an adrenalin rush like you have never experienced before. Soak in the awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. 
+                  <span class='shaastra-title'>Shaastra</span>, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology. After the overwhelming responses to the previous editions, Envisage is back, Bigger and Better! This time, Sit back and get ready to experience an adrenalin rush like you have never experienced before. Soak in the awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. 
                     <br />
                     Being the only student organized event of its kind in the Whole Country, We proudly bet you will never ever forget your journey into Neverland, giving a new meaning to your idea of entertainment and turning projects undertaken by us into a memory you will long cherish! 
                     <br />
@@ -65,9 +56,6 @@
                 </div>
     		</div>
         </div>
-        <script type="text/javascript">
-            $("#shows-menu").addClass("current_page");
-        </script>
     </body>
-    <?php include 'base.php' ?>
+    <?php include '../base/foot.php' ?>
 </html>

@@ -19,8 +19,9 @@
 <![endif]-->
 
 <style>
-    *{
-        font-family: 'Titillium Web', sans-serif
+    @font-face {
+        font-family: 'CGF Locust Resistance';
+        src: url('../../fonts/CGF Locust Resistance.ttf');
     }
     html, body {
         width: 100%;
@@ -28,12 +29,12 @@
     }
     body {
 	  	background-image: url("../../img/bg.png");
-  		line-height: 1.42857;
-  		font-family: "Titillium Web"; 
-  	}
+  		line-height: 1.42857;   
+        font-family: 'Titillium Web', sans-serif;
+    }
 
     .title{
-		font-family: 'Dosis', sans-serif;
+    	font-family: 'Dosis', sans-serif;
         font-weight: bold;
 	}
 	.white {
@@ -42,7 +43,12 @@
 	.black {
 		color: #000000;
 	}
-	.breaker {
+    .shaastra-title {
+        text-transform: uppercase;
+        font-family: 'CGF Locust Resistance';
+    }
+	/* Breaker - A nice little shaastra separator */
+    .breaker {
 		width:387px;
 		height:14px;
 		margin:0 auto;
@@ -98,27 +104,21 @@
 		float: right;
 		background: linear-gradient(to right, #fff, transparent);
 	}
+    /* Make blockquote look nice */
 	blockquote{
   		padding: 15px 20px 15px 45px;
   		margin: 0 0 20px;
   		position: relative;
-  
-  		/*Font*/
-  		font-size: 16px;
+    	font-size: 16px;
   		line-height: 1.2;
-  
-  	}
-
-	blockquote::before{
+    }
+    blockquote::before{
   		content: "\201C"; /*Unicode for Left Double Quote*/
-  
-  		/*Font*/
-  		font-family: Georgia, serif;
+    	font-family: Georgia, serif;
   		font-size: 40px;
   		font-weight: bold;
   		color: #999;
-  
-  		position: absolute;
+    	position: absolute;
   		left: 10px;
   		top:5px;
 	}
@@ -126,16 +126,66 @@
 	blockquote::after{
   		content: "";
 	}
-
+    /* Social Icons used in places */
+    a.social-icon {
+        margin:5px 5px 0px 5px;
+        padding:0px 0px 0px 0px;
+        width:60px;
+        height:60px;
+        float:left;
+        text-indent:-99999px;
+        background: #191919;
+        border:solid 1px #222121;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright:5px;
+        -moz-border-radius-bottomleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -webkit-border-top-left-radius:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-bottom-left-radius:5px;
+        -webkit-border-bottom-right-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+    }
+    a.social-icon.facebook {
+        background: #191919 url(../../img/icons/facebook-long.png) no-repeat -0px -88px;
+        -webkit-transition:All 0.3s ease-out;
+        -moz-transition:All 0.3s ease-out;
+        -o-transition:All 0.3s ease-out;
+    }
+    a.social-icon.facebook:hover {
+        background-position: -0px -0px;
+    }
+    a.social-icon.twitter {
+        background: #191919 url(../../img/icons/twitter-long.png) no-repeat -0px -88px;
+        -webkit-transition:All 0.3s ease-out;
+        -moz-transition:All 0.3s ease-out;
+        -o-transition:All 0.3s ease-out;
+    }
+    a.social-icon.twitter:hover {
+        background-position: -0px -0px;
+    }
+    a.social-icon.google {
+        background:#191919 url(../../img/icons/google-long.png) no-repeat -0px -88px;
+        -webkit-transition:All 0.3s ease-out;
+        -moz-transition:All 0.3s ease-out;
+        -o-transition:All 0.3s ease-out;
+    }
+    a.social-icon.google:hover {
+        background-position: -0px -0px;
+    }
 </style>
 
 <!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+<link onload="window.jQuery && $('body').css('font-family', 'Titillium Web')" href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+<link onload="window.jQuery && $('.title').css('font-family', 'Dosis')"" href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
 
 <!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
-<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../js/jquery.min.js">\x3C/script>')</script>
+<!-- <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/jquery.min.js">\x3C/script>')</script> -->
+<script src="../../js/jquery.min.js"></script>
 
 <script>	
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

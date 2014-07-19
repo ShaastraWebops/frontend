@@ -166,13 +166,13 @@
 						</div>
 						<div class="row">
 							<div class="col-xs-2 col-xs-offset-3">
-								<a class="social" href="https://www.facebook.com/Shaastra"><img src="../../img/icons/facebook.png" /></a>
+								<a class="social-icon facebook" href="https://www.facebook.com/Shaastra"></a>
 							</div>
 							<div class="col-xs-2">
-								<a class="social" href="https://twitter.com/ShaastraIITM"><img src="../../img/icons/twitter.png" /></a>
+								<a class="social-icon twitter" href="https://twitter.com/ShaastraIITM"></a>
 							</div>
 							<div class="col-xs-2">
-								<a class="social" href="https://www.youtube.com/user/iitmshaastra"><img src="../../img/icons/youtube.png" /></a>
+								<a class="social-icon google" href="https://www.youtube.com/user/iitmshaastra"></a>
 							</div>
 						</div>
 						
