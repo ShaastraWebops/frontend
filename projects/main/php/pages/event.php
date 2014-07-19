@@ -46,7 +46,6 @@
             color : #ffffff;
         }
 	</style>
-	<?php include '../base/phpfuncs.php' ?>
 </head>
 
 <body class=''>
