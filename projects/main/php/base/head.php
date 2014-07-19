@@ -7,7 +7,6 @@
 <link rel="shortcut icon" href="../../img/favicon.ico">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../css/home.css">
 <!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 
@@ -23,6 +22,12 @@
     *{
         font-family: 'Titillium Web', sans-serif
     }
+    body {
+	  	background-image: url("../../img/bg.png");
+  		line-height: 1.42857;
+  		font-family: "Titillium Web"; 
+  	}
+
     .title{
 		font-family: 'Dosis', sans-serif;
 	}

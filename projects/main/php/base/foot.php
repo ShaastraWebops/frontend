@@ -8,11 +8,3 @@
 	typeof($.fn.modal) === 'undefined' || document.write('<script src="../../js/bootstrap.min.js">\x3C/script>');
 	window.Modernizr || document.write('<script src="../../js/modernizr.min.js">\x3C/script>');
 </script>
-    
-<script type="text/javascript">	
-	function hideMenu () {
-        $("#menu_popup").animate({
-            left: '-100%'
-        }, "slow");
-    }
-</script>

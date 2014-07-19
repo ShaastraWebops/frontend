@@ -31,10 +31,15 @@ CKEDITOR.plugins.add( 'savebtn', {
                     data: $editor_form.serialize(),//editor.name contains the id of the current editable html tag
                 })
                 .done(function(response) {
-                    alert('Saved successfully !');
+                    console.log(response);
+                    if (response.msg == 'error')
+                        alert('There\'s a problem and we cannot save your data ! Copy all the info so you dont lose it, and contact the webops team');
+                    else
+                        alert('Saved successfully !');
+
                 })
                 .fail(function() {
-                    alert('There\'s been an error. Copy ALL your data and store in a Word document jsut to be safe. And then refresh and try again. Contact WebOps if issue persists.');
+                    alert('There\'s an error, We cannot connect to the internet. Copy ALL your data and store in a Word document jsut to be safe. And then refresh and try again. Contact WebOps if issue persists.');
                 })
                 .always(function() {
                     $('.cke_button__savebtn_icon').css("background-image", normal_icon);

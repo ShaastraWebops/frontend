@@ -6,7 +6,7 @@
 	<style>
 		.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
 	  		/*background-color:#F28A02;*/
-	  		background-image:url(../img/arrow.png);
+	  		background-image:url(../../img/icons/arrow.png);
 		  	background-size:20px 9px;
 		  	background-repeat:no-repeat;
 		  	background-position:bottom center;
@@ -15,9 +15,11 @@
 	  		font-size:125%;
 	  		text-transform: none;
             font-weight: bold;
+            color:#cccccc;
 	  	}
 	  	.navbar-nav>li>a:hover{
 	  		background-color:#F2A62C;
+            color:#ffffff;
 	  	}
 	  	.navbar-nav>li{
 	  		border-bottom:thick solid #777;
@@ -28,10 +30,13 @@
 	  	.navbar-nav>li.active{
 	  		border-bottom:thick solid #00A3E8;
 	  	}
-	  	.cke_button__savebtn, .cke_button__savebtn_icon,
-	  	.cke_button__savebtn, .cke_button__savebtn_label {
-	  		width : 50px;
+	  	.cke_button_icon.cke_button__savebtn_icon {
+	  		width : 70px;
+            background-position:right !important; 
 	  	}
+        .cke_button_icon.cke_button__savebtn_icon:after {
+            content:'Save';
+        }
         .main-content .data {
             background-color : #888888;
             background-color : rgba(0, 0, 0, 0.5);
@@ -44,7 +49,7 @@
 	<?php include '../base/phpfuncs.php' ?>
 </head>
 
-<body>
+<body class=''>
 	<?php 
 		if ( isset($_REQUEST['category']) ) {
 			$category = $_REQUEST['category'];
@@ -75,6 +80,7 @@
 			$data = file_get_contents('../events/sample.html');
 		}
 	?>	
+    <?php include '../base/menu.php'; ?>
 	
 	<!-- TABBAR -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
@@ -86,7 +92,7 @@
             		<span class="icon-bar"></span>
             		<span class="icon-bar"></span>
           		</button>
-          		<a class="navbar-brand title"><?php echo $event; ?></a>
+          		<a class="navbar-brand title" href=''><?php echo $event; ?></a>
         	</div>
         	<div class="navbar-collapse collapse">
           		<ul class="nav navbar-nav">
@@ -101,7 +107,7 @@
                            		<a href="<?php if ($editable) 
                            				echo 'javascript:void(0)';
                            			else
-                           				echo '';
+                           				echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
                            			?>"
                            			<?php if ($editable)
                            				echo 'onclick="tab_name_edit(this)"';
@@ -116,7 +122,7 @@
                     }
                     ?>
             		<?php if ($editable) { ?>
-            			<li class="default"><a href="javascript:void(0)" onclick='tab_name_edit(this);'>+</a></li>
+            			<li class="default"><a href="javascript:void(0)" onclick='tab_name_edit(this);' class='newtab'>+</a></li>
             		<?php } ?>
           		</ul>
         	</div>
@@ -126,36 +132,122 @@
 
 	<?php if ( $editable ) { // Modal used as form ?> 
 	<!-- EDITABLE MODAL -->
-	<div class="modal fade" id='edit_modal'>
-	  	<div class="modal-dialog modal-sm black">
+	<div class="modal container-fluid fade" id='edit_modal'>
+	  	<div class="modal-dialog black" style='width : 80%'>
 	    	<div class="modal-content">
 	      		<div class="modal-header">
 	        		<button type="button" class="close" data-dismiss="modal">
 	        			<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 	        		</button>
-	        		<h4 class="modal-title">Rename Tab</h4>
+	        		<h4 class="modal-title">Tab Properties</h4>
 	      		</div>
-	      		<form action='../scripts/rename_file.php' method='POST'>
-	        		<div class="modal-body">
-	        			<div class='row'>
-	        				<div class='col-md-4 black'>Old name</div>
-	        				<div class='col-md-8'>	
-	        					<input class='oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
-	        				</div>
-	        			</div>
-	        			<div class='row'>
-	        				<div class='col-md-4'>New name</div>
-	        				<div class='col-md-8'>	
-	        					<input class='newname' name='newname' style='width:100%' type='text' value=''/>
-	        				</div>
-	        			</div>
-	        			<input class='dirname' name='dirname' type='hidden' value='' />
-	      			</div>
-	      			<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        			<input type="submit" class="btn btn-primary" value='Save changes' name='submit' />
-	      			</div>
-	      		</form>
+	      		<div class="modal-body">
+        			<div class='container-fluid rename'>
+                        <div class='row'>
+                            <div class='col-md-3' style='border-right : solid 2px #dddddd'>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center'>
+                                        <h3>Delete Tab</h3>
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center' style='padding-top:10px;'>
+                                        If you delete a tab, all content will be deleted ! <br />
+                                        <br />
+                                        <a class='deleteurl btn btn-md btn-primary' href=''>Delete it</a> if you're sure.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='col-md-3' style='border-right : solid 2px #dddddd'>
+                                <form action='../scripts/rename_file.php' method='POST'>
+                                    <div class='row'>
+                                        <div class='col-md-12 text-center'>
+                                            <h3>Rename Tab</h3>
+                                        </div>
+                                    </div>
+                                    <div class='row' style='padding-top:10px;'>
+                                        <div class='col-md-5 black'>Old name</div>
+                                        <div class='col-md-7'>  
+                                            <input class='oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
+                                        </div>
+                                    </div>
+                                    <div class='row' style='padding-top:10px;'>
+                                        <div class='col-md-5'>New name</div>
+                                        <div class='col-md-7'>  
+                                            <input class='newname' name='newname' style='width:100%' type='text' value=''/>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-md-12 text-center' style='padding-top:10px;'>
+                                            <input type="submit" class="btn btn-md btn-primary" value='Change Name' name='submit' />
+                                        </div>
+                                    </div>
+                                
+                                    <input class='dirname' name='dirname' type='hidden' value='' />
+                                </form>
+                            </div>
+                            <!-- <div class='col-md-3' style='border-right : solid 2px #dddddd'>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center'>
+                                        <h3>Set Order</h3>
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center' style='padding-top:10px;'>
+                                        Change the location of this type by setting the priority using a number.<br />
+                                        The tab with priority 1 will be on the left most. priority 1 will also be visible by default.<br />
+                                        <br />
+                                        <form action='../scripts/rename_file.php' method='POST'>
+                                            <div class='row'>
+                                                <div class='col-md-12 text-center'>
+                                                    <h3>Rename Tab</h3>
+                                                </div>
+                                            </div>
+                                            <div class='row' style='padding-top:10px;'>
+                                                <div class='col-md-4 black'>Old name</div>
+                                                <div class='col-md-8'>  
+                                                    <input class='oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
+                                                </div>
+                                            </div>
+                                            <div class='row' style='padding-top:10px;'>
+                                                <div class='col-md-4'>New name</div>
+                                                <div class='col-md-8'>  
+                                                    <input class='newname' name='newname' style='width:100%' type='text' value=''/>
+                                                </div>
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col-md-12 text-center' style='padding-top:10px;'>
+                                                    <input type="submit" class="btn btn-md btn-primary" value='Change Name' name='submit' />
+                                                </div>
+                                            </div>
+                                        
+                                            <input class='dirname' name='dirname' type='hidden' value='' />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class='col-md-3'>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center'>
+                                        <h3>Edit content</h3>
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-md-12 text-center' style='padding-top:10px;'>
+                                        Want to edit the content of the tab ?<br />
+                                        <br />
+                                        <a class='btn btn-md btn-primary taburl' href=''>Go to the tab</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+      			</div>
+      			<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			
+      			</div>
 	    	</div>
 	  	</div>
 	</div>
@@ -192,15 +284,23 @@
 			function tab_name_edit(el) {
 				var $el = $(el);
 				var oldname = $el.text().replace(/^\s+|\s+$/g, '');
-				if (oldname == '+' || oldname == 'NEW') {
+				if ($el.hasClass('newtab')) {
 					$('#edit_modal').find('.oldname').val('').css('background', '#eee');
 					$('#edit_modal').find('.newname').val(oldname).show();
-					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>').show()
-					
+					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>').show()					
 				} else {
 					$('#edit_modal').find('.oldname').val(oldname).show().css('background', '#eee');
 					$('#edit_modal').find('.newname').val(oldname).show();
 					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>').show()
+                    $('#edit_modal').find('.deleteurl').prop('href', '../scripts/delete_file.php?file_name=' + encodeURI('<?php echo $event_path; ?>/' + oldname))
+                    $('#edit_modal').find('.taburl').prop('href', "<?php 
+                        if ($editable) {
+                            $editurl = '&edit';
+                        } else {
+                            $Editurl = '';
+                        }
+                        echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab) . $editurl;
+                    ?>");
 				}
 				$('#edit_modal').modal()
 			}

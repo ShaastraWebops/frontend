@@ -4,10 +4,10 @@ $myFileName = $_POST['filename'];
  
 $fp = fopen ("$myFileName", "w+");
 if(fwrite($fp, $sValue)) {
-    echo 'GOT';
-    echo $sValue;
-} else
-    echo "$sValue=ERROR - NOT SAVED!";
+    echo "{'script':'save_to_file', 'msg':'success'}";
+} else {
+    echo "{'script':'save_to_file', 'msg':'error'}";
+}
 fclose($fp);
  
 ?>
