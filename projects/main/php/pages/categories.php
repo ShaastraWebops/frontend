@@ -7,7 +7,6 @@
     <style>
         #event-list {
             color: #fff;
-
         }
         #event-list .event-group .event-item {
             padding: 0;
@@ -80,17 +79,15 @@
                 -o-transform 0.3s ease-out;
             transition: margin 0.3s ease-out, 
                 transform 0.3s ease-out;
-            height: 90%;
-            width: 90%;
-            margin: 5%;
-            background-color: rgba(0, 0, 0, 0.95);
+            height: 100%;
+            width: 100%;
         }
         #event-list .event-group .event-item a div > span {
             margin: 0px;
             padding: 0px;
             display: table;
             height: 100%;
-            width: 100%
+            width: 100%;
         }
         #event-list .event-group .event-item a div > span > span {
             height: 100%;
@@ -98,62 +95,29 @@
             vertical-align: middle;
             margin: auto;
             text-align: center;
-            padding: 2%;
         }        
-
-        #event-list .event-group.first .event-item a div {
-            margin-top: 10%;
-            margin-bottom: 0%;
-        }
-        #event-list .event-group.last .event-item a div {
-            margin-top: 0%;
-            margin-bottom: 10%;
-        }
-        #event-list .event-group .event-item.first a div {
-            margin-left: 10%;
-            margin-right: 0%;
-        }
-        #event-list .event-group .event-item.last a div {
-            margin-left: 0%;
-            margin-right: 10%;
+        #event-list .event-group .event-item a div > span > span > span {
+            background-color: rgba(0, 0, 0, 0.95);
+            width: 100%;
+            display: inline-block;
         }
 
-        #event-list .event-group .event-item a:hover div {
-            -webkit-transform: scale(0);
-            -moz-transform: scale(0);
-            -ms-transform: scale(0);
-            -o-transform: scale(0);
-            transform: scale(0);
-        }
-        #event-list .event-group.first .event-item a:hover div {
-            margin-top: 100%;
-        }
-        #event-list .event-group.last .event-item a:hover div {
-            margin-top: -100%;
-        }
-        #event-list .event-group .event-item.first a:hover div {
-            margin-left: 100%;
-        }
-        #event-list .event-group .event-item.last a:hover div {
-            margin-left: -100%;
-        }
     </style>
 </head>
 <body>
     <?php include '../base/menu.php' ?>
     <div class="container-fluid white centered">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center title">EVENTS</h1>
-                    <div class="white breaker">
-                        <span class="left"></span>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center title">EVENTS</h1>
+                <div class="white breaker">
+                    <span class="left"></span>
                         <div class="dice white"></div>
-                        <span class="right"></span>
-                    </div>
+                    <span class="right"></span>
                 </div>
             </div>
         </div>
-
+    </div>
     <div id="event-list" class="container-fluid">
         <div class="row event-group first">
             <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
@@ -162,8 +126,12 @@
                     <a href="">
                         <div>
                             <span>
-                                <span class="transparent-text"> 
-                                    Hackfest
+                                <span> 
+                                    <span>
+                                        <span class="transparent-text">
+                                            Aerofest
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -176,8 +144,12 @@
                     <a href="">
                         <div>
                             <span>
-                                <span class="transparent-text">
-                                    Robowars
+                                <span>
+                                    <span>
+                                        <span class="transparent-text">
+                                            Design and Build
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -190,8 +162,12 @@
                     <a href="">
                         <div>
                             <span>
-                                <span class="transparent-text">
-                                    Boeing National Aero modelling Competition
+                                <span>
+                                    <span>
+                                        <span class="transparent-text">
+                                            Coding
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -204,8 +180,12 @@
                     <a href="">
                         <div>
                             <span>
-                                <span class="transparent-text">
-                                    Mobile Dev workshop
+                                <span>
+                                    <span>
+                                        <span class="transparent-text">
+                                            Involve and Quizzes
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -218,8 +198,12 @@
                     <a href="">
                         <div>
                             <span>
-                                <span class="transparent-text">
-                                    Open Programing Contest
+                                <span>
+                                    <span>
+                                        <span class="transparent-text">
+                                            Electronics
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -235,7 +219,11 @@
                         <div>
                             <span>
                                 <span>
-                                    HELLO
+                                    <span>
+                                        <span class="transparent-text">
+                                            Department Flagship
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -249,7 +237,11 @@
                         <div>
                             <span>
                                 <span>
-                                    HELLO
+                                    <span>
+                                        <span class="transparent-text">
+                                            Spotlight
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -263,7 +255,11 @@
                         <div>
                             <span>
                                 <span>
-                                    HELLO
+                                    <span>
+                                        <span class="transparent-text">
+                                            Workshops
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -277,7 +273,11 @@
                         <div>
                             <span>
                                 <span>
-                                    HELLO
+                                    <span>
+                                        <span class="transparent-text">
+                                            Shows
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>
@@ -291,7 +291,11 @@
                         <div>
                             <span>
                                 <span>
-                                    HELLO
+                                    <span>
+                                        <span class="transparent-text">
+                                            B-Events
+                                        </span>
+                                    </span>
                                 </span>
                             </span>
                         </div>

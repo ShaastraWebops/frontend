@@ -47,6 +47,7 @@ if ( $DEBUG) {
     .title{
     	font-family: 'Dosis', sans-serif;
         font-weight: bold;
+        letter-spacing: 0.3em;
 	}
 	.white {
 		color: #ffffff;

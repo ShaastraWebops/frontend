@@ -109,7 +109,7 @@
     <div class="container-fluid title white centered" style='margin-bottom:2%'>
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center">SPONSORS</h1>
+                <h1 class="text-center title">SPONSORS</h1>
                 <div class="white breaker">
                     <span class="left"></span>
                     <div class="dice white"></div>
