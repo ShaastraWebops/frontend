@@ -1,15 +1,21 @@
 <?php 
+$DEBUG = 1;
+
+if ( $DEBUG) {
 	ini_set('display_errors', 1); 
 	error_reporting(E_ALL); 
+}
 ?>
 
 <!-- Meta -->
 <link rel="shortcut icon" href="../../img/favicon.ico">
 
 <!-- CSS -->
-<!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
-<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-
+<?php if ($DEBUG) { ?>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+<?php } else { ?>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<?php } ?>
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,6 +37,11 @@
 	  	background-image: url("../../img/bg.png");
   		line-height: 1.42857;   
         font-family: 'Titillium Web', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+        font-smoothing: antialiased;
     }
 
     .title{
@@ -46,6 +57,7 @@
     .shaastra-title {
         text-transform: uppercase;
         font-family: 'CGF Locust Resistance';
+        font-weight: 100;
     }
 	/* Breaker - A nice little shaastra separator */
     .breaker {
@@ -179,13 +191,31 @@
 </style>
 
 <!-- Fonts -->
-<link onload="window.jQuery && $('body').css('font-family', 'Titillium Web')" href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-<link onload="window.jQuery && $('.title').css('font-family', 'Dosis')"" href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+<?php if ($DEBUG) { ?>
+    <style>
+    @font-face {
+        font-family: 'Titillium Web';
+        src: url('../../fonts/TitilliumWeb.woff');
+    }
+    @font-face {
+        font-family: 'Dosis';
+        src: url('../../fonts/Dosis.woff');
+    }
+    </style>
+<?php } else { ?>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+<?php } ?>
 
 <!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
 <!-- <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../js/jquery.min.js">\x3C/script>')</script> -->
-<script src="../../js/jquery.min.js"></script>
+<?php if ($DEBUG) { ?>
+    <script src="../../js/jquery.min.js"></script>
+<?php } else { ?>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
+<?php } ?>
+
 
 <script>	
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

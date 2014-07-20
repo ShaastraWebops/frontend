@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height:100%">
+<html>
     <head>
         <title>About | Shaatsra '15</title>
         <?php include '../base/head.php' ?>

@@ -5,7 +5,6 @@
 	<?php include '../base/head.php' ?>
 	<style>
 		.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
-	  		/*background-color:#F28A02;*/
 	  		background-image:url(../../img/icons/arrow.png);
 		  	background-size:20px 9px;
 		  	background-repeat:no-repeat;

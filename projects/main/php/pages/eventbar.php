@@ -1,13 +1,13 @@
 	<!--sidebar start-->
 	<script> 
 		$(document).ready(function(){
-		$(".sidebar").hide();
-		$(".cover").on('mouseover',function(){
-		$(".sidebar").show('slide', { direction: 'left' }, 600);
-		});
-		$(".main-content").on('mouseover',function(){
-		$(".sidebar").hide('slide', { direction: 'left' }, 600);
-		});
+			$(".sidebar").hide();
+			$(".cover").on('mouseover',function(){
+				$(".sidebar").show('slide', { direction: 'left' }, 600);
+			});
+			$(".main-content").on('mouseover',function(){
+				$(".sidebar").hide('slide', { direction: 'left' }, 600);
+			});
 		});
 	</script>
 	

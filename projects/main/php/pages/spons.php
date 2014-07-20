@@ -4,7 +4,6 @@
     <title>Spons | Shaastra 2015</title>
     <?php include '../base/head.php' ?>
     
-    <!-- <link href="../css/contact.css" rel="stylesheet"> -->
     <style>
         .tabs {
             margin-left:65px;

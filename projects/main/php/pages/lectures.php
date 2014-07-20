@@ -35,8 +35,14 @@
 				content: '';
 				opacity: 0;
 				-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+				-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+				-ms-transition: -ms-transform 0.3s, opacity 0.3s;
+				-o-transition: -o-transform 0.3s, opacity 0.3s;
 				transition: transform 0.3s, opacity 0.3s;
 				-webkit-transform: scale(0.9);
+				-moz-transform: scale(0.9);
+				-ms-transform: scale(0.9);
+				-o-transform: scale(0.9);
 				transform: scale(0.9);
 			}
 
@@ -50,6 +56,9 @@
 
 			.nav-circlepop a.next .icon-wrap {
 				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
 				transform: rotate(180deg);
 			}
 
@@ -62,29 +71,50 @@
 				background: #fff;
 				content: '';
 				-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+				-moz-transition: -moz-transform 0.3s, background-color 0.3s;
+				-ms-transition: -ms-transform 0.3s, background-color 0.3s;
+				-o-transition: -o-transform 0.3s, background-color 0.3s;
 				transition: transform 0.3s, background-color 0.3s;
 				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
 				backface-visibility: hidden;
 			}
 
 			.nav-circlepop .icon-wrap::before {
 				-webkit-transform: translateX(-50%) rotate(30deg);
+				-moz-transform: translateX(-50%) rotate(30deg);
+				-ms-transform: translateX(-50%) rotate(30deg);
+				-o-transform: translateX(-50%) rotate(30deg);
 				transform: translateX(-50%) rotate(30deg);
 				-webkit-transform-origin: 0 100%;
+				-moz-transform-origin: 0 100%;
+				-ms-transform-origin: 0 100%;
+				-o-transform-origin: 0 100%;
 				transform-origin: 0 100%;
 			}
 
 			.nav-circlepop .icon-wrap::after {
 				top: 50%;
 				-webkit-transform: translateX(-50%) rotate(-30deg);
+				-moz-transform: translateX(-50%) rotate(-30deg);
+				-ms-transform: translateX(-50%) rotate(-30deg);
+				-o-transform: translateX(-50%) rotate(-30deg);
 				transform: translateX(-50%) rotate(-30deg);
 				-webkit-transform-origin: 0 0;
+				-moz-transform-origin: 0 0;
+				-ms-transform-origin: 0 0;
+				-o-transform-origin: 0 0;
 				transform-origin: 0 0;
 			}
 
 			.nav-circlepop a:hover::before {
 				opacity: 1;
 				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
 				transform: scale(1);
 			}
 
@@ -95,11 +125,17 @@
 
 			.nav-circlepop a:hover .icon-wrap::before {
 				-webkit-transform: translateX(-50%) rotate(45deg);
+				-moz-transform: translateX(-50%) rotate(45deg);
+				-ms-transform: translateX(-50%) rotate(45deg);
+				-o-transform: translateX(-50%) rotate(45deg);
 				transform: translateX(-50%) rotate(45deg);
 			}
 
 			.nav-circlepop a:hover .icon-wrap::after {
 				-webkit-transform: translateX(-50%) rotate(-45deg);
+				-moz-transform: translateX(-50%) rotate(-45deg);
+				-ms-transform: translateX(-50%) rotate(-45deg);
+				-o-transform: translateX(-50%) rotate(-45deg);
 				transform: translateX(-50%) rotate(-45deg);
 			}
 
@@ -160,13 +196,13 @@
 										</p>
 									</div>
 									<div class="col-md-6">
-										<img src="../img/lectures/all.jpg" style="width: 700px">
+										<img src="../../img/lectures/all.jpg" style="width: 700px">
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
-									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
+									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">RICHARD STALLMAN</p>
 										<p class="text" align="left">
@@ -181,14 +217,14 @@
 											Stephen Wolfram, is the chief designer and developer of the world renowned software Mathematica and WolframAlpha Computational knowledge engine. He is also an awardee of the MacArthur Fellowships, has over 30,000 citations and has an ErdOs number of 2.</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/3_2.jpg" class="profile img-responsive" align="left" />  
+										<img src="../../img/lectures/3_2.jpg" class="profile img-responsive" align="left" />  
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/4_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/4_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">VINOD KHOSLA</p>
@@ -205,14 +241,14 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/4_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/4_2.jpg" class="profile img-responsive" align="left" />
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/5_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/5_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">ANANT AGARWAL</p>
@@ -229,14 +265,14 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/5_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/5_2.jpg" class="profile img-responsive" align="left" />
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">JOHN C. MATHER	</p>
@@ -253,9 +289,33 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/6_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/6_2.jpg" class="profile img-responsive" align="left" />
 										</div>
 								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-md-7 col-md-offset-1 col-xs-5">
+										<p class="subtitle" align="right">RAIF</p>
+										<p class="text" align="right">
+											 The Robotics and Artificial Intelligence Foundation is 
+											 back with its unique competition RobotzIndia which puts 
+											 the best and the most innovative minds of India in one 
+											 place. This time we have two themes to choose from: Land 
+											 and Space. The finals will be held at IIT Madras, during 
+											 Shaastra 2015. 
+											 <br> 
+											 More details can be found at <a href="http://www.robotzindia.com">www.robotzindia.com</a>
+											 <br>
+											 View pictures of their lecture at IIT Madras <a href='../pages/php/gallery.php?folder_name='>Here</a>
+											 
+										</p>
+									</div>
+									<div class="col-md-3 col-xs-5">
+										<img src="../../img/lectures/7_1.jpg" class="profile img-responsive" align="left" />
+								    </div>
+								</div>
+
 							</div>
 
 						</div>
@@ -266,7 +326,7 @@
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 							<li data-target="#myCarousel" data-slide-to="4"></li>
-							<!--<li data-target="#myCarousel" data-slide-to="5"></li>-->
+							<li data-target="#myCarousel" data-slide-to="5"></li>
 						</ol>
 						<nav class="nav-circlepop">
 							<a class="prev" href="#myCarousel" data-slide="prev">
