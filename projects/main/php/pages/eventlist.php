@@ -159,7 +159,7 @@
             <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span class="transparent-text"> 
@@ -173,7 +173,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span class="transparent-text">
@@ -187,7 +187,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span class="transparent-text">
@@ -201,7 +201,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span class="transparent-text">
@@ -215,7 +215,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span class="transparent-text">
@@ -231,7 +231,7 @@
             <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span>
@@ -245,7 +245,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span>
@@ -259,7 +259,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span>
@@ -273,7 +273,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span>
@@ -287,7 +287,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
                 <div>
                     <div class="dummy"></div>
-                    <a href="">
+                    <a href="../pages/event.php?category=Aerofest&event=Airshow&tab=Introductions">
                         <div>
                             <span>
                                 <span>
