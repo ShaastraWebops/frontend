@@ -16,7 +16,10 @@
         height: 40px;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
+
     }
     #menu-btn span {
         display: inline-block;
@@ -471,7 +474,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/events.php" class="table">
+                <a href="../pages/categories.php" class="table">
                     <span class="table-cell">
                         <span>
                             <span class="small">Check out our</span>

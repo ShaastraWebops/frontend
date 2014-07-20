@@ -17,7 +17,16 @@
             padding: 0;
             margin: 0;
             width: 100%;
+            -webkit-transition: all 0.9s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }   
+        #event-list .event-group .event-item:hover > div {
+            border-color: #fff;
+        }
         #event-list .event-group .event-item > div > .dummy { 
             margin-top: 100%; /* This is the height:width ratio */;
         }
