@@ -228,3 +228,7 @@ if ( $DEBUG) {
   ga('send', 'pageview');
 
 </script>
+
+
+<?php include_once '../base/phpfuncs.php'; ?>
+

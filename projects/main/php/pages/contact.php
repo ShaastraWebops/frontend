@@ -200,7 +200,7 @@
 						</div>
 					</div>
 					<div class="modal-body">
-					<form name='contact' action='contact_submit.php' method='post'>
+					<form name='contact' action='../scripts/contact_submit.php' method='post'>
 						<div class="row">
 							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
