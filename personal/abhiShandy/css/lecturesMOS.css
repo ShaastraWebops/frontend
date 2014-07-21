@@ -44,14 +44,19 @@ body {
   -webkit-animation: sc 5s ease-in-out forwards;
 }
 
-/* line 43, ../sass/lecturesMOS.scss */
+/* line 41, ../sass/lecturesMOS.scss */
+#demo5 {
+  display: none;
+}
+
+/* line 46, ../sass/lecturesMOS.scss */
 #p1,
 #p2,
 #p3 {
   width: 33.33333%;
 }
 
-/* line 46, ../sass/lecturesMOS.scss */
+/* line 49, ../sass/lecturesMOS.scss */
 #p1 {
   position: relative;
   z-index: 1;
@@ -59,7 +64,7 @@ body {
   -webkit-transform: scale(1, 1);
 }
 
-/* line 55, ../sass/lecturesMOS.scss */
+/* line 58, ../sass/lecturesMOS.scss */
 #p2 {
   position: relative;
   z-index: 4;
@@ -69,7 +74,7 @@ body {
   -webkit-animation: animate_p2 3s linear 1s forwards;
 }
 
-/* line 63, ../sass/lecturesMOS.scss */
+/* line 66, ../sass/lecturesMOS.scss */
 #p3 {
   position: relative;
   z-index: 1;
@@ -77,13 +82,13 @@ body {
   -webkit-transform: scale(1, 1);
 }
 
-/* line 72, ../sass/lecturesMOS.scss */
+/* line 75, ../sass/lecturesMOS.scss */
 #p4,
 #p5 {
   width: 50%;
 }
 
-/* line 75, ../sass/lecturesMOS.scss */
+/* line 78, ../sass/lecturesMOS.scss */
 #p4 {
   position: relative;
   z-index: 5;
@@ -93,7 +98,7 @@ body {
   -webkit-animation: animate_p4 2s linear 1s forwards;
 }
 
-/* line 83, ../sass/lecturesMOS.scss */
+/* line 86, ../sass/lecturesMOS.scss */
 #p5 {
   position: relative;
   z-index: 1;
@@ -103,64 +108,196 @@ body {
 }
 
 @-webkit-keyframes animate_p4 {
-  /* line 92, ../sass/lecturesMOS.scss */
+  /* line 95, ../sass/lecturesMOS.scss */
   0% {
     -webkit-transform: scale(2, 2);
   }
 
-  /* line 95, ../sass/lecturesMOS.scss */
+  /* line 98, ../sass/lecturesMOS.scss */
   50% {
     -webkit-transform: scale(2, 1);
   }
 
-  /* line 98, ../sass/lecturesMOS.scss */
+  /* line 101, ../sass/lecturesMOS.scss */
   100% {
     -webkit-transform: scale(1, 1);
   }
 }
 
 @-webkit-keyframes animate_p2 {
-  /* line 103, ../sass/lecturesMOS.scss */
+  /* line 106, ../sass/lecturesMOS.scss */
   0% {
     -webkit-transform: scale(3, 0);
   }
 
-  /* line 106, ../sass/lecturesMOS.scss */
+  /* line 109, ../sass/lecturesMOS.scss */
   33.33% {
     -webkit-transform: scale(3, 1);
   }
 
-  /* line 109, ../sass/lecturesMOS.scss */
+  /* line 112, ../sass/lecturesMOS.scss */
   66.67% {
     -webkit-transform: scale(3, 1);
   }
 
-  /* line 112, ../sass/lecturesMOS.scss */
+  /* line 115, ../sass/lecturesMOS.scss */
   100% {
     -webkit-transform: scale(1, 1);
   }
 }
 
 @-webkit-keyframes animate_p13 {
-  /* line 117, ../sass/lecturesMOS.scss */
+  /* line 120, ../sass/lecturesMOS.scss */
   from {
     -webkit-transform: scale(0, 1);
   }
 
-  /* line 120, ../sass/lecturesMOS.scss */
+  /* line 123, ../sass/lecturesMOS.scss */
   to {
     -webkit-transform: scale(1, 1);
   }
 }
 
 @-webkit-keyframes animate_p5 {
-  /* line 125, ../sass/lecturesMOS.scss */
+  /* line 128, ../sass/lecturesMOS.scss */
   to {
     -webkit-transform: scale(0, 1);
   }
 
-  /* line 128, ../sass/lecturesMOS.scss */
+  /* line 131, ../sass/lecturesMOS.scss */
   from {
     -webkit-transform: scale(1, 1);
   }
+}
+
+/* line 138, ../sass/lecturesMOS.scss */
+#demo16 .col-xs-2 {
+  width: 16.66667%;
+}
+/* line 142, ../sass/lecturesMOS.scss */
+#demo16 .col-xs-4 {
+  width: 33.33333%;
+}
+/* line 147, ../sass/lecturesMOS.scss */
+#demo16 #r1 div:nth-child(3), #demo16 #r3 div:nth-child(3) {
+  position: relative;
+  z-index: 4;
+  background-color: #333;
+  -webkit-transform: scale(3, 1);
+  -webkit-transform-origin: right center;
+  -webkit-animation: animate_34 1.2s linear 1.4s forwards;
+}
+/* line 155, ../sass/lecturesMOS.scss */
+#demo16 #r1 div:nth-child(4), #demo16 #r3 div:nth-child(4) {
+  position: relative;
+  z-index: 4;
+  background-color: #555;
+  -webkit-transform: scale(3, 1);
+  -webkit-transform-origin: left center;
+  -webkit-animation: animate_34 1.2s linear 1.4s forwards;
+}
+/* line 164, ../sass/lecturesMOS.scss */
+#demo16 #r1 div:nth-child(1), #demo16 #r3 div:nth-child(1),
+#demo16 #r1 div:nth-child(6),
+#demo16 #r3 div:nth-child(6) {
+  background-color: #831;
+}
+/* line 168, ../sass/lecturesMOS.scss */
+#demo16 #r1 div:nth-child(2), #demo16 #r3 div:nth-child(2),
+#demo16 #r1 div:nth-child(5),
+#demo16 #r3 div:nth-child(5) {
+  background-color: #331;
+}
+/* line 174, ../sass/lecturesMOS.scss */
+#demo16 #r2 div:nth-child(1),
+#demo16 #r2 div:nth-child(5) {
+  background-color: #491;
+}
+/* line 177, ../sass/lecturesMOS.scss */
+#demo16 #r2 div:nth-child(3) {
+  position: relative;
+  z-index: 5;
+  background-color: #888;
+  -webkit-transform-origin: center center;
+  -webkit-transform: scale(3, 3);
+  -webkit-animation: animate_23 2s linear 1s forwards;
+}
+/* line 184, ../sass/lecturesMOS.scss */
+#demo16 #r2 div:nth-child(3) p {
+  -webkit-transform: scale(1, 1);
+}
+/* line 189, ../sass/lecturesMOS.scss */
+#demo16 #r2 div:nth-child(2),
+#demo16 #r2 div:nth-child(4) {
+  background-color: #313;
+}
+
+@-webkit-keyframes animate_23 {
+  /* line 199, ../sass/lecturesMOS.scss */
+  0% {
+    -webkit-transform: scale(3, 3);
+  }
+
+  /* line 202, ../sass/lecturesMOS.scss */
+  20% {
+    -webkit-transform: scale(3, 1);
+  }
+
+  /* line 205, ../sass/lecturesMOS.scss */
+  40% {
+    -webkit-transform: scale(3, 1);
+  }
+
+  /* line 208, ../sass/lecturesMOS.scss */
+  60% {
+    -webkit-transform: scale(2, 1);
+  }
+
+  /* line 211, ../sass/lecturesMOS.scss */
+  80% {
+    -webkit-transform: scale(2, 1);
+  }
+
+  /* line 214, ../sass/lecturesMOS.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animate_34 {
+  /* line 219, ../sass/lecturesMOS.scss */
+  0% {
+    -webkit-transform: scale(3, 1);
+  }
+
+  /* line 222, ../sass/lecturesMOS.scss */
+  33.33% {
+    -webkit-transform: scale(2, 1);
+  }
+
+  /* line 225, ../sass/lecturesMOS.scss */
+  66.67% {
+    -webkit-transform: scale(2, 1);
+  }
+
+  /* line 228, ../sass/lecturesMOS.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+/* line 232, ../sass/lecturesMOS.scss */
+#overlay {
+  position: relative;
+  top: -685px;
+  z-index: 10;
+  color: red;
+}
+/* line 237, ../sass/lecturesMOS.scss */
+#overlay .col-xs-2 {
+  border: 1px solid black;
+}
+/* line 240, ../sass/lecturesMOS.scss */
+#overlay .col-xs-4 {
+  border: 1px solid black;
 }
