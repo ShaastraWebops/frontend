@@ -130,191 +130,64 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid" style="display: table; width: 100%; height: 80%; padding: 0">
+    <div class="row" style="display: table-cell; height: 100%; vertical-align:middle">
     <div id="event-list" class="container-fluid">
-        <div class="row event-group first">
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Aerofest'); ?>">
+        <?php
+            $default_img = '../../img/logo/200x200_dice_white.png';
+            $event_list = scandir('../events');
+            $event_row_count = 5;
+            $event_count = count($event_list);
+            $event_i = 0;
+            foreach ( $event_list as $event ) {
+                if ($event === '.' or $event === '..') continue;
+                if (!is_dir('../events/' . $event)) continue;
+
+                $event_img = '../../img/events/' . $event;
+                if (!file_exists($event_img)) {
+                    $event_img = $default_img;
+                }
+        ?>
+            <?php if ( $event_i % $event_row_count == 0 ) { ?>
+                <div class="row event-group <?php // Give different class to indicate first and last row
+                    if ($event_i == 0) echo 'first';
+                    elseif (floor($event_i/$event_row_count) == floor($event_count/$event_row_count)-1) echo 'last'; 
+                ?>">
+            <?php } ?>
+                    <div class="col-md-2 col-md-offset-<?php // Give a padding for first event-item
+                        if ($event_i % $event_row_count == 0) echo '1';
+                        else echo '0'; 
+                    ?> col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg <?php // Give different class to indicate first and last column
+                        if ($event_i % $event_row_count == 0) echo 'first';
+                        elseif ($event_i % $event_row_count == $event_row_count-1) echo 'last'; 
+                    ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
-                            <span>
-                                <span> 
+                            <div class="dummy"></div>
+                            <a href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+                                <div>
                                     <span>
-                                        <span class="transparent-text">
-                                            Aerofest
+                                        <span> 
+                                            <span>
+                                                <span class="transparent-text">
+                                                    <?php echo $event; ?>
+                                                </span>
+                                            </span>
                                         </span>
                                     </span>
-                                </span>
-                            </span>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Design and Build'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Design and Build
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Coding'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Coding
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Involve and Quizzes'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Involve and Quizzes
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Electronics'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Electronics
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row event-group last">
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Department Flagship'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Department Flagship
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Spotlight'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Spotlight
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Workshops'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Workshops
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Shows'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            Shows
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
-                <div>
-                    <div class="dummy"></div>
-                    <a href="../pages/eventlist.php?category=<?php echo urlencode('B-Events'); ?>">
-                        <div>
-                            <span>
-                                <span>
-                                    <span>
-                                        <span class="transparent-text">
-                                            B-Events
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </a>
-                </div> 
-            </div>
-        </div>
+                    </div> <!-- End a event-item -->
+            <?php if($event_i % $event_row_count == $event_row_count-1) { ?>
+                </div> <!-- End a event-group -->
+            <?php } ?>
+        <?php
+                $event_i++;
+            }
+        ?>
+    </div>
+    </div>
     </div>
     <?php include '../base/foot.php' ?>
 </body>

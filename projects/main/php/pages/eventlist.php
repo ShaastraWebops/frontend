@@ -15,7 +15,7 @@
 		} else {
 		    $event_list = scandir($category_path);
 		}
-                
+        $default_img = '../../img/logo/200x200_dice_white.png';
 	?>
     <title><?php echo $category; ?> Events | Shaastra '15</title>
     
@@ -188,6 +188,8 @@
             </div>
         </div>
 
+    <div class="container-fluid" style="display: table; width: 100%; height: 80%; padding: 0">
+    <div class="row" style="display: table-cell; height: 100%; vertical-align:middle">
     <div id="event-list" class="container-fluid">
         <?php
             $event_row_count = 5;
@@ -195,11 +197,16 @@
             $event_i = 0;
             foreach ( $event_list as $event ) {
                 if ($event === '.' or $event === '..') continue;
+                $event_img = '../../img/events/' . $category . '/' . $event;
+                if (!file_exists($event_img)) {
+                    $event_img = $default_img;
+                }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
                 <div class="row event-group <?php // Give different class to indicate first and last row
-                    if ($event_i == 0) echo 'first';
-                    elseif (floor($event_i/$event_row_count) == floor($event_count/$event_row_count)-1) echo 'last'; 
+                    if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
+                    elseif ($event_i == 0) echo 'first';
+                    elseif (floor($event_i/$event_row_count) == floor(($event_count-1)/$event_row_count)) echo 'last'; 
                 ?>">
             <?php } ?>
                     <div class="col-md-2 col-md-offset-<?php // Give a padding for first event-item
@@ -208,7 +215,7 @@
                     ?> col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg <?php // Give different class to indicate first and last column
                         if ($event_i % $event_row_count == 0) echo 'first';
                         elseif ($event_i % $event_row_count == $event_row_count-1) echo 'last'; 
-                    ?>">
+                    ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
                             <a href="../pages/event.php?category=<?php echo urlencode($category); ?>&event=<?php echo urlencode($event); ?>">
@@ -229,6 +236,8 @@
                 $event_i++;
             }
         ?>
+    </div>
+    </div>
     </div>
     <?php include '../base/foot.php' ?>
 </body>
