@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>Shows-Test</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#btn').click(function() {
+       $('#btn').attr('src','pics/keys2.png');
+	   document.getElementById('anim').style.opacity ='0.75';
+	   $('#anim').animate({
+		   left:"560px",
+		   top:"-180px",
+		   opacity:0,
+	   });
+    });
+});
+</script>
+</head>
+
+<body>
+ <div class="container" style="position:relative; " >
+  <img src="pics/red-music-note-th.png" id="anim" style="position:relative; z-index:10;top:-120px;left:480px;opacity:0;" />
+ <img src="pics/keys1.png" id="btn" style="cursor:pointer" style="position:relative; z-index:1;" />
+ </div>
+</body>
+</html>

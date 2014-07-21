@@ -2,20 +2,151 @@
 	<head>
 		<title>Lectures | SHAASTRA '15</title>
 		
-		<?php include 'head.php' ?>
-		<link rel="stylesheet" type="text/css" href="../css/component_carousel.css">
+		<?php include '../base/head.php' ?>
+		
         <style type="text/css">
-			.container.title, .container-fluid.title {
-				margin-bottom: 2%;
+			.nav-circlepop a {
+				position: absolute;
+				top: 50%;
+				z-index: 100;
 			}
+
+			.nav-circlepop a.prev {
+				left: 0;
+			}
+
+			.nav-circlepop a.next {
+				right: 0;
+			}
+			.nav-circlepop a {
+				margin: 0 30px;
+				width: 50px;
+				height: 50px;
+			}
+
+			.nav-circlepop a::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: #fff;
+				content: '';
+				opacity: 0;
+				-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+				-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+				-ms-transition: -ms-transform 0.3s, opacity 0.3s;
+				-o-transition: -o-transform 0.3s, opacity 0.3s;
+				transition: transform 0.3s, opacity 0.3s;
+				-webkit-transform: scale(0.9);
+				-moz-transform: scale(0.9);
+				-ms-transform: scale(0.9);
+				-o-transform: scale(0.9);
+				transform: scale(0.9);
+			}
+
+			.nav-circlepop .icon-wrap {
+				position: relative;
+				display: block;
+				margin: 10% 0 0 10%;
+				width: 80%;
+				height: 80%;
+			}
+
+			.nav-circlepop a.next .icon-wrap {
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+
+			.nav-circlepop .icon-wrap::before,
+			.nav-circlepop .icon-wrap::after {
+				position: absolute;
+				left: 25%;
+				width: 3px;
+				height: 50%;
+				background: #fff;
+				content: '';
+				-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+				-moz-transition: -moz-transform 0.3s, background-color 0.3s;
+				-ms-transition: -ms-transform 0.3s, background-color 0.3s;
+				-o-transition: -o-transform 0.3s, background-color 0.3s;
+				transition: transform 0.3s, background-color 0.3s;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+
+			.nav-circlepop .icon-wrap::before {
+				-webkit-transform: translateX(-50%) rotate(30deg);
+				-moz-transform: translateX(-50%) rotate(30deg);
+				-ms-transform: translateX(-50%) rotate(30deg);
+				-o-transform: translateX(-50%) rotate(30deg);
+				transform: translateX(-50%) rotate(30deg);
+				-webkit-transform-origin: 0 100%;
+				-moz-transform-origin: 0 100%;
+				-ms-transform-origin: 0 100%;
+				-o-transform-origin: 0 100%;
+				transform-origin: 0 100%;
+			}
+
+			.nav-circlepop .icon-wrap::after {
+				top: 50%;
+				-webkit-transform: translateX(-50%) rotate(-30deg);
+				-moz-transform: translateX(-50%) rotate(-30deg);
+				-ms-transform: translateX(-50%) rotate(-30deg);
+				-o-transform: translateX(-50%) rotate(-30deg);
+				transform: translateX(-50%) rotate(-30deg);
+				-webkit-transform-origin: 0 0;
+				-moz-transform-origin: 0 0;
+				-ms-transform-origin: 0 0;
+				-o-transform-origin: 0 0;
+				transform-origin: 0 0;
+			}
+
+			.nav-circlepop a:hover::before {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+			}
+
+			.nav-circlepop a:hover .icon-wrap::before,
+			.nav-circlepop a:hover .icon-wrap::after {
+				background: #000000;
+			}
+
+			.nav-circlepop a:hover .icon-wrap::before {
+				-webkit-transform: translateX(-50%) rotate(45deg);
+				-moz-transform: translateX(-50%) rotate(45deg);
+				-ms-transform: translateX(-50%) rotate(45deg);
+				-o-transform: translateX(-50%) rotate(45deg);
+				transform: translateX(-50%) rotate(45deg);
+			}
+
+			.nav-circlepop a:hover .icon-wrap::after {
+				-webkit-transform: translateX(-50%) rotate(-45deg);
+				-moz-transform: translateX(-50%) rotate(-45deg);
+				-ms-transform: translateX(-50%) rotate(-45deg);
+				-o-transform: translateX(-50%) rotate(-45deg);
+				transform: translateX(-50%) rotate(-45deg);
+			}
+
+
+
 			.subtitle{
 				color: white;
-	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 2.5em;
 			}			
 			.text {
 				color: white;
-	    		/*font-family: 'Titillium Web', sans-serif;*/
 	    		font-size: 1.15em;
 	    		text-align: justify;
 			}
@@ -26,8 +157,8 @@
 		
 	</head>
 	<body>
-		<?php include 'menu.php' ?>
-		<div class="container-fluid white centered">
+		<?php include '../base/menu.php' ?>
+		<div class="container-fluid white centered" style="margin-bottom:2%">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="text-center title">LECTURES</h1>
@@ -41,7 +172,7 @@
         </div>
         
 
-		<div class="container-fluid title white centered">
+		<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
 			        <div id="myCarousel" class="carousel slide">
@@ -65,38 +196,13 @@
 										</p>
 									</div>
 									<div class="col-md-6">
-										<img src="../img/lectures/all.jpg" style="width: 700px">
+										<img src="../../img/lectures/all.jpg" style="width: 700px">
 									</div>
 								</div>
 							</div>
-							<!--<div class="item">
-								<div class="row">
-									<div class="col-md-6 col-md-offset-2"><p class="subtitle">AJIT NARAYAN</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-5"><p class="subtitle">TYLER COWEN</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-2"><p class="subtitle">AMITABH SHAH</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-4"><p class="subtitle">MANOJ PANT</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-6"><p class="subtitle">SIR HARRY KROTO</p></div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-							r			<p class="subtitle">KRISHNA BHARAT</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-md-offset-4"><p class="subtitle">RAJAGOPALA CHIDAMBARAM</p></div>
-								</div>
-							</div>-->
 							<div class="item">
 								<div class="row">
-									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
+									<div class="col-md-3 col-md-offset-1 col-xs-5"><img src="../../img/lectures/3_1.jpg" class="profile img-responsive" align="right"></div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">RICHARD STALLMAN</p>
 										<p class="text" align="left">
@@ -111,14 +217,14 @@
 											Stephen Wolfram, is the chief designer and developer of the world renowned software Mathematica and WolframAlpha Computational knowledge engine. He is also an awardee of the MacArthur Fellowships, has over 30,000 citations and has an ErdOs number of 2.</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/3_2.jpg" class="profile img-responsive" align="left" />  
+										<img src="../../img/lectures/3_2.jpg" class="profile img-responsive" align="left" />  
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/4_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/4_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">VINOD KHOSLA</p>
@@ -135,14 +241,14 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/4_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/4_2.jpg" class="profile img-responsive" align="left" />
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/5_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/5_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">ANANT AGARWAL</p>
@@ -159,14 +265,14 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/5_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/5_2.jpg" class="profile img-responsive" align="left" />
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
+										<img src="../../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
 									</div>
 									<div class="col-md-7 col-xs-5">
 										<p class="subtitle" align="left">JOHN C. MATHER	</p>
@@ -183,22 +289,11 @@
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/6_2.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/6_2.jpg" class="profile img-responsive" align="left" />
 										</div>
 								</div>
 							</div>
-                            <div class="item">
-                                <div class="row">
-									<div class="col-md-3 col-md-offset-1 col-xs-5">
-										<img src="../img/lectures/6_1.jpg" class="profile img-responsive" align="right" />
-									</div>
-									<div class="col-md-7 col-xs-5">
-										<p class="subtitle" align="left">JOHN C. MATHER	</p>
-										<p class="text" align="left">
-											
-										</p>
-									</div>
-								</div>
+							<div class="item">
 								<div class="row">
 									<div class="col-md-7 col-md-offset-1 col-xs-5">
 										<p class="subtitle" align="right">RAIF</p>
@@ -212,15 +307,16 @@
 											 <br> 
 											 More details can be found at <a href="http://www.robotzindia.com">www.robotzindia.com</a>
 											 <br>
-											 View pictures of their lecture at IIT Madras <a href='http://www.shaastra.org/2015/frontend/projects/minimal_mainsite/php/raif_gallery.php'>Here</a>
+											 View pictures of their lecture at IIT Madras <a href='../pages/php/gallery.php?folder_name='>Here</a>
 											 
 										</p>
 									</div>
 									<div class="col-md-3 col-xs-5">
-										<img src="../img/lectures/7_1.jpg" class="profile img-responsive" align="left" />
+										<img src="../../img/lectures/7_1.jpg" class="profile img-responsive" align="left" />
 								    </div>
 								</div>
-                            </div>
+
+							</div>
 
 						</div>
 						<!-- Carousel nav -->
@@ -230,8 +326,7 @@
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 							<li data-target="#myCarousel" data-slide-to="4"></li>
-                            <li data-target="#myCarousel" data-slide-to="5"></li>
-							<!--<li data-target="#myCarousel" data-slide-to="5"></li>-->
+							<li data-target="#myCarousel" data-slide-to="5"></li>
 						</ol>
 						<nav class="nav-circlepop">
 							<a class="prev" href="#myCarousel" data-slide="prev">
@@ -245,9 +340,6 @@
 				</div>
 			</div>
 		</div>
-		<?php include 'foot.php' ?>
-		<script type="text/javascript">
-			$("#lecture-menu").addClass("current_page");
-		</script>
+		<?php include '../base/foot.php' ?>
 	</body>
 </html>
