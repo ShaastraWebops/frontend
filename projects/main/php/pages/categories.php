@@ -53,28 +53,31 @@
             letter-spacing: 0.15vw; 
             text-transform: uppercase;
         }
-        #event-list .event-group .event-item .transparent-text {
-            background: #fff;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-            -ms-background-clip: text;
-            -ms-text-fill-color: transparent;
-            -o-background-clip: text;
-            -o-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 0.2px;
-            -moz-text-stroke-color: white;
-            -moz-text-stroke-width: 0.2px;
-            -ms-text-stroke-color: white;
-            -ms-text-stroke-width: 0.2px;
-            -o-text-stroke-color: white;
-            -o-text-stroke-width: 0.2px;
-            text-stroke-color: white;
-            text-stroke-width: 0.2px;
+        @media screen and (-webkit-min-device-pixel-ratio:0) { /* Is only done in Chrome and Safari */
+            #event-list .event-group .event-item .transparent-text {
+                background: #fff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                -webkit-text-stroke-color: white;
+                -webkit-text-stroke-width: 0.2px;
+                text-stroke-color: white;
+                text-stroke-width: 0.2px;
+            }
+        }
+        @-moz-document url-prefix() { /* Is only done in Firefox */
+            #event-list .event-group .event-item .transparent-text {
+                background: #fff;
+                -moz-background-clip: text;
+                -moz-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                -moz-text-stroke-color: white;
+                -moz-text-stroke-width: 0.2px;
+                text-stroke-color: white;
+                text-stroke-width: 0.2px;
+            }
         }
         #event-list .event-group .event-item a div {
             position: relative;
@@ -132,7 +135,7 @@
             <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Aerofest'); ?>">
                         <div>
                             <span>
                                 <span> 
@@ -150,7 +153,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Design and Build'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -168,7 +171,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Coding'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -186,7 +189,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Involve and Quizzes'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -204,7 +207,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Electronics'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -224,7 +227,7 @@
             <div class="col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg first">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Department Flagship'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -242,7 +245,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Spotlight'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -260,7 +263,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Workshops'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -278,7 +281,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('Shows'); ?>">
                         <div>
                             <span>
                                 <span>
@@ -296,7 +299,7 @@
             <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg last">
                 <div>
                     <div class="dummy"></div>
-                    <a href="../pages/eventlist.php">
+                    <a href="../pages/eventlist.php?category=<?php echo urlencode('B-Events'); ?>">
                         <div>
                             <span>
                                 <span>
