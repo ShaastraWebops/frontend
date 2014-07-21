@@ -37,9 +37,6 @@
 					include '../pages/404.php';
 					die();
 				}
-				
-				
-				
 			} elseif ($type == 'folder') {
 				/* Local Folder
 				 Example filename : ../../img/yaay/
@@ -59,7 +56,9 @@
 		<?php
 					foreach ($img_list as $img) {
 						if ( $img === '.' || $img === '..' ) continue;
-						echo '\'' . $folder_name . '/' . $img . '\',';
+						if ( endsWith($img, '.jpg') || endsWith($img, '.png') || endsWith($img, '.gif') || endsWith($img, '.bmp') || endsWith($img, '.jpeg') || endsWith($img, '.svg') ) {
+							echo '\'' . $folder_name . '/' . $img . '\',';
+						}
 					}
 		?>
 				];
@@ -100,11 +99,6 @@
 			</div>
 		</div>
 		
-		
-		
-		
-		
-		
 		<!-- Zoomed Image Browser - Lightbox -->
 		<div id="blueimp-gallery" class="blueimp-gallery">
 		    <!-- The container for the modal slides -->
@@ -139,22 +133,41 @@
 			</div>
 		    </div>
 		</div>
+		<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+		<!--<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+		    <div class="slides"></div>
+		    <h3 class="title"></h3>
+		    <a class="prev">‹</a>
+		    <a class="next">›</a>
+		    <a class="play-pause"></a>
+		    <ol class="indicator"></ol>
+		</div>-->
 		
-		<div id="pics">
-			<a href="../../img/dummy/1.png" data-gallery>
-			    <img src="../../img/dummy/1.png">
-			</a>
+		<div id="links">
+			
 		</div>
 		
 		
-				    
 		
 		
 		
 		
 		
 		<?php include '../base/foot.php' ?>
+		<script>
+			$(document).ready(function() {
+				$.each(img_list, function( i, val ) {
+					$img = $('<a></a>').addClass('img')
+						.prop('href', val)
+						.append($('<img>').prop('src', val))
+						.attr('data-gallery', '');
+					$('body').append($img);
+					console.log($img)
+				});
+			});
+		</script>
 		<script src="../../js/blueimp-gallery.min.js"></script>
 		<script src="../../js/bootstrap-gallery.min.js"></script>
+		
 	</body>
 </html>
