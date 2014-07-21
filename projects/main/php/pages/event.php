@@ -2,6 +2,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php 
+		if ( isset($_REQUEST['category']) ) {
+			$category = $_REQUEST['category'];
+			$category_path = '../events/' . $category ;
+		}
+		if (!isset($category) || $category=="") { // No category given, redirect to categories page
+			header('Location: ../pages/categories.php');    
+		}
+		if ( isset($_REQUEST['event']) ) {
+            $event = $_REQUEST['event'];
+            $event_path = $category_path . '/' . $event;
+	    if (!is_dir($event_path)) { // Invalid event
+		    header('Location: ../pages/eventlist.php?category=' . urlencode($category)); 
+		} else {// get tab list
+		    $tab_list = scandir($event_path);
+		    foreach ($tab_list as $tab_i => $tab_file_name) {
+			if ( $tab_file_name === ".." || $tab_file_name === "." ) {
+			    unset($tab_list[$tab_i]);
+			} else {
+			    $tab_list[$tab_i] = str_replace('.html', '', $tab_file_name);
+			}
+		    }
+		}
+        } else { // No event given, redirect to the corresponding eventlist page
+			header('Location: ../pages/eventlist.php?category=' . urlencode($category));    
+		}
+        if ( isset($_REQUEST['tab']) ) {
+            $tab = $_REQUEST['tab'];
+            $tab_path = $event_path . '/' . $tab . '.html';
+        }
+	
+
+        if ( isset($_REQUEST['edit']) ) {
+            $editable = 1;
+        } else {
+        	$editable = 0;
+        }
+	if (!isset($tab) || $tab=="") { // If it comes here, category and event is there, no tab is given. Reidrect to first tab
+		if (count($tab_list) < 1) {
+			if ( $editable) { // No tabs exist - create first tab. File gets created later
+				$tab='Home';
+				$tab_path=$event_path . '/' . $tab . '.html';
+			} else { // No tab exists - tell user under construction and die.
+				include '../pages/under_construction.php';
+				die();
+			}
+		} else {
+			$tab = $tab_list[3]; // 3 so we dont use . and ..
+			$tab_path = $event_path . '/' . $tab . '.html';
+		}
+	}
+	
+	
+		if (!file_exists($tab_path)) {
+			if ( $editable ) { // Create a new file
+				$fp = fopen($tab_path, "w"); fclose($fp); // Create new file
+				$data = '';
+			} else { // invalid page - tell user it is 404 not found
+				include '../pages/404.php';
+				die();
+			}
+		} else {
+			$data = file_get_contents($tab_path);
+		}
+
+		if ($editable && $data == '') { // empty file, show help
+			$data = file_get_contents('../events/sample.html');
+		}
+	?>	
+	<title><?php echo $event . ' - ' . $tab; ?> | Shaastra '15</title>
 	<?php include '../base/head.php' ?>
 	<style>
 		.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
@@ -47,36 +117,7 @@
 </head>
 
 <body class=''>
-	<?php 
-		if ( isset($_REQUEST['category']) ) {
-			$category = $_REQUEST['category'];
-			$category_path = '../events/' . $category ;
-		}
-		if ( isset($_REQUEST['event']) ) {
-            $event = $_REQUEST['event'];
-            $event_path = $category_path . '/' . $event;
-        }
-        if ( isset($_REQUEST['tab']) ) {
-            $tab = $_REQUEST['tab'];
-            $tab_path = $event_path . '/' . $tab . '.html';
-        }
-
-        if ( isset($_REQUEST['edit']) ) {
-            $editable = 1;
-        } else {
-        	$editable = 0;
-        }
-		if (!file_exists($tab_path)) {
-			$fp = fopen("sample.html", "w"); fclose($fp);
-			$data = '';
-		} else {
-			$data = file_get_contents($tab_path);
-		}
-
-		if ($editable && $data == '') { // empty file, show help
-			$data = file_get_contents('../events/sample.html');
-		}
-	?>	
+	
     <?php include '../base/menu.php'; ?>
 	
 	<!-- TABBAR -->
