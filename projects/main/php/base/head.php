@@ -32,6 +32,7 @@ if ( $DEBUG) {
     html, body {
         width: 100%;
         height: 100%;
+	color: #fff;
     }
     body {
 	  	background-image: url("../../img/bg.png");
@@ -117,21 +118,21 @@ if ( $DEBUG) {
 		float: right;
 		background: linear-gradient(to right, #fff, transparent);
 	}
-    /* Make blockquote look nice */
+	/* Make blockquote look nice */
 	blockquote{
   		padding: 15px 20px 15px 45px;
   		margin: 0 0 20px;
   		position: relative;
-    	font-size: 16px;
+		font-size: 16px;
   		line-height: 1.2;
-    }
-    blockquote::before{
+	}
+	blockquote::before{
   		content: "\201C"; /*Unicode for Left Double Quote*/
-    	font-family: Georgia, serif;
+		font-family: Georgia, serif;
   		font-size: 40px;
   		font-weight: bold;
   		color: #999;
-    	position: absolute;
+		position: absolute;
   		left: 10px;
   		top:5px;
 	}
@@ -139,13 +140,36 @@ if ( $DEBUG) {
 	blockquote::after{
   		content: "";
 	}
-    /* Social Icons used in places */
-    a.social-icon {
-        margin:5px 5px 0px 5px;
-        padding:0px 0px 0px 0px;
-        width:60px;
-        height:60px;
-        float:left;
+	
+	.vertical-table {
+	    display: table;
+	    width: 100%;
+	    height: 100%;
+	}
+	.vertical-table-cell {
+		display: table-cell;
+		height: 100%;
+		vertical-align:middle;
+	}
+	
+	a.no-style {
+		text-decoration: none;
+	}
+	a.no-style:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+	
+	
+	
+	
+	/* Social Icons used in places */
+	a.social-icon {
+		margin:5px 5px 0px 5px;
+		padding:0px 0px 0px 0px;
+		width:60px;
+		height:60px;
+		float:left;
         text-indent:-99999px;
         background: #191919;
         border:solid 1px #222121;
