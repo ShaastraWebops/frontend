@@ -8,7 +8,10 @@ if ( $DEBUG) {
 ?>
 
 <!-- Meta -->
+<meta charset="utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
+<meta name="description" content="Shaastra - Techno festival of IIT Madras is back in 2015 with new events, lectures, exhibitions and shows.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS -->
 <?php if ($DEBUG) { ?>
