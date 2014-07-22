@@ -23,56 +23,56 @@
         <div class="container-fluid" id="demo16">
 			<div class="row" id="r1">
 				<div class="col-xs-2">
-					<img src="../../img/lectures/5_1.jpg">					
+					<img class="img-responsive" src="../../img/lectures/5_1.jpg">					
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/5_2.jpg">
+					<img class="img-responsive" src="../../img/lectures/5_2.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/6_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/6_1.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/6_2.jpg">
+					<img class="img-responsive" src="../../img/lectures/6_2.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/3_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_1.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/3_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_1.jpg">
 				</div>
 			</div>
 			<div class="row" id="r2">
 				<div class="col-xs-3">
-					<img src="../../img/lectures/3_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_1.jpg">
 				</div>
 				<div class="col-xs-3">
-					<img src="../../img/lectures/4_1.jpg">					
+					<img class="img-responsive" src="../../img/lectures/4_1.jpg">					
 				</div>
 				<div class="col-xs-3">
-					<img src="../../img/lectures/4_2.jpg">										
+					<img class="img-responsive" src="../../img/lectures/4_2.jpg">										
 				</div>
 				<div class="col-xs-3">
-					<img src="../../img/lectures/3_2.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_2.jpg">
 				</div>			
 			</div>
 			<div class="row" id="r3">
 				<div class="col-xs-2">
-					<img src="../../img/lectures/5_1.jpg">					
+					<img class="img-responsive" src="../../img/lectures/5_1.jpg">					
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/5_2.jpg">
+					<img class="img-responsive" src="../../img/lectures/5_2.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/6_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/6_1.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/6_2.jpg">
+					<img class="img-responsive" src="../../img/lectures/6_2.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/3_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_1.jpg">
 				</div>
 				<div class="col-xs-2">
-					<img src="../../img/lectures/3_1.jpg">
+					<img class="img-responsive" src="../../img/lectures/3_1.jpg">
 				</div>
 			</div>
 		</div>

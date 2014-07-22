@@ -23,8 +23,8 @@ body {
 #demo16 {
   position: fixed;
 }
-/* line 23, ../sass/lectures.scss */
-#demo16 #r1 img, #demo16 #r3 img {
+/* line 22, ../sass/lectures.scss */
+#demo16 img {
   height: inherit;
 }
 /* line 26, ../sass/lectures.scss */
@@ -57,16 +57,12 @@ body {
 #demo16 #r3 div:nth-child(5) {
   background-color: #331;
 }
-/* line 52, ../sass/lectures.scss */
-#demo16 #r2 img {
-  height: inherit;
-}
-/* line 56, ../sass/lectures.scss */
+/* line 53, ../sass/lectures.scss */
 #demo16 #r2 div:nth-child(1),
 #demo16 #r2 div:nth-child(4) {
   background-color: #132;
 }
-/* line 59, ../sass/lectures.scss */
+/* line 56, ../sass/lectures.scss */
 #demo16 #r2 div:nth-child(2) {
   position: relative;
   z-index: 5;
@@ -75,7 +71,7 @@ body {
   -webkit-transform: scale(2, 3);
   -webkit-animation: animate_23 1.5s linear 1s forwards;
 }
-/* line 67, ../sass/lectures.scss */
+/* line 64, ../sass/lectures.scss */
 #demo16 #r2 div:nth-child(3) {
   position: relative;
   z-index: 5;
@@ -86,61 +82,61 @@ body {
 }
 
 @-webkit-keyframes animate_23 {
-  /* line 81, ../sass/lectures.scss */
+  /* line 78, ../sass/lectures.scss */
   0% {
     -webkit-transform: scale(2, 3);
   }
 
-  /* line 84, ../sass/lectures.scss */
+  /* line 81, ../sass/lectures.scss */
   33.33% {
     -webkit-transform: scale(2, 1);
   }
 
-  /* line 87, ../sass/lectures.scss */
+  /* line 84, ../sass/lectures.scss */
   66.67% {
     -webkit-transform: scale(2, 1);
   }
 
-  /* line 90, ../sass/lectures.scss */
+  /* line 87, ../sass/lectures.scss */
   100% {
     -webkit-transform: scale(1, 1);
   }
 }
 
 @-webkit-keyframes animate_34 {
-  /* line 95, ../sass/lectures.scss */
+  /* line 92, ../sass/lectures.scss */
   0% {
     -webkit-transform: scale(3, 1);
   }
 
-  /* line 98, ../sass/lectures.scss */
+  /* line 95, ../sass/lectures.scss */
   33.33% {
     -webkit-transform: scale(2, 1);
   }
 
-  /* line 101, ../sass/lectures.scss */
+  /* line 98, ../sass/lectures.scss */
   66.67% {
     -webkit-transform: scale(2, 1);
   }
 
-  /* line 104, ../sass/lectures.scss */
+  /* line 101, ../sass/lectures.scss */
   100% {
     -webkit-transform: scale(1, 1);
   }
 }
 
-/* line 108, ../sass/lectures.scss */
+/* line 105, ../sass/lectures.scss */
 #overlay {
   position: relative;
   top: -685px;
   z-index: 10;
   color: red;
 }
-/* line 113, ../sass/lectures.scss */
+/* line 110, ../sass/lectures.scss */
 #overlay .col-xs-2 {
   border: 1px solid black;
 }
-/* line 116, ../sass/lectures.scss */
+/* line 113, ../sass/lectures.scss */
 #overlay .col-xs-4 {
   border: 1px solid black;
 }
