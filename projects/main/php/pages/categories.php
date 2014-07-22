@@ -32,7 +32,7 @@
         }
         #event-list .event-bg {
             background: url(../../img/logo/200x200_dice_white.png) no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
         }
         #event-list .event-group .event-item a {
             height: 100%;
@@ -53,32 +53,22 @@
             letter-spacing: 0.15vw; 
             text-transform: uppercase;
         }
-        @media screen and (-webkit-min-device-pixel-ratio:0) { /* Is only done in Chrome and Safari */
+        /*@media screen and (-webkit-min-device-pixel-ratio:0) { 
             #event-list .event-group .event-item .transparent-text {
-                background: #fff;
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
-                -webkit-text-stroke-color: white;
-                -webkit-text-stroke-width: 0.2px;
-                text-stroke-color: white;
-                text-stroke-width: 0.2px;
-            }
-        }
-        @-moz-document url-prefix() { /* Is only done in Firefox */
-            #event-list .event-group .event-item .transparent-text {
-                background: #fff;
                 -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
                 background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
                 text-fill-color: transparent;
-                -moz-text-stroke-color: white;
+                -webkit-text-stroke-width: 0.2px;
                 -moz-text-stroke-width: 0.2px;
-                text-stroke-color: white;
                 text-stroke-width: 0.2px;
+                -webkit-text-stroke-color: white;
+                -moz-text-stroke-color: white;
+                text-stroke-color: white;
             }
-        }
+        }*/
         #event-list .event-group .event-item a div {
             position: relative;
             -webkit-transition: margin 0.2s ease-out, 
@@ -97,14 +87,8 @@
         #event-list .event-group .event-item a div > span {
             margin: 0px;
             padding: 0px;
-            display: table;
-            height: 100%;
-            width: 100%;
         }
         #event-list .event-group .event-item a div > span > span {
-            height: 100%;
-            display: table-cell;
-            vertical-align: middle;
             margin: auto;
             text-align: center;
         }        
@@ -131,8 +115,8 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="display: table; width: 100%; height: 80%; padding: 0">
-    <div class="row" style="display: table-cell; height: 100%; vertical-align:middle">
+    <div class="container-fluid vertical-table" style="height: 80%; padding: 0">
+    <div class="row vertical-table-cell" style="">
     <div id="event-list" class="container-fluid">
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
@@ -166,8 +150,8 @@
                             <div class="dummy"></div>
                             <a href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
-                                    <span>
-                                        <span> 
+                                    <span class="vertical-table">
+                                        <span class="vertical-table-cell"> 
                                             <span>
                                                 <span class="transparent-text">
                                                     <?php echo $event; ?>
@@ -190,5 +174,34 @@
     </div>
     </div>
     <?php include '../base/foot.php' ?>
+    <script>
+    $(document).ready(function() {
+        $transtext = $('.transparent-text');
+        if ( ( $transtext.css('text-stroke-color') !== undefined ||
+            $transtext.css('-webkit-text-stroke-color') !== undefined ||
+            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
+            ( $transtext.css('text-stroke-width') !== undefined ||
+            $transtext.css('-webkit-text-stroke-width') !== undefined ||
+            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
+            ( $transtext.css('background-clip') === 'text' ||
+            $transtext.css('-webkit-background-clip') == 'text' ||
+            $transtext.css('-moz-background-clip') === 'text' ) &&
+            ( $transtext.css('text-fill-color') !== undefined ||
+            $transtext.css('-webkit-text-fill-color') !== undefined ||
+            $transtext.css('-moz-text-fill-color') !== undefined ) &&
+            ( $transtext.css('background-clip') !== undefined ||
+            $transtext.css('-webkit-background-clip') !== undefined ||
+            $transtext.css('-moz-background-clip') !== undefined ) ) {
+            // Phew ... the condition is valid => transparent-text works !
+            $transtext.each(function(i) {
+                var $el = $(this);
+                var $el_event = $el.closest('.event-item');
+                $el.css('background-image', $el_event.css('background-image'))
+                    .css('background-repeat', $el_event.css('background-repeat'))
+                    .css('background-size', $el_event.css('background-size'));
+            })
+        }
+    })
+    </script>
 </body>
 </html>
