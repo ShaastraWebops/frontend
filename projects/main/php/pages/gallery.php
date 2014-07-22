@@ -24,7 +24,6 @@
         
         <?php
             // Possible types of gallery : facebook, google drive, foldername, dropbox
-            echo $type;
             if ($type == 'facebook') {
                 /* Facebook
                  Example album id : 123445064367882
@@ -35,7 +34,6 @@
                 if ( isset($_REQUEST['id']) ) {
                     $fbid = $_REQUEST['id'];
                     $url = 'https://graph.facebook.com/' . $fbid . '/photos';
-                    echo $url;
                 } else {
                     include '../pages/404.php';
                     die();
@@ -54,23 +52,6 @@
                 }
             }
         ?>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <?php include '../base/menu.php' ?>
         
         <div class="container-fluid white centered" style="margin-bottom:2%">
