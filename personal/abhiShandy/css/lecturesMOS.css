@@ -170,14 +170,6 @@ body {
   }
 }
 
-/* line 138, ../sass/lecturesMOS.scss */
-#demo16 .col-xs-2 {
-  width: 16.66667%;
-}
-/* line 142, ../sass/lecturesMOS.scss */
-#demo16 .col-xs-4 {
-  width: 33.33333%;
-}
 /* line 147, ../sass/lecturesMOS.scss */
 #demo16 #r1 div:nth-child(3), #demo16 #r3 div:nth-child(3) {
   position: relative;
