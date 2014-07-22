@@ -23,7 +23,6 @@
     <style>
         #event-list {
             color: #fff;
-
         }
         #event-list .event-group .event-item {
             padding: 0;
@@ -63,28 +62,18 @@
         }
         @media screen and (-webkit-min-device-pixel-ratio:0) { /* Is only done in Chrome and Safari */
             #event-list .event-group .event-item .transparent-text {
-                background: #fff;
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
-                -webkit-text-stroke-color: white;
-                -webkit-text-stroke-width: 0.2px;
-                text-stroke-color: white;
-                text-stroke-width: 0.2px;
-            }
-        }
-        @-moz-document url-prefix() { /* Is only done in Firefox */
-            #event-list .event-group .event-item .transparent-text {
-                background: #fff;
                 -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
                 background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
                 text-fill-color: transparent;
+                -webkit-text-stroke-width: 0.4px;
+                -moz-text-stroke-width: 0.4px;
+                text-stroke-width: 0.4px;
+                -webkit-text-stroke-color: white;
                 -moz-text-stroke-color: white;
-                -moz-text-stroke-width: 0.2px;
                 text-stroke-color: white;
-                text-stroke-width: 0.2px;
             }
         }
         #event-list .event-group .event-item a div {
@@ -240,5 +229,34 @@
     </div>
     </div>
     <?php include '../base/foot.php' ?>
+    <script>
+    $(document).ready(function() {
+        $transtext = $('.transparent-text');
+        if ( ( $transtext.css('text-stroke-color') !== undefined ||
+            $transtext.css('-webkit-text-stroke-color') !== undefined ||
+            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
+            ( $transtext.css('text-stroke-width') !== undefined ||
+            $transtext.css('-webkit-text-stroke-width') !== undefined ||
+            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
+            ( $transtext.css('background-clip') === 'text' ||
+            $transtext.css('-webkit-background-clip') == 'text' ||
+            $transtext.css('-moz-background-clip') === 'text' ) &&
+            ( $transtext.css('text-fill-color') !== undefined ||
+            $transtext.css('-webkit-text-fill-color') !== undefined ||
+            $transtext.css('-moz-text-fill-color') !== undefined ) &&
+            ( $transtext.css('background-clip') !== undefined ||
+            $transtext.css('-webkit-background-clip') !== undefined ||
+            $transtext.css('-moz-background-clip') !== undefined ) ) {
+            // Phew ... the condition is valid => transparent-text works !
+            $transtext.each(function(i) {
+                var $el = $(this);
+                var $el_event = $el.closest('.event-item');
+                $el.css('background-image', $el_event.css('background-image'))
+                    .css('background-repeat', $el_event.css('background-repeat'))
+                    .css('background-size', $el_event.css('background-size'));
+            })
+        }
+    })
+    </script>
 </body>
 </html>

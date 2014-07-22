@@ -6,6 +6,7 @@
 			} else {
 				$title = 'Gallery';
 			}
+
 			if ( isset($_REQUEST['type']) ) {
 				$type = $_REQUEST['type'];
 			} else {
@@ -134,14 +135,14 @@
 		    </div>
 		</div>
 		<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-		<!--<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+		<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
 		    <div class="slides"></div>
 		    <h3 class="title"></h3>
 		    <a class="prev">‹</a>
 		    <a class="next">›</a>
 		    <a class="play-pause"></a>
 		    <ol class="indicator"></ol>
-		</div>-->
+		</div>
 		
 		<div id="links">
 			
@@ -156,15 +157,23 @@
 		<?php include '../base/foot.php' ?>
 		<script>
 			$(document).ready(function() {
+				console.log(img_list.length);
 				$.each(img_list, function( i, val ) {
 					$img = $('<a></a>').addClass('img')
 						.prop('href', val)
 						.append($('<img>').prop('src', val))
 						.attr('data-gallery', '');
-					$('body').append($img);
-					console.log($img)
+					$('#links').append($img);
 				});
+				blueimp.Gallery(
+				    document.getElementById('links').getElementsByTagName('a'),
+				    {
+				        container: '#blueimp-gallery-carousel',
+				        carousel: true
+				    }
+				);
 			});
+
 		</script>
 		<script src="../../js/blueimp-gallery.min.js"></script>
 		<script src="../../js/bootstrap-gallery.min.js"></script>
