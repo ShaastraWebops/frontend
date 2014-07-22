@@ -39,7 +39,7 @@
         }
         #event-list .event-bg {
             background: url(../../img/logo/200x200_dice_white.png) no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
         }
         #event-list .event-group .event-item a {
             height: 100%;
@@ -60,7 +60,7 @@
             letter-spacing: 0.15vw; 
             text-transform: uppercase;
         }
-        @media screen and (-webkit-min-device-pixel-ratio:0) { /* Is only done in Chrome and Safari */
+        /*@media screen and (-webkit-min-device-pixel-ratio:0) {
             #event-list .event-group .event-item .transparent-text {
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
@@ -68,14 +68,14 @@
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
                 text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.4px;
-                -moz-text-stroke-width: 0.4px;
-                text-stroke-width: 0.4px;
+                -webkit-text-stroke-width: 0.2px;
+                -moz-text-stroke-width: 0.2px;
+                text-stroke-width: 0.2px;
                 -webkit-text-stroke-color: white;
                 -moz-text-stroke-color: white;
                 text-stroke-color: white;
             }
-        }
+        }*/
         #event-list .event-group .event-item a div {
             position: relative;
             -webkit-transition: margin 0.2s ease-out, 
@@ -96,16 +96,9 @@
         #event-list .event-group .event-item a div > span {
             margin: 0px;
             padding: 0px;
-            display: table;
-            height: 100%;
-            width: 100%
         }
         #event-list .event-group .event-item a div > span > span {
-            height: 100%;
-            display: table-cell;
-            vertical-align: middle;
             margin: auto;
-            text-align: center;
             padding: 2%;
         }        
 
@@ -177,8 +170,8 @@
             </div>
         </div>
 
-    <div class="container-fluid" style="display: table; width: 100%; height: 80%; padding: 0">
-    <div class="row" style="display: table-cell; height: 100%; vertical-align:middle">
+    <div class="container-fluid table" style="height: 80%; padding: 0">
+    <div class="row table-cell" style="">
     <div id="event-list" class="container-fluid">
         <?php
             $event_row_count = 5;
@@ -209,8 +202,8 @@
                             <div class="dummy"></div>
                             <a href="../pages/event.php?category=<?php echo urlencode($category); ?>&event=<?php echo urlencode($event); ?>">
                                 <div>
-                                    <span>
-                                        <span class="transparent-text"> 
+                                    <span class="vertical-table">
+                                        <span class="vertical-table-cell text-center transparent-text"> 
                                             <?php echo $event; ?>
                                         </span>
                                     </span>
