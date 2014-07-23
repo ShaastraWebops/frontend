@@ -46,11 +46,11 @@
             text-decoration: none;
             color: #fff;
             font-size: 1em;
-            font-size: 1.5vw;
+            /*font-size: 1.5vw;*/
             font-weight: 900;
             font-family: "Times New Roman", sans-serif;
             letter-spacing: 0.1em; 
-            letter-spacing: 0.15vw; 
+            /*letter-spacing: 0.15vw; */
             text-transform: uppercase;
         }
         /*@media screen and (-webkit-min-device-pixel-ratio:0) { 
@@ -134,17 +134,19 @@
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
-                <div class="row event-group <?php // Give different class to indicate first and last row
-                    if ($event_i == 0) echo 'first';
-                    elseif (floor($event_i/$event_row_count) == floor($event_count/$event_row_count)-1) echo 'last'; 
+                <div class="row row-centered event-group <?php
+                    // Give different class to indicate first and last row
+                    if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
+                    elseif ($event_i == 0) echo ' first ';
+                    elseif (floor($event_i/$event_row_count) == floor(($event_count-1)/$event_row_count)) echo ' last row-centered';
+                    
+                    
                 ?>">
             <?php } ?>
-                    <div class="col-md-2 col-md-offset-<?php // Give a padding for first event-item
-                        if ($event_i % $event_row_count == 0) echo '1';
-                        else echo '0'; 
-                    ?> col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 event-item event-bg <?php // Give different class to indicate first and last column
-                        if ($event_i % $event_row_count == 0) echo 'first';
-                        elseif ($event_i % $event_row_count == $event_row_count-1) echo 'last'; 
+                    <div class="col-md-2 col-sm-4 col-sm-offset-0 col-xs-6 col-centered event-item event-bg <?php
+                        // Give different class to indicate first and last column
+                        if ($event_i % $event_row_count == 0) echo ' first ';
+                        elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last '; 
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>

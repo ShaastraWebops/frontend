@@ -8,10 +8,7 @@ if ( $DEBUG) {
 ?>
 
 <!-- Meta -->
-<meta charset="utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
-<meta name="description" content="Shaastra - Techno festival of IIT Madras is back in 2015 with new events, lectures, exhibitions and shows.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS -->
 <?php if ($DEBUG) { ?>
@@ -162,9 +159,15 @@ if ( $DEBUG) {
 		color: inherit;
 		text-decoration: none;
 	}
-	
-	
-	
+	.row-centered {
+		text-align:center;
+	}
+	.col-centered {
+		display:inline-block;
+		float:none;
+		text-align:left;
+		margin-right:-4px;
+	}
 	
 	/* Social Icons used in places */
 	a.social-icon {
@@ -188,6 +191,8 @@ if ( $DEBUG) {
         border-top-right-radius:5px;
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;
+	border: 2px solid #fff;
+	border: 2px outset rgba(255, 255, 255, 0.8);
     }
     a.social-icon.facebook {
         background: #191919 url(../../img/icons/facebook-long.png) no-repeat -0px -88px;
@@ -215,6 +220,19 @@ if ( $DEBUG) {
     }
     a.social-icon.google:hover {
         background-position: -0px -0px;
+    }
+    .social-vertical {
+	display: none;
+    }
+    @media (min-width: 768px) {
+	.social-vertical {
+		position: fixed;
+		top: 200px;
+		right: 50px;
+		z-index: 10000;
+		display: inline-block;
+		width: 60px;
+	}
     }
 </style>
 

@@ -5,13 +5,6 @@
     <?php include '../base/head.php' ?>
     
     <style>
-        .tabs {
-            margin-left:65px;
-            margin-right:65px;;
-            margin-top:10px;
-            width:90%;
-            display:inline-block;
-        }
         .tab-links:after {
             display:block;
             clear:both;
@@ -69,39 +62,21 @@
     </script>
         <style>
         .d4, .d8, .d12, .d6{
-        transition:all linear 0.2s;
-        padding: 10px 10px;
-        border-radius: 5px;
-        border: 1px solid white;
-        opacity:0.8;
+            transition:all linear 0.2s;
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+            opacity:0.8;
         }
         .d4:hover, .d8:hover, .d12:hover, .d6:hover{
-        border: 1px solid #a1a1a1;
-        background-color: #eee; 
-        opacity:1;
+            border: 1px solid #a1a1a1;
+            background-color: #eee; 
+            opacity:1;
         }
         img.sponsor{
-        margin: 15px;
+            margin: 15px;
         }
-        /*img{
-        border: 1px solid white;
-        border-radius: 5px;
-        padding: 10px 10px;
-        }
-        img:hover{
-        border: 1px solid #a1a1a1;
-        background-color: #eee;
-        }*/
-        .row {
-        display: table;
-        }
-        .row [class*="col-"] {
-        float: none;
-        display: table-cell;
-        vertical-align: top;
-        }
-    </style>
-    
+        </style>
 </head>
 <body>
     <?php include '../base/menu.php' ?>
@@ -119,31 +94,31 @@
         </div>
     </div>
 
-    <div class="tabs">
-
-        <ul class="tab-links"> <strong><li class="active">
-                    <a href="#tab1">2014</a>
-                </li>
-                <li>
-                    <a href="#tab2" onclick="$('#tab2').load('../modules/tab.htm #Tab2');">2013</a>
-                </li>
-                <li>
-                    <a href="#tab3" onclick="$('#tab3').load('../modules/tab.htm #Tab3');">2011</a>
-                </li>
-                <li>
-                    <a href="#tab4" onclick="$('#tab4').load('../modules/tab.htm #Tab4');">2010</a>
-                </li></strong> 
-        </ul>
-
-        <div class="tab-content">
-            <div id="tab1" class="tab active"></div>
-
-            <div id="tab2" class="tab"></div>
-
-            <div id="tab3" class="tab"></div>
-
-            <div id="tab4" class="tab"></div>
-        </div>
+    <div class="container-fluid black">
+        <div class="row">
+            <div class="tabs col-md-10 col-md-offset-1">
+                <ul class="tab-links">
+                    <li class="active">
+                        <a href="#tab1">2014</a>
+                    </li>
+                    <li>
+                        <a href="#tab2" onclick="$('#tab2').load('../modules/tab.htm #Tab2');">2013</a>
+                    </li>
+                    <li>
+                        <a href="#tab3" onclick="$('#tab3').load('../modules/tab.htm #Tab3');">2011</a>
+                    </li>
+                    <li>
+                        <a href="#tab4" onclick="$('#tab4').load('../modules/tab.htm #Tab4');">2010</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab1" class="tab active"></div>
+                    <div id="tab2" class="tab"></div>
+                    <div id="tab3" class="tab"></div>
+                    <div id="tab4" class="tab"></div>
+                </div>
+            </div>
+        </div>    
     </div>
     <?php include '../base/foot.php' ?>
 </body>
