@@ -40,6 +40,7 @@
 		<style>
 			
 			.speaker-list {
+				
 			}
 			.speaker-list .speaker-link {
 				width: 100%;
@@ -87,7 +88,6 @@
 				margin-top: -50px;
 				display: block;
 				width: 100%;
-				clip:rect(0px,0px,0px,0px);
 				height: 100%;
 				z-index: 2;
 				position: relative;
@@ -102,6 +102,7 @@
 			}
 			#speaker-content {
 				padding-top: 2%;
+				margin-bottom: 100px;
 			}
 			#speaker-content .data {
 			    background-color : #888888;
@@ -234,6 +235,17 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="row social-vertical">
+	<div class="col-xs-12">
+		<a class="social-icon facebook" href="https://www.facebook.com/Shaastra"></a>
+	</div>
+	<div class="col-xs-12">
+		<a class="social-icon twitter" href="https://twitter.com/ShaastraIITM"></a>
+	</div>
+	<div class="col-xs-12">
+		<a class="social-icon google" href="https://www.youtube.com/user/iitmshaastra"></a>
+	</div>
     </div>
         
 	<?php include '../base/foot.php' ?>
