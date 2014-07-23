@@ -21,3 +21,11 @@ document.getElementById("p2").style.height = (sHeight/2)+"px";
 document.getElementById("p3").style.height = (sHeight/2)+"px";
 document.getElementById("p4").style.height = (sHeight/2)+"px";
 document.getElementById("p5").style.height = (sHeight/2)+"px";
+
+// document.getElementById("r1").style.height = (sHeight/3)+"px";
+$(".col-xs-4").css("height",(sHeight/3.1)+"px");
+// $(".col-xs-4").css("width",(sWidth/)+"px");
+$(".col-xs-2").css("height",(sHeight/3.1)+"px");
+// $("#sl").hover(function(){
+// 	document.getElementById("a1").play();
+// });
