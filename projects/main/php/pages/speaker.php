@@ -5,11 +5,35 @@
 			$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
 			if ( isset($_REQUEST['name']) ) {
 				$speaker_name = $_REQUEST['name'];
+				$speaker_path = '../lectures/' . $speaker_name . '.html';
 			}
 			if (!isset($speaker_name) || !in_array($speaker_name, $speakers)){ // No such speaker
 				header('Location: ../pages/lectures.php');
 			}
+			
+			if ( isset($_REQUEST['edit']) ) {
+				$editable = 1;
+			} else {
+				$editable = 0;
+			}
+			
+			
+			if (!file_exists($speaker_path)) {
+				if ( $editable ) { // Create a new file
+					$fp = fopen($speaker_path, "w"); fclose($fp); // Create new file
+					$data = '';
+				} else { // invalid page - tell user it is 404 not found
+					include '../pages/404.php';
+				die();
+				}
+			} else {
+				$data = file_get_contents($speaker_path);
+			}
+			if ($editable && $data == '') { // empty file, show help
+				$data = ''; //file_get_contents('../events/sample.html');
+			}
 		?>
+	
 		<title>Lectures | Shaastra '15</title>
     
 		<?php include '../base/head.php' ?>
@@ -68,6 +92,25 @@
 				z-index: 2;
 				position: relative;
 			}
+			
+			.cke_button_icon.cke_button__savebtn_icon {
+				width : 70px;
+				background-position:right !important; 
+			}
+			.cke_button_icon.cke_button__savebtn_icon:after {
+			    content:'Save';
+			}
+			#speaker-content {
+				padding-top: 2%;
+			}
+			#speaker-content .data {
+			    background-color : #888888;
+			    background-color : rgba(0, 0, 0, 0.5);
+			    border : 2px solid #dddddd;
+			    border-radius : 10px;
+			    color : #ffffff;
+			    padding: 10px;
+			}
 		</style>
 	</head>
 <body>
@@ -113,10 +156,11 @@
 						percent = parseInt(val);
 					}
 					$(".speaker-audio-fft .front").css( {
-						'background-size': $('.speaker-audio-fft').width() + 'px ' + $('.speaker-audio-fft').height() + 'px'
+						'background-size': $('.speaker-audio-fft').width() + 'px ' + $('.speaker-audio-fft').height() + 'px',
+						'width': percent + '%'
 					})
 					$(".speaker-audio-fft .front").animate( {
-						'width': percent + '%'
+						'width': '100%'
 					}, time_left)
 				}
 				$(document).ready(function() {
@@ -134,15 +178,29 @@
 							set_percent();
 						}
 					});
+					$("#audio").on('pause',function(){
+						$(".speaker-audio-fft .front").stop()
+					});
 				})
 			</script>
 		</div>
 	    </div>
 	</div>
 	<div class="container-fluid" id="speaker-content">
-		<div class="col-md-12">
-		
-		</div>
+		<?php if (isset($editable) && $editable) { ?>
+		    <form method="post" action='../scripts/save_to_file.php'>
+        	        <div class='data col-md-offset-1 col-md-10'>
+        		    <input type='hidden' name='filename' value='<?php echo $speaker_path; ?>' />
+            		    <textarea name="data" id='data' style='min-height : 100px;'>
+        			<?php echo $data; ?>
+        		    </textarea>
+        		</div>
+                    </form> 
+                <?php } else { ?>
+                    <div class='data col-md-offset-1 col-md-10'>
+                        <?php echo file_get_contents('../lectures/' . $speaker_name . '.html');; ?>
+                    </div>
+                <?php } ?>
 	</div>
 
     <div class="navbar navbar-inverse navbar-fixed-bottom speaker-list">
@@ -179,10 +237,23 @@
     </div>
         
 	<?php include '../base/foot.php' ?>
-        <script>
-		$(document).ready(function() {
-			
-		})
-	</script>
+        <?php if ( $editable ) { // The fns to send data ?>
+		<script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				CKEDITOR.inline('data')
+	  			$(window).bind('keydown', function(event) {
+				    if (event.ctrlKey || event.metaKey) {
+				        var letter = String.fromCharCode(event.which).toLowerCase();
+				        if ( letter == 's' ) {
+				            $('.cke_button__savebtn').click(); 
+				            event.preventDefault();
+				        }
+				    }
+				});
+			});
+		</script>
+	<?php } ?>
     </body>
 </html>
