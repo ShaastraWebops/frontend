@@ -219,27 +219,31 @@
 	</div>
 </div>
 <div class="container-fluid speaker-list" style="display: none;">
-    <div class="row speaker-group">
-	<?php
-	    $speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
-	    $speaker_count = count($speakers);
-	    for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-	    <div class="speaker">
-	        <div>
-		    
-	            <a href="">
-		        <div>
+    <?php
+	$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
+	$speaker_count = count($speakers);
+	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
+	    
+	    <?php if ($speaker_i == 0 || $speaker_i == 4 || $speaker_i == 8) { ?>
+	    <div class="row speaker-group">
+	    <?php } ?>
+	        <div class="speaker">
+	            <div>
+	                <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>">
+		            <div>
 				<span class='vertical-table'>
-					<span class='vertical-table-cell text-center'>
-						<span class="text"><?php echo $speakers[$speaker_i]; ?></span>
-					</span>
+				    <span class='vertical-table-cell text-center'>
+					<span class="text"><?php echo $speakers[$speaker_i]; ?></span>
+				    </span>
 				</span>
-		        </div>
-		    </a>
-		</div>
+		            </div>
+		        </a>
+		    </div>
+	        </div>
+            <?php if ($speaker_i == 3 || $speaker_i == 7 || $speaker_i == 9) { ?>
 	    </div>
-	<?php } ?>
-    </div>
+	    <?php } ?>
+    <?php } ?>
 </div>
         
 	<?php include '../base/foot.php' ?>
@@ -251,43 +255,48 @@
         <script>
 		function show_speakers() {
 			$speakers = $('.speaker'); // there are 10 speakers
-			var delay = 1000;
+			$speaker_groups = $(".speaker-group")
+			delay = 1000;
 			$speakers.hide();
 			$(".speaker-list").show();
 			
 			// First page : nothing is there
-			$speakers.hide(delay)
+			$speakers.hide()
+			$speaker_groups.hide()
 			setTimeout(function() {
 				// Page 2 : 1 speaker is there
 				console.log('Page 2 : 1');
 				$speakers.eq(4).show()
-					.css({'height': '98%', 'width': '0'})
-					.animate({'width': '98%'}, delay);
-				
+					.css({'height': '100%', 'width': '0'})
+					.animate({'width': '100%'}, delay);
+				$speaker_groups.eq(1).show()
+					.css({'height' : '100%'})
+					
 				setTimeout(function() {
 					console.log('Page 3 : 3');
 					// Page 3 : 1+1+1 speakers are there
-					$speakers.eq(4)
-						.animate({'height': '32.5%'}, delay);
 					$speakers.eq(0).add($speakers.eq(8)).show()
-						.css({'height':'0', 'width':'98%'})
-						.animate({'height': '32.5%'}, delay)
+						.css({'height':'100%', 'width':'100%'})
+					$speaker_groups.eq(0).add($speaker_groups.eq(2)).show()
+						.css({'height' : '0%'}, delay)
+					$speaker_groups.show()
+						.animate({'height' : '33%'}, delay)
 					
 					setTimeout(function() {
 						// Page 4 : 2+2+2
 						$speakers.eq(0).add($speakers.eq(4)).add($speakers.eq(8))
-							.animate({'width': '49%'}, delay);
+							.animate({'width': '50%'}, delay);
 						$speakers.eq(3).add($speakers.eq(7)).add($speakers.eq(9)).show()
-							.css({'height':'32.5%', 'width':'0%'})
-							.animate({'width': '49%'}, delay)
+							.css({'height':'100%', 'width':'0%'})
+							.animate({'width': '50%'}, delay)
 						
 						setTimeout(function() {
 							// Page 5 : 4+4+2
 							$speakers.eq(0).add($speakers.eq(3)).add($speakers.eq(4)).add($speakers.eq(7))
-								.animate({'width': '24.5%'}, delay)
+								.animate({'width': '25%'}, delay)
 							$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
-								.css({'height':'32.5%', 'width':'0%'})
-								.animate({'width': '24.5%'}, delay)
+								.css({'height':'100%', 'width':'0%'})
+								.animate({'width': '25%'}, delay)
 							
 						}, delay)
 					}, delay)
