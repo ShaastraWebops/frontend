@@ -8,10 +8,7 @@ if ( $DEBUG) {
 ?>
 
 <!-- Meta -->
-<meta charset="utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
-<meta name="description" content="Shaastra - Techno festival of IIT Madras is back in 2015 with new events, lectures, exhibitions and shows.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS -->
 <?php if ($DEBUG) { ?>
@@ -162,9 +159,25 @@ if ( $DEBUG) {
 		color: inherit;
 		text-decoration: none;
 	}
-	
-	
-	
+	.col-centered{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.col-centered{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.row-centered {
+		text-align:center;
+	}
+	.col-centered {
+		display:inline-block;
+		float:none;
+		text-align:left;
+		margin-right:-4px;
+	}
 	
 	/* Social Icons used in places */
 	a.social-icon {
