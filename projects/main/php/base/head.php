@@ -159,16 +159,6 @@ if ( $DEBUG) {
 		color: inherit;
 		text-decoration: none;
 	}
-	.col-centered{
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.col-centered{
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-	}
 	.row-centered {
 		text-align:center;
 	}
@@ -201,6 +191,8 @@ if ( $DEBUG) {
         border-top-right-radius:5px;
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;
+	border: 2px solid #fff;
+	border: 2px outset rgba(255, 255, 255, 0.8);
     }
     a.social-icon.facebook {
         background: #191919 url(../../img/icons/facebook-long.png) no-repeat -0px -88px;
@@ -228,6 +220,19 @@ if ( $DEBUG) {
     }
     a.social-icon.google:hover {
         background-position: -0px -0px;
+    }
+    .social-vertical {
+	display: none;
+    }
+    @media (min-width: 768px) {
+	.social-vertical {
+		position: fixed;
+		top: 200px;
+		right: 50px;
+		z-index: 10000;
+		display: inline-block;
+		width: 60px;
+	}
     }
 </style>
 
