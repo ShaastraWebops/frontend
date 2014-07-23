@@ -255,19 +255,6 @@
 			$speakers.hide();
 			$(".speaker-list").show();
 			
-			// Initial setup - these are all initial .css statements pulled out from below
-			/*
-			$speakers.eq(4)
-				.css({'height': '100%', 'width': '0'})
-			$speakers.eq(0).add($speakers.eq(8)).show()
-				.css({'height':'0', 'width':'100%'})
-			$speakers.eq(3).add($speakers.eq(7)).add($speakers.eq(9)).show()
-				.css({'height':'33%', 'width':'0%'})
-			$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
-				.css({'height':'33%', 'width':'0%'})
-			$speakers.addClass('transition'); // make all resizing smooth ^_^
-			*/
-			
 			// First page : nothing is there
 			$speakers.hide(delay)
 			setTimeout(function() {
