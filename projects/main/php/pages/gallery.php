@@ -6,6 +6,11 @@
             } else {
                 $title = 'Gallery';
             }
+	    if ( isset($_REQUEST['iframe']) ) {
+                $iframe = 1;
+            } else {
+                $iframe = 0;
+            }
 
             if ( isset($_REQUEST['type']) ) {
                 $type = $_REQUEST['type'];
@@ -52,7 +57,9 @@
                 }
             }
         ?>
-        <?php include '../base/menu.php' ?>
+        <?php if (isset($iframe) && $iframe ) {
+		include '../base/menu.php'
+	?>
         
         <div class="container-fluid white centered" style="margin-bottom:2%">
             <div class="row">
@@ -66,7 +73,7 @@
                 </div>
             </div>
         </div>
-        
+        <?php } ?>
         <div class="container-fluid">
         	<div class="row">
         		<div class="col-xs-8 col-xs-offset-2">
