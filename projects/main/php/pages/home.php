@@ -35,6 +35,7 @@
 	</head>
 	<body onload="reScale(); logoAnimate(); loadImages();">
         <?php include 'menu.php'; ?>
+        <?php include '../modules/social.php' ?>
         <div id="hexaMenu" class="cl-effect">  
             <a id="events" class="events next_page" href="events.php">EVENTS</a>
             <a id="spons" class="spons next_page" href="spons.php">SPONSORS</a>
@@ -47,25 +48,7 @@
         <div id="notice" align="center">
             <p>Best when viewed on latest Chrome/Chromium</p>
         </div>
-        <div id="social_icons">
-            <div class="row">
-                <div class="col-xs-3 col-xs-offset-2">
-                    <a class="social bs-tooltip" href="https://www.facebook.com/Shaastra" data-toggle="tooltip" data-placement="top" title="Like Us">
-                        <img src="../img/social/facebook.png" />
-                    </a>
-                </div>
-                <div class="col-xs-3">
-                    <a class="social bs-tooltip" href="https://twitter.com/ShaastraIITM" data-toggle="tooltip" data-placement="top" title="Follow Us">
-                        <img src="../img/social/twitter.png" />
-                    </a>
-                </div>
-                <div class="col-xs-3">
-                    <a class="social bs-tooltip" href="https://www.youtube.com/user/iitmshaastra" data-toggle="tooltip" data-placement="top" title="Subscribe">
-                        <img src="../img/social/youtube.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
+        
     
         <div id="mainLogo">
             <svg id="ms">

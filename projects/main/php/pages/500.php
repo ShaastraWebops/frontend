@@ -43,8 +43,7 @@
 			<i>Please give details on what steps you did to get this error</i>
 		</p>
 		
-		<?php include '../base/foot.php' ?>
-		<script src="../../js/flipclock.min.js"></script>
+		<?php include '../modules/social.php' ?>
 		
 	</body>
 </html>

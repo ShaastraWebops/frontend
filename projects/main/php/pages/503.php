@@ -42,8 +42,7 @@
 			Please come back and check later when the crowd subsudes.
 		</p>
 		
-		<?php include '../base/foot.php' ?>
-		<script src="../../js/flipclock.min.js"></script>
+		<?php include '../modules/social.php' ?>
 		
 	</body>
 </html>

@@ -41,7 +41,8 @@
 			Try to start from <b><a href="http://www.shaastra.org">the start</a></b><br /><br />
 			If you think this is an error, do not hesitate to contact us at <b><a href="mailto:webops@shaastra.org">webops@shaastra.org</a></b>
 		</p>
-		
+		<?php include '../modules/social.php' ?>
+    		
 		<?php include '../base/foot.php' ?>
 		<script src="../../js/flipclock.min.js"></script>
 		

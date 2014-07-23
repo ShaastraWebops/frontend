@@ -43,6 +43,8 @@
 		</p>
 		
 		<?php include '../base/foot.php' ?>
+		<?php include '../modules/social.php' ?>
+    
 		<script src="../../js/flipclock.min.js"></script>
 		
 	</body>

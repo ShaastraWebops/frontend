@@ -61,6 +61,8 @@
                 </div>
             </div>
         </div>
+
+        <?php include '../modules/social.php' ?>
         <?php include '../base/foot.php' ?>
     </body>
     

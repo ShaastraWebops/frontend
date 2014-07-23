@@ -195,7 +195,7 @@ if ( $DEBUG) {
 	border: 2px outset rgba(255, 255, 255, 0.8);
     }
     a.social-icon.facebook {
-        background: #191919 url(../../img/icons/facebook-long.png) no-repeat -0px -88px;
+        background: #191919 url(../../img/icons/facebook.png) no-repeat -0px -88px;
         -webkit-transition:All 0.3s ease-out;
         -moz-transition:All 0.3s ease-out;
         -o-transition:All 0.3s ease-out;
@@ -204,7 +204,7 @@ if ( $DEBUG) {
         background-position: -0px -0px;
     }
     a.social-icon.twitter {
-        background: #191919 url(../../img/icons/twitter-long.png) no-repeat -0px -88px;
+        background: #191919 url(../../img/icons/twitter.png) no-repeat -0px -88px;
         -webkit-transition:All 0.3s ease-out;
         -moz-transition:All 0.3s ease-out;
         -o-transition:All 0.3s ease-out;
@@ -213,7 +213,7 @@ if ( $DEBUG) {
         background-position: -0px -0px;
     }
     a.social-icon.google {
-        background:#191919 url(../../img/icons/google-long.png) no-repeat -0px -88px;
+        background:#191919 url(../../img/icons/google.png) no-repeat -0px -88px;
         -webkit-transition:All 0.3s ease-out;
         -moz-transition:All 0.3s ease-out;
         -o-transition:All 0.3s ease-out;
