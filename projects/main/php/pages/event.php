@@ -292,11 +292,11 @@
 	<!-- /EDITABLE MODAL -->
 	<?php } ?>
 
-	<!-- MAIN CONTENT FO A TAB -->
+	<!-- MAIN CONTENT OF A TAB -->
 	<div class="main-content" style='margin:75px 75px 0 75px; height : 80%'>
 		<div class="container-fluid">
             <div class='row'>
-    			<?php if ($editable) { ?>
+    			<?php if (isset($editable) && $editable) { ?>
                     <form method="post" action='../scripts/save_to_file.php'>
         				<div class='data col-md-offset-1 col-md-10'>
         					<input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
