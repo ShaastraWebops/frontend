@@ -113,6 +113,9 @@
             border-radius : 10px;
             color : #ffffff;
         }
+	#edit_modal.newtab .not-for-new {
+		display: none;
+	}
 	</style>
 </head>
 
@@ -148,10 +151,10 @@
                            				echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
                            			?>"
                            			<?php if ($editable)
-                           				echo 'onclick="tab_name_edit(this)"';
+                           				echo ' data-tabname="' . $filetab . '" onclick="tab_name_edit(this)" ';
                            			?>
                            			>
-                               		<?php echo $filetab; ?>
+                               		<?php echo substr($filetab, 2); ?>
                                	</a>
                             </li>
                     <?php
@@ -160,7 +163,7 @@
                     }
                     ?>
             		<?php if ($editable) { ?>
-            			<li class="default"><a href="javascript:void(0)" onclick='tab_name_edit(this);' class='newtab'>+</a></li>
+            			<li class="default"><a href="javascript:void(0)" data-tabname='+' onclick='tab_name_edit(this);' class='newtab'>+</a></li>
             		<?php } ?>
           		</ul>
         	</div>
@@ -180,9 +183,10 @@
 	        		<h4 class="modal-title">Tab Properties</h4>
 	      		</div>
 	      		<div class="modal-body">
-        			<div class='container-fluid rename'>
-                        <div class='row'>
-                            <div class='col-md-3' style='border-right : solid 2px #dddddd'>
+			<form action='../scripts/event.php' method='POST'>
+			<div class='container-fluid rename'>
+                        <div class='row row-centered'>
+                            <div class='col-md-4 col-centered not-for-new'>
                                 <div class='row'>
                                     <div class='col-md-12 text-center'>
                                         <h3>Delete Tab</h3>
@@ -190,23 +194,35 @@
                                 </div>
                                 <div class='row'>
                                     <div class='col-md-12 text-center' style='padding-top:10px;'>
-                                        If you delete a tab, all content will be deleted ! <br />
+                                        If you delete a tab, all content will be deleted - you won't be able to see it ever again :'( ! <br />
                                         <br />
-                                        <a class='deleteurl btn btn-md btn-primary' href=''>Delete it</a> if you're sure.
+                                        <input type="submit" class="btn btn-md btn-primary" value='Delete it' name='delete' /> if you're sure.
                                     </div>
                                 </div>
                             </div>
-                            <div class='col-md-3' style='border-right : solid 2px #dddddd'>
-                                <form action='../scripts/rename_file.php' method='POST'>
+                            <div class='col-md-4 col-centered' style='border-right : solid 2px #dddddd; border-left : solid 2px #dddddd'>
+			
                                     <div class='row'>
                                         <div class='col-md-12 text-center'>
-                                            <h3>Rename Tab</h3>
+                                            <h3>Edit Tab</h3>
+                                        </div>
+                                    </div>
+                                    <div class='row not-for-new' style='padding-top:10px;'>
+                                        <div class='col-md-5 black'>Old priority</div>
+                                        <div class='col-md-7'>  
+                                            <input class='readonly oldpriority' name='oldpriority' style='width:100%' type='text' value='' readonly/>
+                                        </div>
+                                    </div>
+				    <div class='row not-for-new' style='padding-top:10px;'>
+                                        <div class='col-md-5 black'>Old name</div>
+                                        <div class='col-md-7'>  
+                                            <input class='readonly oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
                                         </div>
                                     </div>
                                     <div class='row' style='padding-top:10px;'>
-                                        <div class='col-md-5 black'>Old name</div>
+                                        <div class='col-md-5'>New priority</div>
                                         <div class='col-md-7'>  
-                                            <input class='oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
+                                            <input class='newpriority' name='newpriority' style='width:100%' type='text' value=''/>
                                         </div>
                                     </div>
                                     <div class='row' style='padding-top:10px;'>
@@ -217,54 +233,14 @@
                                     </div>
                                     <div class='row'>
                                         <div class='col-md-12 text-center' style='padding-top:10px;'>
-                                            <input type="submit" class="btn btn-md btn-primary" value='Change Name' name='submit' />
+                                            <input type="submit" class="btn btn-md btn-primary" value='Edit Tab Info' name='rename' />
                                         </div>
                                     </div>
                                 
                                     <input class='dirname' name='dirname' type='hidden' value='' />
-                                </form>
+                                
                             </div>
-                            <!-- <div class='col-md-3' style='border-right : solid 2px #dddddd'>
-                                <div class='row'>
-                                    <div class='col-md-12 text-center'>
-                                        <h3>Set Order</h3>
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='col-md-12 text-center' style='padding-top:10px;'>
-                                        Change the location of this type by setting the priority using a number.<br />
-                                        The tab with priority 1 will be on the left most. priority 1 will also be visible by default.<br />
-                                        <br />
-                                        <form action='../scripts/rename_file.php' method='POST'>
-                                            <div class='row'>
-                                                <div class='col-md-12 text-center'>
-                                                    <h3>Rename Tab</h3>
-                                                </div>
-                                            </div>
-                                            <div class='row' style='padding-top:10px;'>
-                                                <div class='col-md-4 black'>Old name</div>
-                                                <div class='col-md-8'>  
-                                                    <input class='oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
-                                                </div>
-                                            </div>
-                                            <div class='row' style='padding-top:10px;'>
-                                                <div class='col-md-4'>New name</div>
-                                                <div class='col-md-8'>  
-                                                    <input class='newname' name='newname' style='width:100%' type='text' value=''/>
-                                                </div>
-                                            </div>
-                                            <div class='row'>
-                                                <div class='col-md-12 text-center' style='padding-top:10px;'>
-                                                    <input type="submit" class="btn btn-md btn-primary" value='Change Name' name='submit' />
-                                                </div>
-                                            </div>
-                                        
-                                            <input class='dirname' name='dirname' type='hidden' value='' />
-                                        </form>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class='col-md-3'>
+                            <div class='col-md-4 col-centered not-for-new'>
                                 <div class='row'>
                                     <div class='col-md-12 text-center'>
                                         <h3>Edit content</h3>
@@ -279,8 +255,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
+			</div>
+			</form>
       			</div>
       			<div class="modal-footer">
 		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -323,24 +299,31 @@
 		<script>
 			function tab_name_edit(el) {
 				var $el = $(el);
-				var oldname = $el.text().replace(/^\s+|\s+$/g, '');
+				var tabname = $el.data('tabname').replace(/^\s+|\s+$/g, '');
 				if ($el.hasClass('newtab')) {
-					$('#edit_modal').find('.oldname').val('').css('background', '#eee');
-					$('#edit_modal').find('.newname').val(oldname).show();
-					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>').show()					
+					$('#edit_modal').find('.oldname').val('');
+					$('#edit_modal').find('.newname').val('New Tab');
+					$('#edit_modal').find('.oldpriority').val('');
+					$('#edit_modal').find('.newpriority').val(0);
+					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+					$('#edit_modal').addClass('newtab')
 				} else {
-					$('#edit_modal').find('.oldname').val(oldname).show().css('background', '#eee');
-					$('#edit_modal').find('.newname').val(oldname).show();
-					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>').show()
-                    $('#edit_modal').find('.deleteurl').prop('href', '../scripts/delete_file.php?file_name=' + encodeURI('<?php echo $event_path; ?>/' + oldname))
-                    $('#edit_modal').find('.taburl').prop('href', "<?php 
-                        if ($editable) {
-                            $editurl = '&edit';
-                        } else {
-                            $Editurl = '';
-                        }
-                        echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab) . $editurl;
-                    ?>");
+					var oldpriority = parseInt(tabname.substr(0, 2));
+					var oldname = tabname.substr(2);
+					$('#edit_modal').find('.oldname').val(oldname).css('background', '#eee');
+					$('#edit_modal').find('.newname').val(oldname);
+					$('#edit_modal').find('.oldpriority').val(oldpriority);
+					$('#edit_modal').find('.newpriority').val(oldpriority);
+					$('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+					$('#edit_modal').find('.taburl').prop('href', "<?php 
+						if ($editable) {
+							$editurl = '&edit';
+						} else {
+							$editurl = '';
+						}
+						echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab) . $editurl;
+					?>");
+					$('#edit_modal').removeClass('newtab')
 				}
 				$('#edit_modal').modal()
 			}
