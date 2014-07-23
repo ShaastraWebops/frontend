@@ -179,11 +179,6 @@
     </div>
         
 	<?php include '../base/foot.php' ?>
-	
-	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js"></script>-->
-	<script src="../../js/TweenMax.min.js"></script>
-	<script src="../../js/jquery.gsap.min.js"></script>
         <script>
 		$(document).ready(function() {
 			
