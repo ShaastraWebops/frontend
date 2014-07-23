@@ -192,7 +192,7 @@
 		
 		<div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="comments" aria-hidden="true">
 			<div class="modal-dialog">
-				<div class="modal-content">
+				<div class="modal-content black">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
@@ -244,7 +244,7 @@
 		<!-- modals for boxes start -->
 		<div class="modal fade" id="co-curricular" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
 			<div class="modal-dialog" style="width:40%">
-				<div class="modal-content">
+				<div class="modal-content black">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
@@ -277,7 +277,7 @@
 		
 		<div class="modal fade" id="spons_pr" tabindex="-1" role="dialog" aria-labelledby="spons_pr" aria-hidden="true">
 			<div class="modal-dialog" >
-				<div class="modal-content">
+				<div class="modal-content black">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="msg">
@@ -335,7 +335,7 @@
 		</div>
 		<div class="modal fade" id="events_queries" tabindex="-1" role="dialog" aria-labelledby="events_queries" aria-hidden="true">
 			<div class="modal-dialog" style="width:40%">
-				<div class="modal-content">
+				<div class="modal-content black">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
@@ -366,7 +366,7 @@
 		</div>
 		<div class="modal fade" id="student_relations" tabindex="-1" role="dialog" aria-labelledby="student_relations" aria-hidden="true">
 			<div class="modal-dialog" style="width:50%">
-				<div class="modal-content">
+				<div class="modal-content black">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
