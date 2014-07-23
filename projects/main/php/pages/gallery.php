@@ -183,7 +183,7 @@
                      	.prop('href', img_list.big[i])
                      	.append($('<img>').prop('src', img_list.small[i]).css({"max-height":"200px", "max-width":"200px"}))
                      	.attr('data-gallery', '')	
-                     	.prop('title', img_list.title[i])
+                     	//.prop('title', img_list.title[i])
                  	$('#links').append($img);
                  	
                 }
