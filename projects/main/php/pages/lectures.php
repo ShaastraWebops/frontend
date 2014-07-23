@@ -286,18 +286,21 @@
 						// Page 4 : 2+2+2
 						$speakers.eq(0).add($speakers.eq(4)).add($speakers.eq(8))
 							.animate({'width': '50%'}, delay);
-						$speakers.eq(3).add($speakers.eq(7)).add($speakers.eq(9)).show()
-							.css({'height':'100%', 'width':'0%'})
-							.animate({'width': '50%'}, delay)
+						setTimeout(function() {
+							$speakers.eq(3).add($speakers.eq(7)).add($speakers.eq(9)).show()
+								.css({'height':'100%', 'width':'0%'})
+								.animate({'width': '50%'}, delay)
+						}, 10);
 						
 						setTimeout(function() {
 							// Page 5 : 4+4+2
 							$speakers.eq(0).add($speakers.eq(3)).add($speakers.eq(4)).add($speakers.eq(7))
 								.animate({'width': '25%'}, delay)
-							$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
-								.css({'height':'100%', 'width':'0%'})
-								.animate({'width': '25%'}, delay)
-							
+							setTimeout(function() {
+								$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
+									.css({'height':'100%', 'width':'0%'})
+									.animate({'width': '25%'}, delay)
+							}, 10);
 						}, delay)
 					}, delay)
 				}, delay);
