@@ -275,24 +275,6 @@
         position: relative;
         display: block;
     }
-    #menu .nav li .table-cell>span:after {
-        content: "";
-        position: absolute;
-        height: 3px;
-        background-color: #FFF;
-        width: 28px;
-        bottom: -15px;
-        left: 86px;
-        opacity: 0;
-        -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
-        -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
-        -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
-        transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
-        -webkit-transition-delay: 130ms;
-        -moz-transition-delay: 130ms;
-        -o-transition-delay: 130ms;
-        transition-delay: 130ms;
-    }
     #menu .nav li .small {
         position: absolute;
         display: block;
@@ -325,9 +307,7 @@
         opacity: .9;
     }
     #menu .nav li.current .big, #menu .nav li.current .small, 
-    #menu .nav li:hover .big, #menu .nav li:hover .small,
-    #menu .nav li.current .table-cell>span:after, 
-    #menu .nav li:hover .table-cell>span:after {
+    #menu .nav li:hover .big, #menu .nav li:hover .small {
         color: #FFF;
         opacity: 1;
         -webkit-transform: translate3d(0, -5px, 0);

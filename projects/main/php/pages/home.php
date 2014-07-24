@@ -255,8 +255,13 @@
 		</div>
 	</div>
     
-	<script src="../../js/three.min.js"></script>
-	<script src="../../js/cannon.min.js"></script>
+	<?php if ($DEBUG ) { ?>
+		<script src="../../js/three.min.js"></script>
+		<script src="../../js/cannon.min.js"></script>
+	<?php } else { ?>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cannon.js/0.5.0/cannon.min.js"></script>
+	<?php } ?>
 	
         <?php include '../base/foot.php'; ?>
         
