@@ -17,9 +17,9 @@
 				z-index: 1;
 				position: absolute;
 				height: 30%;
-				width: 60%;
+				width: 30%;
 				top: 30%;
-				left: 20%;
+				left: 35%;
 			}
 			#fallback .row {
 				position: relative;
