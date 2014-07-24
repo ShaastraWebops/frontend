@@ -1,16 +1,152 @@
 <!DOCtype html>
 <html>
 	<head>
-		<title>Shaastra 15</title>
+		<title>Shaastra '15</title>
 
 		<?php include '../base/head.php'; ?>
+		<style>
+			#fallback {
+				z-index: 1;
+				position: absolute;
+				height: 30%;
+				width: 60%;
+				top: 30%;
+				left: 20%;
+			}
+			#fallback .row {
+				position: relative;
+				height: 100%
+			}
+			#fallback .row > div{
+				height: 100%
+			}
+			#fallback .img > img {
+				width: 100%;
+			}
+			
+			#canvas {
+				z-index: 2;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
+			canvas {
+				height: 100%;
+				width: 100%;
+			}
+			#page{
+				z-index: 3;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
+			#page .help {
+				position: absolute;
+				bottom: 3%;
+				margin: auto;
+				left: 50%;
+			}
+			#page .help > div {
+				position: relative;
+				left: -50%;
+			}
+			#page .ngon-row {
+				height: 25%;
+			}
+			#page .ngon-row > div{
+				height: 100%;
+			}
+			#page .ngon-row .text {
+				text-transform: uppercase;
+				font-size : 1.5em;
+				cursor: pointer;
+				-webkit-transition: all 300ms ease-in-out;
+				-moz-transition: all 300ms ease-in-out;
+				-o-transition: all 300ms ease-in-out;
+				transition: all 300ms ease-in-out;
+			}
+			#page .ngon-row .text:hover {
+				letter-spacing: 0.2em;
+				font-size: 2em;
+				font-weight: 900;
+			}
+		</style>
 	</head>
 	
-	<body class="black">
+	<body>
         <?php include '../base/menu.php'; ?>
         <?php include '../modules/social.php' ?>
-	
+	<div id="fallback" class="container-fluid text-center" >
+		<div class="row">	
+			<div class="col-xs-6 col-xs-offset-3">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<div class="img">
+							<img src="../../img/logo/400x210.png" />
+						</div>
+					</span>
+				</span>
+				
+			</div>
+		</div>	
+	</div>
 	<div id="canvas"></div>
+	<div id="page" class="container-fluid white text-center">
+		<div class="row ngon-row">
+			<div class="col-xs-12">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<span class="text">Events</span>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="row ngon-row">
+			<div class="col-xs-6">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						
+						<span class="text">Sponsors</span>
+					</span>
+				</span>
+			</div>
+			<div class="col-xs-6">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<span class="text">Shows</span>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="row ngon-row">
+			<div class="col-xs-6">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<span class="text">Lectures</span>
+					</span>
+				</span>
+			</div>
+			<div class="col-xs-6">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<span class="text">Contacts</span>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="row ngon-row">
+			<div class="col-xs-12">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<span class="text">About Us</span>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="help">
+			<div>Click and drag anywhere to roll dice</div>
+		</div>
+	</div>
     
 	<script src="../../js/three.min.js"></script>
 	<script src="../../js/cannon.min.js"></script>
@@ -392,6 +528,9 @@
 			    (function(t, tid) {
 				requestAnimationFrame(function() { t.__animate(tid); });
 			    })(this, threadid);
+			} else {
+				console.log('STOPPED');
+				// move them to the center
 			}
 		    }
 		
@@ -475,8 +614,8 @@
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MAIN
 		$(document).ready(function() {		
 			var canvas = $('#canvas')[0];
-			canvas.style.width = $('body').width() + 'px';
-			canvas.style.height = $('body').height() + 'px';
+			//canvas.style.width = $('body').width() + 'px';
+			//canvas.style.height = $('body').height() + 'px';
 		    
 			var box = new dice.dice_box(canvas);
 			box.bind_mouse(document.body, function() {}, // before
