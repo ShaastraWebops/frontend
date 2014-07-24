@@ -6,156 +6,6 @@
 		<?php include '../base/head.php' ?>
 		<style>
 		
-		.intro-page {
-		    height: 100%;
-		    -webkit-transition: background-size 50s ease;
-		    -moz-transition: background-size 50s ease;
-		    -ms-transition: background-size 50s ease;
-		    transition: background-size 50s ease;
-		    background: url('../../img/lectures/cover.jpg') no-repeat center;
-		    background-size: auto 200%;
-		}
-		
-		
-		#loader p {
-			-webkit-animation: text-float-up 5s ease-in-out;
-			-webkit-animation-fill-mode: forwards;
-			opacity: 0;
-			position: absolute;
-			width: 100%;
-			text-transform: uppercase;
-			font-size: 2.5em;
-			text-shadow: 0px 0px 14px #000;
-		}
-		#loader p span {
-		    text-align : center;
-		    display: block;
-		    line-height: 45px;
-		    width: 100%;
-		}
-		#loader .anim2 {
-		    -webkit-animation: text-float-up-2 5s ease-in-out;
-		    -webkit-animation-fill-mode: forwards;
-		    -moz-animation: text-float-up-2 5s ease-in-out;
-		    -moz-animation-fill-mode: forwards;
-		    animation: text-float-up-2 5s ease-in-out;
-		    animation-fill-mode: forwards;
-		}
-		#loader .anim-p.p1, #loader .anim-p.p1 .anim2 {
-		    -webkit-animation-delay: 3s;
-		    -moz-animation-delay: 3s;
-		    animation-delay: 3s;
-		}
-		#loader .anim-p.p2, #loader .anim-p.p2 .anim2 {
-		    -webkit-animation-delay: 8s;
-		    -moz-animation-delay: 8s;
-		    animation-delay: 8s;
-		}
-		#loader .anim-p.p3, #loader .anim-p.p3 .anim2 {
-		    -webkit-animation-delay: 13s;
-		    -moz-animation-delay: 13s;
-		    animation-delay: 13s;
-		}
-		@-webkit-keyframes text-float-up {
-		    0% {margin-top: 70%; opacity: 0;}
-		    30% {margin-top: 50%; opacity: 1;}
-		    70% {margin-top: 50%; opacity: 1;}
-		    100% {margin-top: 30%; opacity: 0;}
-		}
-		@-webkit-keyframes text-float-up-2 {
-		    0% {margin-top: 5%;}
-		    30% {margin-top: 0%;}
-		    70% {margin-top: 0%;}
-		    100% {margin-top: 5%;}
-		}
-		@-moz-keyframes text-float-up {
-		    0% {margin-top: 70%; opacity: 0;}
-		    30% {margin-top: 50%; opacity: 1;}
-		    70% {margin-top: 50%; opacity: 1;}
-		    100% {margin-top: 30%; opacity: 0;}
-		}
-		@-moz-keyframes text-float-up-2 {
-		    0% {margin-top: 5%;}
-		    30% {margin-top: 0%;}
-		    70% {margin-top: 0%;}
-		    100% {margin-top: 5%;}
-		}
-		@keyframes text-float-up {
-		    0% {margin-top: 70%; opacity: 0;}
-		    30% {margin-top: 50%; opacity: 1;}
-		    70% {margin-top: 50%; opacity: 1;}
-		    100% {margin-top: 30%; opacity: 0;}
-		}
-		@keyframes text-float-up-2 {
-		    0% {margin-top: 5%;}
-		    30% {margin-top: 0%;}
-		    70% {margin-top: 0%;}
-		    100% {margin-top: 5%;}
-		}
-		
-		.intro-page .p-container {
-		  height: 100%;
-		  position: relative;
-		  z-index: 3;
-		  text-align: center;
-		}
-		.intro-page a {
-		  -webkit-box-sizing: border-box;
-		  -moz-box-sizing: border-box;
-		  box-sizing: border-box;
-		  text-align: center;
-		  display: inline-block;
-		  border: 1px solid #fff;
-		  padding: 0 60px;
-		  text-transform: uppercase;
-		  letter-spacing: 3px;
-		  overflow: hidden;
-		  height: 59px;
-		  width: 232px;
-		  position: absolute;
-		  top: 0;
-		  left: 50%;
-		  margin-left: -116px;
-		  background-color: rgba(255, 255, 255, 0.1);
-		  -webkit-transition: background 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-		  -moz-transition: background 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-		  -o-transition: background 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-		  transition: background 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-		  font-size: 0.875em;
-		}
-		.intro-page a .skip {
-		  display: block;
-		}
-		.intro-page a .loading {
-		  display: none;
-		}
-		.intro-page a span {
-		  margin: 19px 0 0 0;
-		}
-		.intro-page a:hover {
-		  background-color: rgba(0, 0, 0, 0.1);
-		}
-		.intro-page a.is-loading {
-		  cursor: default;
-		  background-color: transparent;
-		}
-		.intro-page a.is-loading .loading {
-		  display: block;
-		}
-		.intro-page a.is-loading .skip {
-		  display: none;
-		}
-		.intro-page a.is-loading:hover {
-		  background-color: transparent;
-		}
-		.intro-page .bottom {
-		  position: absolute;
-		  bottom: 0;
-		  height: 90px;
-		  width: 100%;
-		}
-		
-		
 		.speaker-list, .speaker-list .speaker-group {
 			height: 100%;
 			padding: 0;
@@ -233,28 +83,6 @@
 </head>
 <body>
 <?php include '../base/menu.php' ?>
-<div class="container-fluid intro-page" id="loader">
-	<div class="col-md-6 col-md-offset-3 p-container">
-		<p class="anim-p p1">
-			<span class="anim1">this year,</span>
-			<span class="anim2">there’s a new way to support our veterans</span>
-		</p>
-		<p class="anim-p p2">
-			<span class="anim1">this year,</span>
-			<span class="anim2">there’s a new way to support our veterans</span>
-		</p>
-		<p class="anim-p p3">
-			<span class="anim1">this year,</span>
-			<span class="anim2">there’s a new way to support our veterans</span>
-		</p>
-		<div class="bottom">
-			<a class="is-loading skip-intro white no-style" href="#skipintro">
-				<span class="skip">skip intro</span>
-				<span class="loading">loading</span>
-			</a>
-		</div>
-	</div>
-</div>
 <div class="container-fluid speaker-list" style="display: none;">
     <?php
 	$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
@@ -351,24 +179,8 @@
 		}
 		
 		$(document).ready(function() {
-			if ( window.location.hash == '#skipintro') {
-				$('#loader').hide();
-				show_speakers();
-			}
+			show_speakers();
 			$('.is-loading').removeClass('is-loading');
-			$('.skip-intro').click(function(ev) {
-				var $el = $(this);
-				if ( $el.hasClass('.is-loading') ) {
-					return;
-				} else {
-					$el.animate( {'height': '0' }, 500, function() {
-						$('#loader').fadeOut(500, function() {
-							show_speakers();
-						});
-					});			    
-				}
-			})
-			$('.intro-page').css('background-size', 'auto 150%');
 		})
 	</script>
     </body>
