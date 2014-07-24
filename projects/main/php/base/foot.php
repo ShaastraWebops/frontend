@@ -11,10 +11,10 @@
 
 <?php if ($DEBUG) { ?>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src='../../js/modernizr.min.js' type='text/javascript'></script>
+    <!--<script src='../../js/modernizr.min.js' type='text/javascript'></script>-->
 <?php } else { ?>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js' type='text/javascript'></script>
+    <!--<script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js' type='text/javascript'></script>-->
 <?php } ?>
 
 <script>
