@@ -421,7 +421,24 @@
         margin: auto;
         width: 100%;
         height: 100%;
+        z-index: 3;
     }
+    /*#menu .nav li.social a:hover {
+        -webkit-transition : -webkit-filter 1s linear;
+        -moz-transition : -moz-filter 1s linear;
+        -ms-transition : -ms-filter 500ms linear;
+        -o-transition : -o-filter 500ms linear;
+        transition : filter 500ms linear;
+    }
+    #menu .nav li.social a:hover {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: url(grayscale.svg);
+        filter: gray;
+    }*/
     #menu .nav li.social .facebook-color .icon {
         background: url(../../img/icons/facebook-white_24x24.png) no-repeat center;
     }
