@@ -1,281 +1,587 @@
-<?php 
-$DEBUG = 1;
-
-if ( $DEBUG) {
-	ini_set('display_errors', 1); 
-	error_reporting(E_ALL); 
-}
-?>
-
-<!-- Meta -->
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="shortcut icon" href="../../img/favicon.ico">
-
-<!-- CSS -->
-<?php if ($DEBUG) { ?>
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-<?php } else { ?>
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<?php } ?>
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
 <style>
-    @font-face {
-        font-family: 'CGF Locust Resistance';
-        src: url('../../fonts/CGF Locust Resistance.ttf');
+    /* ---------------- MENU BAR CSS ------------------ */
+    #menu-btn {
+        outline: 0;
+        opacity: 1;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 20px;
+        z-index: 10000;
+        color : #ffffff;
+        letter-spacing: 2px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        height: 40px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
     }
-    html, body {
+    #menu-btn span {
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;  
+    }
+    /* Handle text when menu is open/closed */
+    #menu-btn.menu-open {
+        margin-left: 220px !important;
+    }
+    #menu-btn.menu-open .title {
+        display: none;   
+    }
+    #menu-btn .title.title-close {
+        display: none;   
+    }
+    #menu-btn.menu-open .title.title-close {
+        display: inline-block;   
+    }
+    #menu-btn .menubars {
+        width: 29px;
+        height: 19px;
+        position: relative;
+        top: 1px;
+    }
+    #menu-btn.menu-open .menubars {
+        display: none;
+    }
+    #menu-btn .menubars-close {
+        display: none;
+    }
+    #menu-btn.menu-open .menubars-close {
+        display: inline-block;
+    }
+    /* The animation for menubars When menu is closed */
+    #menu-btn .menubars .menu-bar {
+        position: absolute;
+        width: 29px;
+        height: 3px;
+        background-color: #FFF;
+        -webkit-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        -moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        -o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+    }
+    #menu-btn .menubars .menu-bar.bar1 {
+        top: 0px;
+        opacity: 1;
+    }
+    #menu-btn .menubars .menu-bar.bar2 {
+        top: 7px;
+        opacity: 1;
+    }
+    #menu-btn .menubars .menu-bar.bar3 {
+        top: 14px;
+        opacity: 1;
+    }
+    #menu-btn .menubars .menu-bar.bar4 {
+        top: 21px;
+        opacity: 0;
+    }
+    #menu-btn:hover .menubars .menu-bar {
+        -webkit-transform: translate3d(0, -7px, 0);
+        -moz-transform: translate3d(0, -7px, 0);
+        -o-transform: translate3d(0, -7px, 0);
+        transform: translate3d(0, -7px, 0);
+    }
+    #menu-btn:hover .menubars .menu-bar.bar1 {
+        opacity: 0;
+        -webkit-transition-delay: 0ms;
+        -moz-transition-delay: 0ms;
+        -o-transition-delay: 0ms;
+        transition-delay: 0ms;
+    }
+    #menu-btn:hover .menubars .menu-bar.bar2 {
+        -webkit-transition-delay: 70ms;
+        -moz-transition-delay: 70ms;
+        -o-transition-delay: 70ms;
+        transition-delay: 70ms;
+    }
+    #menu-btn:hover .menubars .menu-bar.bar3 {
+        -webkit-transition-delay: 140ms;
+        -moz-transition-delay: 140ms;
+        -o-transition-delay: 140ms;
+        transition-delay: 140ms;
+    }
+    #menu-btn:hover .menubars .menu-bar.bar4 {
+        opacity: 1;
+        -webkit-transition-delay: 210ms;
+        -moz-transition-delay: 210ms;
+        -o-transition-delay: 210ms;
+        transition-delay: 210ms;
+    }
+    /* The animation for menubars When menu is open */
+    #menu-btn .menubars-close .menu-bar {
+        position: absolute;
+        width: 29px;
+        height: 3px;
+        background-color: #FFF;
+        -webkit-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        -moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        -o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+        transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+    }
+
+    #menu-btn .menubars-close .menu-bar.bar1 {
+        transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+    }
+    #menu-btn .menubars-close .menu-bar.bar2 {
+        transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+    }
+    #menu-btn:hover .menubars-close .menu-bar.bar1 {
+        transform:rotate(-45deg);
+        -moz-transform:rotate-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+    }
+    #menu-btn:hover .menubars-close .menu-bar.bar2 {
+        transform:rotate(-135deg);
+        -moz-transform:rotate(-135deg);
+        -ms-transform:rotate(-135deg);
+        -webkit-transform:rotate(-135deg);
+    }
+    
+    /* The background which shades out the rest of the screen */
+    #menu-bg {
+        opacity: 0;
+        background-color: #aaaaaa;
+        background-color: rgba(0, 0, 0, 0.7);
         width: 100%;
         height: 100%;
-	color: #fff;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
-    body {
-	  	background-image: url("../../img/bg.png");
-  		line-height: 1.42857;   
-        font-family: 'Titillium Web', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: antialiased;
-        -ms-font-smoothing: antialiased;
-        -o-font-smoothing: antialiased;
-        font-smoothing: antialiased;
+    #menu-bg.menu-open {
+        opacity: 1;
+        z-index: 9000;
     }
 
-    .title{
-    	font-family: 'Dosis', sans-serif;
-        font-weight: bold;
-        letter-spacing: 0.3em;
-	}
-	.white {
-		color: #ffffff;
-	}
-	.black {
-		color: #000000;
-	}
-    .shaastra-title {
+    body.no-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* CSS for the MENU */
+    #menu {
+        left: -200px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        font-size: 90%;
+        width: 200px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 10000;
+        position: fixed;
+        background-color: #000000;
+        opacity: 0;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #menu.open {
+        left: 0px;
+        opacity: 1;
+    }
+
+    #menu .nav {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+    }
+    #menu .nav li {
+        display: block;
+        position: relative;
+        height: 12.5%; /* Change depending in number of items in menu */
+        text-align: center;
+    }
+    #menu .nav li .bg {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        background-color: #1f1f1f;
+    }
+    #menu .nav li:after {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        background: url(../../img/icons/rect-shadow.png) 0 0 no-repeat;
+        width: 100%;
+        height: 25px;
+        pointer-events: none;
+    }
+    #menu .nav li:nth-child(1) {
+        z-index: 100;
+    }
+    #menu .nav li:nth-child(2) {
+        z-index: 90;
+    }
+    #menu .nav li:nth-child(3) {
+        z-index: 80;
+    }
+    #menu .nav li:nth-child(4) {
+        z-index: 70;
+    }
+    #menu .nav li:nth-child(5) {
+        z-index: 60;
+    }
+    #menu .nav li:nth-child(6) {
+        z-index: 50;
+    }
+    #menu .nav li:nth-child(7) {
+        z-index: 40;
+    }
+    #menu .nav li:nth-child(8) {
+        z-index: 30;
+    }
+    #menu .nav li:nth-child(9) {
+        z-index: 20;
+    }
+    #menu .nav li:nth-child(10) {
+        z-index: 10;
+    }
+    
+
+    #menu .nav li .table-cell {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    
+    }
+    #menu .nav li .table-cell>span {
+        height: 44px;
+        position: relative;
+        display: block;
+    }
+    #menu .nav li .table-cell>span:after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background-color: #FFF;
+        width: 28px;
+        bottom: -15px;
+        left: 86px;
+        opacity: 0;
+        -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-delay: 130ms;
+        -moz-transition-delay: 130ms;
+        -o-transition-delay: 130ms;
+        transition-delay: 130ms;
+    }
+    #menu .nav li .small {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #c6a66d;
+        -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+    }
+    #menu .nav li .big {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        color: #c6a66d;
+        -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-delay: 50ms;
+        -moz-transition-delay: 50ms;
+        -o-transition-delay: 50ms;
+        transition-delay: 50ms;
+    }
+    #menu .nav li.current .bg, #menu .nav li:hover .bg {
+        opacity: .9;
+    }
+    #menu .nav li.current .big, #menu .nav li.current .small, 
+    #menu .nav li:hover .big, #menu .nav li:hover .small,
+    #menu .nav li.current .table-cell>span:after, 
+    #menu .nav li:hover .table-cell>span:after {
+        color: #FFF;
+        opacity: 1;
+        -webkit-transform: translate3d(0, -5px, 0);
+        -moz-transform: translate3d(0, -5px, 0);
+        -o-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+    }
+    #menu .nav a {
         text-transform: uppercase;
-        font-family: 'CGF Locust Resistance';
-        font-weight: 100;
+        position: relative;
+        z-index: 2;
     }
-	/* Breaker - A nice little shaastra separator */
-    .breaker {
-		width:387px;
-		height:14px;
-		margin:0 auto;
-		position:relative;
-		margin-bottom: 30px;
-		padding-top: 10px;
-	}
-	.breaker span {
-		width:160px;
-		height:2px;
-		display:inline-block;
-		margin:14px 0 6px 0;
-		color : #000;
-	}
-	.dice {
-		width : 51px;
-		height : 28px;
-		margin : 0 8px;
-	}
+    #menu .nav a.table {
+        margin: 0px;
+        padding: 0px;
+        display: table;
+        height: 100%;
+        width: 100%
+    
+    }
+    #menu .nav a:hover,
+    #menu .nav a:focus {
+        background-color: inherit;
+    }
+    #menu .nav .small {
+        font-size: .875em;
+        letter-spacing: 2px;
+    }
+    #menu .nav .big {
+        font-size: 1.125em;
+        letter-spacing: 3px;
+    }
 
-	.breaker .dice {
-		width:51px;
-		height:28px;
-		float:left;
-		margin:0 8px;
-	}
-	.dice {
-		background:url(../../img/dice.png) no-repeat;
-	}
-	.dice.white {
-		background:url(../../img/dice_white.png) no-repeat;
-	}
 
-	.breaker span {
-		background: #000;
-	}
-	.breaker.white span {
-		background: #fff;
-	}
-	.breaker .left{
-		float: left;
-		background: linear-gradient(to left, #000, transparent);
-	}
-	.breaker .right{
-		float: right;
-		background: linear-gradient(to right, #000, transparent);
-	}
-	.breaker.white .left{
-		float: left;
-		background: linear-gradient(to left, #fff, transparent);
-	}
-	.breaker.white .right{
-		float: right;
-		background: linear-gradient(to right, #fff, transparent);
-	}
-	/* Make blockquote look nice */
-	blockquote{
-  		padding: 15px 20px 15px 45px;
-  		margin: 0 0 20px;
-  		position: relative;
-		font-size: 16px;
-  		line-height: 1.2;
-	}
-	blockquote::before{
-  		content: "\201C"; /*Unicode for Left Double Quote*/
-		font-family: Georgia, serif;
-  		font-size: 40px;
-  		font-weight: bold;
-  		color: #999;
-		position: absolute;
-  		left: 10px;
-  		top:5px;
-	}
 
-	blockquote::after{
-  		content: "";
-	}
-	
-	.vertical-table {
-	    display: table;
-	    width: 100%;
-	    height: 100%;
-	}
-	.vertical-table-cell {
-		display: table-cell;
-		height: 100%;
-		vertical-align:middle;
-	}
-	
-	a.no-style {
-		text-decoration: none;
-	}
-	a.no-style:hover {
-		color: inherit;
-		text-decoration: none;
-	}
-	.row-centered {
-		text-align:center;
-	}
-	.col-centered {
-		display:inline-block;
-		float:none;
-		text-align:left;
-		margin-right:-4px;
-	}
-	
-	/* Social Icons used in places */
-	a.social-icon {
-		margin:5px 5px 0px 5px;
-		padding:0px 0px 0px 0px;
-		width:60px;
-		height:60px;
-		float:left;
-        text-indent:-99999px;
-        background: #191919;
-        border:solid 1px #222121;
-        -moz-border-radius-topleft: 5px;
-        -moz-border-radius-topright:5px;
-        -moz-border-radius-bottomleft:5px;
-        -moz-border-radius-bottomright:5px;
-        -webkit-border-top-left-radius:5px;
-        -webkit-border-top-right-radius:5px;
-        -webkit-border-bottom-left-radius:5px;
-        -webkit-border-bottom-right-radius:5px;
-        border-top-left-radius:5px;
-        border-top-right-radius:5px;
-        border-bottom-left-radius:5px;
-        border-bottom-right-radius:5px;
-	border: 2px solid #fff;
-	border: 2px outset rgba(255, 255, 255, 0.8);
+
+    #menu .nav li.social {
+        text-align: center;
     }
-    a.social-icon.facebook {
-        background: #191919 url(../../img/icons/facebook.png) no-repeat -0px -88px;
-        -webkit-transition:All 0.3s ease-out;
-        -moz-transition:All 0.3s ease-out;
-        -o-transition:All 0.3s ease-out;
+    #menu .nav li.social span {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 98px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
-    a.social-icon.facebook:hover {
-        background-position: -0px -0px;
+    #menu .nav li.social span a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background-image: url(../../img/icons/white-mesh.png);
+        background-position: 0 0;
+        background-repeat: repeat;
     }
-    a.social-icon.twitter {
-        background: #191919 url(../../img/icons/twitter.png) no-repeat -0px -88px;
-        -webkit-transition:All 0.3s ease-out;
-        -moz-transition:All 0.3s ease-out;
-        -o-transition:All 0.3s ease-out;
+    .facebook-color {
+        background-color: #5473a3;
     }
-    a.social-icon.twitter:hover {
-        background-position: -0px -0px;
+    .facebook-color:hover {
+        background-color: #395d94 !important;
     }
-    a.social-icon.google {
-        background:#191919 url(../../img/icons/google.png) no-repeat -0px -88px;
-        -webkit-transition:All 0.3s ease-out;
-        -moz-transition:All 0.3s ease-out;
-        -o-transition:All 0.3s ease-out;
+    .twitter-color {
+        background-color: #56acef;
     }
-    a.social-icon.google:hover {
-        background-position: -0px -0px;
+    .twitter-color:hover {
+        background-color: #398ed0 !important;
     }
-    .social-vertical {
-	display: none;
+    .google-color {
+        background-color: #d34836;
     }
-    @media (min-width: 768px) {
-	.social-vertical {
-		position: fixed;
-		top: 200px;
-		right: 50px;
-		z-index: 10000;
-		display: inline-block;
-		width: 60px;
-	}
+    .google-color:hover {
+        background-color: #a32816 !important;
     }
+    .youtube-color {
+        background-color: #e52d27;
+    }
+    .youtube-color:hover {
+        background-color: #b31217 !important;
+    }
+    .linkedin-color {
+        background-color: #4875B4;
+    }
+    .linkedin-color:hover {
+        background-color: #285594 !important;
+    }
+    #menu .nav li.social .icon {
+        position: absolute;
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+    #menu .nav li.social .facebook-color .icon {
+        background: url(../../img/icons/facebook-white_24x24.png) no-repeat center;
+    }
+    #menu .nav li.social .twitter-color .icon {
+        background: url(../../img/icons/twitter-white_24x24.png) no-repeat center;
+    }
+    #menu .nav li.social .youtube-color .icon {
+        background: url(../../img/icons/youtube-white_24x24.png) no-repeat center;
+    }
+    #menu .nav li.social .google-color .icon {
+        background: url(../../img/icons/google-white_24x24.png) no-repeat center;
+    }
+    #menu .nav li.social .linkedin-color .icon {
+        background: url(../../img/icons/linkedin-white_24x24.png) no-repeat center;
+    }
+        
+
 </style>
 
-<!-- Fonts -->
-<?php if ($DEBUG) { ?>
-    <style>
-    @font-face {
-        font-family: 'Titillium Web';
-        src: url('../../fonts/TitilliumWeb.woff');
+<div id="menu-btn" style="">
+    <!--<span class="glyphicon glyphicon-tasks"></span>-->
+    <span class="title">MENU</span>
+    <span class="title title-close">CLOSE</span>
+    <span class='menubars'>
+        <span class="menu-bar bar1"></span>
+        <span class="menu-bar bar2"></span>
+        <span class="menu-bar bar3"></span>
+        <span class="menu-bar bar4"></span>
+    </span>
+    <span class='menubars-close'>
+        <span class="menu-bar bar1"></span>
+        <span class="menu-bar bar2"></span>
+    </span>
+</div>
+
+<!-- menu popup start -->
+<div id='menu-bg'>
+    <nav id="menu">
+        <ul class="nav">
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/home.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Go back to the</span>
+                            <span class="big">Homepage</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/categories.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Check out our</span>
+                            <span class="big">Events</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/lectures.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Learn from the best</span>
+                            <span class="big">Lectures</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/spons.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Know our</span>
+                            <span class="big">Sponsors</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/shows.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Be fascinated by</span>
+                            <span class="big">Shows</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/contact.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small">Reach out to</span>
+                            <span class="big">Contact Us</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li class="social">
+                <span>
+                    <a class="facebook-color" href="https://www.facebook.com/Shaastra" target="_blank">
+                        <span class="icon"></span>
+                    </a>
+                </span>
+                <span>
+                    <a class="twitter-color" href="https://twitter.com/ShaastraIITM" target="_blank">
+                        <span class="icon"></span>
+                    </a>
+                </span> 
+                <span>
+                    <a class="youtube-color" href="https://www.youtube.com/user/iitmshaastra" target="_blank">
+                        <span class="icon"></span>
+                    </a>
+                </span> 
+                <span>
+                    <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
+                        <span class="icon"></span>
+                    </a>
+                </span> 
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- menu popup end -->
+
+<script>
+    function show_menu () {
+        $("#menu").addClass('open')
+        $("#menu-btn").addClass('menu-open')
+        $("#menu-bg").addClass('menu-open')
+        $('body').addClass('no-scroll')
     }
-    @font-face {
-        font-family: 'Dosis';
-        src: url('../../fonts/Dosis.woff');
+    function hide_menu () {
+        $("#menu").removeClass('open')
+        $("#menu-btn").removeClass('menu-open')
+        $("#menu-bg").removeClass('menu-open')
+        $('body').removeClass('no-scroll')
     }
-    </style>
-<?php } else { ?>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
-<?php } ?>
 
-<!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
-<!-- <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../js/jquery.min.js">\x3C/script>')</script> -->
-<?php if ($DEBUG) { ?>
-    <script src="../../js/jquery.min.js"></script>
-<?php } else { ?>
-    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
-<?php } ?>
-
-
-<script>	
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42581770-4', 'shaastra.org');
-  ga('send', 'pageview');
+    $(document).ready(function(){
+        $("#menu-btn").click(function(){ show_menu(); });  
+        $("#menu_btn.menu-open").click(function(){ hide_menu(); });
+        $('body').keydown(function(e){
+            if(e.which == 27){ // escape key
+                hide_menu(); 
+            }
+        });
+        $('body').click(function(e){ // clicked somewhere else
+            if(e.clientX > 200){
+                hide_menu();                
+            }
+        });
+    });   
+    
 
 </script>
-
-
-<?php include_once '../base/phpfuncs.php'; ?>
-
