@@ -9,6 +9,9 @@
 		.intro-page {
 		    height: 100%;
 		    -webkit-transition: background-size 50s ease;
+		    -moz-transition: background-size 50s ease;
+		    -ms-transition: background-size 50s ease;
+		    transition: background-size 50s ease;
 		    background: url('../../img/lectures/cover.jpg') no-repeat center;
 		    background-size: auto 200%;
 		}
@@ -33,15 +36,25 @@
 		#loader .anim2 {
 		    -webkit-animation: text-float-up-2 5s ease-in-out;
 		    -webkit-animation-fill-mode: forwards;
+		    -moz-animation: text-float-up-2 5s ease-in-out;
+		    -moz-animation-fill-mode: forwards;
+		    animation: text-float-up-2 5s ease-in-out;
+		    animation-fill-mode: forwards;
 		}
 		#loader .anim-p.p1, #loader .anim-p.p1 .anim2 {
 		    -webkit-animation-delay: 3s;
+		    -moz-animation-delay: 3s;
+		    animation-delay: 3s;
 		}
 		#loader .anim-p.p2, #loader .anim-p.p2 .anim2 {
 		    -webkit-animation-delay: 8s;
+		    -moz-animation-delay: 8s;
+		    animation-delay: 8s;
 		}
 		#loader .anim-p.p3, #loader .anim-p.p3 .anim2 {
 		    -webkit-animation-delay: 13s;
+		    -moz-animation-delay: 13s;
+		    animation-delay: 13s;
 		}
 		@-webkit-keyframes text-float-up {
 		    0% {margin-top: 70%; opacity: 0;}
@@ -50,6 +63,30 @@
 		    100% {margin-top: 30%; opacity: 0;}
 		}
 		@-webkit-keyframes text-float-up-2 {
+		    0% {margin-top: 5%;}
+		    30% {margin-top: 0%;}
+		    70% {margin-top: 0%;}
+		    100% {margin-top: 5%;}
+		}
+		@-moz-keyframes text-float-up {
+		    0% {margin-top: 70%; opacity: 0;}
+		    30% {margin-top: 50%; opacity: 1;}
+		    70% {margin-top: 50%; opacity: 1;}
+		    100% {margin-top: 30%; opacity: 0;}
+		}
+		@-moz-keyframes text-float-up-2 {
+		    0% {margin-top: 5%;}
+		    30% {margin-top: 0%;}
+		    70% {margin-top: 0%;}
+		    100% {margin-top: 5%;}
+		}
+		@keyframes text-float-up {
+		    0% {margin-top: 70%; opacity: 0;}
+		    30% {margin-top: 50%; opacity: 1;}
+		    70% {margin-top: 50%; opacity: 1;}
+		    100% {margin-top: 30%; opacity: 0;}
+		}
+		@keyframes text-float-up-2 {
 		    0% {margin-top: 5%;}
 		    30% {margin-top: 0%;}
 		    70% {margin-top: 0%;}
