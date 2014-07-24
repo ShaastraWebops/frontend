@@ -8,6 +8,8 @@ if ( $DEBUG) {
 ?>
 
 <!-- Meta -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
 
 <!-- CSS -->
