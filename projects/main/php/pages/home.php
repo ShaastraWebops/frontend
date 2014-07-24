@@ -51,10 +51,10 @@
 			}
 			#canvas .logo {
 				position: absolute;
-				top: 30%;
+				top: 25%;
 				left: 30%;
 				width: 40%;
-				height: 40%;
+				height: 50%;
 				display: none;
 			}
 			@media (min-width: 768px) {
