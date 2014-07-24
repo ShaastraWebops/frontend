@@ -5,6 +5,14 @@
 
 		<?php include '../base/head.php'; ?>
 		<style>
+			body {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
 			#fallback {
 				z-index: 1;
 				position: absolute;
@@ -34,7 +42,84 @@
 				height: 100%;
 				width: 100%;
 			}
-			#page{
+			.shaastra-logo {
+				font-size: 2em;
+				text-shadow : 2px 2px #000;
+			}
+			.shaastra-blue {
+				color : #00445e;
+			}
+			#canvas .logo {
+				position: absolute;
+				top: 30%;
+				left: 30%;
+				width: 40%;
+				height: 40%;
+				display: none;
+			}
+			@media (min-width: 768px) {
+				#canvas .logo {
+					display: block;
+				}
+			}
+			#canvas .logo > div,
+			#canvas .logo > div > div,
+			#canvas .logo > div > div > div,
+			#canvas .logo > div > div > div {
+				height: 100%;
+			}
+			#canvas .logo .up {
+				position: absolute;
+				top: 0;
+				margin: auto;
+				width: 100%;
+			}
+			#canvas .logo .down {
+				position: absolute;
+				bottom: 0;
+				margin: auto;
+				width: 100%;
+			}
+			
+			
+			#canvas .logo .small {
+				text-decoration: none;
+				font-size: 0.7em;
+				letter-spacing: 0.3em;
+				font-weight: 200;
+				text-shadow : 0px 2px #000;
+				/*-webkit-text-stroke-width: 0.1px;
+				-moz-text-stroke-width: 0.1px;
+				text-stroke-width: 0.1px;
+				-webkit-text-stroke-color: white;
+				-moz-text-stroke-color: white;
+				text-stroke-color: white;*/
+			}
+			#canvas .logo .up .small {
+				text-decoration: none;
+				text-transform: lowercase;
+				letter-spacing: 0.3em;
+				font-weight: 200;
+			}
+			#canvas .logo .text {
+				text-decoration: none;
+				color: #fff;
+				text-transform: uppercase;
+			}
+			#canvas .logo .line {
+				text-decoration: none;
+				background-color : #00445e;
+				height: 2px;
+				border-radius : 1px;
+				width: 50%;
+				margin: auto;
+			}
+			#canvas .logo .down .small {
+				text-transform: uppercase;
+				
+			}
+			
+			#page {
 				z-index: 3;
 				position: absolute;
 				height: 100%;
@@ -46,7 +131,7 @@
 				margin: auto;
 				left: 50%;
 			}
-			#page .help > div {
+			#page .help .text {
 				position: relative;
 				left: -50%;
 			}
@@ -57,6 +142,8 @@
 				height: 100%;
 			}
 			#page .ngon-row .text {
+				text-decoration: none;
+				color: #fff;
 				text-transform: uppercase;
 				font-size : 1.5em;
 				cursor: pointer;
@@ -78,7 +165,7 @@
         <?php include '../modules/social.php' ?>
 	<div id="fallback" class="container-fluid text-center" >
 		<div class="row">	
-			<div class="col-xs-6 col-xs-offset-3">
+			<div class="col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<div class="img">
@@ -90,13 +177,33 @@
 			</div>
 		</div>	
 	</div>
-	<div id="canvas"></div>
+	<div id="canvas">
+		<div class="logo container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<span class="vertical-table">
+						<span class="vertical-tabl-cell text-center">
+							<div class="up">
+								<div class="small shaastra-logo">iit madras <span class="">presents</span></div>
+							</div>
+							<div class="down">
+								<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
+								<div class="line"></div>
+								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
+							</div>
+						</span>
+					</span>
+				
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="page" class="container-fluid white text-center">
 		<div class="row ngon-row">
 			<div class="col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<span class="text">Events</span>
+						<a href="../pages/categories.php" class="text">Events</a>
 					</span>
 				</span>
 			</div>
@@ -106,14 +213,14 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						
-						<span class="text">Sponsors</span>
+						<a href="../pages/spons.php" class="text">Sponsors</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-xs-6">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<span class="text">Shows</span>
+						<a href="../pages/shows.php" class="text">Shows</a>
 					</span>
 				</span>
 			</div>
@@ -122,14 +229,14 @@
 			<div class="col-xs-6">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<span class="text">Lectures</span>
+						<a href="../pages/lectures.php" class="text">Lectures</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-xs-6">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<span class="text">Contacts</span>
+						<a href="../pages/contact.php" class="text">Contacts</a>
 					</span>
 				</span>
 			</div>
@@ -138,13 +245,13 @@
 			<div class="col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<span class="text">About Us</span>
+						<a href="../pages/about.php" class="text">About Us</a>
 					</span>
 				</span>
 			</div>
 		</div>
 		<div class="help">
-			<div>Click and drag anywhere to roll dice</div>
+			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
 	</div>
     
@@ -154,6 +261,74 @@
         <?php include '../base/foot.php'; ?>
         
         <script>
+		
+		function euler_to_quaternion(e1, e2, e3){
+			var x = 0;
+			var y = 0;
+			var z = 0;
+			var w = 0;
+			q = new THREE.Quaternion();
+			with (Math) {
+				x = sqrt(cos(e2*PI/180)*cos(e1*PI/180)+cos(e2*PI/180)*cos(e3*PI/180)-sin(e2*PI/180)*sin(e1*PI/180)*sin(e3*PI/180)+cos(e1*PI/180)* cos(e3*PI/180)+1)/2;
+				y = (cos(e1*PI/180)*sin(e3*PI/180)+cos(e2*PI/180)*sin(e3*PI/180)+sin(e2*PI/180)*sin(e1*PI/180)*cos(e3*PI/180))/sqrt(cos(e2*PI/180)* cos(e1*PI/180)+cos(e2*PI/180)*cos(e3*PI/180)-sin(e2*PI/180)*sin(e1*PI/180)*sin(e3*PI/180)+cos(e1*PI/180)*cos(e3*PI/180)+1)/2;
+				z = (sin(e2*PI/180)*sin(e3*PI/180)-cos(e2*PI/180)*sin(e1*PI/180)*cos(e3*PI/180)-sin(e1*PI/180))/sqrt(cos(e2*PI/180)*cos(e1*PI/180)+ cos(e2*PI/180)*cos(e3*PI/180)-sin(e2*PI/180)*sin(e1*PI/180)*sin(e3*PI/180)+cos(e1*PI/180)*cos(e3*PI/180)+1)/2;
+				w = (sin(e2*PI/180)*cos(e1*PI/180)+sin(e2*PI/180)*cos(e3*PI/180)+cos(e2*PI/180)*sin(e1*PI/180)*sin(e3*PI/180))/sqrt(cos(e2*PI/180)* cos(e1*PI/180)+cos(e2*PI/180)*cos(e3*PI/180)-sin(e2*PI/180)*sin(e1*PI/180)*sin(e3*PI/180)+cos(e1*PI/180)*cos(e3*PI/180)+1)/2;
+			}
+			q.set(x, y, z, w);
+			console.log(q);
+			return q
+		}
+		
+		
+		
+		
+		function make_shaastra_logo(_this, that) {
+			// Create 2 dice .. 
+			that.dice_geometry = that.create_dice_geometry(that.scale * 0.9);
+			that.dice_material = new THREE.MeshFaceMaterial(
+				that.create_dice_materials(that.dice_face_labels, that.scale, that.scale/5));
+			
+			var d2r = Math.PI / 180 ; // deg to rad
+			var dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
+			dice.castShadow = true;
+			dice.body = new CANNON.RigidBody(that.dice_mass,
+				dice.geometry.cannon_shape, _this.dice_body_material);
+			dice.body.position.set(-_this.w/6, _this.w/10, 200);
+			dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
+			dice.body.angularVelocity.set(-10, 4.5, 9);
+			dice.body.velocity.set(0, 0, -10);
+			dice.body.linearDamping = 0;
+			dice.body.angularDamping = 0;
+			_this.scene.add(dice);
+			_this.dices.push(dice);
+			_this.world.add(dice.body);
+			
+			dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
+			dice.castShadow = true;
+			dice.body = new CANNON.RigidBody(that.dice_mass,
+				dice.geometry.cannon_shape, _this.dice_body_material);
+			dice.body.position.set(_this.w/6, _this.w/10, 200);
+			dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
+			dice.body.angularVelocity.set(-10, 4.5, 9);
+			dice.body.velocity.set(0, 0, -10);
+			dice.body.linearDamping = 0;
+			dice.body.angularDamping = 0;
+			_this.scene.add(dice);
+			_this.dices.push(dice);
+			_this.world.add(dice.body);
+			
+			_this.world.step(0.1);
+			for (var i in _this.scene.children) {
+			    var interact = _this.scene.children[i];
+			    if (interact.body != undefined) {
+				interact.body.position.copy(interact.position);
+				interact.body.quaternion.copy(interact.quaternion);
+			    }
+			}
+			_this.renderer.render(_this.scene, _this.camera);
+			_this.running = false;
+		}
+		
 		(function(dice) {
 		
 		    function rnd() {
@@ -343,7 +518,7 @@
 			shading: THREE.FlatShading,
 		    };
 		    this.label_color = '#aaaaaa';
-		    this.dice_color = '#00445e';
+		    this.dice_color = '#00343e'; //'#00445e';
 		    this.dice_mass = 300;
 		    this.dice_inertia = 5;
 		
@@ -352,7 +527,7 @@
 		    this.dice_box = function(container) {
 			this.w = container.clientWidth / 2;
 			this.h = container.clientHeight / 2;
-			that.scale = Math.sqrt(this.w * this.w + this.h * this.h) / 13;
+			that.scale = Math.sqrt(this.w * this.w + this.h * this.h) / 7;
 		
 			this.renderer = window.WebGLRenderingContext
 			    ? new THREE.WebGLRenderer({ antialias: true })
@@ -439,9 +614,12 @@
 		
 			var mouse_captured = false;
 		
+			
 			this.running = (new Date()).getTime();
 			this.last_time = 0;
 			this.renderer.render(this.scene, this.camera);
+			
+			make_shaastra_logo(this, that);
 		    }
 		
 		    this.dice_box.prototype.create_dice = function(pos, velocity, angle) {
@@ -611,12 +789,41 @@
 		}).apply(dice = {});
 		
 		
+		
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MAIN
-		$(document).ready(function() {		
+		$(document).ready(function() {
+			
+			var asa; var canvas; var dcanvas; var gl; var expmt;
+ 
+			var canvas = $('<canvas></canvas>');
+			console.log(canvas);
+			 
+			dcanvas = canvas[0];
+			expmt = false;
+			if ("WebGLRenderingContext" in window) {
+				console.log("browser knows what webgl is.");
+			}
+			// some browsers don't have a .getContext for canvas...
+			try { gl = dcanvas.getContext("webgl"); }
+			catch (x) { gl = null; }
+			if (gl == null) {
+				try { gl = dcanvas.getContext("experimental-webgl"); }
+				catch (x) { gl = null; }
+				if (gl == null) { console.log('but can\'t speak it'); }
+				else { expmt = true; console.log('and speaks it experimentally.'); }
+			} else {
+				console.log('and speaks it natively.');
+			}
+			 
+			if (gl || expmt) {
+				console.log("loading webgl content.");
+				$('.help .text').text("Click and drag anywhere to play with the dice.");
+			} else {
+				console.log("image-only fallback. no webgl.");
+				$('.help .text').text("Your browser does not support webgl. If you can, try visiting us later with webgl support.");
+			}
+			 
 			var canvas = $('#canvas')[0];
-			//canvas.style.width = $('body').width() + 'px';
-			//canvas.style.height = $('body').height() + 'px';
-		    
 			var box = new dice.dice_box(canvas);
 			box.bind_mouse(document.body, function() {}, // before
 				       function(outp) { // after
