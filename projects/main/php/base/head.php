@@ -11,21 +11,44 @@ if ( $DEBUG) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
 
-<!-- CSS -->
-<?php if ($DEBUG) { ?>
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+
+<!-- Basket js -->
+<?php if ( $DEBUG )  { ?>
+    <script src="../../js/jsCache.js"></script>
 <?php } else { ?>
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="../../js/jsCache.js"></script>
 <?php } ?>
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script> 
+var basket_id = 0;
+//basket.clear();
+</script>
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+<!-- CSS & FONTS-->
+<script>
+    jsCache.load( 
+        <?php if ($DEBUG) { ?>
+            {url: '../../css/bootstrap.min.css'},
+        <?php } else { ?>
+            {url: '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'},
+        <?php } ?>
+        {url:"../../assets/js/ie8-responsive-file-warning.js", detect:"if lt IE 9"},
+        {url:"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", detect:"if lt IE 9"},
+        {url:"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js", detect:"if lt IE 9"}
+    )
+</script>
 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Titillium+Web">
 <style>
+<?php if ($DEBUG) { ?>
+    @font-face {
+        font-family: 'Titillium Web';
+        src: url('../../fonts/TitilliumWeb.woff');
+    }
+    @font-face {
+        font-family: 'Dosis';
+        src: url('../../fonts/Dosis.woff');
+    }
+<?php } ?>
     @font-face {
         font-family: 'CGF Locust Resistance';
         src: url('../../fonts/CGF Locust Resistance.ttf');
@@ -237,31 +260,33 @@ if ( $DEBUG) {
     }
 </style>
 
-<!-- Fonts -->
-<?php if ($DEBUG) { ?>
-    <style>
-    @font-face {
-        font-family: 'Titillium Web';
-        src: url('../../fonts/TitilliumWeb.woff');
-    }
-    @font-face {
-        font-family: 'Dosis';
-        src: url('../../fonts/Dosis.woff');
-    }
-    </style>
-<?php } else { ?>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
-<?php } ?>
 
-<!-- JS - Only Jquery is loaded here. Other JS is in foot.php -->
-<!-- <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../js/jquery.min.js">\x3C/script>')</script> -->
-<?php if ($DEBUG) { ?>
+
+<script>
+    jsCache.load( 
+        <?php if ($DEBUG) { ?>
+            {url: '../../js/jquery.min.js'}
+        <?php } else { ?>
+            {url: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'}
+            //{url: '//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js'}
+        <?php } ?>
+    )
+    <?php if ($DEBUG) { ?>
+        if (!jsCache.get('../../js/jquery.min.js')) {
+            document.write("<script src='../../js/jquery.min.js'> </script>")
+        }
+    <?php } else { ?>
+        if (!jsCache.get('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')) {
+            document.write('<script src="//cdnjs.cloudflare.com/aja' + 'x/libs/jquery/2.1.1/jquery.min.js">' + '</' + 'script>')
+        }
+    <?php } ?>
+</script>
+<!--<?php if ($DEBUG) { ?>
     <script src="../../js/jquery.min.js"></script>
 <?php } else { ?>
-    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
-<?php } ?>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<?php } ?>-->
+
 
 
 <script>	

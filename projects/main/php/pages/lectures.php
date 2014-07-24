@@ -114,13 +114,6 @@
         
 	<?php include '../base/foot.php' ?>
 	
-	<?php if ($DEBUG) { ?>
-		<script src="../../js/TweenMax.min.js"></script>
-		<script src="../../js/jquery.gsap.min.js"></script>
-    <?php } else { ?>
-    	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js"></script>-->
-	<?php } ?>
 	    <script>
 		function show_speakers() {
 			$speakers = $('.speaker'); // there are 10 speakers
@@ -179,8 +172,15 @@
 		}
 		
 		$(document).ready(function() {
-			show_speakers();
-			$('.is-loading').removeClass('is-loading');
+			jsCache.load( 
+        		<?php if ($DEBUG) { ?>
+            		{url: '../../js/TweenMax.min.js'},
+            		{url: '../../js/jquery.gsap.min.js'}
+        		<?php } else { ?>
+            		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'},
+            		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
+        		<?php } ?>
+        	).then(show_speakers)
 		})
 	</script>
     </body>
