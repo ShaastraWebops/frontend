@@ -293,7 +293,6 @@
     </div>
     <!-- END MAIN CONTENT OF A TAB -->
     
-    <?php include '../modules/social.php' ?>
     <?php include '../base/foot.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
