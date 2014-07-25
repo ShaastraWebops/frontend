@@ -135,7 +135,8 @@
         
             for (var i = 0; i < vertices.length; ++i) {
                 chamfer_vectors.push((new THREE.Vector3).fromArray(vertices[i]).normalize());
-            }
+            }            
+            //mymove
             for (var i = 0; i < faces.length; ++i) {
                 var ii = faces[i], fl = ii.length - 1;
                 var center_point = new THREE.Vector3();
@@ -265,7 +266,7 @@
             color: '#ffffff',
             emissive: '#000000',
             shininess: 30,
-            shading: THREE.SmoothShading,
+            shading: THREE.FlatShading,
             };
             this.label_color = '#aaaaaa';
             this.dice_color = '#00343e'; //'#00445e';

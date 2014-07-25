@@ -1,12 +1,11 @@
 <?php 
 $DEBUG = 0;
 
-if ( $DEBUG) {
+if ($DEBUG) {
 	ini_set('display_errors', 1); 
-	error_reporting(E_ALL); 
+	error_reporting(E_ALL);
 }
 ?>
-
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">

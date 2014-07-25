@@ -286,7 +286,7 @@
 				//console.log('and speaks it natively.');
 			}
 			 
-			if (!gl || expmt) {
+			if (gl || expmt) {
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.");
 				jsCache.load( 
