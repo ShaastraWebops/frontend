@@ -96,8 +96,7 @@
             background-color: rgba(0, 0, 0, 0.95);
             width: 100%;
             display: inline-block;
-        }
-
+        }        
     </style>
 </head>
 <body>
@@ -128,13 +127,14 @@
                 if ($event === '.' or $event === '..') continue;
                 if (!is_dir('../events/' . $event)) continue;
 
-                $event_img = '../../img/events/' . $event;
+                $event_img = '../../img/events/' . $event . ".png";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
-                <div class="row row-centered event-group <?php
+                <div class="row row-centered event-group 
+                <?php
                     // Give different class to indicate first and last row
                     if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
                     elseif ($event_i == 0) echo ' first ';
@@ -150,14 +150,14 @@
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
-                            <a href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+                            <a class="eventDetail_<?php echo $event ?>" href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell"> 
                                             <span>
-                                                <span class="transparent-text">
+                                                <!-- <span class="transparent-text">
                                                     <?php echo $event; ?>
-                                                </span>
+                                                </span> -->
                                             </span>
                                         </span>
                                     </span>
@@ -175,7 +175,9 @@
     </div>
     </div>
     </div>
-    
+    <div id="aeroplane" style="position:absolute; top:10%; left:-10%; display:none">
+        <img src="../../img/events/pageTransition/Aerofest.png">
+    </div>
     <?php include '../base/foot.php' ?>
     <script>
     $(document).ready(function() {
