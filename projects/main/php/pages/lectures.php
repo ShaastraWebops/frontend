@@ -110,8 +110,6 @@
 	    <?php } ?>
     <?php } ?>
 </div>
-    <?php include '../modules/social.php' ?>
-        
 	<?php include '../base/foot.php' ?>
 	
 	    <script>
