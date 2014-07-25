@@ -236,9 +236,6 @@
             </div>
         </div>
     </div>
-
-	<?php include '../modules/social.php' ?>
-            
 	<?php include '../base/foot.php' ?>
         <?php if ( $editable ) { // The fns to send data ?>
 		<script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
