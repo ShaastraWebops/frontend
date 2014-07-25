@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
@@ -174,6 +173,7 @@
     <script>
     var animation_time = 1000;
     $(document).ready(function() {
+<<<<<<< HEAD
         $(".category_aerofest").click(function(ev) {
             ev.preventDefault();
             linkLocation = this.href;
@@ -262,6 +262,43 @@
             }, animation_time)
         });
     });
+=======
+        $transtext = $('.transparent-text');
+        if ( ( $transtext.css('text-stroke-color') !== undefined ||
+            $transtext.css('-webkit-text-stroke-color') !== undefined ||
+            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
+            ( $transtext.css('text-stroke-width') !== undefined ||
+            $transtext.css('-webkit-text-stroke-width') !== undefined ||
+            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
+            ( $transtext.css('background-clip') === 'text' ||
+            $transtext.css('-webkit-background-clip') == 'text' ||
+            $transtext.css('-moz-background-clip') === 'text' ) &&
+            ( $transtext.css('text-fill-color') !== undefined ||
+            $transtext.css('-webkit-text-fill-color') !== undefined ||
+            $transtext.css('-moz-text-fill-color') !== undefined ) &&
+            ( $transtext.css('background-clip') !== undefined ||
+            $transtext.css('-webkit-background-clip') !== undefined ||
+            $transtext.css('-moz-background-clip') !== undefined ) ) {
+            // Phew ... the condition is valid => transparent-text works !
+                $transtext.each(function(i) {
+                    var $el = $(this);
+                    var $el_event = $el.closest('.event-item');
+                    $el.css('background-image', $el_event.css('background-image'))
+                        .css('background-repeat', $el_event.css('background-repeat'))
+                        .css('background-size', $el_event.css('background-size'));
+                })
+            }
+
+        $(".eventDetail_Aerofest").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        // $("body").fadeOut(1000, redirectPage);      
+        $("#aeroplane").css("display", "inline");
+        $("#aeroplane").animate({left:"100%"},"slow",redirectPage);            
+    });
+    function redirectPage() {
+        window.location = linkLocation;
+    }
     </script>
 </body>
 </html>
