@@ -110,13 +110,26 @@
             geom.computeFaceNormals();
             geom.computeVertexNormals();
             geom.boundingSphere = new THREE.Sphere(new THREE.Vector3(), radius);
+            
+            
+            /*
+            var box_side = Math.sqrt(2) * radius;
+            geom = new THREE.BoxGeometry(box_side, box_side, box_side, 2, 2, 2); // Trying box geometry
+            geom.mergeVertices();
+            geom.computeFaceNormals();
+            geom.computeVertexNormals();
+            if (!this.modifier) this.modifier = new THREE.SubdivisionModifier( 2 );
+            this.modifier.modify(geom);
+            
+            geom.boundingSphere = new THREE.Sphere(new THREE.Vector3(), radius);
+            */
             return geom;
             }
         
             function create_geom(vertices, faces, radius, tab, af) {
             var geom = make_geom(vertices, faces, radius, tab, af);
             geom.cannon_shape = create_shape(vertices, faces, radius);
-            return geom;
+            //return geom;
         
             var chamfer_vertices = [], chamfer_vectors = [], chamfer_faces = [];
         
@@ -246,13 +259,13 @@
             return create_geom(vertices, faces, radius, 0.1, Math.PI / 4);
             }
             this.scale = 50;
-            this.chamfer = 0.6;
+            this.chamfer = 1;
             this.material_options = {
             specular: '#171d1f',
             color: '#ffffff',
             emissive: '#000000',
             shininess: 30,
-            shading: THREE.FlatShading,
+            shading: THREE.SmoothShading,
             };
             this.label_color = '#aaaaaa';
             this.dice_color = '#00343e'; //'#00445e';
@@ -439,14 +452,14 @@
             this.renderer.render(this.scene, this.camera);
             this.last_time = this.last_time ? time : (new Date()).getTime();
             if (this.running == threadid) this.check();
-            if (this.running == threadid) {
+            //if (this.running == threadid) {
                 (function(t, tid) {
                 requestAnimationFrame(function() { t.__animate(tid); });
                 })(this, threadid);
-            } else {
-                console.log('STOPPED');
+            //} else {
+            //    console.log('STOPPED');
                 // move them to the center
-            }
+            //}
             }
         
             this.dice_box.prototype.clear = function() {
@@ -471,55 +484,71 @@
             }
         
             this.dice_box.prototype.roll = function(vector, boost, callback) {
-            this.clear();
-            for (var i =0; i< 2; i++) {
-                var vec = make_random_vector(vector);
-                var pos = {
-                x: this.w * (vec.x > 0 ? -1 : 1) * 0.9,
-                y: this.h * (vec.y > 0 ? -1 : 1) * 0.9,
-                z: rnd() * 200 + 200
-                };
-                var projector = Math.abs(vec.x / vec.y);
-                if (projector > 1.0) pos.y /= projector; else pos.x *= projector;
-                var velvec = make_random_vector(vector);
-                var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: -10 };
-                var inertia = that.dice_inertia;
-                var angle = {
-                x: -(rnd() * vec.y * 5 + inertia * vec.y),
-                y: rnd() * vec.x * 5 + inertia * vec.x,
-                z: 0
-                };
-                this.create_dice(pos, velocity, angle);
-            }
-            this.callback = callback;
-            this.running = (new Date()).getTime();
-            this.last_time = 0;
-            this.__animate(this.running);
+                for (var i =0; i< 2; i++) {
+                    var vec = make_random_vector(vector);
+                    var velvec = make_random_vector(vector);
+                    var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: -10 };
+                    var inertia = that.dice_inertia;
+                    var angle = {
+                        x: -(rnd() * vec.y * 5 + inertia * vec.y),
+                        y: rnd() * vec.x * 5 + inertia * vec.x,
+                        z: 0
+                    };
+                    this.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
+                    this.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
+                
+                }
+                this.callback = callback;
+                this.running = (new Date()).getTime();
+                this.last_time = 0;
+                this.__animate(this.running);
             }
         
-            this.dice_box.prototype.bind_mouse = function(container, before_roll, after_roll) {
+            this.dice_box.prototype.bind_mouse = function(container) {
             var box = this;
+            this.mouse_dragging = false;
             $(container).on('mousedown touchstart', function(ev) {
                 box.mouse_time = (new Date()).getTime();
                 box.mouse_start = { x: ev.clientX, y: ev.clientY };
+                $('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
+                $('.up').animate({'top':'30%'}, 1000);
+                $('.down').animate({'bottom':'30%'}, 1000);
             });
             $(container).bind('mouseup touchend touchcancel', function(ev) {
-                //if (box.rolling) return;
+                
                 var vector = { x: ev.clientX - box.mouse_start.x, y: -(ev.clientY - box.mouse_start.y) };
                 var dist = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
-                if (dist < Math.sqrt(box.w * box.h * 0.01)) return;
-        
-                before_roll.call(box);
-                box.clear();
-                var time_int = (new Date()).getTime() - box.mouse_time;
-                if (time_int > 2000) time_int = 2000;
-                vector.x /= dist; vector.y /= dist;
-                var boost = Math.sqrt((2500 - time_int) / 2500) * dist * 2;
-                box.rolling = true;
-                box.roll(vector, boost, function(result) {
-                if (after_roll) after_roll.call(box, result);
-                box.rolling = false;
-                });
+                if (dist < Math.sqrt(box.w * box.h * 0.01)) {
+                    vector = {x:0, y:0};
+                    var boost = 1000;
+                    for (var i =0; i< 2; i++) {
+                        var vec = make_random_vector(vector);
+                        var velvec = make_random_vector(vector);
+                        var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: 30 };
+                        var inertia = that.dice_inertia;
+                        var angle = {
+                            x: -(rnd() * vec.y * 5 + inertia * vec.y),
+                            y: rnd() * vec.x * 5 + inertia * vec.x,
+                            z: rnd() * 3
+                        };
+                        console.log(angle);
+                        console.log(velocity);
+                        box.dices[i].body.position.set(box.dices[i].body.position.x, box.dices[i].body.position.y, 200+box.dices[i].body.position.z);
+                        box.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
+                        box.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
+                    
+                    }
+                    box.running = (new Date()).getTime();
+                    box.last_time = 0;
+                    box.__animate(this.running);
+                } else {
+                    var time_int = (new Date()).getTime() - box.mouse_time;
+                    if (time_int > 2000) time_int = 2000;
+                    vector.x /= dist; vector.y /= dist;
+                    var boost = Math.sqrt((2500 - time_int) / 2500) * dist * 2 * 5;
+                    box.rolling = true;
+                    box.roll(vector, boost, function(result) { box.rolling = false; });
+                }
             });
             }
         
