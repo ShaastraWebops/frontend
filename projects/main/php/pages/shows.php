@@ -44,7 +44,5 @@
     		</div>
         </div>
     </body>
-    <?php include '../modules/social.php' ?>
-    
     <?php include '../base/foot.php' ?>
 </html>
