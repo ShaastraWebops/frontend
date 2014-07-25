@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-    
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/demo.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/component.css" /> -->
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
@@ -198,15 +199,25 @@
             $transtext.css('-webkit-background-clip') !== undefined ||
             $transtext.css('-moz-background-clip') !== undefined ) ) {
             // Phew ... the condition is valid => transparent-text works !
-            $transtext.each(function(i) {
-                var $el = $(this);
-                var $el_event = $el.closest('.event-item');
-                $el.css('background-image', $el_event.css('background-image'))
-                    .css('background-repeat', $el_event.css('background-repeat'))
-                    .css('background-size', $el_event.css('background-size'));
-            })
-        }
-    })
+                $transtext.each(function(i) {
+                    var $el = $(this);
+                    var $el_event = $el.closest('.event-item');
+                    $el.css('background-image', $el_event.css('background-image'))
+                        .css('background-repeat', $el_event.css('background-repeat'))
+                        .css('background-size', $el_event.css('background-size'));
+                })
+            }
+
+        $(".eventDetail_Aerofest").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        // $("body").fadeOut(1000, redirectPage);      
+        $("#aeroplane").css("display", "inline");
+        $("#aeroplane").animate({left:"100%"},"slow",redirectPage);            
+    });
+    function redirectPage() {
+        window.location = linkLocation;
+    }
     </script>
 </body>
 </html>
