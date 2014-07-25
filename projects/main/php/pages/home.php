@@ -162,7 +162,7 @@
 	
 	<body>
         <?php include '../base/menu.php'; ?>
-        <?php include '../modules/social.php' ?>
+        
 	<div id="fallback" class="container-fluid text-center" >
 		<div class="row">	
 			<div class="col-xs-12">
