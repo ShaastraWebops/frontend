@@ -16,15 +16,15 @@
             return q
         }
         
-        
-        
-        
+
+
+
         function make_shaastra_logo(_this, that) {
-            // Create 2 dice .. 
+            // Create 2 dice ..
             that.dice_geometry = that.create_dice_geometry(that.scale * 0.9);
             that.dice_material = new THREE.MeshFaceMaterial(
                 that.create_dice_materials(that.dice_face_labels, that.scale, that.scale/5));
-            
+
             var d2r = Math.PI / 180 ; // deg to rad
             var dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
             dice.castShadow = true;
@@ -39,7 +39,7 @@
             _this.scene.add(dice);
             _this.dices.push(dice);
             _this.world.add(dice.body);
-            
+
             dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
             dice.castShadow = true;
             dice.body = new CANNON.RigidBody(that.dice_mass,
@@ -53,7 +53,7 @@
             _this.scene.add(dice);
             _this.dices.push(dice);
             _this.world.add(dice.body);
-            
+
             _this.world.step(0.1);
             for (var i in _this.scene.children) {
                 var interact = _this.scene.children[i];
@@ -65,13 +65,13 @@
             _this.renderer.render(_this.scene, _this.camera);
             _this.running = false;
         }
-        
+
         (function(dice) {
-        
+
             function rnd() {
             return Math.random();
             }
-        
+
             function create_shape(vertices, faces, radius) {
             var cv = [], cf = [];
             for (var i = 0; i < vertices.length; ++i) {
@@ -85,7 +85,7 @@
             }
             return new CANNON.ConvexPolyhedron(cv, cf);
             }
-        
+
             function make_geom(vertices, faces, radius, tab, af) {
             var geom = new THREE.Geometry();
             for (var i = 0; i < vertices.length; ++i) {
@@ -110,19 +110,33 @@
             geom.computeFaceNormals();
             geom.computeVertexNormals();
             geom.boundingSphere = new THREE.Sphere(new THREE.Vector3(), radius);
+
+
+            /*
+            var box_side = Math.sqrt(2) * radius;
+            geom = new THREE.BoxGeometry(box_side, box_side, box_side, 2, 2, 2); // Trying box geometry
+            geom.mergeVertices();
+            geom.computeFaceNormals();
+            geom.computeVertexNormals();
+            if (!this.modifier) this.modifier = new THREE.SubdivisionModifier( 2 );
+            this.modifier.modify(geom);
+
+            geom.boundingSphere = new THREE.Sphere(new THREE.Vector3(), radius);
+            */
             return geom;
             }
-        
+
             function create_geom(vertices, faces, radius, tab, af) {
             var geom = make_geom(vertices, faces, radius, tab, af);
             geom.cannon_shape = create_shape(vertices, faces, radius);
-            return geom;
-        
+            //return geom;
+
             var chamfer_vertices = [], chamfer_vectors = [], chamfer_faces = [];
-        
+
             for (var i = 0; i < vertices.length; ++i) {
                 chamfer_vectors.push((new THREE.Vector3).fromArray(vertices[i]).normalize());
             }
+            //mymove
             for (var i = 0; i < faces.length; ++i) {
                 var ii = faces[i], fl = ii.length - 1;
                 var center_point = new THREE.Vector3();
@@ -143,7 +157,7 @@
                 chamfer_faces.push([ii[j], ii[j + 1], face[j + 1], face[j], -1]);
                 }
                 chamfer_faces.push([ii[fl - 1], ii[0], face[0], face[fl - 1], -1]);
-        
+
                 face.push(ii[fl]);
                 chamfer_faces.push(face);
             }
@@ -154,10 +168,10 @@
             geom.cannon_shape = create_shape(vertices, faces, radius);
             return geom;
             }
-        
+
             this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
             this.dice_face_labels = [' ', '0', '2', '2', '2', '2', '2', '2'];
-            
+
             this.create_dice_materials = function(face_labels, size, margin) {
             var create_text_texture = function (text, color, back_color) {
                 if (text == undefined) return null;
@@ -174,17 +188,17 @@
                     context.textBaseline = "middle";
                     context.fillText(text, canvas.width / 2, canvas.height / 2);
                 } else {
-                    
+
                     var rad = 18;
                     context.beginPath();
-                            
+
                     switch ( text ) {
                         case '1' :
                             context.arc(canvas.width*1/2, canvas.height*1/2, size * 2 / rad, 0, Math.PI*2, true);
                             context.closePath();
                             break;
                         case '4' :
-                            context.arc(margin/2+size*1/3, margin/2+size*2/3, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*1/3, margin/2+size*2/3, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             context.arc(margin/2+size*2/3, margin/2+size*1/3, size / rad, 0, Math.PI*2, true);
                             context.closePath();
@@ -195,33 +209,33 @@
                             context.closePath();
                             break
                         case '5' :
-                            context.arc(margin/2+size*1/4, margin/2+size*3/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*1/4, margin/2+size*3/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
-                            context.arc(margin/2+size*3/4, margin/2+size*1/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*3/4, margin/2+size*1/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                         case '3' :
-                            context.arc(margin/2+size*1/4, margin/2+size*1/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*1/4, margin/2+size*1/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
-                            context.arc(margin/2+size*2/4, margin/2+size*2/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*2/4, margin/2+size*2/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
-                            context.arc(margin/2+size*3/4, margin/2+size*3/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*3/4, margin/2+size*3/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             break;
                         case '6' :
-                            context.arc(margin/2+size*1/4, margin/2+size*1.5/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*1/4, margin/2+size*1.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             context.arc(margin/2+size*2/4, margin/2+size*1.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
-                            context.arc(margin/2+size*3/4, margin/2+size*1.5/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*3/4, margin/2+size*1.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             context.arc(margin/2+size*1/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
-                            context.arc(margin/2+size*2/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true); 
+                            context.arc(margin/2+size*2/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             context.arc(margin/2+size*3/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true);
                             context.closePath();
                             break
-                        
+
                     }
                     context.fill();
                 }
@@ -237,7 +251,7 @@
             }
             return materials;
             }
-        
+
             this.create_dice_geometry = function(radius) {
             var vertices = [[-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
                 [-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]];
@@ -246,7 +260,7 @@
             return create_geom(vertices, faces, radius, 0.1, Math.PI / 4);
             }
             this.scale = 50;
-            this.chamfer = 0.6;
+            this.chamfer = 1;
             this.material_options = {
             specular: '#171d1f',
             color: '#ffffff',
@@ -258,35 +272,35 @@
             this.dice_color = '#00343e'; //'#00445e';
             this.dice_mass = 300;
             this.dice_inertia = 5;
-        
+
             var that = this;
-        
+
             this.dice_box = function(container) {
             this.w = container.clientWidth / 2;
             this.h = container.clientHeight / 2;
             that.scale = Math.sqrt(this.w * this.w + this.h * this.h) / 7;
-        
+
             this.renderer = window.WebGLRenderingContext
                 ? new THREE.WebGLRenderer({ antialias: true })
                 : new THREE.CanvasRenderer({ antialias: true });
             this.renderer.setSize(this.w * 2, this.h * 2);
             this.renderer.shadowMapEnabled = true;
             this.renderer.shadowMapSoft = true;
-        
+
             this.dices = [];
             this.scene = new THREE.Scene();
             this.world = new CANNON.World();
-        
+
             container.appendChild(this.renderer.domElement);
-        
+
             this.world.gravity.set(0, 0, -9.8 * 800);
             this.world.broadphase = new CANNON.NaiveBroadphase();
             this.world.solver.iterations = 10;
-        
+
             var wh = this.h / Math.tan(10 * Math.PI / 180);
             this.camera = new THREE.PerspectiveCamera(20, this.w / this.h, 1, wh * 1.3);
             this.camera.position.z = wh;
-        
+
             var ambientLight = new THREE.AmbientLight(0xf0f0f0);
             this.scene.add(ambientLight);
             var mw = Math.max(this.w, this.h);
@@ -302,7 +316,7 @@
             light.shadowMapWidth = 1024;
             light.shadowMapHeight = 1024;
             this.scene.add(light);
-        
+
             this.dice_body_material = new CANNON.Material();
             var desk_body_material = new CANNON.Material();
             var barrier_body_material = new CANNON.Material();
@@ -312,59 +326,59 @@
                     barrier_body_material, this.dice_body_material, 0, 1.0));
             this.world.addContactMaterial(new CANNON.ContactMaterial(
                     this.dice_body_material, this.dice_body_material, 0, 0.5));
-        
-            this.desk = new THREE.Mesh(new THREE.PlaneGeometry(this.w * 2, this.h * 2, 1, 1), 
+
+            this.desk = new THREE.Mesh(new THREE.PlaneGeometry(this.w * 2, this.h * 2, 1, 1),
                 new THREE.MeshLambertMaterial({ color: 0xffffff }));
             this.desk.receiveShadow = true;
             this.scene.add(this.desk);
-        
+
             this.world.add(new CANNON.RigidBody(0, new CANNON.Plane(), desk_body_material));
             var barrier;
             barrier = new CANNON.RigidBody(0, new CANNON.Plane(), barrier_body_material);
             barrier.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), Math.PI / 2);
             barrier.position.set(0, this.h * 0.93, 0);
             this.world.add(barrier);
-        
+
             barrier = new CANNON.RigidBody(0, new CANNON.Plane(), barrier_body_material);
             barrier.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2);
             barrier.position.set(0, -this.h * 0.93, 0);
             this.world.add(barrier);
-        
+
             barrier = new CANNON.RigidBody(0, new CANNON.Plane(), barrier_body_material);
             barrier.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), -Math.PI / 2);
             barrier.position.set(this.w * 0.93, 0, 0);
             this.world.add(barrier);
-        
+
             barrier = new CANNON.RigidBody(0, new CANNON.Plane(), barrier_body_material);
             barrier.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), Math.PI / 2);
             barrier.position.set(-this.w * 0.93, 0, 0);
             this.world.add(barrier);
-        
+
             this.last_time = 0;
             this.running = false;
-        
-            this.pane = new THREE.Mesh(new THREE.PlaneGeometry(this.w * 2, this.h * 2, 1, 1), 
+
+            this.pane = new THREE.Mesh(new THREE.PlaneGeometry(this.w * 2, this.h * 2, 1, 1),
                 new THREE.MeshPhongMaterial({ color: 0, ambient: 0x0b0b0b, emissive: 0 }));
             this.pane.receiveShadow = true;
             this.pane.position.set(0, 0, 1);
             this.scene.add(this.pane);
-        
+
             var mouse_captured = false;
-        
-            
+
+
             this.running = (new Date()).getTime();
             this.last_time = 0;
             this.renderer.render(this.scene, this.camera);
-            
+
             make_shaastra_logo(this, that);
             }
-        
+
             this.dice_box.prototype.create_dice = function(pos, velocity, angle) {
             if (!that.dice_geometry) that.dice_geometry = that.create_dice_geometry(that.scale * 0.9);
             if (!that.dice_material) that.dice_material = new THREE.MeshFaceMaterial(
                 that.create_dice_materials(that.dice_face_labels, that.scale, that.scale/5));
             var dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
-            
+
             dice.castShadow = true;
             dice.body = new CANNON.RigidBody(that.dice_mass,
                 dice.geometry.cannon_shape, this.dice_body_material);
@@ -378,7 +392,7 @@
             this.dices.push(dice);
             this.world.add(dice.body);
             }
-        
+
             this.dice_box.prototype.check = function() {
             var res = true;
             var e = 6;
@@ -419,7 +433,7 @@
                 if (this.callback) this.callback.call(this, values);
             }
             }
-        
+
             this.dice_box.prototype.__animate = function(threadid) {
             var time = (new Date()).getTime();
             var time_diff = (time - this.last_time) / 1000;
@@ -439,26 +453,26 @@
             this.renderer.render(this.scene, this.camera);
             this.last_time = this.last_time ? time : (new Date()).getTime();
             if (this.running == threadid) this.check();
-            if (this.running == threadid) {
+            //if (this.running == threadid) {
                 (function(t, tid) {
                 requestAnimationFrame(function() { t.__animate(tid); });
                 })(this, threadid);
-            } else {
-                console.log('STOPPED');
+            //} else {
+            //    console.log('STOPPED');
                 // move them to the center
+            //}
             }
-            }
-        
+
             this.dice_box.prototype.clear = function() {
             this.running = false;
             var dice;
             while (dice = this.dices.pop()) {
-                this.scene.remove(dice); 
+                this.scene.remove(dice);
                 if (dice.body) { this.world.remove(dice.body) };
             }
             this.renderer.render(this.scene, this.camera);
             }
-        
+
             function make_random_vector(vector) {
             var random_angle = rnd() * Math.PI / 5 - Math.PI / 5 / 2;
             var vec = {
@@ -469,59 +483,74 @@
             if (vec.y == 0) vec.y = 0.01;
             return vec;
             }
-        
+
             this.dice_box.prototype.roll = function(vector, boost, callback) {
-            this.clear();
-            for (var i =0; i< 2; i++) {
-                var vec = make_random_vector(vector);
-                var pos = {
-                x: this.w * (vec.x > 0 ? -1 : 1) * 0.9,
-                y: this.h * (vec.y > 0 ? -1 : 1) * 0.9,
-                z: rnd() * 200 + 200
-                };
-                var projector = Math.abs(vec.x / vec.y);
-                if (projector > 1.0) pos.y /= projector; else pos.x *= projector;
-                var velvec = make_random_vector(vector);
-                var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: -10 };
-                var inertia = that.dice_inertia;
-                var angle = {
-                x: -(rnd() * vec.y * 5 + inertia * vec.y),
-                y: rnd() * vec.x * 5 + inertia * vec.x,
-                z: 0
-                };
-                this.create_dice(pos, velocity, angle);
+                for (var i =0; i< 2; i++) {
+                    var vec = make_random_vector(vector);
+                    var velvec = make_random_vector(vector);
+                    var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: -10 };
+                    var inertia = that.dice_inertia;
+                    var angle = {
+                        x: -(rnd() * vec.y * 5 + inertia * vec.y),
+                        y: rnd() * vec.x * 5 + inertia * vec.x,
+                        z: 0
+                    };
+                    this.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
+                    this.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
+
+                }
+                this.callback = callback;
+                this.running = (new Date()).getTime();
+                this.last_time = 0;
+                this.__animate(this.running);
             }
-            this.callback = callback;
-            this.running = (new Date()).getTime();
-            this.last_time = 0;
-            this.__animate(this.running);
-            }
-        
-            this.dice_box.prototype.bind_mouse = function(container, before_roll, after_roll) {
+
+            this.dice_box.prototype.bind_mouse = function(container) {
             var box = this;
+            this.mouse_dragging = false;
             $(container).on('mousedown touchstart', function(ev) {
                 box.mouse_time = (new Date()).getTime();
                 box.mouse_start = { x: ev.clientX, y: ev.clientY };
+                $('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
+                $('.up').animate({'top':'30%'}, 1000);
+                $('.down').animate({'bottom':'30%'}, 1000);
             });
             $(container).bind('mouseup touchend touchcancel', function(ev) {
-                //if (box.rolling) return;
+
                 var vector = { x: ev.clientX - box.mouse_start.x, y: -(ev.clientY - box.mouse_start.y) };
                 var dist = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
-                if (dist < Math.sqrt(box.w * box.h * 0.01)) return;
-        
-                before_roll.call(box);
-                box.clear();
-                var time_int = (new Date()).getTime() - box.mouse_time;
-                if (time_int > 2000) time_int = 2000;
-                vector.x /= dist; vector.y /= dist;
-                var boost = Math.sqrt((2500 - time_int) / 2500) * dist * 2;
-                box.rolling = true;
-                box.roll(vector, boost, function(result) {
-                if (after_roll) after_roll.call(box, result);
-                box.rolling = false;
-                });
+                if (dist < Math.sqrt(box.w * box.h * 0.01)) {
+                    vector = {x:0, y:0};
+                    var boost = 1000;
+                    for (var i =0; i< 2; i++) {
+                        var vec = make_random_vector(vector);
+                        var velvec = make_random_vector(vector);
+                        var velocity = { x: velvec.x * boost, y: velvec.y * boost, z: 30 };
+                        var inertia = that.dice_inertia;
+                        var angle = {
+                            x: -(rnd() * vec.y * 5 + inertia * vec.y),
+                            y: rnd() * vec.x * 5 + inertia * vec.x,
+                            z: rnd() * 3
+                        };
+                        console.log(angle);
+                        console.log(velocity);
+                        box.dices[i].body.position.set(box.dices[i].body.position.x, box.dices[i].body.position.y, 200+box.dices[i].body.position.z);
+                        box.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
+                        box.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
+
+                    }
+                    box.running = (new Date()).getTime();
+                    box.last_time = 0;
+                    box.__animate(this.running);
+                } else {
+                    var time_int = (new Date()).getTime() - box.mouse_time;
+                    if (time_int > 2000) time_int = 2000;
+                    vector.x /= dist; vector.y /= dist;
+                    var boost = Math.sqrt((2500 - time_int) / 2500) * dist * 2 * 5;
+                    box.rolling = true;
+                    box.roll(vector, boost, function(result) { box.rolling = false; });
+                }
             });
             }
-        
+
         }).apply(dice = {});
-        

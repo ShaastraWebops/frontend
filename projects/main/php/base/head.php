@@ -1,12 +1,21 @@
-<?php 
+<?php
 $DEBUG = 0;
 
-if ( $DEBUG) {
-	ini_set('display_errors', 1); 
-	error_reporting(E_ALL); 
-}
+if ($DEBUG) {
+	ini_set('display_errors', 1);
+	error_reporting(E_ALL);
 ?>
+	<script> localStorage.clear(); </script>
+<?php } else { ?>
+	<script>
+		var last_updated = "27 July 2014";
+		if (0 && localStorage.getitem("last_updated") != last_updated) {
+			llocalStorage.clear();
+			localStorage.setItem('last_updated', last_updated)
+		}
+	</script>
 
+<?php } ?>
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -18,14 +27,10 @@ if ( $DEBUG) {
 <?php } else { ?>
     <script src="../../js/jsCache.js"></script>
 <?php } ?>
-<script> 
-var basket_id = 0;
-//basket.clear();
-</script>
 
 <!-- CSS & FONTS-->
 <script>
-    jsCache.load( 
+    jsCache.load( // Use jsCache only for 3rd party scripts which will never every change
         <?php if ($DEBUG) { ?>
             {url: '../../css/bootstrap.min.css'},
         <?php } else { ?>
@@ -37,7 +42,10 @@ var basket_id = 0;
     )
 </script>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Titillium+Web">
+
+<?php if (!$DEBUG) { ?>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Titillium+Web">
+<?php } ?>
 <style>
 <?php if ($DEBUG) { ?>
     @font-face {
@@ -60,7 +68,7 @@ var basket_id = 0;
     }
     body {
 	  	background-image: url("../../img/bg.png");
-  		line-height: 1.42857;   
+  		line-height: 1.42857;
         font-family: 'Titillium Web', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-font-smoothing: antialiased;
@@ -164,7 +172,7 @@ var basket_id = 0;
 	blockquote::after{
   		content: "";
 	}
-	
+
 	.vertical-table {
 	    display: table;
 	    width: 100%;
@@ -175,7 +183,7 @@ var basket_id = 0;
 		height: 100%;
 		vertical-align:middle;
 	}
-	
+
 	a.no-style {
 		text-decoration: none;
 	}
@@ -192,7 +200,7 @@ var basket_id = 0;
 		text-align:left;
 		margin-right:-4px;
 	}
-	
+
 	/* Social Icons used in places */
 	a.social-icon {
 		margin:5px 5px 0px 5px;
@@ -263,7 +271,7 @@ var basket_id = 0;
 
 
 <script>
-    jsCache.load( 
+    jsCache.load(
         <?php if ($DEBUG) { ?>
             {url: '../../js/jquery.min.js'}
         <?php } else { ?>
@@ -271,26 +279,19 @@ var basket_id = 0;
             //{url: '//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js'}
         <?php } ?>
     )
+
     <?php if ($DEBUG) { ?>
         if (!jsCache.get('../../js/jquery.min.js')) {
-            document.write("<script src='../../js/jquery.min.js'> </script>")
+            document.write("<script src='../../js/jquery" + ".min.js'>" + " </" + "script>")
         }
     <?php } else { ?>
-        if (!jsCache.get('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')) {
+        if ( !jsCache.get( '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js' ) ) {
             document.write('<script src="//cdnjs.cloudflare.com/aja' + 'x/libs/jquery/2.1.1/jquery.min.js">' + '</' + 'script>')
         }
     <?php } ?>
 </script>
-<!--<?php if ($DEBUG) { ?>
-    <script src="../../js/jquery.min.js"></script>
-<?php } else { ?>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<?php } ?>-->
 
-
-
-<script>	
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -302,4 +303,3 @@ var basket_id = 0;
 <script type="text/javascript" src="../../js/categoryAnimation.js"></script>
 
 <?php include_once '../base/phpfuncs.php'; ?>
-
