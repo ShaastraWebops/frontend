@@ -259,9 +259,9 @@
             linkLocation = this.href;
             $("#matrix").css("z-index",10);
             setTimeout(function(){RunMatrix()}, 200);            
-            setTimeout(function(){$("#matrix").fadeOut(3000)},2500);
-            setTimeout(function(){StopMatrix()}, 3500);
-            setTimeout(function(){redirectPage();},3500);
+            setTimeout(function(){$("#matrix").fadeOut(3000)},4500);
+            setTimeout(function(){StopMatrix()}, 5500);
+            setTimeout(function(){redirectPage();},5500);
         });
         function redirectPage() {
             window.location = linkLocation;
