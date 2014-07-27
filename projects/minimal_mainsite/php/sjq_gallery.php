@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Lectures | SHAASTRA '15</title>
+		<title>Gallery | SHAASTRA '15</title>
 		
 		<?php include 'head.php' ?>
 		<link rel="stylesheet" type="text/css" href="../css/component_carousel.css">
@@ -30,7 +30,7 @@
 		<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center title">LECTURES</h1>
+                    <h1 class="text-center title">Shaastra Junior Quiz</h1>
                     <div class="white breaker">
                         <span class="left"></span>
                         <div class="dice white"></div>
@@ -47,43 +47,29 @@
 			        <div id="myCarousel" class="carousel slide">
 						<!-- Carousel items -->
 						<div class="carousel-inner" align="center">
-							<div class="active item">
-                                <img src="../img/sjq/sjq%20(1).jpg">
-                            </div>
-                        </div>
-						<div class="carousel-inner" align="center">
 							<div class="item">
-                                <img src="../img/sjq/sjq%20(2).jpg">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(1).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(3).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(2).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(4).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(3).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="active item">
-                                <img src="../img/sjq/sjq%20(5).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(4).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(6).jpg">
+                        	<div class="active item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(5).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(7).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(6).jpg">
                             </div>
-                        </div>
-						<div class="carousel-inner" align="center">
-							<div class="item">
-                                <img src="../img/sjq/sjq%20(8).jpg">
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(7).jpg">
+                            </div>
+                        	<div class="item">
+                                <img style='width:80%; height : auto;' src="../img/sjq/sjq%20(8).jpg">
                             </div>
                         </div>
                         
@@ -101,8 +87,5 @@
 			</div>
 		</div>
 		<?php include 'foot.php' ?>
-		<script type="text/javascript">
-			$("#lecture-menu").addClass("current_page");
-		</script>
 	</body>
 </html>

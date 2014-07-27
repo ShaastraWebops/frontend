@@ -38,6 +38,9 @@ $s: 2;
 	-webkit-transform: scale($s,$s);
 	-webkit-animation: sc 5s ease-in-out forwards;
 }
+#demo5{
+	display:none;
+}
 #p1,
 #p2,
 #p3{
@@ -127,5 +130,114 @@ $s: 2;
 	}
 	from{
 		-webkit-transform: scale(1,1);
+	}
+}
+
+#demo16{
+	// display: none;
+	.col-xs-2{
+		// width: (100%/6);
+		// border: 1px solid black;
+	}
+	.col-xs-4{
+			// width: (100%/3);
+		// border: 1px solid black;
+	}
+	#r1{
+		div:nth-child(3){
+			position: relative;
+			z-index: 4;
+			background-color: #333;
+			-webkit-transform: scale(3,1);
+			-webkit-transform-origin: right center;
+			-webkit-animation: animate_34 1.2s linear 1.4s forwards;
+		}
+		div:nth-child(4){
+			position: relative;
+			z-index: 4;
+			background-color: #555;			
+			-webkit-transform: scale(3,1);
+			-webkit-transform-origin: left center;
+			-webkit-animation: animate_34 1.2s linear 1.4s forwards;
+		}
+		div:nth-child(1),
+		div:nth-child(6){
+			background-color: #831;
+		}
+		div:nth-child(2),
+		div:nth-child(5){
+			background-color: #331;
+		}
+	}
+	#r2{
+		div:nth-child(1),
+		div:nth-child(5){
+			background-color: #491;
+		}
+		div:nth-child(3){
+			position: relative;
+			z-index: 5;
+			background-color: #888;
+			-webkit-transform-origin: center center;
+			-webkit-transform: scale(3,3);
+			-webkit-animation: animate_23 2s linear 1s forwards;
+			p{
+				-webkit-transform: scale(1,1);
+			}
+		}
+		div:nth-child(2),
+		div:nth-child(4){
+			background-color: #313;
+		}
+	}
+	#r3{
+		@extend #r1;
+		// background-color: #444;
+	}
+}
+@-webkit-keyframes animate_23{
+	0%{
+		-webkit-transform: scale(3,3);
+	}
+	20%{
+		-webkit-transform: scale(3,1);
+	}
+	40%{
+		-webkit-transform: scale(3,1);
+	}
+	60%{
+		-webkit-transform: scale(2,1);
+	}
+	80%{
+		-webkit-transform: scale(2,1);
+	}
+	100%{
+		-webkit-transform: scale(1,1);
+	}
+}
+@-webkit-keyframes animate_34{
+	0%{
+		-webkit-transform: scale(3,1);
+	}
+	33.33%{
+		-webkit-transform: scale(2,1);
+	}
+	66.67%{
+		-webkit-transform: scale(2,1);
+	}
+	100%{
+		-webkit-transform: scale(1,1);
+	}	
+}
+#overlay{
+	position: relative;
+	top: -685px;
+	z-index: 10;
+	color: red;
+	.col-xs-2{
+		border: 1px solid black;
+	}
+	.col-xs-4{
+		border: 1px solid black;
 	}
 }
