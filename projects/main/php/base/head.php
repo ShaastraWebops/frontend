@@ -299,7 +299,7 @@ var basket_id = 0;
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript" src="../../js/categoryAnimation.js"></script>
+<!-- <script type="text/javascript" src="../../js/categoryAnimation.js"></script> -->
 
 <?php include_once '../base/phpfuncs.php'; ?>
 
