@@ -205,6 +205,7 @@
                         <div>
                             <div class="dummy"></div>
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
+                            <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>" 
                                 href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
