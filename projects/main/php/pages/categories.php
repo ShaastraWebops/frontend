@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-    
+
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
@@ -23,11 +23,11 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
             border: 1px solid transparent;
-        }   
+        }
         #event-list .event-group .event-item:hover > div {
             border-color: #fff;
         }
-        #event-list .event-group .event-item > div > .dummy { 
+        #event-list .event-group .event-item > div > .dummy {
             margin-top: 100%; /* This is the height:width ratio */;
         }
         #event-list .event-bg {
@@ -49,37 +49,21 @@
             /*font-size: 1.5vw;*/
             font-weight: 900;
             font-family: "Times New Roman", sans-serif;
-            letter-spacing: 0.1em; 
+            letter-spacing: 0.1em;
             /*letter-spacing: 0.15vw; */
             text-transform: uppercase;
         }
-        /*@media screen and (-webkit-min-device-pixel-ratio:0) { 
-            #event-list .event-group .event-item .transparent-text {
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.2px;
-                -moz-text-stroke-width: 0.2px;
-                text-stroke-width: 0.2px;
-                -webkit-text-stroke-color: white;
-                -moz-text-stroke-color: white;
-                text-stroke-color: white;
-            }
-        }*/
         #event-list .event-group .event-item a div {
             position: relative;
-            -webkit-transition: margin 0.2s ease-out, 
+            -webkit-transition: margin 0.2s ease-out,
                 -webkit-transform 0.3s ease-out;
-            -moz-transition: margin 0.3s ease-out, 
+            -moz-transition: margin 0.3s ease-out,
                 -moz-transform 0.3s ease-out;
-            -ms-transition: margin 0.3s ease-out, 
+            -ms-transition: margin 0.3s ease-out,
                 -ms-transform 0.3s ease-out;
-            -o-transition: margin 0.3s ease-out, 
+            -o-transition: margin 0.3s ease-out,
                 -o-transform 0.3s ease-out;
-            transition: margin 0.3s ease-out, 
+            transition: margin 0.3s ease-out,
                 transform 0.3s ease-out;
             height: 100%;
             width: 100%;
@@ -91,12 +75,12 @@
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
             text-align: center;
-        }        
+        }
         #event-list .event-group .event-item a div > span > span > span {
             background-color: rgba(0, 0, 0, 0.95);
             width: 100%;
             display: inline-block;
-        }        
+        }
     </style>
 </head>
 <body>
@@ -133,27 +117,27 @@
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
-                <div class="row row-centered event-group 
+                <div class="row row-centered event-group
                 <?php
                     // Give different class to indicate first and last row
                     if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
                     elseif ($event_i == 0) echo ' first ';
                     elseif (floor($event_i/$event_row_count) == floor(($event_count-1)/$event_row_count)) echo ' last row-centered';
-                    
-                    
+
+
                 ?>">
             <?php } ?>
                     <div class="col-md-2 col-sm-4 col-sm-offset-0 col-xs-6 col-centered event-item event-bg <?php
                         // Give different class to indicate first and last column
                         if ($event_i % $event_row_count == 0) echo ' first ';
-                        elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last '; 
+                        elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last ';
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
-                            <a class="eventDetail_<?php echo $event ?>" href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+                            <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>" href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
-                                        <span class="vertical-table-cell"> 
+                                        <span class="vertical-table-cell">
                                             <span>
                                                 <!-- <span class="transparent-text">
                                                     <?php echo $event; ?>
@@ -175,38 +159,109 @@
     </div>
     </div>
     </div>
-    <div id="aeroplane" style="position:absolute; top:10%; left:-10%; display:none">
-        <img src="../../img/events/pageTransition/Aerofest.png">
+    <div class="animation aerofest"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:-100%;
+            background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
+            background-size: auto 100%;">
+    </div>
+    <div class="animation coding"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:0%;
+            opacity: 0;">
     </div>
     <?php include '../base/foot.php' ?>
     <script>
+    var animation_time = 1000;
     $(document).ready(function() {
-        $transtext = $('.transparent-text');
-        if ( ( $transtext.css('text-stroke-color') !== undefined ||
-            $transtext.css('-webkit-text-stroke-color') !== undefined ||
-            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
-            ( $transtext.css('text-stroke-width') !== undefined ||
-            $transtext.css('-webkit-text-stroke-width') !== undefined ||
-            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
-            ( $transtext.css('background-clip') === 'text' ||
-            $transtext.css('-webkit-background-clip') == 'text' ||
-            $transtext.css('-moz-background-clip') === 'text' ) &&
-            ( $transtext.css('text-fill-color') !== undefined ||
-            $transtext.css('-webkit-text-fill-color') !== undefined ||
-            $transtext.css('-moz-text-fill-color') !== undefined ) &&
-            ( $transtext.css('background-clip') !== undefined ||
-            $transtext.css('-webkit-background-clip') !== undefined ||
-            $transtext.css('-moz-background-clip') !== undefined ) ) {
-            // Phew ... the condition is valid => transparent-text works !
-            $transtext.each(function(i) {
-                var $el = $(this);
-                var $el_event = $el.closest('.event-item');
-                $el.css('background-image', $el_event.css('background-image'))
-                    .css('background-repeat', $el_event.css('background-repeat'))
-                    .css('background-size', $el_event.css('background-size'));
+        $(".category_aerofest").click(function(ev) {
+            ev.preventDefault();
+            linkLocation = this.href;
+            var that = this;
+            $(".animation.aerofest")
+                .css("z-index", 10000)
+                .animate({
+                left: "100%"
+            }, animation_time, function() {
+                window.location = that.href;
             })
-        }
-    })
+        });
+        $(".category-link").click(function(ev) {
+            ev.preventDefault();
+            var that = this;
+            var $el = $(this);
+            if( $el.hasClass("aerofest")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("b-events")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("coding")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+            } else if($el.hasClass("department_flagship")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("design_and_build")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("electronics_fest")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("involve_and_quizzes")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("sampark")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("shows")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("spotlight")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("workshops")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            }
+            setTimeout(function() {
+                window.location = that.href;
+            }, animation_time)
+        });
+    });
     </script>
 </body>
 </html>

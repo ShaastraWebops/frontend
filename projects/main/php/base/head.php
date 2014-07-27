@@ -1,5 +1,5 @@
 <?php
-$DEBUG = 0;
+$DEBUG = 1;
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
@@ -300,6 +300,5 @@ if ($DEBUG) {
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript" src="../../js/categoryAnimation.js"></script>
 
 <?php include_once '../base/phpfuncs.php'; ?>

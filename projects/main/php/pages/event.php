@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
+    <?php
         if ( isset($_REQUEST['category']) ) {
             $category = $_REQUEST['category'];
             $category_path = '../events/' . $category ;
         }
         if (!isset($category) || $category=="") { // No category given, redirect to categories page
-            header('Location: ../pages/categories.php');    
+            header('Location: ../pages/categories.php');
         }
         if ( isset($_REQUEST['event']) ) {
             $event = $_REQUEST['event'];
             $event_path = $category_path . '/' . $event;
         if (!is_dir($event_path)) { // Invalid event
-            header('Location: ../pages/eventlist.php?category=' . urlencode($category)); 
+            header('Location: ../pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
             $tab_list = scandir($event_path);
             foreach ($tab_list as $tab_i => $tab_file_name) {
@@ -27,7 +27,7 @@
             $tab_list = array_values($tab_list);
         }
         } else { // No event given, redirect to the corresponding eventlist page
-            header('Location: ../pages/eventlist.php?category=' . urlencode($category));    
+            header('Location: ../pages/eventlist.php?category=' . urlencode($category));
         }
         if ( isset($_REQUEST['tab']) ) {
             $tab = $_REQUEST['tab'];
@@ -40,7 +40,7 @@
         } else {
             $editable = 0;
         }
-        
+
         if (!isset($tab) || $tab=="") { // If it comes here, category and event is there, no tab is given. Reidrect to first tab
             if (count($tab_list) < 1) {
                 if ( $editable) { // No tabs exist - create first tab. File gets created later
@@ -55,8 +55,7 @@
                 $tab_path = $event_path . '/' . $tab . '.html';
             }
         }
-        echo $tab_path;
-        echo $tab;
+
         if (!file_exists($tab_path)) {
             if ( $editable ) { // Create a new file
                 $fp = fopen($tab_path, "w"); fclose($fp); // Create new file
@@ -72,7 +71,7 @@
         if ($editable && $data == '') { // empty file, show help
             $data = file_get_contents('../events/sample.html');
         }
-        ?>  
+        ?>
         <title><?php echo $event . ' - ' . $tab; ?> | Shaastra '15</title>
         <?php include '../base/head.php' ?>
         <style>
@@ -103,7 +102,7 @@
             }
             .cke_button_icon.cke_button__savebtn_icon {
                 width : 70px;
-                background-position:right !important; 
+                background-position:right !important;
             }
             .cke_button_icon.cke_button__savebtn_icon:after {
                 content:'Save';
@@ -139,7 +138,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <?php 
+                        <?php
                         if ($dir_event_handle = opendir($event_path)) {
                             while(false !== ($file = readdir($dir_event_handle))) {
                                 if ( '.' === $file ) continue;
@@ -147,7 +146,7 @@
                                 $filetab = str_replace('.html', '', $file);
                                 ?>
                                 <li class="default <?php if ($file == $tab . '.html') echo 'active'; ?>" >
-                                    <a href="<?php if ($editable) 
+                                    <a href="<?php if ($editable)
                                     echo 'javascript:void(0)';
                                     else
                                         echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
@@ -173,7 +172,7 @@
     </div>
     <!-- / TABBAR -->
 
-    <?php if ( $editable ) { // Modal used as form ?> 
+    <?php if ( $editable ) { // Modal used as form ?>
     <!-- EDITABLE MODAL -->
     <div class="modal container-fluid fade" id='edit_modal'>
         <div class="modal-dialog black" style='width : 80%'>
@@ -211,25 +210,25 @@
                                     </div>
                                     <div class='row not-for-new' style='padding-top:10px;'>
                                         <div class='col-md-5 black'>Old priority</div>
-                                        <div class='col-md-7'>  
+                                        <div class='col-md-7'>
                                             <input class='readonly oldpriority' name='oldpriority' style='width:100%' type='text' value='' readonly/>
                                         </div>
                                     </div>
                                     <div class='row not-for-new' style='padding-top:10px;'>
                                         <div class='col-md-5 black'>Old name</div>
-                                        <div class='col-md-7'>  
+                                        <div class='col-md-7'>
                                             <input class='readonly oldname' name='oldname' style='width:100%' type='text' value='' readonly/>
                                         </div>
                                     </div>
                                     <div class='row' style='padding-top:10px;'>
                                         <div class='col-md-5'>New priority</div>
-                                        <div class='col-md-7'>  
+                                        <div class='col-md-7'>
                                             <input class='newpriority' name='newpriority' style='width:100%' type='text' value=''/>
                                         </div>
                                     </div>
                                     <div class='row' style='padding-top:10px;'>
                                         <div class='col-md-5'>New name</div>
-                                        <div class='col-md-7'>  
+                                        <div class='col-md-7'>
                                             <input class='newname' name='newname' style='width:100%' type='text' value=''/>
                                         </div>
                                     </div>
@@ -262,7 +261,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    
+
                 </div>
             </div>
         </div>
@@ -282,7 +281,7 @@
                             <?php echo $data; ?>
                         </textarea>
                     </div>
-                </form> 
+                </form>
                 <?php } else { ?>
                 <div class='data col-md-offset-1 col-md-10'>
                     <?php echo $data; ?>
@@ -292,7 +291,7 @@
         </div>
     </div>
     <!-- END MAIN CONTENT OF A TAB -->
-    
+
     <?php include '../base/foot.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
@@ -317,7 +316,7 @@
                 $('#edit_modal').find('.oldpriority').val(oldpriority);
                 $('#edit_modal').find('.newpriority').val(oldpriority);
                 $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
-                $('#edit_modal').find('.taburl').prop('href', "<?php 
+                $('#edit_modal').find('.taburl').prop('href', "<?php
                     if ($editable) {
                         $editurl = '&edit';
                     } else {
@@ -335,7 +334,7 @@
                 if (event.ctrlKey || event.metaKey) {
                     var letter = String.fromCharCode(event.which).toLowerCase();
                     if ( letter == 's' ) {
-                        $('.cke_button__savebtn').click(); 
+                        $('.cke_button__savebtn').click();
                         event.preventDefault();
                     }
                 }
@@ -359,7 +358,7 @@
                         $nav.data('size','big').stop().animate({
                             height:'60px',
                         }, 600);
-                    }  
+                    }
                 }
             });
         })
