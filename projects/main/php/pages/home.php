@@ -409,58 +409,58 @@
 						}
 
 						function create_geom(vertices, faces, radius, tab, af) {
-						var chamfer_vertices = [], chamfer_vectors = [], chamfer_faces = [];
-						if ( this.chamfer >= 1 ) {
-							console.log("chamfering");
-							for (var i = 0; i < vertices.length; ++i) {
-								chamfer_vectors.push((new THREE.Vector3).fromArray(vertices[i]).normalize());
-							}
-							for (var i = 0; i < faces.length; ++i) {
-								var ii = faces[i], fl = ii.length - 1;
-								var center_point = new THREE.Vector3();
-								var face = [];
-								for (var j = 0; j < fl; ++j) {
-									var vv = (new THREE.Vector3).fromArray(vertices[ii[j]]).normalize();
-									center_point.add(vv);
-									face.push(chamfer_vectors.push(vv) - 1);
+							var chamfer_vertices = [], chamfer_vectors = [], chamfer_faces = [];
+							if ( this.chamfer >= 1 ) {
+								console.log("chamfering");
+								for (var i = 0; i < vertices.length; ++i) {
+									chamfer_vectors.push((new THREE.Vector3).fromArray(vertices[i]).normalize());
 								}
-								center_point.divideScalar(fl);
-								for (var j = 0; j < fl; ++j) {
-									var vv = chamfer_vectors[face[j]];
-									vv.subVectors(vv, center_point);
-									vv.multiplyScalar(that.chamfer);
-									vv.addVectors(vv, center_point);
+								for (var i = 0; i < faces.length; ++i) {
+									var ii = faces[i], fl = ii.length - 1;
+									var center_point = new THREE.Vector3();
+									var face = [];
+									for (var j = 0; j < fl; ++j) {
+										var vv = (new THREE.Vector3).fromArray(vertices[ii[j]]).normalize();
+										center_point.add(vv);
+										face.push(chamfer_vectors.push(vv) - 1);
+									}
+									center_point.divideScalar(fl);
+									for (var j = 0; j < fl; ++j) {
+										var vv = chamfer_vectors[face[j]];
+										vv.subVectors(vv, center_point);
+										vv.multiplyScalar(that.chamfer);
+										vv.addVectors(vv, center_point);
+									}
+									for (var j = 0; j < fl - 1; ++j) {
+										chamfer_faces.push([ii[j], ii[j + 1], face[j + 1], face[j], -1]);
+									}
+									chamfer_faces.push([ii[fl - 1], ii[0], face[0], face[fl - 1], -1]);
+
+									face.push(ii[fl]);
+									chamfer_faces.push(face);
 								}
-								for (var j = 0; j < fl - 1; ++j) {
-									chamfer_faces.push([ii[j], ii[j + 1], face[j + 1], face[j], -1]);
+								for (var i = 0; i < chamfer_vectors.length; ++i) {
+									chamfer_vertices.push(chamfer_vectors[i].toArray());
 								}
-								chamfer_faces.push([ii[fl - 1], ii[0], face[0], face[fl - 1], -1]);
-
-								face.push(ii[fl]);
-								chamfer_faces.push(face);
+							} else {
+								chamfer_vertices = vertices;
+								chamfer_faces = faces;
 							}
-							for (var i = 0; i < chamfer_vectors.length; ++i) {
-								chamfer_vertices.push(chamfer_vectors[i].toArray());
+							if ( 0 ) {
+								chamfer_vertices = [[-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
+									[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]
+
+									[-1.1, -1.1, -1.1], [1.1, -1.1, -1.1], [1, 1, -1], [-1, 1, -1],
+										[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]];
+								chamfer_faces = [[0, 3, 2, 1, 1], [1, 2, 6, 5, 2], [0, 1, 5, 4, 3],
+									[3, 7, 6, 2, 4], [0, 4, 7, 3, 5], [4, 5, 6, 7, 6]
+
+									];
 							}
-						} else {
-							chamfer_vertices = vertices;
-							chamfer_faces = faces;
-						}
-						if ( 0 ) {
-							chamfer_vertices = [[-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
-								[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]
-
-								[-1.1, -1.1, -1.1], [1.1, -1.1, -1.1], [1, 1, -1], [-1, 1, -1],
-									[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]];
-							chamfer_faces = [[0, 3, 2, 1, 1], [1, 2, 6, 5, 2], [0, 1, 5, 4, 3],
-								[3, 7, 6, 2, 4], [0, 4, 7, 3, 5], [4, 5, 6, 7, 6]
-
-								];
-						}
-						console.log(chamfer_faces)
-						var geom = make_geom(chamfer_vertices, chamfer_faces, radius, tab, af);
-						geom.cannon_shape = create_shape(vertices, faces, radius);
-						return geom;
+							console.log(chamfer_faces)
+							var geom = make_geom(chamfer_vertices, chamfer_faces, radius, tab, af);
+							geom.cannon_shape = create_shape(vertices, faces, radius);
+							return geom;
 						}
 
 						this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
@@ -529,7 +529,7 @@
 											context.arc(margin/2+size*3/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true);
 											context.closePath();
 											break
-
+										
 									}
 									context.fill();
 								}

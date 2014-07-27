@@ -2,17 +2,17 @@
 <html>
 	<head>
 		<title>Lectures | Shaastra '15</title>
-    
+
 		<?php include '../base/head.php' ?>
 		<style>
-		
+
 		.speaker-list, .speaker-list .speaker-group {
 			height: 100%;
 			padding: 0;
 			margin: 0;
 			font-size: 0;
 		}
-		.speaker-list .speaker-group .speaker > div > .dummy { 
+		.speaker-list .speaker-group .speaker > div > .dummy {
 			margin-top: 100%; /* This is the height:width ratio */;
 		}
 		.speaker-list .speaker-group .speaker {
@@ -21,7 +21,7 @@
 			height: 33.33%;
 			display: inline-block;
 			font-size: 1em;
-			
+
 		}
 		.speaker-list .speaker-group .speaker.transition {
 			-webkit-transition: width 1000ms ease-in-out, height 1000ms ease-in-out;
@@ -34,7 +34,7 @@
 			width: 100%;
 			height: 100%;
 		}
-		.speaker-list .speaker-group .speaker a {	
+		.speaker-list .speaker-group .speaker a {
 			height: 100%;
 			width: 100%;
 			position: absolute;
@@ -49,8 +49,8 @@
 			font-size: 1.5vw;
 			font-weight: 900;
 			font-family: "Times New Roman", sans-serif;
-			letter-spacing: 0.1em; 
-			letter-spacing: 0.15vw; 
+			letter-spacing: 0.1em;
+			letter-spacing: 0.15vw;
 			text-transform: uppercase;
 			background: url('../../img/logo/200x200_dice_white.png') no-repeat center center;
 			background-size: cover;
@@ -58,15 +58,15 @@
 		}
 		.speaker-list .speaker-group .speaker a div {
 			position: relative;
-			-webkit-transition: margin 0.2s ease-out, 
+			-webkit-transition: margin 0.2s ease-out,
 			-webkit-transform 0.3s ease-out;
-			-moz-transition: margin 0.3s ease-out, 
+			-moz-transition: margin 0.3s ease-out,
 			-moz-transform 0.3s ease-out;
-			-ms-transition: margin 0.3s ease-out, 
+			-ms-transition: margin 0.3s ease-out,
 			-ms-transform 0.3s ease-out;
-			-o-transition: margin 0.3s ease-out, 
+			-o-transition: margin 0.3s ease-out,
 			-o-transform 0.3s ease-out;
-			transition: margin 0.3s ease-out, 
+			transition: margin 0.3s ease-out,
 			transform 0.3s ease-out;
 			height: 90%;
 			width: 90%;
@@ -88,7 +88,7 @@
 	$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
 	$speaker_count = count($speakers);
 	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-	    
+
 	    <?php if ($speaker_i == 0 || $speaker_i == 4 || $speaker_i == 8) { ?>
 	    <div class="row speaker-group">
 	    <?php } ?>
@@ -111,7 +111,7 @@
     <?php } ?>
 </div>
 	<?php include '../base/foot.php' ?>
-	
+
 	    <script>
 		function show_speakers() {
 			$speakers = $('.speaker'); // there are 10 speakers
@@ -119,7 +119,7 @@
 			delay = 1000;
 			$speakers.hide();
 			$(".speaker-list").show();
-			
+
 			// First page : nothing is there
 			$speakers.hide()
 			$speaker_groups.hide()
@@ -131,7 +131,7 @@
 					.animate({'width': '100%'}, delay);
 				$speaker_groups.eq(1).show()
 					.css({'height' : '100%'})
-					
+
 				setTimeout(function() {
 					console.log('Page 3 : 3');
 					// Page 3 : 1+1+1 speakers are there
@@ -141,7 +141,7 @@
 						.css({'height' : '0%'}, delay)
 					$speaker_groups.show()
 						.animate({'height' : '33%'}, delay)
-					
+
 					setTimeout(function() {
 						// Page 4 : 2+2+2
 						$speakers.eq(0).add($speakers.eq(4)).add($speakers.eq(8))
@@ -151,7 +151,7 @@
 								.css({'height':'100%', 'width':'0%'})
 								.animate({'width': '50%'}, delay)
 						}, 10);
-						
+
 						setTimeout(function() {
 							// Page 5 : 4+4+2
 							$speakers.eq(0).add($speakers.eq(3)).add($speakers.eq(4)).add($speakers.eq(7))
@@ -164,13 +164,11 @@
 						}, delay)
 					}, delay)
 				}, delay);
-			}, delay);
-			
-			
+			}, 1);
 		}
-		
+
 		$(document).ready(function() {
-			jsCache.load( 
+			jsCache.load(
         		<?php if ($DEBUG) { ?>
             		{url: '../../js/TweenMax.min.js'},
             		{url: '../../js/jquery.gsap.min.js'}

@@ -2,7 +2,7 @@
 <html>
 	<head>
 
-		<title>Contact Us | Shaastra 2015</title>		
+		<title>Contact Us | Shaastra 2015</title>
 
 		<?php include '../base/head.php' ?>
 		<style>
@@ -30,24 +30,24 @@
 		    margin: 0 auto;
 		    height: 5px;
 		    width: 35%;
-		}  
+		}
 
-		textarea {  
-		    width: 100%;  
-		    min-height: 100px;  
-		    font-size: 18px;  
-		    color: #444;  
+		textarea {
+		    width: 100%;
+		    min-height: 100px;
+		    font-size: 18px;
+		    color: #444;
 		    padding: 5px;
 		    word-wrap: break-word;
 		    resize: vertical;
-		}  
+		}
 
 		.left-inner-addon {
 		    position: relative;
 		}
 		.left-inner-addon input,
 		.left-inner-addon textarea {
-		    padding-left: 30px;    
+		    padding-left: 30px;
 		}
 		.left-inner-addon i {
 		    position: absolute;
@@ -59,7 +59,7 @@
 		    position: relative;
 		}
 		.right-inner-addon input {
-		    padding-right: 30px;    
+		    padding-right: 30px;
 		}
 		.right-inner-addon i {
 		    position: absolute;
@@ -68,11 +68,11 @@
 		    pointer-events: none;
 		}
 		</style>
-		
+
 	</head>
-	
+
 	<body>
-		<?php include '../base/menu.php' ?>		
+		<?php include '../base/menu.php' ?>
 		<div class="container-fluid title white centered" style="margin-bottom:2%;">
 			<div class="row">
 				<div class="col-xs-12">
@@ -85,16 +85,16 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="container-fluid" style="height:100%;">
 			<div class="row white" style="height : 70%;">
 				<div class="col-md-5 col-md-offset-1" style="height : 100%;">
 					<div class="container-fluid text-center white" style="height : 100%;">
 						<div class="row" style="padding: 0.3%; height : 50%;">
-							<div 
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
+							<div
+								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
 								style="margin: 1px;"
-								data-toggle="modal" 
+								data-toggle="modal"
 								data-target="#co-curricular">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
@@ -106,11 +106,11 @@
 									</span>
 								</span>
 							</div>
-								
-							<div 
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
+
+							<div
+								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
 								style="margin: 1px;"
-								data-toggle="modal" 
+								data-toggle="modal"
 								data-target="#spons_pr">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
@@ -125,10 +125,10 @@
 						</div>
 
 						<div class="row" style="padding: 0.3%; height : 50%;">
-							<div 
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
+							<div
+								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
 								style="margin: 1px;"
-								data-toggle="modal" 
+								data-toggle="modal"
 								data-target="#events_queries">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
@@ -139,11 +139,11 @@
 									</span>
 								</span>
 							</div>
-							
-							<div 
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12" 
+
+							<div
+								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
 								style="margin: 1px;"
-								data-toggle="modal" 
+								data-toggle="modal"
 								data-target="#student_relations">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
@@ -175,7 +175,7 @@
 								<a class="social-icon google" href="https://www.youtube.com/user/iitmshaastra"></a>
 							</div>
 						</div>
-						
+
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-1">
 								<button class="btn btn-lg btn-primary" style="margin-top: 2%" data-toggle="modal" data-target="#comments">
@@ -187,9 +187,9 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- modal for comments start -->
-		
+
 		<div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="comments" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content black">
@@ -240,7 +240,7 @@
 			</div>
 		</div>
 		<!-- modal for comments end -->
-		
+
 		<!-- modals for boxes start -->
 		<div class="modal fade" id="co-curricular" tabindex="-1" role="dialog" aria-labelledby="co-curricular" aria-hidden="true">
 			<div class="modal-dialog" style="width:40%">
@@ -251,7 +251,7 @@
 							<h1 class="text-center">Secretary</h1>
 						</div>
 					</div>
-					
+
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 text-center">
@@ -262,19 +262,19 @@
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : siddharthdialani@gmail.com
+									E-Mail : siddharth@shaastra.org
 								</p>
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="modal fade" id="spons_pr" tabindex="-1" role="dialog" aria-labelledby="spons_pr" aria-hidden="true">
 			<div class="modal-dialog" >
 				<div class="modal-content black">
@@ -284,7 +284,7 @@
 							<h1 class="text-center" style="color:black; font-family: 'Dosis', sans-serif">Sponsorships, PR and Networking</h1>
 						</div>
 					</div>
-					
+
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 text-center">
@@ -295,7 +295,7 @@
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : shubhamj2919@gmail.com
+									E-Mail : shubham@shaastra.org
 								</p>
 							</div>
 						</div>
@@ -305,24 +305,24 @@
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
 									Contact : 9840922780
-								</p> 
+								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : nehaashok1408@gmail.com
+									E-Mail : neha@shaastra.org
 								</p>
 							</div>
 						</div>
-						
+
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 text-center">
 								<h4>DEVAANSH SAMANT</h4>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
 									Contact : 9871077607
-								</p> 
+								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : devaanshsamant@gmail.com
+									E-Mail : devaansh@shaastra.org
 								</p>
 							</div>
 						</div>
@@ -342,7 +342,7 @@
 							<h1 class="text-center">Events</h1>
 						</div>
 					</div>
-					
+
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 text-center">
@@ -354,7 +354,7 @@
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
 									E-Mail : trshivaprasad@gmail.com
-								</p> 
+								</p>
 							</div>
 						</div>
 					</div>
@@ -373,7 +373,7 @@
 							<h1 class="text-center">Student Relations</h1>
 						</div>
 					</div>
-					
+
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-12">
@@ -385,7 +385,7 @@
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
-										E-Mail : namit91@gmail.com
+										E-Mail : namit@shaastra.org
 									</p>
 								</div>
 							</div>
@@ -397,13 +397,13 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- modals for boxes end -->
 
 		<!-- JS -->
 		<?php include '../base/foot.php' ?>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
-		
+
 		<script>
 			$(document).ready(function() {
 				$("#contact-menu").addClass("current_page");
@@ -422,5 +422,5 @@
 			});
 		</script>
 	</body>
-	
+
 </html>
