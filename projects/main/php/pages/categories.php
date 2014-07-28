@@ -24,11 +24,11 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
             border: 1px solid transparent;
-        }   
+        }
         #event-list .event-group .event-item:hover > div {
             border-color: #fff;
         }
-        #event-list .event-group .event-item > div > .dummy { 
+        #event-list .event-group .event-item > div > .dummy {
             margin-top: 100%; /* This is the height:width ratio */;
         }
         #event-list .event-bg {
@@ -50,37 +50,21 @@
             /*font-size: 1.5vw;*/
             font-weight: 900;
             font-family: "Times New Roman", sans-serif;
-            letter-spacing: 0.1em; 
+            letter-spacing: 0.1em;
             /*letter-spacing: 0.15vw; */
             text-transform: uppercase;
         }
-        /*@media screen and (-webkit-min-device-pixel-ratio:0) { 
-            #event-list .event-group .event-item .transparent-text {
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.2px;
-                -moz-text-stroke-width: 0.2px;
-                text-stroke-width: 0.2px;
-                -webkit-text-stroke-color: white;
-                -moz-text-stroke-color: white;
-                text-stroke-color: white;
-            }
-        }*/
         #event-list .event-group .event-item a div {
             position: relative;
-            -webkit-transition: margin 0.2s ease-out, 
+            -webkit-transition: margin 0.2s ease-out,
                 -webkit-transform 0.3s ease-out;
-            -moz-transition: margin 0.3s ease-out, 
+            -moz-transition: margin 0.3s ease-out,
                 -moz-transform 0.3s ease-out;
-            -ms-transition: margin 0.3s ease-out, 
+            -ms-transition: margin 0.3s ease-out,
                 -ms-transform 0.3s ease-out;
-            -o-transition: margin 0.3s ease-out, 
+            -o-transition: margin 0.3s ease-out,
                 -o-transform 0.3s ease-out;
-            transition: margin 0.3s ease-out, 
+            transition: margin 0.3s ease-out,
                 transform 0.3s ease-out;
             height: 100%;
             width: 100%;
@@ -92,12 +76,12 @@
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
             text-align: center;
-        }        
+        }
         #event-list .event-group .event-item a div > span > span > span {
             background-color: rgba(0, 0, 0, 0.95);
             width: 100%;
             display: inline-block;
-        }        
+        }
     </style>
 </head>
 <body>
@@ -134,28 +118,28 @@
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
-                <div class="row row-centered event-group 
+                <div class="row row-centered event-group
                 <?php
                     // Give different class to indicate first and last row
                     if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
                     elseif ($event_i == 0) echo ' first ';
                     elseif (floor($event_i/$event_row_count) == floor(($event_count-1)/$event_row_count)) echo ' last row-centered';
-                    
-                    
+
+
                 ?>">
             <?php } ?>
                     <div class="col-md-2 col-sm-4 col-sm-offset-0 col-xs-6 col-centered event-item event-bg <?php
                         // Give different class to indicate first and last column
                         if ($event_i % $event_row_count == 0) echo ' first ';
-                        elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last '; 
+                        elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last ';
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
-                            <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>" 
+                            <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
                                 href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
-                                        <span class="vertical-table-cell"> 
+                                        <span class="vertical-table-cell">
                                             <span>
                                                 <!-- <span class="transparent-text">
                                                     <?php echo $event; ?>
@@ -176,27 +160,29 @@
         ?>
     </div>
     </div>
-    </div>    
+    </div>
     <div class="animation aerofest"
         style="position:absolute; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:-100%;
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
+    <div class="animation department_flagship"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:-100%;
+            background: url(../../img/events/Department Flagship_animation.png) no-repeat center center;
+            background-size: auto 100%;">
+    </div>
+
     <div class="animation coding"
         style="position:absolute; z-index: -1;top:0%; overflow: hidden;
             height: 100%; width: 100%; left:0%;">
-        <canvas id="q" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>        
+        <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
-<!--     <div class="container-fluid" id="matrix" style="position:absolute;top:0%;z-index:-10">
-        <canvas id="q" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
-    </div> -->
     <?php include '../base/foot.php' ?>
-    <script type="text/javascript">    
+    <script type="text/javascript">
     var animation_time = 1000;
-    var sWidth = window.innerWidth;
-    var sHeight = window.innerHeight;
-    $(document).ready(function() {            
+    $(document).ready(function() {
         $(".category-link").click(function(ev) {
             ev.preventDefault();
             var that = this;
@@ -207,56 +193,52 @@
                     .animate({
                     left: "100%"
                 }, animation_time)
+
+
             } else if($el.hasClass("b-events")) {
                 $(".animation.aerofest")
                     .css("z-index", 10000)
                     .animate({
                     left: "100%"
                 }, animation_time)
+
+
             } else if($el.hasClass("coding")) {
-                    $(".animation.coding").css("z-index", 10000);                  
-                    q.width = sWidth;
-                    q.height = sHeight;
-                    console.log(q.height);
-                    var yPositions = Array(300).join(0).split('');
-                    var ctx=q.getContext('2d');                        
-                    var draw = function () {
-                      ctx.fillStyle='rgba(0,0,0,.05)';
-                      ctx.fillRect(0,0,sWidth,sHeight);
-                      ctx.fillStyle='#0F0';
-                      ctx.font = '10pt Georgia';
-                      yPositions.map(function(y, index){
+                animation_time = 2000;
+                $(".animation.coding").css("z-index", 10000);
+                var $canvas = $(".animation.coding").find("canvas")
+                var Game_Interval = 0;
+                var yPositions = Array(300).join(0).split('');
+                var ctx = $canvas[0].getContext('2d');
+                $canvas.width('100%')
+                $canvas.height('100%')
+                var draw = function () {
+                    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+                    ctx.fillRect(0, 0, $canvas.width(), $canvas.width());
+                    ctx.fillStyle = '#0F0';
+                    ctx.font = '10pt Georgia';
+                    yPositions.map(function(y, index){
                         text = String.fromCharCode(1e2+Math.random()*33);
                         x = (index * 10)+10;
-                        q.getContext('2d').fillText(text, x, y);
-                        if(y > 100 + Math.random()*1e4)
-                        {
-                          yPositions[index]=0;
+                        ctx.fillText(text, x, y);
+                        if(y > 100 + Math.random()*1e4) {
+                            yPositions[index] = 0;
+                        } else {
+                            yPositions[index] = y + 10;
                         }
-                        else
-                        {
-                          yPositions[index] = y + 10;
-                        }
-                      });
-                    }
-                    function RunMatrix(){
-                        console.log("Hi11");
-                        if(typeof Game_Interval != "undefined"){
-                            console.log("true");
-                            clearInterval(Game_Interval);
-                        } 
-                        Game_Interval = setInterval(draw, 30);
-                    }
-                    function StopMatrix(){
-                        clearInterval(Game_Interval);
-                    }
-                    console.log("Hi!");
-                    setTimeout(function(){RunMatrix()}, 200);            
-                    setTimeout(function(){$(".animation.coding").fadeOut(3000)},3000);
-                    setTimeout(function(){StopMatrix()}, 4000);                        
-                    animation_time = 4000;
+                    });
+                }
+                Game_Interval = setInterval(draw, 5);
+                setTimeout( function(){
+                    $(".animation.coding").fadeOut(animation_time*0.1)
+                }, animation_time*0.9);
+                setTimeout(function(){
+                    if(Game_Interval) clearInterval(Game_Interval);
+                }, animation_time);
+
+
             } else if($el.hasClass("department_flagship")) {
-                $(".animation.aerofest")
+                $(".animation.department_flagship")
                     .css("z-index", 10000)
                     .animate({
                     left: "100%"
@@ -305,66 +287,10 @@
                 }, animation_time)
             }
             setTimeout(function() {
-                window.location = that.href;
+                //window.location = that.href;
             }, animation_time)
         });
     });
-        //aerofest Animation
-        // $("#eventDetail_Aerofest").click(function(event){
-        //     event.preventDefault();
-        //     linkLocation = this.href;
-        //     // $("body").fadeOut(1000, redirectPage);      
-        //     $("#aeroplane").css("display", "inline");
-        //     $("#aeroplane").animate({left:"100%"},"slow",redirectPage);            
-        // });        
-        //Coding Animation
-        // var sWidth = window.innerWidth;
-        // var sHeight = window.innerHeight;
-        // q.width = sWidth;
-        // q.height = sHeight;
-        // var yPositions = Array(300).join(0).split('');
-        // var ctx=q.getContext('2d');
-         
-        // var draw = function () {
-        //   ctx.fillStyle='rgba(0,0,0,.05)';
-        //   ctx.fillRect(0,0,sWidth,sHeight);
-        //   ctx.fillStyle='#0F0';
-        //   ctx.font = '10pt Georgia';
-        //   yPositions.map(function(y, index){
-        //     text = String.fromCharCode(1e2+Math.random()*33);
-        //     x = (index * 10)+10;
-        //     q.getContext('2d').fillText(text, x, y);
-        //     if(y > 100 + Math.random()*1e4)
-        //     {
-        //       yPositions[index]=0;
-        //     }
-        //     else
-        //     {
-        //       yPositions[index] = y + 10;
-        //     }
-        //   });
-        // };
-        // function RunMatrix()
-        // {
-        //     if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
-        //         Game_Interval = setInterval(draw, 30);
-        // }
-        // function StopMatrix()
-        // {
-        //     clearInterval(Game_Interval);
-        // }
-        // $("#eventDetail_Coding").click(function(event){
-        //     event.preventDefault();
-        //     linkLocation = this.href;
-        //     $("#matrix").css("z-index",10);
-        //     setTimeout(function(){RunMatrix()}, 200);            
-        //     setTimeout(function(){$("#matrix").fadeOut(3000)},4500);
-        //     setTimeout(function(){StopMatrix()}, 5500);
-        //     setTimeout(function(){redirectPage();},5500);
-        // });
-        // function redirectPage() {
-        //     window.location = linkLocation;
-        // }  
-    </script>    
+    </script>
 </body>
 </html>
