@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/demo.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/component.css" /> -->
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
@@ -167,18 +165,26 @@
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
-    <div class="animation department_flagship"
-        style="position:absolute; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:-100%;
-            background: url(../../img/events/Department Flagship_animation.png) no-repeat center center;
-            background-size: auto 100%;">
+    
+    <div class="animation b-events"
+        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+        height: 100%; width: 100%; left:0%;">
+        <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>        
     </div>
 
     <div class="animation coding"
         style="position:absolute; z-index: -1;top:0%; overflow: hidden;
-            height: 100%; width: 100%; left:0%;">
+        height: 100%; width: 100%; left:0%;">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
+
+    <div class="animation department_flagship"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:-100%;
+            background: url(../../img/events/Department_Flagship_animation.png) no-repeat center center;
+            background-size: auto 100%;">
+    </div>
+
     <?php include '../base/foot.php' ?>
     <script type="text/javascript">
         var animation_time = 1000;
@@ -196,11 +202,84 @@
 
 
                 } else if($el.hasClass("b-events")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    animation_time = 2200;
+                    $(".animation.b-events").css("z-index", 10000);
+                    // var $canvas = $(".animation.b-events").find("canvas")
+                    // var Game_Interval = 0;
+                    // var yPositions = Array(300).join(0).split('');
+                    // var ctx = $canvas[0].getContext('2d');
+                    // $canvas.width('100%');
+                    // $canvas.height('100%');
+                    var canvas = document.getElementById("canvasB"),
+                    ctx = canvas.getContext("2d");
+
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+
+                    var points = [],
+                    currentPoint = 1,
+                    nextTime = new Date().getTime()+500,
+                    pace = 10;
+
+                    // make some points
+                    points.push({
+                        x: 0.05*canvas.width, 
+                        y: 0.1*canvas.height
+                    });
+                    points.push({
+                        x: 0.05*canvas.width, 
+                        y: 0.95*canvas.height
+                    });
+                    points.push({
+                        x: 0.95*canvas.width, 
+                        y: 0.95*canvas.height
+                    });
+
+                    for (var i = 3; i < 100; i++) {
+                        points.push({
+                            x: (0.1*canvas.width)+i * (0.8*canvas.width/100),
+                            y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 100
+                        });
+                    }
+
+                    function draw() {
+
+                        if(new Date().getTime() > nextTime){
+                            nextTime = new Date().getTime() + pace;
+
+                            currentPoint++;
+                            if(currentPoint > points.length){
+                                currentPoint = 0;
+                            }
+                        }
+                        // ctx.clearRect(0,0,canvas.width, canvas.height);
+                        ctx.lineWidth = 2;
+                        ctx.strokeStyle = '#fff';
+                        ctx.fillStyle = '#fff';
+                        ctx.beginPath();
+                        ctx.moveTo(points[0].x, points[0].y);                        
+                        for (var p = 1; p < 3; p++) {
+                            ctx.lineTo(points[p].x, points[p].y);
+                        }
+                        ctx.stroke();
+
+                        ctx.lineWidth = 5;
+                        ctx.strokeStyle = '#00425a';
+                        ctx.fillStyle = '#00425a';
+                        ctx.beginPath();
+                        ctx.moveTo(points[3].x, points[3].y);                        
+                        for (var p = 4, plen = currentPoint; p < plen; p++) {
+                            ctx.lineTo(points[p].x, points[p].y);
+                        }
+                        ctx.stroke();
+
+                        window.requestAnimationFrame(draw);
+                    }
+
+                    draw();
+                    setTimeout( function(){
+                        $(".animation.b-events").fadeOut(animation_time*0.1)
+                    }, animation_time*0.9);
 
 
                 } else if($el.hasClass("coding")) {
@@ -242,7 +321,8 @@
                         .css("z-index", 10000)
                         .animate({
                         left: "100%"
-                    }, animation_time)
+                    }, animation_time);
+
                 } else if($el.hasClass("design_and_build")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
@@ -287,7 +367,7 @@
                     }, animation_time)
                 }
                 setTimeout(function() {
-                    //window.location = that.href;
+                    window.location = that.href;
                 }, animation_time)
             });
         });
