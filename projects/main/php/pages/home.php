@@ -329,8 +329,8 @@
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
-						dice.body.linearDamping = 0;
-						dice.body.angularDamping = 0;
+						dice.body.linearDamping = 0.1;
+						dice.body.angularDamping = 0.1;
 						_this.scene.add(dice);
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
@@ -343,8 +343,8 @@
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
-						dice.body.linearDamping = 0;
-						dice.body.angularDamping = 0;
+						dice.body.linearDamping = 0.1;
+						dice.body.angularDamping = 0.1;
 						_this.scene.add(dice);
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
@@ -659,26 +659,6 @@
 							this.renderer.render(this.scene, this.camera);
 
 							make_shaastra_logo(this, that);
-						}
-
-						this.dice_box.prototype.create_dice = function(pos, velocity, angle) {
-							if (!that.dice_geometry) that.dice_geometry = that.create_dice_geometry(that.scale * 0.9);
-							if (!that.dice_material) that.dice_material = new THREE.MeshFaceMaterial(
-								that.create_dice_materials(that.dice_face_labels, that.scale, that.scale/5));
-							var dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
-
-							dice.castShadow = true;
-							dice.body = new CANNON.RigidBody(that.dice_mass,
-								dice.geometry.cannon_shape, this.dice_body_material);
-							dice.body.position.set(pos.x, pos.y, pos.z);
-							dice.body.quaternion.setFromAxisAngle(new CANNON.Vec3(rnd(), rnd(), rnd()), rnd() * Math.PI * 2);
-							dice.body.angularVelocity.set(angle.x, angle.y, angle.z);
-							dice.body.velocity.set(velocity.x, velocity.y, velocity.z);
-							dice.body.linearDamping = 0.1;
-							dice.body.angularDamping = 0.1;
-							this.scene.add(dice);
-							this.dices.push(dice);
-							this.world.add(dice.body);
 						}
 
 						this.dice_box.prototype.check = function() {

@@ -104,7 +104,7 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
-            $event_row_count = 5;
+            $event_row_count = 4;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
