@@ -364,10 +364,8 @@
                         });
                     }
                     function drawGraph() {
-
                         if(new Date().getTime() > nextTime){
                             nextTime = new Date().getTime() + pace;
-
                             currentPoint++;
                             if(currentPoint > points.length){
                                 currentPoint = 0;
@@ -403,7 +401,6 @@
                             ctx.lineTo(points2[p].x, points2[p].y);
                         }
                         ctx.stroke();
-
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
@@ -457,6 +454,7 @@
                         .animate({
                         left: "100%"
                     }, animation_time)
+
                 } else if($el.hasClass("electronics_fest")) {
                     $(".animation.electronics_fest").css("z-index", 10000);
                     animation_time = 1700;
@@ -546,6 +544,7 @@
                     //     .animate({
                     //     left: "100%"
                     // }, animation_time)
+
                 } else if($el.hasClass("sampark")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
