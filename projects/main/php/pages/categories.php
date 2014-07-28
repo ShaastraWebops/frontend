@@ -181,116 +181,116 @@
     </div>
     <?php include '../base/foot.php' ?>
     <script type="text/javascript">
-    var animation_time = 1000;
-    $(document).ready(function() {
-        $(".category-link").click(function(ev) {
-            ev.preventDefault();
-            var that = this;
-            var $el = $(this);
-            if( $el.hasClass("aerofest")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
+        var animation_time = 1000;
+        $(document).ready(function() {
+            $(".category-link").click(function(ev) {
+                ev.preventDefault();
+                var that = this;
+                var $el = $(this);
+                if( $el.hasClass("aerofest")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
 
 
-            } else if($el.hasClass("b-events")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
+                } else if($el.hasClass("b-events")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
 
 
-            } else if($el.hasClass("coding")) {
-                animation_time = 2000;
-                $(".animation.coding").css("z-index", 10000);
-                var $canvas = $(".animation.coding").find("canvas")
-                var Game_Interval = 0;
-                var yPositions = Array(300).join(0).split('');
-                var ctx = $canvas[0].getContext('2d');
-                $canvas.width('100%')
-                $canvas.height('100%')
-                var draw = function () {
-                    ctx.fillStyle = 'rgba(0,0,0,0.05)';
-                    ctx.fillRect(0, 0, $canvas.width(), $canvas.width());
-                    ctx.fillStyle = '#0F0';
-                    ctx.font = '10pt Georgia';
-                    yPositions.map(function(y, index){
-                        text = String.fromCharCode(1e2+Math.random()*33);
-                        x = (index * 10)+10;
-                        ctx.fillText(text, x, y);
-                        if(y > 100 + Math.random()*1e4) {
-                            yPositions[index] = 0;
-                        } else {
-                            yPositions[index] = y + 10;
-                        }
-                    });
+                } else if($el.hasClass("coding")) {
+                    animation_time = 2000;
+                    $(".animation.coding").css("z-index", 10000);
+                    var $canvas = $(".animation.coding").find("canvas")
+                    var Game_Interval = 0;
+                    var yPositions = Array(300).join(0).split('');
+                    var ctx = $canvas[0].getContext('2d');
+                    $canvas.width('100%')
+                    $canvas.height('100%')
+                    var draw = function () {
+                        ctx.fillStyle = 'rgba(0,0,0,0.05)';
+                        ctx.fillRect(0, 0, $canvas.width(), $canvas.width());
+                        ctx.fillStyle = '#0F0';
+                        ctx.font = '10pt Georgia';
+                        yPositions.map(function(y, index){
+                            text = String.fromCharCode(1e2+Math.random()*33);
+                            x = (index * 10)+10;
+                            ctx.fillText(text, x, y);
+                            if(y > 100 + Math.random()*1e4) {
+                                yPositions[index] = 0;
+                            } else {
+                                yPositions[index] = y + 10;
+                            }
+                        });
+                    }
+                    Game_Interval = setInterval(draw, 5);
+                    setTimeout( function(){
+                        $(".animation.coding").fadeOut(animation_time*0.1)
+                    }, animation_time*0.9);
+                    setTimeout(function(){
+                        if(Game_Interval) clearInterval(Game_Interval);
+                    }, animation_time);
+
+
+                } else if($el.hasClass("department_flagship")) {
+                    $(".animation.department_flagship")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("design_and_build")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("electronics_fest")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("involve_and_quizzes")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("sampark")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("shows")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("spotlight")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
+                } else if($el.hasClass("workshops")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
                 }
-                Game_Interval = setInterval(draw, 5);
-                setTimeout( function(){
-                    $(".animation.coding").fadeOut(animation_time*0.1)
-                }, animation_time*0.9);
-                setTimeout(function(){
-                    if(Game_Interval) clearInterval(Game_Interval);
-                }, animation_time);
-
-
-            } else if($el.hasClass("department_flagship")) {
-                $(".animation.department_flagship")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
+                setTimeout(function() {
+                    //window.location = that.href;
                 }, animation_time)
-            } else if($el.hasClass("design_and_build")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("electronics_fest")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("involve_and_quizzes")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("sampark")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("shows")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("spotlight")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            } else if($el.hasClass("workshops")) {
-                $(".animation.aerofest")
-                    .css("z-index", 10000)
-                    .animate({
-                    left: "100%"
-                }, animation_time)
-            }
-            setTimeout(function() {
-                //window.location = that.href;
-            }, animation_time)
+            });
         });
-    });
     </script>
 </body>
 </html>
