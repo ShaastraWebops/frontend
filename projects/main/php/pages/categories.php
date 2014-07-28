@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
