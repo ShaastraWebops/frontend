@@ -329,8 +329,8 @@
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
-						dice.body.linearDamping = 0;
-						dice.body.angularDamping = 0;
+						dice.body.linearDamping = 0.1;
+						dice.body.angularDamping = 0.1;
 						_this.scene.add(dice);
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
@@ -343,8 +343,8 @@
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
-						dice.body.linearDamping = 0;
-						dice.body.angularDamping = 0;
+						dice.body.linearDamping = 0.1;
+						dice.body.angularDamping = 0.1;
 						_this.scene.add(dice);
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
@@ -410,8 +410,7 @@
 
 						function create_geom(vertices, faces, radius, tab, af) {
 							var chamfer_vertices = [], chamfer_vectors = [], chamfer_faces = [];
-							if ( this.chamfer >= 1 ) {
-								console.log("chamfering");
+							if ( that.chamfer < 1 ) {
 								for (var i = 0; i < vertices.length; ++i) {
 									chamfer_vectors.push((new THREE.Vector3).fromArray(vertices[i]).normalize());
 								}
@@ -446,18 +445,6 @@
 								chamfer_vertices = vertices;
 								chamfer_faces = faces;
 							}
-							if ( 0 ) {
-								chamfer_vertices = [[-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1],
-									[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]
-
-									[-1.1, -1.1, -1.1], [1.1, -1.1, -1.1], [1, 1, -1], [-1, 1, -1],
-										[-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]];
-								chamfer_faces = [[0, 3, 2, 1, 1], [1, 2, 6, 5, 2], [0, 1, 5, 4, 3],
-									[3, 7, 6, 2, 4], [0, 4, 7, 3, 5], [4, 5, 6, 7, 6]
-
-									];
-							}
-							console.log(chamfer_faces)
 							var geom = make_geom(chamfer_vertices, chamfer_faces, radius, tab, af);
 							geom.cannon_shape = create_shape(vertices, faces, radius);
 							return geom;
@@ -529,7 +516,7 @@
 											context.arc(margin/2+size*3/4, margin/2+size*2.5/4, size / rad, 0, Math.PI*2, true);
 											context.closePath();
 											break
-										
+
 									}
 									context.fill();
 								}
@@ -542,6 +529,7 @@
 								var text_texture = create_text_texture(face_labels[i], this.label_color, this.dice_color);
 								this.material_options.map = text_texture;
 								materials.push(new THREE.MeshPhongMaterial( this.material_options ));
+								//materials.push(new THREE.MeshBasicMaterial({ wireframe: true, color: 'blue' }))
 							}
 							return materials;
 						}
@@ -559,13 +547,13 @@
 						}
 
 						this.scale = 50;
-						this.chamfer = 1.;
+						this.chamfer = 1;
 						this.material_options = {
-						specular: '#171d1f',
-						color: '#ffffff',
-						emissive: '#000000',
-						shininess: 30,
-						shading: THREE.FlatShading,
+							specular: '#171d1f',
+							color: '#ffffff',
+							emissive: '#000000',
+							shininess: 30,
+							shading: THREE.FlatShading,
 						};
 						this.label_color = '#aaaaaa';
 						this.dice_color = '#00343e'; //'#00445e';
@@ -604,7 +592,9 @@
 							this.scene.add(ambientLight);
 							var mw = Math.max(this.w, this.h);
 							var light = new THREE.SpotLight(0xffffff);
-							light.position.set(-mw / 2, mw / 2, mw * 2);
+							console.log(this.w)
+							console.log(this.h)
+							light.position.set(0, this.h, mw);
 							light.target.position.set(0, 0, 0);
 							light.castShadow = true;
 							light.shadowCameraNear = mw / 10;
@@ -664,7 +654,6 @@
 
 							var mouse_captured = false;
 
-
 							this.running = (new Date()).getTime();
 							this.last_time = 0;
 							this.renderer.render(this.scene, this.camera);
@@ -672,115 +661,96 @@
 							make_shaastra_logo(this, that);
 						}
 
-						this.dice_box.prototype.create_dice = function(pos, velocity, angle) {
-							if (!that.dice_geometry) that.dice_geometry = that.create_dice_geometry(that.scale * 0.9);
-							if (!that.dice_material) that.dice_material = new THREE.MeshFaceMaterial(
-								that.create_dice_materials(that.dice_face_labels, that.scale, that.scale/5));
-							var dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
-
-							dice.castShadow = true;
-							dice.body = new CANNON.RigidBody(that.dice_mass,
-								dice.geometry.cannon_shape, this.dice_body_material);
-							dice.body.position.set(pos.x, pos.y, pos.z);
-							dice.body.quaternion.setFromAxisAngle(new CANNON.Vec3(rnd(), rnd(), rnd()), rnd() * Math.PI * 2);
-							dice.body.angularVelocity.set(angle.x, angle.y, angle.z);
-							dice.body.velocity.set(velocity.x, velocity.y, velocity.z);
-							dice.body.linearDamping = 0.1;
-							dice.body.angularDamping = 0.1;
-							this.scene.add(dice);
-							this.dices.push(dice);
-							this.world.add(dice.body);
-						}
-
 						this.dice_box.prototype.check = function() {
-						var res = true;
-						var e = 6;
-						var time = (new Date()).getTime();
-						if (time - this.running < 10000) {
-							for (var i = 0; i < this.dices.length; ++i) {
-							var dice = this.dices[i];
-							if (dice.dice_stopped == true) continue;
-							var a = dice.body.angularVelocity, v = dice.body.velocity;
-							if (Math.abs(a.x) < e && Math.abs(a.y) < e && Math.abs(a.z) < e &&
-								Math.abs(v.x) < e && Math.abs(v.y) < e && Math.abs(v.z) < e) {
-								if (dice.dice_stopped) {
-								if (time - dice.dice_stopped > 50) {
-									dice.dice_stopped = true;
-									continue;
+							var res = true;
+							var e = 6;
+							var time = (new Date()).getTime();
+							if (time - this.running < 10000) {
+								for (var i = 0; i < this.dices.length; ++i) {
+									var dice = this.dices[i];
+									if (dice.dice_stopped == true) continue;
+									var a = dice.body.angularVelocity, v = dice.body.velocity;
+									if (Math.abs(a.x) < e && Math.abs(a.y) < e && Math.abs(a.z) < e &&
+										Math.abs(v.x) < e && Math.abs(v.y) < e && Math.abs(v.z) < e) {
+										if (dice.dice_stopped) {
+											if (time - dice.dice_stopped > 50) {
+												dice.dice_stopped = true;
+												continue;
+											}
+										}
+										else dice.dice_stopped = (new Date()).getTime();
+										res = false;
+									}
+									else {
+										dice.dice_stopped = undefined;
+										res = false;
+									}
 								}
+							}
+							if (res) {
+								this.running = false;
+								var values = [];
+								for (var i in this.dices) {
+								var dice = this.dices[i], invert = 1;
+								var intersects = (new THREE.Raycaster(
+										new THREE.Vector3(dice.position.x, dice.position.y, 200 * invert),
+										new THREE.Vector3(0, 0, -1 * invert))).intersectObjects([dice]);
+								var matindex = intersects[0].face.materialIndex - 1;
+								values.push(matindex);
 								}
-								else dice.dice_stopped = (new Date()).getTime();
-								res = false;
+								if (this.callback) this.callback.call(this, values);
 							}
-							else {
-								dice.dice_stopped = undefined;
-								res = false;
-							}
-							}
-						}
-						if (res) {
-							this.running = false;
-							var values = [];
-							for (var i in this.dices) {
-							var dice = this.dices[i], invert = 1;
-							var intersects = (new THREE.Raycaster(
-									new THREE.Vector3(dice.position.x, dice.position.y, 200 * invert),
-									new THREE.Vector3(0, 0, -1 * invert))).intersectObjects([dice]);
-							var matindex = intersects[0].face.materialIndex - 1;
-							values.push(matindex);
-							}
-							if (this.callback) this.callback.call(this, values);
-						}
 						}
 
 						this.dice_box.prototype.__animate = function(threadid) {
-						var time = (new Date()).getTime();
-						var time_diff = (time - this.last_time) / 1000;
-						if (time_diff > 3) time_diff = 1 / 60;
-						while (time_diff > 1.1 / 60) {
-							this.world.step(1 / 60);
-							time_diff -= 1 / 60;
-						}
-						this.world.step(time_diff);
-						for (var i in this.scene.children) {
-							var interact = this.scene.children[i];
-							if (interact.body != undefined) {
-							interact.body.position.copy(interact.position);
-							interact.body.quaternion.copy(interact.quaternion);
+							var time = (new Date()).getTime();
+							var time_diff = (time - this.last_time) / 1000;
+							if (time_diff > 3) time_diff = 1 / 60;
+							while (time_diff > 1.1 / 60) {
+								this.world.step(1 / 60);
+								time_diff -= 1 / 60;
 							}
-						}
-						this.renderer.render(this.scene, this.camera);
-						this.last_time = this.last_time ? time : (new Date()).getTime();
-						if (this.running == threadid) this.check();
-						//if (this.running == threadid) {
-							(function(t, tid) {
-							requestAnimationFrame(function() { t.__animate(tid); });
-							})(this, threadid);
-						//} else {
-						//    console.log('STOPPED');
-							// move them to the center
-						//}
+							this.world.step(time_diff);
+							for (var i in this.scene.children) {
+								var interact = this.scene.children[i];
+								if (interact.body != undefined) {
+									interact.body.position.copy(interact.position);
+									interact.body.quaternion.copy(interact.quaternion);
+								}
+							}
+							this.renderer.render(this.scene, this.camera);
+							this.last_time = this.last_time ? time : (new Date()).getTime();
+
+							if (this.running == threadid) this.check();
+							if (this.running == threadid) {
+								(function(t, tid) {
+									requestAnimationFrame(function() { t.__animate(tid); });
+								})(this, threadid);
+							} else {
+							    console.log('STOPPED');
+								// move them to the center
+							}
 						}
 
 						this.dice_box.prototype.clear = function() {
-						this.running = false;
-						var dice;
-						while (dice = this.dices.pop()) {
-							this.scene.remove(dice);
-							if (dice.body) { this.world.remove(dice.body) };
-						}
-						this.renderer.render(this.scene, this.camera);
+							this.running = false;
+							var dice;
+							while (dice = this.dices.pop()) {
+								this.scene.remove(dice);
+								if (dice.body) { this.world.remove(dice.body) };
+							}
+							this.renderer.render(this.scene, this.camera);
 						}
 
 						function make_random_vector(vector) {
-						var random_angle = rnd() * Math.PI / 5 - Math.PI / 5 / 2;
-						var vec = {
-							x: vector.x * Math.cos(random_angle) - vector.y * Math.sin(random_angle),
-							y: vector.x * Math.sin(random_angle) + vector.y * Math.cos(random_angle)
-						};
-						if (vec.x == 0) vec.x = 0.01;
-						if (vec.y == 0) vec.y = 0.01;
-						return vec;
+							var random_angle = rnd() * Math.PI / 5 - Math.PI / 5 / 2;
+							var vec = {
+								x: vector.x * Math.cos(random_angle) - vector.y * Math.sin(random_angle),
+								y: vector.x * Math.sin(random_angle) + vector.y * Math.cos(random_angle)
+							};
+							if (vec.x == 0) vec.x = 0.01;
+							if (vec.y == 0) vec.y = 0.01;
+							return vec;
 						}
 
 						this.dice_box.prototype.roll = function(vector, boost, callback) {
@@ -796,7 +766,7 @@
 								};
 								this.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
 								this.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
-
+								this.dices[i].dice_stopped = false;
 							}
 							this.callback = callback;
 							this.running = (new Date()).getTime();
@@ -831,16 +801,15 @@
 										y: rnd() * vec.x * 5 + inertia * vec.x,
 										z: rnd() * 3
 									};
-									console.log(angle);
-									console.log(velocity);
 									box.dices[i].body.position.set(box.dices[i].body.position.x, box.dices[i].body.position.y, 200+box.dices[i].body.position.z);
 									box.dices[i].body.angularVelocity.set(angle.x, angle.y, angle.z);
 									box.dices[i].body.velocity.set(velocity.x, velocity.y, velocity.z);
-
+									box.dices[i].dice_stopped = false;
 								}
+								box.rolling = true;
 								box.running = (new Date()).getTime();
 								box.last_time = 0;
-								box.__animate(this.running);
+								box.__animate(box.running);
 							} else {
 								var time_int = (new Date()).getTime() - box.mouse_time;
 								if (time_int > 2000) time_int = 2000;
@@ -868,6 +837,10 @@
 			       function(outp) { // after
 
 			});
+			window.addEventListener('resize', function() {
+				$("canvas").remove()
+				init3d();
+		    });
 		}
         </script>
 	</body>
