@@ -282,15 +282,15 @@
     <div class="animation design_and_build"
         style="position:absolute; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
-        <img id="nut" src="../../img/events/nut.png">
-        <img id="spanner" src="../../img/events/spanner.png">
+        <!-- <img id="nut" src="../../img/events/nut.png"> -->
+        <!-- <img id="spanner" src="../../img/events/spanner.png"> -->
         <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
     </div>
 
     <div class="animation sampark"
         style="position:fixed; z-index: -1; overflow: auto;
             height: 100%; width: 100%; top:0%; left:0%;display:none" align="center">
-        <img src="../../img/events/samparkMap.png">
+        <!-- <img src="../../img/events/samparkMap.png"> -->
     </div>
 
     <div class="animation shows"
@@ -506,7 +506,6 @@
                                     {x:0.9*canvas.width,y:0.34*canvas.height});
                     console.log(redPoints.length+" "+bluePoints.length);
                     function drawCircuit() {
-
                         if(new Date().getTime() > nextTime){
                             nextTime = new Date().getTime() + pace;
 
@@ -541,11 +540,11 @@
                     }, animation_time*0.6);
 
                 } else if($el.hasClass("involve_and_quizzes")) {
-                    // $(".animation.aerofest")
-                    //     .css("z-index", 10000)
-                    //     .animate({
-                    //     left: "100%"
-                    // }, animation_time)
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
 
                 } else if($el.hasClass("sampark")) {
                     $(".animation.aerofest")
