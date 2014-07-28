@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-    
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/demo.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/component.css" /> -->
     <?php include '../base/head.php' ?>
     <style>
         #event-list {
@@ -150,7 +151,8 @@
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
-                            <a class="eventDetail_<?php echo $event ?>" href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+                            <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>" 
+                                href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell"> 
@@ -174,39 +176,195 @@
         ?>
     </div>
     </div>
+    </div>    
+    <div class="animation aerofest"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:-100%;
+            background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
+            background-size: auto 100%;">
     </div>
-    <div id="aeroplane" style="position:absolute; top:10%; left:-10%; display:none">
-        <img src="../../img/events/pageTransition/Aerofest.png">
+    <div class="animation coding"
+        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+            height: 100%; width: 100%; left:0%;">
+        <canvas id="q" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>        
     </div>
+<!--     <div class="container-fluid" id="matrix" style="position:absolute;top:0%;z-index:-10">
+        <canvas id="q" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
+    </div> -->
     <?php include '../base/foot.php' ?>
-    <script>
-    $(document).ready(function() {
-        $transtext = $('.transparent-text');
-        if ( ( $transtext.css('text-stroke-color') !== undefined ||
-            $transtext.css('-webkit-text-stroke-color') !== undefined ||
-            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
-            ( $transtext.css('text-stroke-width') !== undefined ||
-            $transtext.css('-webkit-text-stroke-width') !== undefined ||
-            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
-            ( $transtext.css('background-clip') === 'text' ||
-            $transtext.css('-webkit-background-clip') == 'text' ||
-            $transtext.css('-moz-background-clip') === 'text' ) &&
-            ( $transtext.css('text-fill-color') !== undefined ||
-            $transtext.css('-webkit-text-fill-color') !== undefined ||
-            $transtext.css('-moz-text-fill-color') !== undefined ) &&
-            ( $transtext.css('background-clip') !== undefined ||
-            $transtext.css('-webkit-background-clip') !== undefined ||
-            $transtext.css('-moz-background-clip') !== undefined ) ) {
-            // Phew ... the condition is valid => transparent-text works !
-            $transtext.each(function(i) {
-                var $el = $(this);
-                var $el_event = $el.closest('.event-item');
-                $el.css('background-image', $el_event.css('background-image'))
-                    .css('background-repeat', $el_event.css('background-repeat'))
-                    .css('background-size', $el_event.css('background-size'));
-            })
-        }
-    })
-    </script>
+    <script type="text/javascript">    
+    var animation_time = 1000;
+    var sWidth = window.innerWidth;
+    var sHeight = window.innerHeight;
+    $(document).ready(function() {            
+        $(".category-link").click(function(ev) {
+            ev.preventDefault();
+            var that = this;
+            var $el = $(this);
+            if( $el.hasClass("aerofest")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("b-events")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("coding")) {
+                    $(".animation.coding").css("z-index", 10000);                  
+                    q.width = sWidth;
+                    q.height = sHeight;
+                    console.log(q.height);
+                    var yPositions = Array(300).join(0).split('');
+                    var ctx=q.getContext('2d');                        
+                    var draw = function () {
+                      ctx.fillStyle='rgba(0,0,0,.05)';
+                      ctx.fillRect(0,0,sWidth,sHeight);
+                      ctx.fillStyle='#0F0';
+                      ctx.font = '10pt Georgia';
+                      yPositions.map(function(y, index){
+                        text = String.fromCharCode(1e2+Math.random()*33);
+                        x = (index * 10)+10;
+                        q.getContext('2d').fillText(text, x, y);
+                        if(y > 100 + Math.random()*1e4)
+                        {
+                          yPositions[index]=0;
+                        }
+                        else
+                        {
+                          yPositions[index] = y + 10;
+                        }
+                      });
+                    }
+                    function RunMatrix(){
+                        console.log("Hi11");
+                        if(typeof Game_Interval != "undefined"){
+                            console.log("true");
+                            clearInterval(Game_Interval);
+                        } 
+                        Game_Interval = setInterval(draw, 30);
+                    }
+                    function StopMatrix(){
+                        clearInterval(Game_Interval);
+                    }
+                    console.log("Hi!");
+                    setTimeout(function(){RunMatrix()}, 200);            
+                    setTimeout(function(){$(".animation.coding").fadeOut(3000)},3000);
+                    setTimeout(function(){StopMatrix()}, 4000);                        
+                    animation_time = 4000;
+            } else if($el.hasClass("department_flagship")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("design_and_build")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("electronics_fest")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("involve_and_quizzes")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("sampark")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("shows")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("spotlight")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            } else if($el.hasClass("workshops")) {
+                $(".animation.aerofest")
+                    .css("z-index", 10000)
+                    .animate({
+                    left: "100%"
+                }, animation_time)
+            }
+            setTimeout(function() {
+                window.location = that.href;
+            }, animation_time)
+        });
+    });
+        //aerofest Animation
+        // $("#eventDetail_Aerofest").click(function(event){
+        //     event.preventDefault();
+        //     linkLocation = this.href;
+        //     // $("body").fadeOut(1000, redirectPage);      
+        //     $("#aeroplane").css("display", "inline");
+        //     $("#aeroplane").animate({left:"100%"},"slow",redirectPage);            
+        // });        
+        //Coding Animation
+        // var sWidth = window.innerWidth;
+        // var sHeight = window.innerHeight;
+        // q.width = sWidth;
+        // q.height = sHeight;
+        // var yPositions = Array(300).join(0).split('');
+        // var ctx=q.getContext('2d');
+         
+        // var draw = function () {
+        //   ctx.fillStyle='rgba(0,0,0,.05)';
+        //   ctx.fillRect(0,0,sWidth,sHeight);
+        //   ctx.fillStyle='#0F0';
+        //   ctx.font = '10pt Georgia';
+        //   yPositions.map(function(y, index){
+        //     text = String.fromCharCode(1e2+Math.random()*33);
+        //     x = (index * 10)+10;
+        //     q.getContext('2d').fillText(text, x, y);
+        //     if(y > 100 + Math.random()*1e4)
+        //     {
+        //       yPositions[index]=0;
+        //     }
+        //     else
+        //     {
+        //       yPositions[index] = y + 10;
+        //     }
+        //   });
+        // };
+        // function RunMatrix()
+        // {
+        //     if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
+        //         Game_Interval = setInterval(draw, 30);
+        // }
+        // function StopMatrix()
+        // {
+        //     clearInterval(Game_Interval);
+        // }
+        // $("#eventDetail_Coding").click(function(event){
+        //     event.preventDefault();
+        //     linkLocation = this.href;
+        //     $("#matrix").css("z-index",10);
+        //     setTimeout(function(){RunMatrix()}, 200);            
+        //     setTimeout(function(){$("#matrix").fadeOut(3000)},4500);
+        //     setTimeout(function(){StopMatrix()}, 5500);
+        //     setTimeout(function(){redirectPage();},5500);
+        // });
+        // function redirectPage() {
+        //     window.location = linkLocation;
+        // }  
+    </script>    
 </body>
 </html>
