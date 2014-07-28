@@ -237,11 +237,16 @@
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> b-events graph animation
     <div class="animation b-events"
         style="position:absolute; z-index: -1;top:0%; overflow: hidden;
         height: 100%; width: 100%; left:0%;">
         <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>        
+<<<<<<< HEAD
     </div>
 
     <div class="animation coding"
@@ -301,6 +306,24 @@
     </div>
 
     <?php include '../base/foot.php' ?>    
+=======
+    </div>
+
+    <div class="animation coding"
+        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+        height: 100%; width: 100%; left:0%;">
+        <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
+    </div>
+
+    <div class="animation department_flagship"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:-100%;
+            background: url(../../img/events/Department_Flagship_animation.png) no-repeat center center;
+            background-size: auto 100%;">
+    </div>
+
+    <?php include '../base/foot.php' ?>
+>>>>>>> b-events graph animation
     <script type="text/javascript">
         var animation_time = 1000;
         $(document).ready(function() {
@@ -318,11 +341,17 @@
                     animation_time = 2200;
                     $(".animation.b-events").css("z-index", 10000);
                     // var $canvas = $(".animation.b-events").find("canvas")
+<<<<<<< HEAD
+=======
+                    // var Game_Interval = 0;
+                    // var yPositions = Array(300).join(0).split('');
+>>>>>>> b-events graph animation
                     // var ctx = $canvas[0].getContext('2d');
                     // $canvas.width('100%');
                     // $canvas.height('100%');
                     var canvas = document.getElementById("canvasB"),
                     ctx = canvas.getContext("2d");
+<<<<<<< HEAD
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
                     var points = [],
@@ -340,10 +369,28 @@
                     points.push({
                         // x: 0.05*$canvas.width(), 
                         // y: 0.95*$canvas.height()
+=======
+
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+
+                    var points = [],
+                    currentPoint = 1,
+                    nextTime = new Date().getTime()+500,
+                    pace = 10;
+
+                    // make some points
+                    points.push({
+                        x: 0.05*canvas.width, 
+                        y: 0.1*canvas.height
+                    });
+                    points.push({
+>>>>>>> b-events graph animation
                         x: 0.05*canvas.width, 
                         y: 0.95*canvas.height
                     });
                     points.push({
+<<<<<<< HEAD
                         // x: 0.95*$canvas.width(), 
                         // y: 0.95*$canvas.height()
                         x: 0.95*canvas.width, 
@@ -366,6 +413,24 @@
                     function drawGraph() {
                         if(new Date().getTime() > nextTime){
                             nextTime = new Date().getTime() + pace;
+=======
+                        x: 0.95*canvas.width, 
+                        y: 0.95*canvas.height
+                    });
+
+                    for (var i = 3; i < 100; i++) {
+                        points.push({
+                            x: (0.1*canvas.width)+i * (0.8*canvas.width/100),
+                            y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 100
+                        });
+                    }
+
+                    function draw() {
+
+                        if(new Date().getTime() > nextTime){
+                            nextTime = new Date().getTime() + pace;
+
+>>>>>>> b-events graph animation
                             currentPoint++;
                             if(currentPoint > points.length){
                                 currentPoint = 0;
@@ -383,14 +448,30 @@
                         ctx.stroke();
 
                         ctx.lineWidth = 5;
+<<<<<<< HEAD
                         ctx.strokeStyle = '#00f';
                         ctx.fillStyle = '#00f';                    
+=======
+                        ctx.strokeStyle = '#00425a';
+                        ctx.fillStyle = '#00425a';
+>>>>>>> b-events graph animation
                         ctx.beginPath();
                         ctx.moveTo(points[3].x, points[3].y);                        
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
                             ctx.lineTo(points[p].x, points[p].y);
                         }
                         ctx.stroke();
+<<<<<<< HEAD
+=======
+
+                        window.requestAnimationFrame(draw);
+                    }
+
+                    draw();
+                    setTimeout( function(){
+                        $(".animation.b-events").fadeOut(animation_time*0.1)
+                    }, animation_time*0.9);
+>>>>>>> b-events graph animation
 
                         ctx.lineWidth = 5;
                         ctx.strokeStyle = '#f00';
