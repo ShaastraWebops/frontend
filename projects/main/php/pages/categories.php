@@ -80,6 +80,42 @@
             width: 100%;
             display: inline-block;
         }
+        .animation.spotlight>img{
+            position: absolute;
+            top: 60%;
+            left: -10%;
+            -webkit-transform: rotate(-30deg);
+            -webkit-animation: fly 0.8s linear forwards;
+        }
+        @-webkit-keyframes fly{
+            0%{
+                top: 60%;
+                left: -10%;
+                opacity: 1;
+            }
+            25%{
+                top: 45%;
+                left: 10%;
+            }
+            45%{
+                top: 30%;
+                left: 25%;
+                /*-webkit-transform: rotate(0deg);*/
+            }
+            55%{
+                top: 30%;
+                left: 35%;
+            }
+            75%{
+                top: 45%;
+                left: 50%;
+            }
+            100%{
+                top: 60%;
+                left: 70%;
+                -webkit-transform: rotate(30deg);   
+            }
+        }
     </style>
 </head>
 <body>
@@ -185,7 +221,13 @@
             background-size: auto 100%;">
     </div>
 
-    <?php include '../base/foot.php' ?>
+    <div class="animation spotlight"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:0%;display:none">
+        <img src="../../img/events/rcCar.png">
+        <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
+    </div>
+    <?php include '../base/foot.php' ?>    
     <script type="text/javascript">
         var animation_time = 1000;
         $(document).ready(function() {
@@ -200,48 +242,48 @@
                         left: "100%"
                     }, animation_time)
 
-
                 } else if($el.hasClass("b-events")) {
                     animation_time = 2200;
                     $(".animation.b-events").css("z-index", 10000);
                     // var $canvas = $(".animation.b-events").find("canvas")
-                    // var Game_Interval = 0;
-                    // var yPositions = Array(300).join(0).split('');
                     // var ctx = $canvas[0].getContext('2d');
                     // $canvas.width('100%');
                     // $canvas.height('100%');
                     var canvas = document.getElementById("canvasB"),
                     ctx = canvas.getContext("2d");
-
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
-
                     var points = [],
                     currentPoint = 1,
                     nextTime = new Date().getTime()+500,
                     pace = 10;
-
                     // make some points
                     points.push({
+                        // x: 0.05*$canvas.width(), 
+                        // y: 0.1*$canvas.height()
                         x: 0.05*canvas.width, 
-                        y: 0.1*canvas.height
+                        y: 0.1*canvas.height                        
                     });
                     points.push({
+                        // x: 0.05*$canvas.width(), 
+                        // y: 0.95*$canvas.height()
                         x: 0.05*canvas.width, 
                         y: 0.95*canvas.height
                     });
                     points.push({
+                        // x: 0.95*$canvas.width(), 
+                        // y: 0.95*$canvas.height()
                         x: 0.95*canvas.width, 
                         y: 0.95*canvas.height
                     });
-
                     for (var i = 3; i < 100; i++) {
                         points.push({
+                            // x: (0.1*$canvas.width())+i * (0.8*$canvas.width()/100),
+                            // y: (0.8*$canvas.height()-4*i) + Math.sin(1.2*i) * 100
                             x: (0.1*canvas.width)+i * (0.8*canvas.width/100),
                             y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 100
                         });
                     }
-
                     function draw() {
 
                         if(new Date().getTime() > nextTime){
@@ -265,7 +307,7 @@
 
                         ctx.lineWidth = 5;
                         ctx.strokeStyle = '#00425a';
-                        ctx.fillStyle = '#00425a';
+                        ctx.fillStyle = '#00425a';                    
                         ctx.beginPath();
                         ctx.moveTo(points[3].x, points[3].y);                        
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
@@ -275,12 +317,10 @@
 
                         window.requestAnimationFrame(draw);
                     }
-
                     draw();
                     setTimeout( function(){
                         $(".animation.b-events").fadeOut(animation_time*0.1)
                     }, animation_time*0.9);
-
 
                 } else if($el.hasClass("coding")) {
                     animation_time = 2000;
@@ -314,7 +354,6 @@
                     setTimeout(function(){
                         if(Game_Interval) clearInterval(Game_Interval);
                     }, animation_time);
-
 
                 } else if($el.hasClass("department_flagship")) {
                     $(".animation.department_flagship")
@@ -354,16 +393,66 @@
                         left: "100%"
                     }, animation_time)
                 } else if($el.hasClass("spotlight")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    animation_time = 800;
+                    setTimeout(function(){
+                        $(".animation.spotlight").fadeIn(animation_time*0.1);
+                    }, animation_time*0.05);
+                    setTimeout(function(){
+                        $(".animation.spotlight").fadeOut(animation_time*0.1);
+                    }, animation_time*0.95);
+
+                    $(".animation.spotlight").css("z-index", 10000);
+                    var canvas = $(".animation.spotlight").find("canvas")[0];
+                    var ctx = canvas.getContext('2d');
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    ctx.fillStyle = '#fff';
+                    //start ramp
+                    ctx.beginPath();
+                    ctx.moveTo(0*canvas.width, canvas.height);
+                    ctx.lineTo(0.12*canvas.width, canvas.height);
+                    ctx.lineTo(0.12*canvas.width, 0.85*canvas.height);                    
+                    ctx.closePath();
+                    ctx.fill();
+                    //end ramp
+                    ctx.beginPath();
+                    ctx.moveTo(0.88*canvas.width, 0.85*canvas.height);
+                    ctx.lineTo(0.88*canvas.width, canvas.height);
+                    ctx.lineTo(1*canvas.width, canvas.height);                    
+                    ctx.closePath();
+                    ctx.fill();
+                    // var img = $(".animation.spotlight>img");
+                    // img.css("position","absolute");
+
+                    // img.css("top","55%");
+                    // img.css("left","-10%");
+                    // img.css("-webkit-transform","rotate(-30deg)");
+
+                    // img.animate({top:"55%", left:"-10%"},"slow");
+                    // img.animate({top:"20%", left:"30%"},"slow");
+                    // img.animate({webkitTransform:"rotate(30deg)"},"slow");
+                    // img.animate({
+                    //     step: function() {
+                    //       $(this).css('-webkit-transform','rotate(30deg)');
+                    //       // $(this).css('-moz-transform','rotate('+now+'deg)'); 
+                    //       // $(this).css('-ms-transform','rotate('+now+'deg)');
+                    //       // $(this).css('-o-transform','rotate('+now+'deg)');
+                    //       // $(this).css('transform','rotate('+now+'deg)');  
+                    //     },
+                    //     duration:'slow'
+                    // },'linear');
+
+                    // img.css("top","60%");
+                    // img.css("left","70%");
+                    // img.css("-webkit-transform","rotate(30deg)");
+                    //using CSS instead of jQeury for animation
+                    
+
                 } else if($el.hasClass("workshops")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
                         .animate({
-                        left: "100%"
+                        left: "50%"
                     }, animation_time)
                 }
                 setTimeout(function() {
