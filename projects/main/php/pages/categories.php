@@ -296,10 +296,10 @@
                             // x: (0.1*$canvas.width())+i * (0.8*$canvas.width()/100),
                             // y: (0.8*$canvas.height()-4*i) + Math.sin(1.2*i) * 100
                             x: (0.1*canvas.width)+i * (0.8*canvas.width/100),
-                            y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 100
+                            y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 60
                         });
                     }
-                    function draw() {
+                    function drawGraph() {
 
                         if(new Date().getTime() > nextTime){
                             nextTime = new Date().getTime() + pace;
@@ -330,9 +330,9 @@
                         }
                         ctx.stroke();
 
-                        window.requestAnimationFrame(draw);
+                        window.requestAnimationFrame(drawGraph);
                     }
-                    draw();
+                    drawGraph();
                     setTimeout( function(){
                         $(".animation.b-events").fadeOut(animation_time*0.1)
                     }, animation_time*0.9);
@@ -389,6 +389,9 @@
                     setTimeout(function(){
                         $(".animation.electronics_fest").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
+                    setTimeout(function(){
+                        $(".animation.electronics_fest").fadeOut(animation_time*0.1);
+                    }, animation_time*0.95);
                     var canvas = $(".animation.electronics_fest").find("canvas")[0];
                     var ctx = canvas.getContext('2d');
                     canvas.width = window.innerWidth;
@@ -409,8 +412,8 @@
                                     {x: 0.45*canvas.width,y: 0.4*canvas.height},
                                     {x: 0.45*canvas.width,y: 0.2*canvas.height},                                    
                                     {x: 0.82*canvas.width,y: 0.2*canvas.height},
-                                    {x: 0.82*canvas.width,y: 0.85*canvas.height},
-                                    {x: 0.91*canvas.width,y: 0.85*canvas.height},
+                                    {x: 0.82*canvas.width,y: 0.95*canvas.height},
+                                    {x: 0.91*canvas.width,y: 0.95*canvas.height},
                                     {x: 0.91*canvas.width,y: 0.34*canvas.height});
                     bluePoints.push( {x:0.19*canvas.width,y:0.57*canvas.height},
                                     {x:0.19*canvas.width,y:0.55*canvas.height},
@@ -423,8 +426,10 @@
                                     {x:0.8*canvas.width,y:0.5*canvas.height},
                                     {x:0.8*canvas.width,y:0.9*canvas.height},
                                     {x:0.93*canvas.width,y:0.9*canvas.height},
+                                    {x:0.93*canvas.width,y:0.34*canvas.height},
                                     {x:0.93*canvas.width,y:0.34*canvas.height});
-                    function draw() {
+                    console.log(redPoints.length+" "+bluePoints.length);
+                    function drawCircuit() {
 
                         if(new Date().getTime() > nextTime){
                             nextTime = new Date().getTime() + pace;
@@ -452,11 +457,11 @@
                             ctx.lineTo(bluePoints[p].x, bluePoints[p].y);
                         }
                         ctx.stroke();
-                        window.requestAnimationFrame(draw);
+                        window.requestAnimationFrame(drawCircuit);
                     }
-                    draw();
+                    drawCircuit();
                     setTimeout(function(){
-                        $("#glow").animate({fillOpacity:"1"},animation_time*0.05);
+                        $("#glow").animate({fillOpacity:"1"},animation_time*0.2);
                     }, animation_time*0.6);
 
                 } else if($el.hasClass("involve_and_quizzes")) {
@@ -537,7 +542,7 @@
                     $(".animation.aerofest")
                         .css("z-index", 10000)
                         .animate({
-                        left: "50%"
+                        left: "100%"
                     }, animation_time)
                 }
                 setTimeout(function() {
