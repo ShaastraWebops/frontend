@@ -295,13 +295,13 @@
                 </div>
             </div>
 
-            <div class="row row-centered">
+            <!--<div class="row row-centered">
                 <div class="col-md-4 text-center col-centered">
                     <a class="social-icon twitter" href="https://twitter.com/ShaastraIITM">
                         <span class="text">Login using Twitter</span>
                     </a>
                 </div>
-            </div>
+            </div>-->
 
             <div class="row row-centered">
                 <div class="col-md-4 text-center col-centered">
