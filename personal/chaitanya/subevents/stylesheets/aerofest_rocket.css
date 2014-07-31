@@ -96,7 +96,7 @@
 #plate {
     z-index:3;
 /*    background: hsl(0, 0%, 88%);  */
-    background: url(h.jpg) no-repeat center center;
+    background: url(../images/h.jpg) no-repeat center center;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
