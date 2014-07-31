@@ -1,7 +1,7 @@
 $(document).ready(function() {  
    i = 1; 
    $('#workshops_button').click(function() {
-        $('#workshops_load').animate({'width': '100%'}, 1800);   
+/*        $('#workshops_load').animate({'width': '100%'}, 1800);   */
         time1 = setInterval(function() {
                 $('#spanner').toggleClass('rotate');
             }, 1000);
@@ -17,13 +17,11 @@ $(document).ready(function() {
                 i += 1;   
             }, 2000);
         $('#spanner')
-            .delay(4100)
             .queue( function(next){ 
             $(this).css('display','initial'); 
             next(); 
         });          
         $('#nut')
-            .delay(2100)
             .queue( function(next){ 
             $(this).css('display','initial'); 
             next(); 
