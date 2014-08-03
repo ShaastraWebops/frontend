@@ -9,6 +9,8 @@
         }
         #event-list .event-group .event-item {
             padding: 0;
+            margin-right: 0.4em;
+            margin-bottom: 0.4em;
         }
         #event-list .event-group .event-item > div {
             display: inline-block;
@@ -25,7 +27,7 @@
             border: 1px solid transparent;
         }
         #event-list .event-group .event-item:hover > div {
-            border-color: #fff;
+            border-color: #fff;            
         }
         #event-list .event-group .event-item > div > .dummy {
             margin-top: 100%; /* This is the height:width ratio */;
