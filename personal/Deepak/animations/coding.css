@@ -1,0 +1,14 @@
+#header2 span{
+display: inline-block;
+}
+
+.dropped span{
+-moz-transform: translateY(300px) rotateZ(120deg); /* rotate, translate, and disappear */
+-webkit-transform: translateY(300px) rotateZ(120deg);
+transform: translateY(300px) rotateZ(120deg);
+opacity: 0;
+-moz-transition: all 0.3s ease-in;
+-webkit-transition: all 0.3s ease-in;
+-ms-transition: all 0.3s ease-in;
+transition: all 0.3s ease-in;
+}
