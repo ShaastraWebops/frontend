@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html style="height:100%">
+
+    <head>
+        <link href="aerofest_rocket.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+        <link href="coding.css" rel="stylesheet" />
+        <link href="quizzes.css" rel="stylesheet" />
+        <link href="workshops.css" rel="stylesheet" />
+        
+        
+        <script src="jquery_1.11.1.js"></script>
+        <script src="jquery.lettering-0.6.1.min.js"></script>
+    </head>
+
+    <body style="height:97%">
+        
+    <!-----------------------------aerofest start------------------------------------>    
+        <div style="position:absolute; top:-35%; left:2%">
+            <div id="plate" class="front">  
+                <button class="send"> Aerofest </button> <br/>
+            </div>
+
+            <div id="container" class="beginning">
+                <div id="left-wing">
+                    <div class="top_left curvable"> </div>
+                    <div class="bottom_left curvable"> </div>
+                    <div class="wing wing1"></div>
+                    <div class="wing wing2"></div>
+                </div>
+
+                <div id="right-wing">
+                    <div class="top_right curvable"> </div>
+                    <div class="bottom_right curvable"> </div>
+                    <div class="wing wing3"></div>
+                    <div class="wing wing4"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="aerofest" style="position:absolute; background-color:black; height:100%; width:100%; left:-100%; top:0%; z-index:4">
+            <h1 id="close_aerofest"  style="position:absolute; color:white; margin-left:95%; margin-top:20px">X</h1>
+        </div>
+    <!-- ----------------------------aerofest end------------------------------------ -->
+        
+    <!-- ------------------------------coding events start------------------------------------- -->
+        
+        <div style="position:absolute; top:-35%; left:27%">
+            <div id="plate" class="front">  
+                <button id="coding_button"><span id="header2"> Coding &nbsp;Events </span></button> <br/>
+            </div>            
+        </div>
+        
+     <!-- ---------------------------coding events end---------------------------------------- -->
+        
+    <!-- ----------------------------design & build start-------------------------------------------- -->
+        
+        <div style="position:absolute; top:-35%; left:52%">
+            <div id="plate" class="front">  
+                <button id="design_button"> Design & Build </button> <br/>
+            </div>            
+        </div>
+        
+        
+<!--     ----------------------------design & build end----------------------------------------     -->
+
+    <!-- ----------------------------involve start--------------------------------------------- -->
+        
+        <div style="position:absolute; top:-35%; left:77%">
+            <div id="plate" class="front">  
+                <button id="involve_button"> Involve </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!------------------------------involve end--------------------------------------->
+
+    <!-- ------------------------------quizzes start-------------------------------------------- -->
+        
+        <div style="position:absolute; top:-5%; left:2%">
+            <div id="plate" class="front">  
+                <button id="quizzes_button"> Quizzes </button> <br/>
+            </div>            
+        </div>
+
+        <div id="quizzes_div">
+            
+            <img id="speech" src="speech_bubble.png">    
+            
+            <img id="man" src="man.svg">
+            <p id= "score">10</p>
+        
+        </div>
+
+    <!-- ----------------------------quizzes end----------------------------------------  -->
+        
+        
+    <!-- ----------------------------online events start-------------------------------------------- -->
+        <div style="position:absolute; top:-5%; left:27%">
+            <div id="plate" class="front">  
+                <button id="online_button"> Online Events </button> <br/>
+            </div>            
+        </div>
+        
+        
+<!--     ----------------------------online events end----------------------------------------  -->
+        
+        
+    <!-- ----------------------------department flagship start--------------------------------------------- -->
+        
+        <div style="position:absolute; top:-5%; left:52%">
+            <div id="plate" class="front">  
+                <button id="department_button"> Department Flagship </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!-- ----------------------------department flagship end----------------------------------------     -->
+ 
+    <!-- ----------------------------spotlight start-------------------------------------------- -->
+        <div style="position:absolute; top:-5%; left:77%">
+            <div id="plate" class="front">  
+                <button id="spotlight_button"> Spotlight </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!-- ----------------------------spotlight end----------------------------------------    -->                      
+        
+        
+        
+        
+        
+
+    <!-- ------------------------------workshops start--------------------------------------------- -->
+        
+        <div style="position:absolute; top:25%; left:2%">
+            <div id="plate" class="front">  
+                <button id="workshops_button"> Workshops </button> <br/>
+            </div>            
+        </div>
+        
+        
+        <div id="workshops_div">
+            
+            <img id="nut" src="nut.svg" style="z-index:100; position:absolute; width:15%; height:17%; left:31%; top:25%; display:none">    
+            
+            <img id="spanner" src="adjustable.png" style="z-index:100; position:absolute; height:50%; top:24%; left:34%; display:none">
+        
+        </div>
+        
+        <div id="workshops_load" style="height:2px; width:0%; background-color:black; margin:auto auto; margin-top:0px; margin-bottom:0px">
+            
+        </div>
+        
+        
+        
+    <!-- ----------------------------workshpos end----------------------------------------  -->
+        
+        
+    <!-- -----------------------------exhibitions and shows start--------------------------------------------- -->
+        
+        <div style="position:absolute; top:25%; left:27%">
+            <div id="plate" class="front">  
+                <button id="exhibitions_button"> Exhibitions & Shows </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!------------------------------exhibitions and shows end----------------------------------------  
+        
+        
+    <!-- ------------------------------business events start------------------------------------------ -->
+        
+        <div style="position:absolute; top:25%; left:52%">
+            <div id="plate" class="front">  
+                <button id="business_button"> Business Events </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!------------------------------business events end----------------------------------------     -->
+ 
+    <!-- ------------------------------associated events start--------------------------------------------- -->
+        <div style="position:absolute; top:25%; left:77%">
+            <div id="plate" class="front">  
+                <button id="associated_button"> Associated Events </button> <br/>
+            </div>            
+        </div>
+        
+        
+    <!-- ------------------------------associated events end----------------------------------------     -->                             
+        
+        
+        <script src="aerofest_rocket.js"></script>
+        <script src="coding.js"></script>
+        <script src="quizzes.js"></script>
+        <script src="workshops.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+@font-face {
+   font-family: "LCD Solid";
+   src: url(LCD_Solid.ttf);
+}
+
+#score {
+   font-family: "LCD Solid";
+   position: absolute;
+   top: 40%;
+   left: 41%;
+   z-index: 150;
+   font-size: 7em;
+   display: none;
+}
+
+#speech {
+	z-index:100;
+	position:absolute;
+	height:17%; 
+	left:50%; 
+	top:15%; 
+	display:none;
+}
+
+#man{
+	z-index:100; 
+	position:absolute; 
+	height:50%; 
+	top:24%; 
+	left:34%; 
+	display:none;
+}

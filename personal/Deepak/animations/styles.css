@@ -1,0 +1,54 @@
+#coding_button,
+#design_button,
+#involve_button,
+#quizzes_button,
+#online_button,
+#department_button,
+#spotlight_button,
+#workshops_button,
+#exhibitions_button,
+#business_button,
+#associated_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid hsl(194, 100%, 72%);
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 20px;
+    background-color: hsl(0, 0%, 94%);
+}
+
+#coding_button:active,
+#design_button:active,
+#involve_button:active,
+#quizzes_button:active,
+#online_button:active,
+#department_button:active,
+#spotlight_button:active,
+#workshops_button:active,
+#exhibitions_button:active,
+#business_button:active,
+#associated_button:active {
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+
+    -webkit-transition: all 10ms ease-in-out;
+    -moz-transition: all 10ms ease-in-out;
+    -o-transition: all 10ms ease-in-out;
+    -ms-transition: all 10ms ease-in-out;
+    transition: all 10ms ease-in-out;
+    background-color: hsl(0, 0%, 85%);
+    border: 2px solid hsl(194, 30%, 55%);
+}
