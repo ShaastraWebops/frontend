@@ -148,6 +148,9 @@
             width: 100%;
             height: 100%;
         }
+        .animation.sampark>img{
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -283,6 +286,12 @@
         <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
     </div>
 
+    <div class="animation sampark"
+        style="position:fixed; z-index: -1; overflow: auto;
+            height: 100%; width: 100%; top:0%; left:0%;display:none" align="center">
+        <img src="../../img/events/samparkMap.png">
+    </div>
+
     <div class="animation shows"
         style="position:fixed; z-index: -1; overflow: auto;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
@@ -402,7 +411,7 @@
                     }, animation_time*0.9);
 
                 } else if($el.hasClass("coding")) {
-                    animation_time = 1500;
+                    animation_time = 1800;
                     $(".animation.coding").css("z-index", 10000);
                     var $canvas = $(".animation.coding").find("canvas")
                     var Game_Interval = 0;
@@ -428,8 +437,8 @@
                     }
                     Game_Interval = setInterval(draw, 5);
                     setTimeout( function(){
-                        $(".animation.coding").fadeOut(animation_time*0.1)
-                    }, animation_time*0.9);
+                        $(".animation.coding").fadeOut(animation_time*0.05)
+                    }, animation_time*0.95);
                     setTimeout(function(){
                         if(Game_Interval) clearInterval(Game_Interval);
                     }, animation_time);
@@ -442,15 +451,11 @@
                     }, animation_time);
 
                 } else if($el.hasClass("design_and_build")) {
-                    animation_time = 2000;
-                    $(".animation.design_and_build").css("z-index", 10000);
-                    setTimeout(function(){
-                        $(".animation.design_and_build").fadeIn(animation_time*0.1);
-                    }, animation_time*0.05);
-                    // setTimeout(function(){
-                    //     $(".animation.design_and_build").fadeOut(animation_time*0.1);
-                    // }, animation_time*0.95);
-
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
                 } else if($el.hasClass("electronics_fest")) {
                     $(".animation.electronics_fest").css("z-index", 10000);
                     animation_time = 1700;
@@ -535,37 +540,29 @@
                     }, animation_time*0.6);
 
                 } else if($el.hasClass("involve_and_quizzes")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    // $(".animation.aerofest")
+                    //     .css("z-index", 10000)
+                    //     .animate({
+                    //     left: "100%"
+                    // }, animation_time)
                 } else if($el.hasClass("sampark")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
                         .animate({
                         left: "100%"
-                    }, animation_time)
+                    }, animation_time);
+
                 } else if($el.hasClass("shows")) {
-                    animation_time = 2200;
+                    animation_time = 1100;
                     $(".animation.shows").css("z-index", 10000);
                      setTimeout(function(){
                         $(".animation.shows").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
                     setTimeout(function(){
-                        $curtainopen = true;
-                        $(this).blur();
-                        if ($curtainopen == false){ 
-                            $(".leftcurtain").stop().animate({width:'5%'}, 2000 );
-                            $(".rightcurtain").stop().animate({width:'5%'},2000 );
-                            $curtainopen = true;
-                        }else{
-                            $(".leftcurtain").stop().animate({width:'50%'}, 1000 );
-                            $(".rightcurtain").stop().animate({width:'51%'}, 1000 );
-                            $curtainopen = false;
-                        }
-                        // return false;
+                        $(".leftcurtain").stop().animate({width:'50%'}, 1000 );
+                        $(".rightcurtain").stop().animate({width:'51%'}, 1000 );
                     },animation_time*0.1);
+
                 } else if($el.hasClass("spotlight")) {
                     animation_time = 800;
                     setTimeout(function(){
@@ -588,15 +585,14 @@
                     ctx.lineTo(0.12*canvas.width, 0.85*canvas.height);                    
                     ctx.closePath();
                     ctx.fill();
-                    //end ramp
+                    //landing ramp
                     ctx.beginPath();
                     ctx.moveTo(0.88*canvas.width, 0.85*canvas.height);
                     ctx.lineTo(0.88*canvas.width, canvas.height);
                     ctx.lineTo(1*canvas.width, canvas.height);                    
                     ctx.closePath();
                     ctx.fill();
-                    //using CSS instead of jQeury for animation
-                    
+                    //using CSS instead of jQeury for animation                    
 
                 } else if($el.hasClass("workshops")) {
                     $(".animation.aerofest")
