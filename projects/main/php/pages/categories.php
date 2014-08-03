@@ -405,9 +405,9 @@
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
-                      setTimeout( function(){
-                        $(".animation.b-events").fadeOut(animation_time*0.1)
-                    }, animation_time*0.9);
+                    // setTimeout( function(){
+                    //     $(".animation.b-events").fadeOut(animation_time*0.1)
+                    // }, animation_time*0.9);
 
                 } else if($el.hasClass("coding")) {
                     animation_time = 1800;
@@ -435,12 +435,12 @@
                         });
                     }
                     Game_Interval = setInterval(draw, 5);
-                    setTimeout( function(){
-                        $(".animation.coding").fadeOut(animation_time*0.05)
-                    }, animation_time*0.95);
-                    setTimeout(function(){
-                        if(Game_Interval) clearInterval(Game_Interval);
-                    }, animation_time);
+                    // setTimeout( function(){
+                    //     $(".animation.coding").fadeOut(animation_time*0.05)
+                    // }, animation_time*0.95);
+                    // setTimeout(function(){
+                    //     if(Game_Interval) clearInterval(Game_Interval);
+                    // }, animation_time);
 
                 } else if($el.hasClass("department_flagship")) {
                     $(".animation.department_flagship")
@@ -462,9 +462,9 @@
                     setTimeout(function(){
                         $(".animation.electronics_fest").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
-                    setTimeout(function(){
-                        $(".animation.electronics_fest").fadeOut(animation_time*0.1);
-                    }, animation_time*0.95);
+                    // setTimeout(function(){
+                    //     $(".animation.electronics_fest").fadeOut(animation_time*0.1);
+                    // }, animation_time*0.95);
                     var canvas = $(".animation.electronics_fest").find("canvas")[0];
                     var ctx = canvas.getContext('2d');
                     canvas.width = window.innerWidth;
@@ -555,13 +555,17 @@
                 } else if($el.hasClass("shows")) {
                     animation_time = 1100;
                     $(".animation.shows").css("z-index", 10000);
-                     setTimeout(function(){
+                    setTimeout(function(){
                         $(".animation.shows").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
                     setTimeout(function(){
                         $(".leftcurtain").stop().animate({width:'50%'}, 1000 );
                         $(".rightcurtain").stop().animate({width:'51%'}, 1000 );
                     },animation_time*0.1);
+
+                    // setTimeout(function(){
+                    //     $(".animation.shows").fadeOut(animation_time*0.05);
+                    // }, animation_time*0.95);
 
                 } else if($el.hasClass("spotlight")) {
                     animation_time = 800;
