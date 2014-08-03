@@ -14,6 +14,7 @@
             display: inline-block;
             position: relative;
             padding: 0;
+            /*padding-right: 0.2em;*/
             margin: 0;
             width: 100%;
             -webkit-transition: all 0.9s ease;
@@ -116,6 +117,37 @@
                 -webkit-transform: rotate(30deg);   
             }
         }
+        .animation.design_and_build>#spanner{
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            -webkit-transform-origin:10% 10%;
+            -webkit-transform: rotate(-55deg);
+        }
+        .animation.design_and_build>#nut{
+            position: absolute;
+            top: 40%;
+            -webkit-transform: rotate();
+        }
+
+        .leftcurtain{
+            width: 5%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+        }
+         .rightcurtain{
+            width: 5%;
+            height: 100%;
+            right: 0px;
+            top: 0px;
+            position: absolute;
+        }
+        .rightcurtain img, .leftcurtain img{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -209,7 +241,7 @@
     </div>
 
     <div class="animation coding"
-        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+        style="position:fixed; z-index: -1;top:0%; overflow: hidden;
         height: 100%; width: 100%; left:0%;">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -242,6 +274,22 @@
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
+
+    <div class="animation design_and_build"
+        style="position:absolute; z-index: -1; overflow: hidden;
+            height: 100%; width: 100%; top:0%; left:0%;display:none">
+        <img id="nut" src="../../img/events/nut.png">
+        <img id="spanner" src="../../img/events/spanner.png">
+        <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
+    </div>
+
+    <div class="animation shows"
+        style="position:fixed; z-index: -1; overflow: auto;
+            height: 100%; width: 100%; top:0%; left:0%;display:none">
+        <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
+        <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
+    </div>
+
     <?php include '../base/foot.php' ?>    
     <script type="text/javascript">
         var animation_time = 1000;
@@ -268,6 +316,7 @@
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
                     var points = [],
+                    points2 = [],
                     currentPoint = 1,
                     nextTime = new Date().getTime()+500,
                     pace = 10;
@@ -290,12 +339,18 @@
                         x: 0.95*canvas.width, 
                         y: 0.95*canvas.height
                     });
-                    for (var i = 3; i < 100; i++) {
+                    for (var i = 3; i < 50; i++) {
                         points.push({
                             // x: (0.1*$canvas.width())+i * (0.8*$canvas.width()/100),
                             // y: (0.8*$canvas.height()-4*i) + Math.sin(1.2*i) * 100
-                            x: (0.1*canvas.width)+i * (0.8*canvas.width/100),
-                            y: (0.8*canvas.height-4*i) + Math.sin(1.2*i) * 60
+                            x: (0.1*canvas.width)+i * (0.8*canvas.width/50),
+                            y: (0.8*canvas.height-10*i) + 100*Math.random()
+                        });
+                    }                    
+                    for (var i = 3; i < 50; i++) {
+                        points2.push({
+                            x: (0.1*canvas.width)+i * (0.8*canvas.width/50),
+                            y: (0.8*canvas.height-10*i) + 100*Math.random()
                         });
                     }
                     function drawGraph() {
@@ -320,8 +375,8 @@
                         ctx.stroke();
 
                         ctx.lineWidth = 5;
-                        ctx.strokeStyle = '#00425a';
-                        ctx.fillStyle = '#00425a';                    
+                        ctx.strokeStyle = '#00f';
+                        ctx.fillStyle = '#00f';                    
                         ctx.beginPath();
                         ctx.moveTo(points[3].x, points[3].y);                        
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
@@ -329,15 +384,25 @@
                         }
                         ctx.stroke();
 
+                        ctx.lineWidth = 5;
+                        ctx.strokeStyle = '#f00';
+                        ctx.fillStyle = '#f00';                    
+                        ctx.beginPath();
+                        ctx.moveTo(points2[3].x, points2[3].y);                        
+                        for (var p = 4, plen = currentPoint; p < plen; p++) {
+                            ctx.lineTo(points2[p].x, points2[p].y);
+                        }
+                        ctx.stroke();
+
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
-                    setTimeout( function(){
+                      setTimeout( function(){
                         $(".animation.b-events").fadeOut(animation_time*0.1)
                     }, animation_time*0.9);
 
                 } else if($el.hasClass("coding")) {
-                    animation_time = 2000;
+                    animation_time = 1500;
                     $(".animation.coding").css("z-index", 10000);
                     var $canvas = $(".animation.coding").find("canvas")
                     var Game_Interval = 0;
@@ -349,7 +414,7 @@
                         ctx.fillStyle = 'rgba(0,0,0,0.05)';
                         ctx.fillRect(0, 0, $canvas.width(), $canvas.width());
                         ctx.fillStyle = '#0F0';
-                        ctx.font = '10pt Georgia';
+                        ctx.font = '0.8em Georgia';
                         yPositions.map(function(y, index){
                             text = String.fromCharCode(1e2+Math.random()*33);
                             x = (index * 10)+10;
@@ -377,14 +442,18 @@
                     }, animation_time);
 
                 } else if($el.hasClass("design_and_build")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    animation_time = 2000;
+                    $(".animation.design_and_build").css("z-index", 10000);
+                    setTimeout(function(){
+                        $(".animation.design_and_build").fadeIn(animation_time*0.1);
+                    }, animation_time*0.05);
+                    // setTimeout(function(){
+                    //     $(".animation.design_and_build").fadeOut(animation_time*0.1);
+                    // }, animation_time*0.95);
+
                 } else if($el.hasClass("electronics_fest")) {
                     $(".animation.electronics_fest").css("z-index", 10000);
-                    animation_time = 2000;
+                    animation_time = 1700;
                     setTimeout(function(){
                         $(".animation.electronics_fest").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
@@ -401,32 +470,34 @@
                     nextTime = new Date().getTime()+500,
                     pace = 50;
                     // for (var i = 0; i < 10; i++) {
-                    redPoints.push( {x: 0.27*canvas.width,y: 0.73*canvas.height},
-                                    {x: 0.28*canvas.width,y: 0.73*canvas.height},
-                                    {x: 0.28*canvas.width,y: 0.6*canvas.height},
-                                    {x: 0.4*canvas.width,y: 0.6*canvas.height},
-                                    {x: 0.4*canvas.width,y: 0.8*canvas.height},
+                    redPoints.push( 
+                                    // {x: 0.47*canvas.width,y: 0.73*canvas.height},
+                                    // {x: 0.48*canvas.width,y: 0.73*canvas.height},
+                                    {x: 0.495*canvas.width,y: 0.62*canvas.height},
+                                    {x: 0.6*canvas.width,y: 0.62*canvas.height},
                                     {x: 0.6*canvas.width,y: 0.8*canvas.height},
-                                    {x: 0.6*canvas.width,y: 0.4*canvas.height},
-                                    {x: 0.45*canvas.width,y: 0.4*canvas.height},
-                                    {x: 0.45*canvas.width,y: 0.2*canvas.height},                                    
+                                    {x: 0.75*canvas.width,y: 0.8*canvas.height},
+                                    {x: 0.75*canvas.width,y: 0.4*canvas.height},
+                                    {x: 0.7*canvas.width,y: 0.4*canvas.height},
+                                    {x: 0.7*canvas.width,y: 0.2*canvas.height},                                    
                                     {x: 0.82*canvas.width,y: 0.2*canvas.height},
-                                    {x: 0.82*canvas.width,y: 0.95*canvas.height},
-                                    {x: 0.91*canvas.width,y: 0.95*canvas.height},
-                                    {x: 0.91*canvas.width,y: 0.34*canvas.height});
-                    bluePoints.push( {x:0.19*canvas.width,y:0.57*canvas.height},
-                                    {x:0.19*canvas.width,y:0.55*canvas.height},
-                                    {x:0.4*canvas.width,y:0.55*canvas.height},
-                                    {x:0.4*canvas.width,y:0.3*canvas.height},
-                                    {x:0.5*canvas.width,y:0.3*canvas.height},
-                                    {x:0.5*canvas.width,y:0.7*canvas.height},
+                                    {x: 0.82*canvas.width,y: 0.65*canvas.height},
+                                    {x: 0.92*canvas.width,y: 0.65*canvas.height},
+                                    {x: 0.92*canvas.width,y: 0.34*canvas.height});
+                    bluePoints.push( 
+                                    // {x:0.42*canvas.width,y:0.47*canvas.height},
+                                    {x:0.495*canvas.width,y:0.59*canvas.height},
+                                    {x:0.55*canvas.width,y:0.59*canvas.height},
+                                    {x:0.55*canvas.width,y:0.3*canvas.height},
+                                    {x:0.64*canvas.width,y:0.3*canvas.height},
+                                    {x:0.64*canvas.width,y:0.7*canvas.height},
                                     {x:0.7*canvas.width,y:0.7*canvas.height},
                                     {x:0.7*canvas.width,y:0.5*canvas.height},
-                                    {x:0.8*canvas.width,y:0.5*canvas.height},
-                                    {x:0.8*canvas.width,y:0.9*canvas.height},
-                                    {x:0.93*canvas.width,y:0.9*canvas.height},
-                                    {x:0.93*canvas.width,y:0.34*canvas.height},
-                                    {x:0.93*canvas.width,y:0.34*canvas.height});
+                                    {x:0.85*canvas.width,y:0.5*canvas.height},
+                                    {x:0.85*canvas.width,y:0.7*canvas.height},
+                                    {x:0.9*canvas.width,y:0.7*canvas.height},
+                                    // {x:0.9*canvas.width,y:0.34*canvas.height},
+                                    {x:0.9*canvas.width,y:0.34*canvas.height});
                     console.log(redPoints.length+" "+bluePoints.length);
                     function drawCircuit() {
 
@@ -476,11 +547,25 @@
                         left: "100%"
                     }, animation_time)
                 } else if($el.hasClass("shows")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    animation_time = 2200;
+                    $(".animation.shows").css("z-index", 10000);
+                     setTimeout(function(){
+                        $(".animation.shows").fadeIn(animation_time*0.1);
+                    }, animation_time*0.05);
+                    setTimeout(function(){
+                        $curtainopen = true;
+                        $(this).blur();
+                        if ($curtainopen == false){ 
+                            $(".leftcurtain").stop().animate({width:'5%'}, 2000 );
+                            $(".rightcurtain").stop().animate({width:'5%'},2000 );
+                            $curtainopen = true;
+                        }else{
+                            $(".leftcurtain").stop().animate({width:'50%'}, 1000 );
+                            $(".rightcurtain").stop().animate({width:'51%'}, 1000 );
+                            $curtainopen = false;
+                        }
+                        // return false;
+                    },animation_time*0.1);
                 } else if($el.hasClass("spotlight")) {
                     animation_time = 800;
                     setTimeout(function(){
@@ -510,30 +595,6 @@
                     ctx.lineTo(1*canvas.width, canvas.height);                    
                     ctx.closePath();
                     ctx.fill();
-                    // var img = $(".animation.spotlight>img");
-                    // img.css("position","absolute");
-
-                    // img.css("top","55%");
-                    // img.css("left","-10%");
-                    // img.css("-webkit-transform","rotate(-30deg)");
-
-                    // img.animate({top:"55%", left:"-10%"},"slow");
-                    // img.animate({top:"20%", left:"30%"},"slow");
-                    // img.animate({webkitTransform:"rotate(30deg)"},"slow");
-                    // img.animate({
-                    //     step: function() {
-                    //       $(this).css('-webkit-transform','rotate(30deg)');
-                    //       // $(this).css('-moz-transform','rotate('+now+'deg)'); 
-                    //       // $(this).css('-ms-transform','rotate('+now+'deg)');
-                    //       // $(this).css('-o-transform','rotate('+now+'deg)');
-                    //       // $(this).css('transform','rotate('+now+'deg)');  
-                    //     },
-                    //     duration:'slow'
-                    // },'linear');
-
-                    // img.css("top","60%");
-                    // img.css("left","70%");
-                    // img.css("-webkit-transform","rotate(30deg)");
                     //using CSS instead of jQeury for animation
                     
 
