@@ -151,6 +151,39 @@
         .animation.sampark>img{
             height: 100%;
         }
+        @font-face {
+           font-family: "LCD Solid";
+           src: url(../../fonts/LCD_Solid.ttf);
+        }
+
+        #score {
+           font-family: "LCD Solid";
+           color: red;
+           position: absolute;
+           top: 55%;
+           left: 42.5%;
+           z-index: 150;
+           font-size: 7em;
+           display: none;
+        }
+
+        #speech {
+            z-index:100;
+            position:absolute;
+            height:17%; 
+            left:50%; 
+            top:15%; 
+            display:none;
+        }
+
+        #man{
+            z-index:100; 
+            position:absolute; 
+            height:50%; 
+            top:24%; 
+            left:34%; 
+            display:none;
+        }
     </style>
 </head>
 <body>
@@ -291,6 +324,16 @@
             height: 100%; width: 100%; top:0%; left:0%;display:none" align="center">
         <!-- <img src="../../img/events/samparkMap.png"> -->
     </div>
+    
+    <div class="animation involve_and_quizzes"
+        style="position:fixed; z-index: -1; overflow: auto;
+            height: 100%; width: 100%; top:0%; left:0%;">
+        <div id="quizzes_div">            
+            <img id="speech" src="../../img/events/speech_bubble.png">                
+            <img id="man" src="../../img/events/man.svg">
+            <p id="score">10</p>        
+        </div>    
+    </div>
 
     <div class="animation shows"
         style="position:fixed; z-index: -1; overflow: auto;
@@ -298,6 +341,7 @@
         <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
         <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
     </div>
+    
 
     <?php include '../base/foot.php' ?>    
 
@@ -539,11 +583,20 @@
                     }, animation_time*0.6);
 
                 } else if($el.hasClass("involve_and_quizzes")) {
-                    $(".animation.aerofest")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                    animation_time = 2200;
+                    $(".animation.involve_and_quizzes").css("z-index", 10000);
+                    $('#man').fadeIn();     
+                    $('#score').fadeIn(200)
+                    $('#speech')
+                        .queue( function(next){
+                        $(this).delay(800).fadeIn();
+                        next();
+                    });
+                    $('#score')
+                        .delay(1000)
+                        .queue( function(next){
+                        $(this).text("20");
+                    });
 
                 } else if($el.hasClass("sampark")) {
                     $(".animation.aerofest")
