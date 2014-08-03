@@ -76,7 +76,27 @@ if ($DEBUG) {
         -o-font-smoothing: antialiased;
         font-smoothing: antialiased;
     }
-
+    /*customized Scroll-bar, but works for Chrome and Safari only*/
+    ::-webkit-scrollbar {
+        width: 12px;
+    }         
+    /* Track */
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(0,66,90,0.8); 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0,66,90,0.4); 
+    }
     .title{
     	font-family: 'Dosis', sans-serif;
         font-weight: bold;
