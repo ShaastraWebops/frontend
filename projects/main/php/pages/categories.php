@@ -272,7 +272,7 @@
     </div>
 
     <div class="animation spotlight"
-        style="position:absolute; z-index: -1; overflow: hidden;
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
