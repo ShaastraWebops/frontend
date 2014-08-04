@@ -208,7 +208,7 @@
     #menu .nav li {
         display: block;
         position: relative;
-        height: 12.5%; /* placeholder - Change depending in number of items in menu */
+        height: 11.11%; /* placeholder - Change depending in number of items in menu */
         text-align: center;
     }
     #menu .nav li .bg {
@@ -460,7 +460,7 @@
                     </span>
                 </a>
             </li>
-            <!--<li>
+            <li>
                 <span class="bg"></span>
                 <a href="../pages/dashboard.php" class="table">
                     <span class="table-cell">
@@ -477,7 +477,7 @@
                         </span>
                     </span>
                 </a>
-            </li>-->
+            </li>
             <li>
                 <span class="bg"></span>
                 <a href="../pages/categories.php" class="table">
