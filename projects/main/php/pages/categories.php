@@ -1036,7 +1036,7 @@
                     }, animation_time*0.05);
                 }
                 setTimeout(function() {
-                    // window.location = that.href;
+                    window.location = that.href;
                 }, animation_time)
             });
         });
