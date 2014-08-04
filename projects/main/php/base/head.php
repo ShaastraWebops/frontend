@@ -1,5 +1,5 @@
 <?php
-$DEBUG = 1;
+$DEBUG = 0;
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
