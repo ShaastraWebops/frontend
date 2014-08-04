@@ -9,7 +9,7 @@
         z-index: 10000;
         color : #ffffff;
         letter-spacing: 2px;
-        position: fixed;
+        position: absolute;
         top: 0px;
         left: 0px;
         width: 100px;
@@ -19,25 +19,27 @@
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
-
+    }
+    #menu-btn.menu-open {
+        position: fixed;
     }
     #menu-btn span {
         display: inline-block;
         vertical-align: middle;
-        text-transform: uppercase;  
+        text-transform: uppercase;
     }
     /* Handle text when menu is open/closed */
     #menu-btn.menu-open {
         margin-left: 220px !important;
     }
     #menu-btn.menu-open .title {
-        display: none;   
+        display: none;
     }
     #menu-btn .title.title-close {
-        display: none;   
+        display: none;
     }
     #menu-btn.menu-open .title.title-close {
-        display: inline-block;   
+        display: inline-block;
     }
     #menu-btn .menubars {
         width: 29px;
@@ -149,7 +151,7 @@
         -ms-transform:rotate(-135deg);
         -webkit-transform:rotate(-135deg);
     }
-    
+
     /* The background which shades out the rest of the screen */
     #menu-bg {
         opacity: 0;
@@ -206,7 +208,7 @@
     #menu .nav li {
         display: block;
         position: relative;
-        height: 12.5%; /* Change depending in number of items in menu */
+        height: 12.5%; /* placeholder - Change depending in number of items in menu */
         text-align: center;
     }
     #menu .nav li .bg {
@@ -262,16 +264,16 @@
     #menu .nav li:nth-child(10) {
         z-index: 10;
     }
-    
+
 
     #menu .nav li .table-cell {
         height: 100%;
         display: table-cell;
         vertical-align: middle;
-    
+
     }
     #menu .nav li .table-cell>span {
-        height: 44px;
+        height: 30px;
         position: relative;
         display: block;
     }
@@ -306,7 +308,7 @@
     #menu .nav li.current .bg, #menu .nav li:hover .bg {
         opacity: .9;
     }
-    #menu .nav li.current .big, #menu .nav li.current .small, 
+    #menu .nav li.current .big, #menu .nav li.current .small,
     #menu .nav li:hover .big, #menu .nav li:hover .small {
         color: #FFF;
         opacity: 1;
@@ -326,19 +328,20 @@
         display: table;
         height: 100%;
         width: 100%
-    
+
     }
     #menu .nav a:hover,
     #menu .nav a:focus {
         background-color: inherit;
     }
     #menu .nav .small {
-        font-size: .875em;
+        font-size: .75em;
         letter-spacing: 2px;
     }
     #menu .nav .big {
-        font-size: 1.125em;
+        font-size: 1.1em;
         letter-spacing: 3px;
+        font-weight: 900;
     }
 
 
@@ -348,13 +351,13 @@
         text-align: center;
     }
     #menu .nav li.social span {
-        display: inline-block;
-        vertical-align: top;
         position: relative;
-        width: 98px;
+        display: inline-block;
+        width: 49%;
         height: 100%;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
     }
     #menu .nav li.social span a {
         display: block;
@@ -398,27 +401,11 @@
     #menu .nav li.social .icon {
         position: absolute;
         display: block;
-        margin: auto;
+        margin: 0;
         width: 100%;
         height: 100%;
         z-index: 3;
     }
-    /*#menu .nav li.social a:hover {
-        -webkit-transition : -webkit-filter 1s linear;
-        -moz-transition : -moz-filter 1s linear;
-        -ms-transition : -ms-filter 500ms linear;
-        -o-transition : -o-filter 500ms linear;
-        transition : filter 500ms linear;
-    }
-    #menu .nav li.social a:hover {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-        filter: grayscale(100%);
-        filter: url(grayscale.svg);
-        filter: gray;
-    }*/
     #menu .nav li.social .facebook-color .icon {
         background: url(../../img/icons/facebook-white_24x24.png) no-repeat center;
     }
@@ -434,7 +421,11 @@
     #menu .nav li.social .linkedin-color .icon {
         background: url(../../img/icons/linkedin-white_24x24.png) no-repeat center;
     }
-        
+    @media (min-width: 768px) {
+        #menu-btn {
+            position: fixed;
+        }
+    }
 
 </style>
 
@@ -463,18 +454,36 @@
                 <a href="../pages/home.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Go back to the</span>
+                            <span class="small hidden-xs">Go back to the</span>
                             <span class="big">Homepage</span>
                         </span>
                     </span>
                 </a>
             </li>
+            <!--<li>
+                <span class="bg"></span>
+                <a href="../pages/dashboard.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <span class="small hidden-xs">Interact with us</span>
+                            <span class="big">
+                                <?php
+                                    if(isset($logged_in) && $logged_in)
+                                        echo 'Log In';
+                                    else
+                                        echo 'Dashboard';
+                                ?>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </li>-->
             <li>
                 <span class="bg"></span>
                 <a href="../pages/categories.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Check out our</span>
+                            <span class="small hidden-xs">Check out our</span>
                             <span class="big">Events</span>
                         </span>
                     </span>
@@ -485,7 +494,7 @@
                 <a href="../pages/lectures.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Learn from the best</span>
+                            <span class="small hidden-xs">Learn from the best</span>
                             <span class="big">Lectures</span>
                         </span>
                     </span>
@@ -496,7 +505,7 @@
                 <a href="../pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Know our</span>
+                            <span class="small hidden-xs">Know our</span>
                             <span class="big">Sponsors</span>
                         </span>
                     </span>
@@ -507,7 +516,7 @@
                 <a href="../pages/shows.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Be fascinated by</span>
+                            <span class="small hidden-xs">Be fascinated by</span>
                             <span class="big">Shows</span>
                         </span>
                     </span>
@@ -518,7 +527,7 @@
                 <a href="../pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Reach out to</span>
+                            <span class="small hidden-xs">Reach out to</span>
                             <span class="big">Contact Us</span>
                         </span>
                     </span>
@@ -534,17 +543,17 @@
                     <a class="twitter-color" href="https://twitter.com/ShaastraIITM" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span> 
+                </span>
                 <span>
                     <a class="youtube-color" href="https://www.youtube.com/user/iitmshaastra" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span> 
+                </span>
                 <span>
                     <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span> 
+                </span>
             </li>
         </ul>
     </nav>
@@ -566,19 +575,23 @@
     }
 
     $(document).ready(function(){
-        $("#menu-btn").click(function(){ show_menu(); });  
-        $("#menu_btn.menu-open").click(function(){ hide_menu(); });
+        $("#menu-btn").click(function(ev){
+            show_menu();
+        });
+        $("#menu-btn.menu-open").click(function(ev){
+            hide_menu();
+        });
         $('body').keydown(function(e){
             if(e.which == 27){ // escape key
-                hide_menu(); 
+                hide_menu();
             }
         });
         $('body').click(function(e){ // clicked somewhere else
-            if(e.clientX > 200){
-                hide_menu();                
+            if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
+                hide_menu();
             }
         });
-    });   
-    
+    });
+
 
 </script>
