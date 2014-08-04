@@ -300,20 +300,20 @@
     </div>
     </div>
     <div class="animation aerofest"
-        style="position:absolute; z-index: -1; overflow: hidden;
+        style="position:absolute; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
             height: 100%; width: 100%; top:0%; left:-100%;
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
 
     <div class="animation b-events"
-        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+        style="position:absolute; z-index: -1;top:0%; overflow: hidden; 
         height: 100%; width: 100%; left:0%;">
         <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>        
     </div>
 
     <div class="animation coding"
-        style="position:fixed; z-index: -1;top:0%; overflow: hidden;
+        style="position:fixed; z-index: -1;top:0%; overflow: hidden; 
         height: 100%; width: 100%; left:0%;">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -326,13 +326,13 @@
     </div>
 
     <div class="animation design_and_build"
-        style="position:absolute; z-index: -1; overflow: hidden;
+        style="position:absolute; z-index: -1; overflow: hidden; 
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
     </div>
 
     <div class="animation electronics_fest"
-        style="position:absolute; z-index: -1; overflow: hidden;
+        style="position:absolute; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <svg width="185" height="255" id="svg2" style="position:relative;top:0%;left:85%;transform:scale(0.8);">
             <path style="fill:#fff;fill-opacity:1"
@@ -346,7 +346,7 @@
     </div>
 
     <div class="animation involve_and_quizzes"
-        style="position:fixed; z-index: -1; overflow: auto;
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;">
         <div id="quizzes_div">            
             <img id="speech" src="../../img/events/speech_bubble.png">                
@@ -356,7 +356,8 @@
     </div>
 
     <div class="animation sampark"
-        style="position:fixed; z-index: -1; overflow: hidden; width: 100%; top:-5%; left:0%;display:none" align="center">
+        style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
+            width: 100%; top:-5%; left:0%;display:none" align="center">
         <svg    id="samparkMap"
             width="620"
             height="740"
@@ -693,21 +694,21 @@
     </div>
     
     <div class="animation shows"
-        style="position:fixed; z-index: -1; overflow: auto;
+        style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
         <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
     </div>
 
     <div class="animation spotlight"
-        style="position:fixed; z-index: -1; overflow: hidden;
+        style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
     <div class="animation workshops"
-        style="position:fixed; z-index: -1; overflow: hidden;
+        style="position:fixed; z-index: -1; overflow: hidden;background-color:rgba(0,0,0,0.5);
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <img id="spanner" class="img-responsive" src="../../img/events/spanner.svg">
         <img id="nut" class="img-responsive" src="../../img/events/nut.svg">        
@@ -1031,7 +1032,7 @@
                     }, animation_time*0.05);
                 }
                 setTimeout(function() {
-                    window.location = that.href;
+                    // window.location = that.href;
                 }, animation_time)
             });
         });
