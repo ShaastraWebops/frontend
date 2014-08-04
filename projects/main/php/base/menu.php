@@ -9,7 +9,7 @@
         z-index: 10000;
         color : #ffffff;
         letter-spacing: 2px;
-        position: fixed;
+        position: absolute;
         top: 0px;
         left: 0px;
         width: 100px;
@@ -19,7 +19,9 @@
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
-
+    }
+    #menu-btn.menu-open {
+        position: fixed;
     }
     #menu-btn span {
         display: inline-block;
@@ -404,22 +406,6 @@
         height: 100%;
         z-index: 3;
     }
-    /*#menu .nav li.social a:hover {
-        -webkit-transition : -webkit-filter 1s linear;
-        -moz-transition : -moz-filter 1s linear;
-        -ms-transition : -ms-filter 500ms linear;
-        -o-transition : -o-filter 500ms linear;
-        transition : filter 500ms linear;
-    }
-    #menu .nav li.social a:hover {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-        filter: grayscale(100%);
-        filter: url(grayscale.svg);
-        filter: gray;
-    }*/
     #menu .nav li.social .facebook-color .icon {
         background: url(../../img/icons/facebook-white_24x24.png) no-repeat center;
     }
@@ -435,7 +421,11 @@
     #menu .nav li.social .linkedin-color .icon {
         background: url(../../img/icons/linkedin-white_24x24.png) no-repeat center;
     }
-
+    @media (min-width: 768px) {
+        #menu-btn {
+            position: fixed;
+        }
+    }
 
 </style>
 
@@ -464,7 +454,7 @@
                 <a href="../pages/home.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Go back to the</span>
+                            <span class="small hidden-xs">Go back to the</span>
                             <span class="big">Homepage</span>
                         </span>
                     </span>
@@ -475,7 +465,7 @@
                 <a href="../pages/dashboard.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Interact with us</span>
+                            <span class="small hidden-xs">Interact with us</span>
                             <span class="big">
                                 <?php
                                     if(isset($logged_in) && $logged_in)
@@ -493,7 +483,7 @@
                 <a href="../pages/categories.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Check out our</span>
+                            <span class="small hidden-xs">Check out our</span>
                             <span class="big">Events</span>
                         </span>
                     </span>
@@ -504,7 +494,7 @@
                 <a href="../pages/lectures.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Learn from the best</span>
+                            <span class="small hidden-xs">Learn from the best</span>
                             <span class="big">Lectures</span>
                         </span>
                     </span>
@@ -515,7 +505,7 @@
                 <a href="../pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Know our</span>
+                            <span class="small hidden-xs">Know our</span>
                             <span class="big">Sponsors</span>
                         </span>
                     </span>
@@ -526,7 +516,7 @@
                 <a href="../pages/shows.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Be fascinated by</span>
+                            <span class="small hidden-xs">Be fascinated by</span>
                             <span class="big">Shows</span>
                         </span>
                     </span>
@@ -537,7 +527,7 @@
                 <a href="../pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small">Reach out to</span>
+                            <span class="small hidden-xs">Reach out to</span>
                             <span class="big">Contact Us</span>
                         </span>
                     </span>
@@ -585,15 +575,19 @@
     }
 
     $(document).ready(function(){
-        $("#menu-btn").click(function(){ show_menu(); });
-        $("#menu_btn.menu-open").click(function(){ hide_menu(); });
+        $("#menu-btn").click(function(ev){
+            show_menu();
+        });
+        $("#menu-btn.menu-open").click(function(ev){
+            hide_menu();
+        });
         $('body').keydown(function(e){
             if(e.which == 27){ // escape key
                 hide_menu();
             }
         });
         $('body').click(function(e){ // clicked somewhere else
-            if(e.clientX > 200){
+            if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
                 hide_menu();
             }
         });

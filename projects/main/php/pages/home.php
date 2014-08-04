@@ -49,7 +49,7 @@
 			.shaastra-blue {
 				color : #00445e;
 			}
-			#canvas .logo {
+			.logo {
 				position: absolute;
 				top: 25%;
 				left: 30%;
@@ -62,19 +62,19 @@
 					display: block;
 				}
 			}
-			#canvas .logo > div,
-			#canvas .logo > div > div,
-			#canvas .logo > div > div > div,
-			#canvas .logo > div > div > div {
+			.logo > div,
+			.logo > div > div,
+			.logo > div > div > div,
+			.logo > div > div > div {
 				height: 100%;
 			}
-			#canvas .logo .up {
+			.logo .up {
 				position: absolute;
 				top: 0;
 				margin: auto;
 				width: 100%;
 			}
-			#canvas .logo .down {
+			.logo .down {
 				position: absolute;
 				bottom: 0;
 				margin: auto;
@@ -82,7 +82,7 @@
 			}
 
 
-			#canvas .logo .small {
+			.logo .small {
 				text-decoration: none;
 				font-size: 0.7em;
 				letter-spacing: 0.3em;
@@ -95,18 +95,18 @@
 				-moz-text-stroke-color: white;
 				text-stroke-color: white;*/
 			}
-			#canvas .logo .up .small {
+			.logo .up .small {
 				text-decoration: none;
 				text-transform: lowercase;
 				letter-spacing: 0.3em;
 				font-weight: 200;
 			}
-			#canvas .logo .text {
+			.logo .text {
 				text-decoration: none;
 				color: #fff;
 				text-transform: uppercase;
 			}
-			#canvas .logo .line {
+			.logo .line {
 				text-decoration: none;
 				background-color : #00445e;
 				height: 2px;
@@ -114,7 +114,7 @@
 				width: 50%;
 				margin: auto;
 			}
-			#canvas .logo .down .small {
+			.logo .down .small {
 				text-transform: uppercase;
 
 			}
@@ -136,7 +136,7 @@
 				left: -50%;
 			}
 			#page .ngon-row {
-				height: 25%;
+				height: auto;
 			}
 			#page .ngon-row > div{
 				height: 100%;
@@ -152,10 +152,17 @@
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
-			#page .ngon-row .text:hover {
-				letter-spacing: 0.2em;
-				font-size: 2em;
-				font-weight: 900;
+
+			@media (min-width: 768px) {
+				#page .ngon-row {
+					height: 25%;
+				}
+
+				#page .ngon-row .text:hover {
+					letter-spacing: 0.2em;
+					font-size: 2em;
+					font-weight: 900;
+				}
 			}
 		</style>
 	</head>
@@ -163,7 +170,7 @@
 	<body>
         <?php include '../base/menu.php'; ?>
 
-	<div id="fallback" class="container-fluid text-center" >
+	<div id="fallback" class="container-fluid hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
 				<span class="vertical-table">
@@ -177,7 +184,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="canvas">
+	<div id="canvas" class="hidden-xs">
 		<div class="logo container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
@@ -199,8 +206,19 @@
 		</div>
 	</div>
 	<div id="page" class="container-fluid white text-center">
+		<div class="row ngon-row hidden-lg hidden-sm hidden-md" style="">
+			<div class="col-sm-12 col-xs-12">
+				<span class="vertical-table">
+					<span class="vertical-table-cell">
+						<div class="up">
+							<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
+						</div>
+					</span>
+				</span>
+			</div>
+		</div>
 		<div class="row ngon-row">
-			<div class="col-xs-12">
+			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../pages/categories.php" class="text">Events</a>
@@ -209,7 +227,7 @@
 			</div>
 		</div>
 		<div class="row ngon-row">
-			<div class="col-xs-6">
+			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 
@@ -217,7 +235,7 @@
 					</span>
 				</span>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../pages/shows.php" class="text">Shows</a>
@@ -226,14 +244,14 @@
 			</div>
 		</div>
 		<div class="row ngon-row">
-			<div class="col-xs-6">
+			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../pages/lectures.php" class="text">Lectures</a>
 					</span>
 				</span>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../pages/contact.php" class="text">Contacts</a>
@@ -242,7 +260,7 @@
 			</div>
 		</div>
 		<div class="row ngon-row">
-			<div class="col-xs-12">
+			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../pages/about.php" class="text">About Us</a>
@@ -250,7 +268,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="help">
+		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
 	</div>
@@ -285,7 +303,9 @@
 				console.log('and speaks it natively.');
 			}
 
-			if (gl || expmt) {
+			if ( (gl || expmt ) && $('body').width() > 768) { // 768 is taken from bootstrap's xs class
+				// GL is there. Make sure it is not mobile
+
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.");
 				jsCache.load(
@@ -777,14 +797,25 @@
 						this.dice_box.prototype.bind_mouse = function(container) {
 							var box = this;
 							this.mouse_dragging = false;
-							$(container).on('mousedown touchstart', function(ev) {
+							$(container).on('mousedown', function(ev) {
+								console.log(ev.target)
+								if ( ev.target.tagName == 'A' ||
+									$(ev.target).parents('#menu-btn').length ||
+									$('#menu-btn').hasClass('menu-open') ) {
+									return;
+								}
 								box.mouse_time = (new Date()).getTime();
 								box.mouse_start = { x: ev.clientX, y: ev.clientY };
 								$('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
 								$('.up').animate({'top':'30%'}, 1000);
 								$('.down').animate({'bottom':'30%'}, 1000);
 							});
-							$(container).bind('mouseup touchend touchcancel', function(ev) {
+							$(container).on('mouseup', function(ev) {
+								if ( ev.target.tagName == 'A' ||
+									$(ev.target).parents('#menu-btn').length ||
+									$('#menu-btn').hasClass('menu-open') ) {
+									return;
+								}
 								var vector = { x: ev.clientX - box.mouse_start.x, y: -(ev.clientY - box.mouse_start.y) };
 								var dist = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
 								if (dist < Math.sqrt(box.w * box.h * 0.01)) {
@@ -829,16 +860,23 @@
 				$('.help .text').text("Your browser does not support webgl. If you can, try visiting us later with webgl support.");
 			}
 		});
-		function init3d() {
+		function create3d() {
 			var canvas = $('#canvas')[0];
 			var box = new dice.dice_box(canvas);
 			box.bind_mouse(document.body, function() {}, // before
-			       function(outp) { // after
-
+				function(outp) { // after
 			});
+			$('body').css( {
+				'width' : '100%',
+				'height' : '100%',
+				'overflow' : 'hidden'
+			})
+		}
+		function init3d() {
+			create3d();
 			window.addEventListener('resize', function() {
 				$("canvas").remove()
-				init3d();
+				create3d();
 		    });
 		}
         </script>

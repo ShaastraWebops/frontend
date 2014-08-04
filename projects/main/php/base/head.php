@@ -72,7 +72,7 @@ if ($DEBUG) {
     html, body {
         width: 100%;
         height: 100%;
-	color: #fff;
+		color: #fff;
     }
     body {
 	  	background-image: url("../../img/bg.png");
@@ -206,6 +206,15 @@ if ($DEBUG) {
 		display:inline-block;
 		float:none;
 		margin-right:-4px;
+	}
+
+	body {
+		margin-top: 50px;
+	}
+	@media (min-width: 768px) {
+		body {
+			margin-top: 0;
+		}
 	}
 </style>
 
