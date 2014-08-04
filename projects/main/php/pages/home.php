@@ -861,6 +861,9 @@
 			}
 		});
 		function create3d() {
+			if ( $('body').width() < 768) { // 768 is taken from bootstrap's xs class
+				return
+			}
 			var canvas = $('#canvas')[0];
 			var box = new dice.dice_box(canvas);
 			box.bind_mouse(document.body, function() {}, // before
