@@ -3,7 +3,7 @@
 <head>
     <title>Spons | Shaastra 2015</title>
     <?php include '../base/head.php' ?>
-    
+
     <style>
         .tab-links:after {
             display:block;
@@ -24,7 +24,7 @@
             font-weight:600;
             color:#4c4c4c;
             transition:all linear 0.2s;
-            text-decoration:none;   
+            text-decoration:none;
         }
         .tab-links a:hover {
             background:#a7cce5;
@@ -38,7 +38,8 @@
             margin-top:-10px;
             border-radius:3px;
             box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-            background:#fff;
+            background: #fff;
+            background: rgba(255, 255, 255, 1);
         }
         .tab {
             display:none;
@@ -48,7 +49,7 @@
         }
 
     </style>
-    
+
     <script>
         $(document).ready(function() {
         $('#tab1').load('../modules/tab.htm #Tab1');
@@ -70,7 +71,7 @@
         }
         .d4:hover, .d8:hover, .d12:hover, .d6:hover{
             border: 1px solid #a1a1a1;
-            background-color: #eee; 
+            background-color: #eee;
             opacity:1;
         }
         img.sponsor{
@@ -118,7 +119,7 @@
                     <div id="tab4" class="tab"></div>
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
     <?php include '../base/foot.php' ?>
 </body>

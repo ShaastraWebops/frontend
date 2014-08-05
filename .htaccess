@@ -1,0 +1,4 @@
+#AuthUserFile /var/www/html/shaastra/.htpasswd
+#AuthName "Authorization Required"
+#AuthType Basic
+#require valid-user
