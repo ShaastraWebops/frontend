@@ -9,11 +9,12 @@
         }
         #event-list .event-group .event-item {
             padding: 0;
-            /*margin-left: 5%;
-            margin-right: 5%;*/
-            margin: -2px !important;
+            margin-left: 1.5%;
+            /*margin: -2px !important;*/
             margin-right: 0.4em;
             margin-bottom: 0.4em;
+            margin: 1.5%;
+
         }
         #event-list .event-group .event-item > div {
             display: inline-block;
@@ -249,7 +250,7 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
-            $event_row_count = 6;
+            $event_row_count = 4;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
@@ -268,8 +269,6 @@
                     if ( floor(($event_count-1)/$event_row_count) == 0 ) echo '';
                     elseif ($event_i == 0) echo ' first ';
                     elseif (floor($event_i/$event_row_count) == floor(($event_count-1)/$event_row_count)) echo ' last row-centered';
-
-
                 ?>">
             <?php } ?>
                     <div class="col-md-2 col-sm-4 col-sm-offset-0 col-xs-6 col-centered event-item event-bg <?php
@@ -730,9 +729,6 @@
                 ev.preventDefault();
                 var that = this;
                 var $el = $(this);
-                $('.animation').css( {
-                    'background': 'rgba(0, 0, 0, 0.4)'
-                })
                 if( $el.hasClass("aerofest")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
