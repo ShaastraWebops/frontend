@@ -222,7 +222,7 @@
         -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
-        background-color: #1f1f1f;
+        background-color: #0f0f0f;
     }
     #menu .nav li:after {
         content: "";
@@ -283,7 +283,8 @@
         width: 100%;
         top: 0;
         left: 0;
-        color: #c6a66d;
+        /*color: #c6a66d;*/
+        color: #ccc;
         -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
@@ -295,7 +296,9 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        color: #c6a66d;
+        /*color: #c6a66d;*/
+        color: #328fa7;
+        /*color: #20647E;*/
         -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);

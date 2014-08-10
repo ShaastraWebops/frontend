@@ -62,6 +62,12 @@
 					display: block;
 				}
 			}
+			.logo .logo-wrapper > div {
+				-webkit-transition: all 300ms ease-in-out;
+				-moz-transition: all 300ms ease-in-out;
+				-o-transition: all 300ms ease-in-out;
+				transition: all 300ms ease-in-out;
+			}
 			.logo > div,
 			.logo > div > div,
 			.logo > div > div > div,
@@ -88,12 +94,6 @@
 				letter-spacing: 0.3em;
 				font-weight: 200;
 				text-shadow : 0px 2px #000;
-				/*-webkit-text-stroke-width: 0.1px;
-				-moz-text-stroke-width: 0.1px;
-				text-stroke-width: 0.1px;
-				-webkit-text-stroke-color: white;
-				-moz-text-stroke-color: white;
-				text-stroke-color: white;*/
 			}
 			.logo .up .small {
 				text-decoration: none;
@@ -146,13 +146,14 @@
 				color: #fff;
 				text-transform: uppercase;
 				font-size : 1.5em;
+				font-weight: 600;
+				letter-spacing: 0.2em;
 				cursor: pointer;
 				-webkit-transition: all 300ms ease-in-out;
 				-moz-transition: all 300ms ease-in-out;
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
-
 			@media (min-width: 768px) {
 				#page .ngon-row {
 					height: 25%;
@@ -163,6 +164,28 @@
 					font-size: 2em;
 					font-weight: 900;
 				}
+
+				#page .ngon-row .text.events {
+					text-shadow: 0px 4px 6px #0a0a0a;
+				}
+				#page .ngon-row .text.spons {
+					text-shadow: -4px 3px 1.2px #000;
+				}
+				#page .ngon-row .text.lectures {
+					text-shadow: -4px 2px 1px #000;
+				}
+				#page .ngon-row .text.shows {
+					text-shadow: 4px 3px 1px #000;
+				}
+				#page .ngon-row .text.contact {
+					text-shadow: 4px 2px 1px #000;
+				}
+				#page .ngon-row .text.about {
+					text-shadow: 0px 4px 1px #000;
+				}
+				body {
+					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A); /* For Safari 5.1 to 6.0 */
+				}
 			}
 		</style>
 	</head>
@@ -170,7 +193,7 @@
 	<body>
         <?php include '../base/menu.php'; ?>
 
-	<div id="fallback" class="container-fluid hidden-xs text-center" >
+	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
 				<span class="vertical-table">
@@ -189,7 +212,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<span class="vertical-table">
-						<span class="vertical-tabl-cell text-center">
+						<span class="vertical-table-cell text-center logo-wrapper">
 							<div class="up">
 								<div class="small shaastra-logo">iit madras <span class="">presents</span></div>
 							</div>
@@ -210,9 +233,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<div class="up">
-							<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
-						</div>
+						<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
 					</span>
 				</span>
 			</div>
@@ -221,7 +242,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/categories.php" class="text">Events</a>
+						<a href="../pages/categories.php" class="title events text">Events</a>
 					</span>
 				</span>
 			</div>
@@ -231,14 +252,14 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 
-						<a href="../pages/spons.php" class="text">Sponsors</a>
+						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/shows.php" class="text">Shows</a>
+						<a href="../pages/shows.php" class="title shows text">Shows</a>
 					</span>
 				</span>
 			</div>
@@ -247,14 +268,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/lectures.php" class="text">Lectures</a>
+						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/contact.php" class="text">Contacts</a>
+						<a href="../pages/contact.php" class="title contact text">Contacts</a>
 					</span>
 				</span>
 			</div>
@@ -263,7 +284,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/about.php" class="text">About Us</a>
+						<a href="../pages/about.php" class="title about text">About Us</a>
 					</span>
 				</span>
 			</div>
@@ -345,7 +366,7 @@
 						dice.castShadow = true;
 						dice.body = new CANNON.RigidBody(that.dice_mass,
 							dice.geometry.cannon_shape, _this.dice_body_material);
-						dice.body.position.set(-_this.w/6, _this.w/10, 200);
+						dice.body.position.set(-_this.w/8, _this.w/20, 200);
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
@@ -359,7 +380,7 @@
 						dice.castShadow = true;
 						dice.body = new CANNON.RigidBody(that.dice_mass,
 							dice.geometry.cannon_shape, _this.dice_body_material);
-						dice.body.position.set(_this.w/6, _this.w/10, 200);
+						dice.body.position.set(_this.w/8, _this.w/20, 200);
 						dice.body.quaternion.copy( euler_to_quaternion( 0, 0, 0 ) );
 						dice.body.angularVelocity.set(-10, 4.5, 9);
 						dice.body.velocity.set(0, 0, -10);
@@ -806,9 +827,6 @@
 								}
 								box.mouse_time = (new Date()).getTime();
 								box.mouse_start = { x: ev.clientX, y: ev.clientY };
-								$('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
-								$('.up').animate({'top':'30%'}, 1000);
-								$('.down').animate({'bottom':'30%'}, 1000);
 							});
 							$(container).on('mouseup', function(ev) {
 								if ( ev.target.tagName == 'A' ||
@@ -848,6 +866,11 @@
 									box.rolling = true;
 									box.roll(vector, boost, function(result) { box.rolling = false; });
 								}
+								setTimeout(function() {
+									$('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
+									$('.up').removeClass('up').addClass('up-placeholder')
+									$('.down').removeClass('down').addClass('down-placeholder')
+								}, 500);
 							});
 						}
 
@@ -858,6 +881,7 @@
 			} else {
 				console.log("image-only fallback. no webgl.");
 				$('.help .text').text("Your browser does not support webgl. If you can, try visiting us later with webgl support.");
+				$('#fallback.hidden').show();
 			}
 		});
 		function create3d() {
@@ -874,11 +898,21 @@
 				'height' : '100%',
 				'overflow' : 'hidden'
 			})
+
 		}
 		function init3d() {
 			create3d();
 			window.addEventListener('resize', function() {
 				$("canvas").remove()
+				$('.vertical-table-cell').addClass('vertical-table-cell-placeholder').removeClass('vertical-table-cell');
+				$('.up-placeholder').removeClass('up-placeholder').addClass('up')
+				$('.down-placeholder').removeClass('down-placeholder').addClass('down')
+
+				$('body').css( {
+					'width' : '100%',
+					'height' : '100%',
+					'overflow' : 'visible'
+				})
 				create3d();
 		    });
 		}

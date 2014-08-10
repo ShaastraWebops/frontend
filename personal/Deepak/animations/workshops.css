@@ -1,0 +1,17 @@
+.rotate {
+-webkit-transform: rotateZ(60deg);
+-webkit-transition-duration: 1s;
+-webkit-transition-delay: none;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+-webkit-transform-origin: 11% 10% 0;  
+}
+
+.rotate_nut {
+/*-webkit-transform: rotate(60deg);*/
+-webkit-transition-duration: 1s;
+-webkit-transition-delay: now;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+-webkit-transform-origin: 50% 50% 0;
+}

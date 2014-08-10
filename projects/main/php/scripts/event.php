@@ -16,14 +16,11 @@ $new_tab_name = $dirname . '/' . $newpriority . $newname;
 
 if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUEST['create'])) {
     $i = 1;
-    echo $new_tab_name;
-    echo $old_tab_name;
     while ( file_exists($new_tab_name . '.html') ) {
         $i = $i + 1;
         $new_tab_name = $new_tab_name . '(' . $i . ')'; 
     }
-    if ( $oldpriority . $oldname == '' ) {
-        echo "CREATE NEW FILE";
+    if ( $oldname == '' ) {
         $fp = fopen($new_tab_name . '.html', "w"); // create
         fclose($fp);
     } else {

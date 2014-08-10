@@ -1,5 +1,5 @@
 <?php
-$DEBUG = 1;
+$DEBUG = 0;
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
@@ -56,6 +56,7 @@ if ($DEBUG) {
         font-family: 'Dosis';
         src: url('../../fonts/Dosis.woff');
     }
+<?php } ?>
 	@font-face {
 		font-family: 'Glyphicons Halflings';
 		src: url('../../fonts/glyphicons-halflings-regular.eot');
@@ -64,7 +65,6 @@ if ($DEBUG) {
 			url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
 			url('../../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 	}
-<?php } ?>
     @font-face {
         font-family: 'CGF Locust Resistance';
         src: url('../../fonts/CGF Locust Resistance.ttf');
@@ -84,7 +84,6 @@ if ($DEBUG) {
         -o-font-smoothing: antialiased;
         font-smoothing: antialiased;
     }
-
     .title{
     	font-family: 'Dosis', sans-serif;
         font-weight: bold;

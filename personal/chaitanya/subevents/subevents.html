@@ -2,13 +2,14 @@
 <html style="height:100%">
 
     <head>
-        <link href="aerofest_rocket.css" rel="stylesheet" />
-        <link href="styles.css" rel="stylesheet" />
-        <link href="coding.css" rel="stylesheet" />
+        <link href="stylesheets/aerofest_rocket.css" rel="stylesheet" />
+        <link href="stylesheets/styles.css" rel="stylesheet" />
+        <link href="stylesheets/coding.css" rel="stylesheet" />
+        <link href="stylesheets/workshops.css" rel="stylesheet" />
         
         
-        <script src="jquery_1.11.1.js"></script>
-        <script src="jquery.lettering-0.6.1.min.js"></script>
+        <script src="js/jquery_1.11.1.js"></script>
+        <script src="js/jquery.lettering-0.6.1.min.js"></script>
     </head>
 
     <body style="height:97%">
@@ -133,11 +134,16 @@
         </div>
         
         
-        <div id="workshops_div" style="display:none">
+        <div id="workshops_div">
             
-            <img src="nut.svg" style="z-index:100; position:absolute; width:25%; height:25%; transform:rotateZ(-76deg); left:30%; top:20%">    
-            <img src="adjustable.svg" style="z-index:100; position:absolute; width:50%; height:50%; top:23.25%; left:24%">
-        
+            <img id="nut" src="images/vert_nut.svg" style="z-index:100; position:fixed; width:5%; left:60%; top:25%; display:none">    
+            
+            <img id="spanner" src="images/vert_spanner.svg" style="z-index:100; position:fixed; width:15%; top:180px; left:55%; display:none">
+            
+        </div>
+<!--        
+        <div id="workshops_load" style="height:2px; width:0%; background-color:black; margin:auto auto; margin-top:0px; margin-bottom:0px">
+-->            
         </div>
         
         
@@ -180,9 +186,9 @@
     <!------------------------------associated events end------------------------------------------>                                 
         
         
-        <script src="aerofest_rocket.js"></script>
-        <script src="coding.js"></script>
-        <script src="workshops.js"></script>
+        <script src="js/aerofest_rocket.js"></script>
+        <script src="js/coding.js"></script>
+        <script src="js/workshops.js"></script>
 
     </body>
 </html>

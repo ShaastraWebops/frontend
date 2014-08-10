@@ -1,0 +1,27 @@
+ #container{
+ 	margin-top: 5%;
+ 	margin-left: 7.5%;
+ 	margin-right: 7.5%;
+ }
+ .thumbnail{
+ 	display:inline-block;
+ 	height: 200px;
+ 	width: 200px;
+ 	background-color:red;
+ 	filter: grayscale(1);
+  	-webkit-filter: grayscale(1);
+ }
+.thumbnail:hover{
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	-webkit-filter: grayscale(0);
+}
+.mini-thumbnail{
+	display:inline-block; 
+	height:40px; 
+	width:200px; 
+	background-color:blue;
+}

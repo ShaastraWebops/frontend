@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events|Shaastra 2015</title>
+	<script src="js/jquery-1.8.1.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/jquery.gsap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"> -->
+</head>
+<body bgcolor="black">
+	<div id="container">
+		<div id="top">
+			<img class="thumbnail" src="img/rand/0.jpg"></img>
+			<img class="thumbnail" src="img/rand/1.jpg"></img>
+			<img class="thumbnail" src="img/rand/2.jpg"></img>
+			<img class="thumbnail" src="img/rand/3.jpg"></img>
+			<img class="thumbnail" src="img/rand/4.jpg"></img>
+		</div>
+		<div id="topthumbs">
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+		</div>
+		<br>
+	
+		<div id="separator" style="height:1px; width:0%; background-color:red;"></div>
+		
+		<br>
+		<div id="bottomthumbs">
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+			<div class="mini-thumbnail" style="display:inline-block; height:40px; width:200px; background-color:blue;"><a >Aerofest</a></div>
+		</div>
+		<div id="bottom">
+			<img class="thumbnail" src="img/rand/5.jpg"></img>
+			<img class="thumbnail" src="img/rand/6.jpg"></img>
+			<img class="thumbnail" src="img/rand/7.jpg"></img>
+			<img class="thumbnail" src="img/rand/8.jpg"></img>
+			<img class="thumbnail" src="img/rand/9.jpg"></img>
+		</div> src=
+	</div>
+
+
+	<script type="text/javascript"> 	
+		//TweenLite.set(container, {perspective:1000});
+		TweenLite.set(topthumbs, {rotationX:-90});
+		TweenLite.set(bottomthumbs, {rotationX:90});
+
+		$(".mini-thumbnail").mouseover(function(){
+			console.log("yo")
+			TweenMax.to(this, 0.2, {
+    		textShadow:"2px 2px 15px rgba(145, 233, 0, 1)",             
+    		color:"#91ff00"
+			});
+		})
+
+		$(".mini-thumbnail").mouseout(function(){
+			console.log("yo")
+			TweenMax.to(this, 0.2, {
+    		textShadow:"0px 0px 0px rgba(145, 233, 0, 1)",             
+    		color:"#000000"
+			});
+		})
+
+		$(".thumbnail").click(function(){
+			var obj = document.getElementById("separator")
+			var top = document.getElementById("top")
+			var bottom = document.getElementById("bottom")
+			var topthumbs = document.getElementById("topthumbs")
+			var bottomthumbs = document.getElementById("bottomthumbs")
+
+			var tl = new TimelineLite();
+			tl.to(obj, 0.5, {width:"100%"})
+			.to(obj, 0.5, {autoAlpha:0})
+			.to(top, 0.5, {y:"-=50"}, "moveout")
+			.to(bottom, 0.5, {y:"+=50"}, "moveout")
+			.to(top, 0.5, {rotationX:90}, "spinout")
+			.to(topthumbs, 0.5, {rotationX:0, y:"-=150"}, "spinout")
+			.to(bottom, 0.5, {rotationX:-90}, "spinout")
+			.to(bottomthumbs, 0.5, {rotationX:0, y:"+=150"}, "spinout");
+		});
+	</script>
+</body>
+</html>
