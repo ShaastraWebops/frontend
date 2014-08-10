@@ -21,7 +21,6 @@ if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUE
         $new_tab_name = $new_tab_name . '(' . $i . ')'; 
     }
     if ( $oldname == '' ) {
-        echo "CREATE NEW FILE";
         $fp = fopen($new_tab_name . '.html', "w"); // create
         fclose($fp);
     } else {
