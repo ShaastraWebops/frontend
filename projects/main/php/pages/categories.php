@@ -276,9 +276,13 @@
                     // ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
+<<<<<<< HEAD
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
                                 href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+=======
+                            <a id="eventDetail_<?php echo $event ?>" href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+>>>>>>> matrix animation for coding #41
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell">
@@ -302,6 +306,7 @@
         ?>
     </div>
     </div>
+<<<<<<< HEAD
     </div>
     <div class="animation aerofest"
         style="position:absolute; z-index: -1; overflow: hidden;
@@ -1044,5 +1049,100 @@
             });
         });
     </script>
+=======
+    </div>    
+    <div class="container-fluid" id="aeroplane" style="position:absolute; top:10%; left:-10%; display:none">
+        <img src="../../img/events/pageTransition/Aerofest.png">
+    </div>
+    <div class="container-fluid" id="matrix" style="position:absolute;top:0%;z-index:-10">
+        <canvas id="q" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
+    </div>
+    <?php include '../base/foot.php' ?>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $transtext = $('.transparent-text');
+        if ( ( $transtext.css('text-stroke-color') !== undefined ||
+            $transtext.css('-webkit-text-stroke-color') !== undefined ||
+            $transtext.css('-moz-text-stroke-color') !== undefined ) && 
+            ( $transtext.css('text-stroke-width') !== undefined ||
+            $transtext.css('-webkit-text-stroke-width') !== undefined ||
+            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
+            ( $transtext.css('background-clip') === 'text' ||
+            $transtext.css('-webkit-background-clip') == 'text' ||
+            $transtext.css('-moz-background-clip') === 'text' ) &&
+            ( $transtext.css('text-fill-color') !== undefined ||
+            $transtext.css('-webkit-text-fill-color') !== undefined ||
+            $transtext.css('-moz-text-fill-color') !== undefined ) &&
+            ( $transtext.css('background-clip') !== undefined ||
+            $transtext.css('-webkit-background-clip') !== undefined ||
+            $transtext.css('-moz-background-clip') !== undefined ) ) {
+            // Phew ... the condition is valid => transparent-text works !
+                $transtext.each(function(i) {
+                    var $el = $(this);
+                    var $el_event = $el.closest('.event-item');
+                    $el.css('background-image', $el_event.css('background-image'))
+                        .css('background-repeat', $el_event.css('background-repeat'))
+                        .css('background-size', $el_event.css('background-size'));
+                });
+            }
+        //aerofest Animation
+        $("#eventDetail_Aerofest").click(function(event){
+            event.preventDefault();
+            linkLocation = this.href;
+            // $("body").fadeOut(1000, redirectPage);      
+            $("#aeroplane").css("display", "inline");
+            $("#aeroplane").animate({left:"100%"},"slow",redirectPage);            
+        });        
+        //Coding Animation
+        var sWidth = window.innerWidth;
+        var sHeight = window.innerHeight;
+        q.width = sWidth;
+        q.height = sHeight;
+        var yPositions = Array(300).join(0).split('');
+        var ctx=q.getContext('2d');
+         
+        var draw = function () {
+          ctx.fillStyle='rgba(0,0,0,.05)';
+          ctx.fillRect(0,0,sWidth,sHeight);
+          ctx.fillStyle='#0F0';
+          ctx.font = '10pt Georgia';
+          yPositions.map(function(y, index){
+            text = String.fromCharCode(1e2+Math.random()*33);
+            x = (index * 10)+10;
+            q.getContext('2d').fillText(text, x, y);
+            if(y > 100 + Math.random()*1e4)
+            {
+              yPositions[index]=0;
+            }
+            else
+            {
+              yPositions[index] = y + 10;
+            }
+          });
+        };
+        function RunMatrix()
+        {
+            if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
+                Game_Interval = setInterval(draw, 30);
+        }
+        function StopMatrix()
+        {
+            clearInterval(Game_Interval);
+        }
+        $("#eventDetail_Coding").click(function(event){
+            event.preventDefault();
+            linkLocation = this.href;
+            $("#matrix").css("z-index",10);
+            setTimeout(function(){RunMatrix()}, 200);            
+            setTimeout(function(){$("#matrix").fadeOut(3000)},2500);
+            setTimeout(function(){StopMatrix()}, 3500);
+            setTimeout(function(){redirectPage();},3500);
+        });
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+    });    
+    </script>    
+>>>>>>> matrix animation for coding #41
 </body>
 </html>
