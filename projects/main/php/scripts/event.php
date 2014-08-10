@@ -35,7 +35,7 @@ if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUE
     }
 }
 
-header('Location: ' . str_replace('tab=' . $old_tab_name, 'tab=' . $new_tab_name, $_SERVER['HTTP_REFERER']))
+/*header('Location: ' . str_replace('tab=' . $old_tab_name, 'tab=' . $new_tab_name, $_SERVER['HTTP_REFERER']))*/
 
 ?>
 
