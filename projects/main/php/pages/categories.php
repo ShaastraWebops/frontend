@@ -6,17 +6,15 @@
     <style>        
         #event-list {
             color: #fff;
+            /*paddin*/
         }
         #event-list .event-group .event-item {
             padding: 0;
-<<<<<<< HEAD
             /*margin-left: 5%;
             margin-right: 5%;*/
-            margin: -2px !important;
-=======
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
-            margin-right: 0.4em;
-            margin-bottom: 0.4em;
+            margin: 1%;
+            /*m.5argin-right: 0.4em;*/
+            /*margin-bottom: 0.4em;*/
         }
         #event-list .event-group .event-item > div {
             display: inline-block;
@@ -33,11 +31,7 @@
             border: 1px solid transparent;
         }
         #event-list .event-group .event-item:hover > div {
-<<<<<<< HEAD
-            /*border-color: #fff;*/
-=======
             border-color: #fff;            
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
         }
         #event-list .event-group .event-item > div > .dummy {
             margin-top: 100%; /* This is the height:width ratio */;
@@ -92,10 +86,6 @@
             background-color: rgba(0, 0, 0, 0.95);
             width: 100%;
             display: inline-block;
-        }
-
-        .animation {
-
         }
         .animation.spotlight>img{
             position: absolute;
@@ -155,14 +145,6 @@
            font-family: "LCD Solid";
            src: url(../../fonts/LCD_Solid.ttf);
         }
-<<<<<<< HEAD
-        @font-face {
-           font-family: "LCD Solid";
-           src: url(../../fonts/LCD_Solid.ttf);
-        }
-=======
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
-
         #score {
            font-family: "LCD Solid";
            color: red;
@@ -177,50 +159,23 @@
         #speech {
             z-index:100;
             position:absolute;
-<<<<<<< HEAD
             height:17%;
             left:50%;
             top:15%;
-=======
-            height:17%; 
-            left:50%; 
-            top:15%; 
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
             display:none;
         }
 
         #man{
-<<<<<<< HEAD
             z-index:100;
             position:absolute;
             height:50%;
             top:24%;
             left:34%;
-=======
-            z-index:100; 
-            position:absolute; 
-            height:50%; 
-            top:24%; 
-            left:34%; 
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
             display:none;
         }
         @-webkit-keyframes mapBorder{
           0%{
             stroke-opacity:1;
-<<<<<<< HEAD
-            fill-opacity: 0;
-          }
-          80%{
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: 0;
-            stroke-opacity:1;
-            fill-opacity:1;
-          }
-        }
-=======
             fill-opacity: 0;            
           }                
           80%{
@@ -232,7 +187,6 @@
             fill-opacity:1;     
           }
         }        
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
         .animation.workshops>#spanner{
             position: fixed;
             top: 80%;
@@ -244,11 +198,7 @@
             position: fixed;
             top: 5%;
             left: 45%;
-<<<<<<< HEAD
-            -webkit-transform-origin:center center;
-=======
             -webkit-transform-origin:center center;            
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
             -webkit-animation: tightenNut 1s ease-in-out 1s forwards;
         }
         @-webkit-keyframes moveSpanner{
@@ -260,13 +210,8 @@
                 -webkit-transform: rotate(0deg);
             }
             100%{
-<<<<<<< HEAD
-                top: 10%;
-                -webkit-transform: rotate(60deg);
-=======
                 top: 10%;                
                 -webkit-transform: rotate(60deg);                
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
             }
         }
         @-webkit-keyframes tightenNut{
@@ -300,7 +245,7 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
-            $event_row_count = 6;
+            $event_row_count = 4;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
@@ -327,7 +272,7 @@
                         // Give different class to indicate first and last column
                         if ($event_i % $event_row_count == 0) echo ' first ';
                         elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last ';
-                    ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
+                    // ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
@@ -358,7 +303,7 @@
     </div>
     </div>
     <div class="animation aerofest"
-        style="position:absolute; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
+        style="position:absolute; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:-100%;
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
@@ -373,81 +318,59 @@
     <div class="animation coding"
         style="position:fixed; z-index: -1;top:0%; overflow: hidden; 
         height: 100%; width: 100%; left:0%;">
-        <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
+        <canvas id="canvasC" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
     <div class="animation department_flagship"
         style="position:absolute; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:-100%;
-            background: url(../../img/events/Department_Flagship_animation.png) no-repeat center center;
+            background: url(../../img/events/shark.svg) no-repeat center center;
             background-size: auto 100%;">
     </div>
 
     <div class="animation design_and_build"
-<<<<<<< HEAD
         style="position:absolute; z-index: -1; overflow: hidden;
-=======
-        style="position:absolute; z-index: -1; overflow: hidden; 
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
     </div>
 
     <div class="animation electronics_fest"
-        style="position:absolute; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
+        style="position:absolute; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
-        <!-- <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas> -->
-    </div>
-
-    <div class="animation electronics_fest"
-        style="position:absolute; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
-            height: 100%; width: 100%; top:0%; left:0%;display:none">
-        <svg width="185" height="255" id="svg2" style="position:relative;top:0%;left:65%;transform:scale(0.8);">
-            <path style="fill:#fff;fill-opacity:1"
-                d="m 60.592371,253.62886 c -4.95188,-3.14039 -10.25174,-9.6854 -11.90897,-14.70685 -0.69134,-2.09481 -2.10725,-3.66182 -4.02734,-4.45715 -3.98461,-1.65048 -8.32751,-6.77816 -10.45177,-12.34047 -1.33561,-3.49725 -1.58957,-6.04652 -1.08137,-10.85513 0.82209,-7.77864 0.82248,-8.79331 0.006,-16.48136 -0.36181,-3.40827 -0.21729,-7.4606 0.32115,-9.00518 0.61869,-1.77479 0.63346,-3.72647 0.0401,-5.30313 -0.51637,-1.37215 -1.55331,-5.95264 -2.30431,-10.17887 -2.16649,-12.19199 -3.69028,-16.23529 -13.12107,-34.81595 C 7.7458615,115.15427 5.6442315,108.2584 4.9598515,92.484763 c -0.79142,-18.24047 2.29078,-32.23239 10.3167795,-46.83391 10.65845,-19.390659 27.16723,-33.305786 48.25429,-40.6731651 5.58495,-1.9512658 8.93193,-2.4654418 15.40408,-2.3664298 l 8.26878,0.126497 -6.83948,0.878807 c -28.06813,3.6064808 -53.75437,22.9494819 -65.82416,49.5688309 -5.3219295,11.73728 -7.0649895,20.32288 -7.0649895,34.79937 0,17.606457 1.89822,24.394797 12.8629695,46.000007 10.1143,19.92948 10.84702,21.82561 13.52495,35 2.02741,9.97407 2.20812,12.37561 1.74981,23.25432 -0.13378,3.17537 0.31798,6.80145 1.00798,8.09073 1.0055,1.8788 0.99617,2.95017 -0.0476,5.47012 -4.01424,9.69123 1.92007,24.26154 11.06337,27.16351 1.06898,0.33928 2.44526,2.1369 3.05839,3.99471 2.81011,8.51471 12.17977,16.68679 21.15555,18.45157 l 4.35323,0.85591 -5.55422,0.10956 c -4.50693,0.0889 -6.40335,-0.42893 -10.05752,-2.74634 z m 50.964969,1.78087 c 8.97578,-1.76478 18.34545,-9.93686 21.15555,-18.45157 0.61313,-1.85781 1.98941,-3.65543 3.0584,-3.99471 9.1433,-2.90197 15.07761,-17.47228 11.06337,-27.16351 -1.0438,-2.51995 -1.05312,-3.59132 -0.0476,-5.47012 0.69,-1.28928 1.14175,-4.91536 1.00798,-8.09073 -0.4707,-11.17289 -0.30846,-13.35355 1.74656,-23.47457 2.43909,-12.0126 5.43791,-19.89644 12.29824,-32.33177 11.26215,-20.4143 14.19812,-30.58695 14.12705,-48.947987 -0.0859,-22.19491 -7.16145,-40.54858 -21.9902,-57.041726 C 141.56011,16.632814 121.30132,5.9625009 103.04359,3.6165621 l -6.839479,-0.878807 8.268779,-0.126497 c 6.47215,-0.09901 9.81913,0.415164 15.40409,2.3664298 21.08706,7.3673791 37.59584,21.2825061 48.25428,40.6731651 8.02601,14.60152 11.10821,28.59344 10.31679,46.83391 -0.68689,15.831217 -2.78053,22.656067 -13.34439,43.500007 -5.78594,11.41645 -9.72687,20.56027 -10.77485,25 -4.92788,20.87671 -5.19889,22.41731 -4.34131,24.67915 0.48397,1.27647 0.60375,5.24585 0.26618,8.82085 -0.77621,8.22037 -0.77445,9.15741 0.0316,16.78449 0.5082,4.80861 0.25425,7.35788 -1.08136,10.85513 -2.12427,5.56231 -6.46716,10.68999 -10.45177,12.34047 -1.94772,0.80678 -3.33641,2.36358 -4.05761,4.54884 -1.65709,5.02105 -7.51625,12.10886 -12.35296,14.94336 -3.28372,1.92439 -5.60498,2.50156 -9.72535,2.41814 l -5.41214,-0.10956 4.35323,-0.85591 z M 69.944971,240.49017 c -3.94661,-2.40628 -7.23204,-7.51588 -7.23712,-11.2554 l -0.004,-2.75 29,0 28.999999,0 -0.004,2.75 c -0.005,3.73952 -3.29051,8.84912 -7.23712,11.2554 -2.94203,1.79378 -5.05919,1.98712 -21.759139,1.98712 -16.69995,0 -18.81711,-0.19334 -21.75914,-1.98712 z m 40.041259,-1.36738 c 3.7787,-1.59936 6.17464,-4.079 7.62353,-7.88985 l 1.04485,-2.74817 -26.950499,0 -26.9505,0 1.04485,2.74817 c 1.41518,3.7222 3.8127,6.26335 7.40565,7.84932 4.24321,1.87299 32.379399,1.904 36.782119,0.0405 z M 50.878431,219.17032 c -2.97957,-3.17161 -2.91297,-8.64299 0.14014,-11.51124 2.29358,-2.15471 2.6616,-2.17431 40.82568,-2.17431 l 38.511229,0 2.17432,2.31445 c 2.97957,3.17161 2.91296,8.64299 -0.14014,11.51124 -2.29359,2.15471 -2.66161,2.17431 -40.825689,2.17431 l -38.51123,0 z m 79.371129,-2.1401 c 1.35,-1.35 2.45455,-2.94545 2.45455,-3.54545 0,-0.6 -1.10455,-2.19545 -2.45455,-3.54545 l -2.45454,-2.45455 -36.090909,0 -36.09091,0 -2.45454,2.45455 c -1.35,1.35 -2.45454,2.94545 -2.45454,3.54545 0,0.6 1.10454,2.19545 2.45454,3.54545 l 2.45454,2.45455 36.09091,0 36.090909,0 z m -79.371129,-18.8599 c -2.97957,-3.17161 -2.91297,-8.64299 0.14014,-11.51124 2.29358,-2.15471 2.6616,-2.17431 40.82568,-2.17431 l 38.511229,0 2.17432,2.31445 c 2.97957,3.17161 2.91296,8.64299 -0.14014,11.51124 -2.29359,2.15471 -2.66161,2.17431 -40.825689,2.17431 l -38.51123,0 z m 79.371129,-2.1401 c 1.35,-1.35 2.45455,-2.94545 2.45455,-3.54545 0,-0.6 -1.10455,-2.19545 -2.45455,-3.54545 l -2.45454,-2.45455 -36.090909,0 -36.09091,0 -2.45454,2.45455 c -1.35,1.35 -2.45454,2.94545 -2.45454,3.54545 0,0.6 1.10454,2.19545 2.45454,3.54545 l 2.45454,2.45455 36.09091,0 36.090909,0 z"
-                id="path3112"/>
-            <path style="fill:#ff0;fill-opacity:0;stroke:#fff;"
-                d="m 54.60101,178.57084 c -4.80169,-0.63497 -5.29876,-1.5197 -7.95167,-14.1534 C 44.3001,153.22988 42.63569,148.76197 34.70162,132.34509 26.66697,115.72011 25.00889,111.85736 23.14208,105.4154 19.79153,93.853352 20.51703,76.516826 24.8824,63.828654 30.60671,47.190639 44.51108,31.729193 60.7807,23.910286 69.44365,19.74702 77.19512,17.67089 86.54625,17.009324 c 24.18634,-1.711117 46.74296,8.513195 61.6966,27.965424 9.4615,12.307851 14.08339,26.586916 14.07811,43.493531 -0.004,13.261931 -1.86048,19.479371 -12.12007,40.593821 -9.86684,20.30615 -10.7206,22.55464 -13.42468,35.35534 -1.97078,9.32941 -3.25609,12.50739 -5.51541,13.63706 -1.30026,0.65012 -6.63885,0.76787 -37.62819,0.82996 -19.86212,0.0398 -37.42634,-0.10134 -39.0316,-0.31362 l 0,0 z"
-                id="glow"/>
+        <svg id="lightBulb" width="512px" height="512px" style="position:relative;top:4%;left:64%;">
+          <g transform="scale(0.4)">
+            <path
+             d="M256,32c77.313,0,140,62.688,140,140c0,76.125-45.875,85-54.5,168c0,7.75-6.25,14-14,14h-143c-7.75,0-14-6.25-14-14h-0.031  C161.875,257,116,248.125,116,172C116,94.688,178.688,32,256,32 M326,368c7.75,0,14,6.25,14,14s-6.25,14-14,14H186  c-7.75,0-14-6.25-14-14s6.25-14,14-14H326 M326,410c7.75,0,14,6.25,14,14s-6.25,14-14,14H186c-7.75,0-14-6.25-14-14s6.25-14,14-14  H326 M312,452c0,15.469-12.531,28-28,28h-56c-15.469,0-28-12.531-28-28H312 M256,0C161.156,0,84,77.156,84,172  c0,47.625,15.563,74.969,29.25,99.125c11.625,20.438,21.688,38.156,25.281,71.094c0.344,7.313,2.438,14.188,5.844,20.219  C141.563,368.375,140,375,140,382c0,7.563,1.813,14.688,5.063,21c-3.25,6.313-5.063,13.438-5.063,21  c0,19.719,12.469,36.563,29.938,43.094C176.625,492.906,200.125,512,228,512h56c27.875,0,51.375-19.094,58.063-44.906  C359.531,460.563,372,443.719,372,424c0-7.563-1.844-14.688-5.094-21c3.25-6.313,5.094-13.438,5.094-21  c0-7-1.563-13.625-4.375-19.531c3.406-6.063,5.469-12.969,5.813-20.281c3.625-32.906,13.656-50.594,25.281-71.063  C412.438,247,428,219.625,428,172C428,77.156,350.844,0,256,0L256,0z"
+             id="outline" style="fill:#fff"/>
+            <path
+             style="fill:#ffff00;fill-opacity:0"
+             d="m 176.53788,349.35337 c -3.5604,-3.56039 -3.9161,-4.73975 -7.80621,-25.88218 -3.98698,-21.66893 -8.43728,-33.14979 -27.33103,-70.50848 -14.41134,-28.4956 -18.83314,-39.5383 -21.67995,-54.142 -9.13386,-46.85528 8.25238,-98.02934 44.2856,-130.348763 14.02991,-12.583895 45.4503,-28.701204 62.92083,-32.275673 16.29654,-3.33427 44.65023,-2.858953 61.18135,1.025634 25.15873,5.911957 44.55921,17.159779 65.13829,37.765245 27.16837,27.203197 38.58116,52.616717 40.59284,90.390537 1.82753,34.31618 -1.31725,44.75477 -31.28826,103.85621 -12.57205,24.79152 -16.67592,36.79698 -20.28932,59.35442 -4.14373,25.86809 1.93245,24.171 -86.54095,24.171 -65.965,0 -76.21827,-0.44103 -79.18319,-3.40595 z"
+             id="glow"/>
+          </g>
         </svg>
+        <img id="battery" src="../../img/events/battery.svg" style="position:absolute;top:50%;left:25%;height:20%">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
     <div class="animation involve_and_quizzes"
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;">
-<<<<<<< HEAD
         <div id="quizzes_div">
             <img id="speech" src="../../img/events/speech_bubble.png">
             <img id="man" src="../../img/events/man.svg">
             <p id="score">10</p>
         </div>
-=======
-        <div id="quizzes_div">            
-            <img id="speech" src="../../img/events/speech_bubble.png">                
-            <img id="man" src="../../img/events/man.svg">
-            <p id="score">10</p>        
-        </div>    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
     </div>
 
     <div class="animation sampark"
         style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
             width: 100%; top:-5%; left:0%;display:none" align="center">
-<<<<<<< HEAD
         <svg id="samparkMap"
-=======
-        <svg    id="samparkMap"
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
             width="620"
             height="740"
             style="transform:scale(0.8);">
             <path
-<<<<<<< HEAD
                style="fill:#00425a; fill:rgba(0, 66, 94, 0.5); stroke:#fff;stroke-width:2px;"
-=======
-               style="fill:#00425a;stroke:#fff;stroke-width:2px;"
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                d="m 177.3758,728.77543 c -9.67335,-4.77198 -17.98796,-21.69219 -23.29892,-47.41325 -6.57801,-31.85742 -12.18015,-48.69872 -20.67618,-62.1573 -3.61968,-5.73395 -6.29073,-14.83443 -8.41089,-28.65656 -2.60966,-17.01341 -4.08933,-21.60751 -11.49386,-35.68614 C 102.602,534.1489 101.50708,529.21566 95.439094,473.50576 l -3.742138,-34.35641 1.864839,-13.64359 c 1.953002,-14.2886 2.589574,-41.56631 1.130845,-48.45779 -0.469633,-2.21869 -1.298387,-3.65054 -1.981197,-3.42294 -0.64561,0.21521 -2.703231,3.9566 -4.57249,8.31422 -4.893318,11.40729 -9.556214,17.99564 -15.002302,21.1972 -3.905466,2.29589 -5.761402,2.71946 -11.769014,2.68594 -6.164344,-0.0344 -8.148549,-0.54201 -14.619613,-3.74018 -17.712218,-8.75385 -33.247341,-34.30898 -24.752094,-40.71696 1.356113,-1.02292 6.660679,-3.09868 11.787923,-4.6128 14.112861,-4.16766 13.742539,-5.43342 -2.602432,-8.89512 C 12.773844,343.95878 9,341.15619 9,331.38461 c 0,-7.78654 3.137088,-13.64045 8.960023,-16.71969 5.367014,-2.83815 15.630301,-3.09842 28.179509,-0.71462 16.627423,3.15849 22.10579,-0.9973 16.882061,-12.8064 -1.088124,-2.45989 -3.333347,-10.17565 -4.989384,-17.14615 -3.980485,-16.75442 -5.487294,-19.58084 -12.010574,-22.529 -3.72746,-1.6846 -5.606138,-3.26443 -6.760453,-5.68505 -2.548586,-5.34445 -0.616879,-9.67237 9.258137,-20.74254 11.550377,-12.9483 14.573259,-13.88005 22.807753,-7.03012 3.980594,3.31129 6.929852,3.79759 11.081964,1.82728 5.58272,-2.64917 10.472293,-8.02975 20.022464,-22.03309 9.86815,-14.46957 26.13006,-35.44984 35.43237,-45.71298 3.37487,-3.72346 6.13675,-6.87346 6.1375,-7 0.0126,-2.11578 3.15433,-17.15249 3.8589,-18.46898 0.53077,-0.99175 3.14184,-2.58642 5.80238,-3.54371 2.66054,-0.9573 6.18735,-2.86656 7.83735,-4.24281 l 3,-2.50228 -7.38136,-6.87383 c -4.05975,-3.78061 -9.86254,-8.38687 -12.89509,-10.23615 -12.48342,-7.6125 -16.22944,-13.338574 -16.21797,-24.790446 0.008,-8.110408 1.62219,-12.712821 5.92184,-16.885692 4.96245,-4.816137 8.06419,-10.000207 8.06884,-13.485829 0.009,-6.423727 -3.3667,-9.578754 -18.40108,-17.20034 -7.40822,-3.75555 -8.32298,-5.127461 -6.80257,-10.202143 3.59474,-11.998159 22.00363,-22.3312008 39.68575,-22.2758954 11.36478,0.035546 15.93297,2.9297902 39.27359,24.8823374 13.60433,12.795284 19.37467,17.095701 22.93919,17.095701 1.3146,0 7.43439,-2.086809 13.59952,-4.637354 9.6257,-3.982194 12.24423,-4.653269 18.53451,-4.75 7.27845,-0.111928 7.34774,-0.08803 10.86446,3.747565 l 3.53929,3.860211 -0.40127,9.174655 c -0.35023,8.007644 -0.85666,10.124216 -3.98143,16.639789 -1.96909,4.105824 -5.89003,10.07882 -8.71319,13.273325 C 247.56754,88.836371 247,89.978907 247,94.003788 c 0,2.696437 1.21239,7.553032 3,12.017362 3.71696,9.28267 3.78641,12.2819 0.36364,15.70467 -2.25227,2.25226 -3.49533,2.63636 -8.53212,2.63636 -3.24267,0 -7.41347,-0.63414 -9.26845,-1.4092 l -3.3727,-1.40921 2.37769,5.37639 c 2.92568,6.61548 4.5604,16.22566 3.75704,22.08683 -0.56899,4.15125 -0.37878,4.61379 3.35979,8.17022 2.82508,2.68743 7.96146,5.43576 17.88903,9.5719 16.61114,6.92074 20.42608,9.48201 20.42608,13.71362 0,4.00125 -2.03432,7.71454 -9.09214,16.59605 -6.13726,7.7231 -7.52749,10.77575 -6.45145,14.16605 0.77581,2.44436 16.93537,13.55007 32.54359,22.36571 19.99291,11.29213 29.12392,14.73194 40.67154,15.32166 9.79261,0.5001 13.42749,1.84163 33.64453,12.41723 18.30515,9.57548 24.99943,11.53996 36.18393,10.61841 18.11021,-1.49221 18.75796,-2.17257 18.56097,-19.49534 -0.1804,-15.86452 0.91966,-19.09032 6.51016,-19.09032 2.37387,0 4.2947,0.77492 5.90002,2.38024 2.96265,2.96265 5.52885,11.35385 5.52885,18.07875 0,2.95497 0.6426,6.01343 1.52948,7.27964 1.75684,2.50823 7.1159,4.24772 13.11138,4.25579 4.72976,0.006 42.50825,-4.73067 44.82853,-5.62105 2.26644,-0.86971 1.90562,-2.5083 -1.96939,-8.94339 -5.39583,-8.96066 -4.34659,-13.3932 3.18426,-13.45194 7.44173,-0.058 16.13299,-6.75302 32.42592,-24.97804 6.14617,-6.875 12.97843,-13.7375 15.18281,-15.25 3.69316,-2.534 4.76736,-2.75 13.67599,-2.75 16.1921,0 26.03102,4.39742 26.03102,11.63435 0,4.54106 3.10786,7.58511 10.0616,9.85503 7.15846,2.33674 7.9384,3.07144 7.9384,7.47803 0,6.03924 -6.3831,14.85615 -15.17924,20.96693 -4.02642,2.79719 -8.69196,6.15261 -10.36787,7.45648 -5.89745,4.58825 -11.28726,17.74513 -18.43874,45.01022 -4.10769,15.6606 -9.61428,29.87441 -12.6957,32.7706 -1.85831,1.7466 -4.01697,2.45329 -8.63955,2.82836 l -6.16228,0.5 -0.67483,4.74592 c -0.37115,2.61025 -1.89439,8.40794 -3.38497,12.88375 -2.4236,7.27739 -2.63861,9.01953 -2.03356,16.47653 0.75532,9.30888 -0.0428,11.91844 -4.11904,13.46824 -1.94868,0.74088 -3.17159,0.58726 -5.03274,-0.63221 -4.40405,-2.88565 -6.60464,-10.27074 -9.90966,-33.25644 -0.28315,-1.96923 -0.96054,-3.15465 -1.66918,-2.92103 -1.67698,0.55285 -3.6604,4.75607 -3.6779,7.79411 -0.0245,4.25582 -2.3201,6.39568 -6.86114,6.39568 -7.38781,0 -11.36819,-6.23019 -9.17768,-14.36514 0.81696,-3.03393 3.11209,-6.06775 8.96478,-11.8501 7.10773,-7.0223 7.93806,-8.24805 8.60641,-12.70488 0.53521,-3.56904 0.34469,-5.63794 -0.68914,-7.48358 l -1.42884,-2.55085 -18.96457,-0.60767 c -11.18409,-0.35837 -20.30039,-1.11732 -22.22059,-1.84993 -3.4345,-1.31035 -3.81603,-2.17837 -4.57565,-10.4101 -0.60834,-6.59247 -2.93807,-8.53804 -15.51781,-12.959 C 431.20509,278.83744 429,279.12593 429,284.88678 c 0,2.7355 1.02534,4.58644 4.92783,8.89571 8.7594,9.67243 8.75729,10.80376 -0.0301,16.1418 -8.9346,5.42748 -8.93245,7.15885 0.0192,15.56054 l 7.22059,6.77695 -0.63956,4.3002 c -0.52576,3.53504 -0.0996,5.45678 2.39481,10.8002 3.63253,7.78131 5.39383,17.89492 5.51654,31.67656 0.10354,11.62834 -1.40709,15.04789 -7.325,16.58138 -4.69384,1.21629 -13.81415,-0.89679 -16.81269,-3.89533 l -2.43463,-2.43463 -5.66559,2.59379 C 407.14691,396.01554 403,400.97334 403,407.63102 c 0,8.02133 -4.90032,19.49796 -11.28089,26.42007 -5.09837,5.53107 -11.35371,8.79466 -19.78211,10.32088 -3.54035,0.64109 -6.98473,1.61899 -7.65417,2.17312 -0.66945,0.55412 -2.76635,3.77715 -4.65979,7.16229 -1.89344,3.38514 -4.86802,7.9548 -6.61018,10.1548 -6.63641,8.38043 -28.65365,30.92622 -35.4333,36.28391 C 303.9487,510.91801 303,512.08172 303,518.02994 c 0,6.47113 -0.57359,6.851 -12.59593,8.34191 -11.3012,1.40147 -14.33712,3.132 -16.71099,9.52554 -1.00855,2.71633 -1.96571,5.07075 -2.12702,5.23206 -0.16131,0.16131 -3.37969,1.06717 -7.15195,2.01301 -5.78323,1.45007 -7.21581,2.25251 -9.13639,5.1176 C 253.27921,551.24142 253,552.9055 253,561.83517 c 0,6.09867 0.8482,14.75579 2.11652,21.60212 1.16408,6.28369 2.17658,15.26765 2.25,19.96436 l 0.13348,8.53948 -7,13.94087 -7,13.94086 0,11.51966 c 0,13.49527 0.0555,13.37654 -10.86001,23.24239 -6.45953,5.83839 -7.7156,7.54486 -9.54854,12.97249 -4.79275,14.1921 -21.08097,36.20798 -30.24816,40.88473 -4.5149,2.30333 -11.18276,2.44701 -15.46749,0.3333 z"
                id="indianMap"/>
             <g class="coords">
@@ -663,11 +586,7 @@
                      d="m 396.32031,520.24419 2.8711,0 1.99218,4.68164 2.00391,-4.68164 2.86523,0 0,8.74805 -2.13281,0 0,-6.39844 -2.01562,4.7168 -1.42969,0 -2.01563,-4.7168 0,6.39844 -2.13867,0 0,-8.74805"
                      style=""
                      id="path3159" />
-<<<<<<< HEAD
                 </g>
-=======
-                </g>    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                 <g  id="trichy"
                    transform="translate(146.88422,5.4626361)">
                   <path
@@ -733,11 +652,7 @@
                      d="m 182.20898,509.79302 0,5.33789 0.8086,0 c 0.92187,0 1.62499,-0.22851 2.10937,-0.68555 0.48828,-0.45702 0.73242,-1.12109 0.73242,-1.99218 0,-0.86718 -0.24219,-1.52734 -0.72656,-1.98047 -0.48438,-0.45312 -1.18946,-0.67968 -2.11523,-0.67969 l -0.8086,0 m -2.25586,-1.70508 2.37891,0 c 1.32812,10e-6 2.3164,0.0957 2.96484,0.28711 0.65234,0.18751 1.21093,0.50782 1.67579,0.96094 0.41014,0.39454 0.71483,0.84962 0.91406,1.36523 0.19921,0.51563 0.29882,1.09962 0.29883,1.75196 -1e-5,0.66016 -0.0996,1.25 -0.29883,1.76953 -0.19923,0.51563 -0.50392,0.9707 -0.91406,1.36523 -0.46876,0.45313 -1.03126,0.77539 -1.6875,0.9668 -0.65626,0.1875 -1.64063,0.28125 -2.95313,0.28125 l -2.37891,0 0,-8.74805"
                      style=""
                      id="path3132" />
-<<<<<<< HEAD
-                </g>
-=======
                 </g>    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                 <g  id="coimbatore"
                     transform="translate(0.60695998,-26.706221)">
                   <path
@@ -786,34 +701,31 @@
     </div>
     
     <div class="animation shows"
-        style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
         <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
     </div>
 
     <div class="animation spotlight"
-        style="position:fixed; z-index: -1; overflow: hidden; background-color:rgba(0,0,0,0.5);
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
     <div class="animation workshops"
-        style="position:fixed; z-index: -1; overflow: hidden;background-color:rgba(0,0,0,0.5);
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <img id="spanner" class="img-responsive" src="../../img/events/spanner.svg">
-<<<<<<< HEAD
         <img id="nut" class="img-responsive" src="../../img/events/nut.svg">
+    </div>
+    <div class="animation background"
+        style="position:fixed; z-index: 5000; overflow: hidden;background-color:rgba(0,0,0,0.4);
+            height: 100%; width: 100%; top:0%; left:0%;display:none">
     </div>
 
     <?php include '../base/foot.php' ?>
-=======
-        <img id="nut" class="img-responsive" src="../../img/events/nut.svg">        
-    </div>
-
-    <?php include '../base/foot.php' ?>    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
 
     <script type="text/javascript">
         var animation_time = 1000;
@@ -822,9 +734,7 @@
                 ev.preventDefault();
                 var that = this;
                 var $el = $(this);
-                $('.animation').css( {
-                    'background': 'rgba(0, 0, 0, 0.4)'
-                })
+                $('.animation.background').fadeIn(500);
                 if( $el.hasClass("aerofest")) {
                     $(".animation.aerofest")
                         .css("z-index", 10000)
@@ -833,7 +743,7 @@
                     }, animation_time)
 
                 } else if($el.hasClass("b-events")) {
-                    animation_time = 2200;
+                    animation_time = 2500;
                     $(".animation.b-events").css("z-index", 10000);
                     var canvas = document.getElementById("canvasB"),
                     ctx = canvas.getContext("2d");
@@ -846,7 +756,6 @@
                     pace = 10;
                     // make some points
                     points.push({
-<<<<<<< HEAD
                         x: 0.05*canvas.width,
                         y: 0.1*canvas.height
                     });
@@ -856,33 +765,20 @@
                     });
                     points.push({
                         x: 0.95*canvas.width,
-=======
-                        x: 0.05*canvas.width, 
-                        y: 0.1*canvas.height                        
-                    });
-                    points.push({
-                        x: 0.05*canvas.width, 
                         y: 0.95*canvas.height
                     });
-                    points.push({
-                        x: 0.95*canvas.width, 
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
-                        y: 0.95*canvas.height
-                    });
-                    for (var i = 3; i < 50; i+=3) {
-                        points.push({
-<<<<<<< HEAD
-=======
-                            x: (0.1*canvas.width)+i * (0.8*canvas.width/50),
-                            y: (0.8*canvas.height-10*i) + 100*Math.random()
-                        });
-                    }                    
-                    for (var i = 3; i < 50; i++) {
-                        points2.push({
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
-                            x: (0.1*canvas.width)+i * (0.8*canvas.width/50),
-                            y: (0.8*canvas.height-10*i) + 100*Math.random()
-                        });
+                    for (var i = 5; i < 60; i+=5) {
+                        if(i==5){
+                            points.push({
+                                x: (0.05*canvas.width),
+                                y: (0.95*canvas.height)
+                            });    
+                        }else{                        
+                            points.push({
+                                x: (0.05*canvas.width) + (i)*(0.95*canvas.width/60),
+                                y: (0.95*canvas.height-10*(i-5)) - 100*Math.random()
+                            });
+                        }
                     }
                     function drawGraph() {
                         if(new Date().getTime() > nextTime){
@@ -911,30 +807,33 @@
                             ctx.lineTo(points[p].x, points[p].y);
                         }
                         ctx.stroke();
+                        ctx.lineWidth = 20;
+                        ctx.strokeStyle = '#00425a';
+                        ctx.fillStyle = '#00425a';
+                        ctx.beginPath();
+                        // ctx.moveTo(points[4].x, 0.95*canvas.height);
+                        for (var p = 4, plen = currentPoint; p < plen; p++) {
+                            ctx.moveTo(points[p].x, 0.95*canvas.height);
+                            ctx.lineTo(points[p].x, points[p].y);
+                        }
+                        ctx.stroke();
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
-<<<<<<< HEAD
-=======
-                    // setTimeout( function(){
-                    //     $(".animation.b-events").fadeOut(animation_time*0.1)
-                    // }, animation_time*0.9);
-
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                 } else if($el.hasClass("coding")) {
                     animation_time = 1800;
                     $(".animation.coding").css("z-index", 10000);
-                    var $canvas = $(".animation.coding").find("canvas")
+                    var canvas = document.getElementById("canvasC"),
+                    ctx = canvas.getContext("2d");
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
                     var Game_Interval = 0;
                     var yPositions = Array(300).join(0).split('');
-                    var ctx = $canvas[0].getContext('2d');
-                    $canvas.width($(document).width())
-                    $canvas.height($(document).height())
                     var draw = function () {
                         ctx.fillStyle = 'rgba(0,0,0,0.05)';
-                        ctx.fillRect(0, 0, $canvas.width(), $canvas.width());
+                        ctx.fillRect(0, 0, canvas.width, canvas.width);
                         ctx.fillStyle = '#0F0';
-                        ctx.font = '0.8em Georgia';
+                        ctx.font = '1em Georgia';
                         yPositions.map(function(y, index){
                             text = String.fromCharCode(1e2+Math.random()*33);
                             x = (index * 10)+10;
@@ -969,12 +868,6 @@
                     setTimeout(function(){
                         $(".animation.electronics_fest").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
-<<<<<<< HEAD
-=======
-                    // setTimeout(function(){
-                    //     $(".animation.electronics_fest").fadeOut(animation_time*0.1);
-                    // }, animation_time*0.95);
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                     var canvas = $(".animation.electronics_fest").find("canvas")[0];
                     var ctx = canvas.getContext('2d');
                     canvas.width = window.innerWidth;
@@ -984,9 +877,9 @@
                     currentPoint = 1,
                     nextTime = new Date().getTime()+500,
                     pace = 50;
-<<<<<<< HEAD
-                    redPoints.push( {x: 0.295*canvas.width,y: 0.62*canvas.height},
-                                    {x: 0.4*canvas.width,y: 0.62*canvas.height},
+                    bluePoints.push( {x: 0.283*canvas.width,y: 0.69*canvas.height},
+                                    {x: 0.283*canvas.width,y: 0.7*canvas.height},
+                                    {x: 0.4*canvas.width,y: 0.7*canvas.height},
                                     {x: 0.4*canvas.width,y: 0.8*canvas.height},
                                     {x: 0.55*canvas.width,y: 0.8*canvas.height},
                                     {x: 0.55*canvas.width,y: 0.4*canvas.height},
@@ -996,8 +889,9 @@
                                     {x: 0.62*canvas.width,y: 0.65*canvas.height},
                                     {x: 0.72*canvas.width,y: 0.65*canvas.height},
                                     {x: 0.72*canvas.width,y: 0.34*canvas.height});
-                    bluePoints.push({x:0.295*canvas.width,y:0.59*canvas.height},
-                                    {x:0.35*canvas.width,y:0.59*canvas.height},
+                    redPoints.push({x:0.283*canvas.width,y:0.51*canvas.height},
+                                    {x:0.283*canvas.width,y:0.50*canvas.height},
+                                    {x:0.35*canvas.width,y:0.50*canvas.height},
                                     {x:0.35*canvas.width,y:0.3*canvas.height},
                                     {x:0.44*canvas.width,y:0.3*canvas.height},
                                     {x:0.44*canvas.width,y:0.7*canvas.height},
@@ -1007,30 +901,6 @@
                                     {x:0.65*canvas.width,y:0.7*canvas.height},
                                     {x:0.7*canvas.width,y:0.7*canvas.height},
                                     {x:0.7*canvas.width,y:0.34*canvas.height});
-=======
-                    redPoints.push( {x: 0.495*canvas.width,y: 0.62*canvas.height},
-                                    {x: 0.6*canvas.width,y: 0.62*canvas.height},
-                                    {x: 0.6*canvas.width,y: 0.8*canvas.height},
-                                    {x: 0.75*canvas.width,y: 0.8*canvas.height},
-                                    {x: 0.75*canvas.width,y: 0.4*canvas.height},
-                                    {x: 0.7*canvas.width,y: 0.4*canvas.height},
-                                    {x: 0.7*canvas.width,y: 0.2*canvas.height},                                    
-                                    {x: 0.82*canvas.width,y: 0.2*canvas.height},
-                                    {x: 0.82*canvas.width,y: 0.65*canvas.height},
-                                    {x: 0.92*canvas.width,y: 0.65*canvas.height},
-                                    {x: 0.92*canvas.width,y: 0.34*canvas.height});
-                    bluePoints.push({x:0.495*canvas.width,y:0.59*canvas.height},
-                                    {x:0.55*canvas.width,y:0.59*canvas.height},
-                                    {x:0.55*canvas.width,y:0.3*canvas.height},
-                                    {x:0.64*canvas.width,y:0.3*canvas.height},
-                                    {x:0.64*canvas.width,y:0.7*canvas.height},
-                                    {x:0.7*canvas.width,y:0.7*canvas.height},
-                                    {x:0.7*canvas.width,y:0.5*canvas.height},
-                                    {x:0.85*canvas.width,y:0.5*canvas.height},
-                                    {x:0.85*canvas.width,y:0.7*canvas.height},
-                                    {x:0.9*canvas.width,y:0.7*canvas.height},
-                                    {x:0.9*canvas.width,y:0.34*canvas.height});
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                     console.log(redPoints.length+" "+bluePoints.length);
                     function drawCircuit() {
                         if(new Date().getTime() > nextTime){
@@ -1069,11 +939,7 @@
                 } else if($el.hasClass("involve_and_quizzes")) {
                     animation_time = 2200;
                     $(".animation.involve_and_quizzes").css("z-index", 10000);
-<<<<<<< HEAD
                     $('#man').fadeIn();
-=======
-                    $('#man').fadeIn();     
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                     $('#score').fadeIn(200)
                     $('#speech')
                         .queue( function(next){
@@ -1104,11 +970,7 @@
                     // x.style.mozAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
                     // x.style.oAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
                     // x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
-<<<<<<< HEAD
                     //----------------location animation
-=======
-                    //----------------location animation                    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                     var n = 8; //no. of sampark locations
                     for(var i=1;i<=n;i++){
                         sampark(i);
@@ -1122,11 +984,6 @@
                             $(".cities g:nth-child("+i+")").animate({opacity:"1"},animation_time*0.05);
                         },animation_time*0.05*i + 1100);
                     }
-<<<<<<< HEAD
-
-=======
-                    
->>>>>>> dbaed5a25b84fee114e0b5f375a0282ea4cd016b
                 } else if($el.hasClass("shows")) {
                     animation_time = 1100;
                     $(".animation.shows").css("z-index", 10000);
@@ -1181,7 +1038,7 @@
                     }, animation_time*0.05);
                 }
                 setTimeout(function() {
-                    // window.location = that.href;
+                    window.location = that.href;
                 }, animation_time)
             });
         });
