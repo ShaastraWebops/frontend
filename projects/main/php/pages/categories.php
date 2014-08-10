@@ -91,6 +91,7 @@
             position: absolute;
             top: 60%;
             left: -10%;
+            height: 20%;
             -webkit-transform: rotate(-30deg);
             -webkit-animation: fly 0.8s linear forwards;
         }
@@ -721,7 +722,7 @@
         <img id="nut" class="img-responsive" src="../../img/events/nut.svg">
     </div>
     <div class="animation background"
-        style="position:fixed; z-index: 5000; overflow: hidden;background-color:rgba(0,0,0,0.4);
+        style="position:fixed; z-index: 5000; overflow: hidden;background-color:rgba(0,0,0,0.7);
             height: 100%; width: 100%; top:0%; left:0%;display:none">
     </div>
 
@@ -1000,7 +1001,7 @@
                     // }, animation_time*0.95);
 
                 } else if($el.hasClass("spotlight")) {
-                    animation_time = 800;
+                    animation_time = 1000;
                     setTimeout(function(){
                         $(".animation.spotlight").fadeIn(animation_time*0.1);
                     }, animation_time*0.05);
