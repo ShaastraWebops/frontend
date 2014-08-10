@@ -83,7 +83,7 @@ if ($DEBUG) {
         -ms-font-smoothing: antialiased;
         -o-font-smoothing: antialiased;
         font-smoothing: antialiased;
-    }
+    }   
     .title{
     	font-family: 'Dosis', sans-serif;
         font-weight: bold;

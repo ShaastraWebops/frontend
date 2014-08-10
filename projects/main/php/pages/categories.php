@@ -89,7 +89,9 @@
             left: -10%;
             height: 20%;
             -webkit-transform: rotate(-30deg);
+               -moz-transform: rotate(-30deg);
             -webkit-animation: fly 0.8s linear forwards;
+               -moz-animation: fly 0.8s linear forwards;
         }
         @-webkit-keyframes fly{
             0%{
@@ -118,6 +120,35 @@
                 top: 60%;
                 left: 70%;
                 -webkit-transform: rotate(30deg);
+            }
+        }
+        @-moz-keyframes fly{
+            0%{
+                top: 60%;
+                left: -10%;
+                opacity: 1;
+            }
+            25%{
+                top: 45%;
+                left: 10%;
+            }
+            45%{
+                top: 30%;
+                left: 25%;
+                /*-webkit-transform: rotate(0deg);*/
+            }
+            55%{
+                top: 30%;
+                left: 35%;
+            }
+            75%{
+                top: 45%;
+                left: 50%;
+            }
+            100%{
+                top: 60%;
+                left: 70%;
+                -moz-transform: rotate(30deg);
             }
         }
         .leftcurtain{
@@ -184,19 +215,37 @@
             fill-opacity:1;
           }
         }
+        @-moz-keyframes mapBorder{
+          0%{
+            stroke-opacity:1;
+            fill-opacity: 0;
+          }
+          80%{
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: 0;
+            stroke-opacity:1;
+            fill-opacity:1;
+          }
+        }
         .animation.workshops>#spanner{
             position: fixed;
             top: 80%;
             left: 40.1%;
             -webkit-transform-origin:center 7%;
+               -moz-transform-origin:center 7%;
             -webkit-animation: moveSpanner 2s ease-in-out forwards;
+               -moz-animation: moveSpanner 2s ease-in-out forwards;
         }
         .animation.workshops>#nut{
             position: fixed;
             top: 5%;
             left: 45%;
             -webkit-transform-origin:center center;
+               -moz-transform-origin:center center;
             -webkit-animation: tightenNut 1s ease-in-out 1s forwards;
+               -moz-animation: tightenNut 1s ease-in-out 1s forwards;            
         }
         @-webkit-keyframes moveSpanner{
             0%{
@@ -211,6 +260,19 @@
                 -webkit-transform: rotate(60deg);
             }
         }
+        @-moz-keyframes moveSpanner{
+            0%{
+                top: 80%;
+            }
+            50%{
+                top: 10%;
+                -moz-transform: rotate(0deg);
+            }
+            100%{
+                top: 10%;
+                -moz-transform: rotate(60deg);
+            }
+        }
         @-webkit-keyframes tightenNut{
             from{
                 -webkit-transform: rotate(0deg);
@@ -218,6 +280,19 @@
             to{
                 -webkit-transform: rotate(60deg);
             }
+        }
+        @-moz-keyframes tightenNut{
+            from{
+                -moz-transform: rotate(0deg);
+            }
+            to{
+                -moz-transform: rotate(60deg);
+            }
+        }
+        .animation.sampark>svg#samparkMap{
+            -webkit-transform: scale(0.8);
+               -moz-transform: scale(0.8);
+                    transform: scale(0.8);
         }
     </style>
 </head>
@@ -295,7 +370,6 @@
         ?>
     </div>
     </div>
-<<<<<<< HEAD
     </div>
     <div class="animation aerofest"
         style="position:absolute; z-index: -1; overflow: hidden;
@@ -305,7 +379,7 @@
     </div>
 
     <div class="animation b-events"
-        style="position:absolute; z-index: -1;top:0%; overflow: hidden;
+        style="position:fixed; z-index: -1;top:0%; overflow: hidden;
         height: 100%; width: 100%; left:0%;">
         <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -330,7 +404,7 @@
     </div>
 
     <div class="animation electronics_fest"
-        style="position:absolute; z-index: -1; overflow: hidden;
+        style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
         <svg id="lightBulb" width="512px" height="512px" style="position:relative;top:4%;left:64%;">
           <g transform="scale(0.4)">
@@ -738,7 +812,7 @@
                     }, animation_time)
 
                 } else if($el.hasClass("b-events")) {
-                    animation_time = 2500;
+                    animation_time = 2000;
                     $(".animation.b-events").css("z-index", 10000);
                     var canvas = document.getElementById("canvasB"),
                     ctx = canvas.getContext("2d");
@@ -748,7 +822,7 @@
                     points2 = [],
                     currentPoint = 1,
                     nextTime = new Date().getTime()+500,
-                    pace = 10;
+                    pace = 50;
                     // make some points
                     points.push({
                         x: 0.05*canvas.width,
@@ -791,8 +865,8 @@
                         for (var p = 1; p < 3; p++) {
                             ctx.lineTo(points[p].x, points[p].y);
                         }
+                        //Line Graph
                         ctx.stroke();
-
                         ctx.lineWidth = 5;
                         ctx.strokeStyle = '#fff';
                         ctx.fillStyle = '#fff';
@@ -801,12 +875,12 @@
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
                             ctx.lineTo(points[p].x, points[p].y);
                         }
+                        //Bar Graph
                         ctx.stroke();
                         ctx.lineWidth = 20;
                         ctx.strokeStyle = '#fff';
                         ctx.fillStyle = '#fff';
                         ctx.beginPath();
-                        // ctx.moveTo(points[4].x, 0.95*canvas.height);
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
                             ctx.moveTo(points[p].x, 0.95*canvas.height);
                             ctx.lineTo(points[p].x, points[p].y);
@@ -815,6 +889,7 @@
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
+
                 } else if($el.hasClass("coding")) {
                     animation_time = 1800;
                     $(".animation.coding").css("z-index", 10000);
@@ -856,6 +931,11 @@
                     }, animation_time);
 
                 } else if($el.hasClass("design_and_build")) {
+                    $(".animation.aerofest")
+                        .css("z-index", 10000)
+                        .animate({
+                        left: "100%"
+                    }, animation_time)
 
                 } else if($el.hasClass("electronics_fest")) {
                     $(".animation.electronics_fest").css("z-index", 10000);
@@ -962,7 +1042,7 @@
                     delay = 0.1;
                     x.style.strokeDasharray = pathLength+" "+pathLength;
                     x.style.WebkitAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
-                    // x.style.mozAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
+                    x.style.mozAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
                     // x.style.oAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
                     // x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
                     //----------------location animation
@@ -979,6 +1059,7 @@
                             $(".cities g:nth-child("+i+")").animate({opacity:"1"},animation_time*0.05);
                         },animation_time*0.05*i + 1100);
                     }
+                
                 } else if($el.hasClass("shows")) {
                     animation_time = 1100;
                     $(".animation.shows").css("z-index", 10000);
