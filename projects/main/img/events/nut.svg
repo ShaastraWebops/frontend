@@ -14,7 +14,7 @@
    id="svg3985"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 13">
+   sodipodi:docname="nut.svg">
   <defs
      id="defs3987" />
   <sodipodi:namedview
@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="100.53229"
+     inkscape:cx="37.675147"
      inkscape:cy="58.914729"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,7 +55,7 @@
      style="stroke:#fff;stroke-width:5px">
     <path
        sodipodi:type="star"
-       style="fill:#00425a;fill-opacity:0.86666667"
+       style="fill:#ffffff;fill-opacity:0.86666666999999997"
        id="path3019-4"
        sodipodi:sides="6"
        sodipodi:cx="174.28571"
@@ -71,7 +71,7 @@
        transform="matrix(-0.0016648,-0.27030486,0.26766693,-0.01047663,125.93082,1022.0855)" />
     <rect
        transform="matrix(0.48405252,-0.87503895,0.87918631,0.47647816,0,0)"
-       style="fill:#ffffff"
+       style="fill:#00425a;fill-opacity:1"
        id="rect3021"
        width="111.74711"
        height="6.0481577"
