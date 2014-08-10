@@ -22,7 +22,7 @@ if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUE
         $i = $i + 1;
         $new_tab_name = $new_tab_name . '(' . $i . ')'; 
     }
-    if ( $oldpriority . $oldname == '' ) {
+    if ( $oldname == '' ) {
         echo "CREATE NEW FILE";
         $fp = fopen($new_tab_name . '.html', "w"); // create
         fclose($fp);
