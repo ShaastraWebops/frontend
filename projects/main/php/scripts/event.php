@@ -16,8 +16,6 @@ $new_tab_name = $dirname . '/' . $newpriority . $newname;
 
 if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUEST['create'])) {
     $i = 1;
-    echo $new_tab_name;
-    echo $old_tab_name;
     while ( file_exists($new_tab_name . '.html') ) {
         $i = $i + 1;
         $new_tab_name = $new_tab_name . '(' . $i . ')'; 
@@ -35,7 +33,7 @@ if ( isset($_REQUEST['rename']) || isset($_REQUEST['priority']) || isset($_REQUE
     }
 }
 
-/*header('Location: ' . str_replace('tab=' . $old_tab_name, 'tab=' . $new_tab_name, $_SERVER['HTTP_REFERER']))*/
+header('Location: ' . str_replace('tab=' . $old_tab_name, 'tab=' . $new_tab_name, $_SERVER['HTTP_REFERER']))
 
 ?>
 
