@@ -119,6 +119,14 @@
 
 			}
 
+			#anime{
+				z-index: 4;
+				position: absolute;
+				height:100%;
+				width:100%;
+				left:35%;
+				top:27%;
+			}
 			#page {
 				z-index: 3;
 				position: absolute;
@@ -127,9 +135,10 @@
 			}
 			#page .help {
 				position: absolute;
-				bottom: 3%;
+				top: 42%;
 				margin: auto;
 				left: 50%;
+				font-size:200%;
 			}
 			#page .help .text {
 				position: relative;
@@ -292,12 +301,58 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
+		<div id="anime">
+			<img id="mouse">
+		</div>
 	</div>
-
+	<!--mouse animation script start-->
+	<script>
+		m=document.getElementById("mouse");
+		m.style.position="absolute";
+		m.style.height="100px";
+		m.style.width="100px";
+		anime(0);
+		
+		function anime(i){
+			if(i==1){
+				m.src="../../img/active.png";
+				setTimeout(function(){anime(2)},500);
+			}
+			else if(i==0){
+				m.style.left="20%";
+				m.src="../../img/default.png";
+				setTimeout(function(){anime(1)},500);
+			}
+			else if(i==2){
+				$("#mouse").animate({left:"5%"});
+				setTimeout(function(){anime(0)},1000);
+			}
+		}
+	</script>
+	<!--mouse animation script end-->
     <?php include '../base/foot.php'; ?>
 	<script>
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MAIN
 		$(document).ready(function() {
+		
+			function blink(selector, blink_speed, iterations, counter){
+				counter = counter | 0;
+				$(selector).animate({opacity:0},200, "linear", function(){
+					$(this).delay(blink_speed);
+					$(this).animate({opacity:1}, 200, function(){
+						counter++;
+
+						if (iterations == 0) {//for infi iterations fix the value as 0
+							blink(this, blink_speed, iterations, counter);
+						}else if (counter >= iterations) {
+							return false;
+						}else{
+							blink(this, blink_speed, iterations, counter);
+						}
+					});
+					$(this).delay(blink_speed);
+				})
+			}
 
 			var asa; var canvas; var dcanvas; var gl; var expmt;
 
@@ -329,6 +384,7 @@
 
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.");
+				//blink('.help', 500, 0, 0);
 				jsCache.load(
 			        <?php if ($DEBUG ) { ?>
 			            {url: '../../js/three.min.js'},
@@ -869,8 +925,10 @@
 								setTimeout(function() {
 									$('.vertical-table-cell-placeholder').addClass('vertical-table-cell').removeClass('vertical-table-cell-placeholder');
 									$('.up').removeClass('up').addClass('up-placeholder')
-									$('.down').removeClass('down').addClass('down-placeholder')
+									$('.down').removeClass('down').addClass('down-placeholder');
 								}, 500);
+								$('.help .text').text("");
+								$('#anime').html("");
 							});
 						}
 
@@ -885,6 +943,9 @@
 			}
 		});
 		function create3d() {
+			if ( $('body').width() < 768) { // 768 is taken from bootstrap's xs class
+				return
+			}
 			var canvas = $('#canvas')[0];
 			var box = new dice.dice_box(canvas);
 			box.bind_mouse(document.body, function() {}, // before
