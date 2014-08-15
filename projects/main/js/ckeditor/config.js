@@ -39,7 +39,7 @@ CKEDITOR.editorConfig = function( config ) {
  
     config.language = 'en';
     config.removePlugins = 'a11yhelp,about,find,flash,forms,magicline,pagebreak,scayt,showblocks,smiley,sourcearea,templates,wsc';
-    config.extraPlugins = 'autosave,image2,lineutils,savebtn,widget';
+    config.extraPlugins = 'autosave,image,lineutils,savebtn,widget';
 	    
     config.keystrokes = [
         [ CKEDITOR.ALT + 121 /*F10*/, 'toolbarFocus' ],
