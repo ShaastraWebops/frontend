@@ -204,8 +204,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <?php
-                        if ($dir_event_handle = opendir($event_path)) {
-                            while(false !== ($file = readdir($dir_event_handle))) {
+                        /*if ($dir_event_handle = opendir($event_path)) {*/
+                            foreach(scandir($event_path) as $file) {
                                 if ( '.' === $file ) continue;
                                 if ( '..' === $file ) continue;
                                 $filetab = str_replace('.html', '', $file);
@@ -225,8 +225,8 @@
                             </li>
                             <?php
                         }
-                        closedir($dir_event_handle);
-                    }
+                        /*closedir($dir_event_handle);*/
+                    /*}*/
                     ?>
                     <?php if ($editable) { ?>
                     <li class="default"><a href="javascript:void(0)" data-tabname='+' onclick='tab_name_edit(this);' class='newtab'>+</a></li>
@@ -365,6 +365,7 @@
     <script>
         function tab_name_edit(el) {
             var $el = $(el);
+            $el.prop('disabled',true);
             var tabname = $el.data('tabname').replace(/^\s+|\s+$/g, '');
             var k = $('#edit_modal').find('.col-md-4')[1];
             if ($el.hasClass('newtab')) {
