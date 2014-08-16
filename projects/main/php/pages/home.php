@@ -1,4 +1,3 @@
-<!DOCtype html>
 <html>
 	<head>
 		<title>Shaastra '15</title>
@@ -135,14 +134,15 @@
 			}
 			#page .help {
 				position: absolute;
-				top: 42%;
+				bottom: 40%;
 				margin: auto;
 				left: 50%;
-				font-size:200%;
+				font-size: 1.1em;
 			}
 			#page .help .text {
 				position: relative;
-				left: -50%;
+				left: -37.5%;
+				width: 75%;
 			}
 			#page .ngon-row {
 				height: auto;
@@ -301,7 +301,7 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<div id="anime">
+		<div class="help-anime" id="anime">
 			<img id="mouse">
 		</div>
 	</div>
@@ -332,7 +332,6 @@
 	<!--mouse animation script end-->
     <?php include '../base/foot.php'; ?>
 	<script>
-		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MAIN
 		$(document).ready(function() {
 		
 			function blink(selector, blink_speed, iterations, counter){
@@ -938,8 +937,12 @@
 			    })
 			} else {
 				console.log("image-only fallback. no webgl.");
-				$('.help .text').text("Your browser does not support webgl. If you can, try visiting us later with webgl support.");
-				$('#fallback.hidden').show();
+				$('.help .text')
+					.text("Your browser does not support webgl. If you can, try visiting us later with webgl support.")
+					.css('font-size', '0.8em');
+				$('.help').css({'bottom':'0.4em'})
+				$('#anime').hide()
+				$('#fallback.hidden').removeClass('hidden').show();
 			}
 		});
 		function create3d() {
