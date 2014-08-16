@@ -366,7 +366,10 @@
         function tab_name_edit(el) {
             var $el = $(el);
             var tabname = $el.data('tabname').replace(/^\s+|\s+$/g, '');
+            var k = $('#edit_modal').find('.col-md-4')[1];
             if ($el.hasClass('newtab')) {
+                $(k).find('h3').html("Create New Tab");
+                $(k).find('input[type="submit"]').val("Create New Tab");
                 $('#edit_modal').find('.oldname').val('');
                 $('#edit_modal').find('.newname').val('New Tab');
                 $('#edit_modal').find('.oldpriority').val('');
@@ -374,6 +377,8 @@
                 $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
                 $('#edit_modal').addClass('newtab')
             } else {
+                $(k).find('h3').html("Edit Tab");
+                $(k).find('input[type="submit"]').val("Edit Tab Info");
                 var oldpriority = parseInt(tabname.substr(0, 2));
                 var oldname = tabname.substr(2);
                 $('#edit_modal').find('.oldname').val(oldname).css('background', '#eee');
