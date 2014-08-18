@@ -289,7 +289,7 @@
             <div class="row row-centered">
 
                 <div class="col-md-4 text-center col-centered">
-                    <a class="social-icon facebook" href="https://www.facebook.com/Shaastra">
+                    <a class="social-icon facebook" href="http://erp.shaastra.org/login/facebook?type=participant">
                         <span class="text">Login using Facebook</span>
                     </a>
                 </div>
@@ -305,7 +305,7 @@
 
             <div class="row row-centered">
                 <div class="col-md-4 text-center col-centered">
-                    <a class="social-icon google" href="https://www.youtube.com/user/iitmshaastra">
+                    <a class="social-icon google" href="http://erp.shaastra.org/login/google?type=participant">
                         <span class="text">Login using Google Plus</span>
                     </a>
                 </div>
@@ -325,7 +325,7 @@
                         <a href="" class="label label-danger white no-style pull-left"> Forgot Password </a>
                         <a href="" class="label label-primary white no-style pull-right"> Register </a>
                     </h3>
-                    <form class="login-form">
+                    <form class="login-form" action="http://erp.shaastra.org/login?type=participant" method="POST">
     					<p class="field">
     						<input type="text" name="login" placeholder="Username or EMail or Shaastra ID">
     						<i class="glyphicon glyphicon-user"></i>
