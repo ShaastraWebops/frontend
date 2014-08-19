@@ -50,8 +50,8 @@
                         <label class="control-label">Re-enter password</label>
                         <input type="password" class="form-control" id="rpw" placeholder="Same as the above" required></input>
                     </div>
-                    <button type="submit" class="btn btn-primary">SUBMIT</button>
-                    <button type="reset" class="btn btn-warning">RESET</button>
+                    <button type="submit" class="btn btn-primary col-md-4 col-md-offset-1">SUBMIT</button>
+                    <button type="reset" class="btn btn-warning col-md-4 col-md-offset-2">RESET</button>
                   </form>
                 </div>
     		</div>
