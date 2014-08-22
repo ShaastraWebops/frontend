@@ -1,0 +1,28 @@
+  .left{
+		  width:50%;
+		  height:100%;
+		  float:left;
+	  }
+ .right{
+		  width:50%;
+		  height:100%;
+		  float:right;
+	  }
+ .grey{
+	 	  background-image:url(pics/bg.png) ;
+ }
+ .white{
+		  background-color:#FFF;
+ }
+ #menu a{
+	 color:#FFF;
+ }
+ #menu a:hover{
+	 color:#F30;
+	 background:none;
+ }
+ #menu li.active a{
+	 background:none;
+	 color:#F30;
+ }
+
