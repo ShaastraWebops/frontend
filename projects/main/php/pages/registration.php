@@ -36,7 +36,7 @@
                   <form id="reg" role="form">
                     <div class="form-group">
                         <label class="control-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Full name" required autofocus>
+                        <input type="text" class="form-control" id="name" placeholder="Full Name" required autofocus>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Email address</label>

@@ -32,47 +32,54 @@
 
         <div class="container-fluid main white">
             <div class="row">
-                <div class="col-md-2">
-                    <p class="lead">Hi Abhishek!</p>
+                <div class="col-md-3 col-md-offset-1">
+                    <p id="salute" class="lead"></p>                    
                 </div>
-                <div class="col-md-1 col-md-offset-9">
+                <div class="col-md-1 col-md-offset-7">
                     <a href="login.php">
                         <button class="btn btn-info">Logout</button>
                     </a>
                 </div>
             </div>
             <div class="row">                
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table">                            
                             <thead>
                                 <tr>
-                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Profile Details</th>
+                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">
+                                        <img src="../../img/login/photo.jpg" style="margin-right:2%">
+                                        Profile Details
+                                    </th>
                                     <th style="text-align:center">
-                                        <button class="btn btn-info">Edit Profile</button>
+                                        <button id="edit" class="btn btn-info" onclick="toggleEditable()">Edit Profile</button>
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="details">
                                 <tr>
                                     <th>Shaastra ID:</th>
                                     <td>MM12B037</td>
                                 </tr>
                                 <tr>
                                     <th>Name:</th>
-                                    <td>Abhishek Shandilya</td>
+                                    <td id="name" contentEditable="false">Abhishek Shandilya</td>
                                 </tr>
                                 <tr>
                                     <th>Email id:</th>
-                                    <td>abhishek.sandy@gmail.com</td>
+                                    <td name="email" contentEditable="false">abhishek.sandy@gmail.com</td>
                                 </tr>
                                 <tr>
                                     <th>College:</th>
-                                    <td>IIT MADRAS</td>
+                                    <td id="college" contentEditable="false">IIT MADRAS</td>
+                                </tr>
+                                <tr>
+                                    <th>City:</th>
+                                    <td id="city" contentEditable="false">Chennai</td>
                                 </tr>
                                 <tr>
                                     <th>Phone:</th>
-                                    <td>+91 9884299211</td>
+                                    <td id="phone" contentEditable="false">9884299211</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -83,17 +90,17 @@
                 </div>
     		<!-- </div> -->
             <!-- <div class="row"> -->
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
                                     <th>
-                                        <button class="btn btn-info">Register for an event</button>
+                                        <button class="btn btn-info col-md-12">Register for an event</button>
                                     </th>
                                     <th>
-                                        <button class="btn btn-warning">Unregister from an event</button>
+                                        <button class="btn btn-warning col-md-12">Unregister from an event</button>
                                     </th>
                                 </tr>
                                 <tr>
@@ -134,6 +141,28 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            editable = ["name", "college", "city", "phone"];
+            function toggleEditable(){
+                if(document.getElementById(editable[1]).contentEditable == "false"){
+                    document.getElementById("edit").innerHTML = "Save";
+                    for(i=0;i<4;i++){
+                        document.getElementById(editable[i]).contentEditable = "true";
+                        document.getElementById(editable[i]).style.backgroundColor = "rgba(255,255,255,0.3)";
+                    }
+                }
+                else{
+                    document.getElementById("edit").innerHTML = "Edit Profile";
+                    for(i=0;i<4;i++){
+                        document.getElementById(editable[i]).contentEditable = "false";
+                        document.getElementById(editable[i]).style.backgroundColor = "transparent";
+                    }
+                }
+            }
+            $("document").ready(function(){
+                $("#salute").text("Hi! "+$("#name").text());
+            });
+        </script>
     </body>
     <?php include '../base/foot.php' ?>
 </html>
