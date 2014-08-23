@@ -11,18 +11,32 @@
  .grey{
 	 	  background-image:url(pics/bg.png) ;
  }
+ .grey p{
+	 color:#FFF;
+ }
  .white{
 		  background-color:#FFF;
+ }
+ .white p{
+	 color:#333;
  }
  #menu a{
 	 color:#FFF;
  }
  #menu a:hover{
-	 color:#F30;
+	 color:#F90;
 	 background:none;
  }
  #menu li.active a{
 	 background:none;
-	 color:#F30;
+	 color:#F60;
  }
-
+.section h1{
+	padding-top:40px;
+	font-size:70px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.section p{
+	padding-left:40px;
+	padding-right:40px;
+}
