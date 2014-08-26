@@ -354,22 +354,32 @@
                 <div class="col-md-6 col-md-offset-3 register-box box">
                     <form id="reg" role="form">
                         <div class="form-group">
-                            <label class="control-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Full name" required>
+                            <label class="control-label col-md-3">Name</label>
+                            <div class="input-group col-md-9">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" placeholder="First name" required style="border-top-right-radius: 4px;">
+                                <input type="text" class="form-control" placeholder="Last name" required style="border-top-right-radius: 0px;">
+                            </div>
+
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter a valid email id" required>
+                            <label class="control-label col-md-3">Email address</label>
+                            <div class="input-group col-md-9">
+                                <span class="input-group-addon">@</span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter a valid email id" required>
+                            </div>
                         </div>                    
                         <div class="form-group">
-                            <label class="control-label">Password</label>
-                            <input type="password" class="form-control" id="pw" placeholder="Atleast 6 characters" required></input>
+                            <label class="control-label col-md-3">Password</label>
+                            <div class="input-group col-md-9">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" class="form-control" id="pw" placeholder="Password - Atleast 6 characters" required style="border-top-right-radius: 4px;">
+                                <input type="password" class="form-control" id="rpw" placeholder="Re-enter password for security" required style="border-top-right-radius: 0px;">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">Re-enter password</label>
-                            <input type="password" class="form-control" id="rpw" placeholder="Same as the above" required></input>
+                        <div class="row row-centered">
+                            <button type="submit" class="btn btn-primary col-md-4 col-centered">Register</button>
                         </div>
-                        <button type="submit" class="btn btn-primary col-md-4 col-md-offset-4">Register</button>
                     </form>
                 </div>
             </div>
