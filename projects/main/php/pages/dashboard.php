@@ -32,19 +32,32 @@
 
         <div class="container-fluid main white">
             <div class="row">
-                <div class="col-md-2 col-md-offset-3">
-                    <img class="img-thumbnail" id="profile-pic" src="../../img/login/photo.jpg" alt="Profile Pic"></img>
+                <div class="col-md-2">
+                    <p class="lead">Hi Abhishek!</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-1 col-md-offset-9">
+                    <a href="login.php">
+                        <button class="btn btn-info">Logout</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-6">
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Shaastra ID:</th>
-                                    <th>MM12B037</th>
+                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Profile Details</th>
+                                    <th style="text-align:center">
+                                        <button class="btn btn-info">Edit Profile</button>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <th>Shaastra ID:</th>
+                                    <td>MM12B037</td>
+                                </tr>
                                 <tr>
                                     <th>Name:</th>
                                     <td>Abhishek Shandilya</td>
@@ -63,53 +76,59 @@
                                 </tr>
                             </tbody>
                             <tfoot>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-info">Edit Profile</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-info">Change your profile pic</button>
-                                    </td>
-                                </tr>
+                                
                             </tfoot>
                         </table>
                     </div>
                 </div>
-    		</div>
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
+    		<!-- </div> -->
+            <!-- <div class="row"> -->
+                <div class="col-md-6">
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Registered Events</th>
-                                    <th></th>
+                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
+                                    <th>
+                                        <button class="btn btn-info">Register for an event</button>
+                                    </th>
+                                    <th>
+                                        <button class="btn btn-warning">Unregister from an event</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Event name</th>
+                                    <th>Pending Task</th>
+                                    <th>Upcoming Deadline</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><a href="event.php?category=Aerofest&amp;event=Aerobotics">Aerobotics</a></td>
                                     <td>TDP</td>
+                                    <td>30th August 2014</td>
                                 </tr>
                                 <tr>
                                     <td><a href="event.php?category=Design+and+Build&amp;event=Robotics">Robotics</a></td>
                                     <td>TDP</td>
+                                    <td>30th August 2014</td>
                                 </tr>
                                 <tr>
                                     <td><a href="event.php?category=Coding&amp;event=Reverse+Coding">Reverse Coding</a></td>
                                     <td>Qualification Round</td>
+                                    <td>30th August 2014</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="event.php?category=Coding&amp;event=Code+Obfuscation">Code Obfuscation</a></td>
+                                    <td>Qualification Round</td>
+                                    <td>30th August 2014</td>
+                                </tr>
+                                <tr>                                
+                                    <td><a href="event.php?category=Department+Flagship&amp;event=Forensics">Forensics</a></td>
+                                    <td>Qualification Round</td>
+                                    <td>30th August 2014</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-info">Register for an event</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-warning">Unregister from an event</button>
-                                    </td>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
