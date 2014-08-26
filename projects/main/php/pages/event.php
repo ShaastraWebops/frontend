@@ -204,8 +204,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <?php
-                        if ($dir_event_handle = opendir($event_path)) {
-                            while(false !== ($file = readdir($dir_event_handle))) {
+                        /*if ($dir_event_handle = opendir($event_path)) {*/
+                            foreach(scandir($event_path) as $file) {
                                 if ( '.' === $file ) continue;
                                 if ( '..' === $file ) continue;
                                 $filetab = str_replace('.html', '', $file);
@@ -225,8 +225,8 @@
                             </li>
                             <?php
                         }
-                        closedir($dir_event_handle);
-                    }
+                        /*closedir($dir_event_handle);*/
+                    /*}*/
                     ?>
                     <?php if ($editable) { ?>
                     <li class="default"><a href="javascript:void(0)" data-tabname='+' onclick='tab_name_edit(this);' class='newtab'>+</a></li>
@@ -365,8 +365,12 @@
     <script>
         function tab_name_edit(el) {
             var $el = $(el);
+            $el.prop('disabled',true);
             var tabname = $el.data('tabname').replace(/^\s+|\s+$/g, '');
+            var k = $('#edit_modal').find('.col-md-4')[1];
             if ($el.hasClass('newtab')) {
+                $(k).find('h3').html("Create New Tab");
+                $(k).find('input[type="submit"]').val("Create New Tab");
                 $('#edit_modal').find('.oldname').val('');
                 $('#edit_modal').find('.newname').val('New Tab');
                 $('#edit_modal').find('.oldpriority').val('');
@@ -374,6 +378,8 @@
                 $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
                 $('#edit_modal').addClass('newtab')
             } else {
+                $(k).find('h3').html("Edit Tab");
+                $(k).find('input[type="submit"]').val("Edit Tab Info");
                 var oldpriority = parseInt(tabname.substr(0, 2));
                 var oldname = tabname.substr(2);
                 $('#edit_modal').find('.oldname').val(oldname).css('background', '#eee');
