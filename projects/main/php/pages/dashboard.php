@@ -1,17 +1,16 @@
+<?php
+    if (isset($logged_in) && $logged_in) {
+        //header('Location: ../pages/dashboard.php');
+    } else {
+        header('Location: ../pages/login.php');
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <?php
-            if (isset($logged_in) && $logged_in) {
-                header('Location: ../pages/dashboard.php');
-            } else {
-                // header('Location: ../pages/login.php');
-            }
-        ?>
+        
         <title>Dashboard | Shaatsra '15</title>
         <?php include '../base/head.php' ?>
-
-
     </head>
 
     <body>
@@ -31,25 +30,15 @@
         </div>
 
         <div class="container-fluid main white">
-            <div class="row">
-                <div class="col-md-2">
-                    <p class="lead">Hi Abhishek!</p>
-                </div>
-                <div class="col-md-1 col-md-offset-9">
-                    <a href="login.php">
-                        <button class="btn btn-info">Logout</button>
-                    </a>
-                </div>
-            </div>
             <div class="row">                
-                <div class="col-md-6">
-                    <div class="table-responsive">
+                <div class="col-md-4 col-md-offset-1">
+                    <div class="table-responsive" style="border: 1px solid #fff; border-radius: 10px;">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Profile Details</th>
-                                    <th style="text-align:center">
-                                        <button class="btn btn-info">Edit Profile</button>
+                                    <th colspan="2" style="font-size:1.2em;text-align:center;vertical-align:middle">
+                                        <span class="">Profile Details</span>
+                                        <button class="pull-right btn btn-info">Edit Profile</button>
                                     </th>
                                 </tr>
                             </thead>
@@ -81,20 +70,12 @@
                         </table>
                     </div>
                 </div>
-    		<!-- </div> -->
-            <!-- <div class="row"> -->
-                <div class="col-md-6">
-                    <div class="table-responsive">
+                <div class="col-md-4 col-md-offset-1">
+                    <div class="table-responsive" style="border: 1px solid #fff; border-radius: 10px;">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
-                                    <th>
-                                        <button class="btn btn-info">Register for an event</button>
-                                    </th>
-                                    <th>
-                                        <button class="btn btn-warning">Unregister from an event</button>
-                                    </th>
+                                    <th colspan="3" style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
                                 </tr>
                                 <tr>
                                     <th>Event name</th>

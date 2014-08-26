@@ -1,26 +1,24 @@
+<?php
+    if (isset($logged_in) && $logged_in) {
+        header('Location: ../pages/dashboard.php');
+    } else {
+        //header('Location: ../pages/login.php');
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
-
-        <?php
-            if (isset($logged_in) && $logged_in) {
-                header('Location: ../pages/dashboard.php');
-            } else {
-                //header('Location: ../pages/login.php');
-            }
-        ?>
         <title>Login | Shaatsra '15</title>
         <?php include '../base/head.php' ?>
 
         <style>
-            .login-box {
-
-                padding: 0.5em;
+            .my-tab {
+                padding: 2em 1em 3em 1em;
             }
             .login-form {
                 /* Size & position */
                 width: 100%;
-                margin: 3em auto 0%;
+                margin: 0 auto 0%;
                 padding: 10px;
                 position: relative; /* For the submit button positioning */
 
@@ -194,6 +192,9 @@
                     inset 0 0 5px rgba(0,0,0,0.3),
                     inset 0 3px 4px rgba(0,0,0,0.3);
             }
+            .register-box {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
             /* Social Icons used in places */
             a.social-icon {
                 margin:5px 5px 0px 5px;
@@ -224,10 +225,10 @@
                 transition: all 0.3s ease-out;
             }
             a.social-icon.facebook {
-                background: transparent url(../../img/icons/facebook.png) no-repeat -0px -88px;
+                background: transparent url(../../img/icons/facebook.png) no-repeat -0px -0px;
             }
             a.social-icon.facebook:hover {
-                background-position: -0px -0px;
+                background-position: -0px -88px;
             }
             a.social-icon.facebook .text {
                 color: #5473a3;
@@ -236,10 +237,10 @@
                 color: #fff;
             }
             a.social-icon.twitter {
-                background: transparent url(../../img/icons/twitter.png) no-repeat -0px -88px;
+                background: transparent url(../../img/icons/twitter.png) no-repeat -0px -0px;
             }
             a.social-icon.twitter:hover {
-                background-position: -0px -0px;
+                background-position: -0px -88px;
             }
             a.social-icon.twitter .text {
                 color: #56acef;
@@ -248,10 +249,10 @@
                 color: #fff;
             }
             a.social-icon.google {
-                background:transparent url(../../img/icons/google.png) no-repeat -0px -88px;
+                background:transparent url(../../img/icons/google.png) no-repeat -0px -0px;
             }
             a.social-icon.google:hover {
-                background-position: -0px -0px;
+                background-position: -0px -88px;
             }
             a.social-icon.google .text {
                 color: #d34836;
@@ -306,7 +307,7 @@
             <div class="row row-centered">
                 <div class="col-md-4 text-center col-centered">
                     <a class="social-icon google" href="http://erp.shaastra.org/login/google?type=participant">
-                        <span class="text">Login using Google Plus</span>
+                        <span class="text">Login using Google</span>
                     </a>
                 </div>
             </div>
@@ -319,29 +320,92 @@
                 </div>
             </div>
 
-            <div class="row row-centered" style="height: 100%;">
-                <div class="col-md-4 col-centered login-box">
-                    <h3 style="">
-                        <a href="" class="label label-danger white no-style pull-left"> Forgot Password </a>
-                        <a href="" class="label label-primary white no-style pull-right"> Register </a>
-                    </h3>
+            <div class="row row-centered">
+                <div class="col-md-6 col-centered centered">
+                    <div class="btn-group">
+                        <button data-tab=".tab-login" type="button" class="my-tab-link active btn btn-primary btn-lg">Login</button>
+                        <button data-tab=".tab-register" type="button" class="my-tab-link btn btn-primary btn-lg">Register</button>
+                    </div>
+                    
+                </div>
+            </div>        
+            <div class="row my-tab row-centered tab-login" style="height: 100%;">
+                <div class="col-md-5 col-centered login-box box">
                     <form class="login-form" action="http://erp.shaastra.org/login?type=participant" method="POST">
     					<p class="field">
-    						<input type="text" name="login" placeholder="Username or EMail or Shaastra ID">
+    						<input type="text" name="login" placeholder="Username or EMail or Shaastra ID" autofocus required>
     						<i class="glyphicon glyphicon-user"></i>
     					</p>
-    						<p class="field">
-    							<input type="password" name="password" placeholder="Password">
-    							<i class="glyphicon glyphicon-lock"></i>
-    					</p>
+    					<p class="field">
+    						<input type="password" name="password" placeholder="Password" required>
+    						<i class="glyphicon glyphicon-lock"></i>                            
+    				   </p>
+
     					<p class="submit">
     						<button type="submit" name="submit"><i class="glyphicon glyphicon-arrow-right"></i></button>
     					</p>
+
     				</form>
+                    <button data-tab=".tab-forgot" type="button" class="pull-right my-tab-link btn btn-primary" style="margin-top: -5px;">Forgot Password</button>
+                </div>
+            </div>
+
+            <div class="row my-tab tab-register" style="display: none;">
+                <div class="col-md-6 col-md-offset-3 register-box box">
+                    <form id="reg" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter a valid email id" required>
+                        </div>                    
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <input type="password" class="form-control" id="pw" placeholder="Atleast 6 characters" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Re-enter password</label>
+                            <input type="password" class="form-control" id="rpw" placeholder="Same as the above" required></input>
+                        </div>
+                        <button type="submit" class="btn btn-primary col-md-4 col-md-offset-4">Register</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row my-tab tab-forgot row-centered" style="display: none;">
+                <div class="col-md-6 col-centered">
+                    <form id="reg" role="form">
+                        <div class="form-group">
+                            <label class="control-label hidden">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter a E-Mail id, Shaastra ID or Barcode" required>
+                        </div>                    
+                        <button type="submit" class="btn btn-darkest col-md-4 col-md-offset-4">Forgot Password</button>
+                    </form>
                 </div>
             </div>
 
         </div>
     </body>
     <?php include '../base/foot.php' ?>
+    <script>
+    function show_tab(iden) {
+        if ( $(".my-tab " + iden).hasClass("active") ) {
+            return  
+        }
+        $(".my-tab").slideUp(500).removeClass("active");
+        $(".my-tab" + iden).slideDown(500).addClass("active");
+        $("html, body").animate({scrollTop: 1000}, 500);
+    }
+    $(document).ready(function() {
+        $(".my-tab-link").click(function(ev) {
+            var $el = $(ev.target).closest(".my-tab-link")
+            show_tab($el.data("tab"))
+            console.log($el.data("tab"))
+            $(".my-tab-link").removeClass("active")
+            $el.addClass('active')
+        })
+    })
+    </script>
 </html>

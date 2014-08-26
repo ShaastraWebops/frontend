@@ -134,10 +134,10 @@
 			}
 			#page .help {
 				position: absolute;
-				bottom: 40%;
+				bottom: 50%;
 				margin: auto;
 				left: 50%;
-				font-size: 1.1em;
+				font-size: 1.5em;
 			}
 			#page .help .text {
 				position: relative;
@@ -301,35 +301,8 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<div class="help-anime" id="anime">
-			<img id="mouse">
-		</div>
 	</div>
-	<!--mouse animation script start-->
-	<script>
-		m=document.getElementById("mouse");
-		m.style.position="absolute";
-		m.style.height="100px";
-		m.style.width="100px";
-		anime(0);
-		
-		function anime(i){
-			if(i==1){
-				m.src="../../img/active.png";
-				setTimeout(function(){anime(2)},500);
-			}
-			else if(i==0){
-				m.style.left="20%";
-				m.src="../../img/default.png";
-				setTimeout(function(){anime(1)},500);
-			}
-			else if(i==2){
-				$("#mouse").animate({left:"5%"});
-				setTimeout(function(){anime(0)},1000);
-			}
-		}
-	</script>
-	<!--mouse animation script end-->
+
     <?php include '../base/foot.php'; ?>
 	<script>
 		$(document).ready(function() {
@@ -379,11 +352,13 @@
 			}
 
 			if ( (gl || expmt ) && $('body').width() > 768) { // 768 is taken from bootstrap's xs class
-				// GL is there. Make sure it is not mobile
-
+				// GL is there and not mobile
 				console.log("loading webgl content.");
-				$('.help .text').text("Click and drag anywhere to play with the dice.");
-				//blink('.help', 500, 0, 0);
+				$('.help .text').text("Click and drag anywhere to play with the dice.")
+				setInterval(function() { 
+					$('.help .text').fadeToggle(500)
+				}, 700)
+
 				jsCache.load(
 			        <?php if ($DEBUG ) { ?>
 			            {url: '../../js/three.min.js'},
