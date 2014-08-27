@@ -169,12 +169,7 @@
             width: 100%;
             height: 100%;
         }
-        @font-face {
-           font-family: "LCD Solid";
-           src: url(../../fonts/LCD_Solid.ttf);
-        }
         #score {
-           font-family: "LCD Solid";
            color: red;
            position: absolute;
            top: 55%;
