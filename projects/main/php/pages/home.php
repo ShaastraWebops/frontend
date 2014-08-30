@@ -134,15 +134,16 @@
 			}
 			#page .help {
 				position: absolute;
-				bottom: 50%;
+				bottom: 5%;
 				margin: auto;
+				color: #555;
 				left: 50%;
 				font-size: 1.5em;
 			}
 			#page .help .text {
 				position: relative;
-				left: -37.5%;
-				width: 75%;
+				left: -50%;
+				width: 100%;
 			}
 			#page .ngon-row {
 				height: auto;
@@ -177,10 +178,10 @@
 				#page .ngon-row .text.events {
 					text-shadow: 0px 4px 6px #0a0a0a;
 				}
-				#page .ngon-row .text.spons {
+				#page .ngon-row .text.lectures {
 					text-shadow: -4px 3px 1.2px #000;
 				}
-				#page .ngon-row .text.lectures {
+				#page .ngon-row .text.spons {
 					text-shadow: -4px 2px 1px #000;
 				}
 				#page .ngon-row .text.shows {
@@ -251,7 +252,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/categories.php" class="title events text">Events</a>
+						<a href="../pages/categories.php" class="title events text">Events &amp; Workshops</a>
 					</span>
 				</span>
 			</div>
@@ -261,7 +262,7 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 
-						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
+						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
 					</span>
 				</span>
 			</div>
@@ -277,14 +278,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
+						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/contact.php" class="title contact text">Contacts</a>
+						<a href="../pages/contact.php" class="title contact text">Contact Us</a>
 					</span>
 				</span>
 			</div>
@@ -665,7 +666,7 @@
 							var light = new THREE.SpotLight(0xffffff);
 							console.log(this.w)
 							console.log(this.h)
-							light.position.set(0, this.h, mw);
+							light.position.set(0, this.h/2, mw);
 							light.target.position.set(0, 0, 0);
 							light.castShadow = true;
 							light.shadowCameraNear = mw / 10;

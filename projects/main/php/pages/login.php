@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login | Shaatsra '15</title>
+        <title>Login | Shaastra '15</title>
         <?php include '../base/head.php' ?>
 
         <style>

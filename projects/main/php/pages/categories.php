@@ -92,29 +92,19 @@
                -moz-transform: rotate(-30deg);
             -webkit-animation: fly 0.8s linear forwards;
                -moz-animation: fly 0.8s linear forwards;
+            -webkit-transition: all 1s;
         }
         @-webkit-keyframes fly{
             0%{
                 top: 60%;
                 left: -10%;
                 opacity: 1;
+                -webkit-transform: rotate(-30deg);
             }
-            25%{
-                top: 45%;
-                left: 10%;
-            }
-            45%{
+            50%{
                 top: 30%;
-                left: 25%;
-                /*-webkit-transform: rotate(0deg);*/
-            }
-            55%{
-                top: 30%;
-                left: 35%;
-            }
-            75%{
-                top: 45%;
-                left: 50%;
+                left: 30%;
+                -webkit-transform: rotate(0deg);
             }
             100%{
                 top: 60%;
@@ -317,7 +307,7 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
-            $event_row_count = 4;
+            $event_row_count = 5;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
@@ -373,13 +363,13 @@
     </div>
     <div class="animation aerofest"
         style="position:absolute; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:-100%;
+            height: 50%; width: 50%; top:25%; left:-100%;
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
 
     <div class="animation b-events"
-        style="position:fixed; z-index: -1;top:0%; overflow: hidden;
+        style="position:fixed; z-index: -1; top:0%; overflow: hidden;
         height: 100%; width: 100%; left:0%;">
         <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -392,7 +382,7 @@
 
     <div class="animation department_flagship"
         style="position:absolute; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:-100%;
+            height: 50%; width: 50%; top:25%; left:-100%;
             background: url(../../img/events/shark.svg) no-repeat center center;
             background-size: auto 100%;">
     </div>
@@ -778,7 +768,7 @@
 
     <div class="animation spotlight"
         style="position:fixed; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:0%;display:none">
+            height: 50%; width: 50%; top:25%; left:25%;display:none">
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -797,7 +787,7 @@
     <?php include '../base/foot.php' ?>
 
     <script type="text/javascript">
-        var animation_time = 1000;
+        var animation_time = 3000;
         $(document).ready(function() {
             $(".category-link").click(function(ev) {
                 ev.preventDefault();
@@ -875,17 +865,17 @@
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
                             ctx.lineTo(points[p].x, points[p].y);
                         }
+                        ctx.stroke();
                         //Bar Graph
-                        ctx.stroke();
-                        ctx.lineWidth = 20;
-                        ctx.strokeStyle = '#fff';
-                        ctx.fillStyle = '#fff';
-                        ctx.beginPath();
-                        for (var p = 4, plen = currentPoint; p < plen; p++) {
-                            ctx.moveTo(points[p].x, 0.95*canvas.height);
-                            ctx.lineTo(points[p].x, points[p].y);
-                        }
-                        ctx.stroke();
+                        // ctx.lineWidth = 20;
+                        // ctx.strokeStyle = '#fff';
+                        // ctx.fillStyle = '#fff';
+                        // ctx.beginPath();
+                        // for (var p = 4, plen = currentPoint; p < plen; p++) {
+                        //     ctx.moveTo(points[p].x, 0.95*canvas.height);
+                        //     ctx.lineTo(points[p].x, points[p].y);
+                        // }
+                        // ctx.stroke();
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
@@ -931,7 +921,7 @@
                     }, animation_time);
 
                 } else if($el.hasClass("design_and_build")) {
-                    $(".animation.aerofest")
+                    $(".animation.design_and_build")
                         .css("z-index", 10000)
                         .animate({
                         left: "100%"
@@ -1087,8 +1077,8 @@
                     $(".animation.spotlight").css("z-index", 10000);
                     var canvas = $(".animation.spotlight").find("canvas")[0];
                     var ctx = canvas.getContext('2d');
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
+                    canvas.width = window.innerWidth/2;
+                    canvas.height = window.innerHeight/2;
                     ctx.fillStyle = '#fff';
                     //start ramp
                     ctx.beginPath();

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shows | Shaatsra '15</title>
+        <title>Shows | Shaastra '15</title>
         <?php include '../base/head.php' ?>
     </head>
     

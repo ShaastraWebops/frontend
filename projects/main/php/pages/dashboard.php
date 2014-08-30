@@ -9,7 +9,7 @@
 <html>
     <head>
         
-        <title>Dashboard | Shaatsra '15</title>
+        <title>Dashboard | Shaastra '15</title>
         <?php include '../base/head.php' ?>
     </head>
 

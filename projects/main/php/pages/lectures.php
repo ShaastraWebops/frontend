@@ -11,7 +11,7 @@
 			padding: 0;
 			margin: 0;
 			font-size: 0;
-			/*overflow-x: hidden;*/
+			overflow-x: hidden;
 		}
 		.speaker-list .speaker-group .speaker > div > .dummy {
 			margin-top: 100%; /* This is the height:width ratio */;
