@@ -44,6 +44,8 @@
 			.shaastra-logo {
 				font-size: 2em;
 				text-shadow : 2px 2px #000;
+                cursor: pointer;
+                z-index: 100000000;
 			}
 			.shaastra-blue {
 				color : #00445e;
@@ -197,6 +199,11 @@
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A); /* For Safari 5.1 to 6.0 */
 				}
 			}
+            
+            .text .shaastra-title .shaastra-logo {
+                cursor: pointer;   
+            }
+            
 		</style>
 	</head>
 
@@ -227,7 +234,7 @@
 								<div class="small shaastra-logo">iit madras <span class="">presents</span></div>
 							</div>
 							<div class="down">
-								<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
+								<div class="text shaastra-title shaastra-logo" id="abtus_link">SHAASTRA <span class="shaastra-blue">2015</span></div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
 							</div>
@@ -294,7 +301,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/about.php" class="title about text">About Us</a>
+						<a href="../pages/under_construction.php" class="title about text">Symposium</a>
 					</span>
 				</span>
 			</div>
@@ -303,6 +310,18 @@
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
 	</div>
+        
+<!--
+    <script>
+        $(document).ready(function(){
+           $('#abtus_link').hover(function(){
+               $('#abtus_link').css({
+                    cursor: 'pointer'
+               });
+           });
+        });
+    </script>    
+-->
 
     <?php include '../base/foot.php'; ?>
 	<script>
