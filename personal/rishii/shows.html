@@ -4,9 +4,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="Rishii Nandhan" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-        <link rel="stylesheet" type="text/css" href="shows-test.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="shows.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
   <!--      <style type="text/css">
 		 -webkit-text-size-adjust:none;
 		 -ms-text-size-adjust:none;
@@ -16,14 +16,14 @@
 
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
-    <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.fullPage.js" type="text/javascript"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				<!--sectionsColor: ['#000000', '#BB0C0C', '#ffffff']-->
 				anchors: ['firstPage', 'secondPage', '3rdPage'],
-				menu: '#menu',
+				menu: '#menu-nav',
 				loopTop: true,
 				loopBottom: true
 			});
@@ -34,7 +34,7 @@
 	</head>
     <body>
     
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
     <div class="navbar-header">
           <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
             </button>
     <div id="navbarCollapse" class="collapse navbar-collapse"> 
-	<ul id="menu" class="nav nav-pills nav-justified">
+	<ul id="menu-nav" class="nav nav-pills nav-justified">
 		<li data-menuanchor="firstPage" class="active col-md-4"><a href="#firstPage">First slide</a></li>
 		<li data-menuanchor="secondPage" class="col-md-4"><a href="#secondPage">Second slide</a></li>
 		<li data-menuanchor="3rdPage" class="col-md-4"><a href="#3rdPage">Third slide</a></li>
