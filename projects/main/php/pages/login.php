@@ -282,7 +282,7 @@
 
         <div class="container-fluid white" style="height: auto;">
             <div class="row row-centered">
-                <div class="col-md-3 col-centered text-center">
+                <div class="col-md-6 col-centered text-center">
                     <span style="font-size: 1.2em;">Join us with one click</span>
                 </div>
             </div>

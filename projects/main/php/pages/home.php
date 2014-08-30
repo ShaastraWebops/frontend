@@ -136,7 +136,7 @@
 				position: absolute;
 				bottom: 5%;
 				margin: auto;
-				color: #555;
+				color: #999;
 				left: 50%;
 				font-size: 1.5em;
 			}

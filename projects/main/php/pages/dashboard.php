@@ -42,26 +42,30 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="details">
                                 <tr>
                                     <th>Shaastra ID:</th>
                                     <td>MM12B037</td>
                                 </tr>
                                 <tr>
                                     <th>Name:</th>
-                                    <td>Abhishek Shandilya</td>
+                                    <td id="name" contentEditable="false">Abhishek Shandilya</td>
                                 </tr>
                                 <tr>
                                     <th>Email id:</th>
-                                    <td>abhishek.sandy@gmail.com</td>
+                                    <td name="email" contentEditable="false">abhishek.sandy@gmail.com</td>
                                 </tr>
                                 <tr>
                                     <th>College:</th>
-                                    <td>IIT MADRAS</td>
+                                    <td id="college" contentEditable="false">IIT MADRAS</td>
+                                </tr>
+                                <tr>
+                                    <th>City:</th>
+                                    <td id="city" contentEditable="false">Chennai</td>
                                 </tr>
                                 <tr>
                                     <th>Phone:</th>
-                                    <td>+91 9884299211</td>
+                                    <td id="phone" contentEditable="false">9884299211</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -70,12 +74,20 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4 col-md-offset-1">
-                    <div class="table-responsive" style="border: 1px solid #fff; border-radius: 10px;">
+    		<!-- </div> -->
+            <!-- <div class="row"> -->
+                <div class="col-md-7">
+                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th colspan="3" style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
+                                    <th style="font-size:1.2em;text-align:center;vertical-align:middle">Registered Events</th>
+                                    <th>
+                                        <button class="btn btn-info col-md-12">Register for an event</button>
+                                    </th>
+                                    <th>
+                                        <button class="btn btn-warning col-md-12">Unregister from an event</button>
+                                    </th>
                                 </tr>
                                 <tr>
                                     <th>Event name</th>
@@ -115,6 +127,28 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            editable = ["name", "college", "city", "phone"];
+            function toggleEditable(){
+                if(document.getElementById(editable[1]).contentEditable == "false"){
+                    document.getElementById("edit").innerHTML = "Save";
+                    for(i=0;i<4;i++){
+                        document.getElementById(editable[i]).contentEditable = "true";
+                        document.getElementById(editable[i]).style.backgroundColor = "rgba(255,255,255,0.3)";
+                    }
+                }
+                else{
+                    document.getElementById("edit").innerHTML = "Edit Profile";
+                    for(i=0;i<4;i++){
+                        document.getElementById(editable[i]).contentEditable = "false";
+                        document.getElementById(editable[i]).style.backgroundColor = "transparent";
+                    }
+                }
+            }
+            $("document").ready(function(){
+                $("#salute").text("Hi! "+$("#name").text());
+            });
+        </script>
     </body>
     <?php include '../base/foot.php' ?>
 </html>
