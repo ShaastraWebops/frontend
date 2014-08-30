@@ -22,14 +22,18 @@
  }
  #menu a{
 	 color:#FFF;
+	 font-size:1.3em;
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-style:oblique;
+	 font-weight:bold;
  }
  #menu a:hover{
-	 color:#F90;
+	 color:#FF0;
 	 background:none;
  }
  #menu li.active a{
 	 background:none;
-	 color:#F60;
+	 color:#FF0;
  }
 .section h1{
 	padding-top:40px;
@@ -39,4 +43,5 @@
 .section p{
 	padding-left:40px;
 	padding-right:40px;
+
 }

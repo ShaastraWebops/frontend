@@ -7,6 +7,12 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
         <link rel="stylesheet" type="text/css" href="shows-test.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <!--      <style type="text/css">
+		 -webkit-text-size-adjust:none;
+		 -ms-text-size-adjust:none;
+		 -moz-text-size-adjust:none;
+		 text-size-adjust:none;
+		</style>-->
 
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
@@ -30,12 +36,20 @@
     
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-    <div class="collapse navbar-collapse"> 
+    <div class="navbar-header">
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse"> 
 	<ul id="menu" class="nav nav-pills nav-justified">
-		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
-		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+		<li data-menuanchor="firstPage" class="active col-md-4"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage" class="col-md-4"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage" class="col-md-4"><a href="#3rdPage">Third slide</a></li>
 	</ul>
+    </div>
     </div>
     </div>
     </div>
