@@ -44,6 +44,8 @@
 			.shaastra-logo {
 				font-size: 2em;
 				text-shadow : 2px 2px #000;
+                cursor: pointer;
+                z-index: 100000000;
 			}
 			.shaastra-blue {
 				color : #00445e;
@@ -134,15 +136,16 @@
 			}
 			#page .help {
 				position: absolute;
-				bottom: 40%;
+				bottom: 5%;
 				margin: auto;
+				color: #999;
 				left: 50%;
-				font-size: 1.1em;
+				font-size: 1.5em;
 			}
 			#page .help .text {
 				position: relative;
-				left: -37.5%;
-				width: 75%;
+				left: -50%;
+				width: 100%;
 			}
 			#page .ngon-row {
 				height: auto;
@@ -177,10 +180,10 @@
 				#page .ngon-row .text.events {
 					text-shadow: 0px 4px 6px #0a0a0a;
 				}
-				#page .ngon-row .text.spons {
+				#page .ngon-row .text.lectures {
 					text-shadow: -4px 3px 1.2px #000;
 				}
-				#page .ngon-row .text.lectures {
+				#page .ngon-row .text.spons {
 					text-shadow: -4px 2px 1px #000;
 				}
 				#page .ngon-row .text.shows {
@@ -196,6 +199,11 @@
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A); /* For Safari 5.1 to 6.0 */
 				}
 			}
+            
+            .text .shaastra-title .shaastra-logo {
+                cursor: pointer;   
+            }
+            
 		</style>
 	</head>
 
@@ -226,7 +234,7 @@
 								<div class="small shaastra-logo">iit madras <span class="">presents</span></div>
 							</div>
 							<div class="down">
-								<div class="text shaastra-title shaastra-logo">SHAASTRA <span class="shaastra-blue">2015</span></div>
+								<div class="text shaastra-title shaastra-logo" id="abtus_link">SHAASTRA <span class="shaastra-blue">2015</span></div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
 							</div>
@@ -251,7 +259,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/categories.php" class="title events text">Events</a>
+						<a href="../pages/categories.php" class="title events text">Events &amp; Workshops</a>
 					</span>
 				</span>
 			</div>
@@ -261,7 +269,7 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 
-						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
+						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
 					</span>
 				</span>
 			</div>
@@ -277,14 +285,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
+						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/contact.php" class="title contact text">Contacts</a>
+						<a href="../pages/contact.php" class="title contact text">Contact Us</a>
 					</span>
 				</span>
 			</div>
@@ -293,7 +301,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/about.php" class="title about text">About Us</a>
+						<a href="../pages/under_construction.php" class="title about text">Symposium</a>
 					</span>
 				</span>
 			</div>
@@ -301,35 +309,20 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<div class="help-anime" id="anime">
-			<img id="mouse">
-		</div>
 	</div>
-	<!--mouse animation script start-->
-	<script>
-		m=document.getElementById("mouse");
-		m.style.position="absolute";
-		m.style.height="100px";
-		m.style.width="100px";
-		anime(0);
-		
-		function anime(i){
-			if(i==1){
-				m.src="../../img/active.png";
-				setTimeout(function(){anime(2)},500);
-			}
-			else if(i==0){
-				m.style.left="20%";
-				m.src="../../img/default.png";
-				setTimeout(function(){anime(1)},500);
-			}
-			else if(i==2){
-				$("#mouse").animate({left:"5%"});
-				setTimeout(function(){anime(0)},1000);
-			}
-		}
-	</script>
-	<!--mouse animation script end-->
+        
+<!--
+    <script>
+        $(document).ready(function(){
+           $('#abtus_link').hover(function(){
+               $('#abtus_link').css({
+                    cursor: 'pointer'
+               });
+           });
+        });
+    </script>    
+-->
+
     <?php include '../base/foot.php'; ?>
 	<script>
 		$(document).ready(function() {
@@ -379,11 +372,13 @@
 			}
 
 			if ( (gl || expmt ) && $('body').width() > 768) { // 768 is taken from bootstrap's xs class
-				// GL is there. Make sure it is not mobile
-
+				// GL is there and not mobile
 				console.log("loading webgl content.");
-				$('.help .text').text("Click and drag anywhere to play with the dice.");
-				//blink('.help', 500, 0, 0);
+				$('.help .text').text("Click and drag anywhere to play with the dice.")
+				setInterval(function() { 
+					$('.help .text').fadeToggle(500)
+				}, 700)
+
 				jsCache.load(
 			        <?php if ($DEBUG ) { ?>
 			            {url: '../../js/three.min.js'},
@@ -690,7 +685,7 @@
 							var light = new THREE.SpotLight(0xffffff);
 							console.log(this.w)
 							console.log(this.h)
-							light.position.set(0, this.h, mw);
+							light.position.set(0, this.h/2, mw);
 							light.target.position.set(0, 0, 0);
 							light.castShadow = true;
 							light.shadowCameraNear = mw / 10;

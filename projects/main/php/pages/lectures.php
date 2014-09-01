@@ -11,6 +11,7 @@
 			padding: 0;
 			margin: 0;
 			font-size: 0;
+			overflow-x: hidden;
 		}
 		.speaker-list{
 			padding-top: 0px;
@@ -189,7 +190,19 @@
 				}, delay);
 			}, 1);
 		}
-		show_speakers();
+
+		$(document).ready(function() {
+			// jsCache.load(
+   //      		<?php if ($DEBUG) { ?>
+   //          		{url: '../../js/TweenMax.min.js'},
+   //          		{url: '../../js/jquery.gsap.min.js'}
+   //      		<?php } else { ?>
+   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'},
+   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
+   //      		<?php } ?>
+   //      	).then(show_speakers)
+        	show_speakers();
+		})
 	</script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-$DEBUG = 0;
+$DEBUG = 1;
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
@@ -9,13 +9,20 @@ if ($DEBUG) {
 <?php } else { ?>
 	<script>
 		var last_updated = "27 July 2014";
-		if (0 && localStorage.getitem("last_updated") != last_updated) {
-			llocalStorage.clear();
+		if (localStorage.getitem("last_updated") != last_updated) {
+			localStorage.clear();
 			localStorage.setItem('last_updated', last_updated)
 		}
 	</script>
 
-<?php } ?>
+<?php } 
+session_start();
+// Initial session conditions
+if ( isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
+	$logged_in = TRUE;
+}
+
+?>
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -215,6 +222,44 @@ if ($DEBUG) {
 			margin-top: 0;
 		}
 	}
+
+	.btn-darkest {
+  color: #ffffff;
+  background-color: #777777;
+  border-color: #777777;
+}
+.btn-darkest:hover,
+.btn-darkest:focus,
+.btn-darkest:active,
+.btn-darkest.active,
+.open .dropdown-toggle.btn-darkest {
+  color: #ffffff;
+  background-color: #636363;
+  border-color: #585858;
+}
+.btn-darkest:active,
+.btn-darkest.active,
+.open .dropdown-toggle.btn-darkest {
+  background-image: none;
+}
+.btn-darkest.disabled,
+.btn-darkest[disabled],
+fieldset[disabled] .btn-darkest,
+.btn-darkest.disabled:hover,
+.btn-darkest[disabled]:hover,
+fieldset[disabled] .btn-darkest:hover,
+.btn-darkest.disabled:focus,
+.btn-darkest[disabled]:focus,
+fieldset[disabled] .btn-darkest:focus,
+.btn-darkest.disabled:active,
+.btn-darkest[disabled]:active,
+fieldset[disabled] .btn-darkest:active,
+.btn-darkest.disabled.active,
+.btn-darkest[disabled].active,
+fieldset[disabled] .btn-darkest.active {
+  background-color: #777777;
+  border-color: #777777;
+}
 </style>
 
 
