@@ -79,9 +79,15 @@
             text-align: center;
         }
         #event-list .event-group .event-item a div > span > span > span {
-            background-color: rgba(0, 0, 0, 0.95);
+            background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
             display: inline-block;
+            padding: 0;
+            -webkit-transition: padding 0.3s;            
+        }
+        #event-list .event-group .event-item a:hover div > span > span > span{
+            padding: 80px 0px 80px 0px;
+            -webkit-transition: padding 0.3s;
         }
         .animation.spotlight>img{
             position: absolute;
@@ -169,12 +175,7 @@
             width: 100%;
             height: 100%;
         }
-        @font-face {
-           font-family: "LCD Solid";
-           src: url(../../fonts/LCD_Solid.ttf);
-        }
         #score {
-           font-family: "LCD Solid";
            color: red;
            position: absolute;
            top: 55%;
@@ -294,6 +295,16 @@
                -moz-transform: scale(0.8);
                     transform: scale(0.8);
         }
+        #tt{
+            height: 16px;
+        }
+        #tt:hover{
+            /*background-color: rgba(0,0,0,0.5);            */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) , rgba(0,0,0,1));
+            /*height: 200px;*/
+            -webkit-transition: background 2s;
+                    transition: background 2s;
+        }
     </style>
 </head>
 <body>
@@ -323,7 +334,7 @@
             foreach ( $event_list as $event ) {
                 if ($event === '.' or $event === '..') continue;
                 if (!is_dir('../events/' . $event)) continue;
-
+                if ($event === "Sampark") continue;
                 $event_img = '../../img/events/' . $event . ".png";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
@@ -351,9 +362,9 @@
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell">
                                             <span>
-                                                <!-- <span class="transparent-text">
+                                                <span class="transparent-text">
                                                     <?php echo $event; ?>
-                                                </span> -->
+                                                </span>
                                             </span>
                                         </span>
                                     </span>
