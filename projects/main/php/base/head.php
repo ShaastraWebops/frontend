@@ -1,5 +1,6 @@
 <?php
 $DEBUG = 1;
+session_start();
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
@@ -16,7 +17,7 @@ if ($DEBUG) {
 	</script>
 
 <?php } 
-session_start();
+
 // Initial session conditions
 if ( isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
 	$logged_in = TRUE;
@@ -101,6 +102,9 @@ if ( isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
 	}
 	.black {
 		color: #000000;
+	}
+	.bold {
+		font-weight: bold;
 	}
     .shaastra-title {
         text-transform: uppercase;

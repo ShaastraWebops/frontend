@@ -24,7 +24,7 @@
             -ms-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-            border: 1px solid transparent;
+            /*border: 1px solid transparent;*/
         }
         #event-list .event-group .event-item:hover > div {
             border-color: #fff;
@@ -79,7 +79,7 @@
             text-align: center;
         }
         #event-list .event-group .event-item a div > span > span > span {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             width: 100%;
             display: inline-block;
             padding: 0;
@@ -192,34 +192,6 @@
             left:34%;
             display:none;
         }
-        @-webkit-keyframes mapBorder{
-          0%{
-            stroke-opacity:1;
-            fill-opacity: 0;
-          }
-          80%{
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: 0;
-            stroke-opacity:1;
-            fill-opacity:1;
-          }
-        }
-        @-moz-keyframes mapBorder{
-          0%{
-            stroke-opacity:1;
-            fill-opacity: 0;
-          }
-          80%{
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: 0;
-            stroke-opacity:1;
-            fill-opacity:1;
-          }
-        }
         .animation.workshops>#spanner{
             position: fixed;
             top: 80%;
@@ -284,16 +256,6 @@
             -webkit-transform: scale(0.8);
                -moz-transform: scale(0.8);
                     transform: scale(0.8);
-        }
-        #tt{
-            height: 16px;
-        }
-        #tt:hover{
-            /*background-color: rgba(0,0,0,0.5);            */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0) , rgba(0,0,0,1));
-            /*height: 200px;*/
-            -webkit-transition: background 2s;
-                    transition: background 2s;
         }
     </style>
 </head>
@@ -806,6 +768,7 @@
                 var $el = $(this);
                 $('.animation.background').fadeIn(500);
                 if( $el.hasClass("aerofest")) {
+                    $('body').css('overflow', "hidden")
                     $(".animation.aerofest")
                         .css("z-index", 10000)
                         .animate({
@@ -925,6 +888,7 @@
                     // }, animation_time);
 
                 } else if($el.hasClass("department_flagship")) {
+                    $('body').css('overflow', "hidden")
                     $(".animation.department_flagship")
                         .css("z-index", 10000)
                         .animate({

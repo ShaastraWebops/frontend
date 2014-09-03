@@ -12,6 +12,7 @@
 			margin: 0;
 			font-size: 0;
 			overflow-x: hidden;
+			overflow-y: hidden;
 		}
 		.speaker-list{
 			padding-top: 0px;
@@ -22,7 +23,7 @@
 		.speaker-list .speaker-group .speaker {
 			padding: 0;
 			width: 25%;
-			height: 33.33%;
+			height: 100%;
 			display: inline-block;
 			font-size: 1em;
 
@@ -52,9 +53,8 @@
 			font-size: 1em;
 			font-size: 1.5vw;
 			font-weight: 900;
-			font-family: "Times New Roman", sans-serif;
+			/*font-family: "Times New Roman", sans-serif;*/
 			letter-spacing: 0.1em;
-			letter-spacing: 0.15vw;
 			text-transform: uppercase;
 			background: url('../../img/logo/200x200_dice_white.png') no-repeat center center;
 			background-size: cover;
@@ -82,6 +82,7 @@
 			width: 100%;
 			display: inline-block;
 			color: #fff;
+			font-size: 1em;
 		}
 	</style>
 </head>
@@ -137,7 +138,10 @@
 
     <script>
 		function show_speakers() {
-	    	document.getElementsByClassName("speaker-list")[0].style.height = (window.innerHeight - 72)+"px";
+	    	$(window).resize(function() {
+	    		$(".speaker-list").height( $(window).height() - 70 );
+	    	});
+			$(window).resize();
 			$speakers = $('.speaker'); // there are 10 speakers
 			$speaker_groups = $(".speaker-group")
 			delay = 1000;
@@ -184,11 +188,15 @@
 								$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
 									.css({'height':'100%', 'width':'0%'})
 									.animate({'width': '25%'}, delay)
+								setTimeout(function() {
+									
+								}, delay)
 							}, 10);
 						}, delay)
 					}, delay)
 				}, delay);
 			}, 1);
+			
 		}
 
 		$(document).ready(function() {

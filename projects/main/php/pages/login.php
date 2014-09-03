@@ -260,6 +260,15 @@
             a.social-icon.google:hover .text {
                 color: #fff;
             }
+            .inset-forgot-password {
+                position: absolute; 
+                bottom: 0; 
+                right: 0; 
+                color: #4875B4; 
+                z-index: 10; 
+                padding: 8px;
+                cursor: pointer;
+            }
         </style>
 
     </head>
@@ -312,7 +321,6 @@
                 </div>
             </div>
 
-
             <div class="row row-centered" style="padding-top: 5%;">
                 <div class="col-md-3 col-centered text-center">
                     <span style="font-size: 2em;">OR</span>
@@ -329,27 +337,33 @@
                     
                 </div>
             </div>        
-            <div class="row my-tab row-centered tab-login" style="height: 100%;">
-                <div class="col-md-5 col-centered login-box box">
-                    <form class="login-form" action="http://erp.shaastra.org/login?type=participant" method="POST">
-    					<p class="field">
-    						<input type="text" name="login" placeholder="Username or EMail or Shaastra ID" autofocus required>
-    						<i class="glyphicon glyphicon-user"></i>
-    					</p>
-    					<p class="field">
-    						<input type="password" name="password" placeholder="Password" required>
-    						<i class="glyphicon glyphicon-lock"></i>                            
-    				   </p>
 
-    					<p class="submit">
-    						<button type="submit" name="submit"><i class="glyphicon glyphicon-arrow-right"></i></button>
-    					</p>
-
-    				</form>
-                    <button data-tab=".tab-forgot" type="button" class="pull-right my-tab-link btn btn-primary" style="margin-top: -5px;">Forgot Password</button>
+            <div class="row row-centered error-msg" style="padding: 1em; display: none;">
+                <div class="col-md-6 text-center col-centered">
+                    <div class="alert alert-danger">
+                        <span class="bold">Error </span>
+                        <span class="text">There was an error</span>
+                        <span class="close" data-target="alert">&times;</span>
+                    </div>
                 </div>
             </div>
 
+            <div class="row my-tab row-centered tab-login" style="height: 100%;">
+                <div class="col-md-5 col-centered login-box box">
+                    <form id="reg" role="form">
+                        <div class="form-group">
+                            <label class="control-label hidden">Email address</label>
+                            <div class="input-group col-md-12">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="text" class="form-control" placeholder="Username or Email or Shaastra ID" required style="border-top-right-radius: 4px;">
+                                <input type="text" class="form-control" placeholder="Password" required style="border-top-right-radius: 0px;border-bottom-right-radius: 4px;">
+                                <a data-tab=".tab-forgot" class="pull-right my-tab-link inset-forgot-password" >Forgot Password</a>
+                            </div>
+                        </div>                    
+                        <button type="submit" class="btn btn-primary col-md-4 col-centered login-btn">Login</button>
+                    </form>
+                </div>
+            </div>
             <div class="row my-tab tab-register" style="display: none;">
                 <div class="col-md-6 col-md-offset-3 register-box box">
                     <form id="reg" role="form">
@@ -378,7 +392,7 @@
                             </div>
                         </div>
                         <div class="row row-centered">
-                            <button type="submit" class="btn btn-primary col-md-4 col-centered">Register</button>
+                            <button type="submit" class="btn btn-primary col-md-4 col-centered register-btn">Register</button>
                         </div>
                     </form>
                 </div>
@@ -391,7 +405,7 @@
                             <label class="control-label hidden">Email address</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter a E-Mail id, Shaastra ID or Barcode" required>
                         </div>                    
-                        <button type="submit" class="btn btn-darkest col-md-4 col-md-offset-4">Forgot Password</button>
+                        <button type="submit" class="btn btn-darkest col-md-4 col-centered forgot-btn">Forgot Password</button>
                     </form>
                 </div>
             </div>
