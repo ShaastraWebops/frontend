@@ -1,6 +1,7 @@
-<?php
+<?php 
+if(session_status()!=PHP_SESSION_ACTIVE) session_start()
+//session_start();
 $DEBUG = 1;
-session_start();
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
