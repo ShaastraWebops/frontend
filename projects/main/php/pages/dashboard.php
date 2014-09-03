@@ -1,6 +1,7 @@
 <?php
     if (isset($logged_in) && $logged_in) {
         //header('Location: ../pages/dashboard.php');
+        session_start();
     } else {
         header('Location: ../pages/login.php');
     }
