@@ -1,48 +1,75 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shows | Shaatsra '15</title>
+        <title>Shows | Shaastra '15</title>
         <?php include '../base/head.php' ?>
+        <link rel="stylesheet" type="text/css" href="../../css/shows.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.fullPage.css">
+        <script src="../../js/jquery.fullPage.min.js"></script>
+       	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				<!--sectionsColor: ['#000000', '#BB0C0C', '#ffffff']-->
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				menu: '#menu-nav',
+				loopTop: true,
+				loopBottom: true
+			});
+		});
+	    </script>
+
     </head>
     
     <body>
-        <?php include '../base/menu.php' ?>
+       <?php include '../base/menu.php' ?>
         
-        <div class="container-fluid title white centered" style='margin-bottom:2%;'>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center">SHOWS</h1>
-                    <div class="white breaker">
-                        <span class="left"></span>
-                        <div class="dice white"></div>
-                        <span class="right"></span>
-                    </div>
-                </div>
-            </div>
+       <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse"> 
+	<ul id="menu" class="nav nav-pills nav-justified">
+		<li data-menuanchor="firstPage" class="active col-md-4"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage" class="col-md-4"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage" class="col-md-4"><a href="#3rdPage">Third slide</a></li>
+	</ul>
+    </div>
+    </div>
+    </div>
+    </div>
+ <div id="fullpage">
+	<div class="section " id="section0">
+		<div class="left grey">
+       <h1 style="float:right;color:#FFF;padding-right:3px;">ENVI</h1>
+       <p style="padding-top:200px;">After the overwhelming applause to Envisage at Shaastra 2014, we take a giant leap ahead, to present to you, a novel technical show defying your imagination, revolutionizing basic science and technology. The students of IIT Madras raised the bars, orchestrated and organized an event replacing the professional shows in Shaastra. Sit back and get ready to experience an adrenalin rush, let your jaws drop in awe as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects.</p>
+<p>We bet on ourselves to take you through a journey into Neverland, giving a new dimension to entertainment and turning projects undertaken by us into a memory you will long cherish!</p>
         </div>
-        
-        <div class="container-fluid main white">
-            <div class="row">
-                <div class="col-md-5 col-md-offset-1">
-                  <span class='shaastra-title'>Shaastra</span>, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology. After the overwhelming responses to the previous editions, Envisage is back, Bigger and Better! This time, Sit back and get ready to experience an adrenalin rush like you have never experienced before. Soak in the awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. 
-                    <br />
-                    Being the only student organized event of its kind in the Whole Country, We proudly bet you will never ever forget your journey into Neverland, giving a new meaning to your idea of entertainment and turning projects undertaken by us into a memory you will long cherish! 
-                    <br />
-                    The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. You will know which boxes to blame if you are unable to get sleep that night. Get ready to witness people around you floating in air. After you have a taste of the Virtual Music and Video Mixing we offer, DJs will seem old school. Ever wanted to take a selfie with a superhero, this might well be the chance. You will witness a new groundbreaking performance after watching our techno cultural show.
-                   <br />
-                   
-                </div>
-                <div class="col-md-5">
-                    <iframe style="margin: 10px;" width="100%" height="315" src="http://www.youtube.com/embed/yOYbyjE3Vtw" frameborder="0" allowfullscreen align="right"></iframe>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success. Join us at Shaastra 2015 to share the awe and experience the Dream Kingdom!
-                <br />
-                </div>
-    		</div>
+        <div class="right white">
+        <h1 style="float:left;color:#333;padding-left:3px;">SAGE</h1>
+        <p style="padding-top:200px;">The work of science can be enigmatic deceiving your eyes by showing animations with just a strip of LEDs. You will know which boxes to blame if you are unable to get sleep that night. Instrumentalists will be seen throwing their guitars and drum-sticks in their backyard after witnessing the Wireless Instruments. DJs will seem cliché after you are mesmerized by Virtual Music Mixing. You will be pinching the person next to you just to check if he isn't a hologram. Ever wondered how changing patterns on a screen can amaze you with music. You will witness a new groundbreaking performance after watching our techno cultural show.</p>
+        <p>Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success. Join us at Shaastra 2014 to share the awe and experience the Dream Kingdom!<p>
         </div>
+	</div>
+	<div class="section" id="section1">
+		<div class="left white">
+        </div>
+        <div class="right grey">
+        </div>
+	</div>
+	<div class="section" id="section2">
+    	<div class="left grey">
+        </div>
+        <div class="right white">
+        </div>
+		</div>
+	</div>
+
     </body>
     <?php include '../base/foot.php' ?>
 </html>

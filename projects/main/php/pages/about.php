@@ -1,7 +1,8 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About | Shaatsra '15</title>
+        <title>About | Shaastra '15</title>
         <?php include '../base/head.php' ?>
         <style>
             .main {

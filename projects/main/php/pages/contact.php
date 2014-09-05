@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -167,9 +168,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Sponsorships,<br />
-											PR and<br />
-											Networking
+											Sponsorship<br />
+											&amp;<br />
+											Public Relations
 										</span>
 									</span>
 								</span>

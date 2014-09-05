@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
             -ms-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-            border: 1px solid transparent;
+            /*border: 1px solid transparent;*/
         }
         #event-list .event-group .event-item:hover > div {
             border-color: #fff;
@@ -79,9 +80,15 @@
             text-align: center;
         }
         #event-list .event-group .event-item a div > span > span > span {
-            background-color: rgba(0, 0, 0, 0.95);
+            background-color: rgba(0, 0, 0, 0.7);
             width: 100%;
             display: inline-block;
+            padding: 0;
+            -webkit-transition: padding 0.3s;            
+        }
+        #event-list .event-group .event-item a:hover div > span > span > span{
+            padding: 80px 0px 80px 0px;
+            -webkit-transition: padding 0.3s;
         }
         .animation.spotlight>img{
             position: absolute;
@@ -92,29 +99,19 @@
                -moz-transform: rotate(-30deg);
             -webkit-animation: fly 0.8s linear forwards;
                -moz-animation: fly 0.8s linear forwards;
+            -webkit-transition: all 1s;
         }
         @-webkit-keyframes fly{
             0%{
                 top: 60%;
                 left: -10%;
                 opacity: 1;
+                -webkit-transform: rotate(-30deg);
             }
-            25%{
-                top: 45%;
-                left: 10%;
-            }
-            45%{
+            50%{
                 top: 30%;
-                left: 25%;
-                /*-webkit-transform: rotate(0deg);*/
-            }
-            55%{
-                top: 30%;
-                left: 35%;
-            }
-            75%{
-                top: 45%;
-                left: 50%;
+                left: 30%;
+                -webkit-transform: rotate(0deg);
             }
             100%{
                 top: 60%;
@@ -195,34 +192,6 @@
             top:24%;
             left:34%;
             display:none;
-        }
-        @-webkit-keyframes mapBorder{
-          0%{
-            stroke-opacity:1;
-            fill-opacity: 0;
-          }
-          80%{
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: 0;
-            stroke-opacity:1;
-            fill-opacity:1;
-          }
-        }
-        @-moz-keyframes mapBorder{
-          0%{
-            stroke-opacity:1;
-            fill-opacity: 0;
-          }
-          80%{
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: 0;
-            stroke-opacity:1;
-            fill-opacity:1;
-          }
         }
         .animation.workshops>#spanner{
             position: fixed;
@@ -312,13 +281,13 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
-            $event_row_count = 4;
+            $event_row_count = 5;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
                 if ($event === '.' or $event === '..') continue;
                 if (!is_dir('../events/' . $event)) continue;
-
+                if ($event === "Sampark") continue;
                 $event_img = '../../img/events/' . $event . ".png";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
@@ -346,9 +315,9 @@
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell">
                                             <span>
-                                                <!-- <span class="transparent-text">
+                                                <span class="transparent-text">
                                                     <?php echo $event; ?>
-                                                </span> -->
+                                                </span>
                                             </span>
                                         </span>
                                     </span>
@@ -368,13 +337,13 @@
     </div>
     <div class="animation aerofest"
         style="position:absolute; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:-100%;
+            height: 50%; width: 50%; top:25%; left:-100%;
             background: url(../../img/events/Aerofest_animation.png) no-repeat center center;
             background-size: auto 100%;">
     </div>
 
     <div class="animation b-events"
-        style="position:fixed; z-index: -1;top:0%; overflow: hidden;
+        style="position:fixed; z-index: -1; top:0%; overflow: hidden;
         height: 100%; width: 100%; left:0%;">
         <canvas id="canvasB" style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -387,7 +356,7 @@
 
     <div class="animation department_flagship"
         style="position:absolute; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:-100%;
+            height: 50%; width: 50%; top:25%; left:-100%;
             background: url(../../img/events/shark.svg) no-repeat center center;
             background-size: auto 100%;">
     </div>
@@ -773,7 +742,7 @@
 
     <div class="animation spotlight"
         style="position:fixed; z-index: -1; overflow: hidden;
-            height: 100%; width: 100%; top:0%; left:0%;display:none">
+            height: 50%; width: 50%; top:25%; left:25%;display:none">
         <img src="../../img/events/rcCar.png">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
@@ -792,7 +761,7 @@
     <?php include '../base/foot.php' ?>
 
     <script type="text/javascript">
-        var animation_time = 1000;
+        var animation_time = 3000;
         $(document).ready(function() {
             $(".category-link").click(function(ev) {
                 ev.preventDefault();
@@ -800,6 +769,7 @@
                 var $el = $(this);
                 $('.animation.background').fadeIn(500);
                 if( $el.hasClass("aerofest")) {
+                    $('body').css('overflow', "hidden")
                     $(".animation.aerofest")
                         .css("z-index", 10000)
                         .animate({
@@ -870,17 +840,17 @@
                         for (var p = 4, plen = currentPoint; p < plen; p++) {
                             ctx.lineTo(points[p].x, points[p].y);
                         }
+                        ctx.stroke();
                         //Bar Graph
-                        ctx.stroke();
-                        ctx.lineWidth = 20;
-                        ctx.strokeStyle = '#fff';
-                        ctx.fillStyle = '#fff';
-                        ctx.beginPath();
-                        for (var p = 4, plen = currentPoint; p < plen; p++) {
-                            ctx.moveTo(points[p].x, 0.95*canvas.height);
-                            ctx.lineTo(points[p].x, points[p].y);
-                        }
-                        ctx.stroke();
+                        // ctx.lineWidth = 20;
+                        // ctx.strokeStyle = '#fff';
+                        // ctx.fillStyle = '#fff';
+                        // ctx.beginPath();
+                        // for (var p = 4, plen = currentPoint; p < plen; p++) {
+                        //     ctx.moveTo(points[p].x, 0.95*canvas.height);
+                        //     ctx.lineTo(points[p].x, points[p].y);
+                        // }
+                        // ctx.stroke();
                         window.requestAnimationFrame(drawGraph);
                     }
                     drawGraph();
@@ -919,6 +889,7 @@
                     // }, animation_time);
 
                 } else if($el.hasClass("department_flagship")) {
+                    $('body').css('overflow', "hidden")
                     $(".animation.department_flagship")
                         .css("z-index", 10000)
                         .animate({
@@ -926,7 +897,7 @@
                     }, animation_time);
 
                 } else if($el.hasClass("design_and_build")) {
-                    $(".animation.aerofest")
+                    $(".animation.design_and_build")
                         .css("z-index", 10000)
                         .animate({
                         left: "100%"
@@ -1082,8 +1053,8 @@
                     $(".animation.spotlight").css("z-index", 10000);
                     var canvas = $(".animation.spotlight").find("canvas")[0];
                     var ctx = canvas.getContext('2d');
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
+                    canvas.width = window.innerWidth/2;
+                    canvas.height = window.innerHeight/2;
                     ctx.fillStyle = '#fff';
                     //start ramp
                     ctx.beginPath();

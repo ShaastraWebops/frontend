@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,10 +54,8 @@
             text-decoration: none;
             color: #fff;
             font-size: 1.3em;
-            /*font-size: 1.5vw;*/
             font-weight: 900;
             letter-spacing: 0.1em;
-            /*letter-spacing: 0.15vw; */
             text-transform: uppercase;
         }
         /*@media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -125,31 +124,11 @@
             margin-top: 5%;
             margin-bottom: 5%;
         }
-
-        #event-list .event-group .event-item a:hover div {
-            /*-webkit-transform: scale(0);
-            -moz-transform: scale(0);
-            -ms-transform: scale(0);
-            -o-transform: scale(0);
-            transform: scale(0);*/
-        }
         #event-list .event-group.first .event-item a:hover div {
             margin-top: 100%;
         }
         #event-list .event-group.last .event-item a:hover div {
             margin-top: -100%;
-        }
-        #event-list .event-group.first.last .event-item a:hover div {
-            margin-top: auto;
-        }
-        #event-list .event-group .event-item.first a:hover div {
-            margin-left: 100%;
-        }
-        #event-list .event-group .event-item.last a:hover div {
-            margin-left: -100%;
-        }
-        #event-list .event-group .event-item.first.last a:hover div {
-            margin-left: auto;
         }
     </style>
 </head>

@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -358,6 +358,7 @@
     <!-- END MAIN CONTENT OF A TAB -->
 
     <?php include '../base/foot.php' ?>
+    <?php include '../modules/social.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
@@ -413,6 +414,7 @@
         });
     </script>
     <?php } ?>
+
 
     <script>
         $(document).ready(function() {

@@ -472,9 +472,9 @@
                             <span class="big">
                                 <?php
                                     if(isset($logged_in) && $logged_in)
-                                        echo 'Log In';
-                                    else
                                         echo 'Dashboard';
+                                    else
+                                        echo 'Log In';
                                 ?>
                             </span>
                         </span>

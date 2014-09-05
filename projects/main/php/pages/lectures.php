@@ -1,16 +1,22 @@
+<?php session_start(); ?>
 <!doctype html public "" "">
 <html>
 	<head>
 		<title>Lectures | Shaastra '15</title>
 
 		<?php include '../base/head.php' ?>
-		<style>
+	<style>
 
 		.speaker-list, .speaker-list .speaker-group {
 			height: 100%;
 			padding: 0;
 			margin: 0;
 			font-size: 0;
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+		.speaker-list{
+			padding-top: 0px;
 		}
 		.speaker-list .speaker-group .speaker > div > .dummy {
 			margin-top: 100%; /* This is the height:width ratio */;
@@ -18,7 +24,7 @@
 		.speaker-list .speaker-group .speaker {
 			padding: 0;
 			width: 25%;
-			height: 33.33%;
+			height: 100%;
 			display: inline-block;
 			font-size: 1em;
 
@@ -48,9 +54,8 @@
 			font-size: 1em;
 			font-size: 1.5vw;
 			font-weight: 900;
-			font-family: "Times New Roman", sans-serif;
+			/*font-family: "Times New Roman", sans-serif;*/
 			letter-spacing: 0.1em;
-			letter-spacing: 0.15vw;
 			text-transform: uppercase;
 			background: url('../../img/logo/200x200_dice_white.png') no-repeat center center;
 			background-size: cover;
@@ -78,14 +83,24 @@
 			width: 100%;
 			display: inline-block;
 			color: #fff;
+			font-size: 1em;
 		}
 	</style>
 </head>
 <body>
 <?php include '../base/menu.php' ?>
-<div class="container-fluid speaker-list" style="display: none;">
+<div class="container-fluid white centered">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center title">Lectures</h1>            
+        </div>
+    </div>
+</div>
+<div class="container-fluid speaker-list" style="display:none;">
     <?php
-	$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
+	$speakers = array(	"arogyaswami paulraj", "pawan sinha", "rajeeva karandikar", "vivek wadhwa", "vijay govindraj", 
+						"rakesh agarwal", "ajit balakrishnan", "sunil kumar", "romila thapar", "ila bhatt", 
+						"archana sharma", "archana sharma", "robert langer", "anil kakodkar");
 	$speaker_count = count($speakers);
 	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
 
@@ -94,16 +109,26 @@
 	    <?php } ?>
 	        <div class="speaker">
 	            <div>
-	                <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>">
+	            	<?php 	$default_img = '../../img/logo/200x200_dice_white.png';
+	            			$speaker_img = '../../img/lectures/' . $speakers[$speaker_i] . ".jpg";
+	            			if (!file_exists($speaker_img)) {
+	            				$speaker_img = '../../img/lectures/' . $speakers[$speaker_i] . ".png";
+	            			}
+                 			if (!file_exists($speaker_img)) {   
+                 			   	$speaker_img = $default_img;
+                			} 
+        			?>
+	                <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" 
+	                	style="background:url('<?php echo $speaker_img; ?>') no-repeat center center">
 		            <div>
-				<span class='vertical-table'>
-				    <span class='vertical-table-cell text-center'>
-					<span class="text"><?php echo $speakers[$speaker_i]; ?></span>
-				    </span>
-				</span>
+						<span class='vertical-table'>
+						    <span class='vertical-table-cell text-center'>
+							<span class="text"><?php echo $speakers[$speaker_i]; ?></span>
+						    </span>
+						</span>
 		            </div>
 		        </a>
-		    </div>
+		    	</div>
 	        </div>
             <?php if ($speaker_i == 3 || $speaker_i == 7 || $speaker_i == 9) { ?>
 	    </div>
@@ -112,8 +137,12 @@
 </div>
 	<?php include '../base/foot.php' ?>
 
-	    <script>
+    <script>
 		function show_speakers() {
+	    	$(window).resize(function() {
+	    		$(".speaker-list").height( $(window).height() - 70 );
+	    	});
+			$(window).resize();
 			$speakers = $('.speaker'); // there are 10 speakers
 			$speaker_groups = $(".speaker-group")
 			delay = 1000;
@@ -160,23 +189,28 @@
 								$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
 									.css({'height':'100%', 'width':'0%'})
 									.animate({'width': '25%'}, delay)
+								setTimeout(function() {
+									
+								}, delay)
 							}, 10);
 						}, delay)
 					}, delay)
 				}, delay);
 			}, 1);
+			
 		}
 
 		$(document).ready(function() {
-			jsCache.load(
-        		<?php if ($DEBUG) { ?>
-            		{url: '../../js/TweenMax.min.js'},
-            		{url: '../../js/jquery.gsap.min.js'}
-        		<?php } else { ?>
-            		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'},
-            		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
-        		<?php } ?>
-        	).then(show_speakers)
+			// jsCache.load(
+   //      		<?php if ($DEBUG) { ?>
+   //          		{url: '../../js/TweenMax.min.js'},
+   //          		{url: '../../js/jquery.gsap.min.js'}
+   //      		<?php } else { ?>
+   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'},
+   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
+   //      		<?php } ?>
+   //      	).then(show_speakers)
+        	show_speakers();
 		})
 	</script>
     </body>
