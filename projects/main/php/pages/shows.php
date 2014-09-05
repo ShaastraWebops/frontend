@@ -1,12 +1,13 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shows | Shaastra '15</title>
+        <title>Shows | Shaatsra '15</title>
         <?php include '../base/head.php' ?>
         <link rel="stylesheet" type="text/css" href="../../css/shows.css">
         <link rel="stylesheet" type="text/css" href="../../css/jquery.fullPage.css">
-        <script src="../../js/jquery.fullPage.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+    <script src="../../js/jquery.fullPage.min.js"></script>
        	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -22,9 +23,9 @@
     </head>
     
     <body>
-       <?php include '../base/menu.php' ?>
+	       <?php include '../base/menu.php' ?>
         
-       <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
     <div class="navbar-header">
           <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -34,7 +35,7 @@
                 <span class="icon-bar"></span>
             </button>
     <div id="navbarCollapse" class="collapse navbar-collapse"> 
-	<ul id="menu" class="nav nav-pills nav-justified">
+	<ul id="menu-nav" class="nav nav-pills nav-justified">
 		<li data-menuanchor="firstPage" class="active col-md-4"><a href="#firstPage">First slide</a></li>
 		<li data-menuanchor="secondPage" class="col-md-4"><a href="#secondPage">Second slide</a></li>
 		<li data-menuanchor="3rdPage" class="col-md-4"><a href="#3rdPage">Third slide</a></li>
