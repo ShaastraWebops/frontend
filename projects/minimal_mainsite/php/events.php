@@ -777,12 +777,10 @@
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
   </div>
   <div class="col-md-4 event-info">
-    <!--<h2>Big Data Challenge</h2>
-    <p data-transform=1 data-cluster="EVNT" data-mirror=87>  Loading. </p>
+    <h2>Nirmaan</h2>
+    <p data-transform=1 data-cluster="EVNT" data-mirror=100>  Loading. </p>
     <p><button class="btn btn-default" data-toggle="modal" data-target="#myModal"  role="button">View details</button></p>
-
-  </div>-->
-</div>
+  </div>
 
 </div>
 <hr>
