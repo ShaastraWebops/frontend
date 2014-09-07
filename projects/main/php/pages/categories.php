@@ -86,9 +86,13 @@
             padding: 0;
             -webkit-transition: padding 0.3s;            
         }
-        #event-list .event-group .event-item a:hover div > span > span > span{
-            padding: 80px 0px 80px 0px;
+        #event-list .event-group .event-item a:hover div > span > span > span {
+            padding: 40% 0px 40% 0px;
             -webkit-transition: padding 0.3s;
+            -moz-transition: padding 0.3s;
+            -ms-transition: padding 0.3s;
+            -o-transition: padding 0.3s;
+            transition: padding 0.3s;
         }
         .animation.spotlight>img{
             position: absolute;

@@ -8,6 +8,7 @@
 }*/
 //session_start();
 $DEBUG = 1;
+$ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
@@ -24,12 +25,6 @@ if ($DEBUG) {
 	</script>
 
 <?php } 
-
-// Initial session conditions
-if ( isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
-	$logged_in = TRUE;
-}
-
 ?>
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

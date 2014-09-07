@@ -471,7 +471,7 @@
                             <span class="small hidden-xs">Interact with us</span>
                             <span class="big">
                                 <?php
-                                    if(isset($logged_in) && $logged_in)
+                                    if(isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 )
                                         echo 'Dashboard';
                                     else
                                         echo 'Log In';
