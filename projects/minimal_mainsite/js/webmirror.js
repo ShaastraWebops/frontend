@@ -235,6 +235,7 @@ var UIMirror = function(){
 
 				$el.html( value );
 				$(window).resize()
+				$el.trigger("content-ready");
 
 			});
 		});

@@ -994,10 +994,22 @@
       })
 
       $(window).load(function(){
-        console.log('resizing')
+        //console.log('resizing')
         $(window).resize();
+	$(window.location.hash+'-nav').click();
       })
+      $('[data-mirror]').on('content-ready',function(){
+	var $el = $(this);
+	if("#"+$el.attr('data-mirror') == window.location.hash){
+	    var scrollTo = $el.closest(".container").attr('id').split("-")[0] + '-nav';
+	    window.setTimeout(function(){
+		$("#"+scrollTo).click();
+		$el.closest('.event-info').find('.btn').click();
+	    }, 0);
+	    
+	}
 
+      });
       $(document).ready(function(){
         // enable uplink and attach mirror to all elements with the data-mirror attribute
         // Note this is a test token(but still capable of hacking the main database). DO NOT COMMIT TO PRODUCTION
