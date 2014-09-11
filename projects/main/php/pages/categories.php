@@ -16,9 +16,9 @@
             display: inline-block;
             position: relative;
             padding: 0;
-            /*padding-right: 0.2em;*/
             margin: 0;
             width: 100%;
+            top: 0;
             -webkit-transition: all 0.9s ease;
             -moz-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
@@ -67,10 +67,10 @@
                 -o-transform 0.3s ease-out;
             transition: margin 0.3s ease-out,
                 transform 0.3s ease-out;
-            height: 90%;
-            width: 90%;
-            margin: 5%;
-            background-color: rgba(0, 0, 0, 0.75);
+            height: 100%;
+            width: 100%;
+            /*margin: 5%;*/
+            background-color: rgba(0, 0, 0, 0.4);
         }
         #event-list .event-group .event-item a div > span {
             margin: 0px;
@@ -79,9 +79,9 @@
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
             /*text-align: center;*/
-            padding: 2%;
+            /*padding: 2%;*/
         }
-
+/*
         #event-list .event-group.first .event-item a div {
             margin-top: 10%;
             margin-bottom: 0%;
@@ -105,7 +105,7 @@
         #event-list .event-group .event-item.first.last a div {
             margin-top: 5%;
             margin-bottom: 5%;
-        }
+        }*/
         #event-list .event-group.first .event-item a:hover div {
             margin-top: 100%;
         }
@@ -313,7 +313,7 @@
             foreach ( $event_list as $event ) {
                 if (!is_dir('../events/' . $event)) continue;
                 
-                $event_img = '../../img/events/categories/' . $event . ".png";
+                $event_img = '../../img/events/categories/' . strtolower(str_replace("'", "", $event)) . ".jpg";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
                 }
@@ -332,7 +332,7 @@
                         // Give different class to indicate first and last column
                         if ($event_i % $event_row_count == 0) echo ' first ';
                         elseif ($event_i % $event_row_count == $event_row_count-1) echo ' last ';
-                    // ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
+                    ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 98%;">
                         <div>
                             <div class="dummy"></div>
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
@@ -787,7 +787,7 @@
     <?php include '../base/foot.php' ?>
 
     <script type="text/javascript">
-        var animation_time = 3000;
+        var animation_time = 1000;
         $(document).ready(function() {
             $(".category-link").click(function(ev) {
                 ev.preventDefault();

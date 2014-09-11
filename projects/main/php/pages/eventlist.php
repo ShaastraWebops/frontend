@@ -27,6 +27,7 @@
         }
         #event-list .event-group .event-item {
             padding: 0;
+            margin: 1%;
         }
         #event-list .event-group .event-item > div {
             display: inline-block;
@@ -139,12 +140,17 @@
         <?php
             $event_row_count = 5;
             $event_count = count($event_list);
+            unset($event_list[array_search('.', $event_list)]);
+            unset($event_list[array_search('..', $event_list)]);
+            unset($event_list[array_search('Sampark', $event_list)]);
+            unset($event_list[array_search('sample.html', $event_list)]);
             $event_i = 0;
             foreach ( $event_list as $event ) {
-                if ($event === '.' or $event === '..') continue;
-                $event_img = '../../img/events/list/' . $category . '/' . $event;
+                //if ($event === '.' or $event === '..') continue;
+                //$event_img = '../../img/events/list/' . strtolower($category) . '/' . strtolower($event) . '.jpg';
+                $event_img = '../../img/events/list/' . strtolower(str_replace("'", "", $event)) . '.jpg';
                 if (!file_exists($event_img)) {
-                    $event_img = $default_img;
+                //    $event_img = $default_img;
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
