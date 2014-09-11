@@ -124,7 +124,7 @@
     <div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center title">EVENTS - <?php echo $category; ?></h1>
+                    <h1 class="text-center title"><?php echo $category; ?></h1>
                     <div class="white breaker">
                         <span class="left"></span>
                         <div class="dice white"></div>

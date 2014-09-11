@@ -208,7 +208,7 @@
     #menu .nav li {
         display: block;
         position: relative;
-        height: 11.11%; /* placeholder - Change depending in number of items in menu */
+        height: 8.33%; /* placeholder - Change depending in number of items in menu */
         text-align: center;
     }
     #menu .nav li .bg {
@@ -356,7 +356,8 @@
     #menu .nav li.social span {
         position: relative;
         display: inline-block;
-        width: 49%;
+        width: 25%;
+        overflow-x: hidden;
         height: 100%;
         margin: 0px;
         padding: 0px;
@@ -457,8 +458,8 @@
                 <a href="../pages/home.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small hidden-xs">Go back to the</span>
-                            <span class="big">Homepage</span>
+                            <!-- <span class="small hidden-xs">Go back to the</span> -->
+                            <span class="big">Home</span>
                         </span>
                     </span>
                 </a>
@@ -468,37 +469,15 @@
                 <a href="../pages/dashboard.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small hidden-xs">Interact with us</span>
+                            <!-- <span class="small hidden-xs">Interact with us</span> -->
                             <span class="big">
                                 <?php
                                     if(isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 )
                                         echo 'Dashboard';
                                     else
-                                        echo 'Log In';
+                                        echo 'Log In <br /> Register';
                                 ?>
                             </span>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <span class="bg"></span>
-                <a href="../pages/categories.php" class="table">
-                    <span class="table-cell">
-                        <span>
-                            <span class="small hidden-xs">Check out our</span>
-                            <span class="big">Events</span>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <span class="bg"></span>
-                <a href="../pages/lectures.php" class="table">
-                    <span class="table-cell">
-                        <span>
-                            <span class="small hidden-xs">Learn from the best</span>
-                            <span class="big">Lectures</span>
                         </span>
                     </span>
                 </a>
@@ -508,8 +487,41 @@
                 <a href="../pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small hidden-xs">Know our</span>
-                            <span class="big">Sponsors</span>
+                            <!-- <span class="small hidden-xs">Know our</span> -->
+                            <span class="big">Pre Shaastra Activities</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/categories.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Check out our</span> -->
+                            <span class="big">Events</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/categories.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Check out our</span> -->
+                            <span class="big">Workshops</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/lectures.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Learn from the best</span> -->
+                            <span class="big">Lectures</span>
                         </span>
                     </span>
                 </a>
@@ -519,8 +531,41 @@
                 <a href="../pages/shows.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small hidden-xs">Be fascinated by</span>
-                            <span class="big">Shows</span>
+                            <!-- <span class="small hidden-xs">Be fascinated by</span> -->
+                            <span class="big">Exhibitions</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/spons.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Know our</span> -->
+                            <span class="big">Hospitality</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/spons.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Know our</span> -->
+                            <span class="big">Sponsors</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <span class="bg"></span>
+                <a href="../pages/about.php" class="table">
+                    <span class="table-cell">
+                        <span>
+                            <!-- <span class="small hidden-xs">Reach out to</span> -->
+                            <span class="big">About Us</span>
                         </span>
                     </span>
                 </a>
@@ -530,7 +575,7 @@
                 <a href="../pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <span class="small hidden-xs">Reach out to</span>
+                            <!-- <span class="small hidden-xs">Reach out to</span> -->
                             <span class="big">Contact Us</span>
                         </span>
                     </span>
@@ -541,18 +586,18 @@
                     <a class="facebook-color" href="https://www.facebook.com/Shaastra" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span>
-                <span>
+                </span><!--
+                --><span>
                     <a class="twitter-color" href="https://twitter.com/ShaastraIITM" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span>
-                <span>
+                </span><!--
+                --><span>
                     <a class="youtube-color" href="https://www.youtube.com/user/iitmshaastra" target="_blank">
                         <span class="icon"></span>
                     </a>
-                </span>
-                <span>
+                </span><!--
+                --><span>
                     <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
                         <span class="icon"></span>
                     </a>

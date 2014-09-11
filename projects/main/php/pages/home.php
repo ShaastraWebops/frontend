@@ -167,7 +167,21 @@
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
+			.logo-vertical {
+			    display: none;
+			}
+			.logo-vertical .col-centered {
+			    padding: 5;
+			}
 			@media (min-width: 768px) {
+			    .logo-vertical {
+			        position: fixed;
+			        bottom: 10px;
+			        right: 50px;
+			        z-index: 10000;
+			        display: inline-block;
+			        width: 220px;
+			    }
 				#page .ngon-row {
 					height: 25%;
 				}
@@ -178,22 +192,22 @@
 					font-weight: 900;
 				}
 
-				#page .ngon-row .text.events {
+				#page .ngon-row .text.text1 {
 					text-shadow: 0px 4px 6px #0a0a0a;
 				}
-				#page .ngon-row .text.lectures {
+				#page .ngon-row .text.text2 {
 					text-shadow: -4px 3px 1.2px #000;
 				}
-				#page .ngon-row .text.spons {
+				#page .ngon-row .text.text3 {
 					text-shadow: -4px 2px 1px #000;
 				}
-				#page .ngon-row .text.shows {
+				#page .ngon-row .text.text4 {
 					text-shadow: 4px 3px 1px #000;
 				}
-				#page .ngon-row .text.contact {
+				#page .ngon-row .text.text5 {
 					text-shadow: 4px 2px 1px #000;
 				}
-				#page .ngon-row .text.sampark {
+				#page .ngon-row .text.text6 {
 					text-shadow: 0px 4px 1px #000;
 				}
 				body {
@@ -271,7 +285,7 @@
 							</div>
 							<div class="down">
 								<div class="text shaastra-title shaastra-logo">
-									<a href="../pages/about.php" class="no-style about">SHAASTRA <span class="shaastra-blue">2015</span></a>
+									<!--<a href="../pages/about.php" class="no-style about">-->SHAASTRA <span class="shaastra-blue">2015</span><!--</a>-->
 								</div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
@@ -296,7 +310,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/categories.php" class="title events text">Events &amp; Workshops</a>
+						<a href="../pages/categories.php" class="title head1 text">Events</a>
 					</span>
 				</span>
 			</div>
@@ -305,15 +319,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-
-						<a href="../pages/lectures.php" class="title lectures text">Lectures</a>
+						<a href="../pages/eventlist.php?category=Workshops" class="title head2 text">Workshops</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/shows.php" class="title shows text">Shows</a>
+						<a href="../pages/shows.php" class="title head3 text">Exhibitions</a>
 					</span>
 				</span>
 			</div>
@@ -322,14 +335,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/spons.php" class="title spons text">Sponsors</a>
+						<a href="../pages/lectures.php" class="title head4 text">Lectures</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/contact.php" class="title contact text">Contact Us</a>
+						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br /> Events</a>
 					</span>
 				</span>
 			</div>
@@ -338,7 +351,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/eventlist.php?category=Sampark" class="title sampark text">Sampark</a>
+						<a href="../pages/social.php" class="title head6 text">Social Cause</a>
 					</span>
 				</span>
 			</div>
@@ -349,6 +362,19 @@
 	</div>
         
     <?php include '../base/foot.php'; ?>
+    <?php include '../modules/social.php'; ?>
+    <div class="row logo-vertical row-centered">
+	    <div class="col-xs-6 col-centered" >
+	        <a class="tuv-logo" href="">
+	            <img src="../../img/logo/iso_white.png" />
+	        </a>
+	    </div>
+	    <div class="col-xs-6 col-centered">
+	        <a class="iitm-logo" href="">
+	            <img src="../../img/logo/iitm_white.png" />
+	        </a>
+	    </div>
+	</div>
 	<script>
 		$(document).ready(function() {
 		
