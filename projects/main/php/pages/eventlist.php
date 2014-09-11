@@ -86,10 +86,8 @@
                 -o-transform 0.3s ease-out;
             transition: margin 0.3s ease-out,
                 transform 0.3s ease-out;
-            height: 90%;
-            width: 90%;
-            margin: 5%;
-            background-color: rgba(0, 0, 0, 0.75);
+            height: 100%;
+            width: 100%;
         }
         #event-list .event-group .event-item a div > span {
             margin: 0px;
@@ -97,38 +95,25 @@
         }
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
-            padding: 2%;
+            text-align: center;
+            /*padding: 2%;*/
         }
 
-        #event-list .event-group.first .event-item a div {
-            margin-top: 10%;
-            margin-bottom: 0%;
+        #event-list .event-group .event-item a div > span > span > span {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            display: inline-block;
+            padding: 0;
+            -webkit-transition: all 0.3s;  
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
         }
-        #event-list .event-group.last .event-item a div {
-            margin-top: 0%;
-            margin-bottom: 10%;
-        }
-        #event-list .event-group.first.last .event-item a div {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-        #event-list .event-group .event-item.first a div {
-            margin-left: 10%;
-            margin-right: 0%;
-        }
-        #event-list .event-group .event-item.last a div {
-            margin-left: 0%;
-            margin-right: 10%;
-        }
-        #event-list .event-group .event-item.first.last a div {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-        #event-list .event-group.first .event-item a:hover div {
-            margin-top: 100%;
-        }
-        #event-list .event-group.last .event-item a:hover div {
-            margin-top: -100%;
+        #event-list .event-group .event-item a:hover div > span > span > span {
+            /*padding: 40% 0px 40% 0px;*/
+            /*min-height: 100%;*/
+            opacity: 0.25;
         }
     </style>
 </head>
@@ -157,7 +142,7 @@
             $event_i = 0;
             foreach ( $event_list as $event ) {
                 if ($event === '.' or $event === '..') continue;
-                $event_img = '../../img/events/' . $category . '/' . $event;
+                $event_img = '../../img/events/list/' . $category . '/' . $event;
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
                 }
@@ -181,7 +166,9 @@
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell text-center transparent-text">
-                                            <?php echo $event; ?>
+                                        	<span>
+	                                            <?php echo $event; ?>
+	                                        </span>
                                         </span>
                                     </span>
                                 </div>

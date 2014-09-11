@@ -7,11 +7,11 @@
         <style>
             .main {
                 color : #ffffff;
-                padding: 5px;
-                margin: 0 auto;
+                /*padding: 5px;*/
+                /*margin: 0 auto;*/
                 margin-top: 40px;
-                margin-left: 200px;
-                margin-right: 200px;
+                /*margin-left: 200px;*/
+                /*margin-right: 200px;*/
                 font-weight: 10;
                 font-size: 1.1em;
                 text-align: justify;
@@ -37,7 +37,7 @@
 
         <div class="container-fluid main white">
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-md-10 col-md-offset-1 text-center">
                     <p>
                         <span class='shaastra-title'>Shaastra</span> is the technical festival of Indian Institute of Technology-Madras, Chennai, India
                     </p>
@@ -48,10 +48,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4 col-md-offset-1">
                     <iframe width="100%" height="300px" src="//www.youtube.com/embed/PJDylHdwJec" frameborder="0" allowfullscreen align="left"></iframe>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <p>
                         Mark the four days from January 3rd to January 6th, 2015 on your calendars, as <span class=''>Shaastra</span> will keep you engrossed in a plethora of professional shows, competitions and lectures that have something for everybody. With some of the sharpest minds of the nation converging under one banner, one can expect to go back inspired.
                     </p>

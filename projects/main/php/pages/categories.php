@@ -7,7 +7,6 @@
     <style>
         #event-list {
             color: #fff;
-            /*paddin*/
         }
         #event-list .event-group .event-item {
             padding: 0;
@@ -68,8 +67,10 @@
                 -o-transform 0.3s ease-out;
             transition: margin 0.3s ease-out,
                 transform 0.3s ease-out;
-            height: 100%;
-            width: 100%;
+            height: 90%;
+            width: 90%;
+            margin: 5%;
+            background-color: rgba(0, 0, 0, 0.75);
         }
         #event-list .event-group .event-item a div > span {
             margin: 0px;
@@ -77,22 +78,39 @@
         }
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
-            text-align: center;
+            /*text-align: center;*/
+            padding: 2%;
         }
-        #event-list .event-group .event-item a div > span > span > span {
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 100%;
-            display: inline-block;
-            padding: 0;
-            -webkit-transition: padding 0.3s;            
+
+        #event-list .event-group.first .event-item a div {
+            margin-top: 10%;
+            margin-bottom: 0%;
         }
-        #event-list .event-group .event-item a:hover div > span > span > span {
-            padding: 40% 0px 40% 0px;
-            -webkit-transition: padding 0.3s;
-            -moz-transition: padding 0.3s;
-            -ms-transition: padding 0.3s;
-            -o-transition: padding 0.3s;
-            transition: padding 0.3s;
+        #event-list .event-group.last .event-item a div {
+            margin-top: 0%;
+            margin-bottom: 10%;
+        }
+        #event-list .event-group.first.last .event-item a div {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        #event-list .event-group .event-item.first a div {
+            margin-left: 10%;
+            margin-right: 0%;
+        }
+        #event-list .event-group .event-item.last a div {
+            margin-left: 0%;
+            margin-right: 10%;
+        }
+        #event-list .event-group .event-item.first.last a div {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        #event-list .event-group.first .event-item a:hover div {
+            margin-top: 100%;
+        }
+        #event-list .event-group.last .event-item a:hover div {
+            margin-top: -100%;
         }
         .animation.spotlight>img{
             position: absolute;
@@ -285,19 +303,23 @@
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
             $event_list = scandir('../events');
+            unset($event_list[array_search('.', $event_list)]);
+            unset($event_list[array_search('..', $event_list)]);
+            unset($event_list[array_search('Sampark', $event_list)]);
+            unset($event_list[array_search('sample.html', $event_list)]);
             $event_row_count = 5;
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
-                if ($event === '.' or $event === '..') continue;
                 if (!is_dir('../events/' . $event)) continue;
-                if ($event === "Sampark") continue;
-                $event_img = '../../img/events/' . $event . ".png";
+                
+                $event_img = '../../img/events/categories/' . $event . ".png";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
                 }
         ?>
-            <?php if ( $event_i % $event_row_count == 0 ) { ?>
+            <?php if ( $event_i % $event_row_count == 0 ) { 
+                ?>
                 <div class="row row-centered event-group
                 <?php
                     // Give different class to indicate first and last row

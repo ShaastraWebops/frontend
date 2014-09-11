@@ -271,7 +271,7 @@
 							</div>
 							<div class="down">
 								<div class="text shaastra-title shaastra-logo">
-									<a href="#" class="no-style about">SHAASTRA <span class="shaastra-blue">2015</span></a>
+									<a href="../pages/about.php" class="no-style about">SHAASTRA <span class="shaastra-blue">2015</span></a>
 								</div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
@@ -451,6 +451,9 @@
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
 
+						that.dice_material = new THREE.MeshFaceMaterial(
+							that.create_dice_materials(that.dice_face_labels2, that.scale, that.scale/5));
+
 						dice = new THREE.Mesh(that.dice_geometry, that.dice_material);
 						dice.castShadow = true;
 						dice.body = new CANNON.RigidBody(that.dice_mass,
@@ -566,8 +569,9 @@
 							return geom;
 						}
 
-						this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
-						this.dice_face_labels = [' ', '0', '2', '2', '2', '2', '2', '2'];
+						//this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
+						this.dice_face_labels = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
+						this.dice_face_labels2 = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
 
 						this.create_dice_materials = function(face_labels, size, margin) {
 							var create_text_texture = function (text, color, back_color) {
@@ -603,6 +607,12 @@
 											context.arc(margin/2+size*1/3, margin/2+size*1/3, size / rad, 0, Math.PI*2, true);
 											context.closePath();
 											context.arc(margin/2+size*2/3, margin/2+size*2/3, size / rad, 0, Math.PI*2, true);
+											context.closePath();
+											break
+										case '2_' :
+											context.arc(margin/2+size*2/3, margin/2+size*1/3, size / rad, 0, Math.PI*2, true);
+											context.closePath();
+											context.arc(margin/2+size*1/3, margin/2+size*2/3, size / rad, 0, Math.PI*2, true);
 											context.closePath();
 											break
 										case '5' :
