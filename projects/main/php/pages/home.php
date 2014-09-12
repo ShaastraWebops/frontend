@@ -137,7 +137,7 @@
 			}
 			#page .help {
 				position: absolute;
-				bottom: 5%;
+				bottom: 0.3em;
 				margin: auto;
 				color: #999;
 				left: 50%;
@@ -359,23 +359,24 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
+		<div class="row logo-vertical row-centered">
+		    <div class="col-xs-6 col-centered" >
+		        <a class="tuv-logo" href="">
+		            <img src="../../img/logo/iso_white.png" />
+		        </a>
+		    </div>
+		    <div class="col-xs-6 col-centered">
+		        <a class="iitm-logo" href="">
+		            <img src="../../img/logo/iitm_white.png" />
+		        </a>
+		    </div>
+		</div>
+		
 	</div>
         
     <?php include '../base/foot.php'; ?>
     <?php include '../modules/social.php'; ?>
-    <div class="row logo-vertical row-centered">
-	    <div class="col-xs-6 col-centered" >
-	        <a class="tuv-logo" href="">
-	            <img src="../../img/logo/iso_white.png" />
-	        </a>
-	    </div>
-	    <div class="col-xs-6 col-centered">
-	        <a class="iitm-logo" href="">
-	            <img src="../../img/logo/iitm_white.png" />
-	        </a>
-	    </div>
-	</div>
-	<script>
+    <script>
 		$(document).ready(function() {
 		
 			function blink(selector, blink_speed, iterations, counter){
@@ -994,7 +995,7 @@
 				$('.help .text')
 					.text("Your browser does not support webgl. If you can, try visiting us later with webgl support.")
 					.css('font-size', '0.8em');
-				$('.help').css({'bottom':'0.4em'})
+				$('.help').css({'bottom':'0.3em'})
 				$('#fallback.hidden').removeClass('hidden').show();
 			}
 		});

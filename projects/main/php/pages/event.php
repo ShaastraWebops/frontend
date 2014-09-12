@@ -44,8 +44,8 @@
         if (!isset($tab) || $tab=="") { // If it comes here, category and event is there, no tab is given. Reidrect to first tab
             if (count($tab_list) < 1) {
                 if ( $editable) { // No tabs exist - create first tab. File gets created later
-                    $tab='Home';
-                    $tab_path=$event_path . '/' . $tab . '.html';
+                    $tab = '00Home';
+                    $tab_path = $event_path . '/' . $tab . '.html';
                 } else { // No tab exists - tell user under construction and die.
                     include '../pages/under_construction.php';
                     die();
@@ -324,13 +324,16 @@
                 $('#edit_modal').find('.oldpriority').val(oldpriority);
                 $('#edit_modal').find('.newpriority').val(oldpriority);
                 $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+                console.log($('#edit_modal').find('.taburl'));
                 $('#edit_modal').find('.taburl').prop('href', "<?php
                     if ($editable) {
                         $editurl = '&edit';
                     } else {
                         $editurl = '';
                     }
-                    echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab) . $editurl;
+                    echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab='; ?>"
+                    + encodeURI($el.data('tabname')) +
+                    "<?php echo $editurl;
                     ?>");
                 $('#edit_modal').removeClass('newtab')
             }

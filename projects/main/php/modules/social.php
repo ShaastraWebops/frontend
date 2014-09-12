@@ -58,8 +58,8 @@ a.social-icon.google:hover {
     .social-vertical {
         position: fixed;
         top: 35%;
-        right: 50px;
-        z-index: 10000;
+        left: 10px;
+        z-index: 5;
         display: inline-block;
         width: 60px;
     }

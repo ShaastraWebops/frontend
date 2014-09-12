@@ -59,22 +59,6 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
-        /*@media screen and (-webkit-min-device-pixel-ratio:0) {
-            #event-list .event-group .event-item .transparent-text {
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.2px;
-                -moz-text-stroke-width: 0.2px;
-                text-stroke-width: 0.2px;
-                -webkit-text-stroke-color: white;
-                -moz-text-stroke-color: white;
-                text-stroke-color: white;
-            }
-        }*/
         #event-list .event-group .event-item a div {
             position: relative;
             -webkit-transition: margin 0.2s ease-out,
@@ -97,7 +81,6 @@
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
             text-align: center;
-            /*padding: 2%;*/
         }
 
         #event-list .event-group .event-item a div > span > span > span {
@@ -105,16 +88,15 @@
             width: 100%;
             display: inline-block;
             padding: 0;
-            -webkit-transition: all 0.3s;  
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
+            -webkit-transition: all 0.5s;  
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
         }
         #event-list .event-group .event-item a:hover div > span > span > span {
-            /*padding: 40% 0px 40% 0px;*/
-            /*min-height: 100%;*/
-            opacity: 0.25;
+            padding: 40% 0px 40% 0px;
+            opacity: 0.1;
         }
     </style>
 </head>
@@ -171,11 +153,9 @@
                             <a href="../pages/event.php?category=<?php echo urlencode($category); ?>&event=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
-                                        <span class="vertical-table-cell text-center transparent-text">
-                                        	<span>
-	                                            <?php echo $event; ?>
-	                                        </span>
-                                        </span>
+                                        <span class="vertical-table-cell text-center transparent-text"><!--
+                                            --><span><?php echo $event; ?></span><!--
+                                        --></span>
                                     </span>
                                 </div>
                             </a>
