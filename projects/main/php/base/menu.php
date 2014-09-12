@@ -4,7 +4,7 @@
         outline: 0;
         opacity: 1;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 20px;
         z-index: 10000;
         color : #ffffff;
@@ -283,7 +283,6 @@
         width: 100%;
         top: 0;
         left: 0;
-        /*color: #c6a66d;*/
         color: #ccc;
         -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
@@ -296,9 +295,7 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        /*color: #c6a66d;*/
         color: #328fa7;
-        /*color: #20647E;*/
         -webkit-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -moz-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
         -o-transition: all 300ms cubic-bezier(0.215, .61, .355, 1);
@@ -475,7 +472,7 @@
                                     if(isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 )
                                         echo 'Dashboard';
                                     else
-                                        echo 'Log In <br /> Register';
+                                        echo 'Log In <span class="hidden-xs"><br /> Register</span>';
                                 ?>
                             </span>
                         </span>
@@ -488,7 +485,7 @@
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
-                            <span class="big">Pre Shaastra Activities</span>
+                            <span class="big">Pre Shaastra <span class="hidden-xs">Activities</span></span>
                         </span>
                     </span>
                 </a>
@@ -528,7 +525,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/shows.php" class="table">
+                <a href="../pages/exhibitions.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Be fascinated by</span> -->
