@@ -149,7 +149,7 @@
 				width: 100%;
 			}
 			#page .ngon-row {
-				height: auto;
+				height: 2em;
 			}
 			#page .ngon-row > div{
 				height: 100%;
@@ -342,7 +342,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br /> Events</a>
+						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra</a>
 					</span>
 				</span>
 			</div>
