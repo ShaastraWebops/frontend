@@ -484,7 +484,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/spons.php" class="table">
+                <a href="../pages/pre-shaastra.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
@@ -506,7 +506,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/categories.php" class="table">
+                <a href="../pages/eventlist.php?category=Workshops" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Check out our</span> -->
@@ -539,7 +539,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/spons.php" class="table">
+                <a href="../pages/hospi.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->

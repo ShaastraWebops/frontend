@@ -58,13 +58,9 @@
 					<div id="navbarCollapse" class="collapse navbar-collapse"> 
 						<ul id="menu-nav" class="nav nav-pills nav-justified">
 							<li class="active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
-							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">Exhibitions</a></li>
-							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Exhibitions</a></li>
-							<li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li>
-							<li class=""><a data-scrolltarget="page5" href="javascript:void(0)">Exhibitions</a></li>
-							<li class=""><a data-scrolltarget="page6" href="javascript:void(0)">Exhibitions</a></li>
-							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">Exhibitions</a></li>
-
+							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">CFI</a></li>
+							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Magic Materials</a></li>
+							<!-- <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -105,7 +101,80 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="page" id="page2">
+			<div class="container-fluid white centered">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">C<span style="color:red">FI</span></h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+
+			<div class="container-fluid">
+				<div class="col-md-12">
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="page" id="page3">
+			<div class="container-fluid white centered">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">Magic Materials</h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+
+			<div class="container-fluid">
+				<div class="col-md-10 col-md-offset-1">
+					<p>Ever been fascinated with the idea of merging science and magic? This Shaastra you can explore it all. You can walk on water, illuminate water, create water balls out of nothing and can do much more. Yes you heard that right. You will be amazed, dazzled, surprised, stunned as Shaastra unravels the surprises and takes you through the world of magical materials.</p>
+					<h2 class="text-center">Some videos from last year :</h2>
+					<div class="row row-centered">
+						<div class="hidden-xs col-md-4 col-centered" >
+							<h3 class="text-center">Flubber</h3>
+				      		<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/2mYHGn_Pd5M" allowfullscreen align="right"></iframe>
+							</div>
+								
+						</div>
+			            <div class="hidden-xs col-md-4 col-centered">
+			            	<h3 class="text-center">Heat Sensitive Tiles</h3>
+				      		<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/5yuFDiwm0Eo" allowfullscreen align="right"></iframe>
+							</div>
+						</div><!-- 
+			            <div class="hidden-xs col-md-4 col-centered">
+			            	<h3 class="text-center">Disappearing Bottles</h3>
+				      		<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/oDGfV2KZ0EM" allowfullscreen align="right"></iframe>
+							</div>
+						</div> -->
+			            <div class="hidden-xs col-md-4 col-centered">
+			            	<h3 class="text-center">Magic Sand</h3>
+				      		<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/10EnRI80zvk" allowfullscreen align="right"></iframe>
+							</div>
+						</div>
+					</div>
+		                
+					
+				</div>
+			</div>
+		</div>
+	<!-- 
+		<div class="page" id="page4">
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
@@ -124,7 +193,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<?php include '../base/foot.php' ?>
 		

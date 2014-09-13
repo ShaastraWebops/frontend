@@ -54,9 +54,7 @@
 			text-decoration: none;
 			color: #fff;
 			font-size: 1em;
-			font-size: 1.5vw;
 			font-weight: 900;
-			/*font-family: "Times New Roman", sans-serif;*/
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
 			background: url('../../img/logo/200x200_dice_white.png') no-repeat center center;
