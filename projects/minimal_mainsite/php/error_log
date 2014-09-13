@@ -120,3 +120,5 @@
 [21-Jun-2014 00:03:41 Asia/Calcutta] PHP Warning:  include(base.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/frontend/projects/minimal_mainsite/php/about.php on line 77
 [21-Jun-2014 00:03:41 Asia/Calcutta] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'base.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/shaastra/public_html/2015/frontend/projects/minimal_mainsite/php/about.php on line 77
 [21-Jun-2014 00:08:37 Asia/Calcutta] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/shaastra/public_html/2015/frontend/projects/minimal_mainsite/php/events.php on line 1115
+[10-Sep-2014 22:43:25 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/shaastra/public_html/2015/frontend/projects/minimal_mainsite/php/events.php on line 1000
+[10-Sep-2014 22:49:51 America/Chicago] PHP Parse error:  syntax error, unexpected T_BOOLEAN_OR in /home/shaastra/public_html/2015/frontend/projects/minimal_mainsite/php/events.php on line 1010
