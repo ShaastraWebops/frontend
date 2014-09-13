@@ -15,6 +15,9 @@
 			overflow-x: hidden;
 			overflow-y: hidden;
 		}
+		.speaker-list .speaker-group {
+			height: 33%;
+		}
 		.speaker-list{
 			padding-top: 0px;
 		}
@@ -27,7 +30,6 @@
 			height: 100%;
 			display: inline-block;
 			font-size: 1em;
-
 		}
 		.speaker-list .speaker-group .speaker.transition {
 			-webkit-transition: width 1000ms ease-in-out, height 1000ms ease-in-out;
@@ -96,7 +98,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid speaker-list" style="display:none;">
+<div class="container-fluid speaker-list">
     <?php
 	$speakers = array(	"arogyaswami paulraj", "pawan sinha", "rajeeva karandikar", "vivek wadhwa", "vijay govindraj", 
 						"rakesh agarwal", "ajit balakrishnan", "sunil kumar", "romila thapar", "ila bhatt", 
@@ -139,10 +141,7 @@
 
     <script>
 		function show_speakers() {
-	    	$(window).resize(function() {
-	    		$(".speaker-list").height( $(window).height() - 70 );
-	    	});
-			$(window).resize();
+	    	$(window).resize();
 			$speakers = $('.speaker'); // there are 10 speakers
 			$speaker_groups = $(".speaker-group")
 			delay = 1000;
@@ -210,7 +209,12 @@
    //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
    //      		<?php } ?>
    //      	).then(show_speakers)
-        	show_speakers();
+        	//show_speakers();
+        	$(window).resize(function() {
+	    		$(".speaker-list").height( $(window).height() - 70 );
+	    	});
+	    	$(window).resize();
+			
 		})
 	</script>
     </body>

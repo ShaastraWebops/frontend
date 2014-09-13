@@ -208,7 +208,7 @@
     #menu .nav li {
         display: block;
         position: relative;
-        height: 8.33%; /* placeholder - Change depending in number of items in menu */
+        height: 9.09%; /* placeholder - Change depending in number of items in menu */
         text-align: center;
     }
     #menu .nav li .bg {
@@ -425,6 +425,9 @@
     @media (min-width: 768px) {
         #menu-btn {
             position: fixed;
+        }
+        #menu .nav li {
+            height: 8.33%; /* placeholder - Change depending in number of items in menu */
         }
     }
 

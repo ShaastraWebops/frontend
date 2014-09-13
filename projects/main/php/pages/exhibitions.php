@@ -47,7 +47,7 @@
 		<?php include '../base/menu.php' ?>
 		
 		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-			<div class="container">
+			<div class="container-fluid col-md-offset-1 col-md-10">
 				<div class="navbar-header">
 					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed">
 						<span class="sr-only">Toggle navigation</span>
@@ -57,8 +57,14 @@
 					</button>
 					<div id="navbarCollapse" class="collapse navbar-collapse"> 
 						<ul id="menu-nav" class="nav nav-pills nav-justified">
-							<li class="col-md-4 active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
-							<li class="col-md-4"><a data-scrolltarget="page2" href="javascript:void(0)">Exhibitions</a></li>
+							<li class="active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
+							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">Exhibitions</a></li>
+							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Exhibitions</a></li>
+							<li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li>
+							<li class=""><a data-scrolltarget="page5" href="javascript:void(0)">Exhibitions</a></li>
+							<li class=""><a data-scrolltarget="page6" href="javascript:void(0)">Exhibitions</a></li>
+							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">Exhibitions</a></li>
+
 						</ul>
 					</div>
 				</div>

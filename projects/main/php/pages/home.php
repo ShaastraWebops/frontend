@@ -180,7 +180,7 @@
 			        right: 50px;
 			        z-index: 10000;
 			        display: inline-block;
-			        width: 220px;
+			        width: 110px;
 			    }
 				#page .ngon-row {
 					height: 25%;
@@ -327,12 +327,12 @@
 		<div class="row logo-vertical row-centered">
 		    <div class="col-xs-6 col-centered" >
 		        <a class="tuv-logo" href="">
-		            <img src="../../img/logo/iso_white.png" />
+		            <img src="../../img/logo/iso_white.png" width="50px" height="50px"/>
 		        </a>
 		    </div>
 		    <div class="col-xs-6 col-centered">
 		        <a class="iitm-logo" href="">
-		            <img src="../../img/logo/iitm_white.png" />
+		            <img src="../../img/logo/iitm_white.png" width="50px" height="62px"/>
 		        </a>
 		    </div>
 		</div>		

@@ -96,7 +96,7 @@
         }
         #event-list .event-group .event-item a:hover div > span > span > span {
             padding: 40% 0px 40% 0px;
-            opacity: 0.1;
+            opacity: 0.01;
         }
     </style>
 </head>
