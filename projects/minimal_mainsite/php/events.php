@@ -958,7 +958,7 @@
           var dispTop2 = 300;
 
           var origin = parseInt($(parallaxComputeRefs[i]).data('offset'))
-          console.log(origin);
+          //console.log(origin);
 
           var slope = (dispTop1 - dispTop2)/(scrollTop1 - scrollTop2);
           var offset = -slope*scrollTop1;
@@ -995,12 +995,17 @@
 
       $(window).load(function(){
         //console.log('resizing')
+
         $(window).resize();
 	$(window.location.hash+'-nav').click();
       })
       $('[data-mirror]').on('content-ready',function(){
 	var $el = $(this);
-	if("#"+$el.attr('data-mirror') == window.location.hash){
+	if("#"+$el.attr('data-mirror') == window.location.hash <?php 
+if ( isset($_GET['id']) ) { ?>
+         || $el.attr('data-mirror') == '<?php echo $_GET['id']; ?>'
+<?php } ?>
+){
 	    var scrollTo = $el.closest(".container").attr('id').split("-")[0] + '-nav';
 	    window.setTimeout(function(){
 		$("#"+scrollTo).click();
