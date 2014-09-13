@@ -167,21 +167,38 @@
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
-			.logo-vertical {
-			    display: none;
+			.notif {
+				display: none;
 			}
-			.logo-vertical .col-centered {
-			    padding: 5;
+			.notif .glyphicon {
+				width: 1em;
+				height: 1em;
+				background-color: #ddd;
+				color: #000;
+				border-radius: 0.5em;
+				font-family: "Times New Roman", sans-serif;
+				font-size: 1em;
+				line-height: 1em;
+			}
+			.notif .text {
+				font-size: 0.5em;
+				line-height: 1em;
+				opacity: 0;
+			}
+			.notif:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+			.notif:hover .text {
+				opacity: 1;
+			}
+			.notif:hover .glyphicon {
+				background-color: #000;
+				background-color: rgba(255, 255, 255, 0.2);
+				border: 1px solid #fff;
+				color: #fff;
 			}
 			@media (min-width: 768px) {
-			    .logo-vertical {
-			        position: fixed;
-			        bottom: 10px;
-			        right: 50px;
-			        z-index: 10000;
-			        display: inline-block;
-			        width: 110px;
-			    }
 				#page .ngon-row {
 					height: 25%;
 				}
@@ -215,12 +232,21 @@
 					background: radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 				}
+				.notif {
+					position: absolute;
+					right: 0.25em;
+					top: 0.25em;
+					z-index: 5;
+					display: inline-block;
+					cursor: pointer;
+					font-size: 3em;
+				}
 			}
-        </style>
+		</style>
 	</head>
 
 	<body>
-        <?php include '../base/menu.php'; ?>
+		<?php include '../base/menu.php'; ?>
 
 	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
@@ -324,44 +350,44 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<div class="row logo-vertical row-centered">
-		    <div class="col-xs-6 col-centered" >
-		        <a class="tuv-logo" href="">
-		            <img src="../../img/logo/iso_white.png" width="50px" height="50px"/>
-		        </a>
-		    </div>
-		    <div class="col-xs-6 col-centered">
-		        <a class="iitm-logo" href="">
-		            <img src="../../img/logo/iitm_white.png" width="50px" height="62px"/>
-		        </a>
-		    </div>
-		</div>		
+		<a class="notif" data-toggle="modal" data-target="#notif-modal"  role="button">
+			<span class="text">Notifications</span>
+			<span class="glyphicon glyphicon-info-sig">i</span>
+		</a>
+		<?php include '../modules/social.php'; ?>
+		<?php include '../modules/iitm.php'; ?>
+		<?php include '../modules/rightbar.php'; ?>
 	</div>
-        
-    <?php include '../base/foot.php'; ?>
-    <?php include '../modules/social.php'; ?>
-    <script>
-		$(document).ready(function() {
 		
-			function blink(selector, blink_speed, iterations, counter){
-				counter = counter | 0;
-				$(selector).animate({opacity:0},200, "linear", function(){
-					$(this).delay(blink_speed);
-					$(this).animate({opacity:1}, 200, function(){
-						counter++;
+	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">	
+		<div class="modal-dialog black">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Notifications</h4>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li> 
+							Hi 
+							<span class="label label-danger">New</span> 
+						</li>
+						<li>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php include '../base/foot.php'; ?>
+	<script>
+		$(document).ready(function() {
+			$('.notif').click(function() {
 
-						if (iterations == 0) {//for infi iterations fix the value as 0
-							blink(this, blink_speed, iterations, counter);
-						}else if (counter >= iterations) {
-							return false;
-						}else{
-							blink(this, blink_speed, iterations, counter);
-						}
-					});
-					$(this).delay(blink_speed);
-				})
-			}
-
+			})
 			var asa; var canvas; var dcanvas; var gl; var expmt;
 
 			var canvas = $('<canvas></canvas>');
@@ -396,15 +422,15 @@
 				}, 700)
 
 				jsCache.load(
-			        <?php if ($DEBUG ) { ?>
-			            {url: '../../js/three.min.js'},
-			            {url: '../../js/cannon.min.js'}
-			        <?php } else { ?>
-			            {url: '//cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js'},
+					<?php if ($DEBUG ) { ?>
+						{url: '../../js/three.min.js'},
+						{url: '../../js/cannon.min.js'}
+					<?php } else { ?>
+						{url: '//cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js'},
 						//{url: '//cdnjs.cloudflare.com/ajax/libs/cannon.js/0.5.0/cannon.min.js'}
 						{url: '../../js/cannon.min.js'} // The version I am using cannot be found on cdns
-			        <?php } ?>
-			    ).then(function() {
+					<?php } ?>
+				).then(function() {
 					function euler_to_quaternion(e1, e2, e3){
 						var x = 0;
 						var y = 0;
@@ -844,7 +870,7 @@
 									requestAnimationFrame(function() { t.__animate(tid); });
 								})(this, threadid);
 							} else {
-							    console.log('STOPPED');
+								console.log('STOPPED');
 								// move them to the center
 							}
 						}
@@ -953,7 +979,7 @@
 					}).apply(dice = {});
 
 					init3d()
-			    })
+				})
 			} else {
 				console.log("image-only fallback. no webgl.");
 				$('.help .text')
@@ -991,7 +1017,7 @@
 					'overflow' : 'hidden'
 				})
 				create3d();
-		    });
+			});
 		}
 		</script>
 	</body>
