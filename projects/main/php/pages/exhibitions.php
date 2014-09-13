@@ -16,8 +16,11 @@
 				background : none;
 			}
 			#menu-nav li.active a{
-				background : #00425A;
+				/*background : #00425A;
 				background : rgba(0, 66, 90, 0.7);
+				color : #FFF;
+				border-radius : 0;*/
+				background : none;
 				color : #FFF;
 				border-radius : 0;
 			}
@@ -27,26 +30,22 @@
 				color : #FFF;
 				border-radius : 0;
 			}
-			.navbar-toggle .icon-bar {
-				color: #fff;
-			}
 			.page {
 				padding: 50px 0 0 0;
 				min-height: 100%;
 			}
 			@media (min-width: 768px) {
 				.navbar-custom {
-					background-color : rgba(0, 0, 0, 0.5);
+					background-color : rgba(0, 0, 0, 0.9);
 				}
 			}
-
 		</style>
 	</head>
 	
 	<body>
 		<?php include '../base/menu.php' ?>
 		
-		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
 			<div class="container-fluid col-md-offset-1 col-md-10">
 				<div class="navbar-header">
 					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed">
