@@ -59,9 +59,7 @@
 		color: white;
 	}
 	.right-menu .line .glyphicon {
-		/*position: absolute; */
 		display: inline-block;
-	    /*right: 0.2em;*/
 		float: right;
 		padding: 0.2em;
 	}
