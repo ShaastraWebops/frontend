@@ -28,15 +28,27 @@
         vertical-align: middle;
         text-transform: uppercase;
     }
+    #menu-btn .title-menu {
+        display: none;
+    }
+    #menu-btn:hover .title-menu {
+        display: inline-block;
+    }
     /* Handle text when menu is open/closed */
     #menu-btn.menu-open {
         margin-left: 220px !important;
     }
-    #menu-btn.menu-open .title {
+    #menu-btn.menu-open .title-menu {
         display: none;
     }
-    #menu-btn .title.title-close {
+    #menu-btn .title-close {
         display: none;
+    }
+    #menu-btn.menu-open .title-close {
+        display: none;
+    }
+    #menu-btn.menu-open:hover .title-close {
+        display: inline-block;
     }
     #menu-btn.menu-open .title.title-close {
         display: inline-block;
@@ -434,9 +446,7 @@
 </style>
 
 <div id="menu-btn" style="">
-    <!--<span class="glyphicon glyphicon-tasks"></span>-->
-    <span class="title">MENU</span>
-    <span class="title title-close">CLOSE</span>
+    <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
     <span class='menubars'>
         <span class="menu-bar bar1"></span>
         <span class="menu-bar bar2"></span>
@@ -447,6 +457,8 @@
         <span class="menu-bar bar1"></span>
         <span class="menu-bar bar2"></span>
     </span>
+    <span class="title title-menu hidden-sm hidden-xs">MENU</span>
+    
 </div>
 
 <!-- menu popup start -->

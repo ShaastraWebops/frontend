@@ -11,12 +11,11 @@
 	        z-index: 5;
 	        display: inline-block;
 		    width: 3em;
-		    height: 25em;
+		    height: 18em;
 		    /*height: 100%;*/
 	    }
 	}
 	.right-menu {
-	    width: 4.2em;
 		-webkit-transition: all 400ms ease-in-out;
 	    -moz-transition: all 400ms ease-in-out;
 	    -o-transition: all 400ms ease-in-out;
@@ -36,8 +35,8 @@
 		list-style: none;
 		text-align: right;
 		white-space: nowrap;
-		height: 4em;
-		line-height: 4em;
+		height: 3em;
+		line-height: 3em;
 	}
 	.right-menu .line .text {
 		white-space: nowrap;
@@ -51,9 +50,9 @@
 		overflow-x: hidden;
 		cursor: pointer;
 		width: 0px;
-		line-height: 4em;
-		font-size: 1.6em;
-		right: 4em;
+		line-height: 3em;
+		font-size: 1.2em;
+		right: 3em;
 	}
 	.right-menu .line a {
 		color: white;
@@ -64,11 +63,11 @@
 		padding: 0.2em;
 	}
 	.glyphicon-md {
-		font-size: 3em;
+		font-size: 2em;
 	}
 
 	.right-menu:hover {
-	    width: 20em;
+	    width: 15em;
 		-webkit-transition: all 200ms ease-in-out;
 	    -moz-transition: all 200ms ease-in-out;
 	    -o-transition: all 200ms ease-in-out;
