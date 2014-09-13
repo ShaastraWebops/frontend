@@ -72,17 +72,17 @@
             $data = file_get_contents('../events/sample.html');
         }
         ?>
-        <title><?php echo $event . ' - ' . $tab; ?> | Shaastra '15</title>
+        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra '15</title>
         <?php include '../base/head.php' ?>
         <style>
             .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
-                background-image:url(../../img/icons/arrow.png);
-                background-size:20px 9px;
-                background-repeat:no-repeat;
-                background-position:bottom center;
+                background-image: url(../../img/icons/arrow.png);
+                background-size: 20px 9px;
+                background-repeat: no-repeat;
+                background-position: bottom center;
             }
             .navbar-inverse .navbar-nav>li>a{
-                font-size:125%;
+                font-size: 125%;
                 text-transform: none;
                 font-weight: bold;
                 color:#cccccc;
@@ -117,7 +117,9 @@
             #edit_modal.newtab .not-for-new {
                 display: none;
             }
-
+            iframe {
+                max-width: 80%;
+            }
         </style>
     </head>
 
@@ -135,7 +137,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand title" href=''><?php echo $event; ?></a>
+                    <a class="navbar-brand title" style="letter-spacing: 0.1em" href=''><?php echo $event; ?></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -169,6 +171,7 @@
                     <?php } ?>
                 </ul>
             </div>
+            <!-- <div contenteditable="true">Hello</div> -->
         </div>
     </div>
     <!-- / TABBAR -->
@@ -271,12 +274,12 @@
     <?php } ?>
 
     <!-- MAIN CONTENT OF A TAB -->
-    <div class="main-content" style='margin:75px 75px 0 75px; height : 80%'>
+    <div class="main-content" style='margin:75px 75px 75px 75px; min-height : 80%'>
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
                 <form method="post" action='../scripts/save_to_file.php'>
-                    <div class='data col-md-offset-1 col-md-10'>
+                    <div class='data col-md-offset-2 col-md-8'>
                         <input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
                         <textarea name="data" id='data' style='min-height : 100px;'>
                             <?php echo $data; ?>
@@ -284,7 +287,7 @@
                     </div>
                 </form>
                 <?php } else { ?>
-                <div class='data col-md-offset-1 col-md-10'>
+                <div class='data col-md-offset-2 col-md-8'>
                     <?php echo $data; ?>
                 </div>
                 <?php } ?>
@@ -295,6 +298,7 @@
 
     <?php include '../base/foot.php' ?>
     <?php include '../modules/social.php' ?>
+    <?php include '../modules/iitm.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
@@ -357,22 +361,7 @@
 
     <script>
         $(document).ready(function() {
-            $(window).scroll(function(){
-                var $nav = $('.navbar');
-                if ($('body').scrollTop() > 0) {
-                    if ($nav.data('size') == 'big') {
-                        $nav.data('size','small').stop().animate({
-                            height:'50px',
-                        }, 600);
-                    }
-                } else {
-                    if ($nav.data('size') == 'small') {
-                        $nav.data('size','big').stop().animate({
-                            height:'60px',
-                        }, 600);
-                    }
-                }
-            });
+            
         })
     </script>
 </body>
