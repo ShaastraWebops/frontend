@@ -98,6 +98,7 @@
 			-webkit-transition:All 0.3s ease-out;
 			-moz-transition:All 0.3s ease-out;
 			-o-transition:All 0.3s ease-out;
+            background-size: 60px 150px;
 		}
 		a.social-icon.facebook:hover {
 			background-position: -0px -0px;
@@ -107,8 +108,19 @@
 			-webkit-transition:All 0.3s ease-out;
 			-moz-transition:All 0.3s ease-out;
 			-o-transition:All 0.3s ease-out;
+            background-size: 60px 150px;
 		}
 		a.social-icon.twitter:hover {
+			background-position: -0px -0px;
+		}
+		a.social-icon.youtube {
+			background: #191919 url(../../img/icons/youtube.png) no-repeat -0px -88px;
+			-webkit-transition:All 0.3s ease-out;
+			-moz-transition:All 0.3s ease-out;
+			-o-transition:All 0.3s ease-out;
+            background-size: 60px 150px;
+		}
+		a.social-icon.youtube:hover {
 			background-position: -0px -0px;
 		}
 		a.social-icon.google {
@@ -217,15 +229,15 @@
 								<!--For google map-->
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-2 col-xs-offset-3">
+						<div class="row row-centered">
+							<div class="col-xs-2 col-centered">
 								<a class="social-icon facebook" href="https://www.facebook.com/Shaastra"></a>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-2 col-centered">
 								<a class="social-icon twitter" href="https://twitter.com/ShaastraIITM"></a>
 							</div>
-							<div class="col-xs-2">
-								<a class="social-icon google" href="https://www.youtube.com/user/iitmshaastra"></a>
+							<div class="col-xs-2 col-centered">
+								<a class="social-icon youtube" href="https://www.youtube.com/user/iitmshaastra"></a>
 							</div>
 						</div>
 

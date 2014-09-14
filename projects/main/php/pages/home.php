@@ -350,10 +350,10 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<a class="notif" data-toggle="modal" data-target="#notif-modal"  role="button">
+		<!-- <a class="notif" data-toggle="modal" data-target="#notif-modal"  role="button">
 			<span class="text">Notifications</span>
 			<span class="glyphicon glyphicon-info-sig">i</span>
-		</a>
+		</a> -->
 		<?php include '../modules/social.php'; ?>
 		<?php include '../modules/iitm.php'; ?>
 		<?php include '../modules/home_rightbar.php'; ?>

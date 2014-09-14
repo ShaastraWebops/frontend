@@ -227,9 +227,10 @@
             }
             a.social-icon.facebook {
                 background: transparent url(../../img/icons/facebook.png) no-repeat -0px -0px;
+                background-size: 60px 150px;
             }
             a.social-icon.facebook:hover {
-                background-position: -0px -88px;
+                background-position: -0px -75px;
             }
             a.social-icon.facebook .text {
                 color: #5473a3;
@@ -237,23 +238,12 @@
             a.social-icon.facebook:hover .text {
                 color: #fff;
             }
-            a.social-icon.twitter {
-                background: transparent url(../../img/icons/twitter.png) no-repeat -0px -0px;
-            }
-            a.social-icon.twitter:hover {
-                background-position: -0px -88px;
-            }
-            a.social-icon.twitter .text {
-                color: #56acef;
-            }
-            a.social-icon.twitter:hover .text {
-                color: #fff;
-            }
             a.social-icon.google {
                 background:transparent url(../../img/icons/google.png) no-repeat -0px -0px;
+                background-size: 60px 150px;
             }
             a.social-icon.google:hover {
-                background-position: -0px -88px;
+                background-position: -0px -75px;
             }
             a.social-icon.google .text {
                 color: #d34836;

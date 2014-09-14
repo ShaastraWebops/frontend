@@ -68,7 +68,7 @@
                 transform 0.3s ease-out;
             height: 100%;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(0, 0, 0, 0.6);
         }
         #event-list .event-group .event-item a div > span {
             margin: 0px;
@@ -400,7 +400,7 @@
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
-    <div class="animation involve_and_quizzes"
+    <div class="animation quizzing involve"
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;">
         <div id="quizzes_div">
@@ -573,12 +573,12 @@
                         left: "100%"
                     }, animation_time);
 
-                } else if($el.hasClass("design_and_build")) {
-                    $(".animation.design_and_build")
-                        .css("z-index", 10000)
-                        .animate({
-                        left: "100%"
-                    }, animation_time)
+                // } else if($el.hasClass("design_and_build")) {
+                //     $(".animation.design_and_build")
+                //         .css("z-index", 10000)
+                //         .animate({
+                //         left: "100%"
+                //     }, animation_time)
 
                 } else if($el.hasClass("electronics_fest")) {
                     $(".animation.electronics_fest").css("z-index", 10000);
@@ -654,9 +654,9 @@
                         $("#glow").animate({fillOpacity:"1"},animation_time*0.2);
                     }, animation_time*0.6);
 
-                } else if($el.hasClass("involve_and_quizzes")) {
+                } else if($el.hasClass("involve") || $el.hasClass("quizzing")) {
                     animation_time = 2200;
-                    $(".animation.involve_and_quizzes").css("z-index", 10000);
+                    $(".animation.quizzing").css("z-index", 10000);
                     $('#man').fadeIn();
                     $('#score').fadeIn(200)
                     $('#speech')
@@ -749,7 +749,7 @@
                     ctx.fill();
                     //using CSS instead of jQeury for animation
 
-                } else if($el.hasClass("workshops")) {
+                } else if($el.hasClass("workshops") || $el.hasClass('design_and_build')) {
                     animation_time = 2000;
                     $(".animation.workshops").css("z-index", 10000);
                     setTimeout(function(){
