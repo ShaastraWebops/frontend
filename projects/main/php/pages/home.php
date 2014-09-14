@@ -356,7 +356,7 @@
 		</a>
 		<?php include '../modules/social.php'; ?>
 		<?php include '../modules/iitm.php'; ?>
-		<?php include '../modules/rightbar.php'; ?>
+		<?php include '../modules/home_rightbar.php'; ?>
 	</div>
 		
 	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">	

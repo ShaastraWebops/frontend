@@ -85,22 +85,22 @@
 <div class="container-fluid right-menu">
 	<ul class="row">
 		<li class="line hidden-xs">
-			<a href=""><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
+			<a href="../pages/login.php"><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href=""><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
+			<a href="../pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href=""><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>
+			<a href="../pages/hospi.php"><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href=""><span class="text">Sponsors</span> <span class="glyphicon-md glyphicon glyphicon-usd"></span></a>
+			<a href="../pages/spons.php"><span class="text">Sponsors</span> <span class="glyphicon-md glyphicon glyphicon-usd"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href=""><span class="text">About Us</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
+			<a href="../pages/about.php"><span class="text">About Us</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href=""><span class="text">Contact Us</span> <span class="glyphicon-md glyphicon glyphicon-phone-alt"></span></a>
+			<a href="../pages/contact.php"><span class="text">Contact Us</span> <span class="glyphicon-md glyphicon glyphicon-phone-alt"></span></a>
 		</li>
 	</ul>
 </div>
