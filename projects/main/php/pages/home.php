@@ -167,42 +167,10 @@
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
-			.notif {
-				display: none;
-			}
-			.notif .glyphicon {
-				width: 1em;
-				height: 1em;
-				background-color: #ddd;
-				color: #000;
-				border-radius: 0.5em;
-				font-family: "Times New Roman", sans-serif;
-				font-size: 1em;
-				line-height: 1em;
-			}
-			.notif .text {
-				font-size: 0.5em;
-				line-height: 1em;
-				opacity: 0;
-			}
-			.notif:hover {
-				text-decoration: none;
-				color: #fff;
-			}
-			.notif:hover .text {
-				opacity: 1;
-			}
-			.notif:hover .glyphicon {
-				background-color: #000;
-				background-color: rgba(255, 255, 255, 0.2);
-				border: 1px solid #fff;
-				color: #fff;
-			}
 			@media (min-width: 768px) {
 				#page .ngon-row {
 					height: 25%;
 				}
-
 				#page .ngon-row .text:hover {
 					letter-spacing: 0.2em;
 					font-size: 2em;
@@ -232,21 +200,12 @@
 					background: radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 				}
-				.notif {
-					position: absolute;
-					right: 0.25em;
-					top: 0.25em;
-					z-index: 5;
-					display: inline-block;
-					cursor: pointer;
-					font-size: 3em;
-				}
 			}
 		</style>
 	</head>
 
 	<body>
-		<?php include '../base/menu.php'; ?>
+	<?php include '../base/menu.php'; ?>
 
 	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
@@ -350,10 +309,6 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<!-- <a class="notif" data-toggle="modal" data-target="#notif-modal"  role="button">
-			<span class="text">Notifications</span>
-			<span class="glyphicon glyphicon-info-sig">i</span>
-		</a> -->
 		<?php include '../modules/social.php'; ?>
 		<?php include '../modules/iitm.php'; ?>
 		<?php include '../modules/home_rightbar.php'; ?>

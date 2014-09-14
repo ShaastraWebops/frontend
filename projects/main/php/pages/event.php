@@ -292,7 +292,7 @@
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
                 <form method="post" action='../scripts/save_to_file.php'>
-                    <div class='data col-md-offset-2 col-md-8'>
+                    <div class='data col-xs-12'>
                         <input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
                         <textarea name="data" id='data' style='min-height : 100px;'>
                             <?php echo $data; ?>
@@ -300,7 +300,7 @@
                     </div>
                 </form>
                 <?php } else { ?>
-                <div class='data col-md-offset-2 col-md-8'>
+                <div class='data col-xs-12'>
                     <?php echo $data; ?>
                 </div>
                 <?php } ?>

@@ -71,6 +71,13 @@
             		fill-opacity:1;
           		}
         	}
+        	.cke_button_icon.cke_button__savebtn_icon {
+                width : 70px;
+                background-position:right !important;
+            }
+            .cke_button_icon.cke_button__savebtn_icon:after {
+                content:'Save';
+            }
 		</style>
 	</head>
 	
@@ -92,23 +99,24 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-5 col-md-offset-1">
-					<!-- <h2>Lectures</h2> -->
-					<div class="row">
-						<div class="col-md-12">
-							<h3 class="shaastra-color text-center subtitle">RAIF</h3>
-							<p class="text text-justify">
-							<img src="../../img/lectures/raif.jpg" class="img-responsive pull-right" style="width: 60%; padding: 1em;">
-								The Robotics and Artificial Intelligence Foundation is 
-								back with its unique competition RobotzIndia which puts 
-								the best and the most innovative minds of India in one 
-								place. This time we have two themes to choose from: Land 
-								and Space. The finals will be held at IIT Madras, during 
-								Shaastra 2015. <br> 
-								More details can be found at <a href="http://www.robotzindia.com">www.robotzindia.com</a>
-							</p>
-						</div>
+					<div class="para1">
+						<?php 
+							$data = file_get_contents('../misc/pre-shaastra1.html');
+							if ( isset($_GET['edit']) ) { ?>
+							<form method="post" action='../scripts/save_to_file.php'>
+			                    <div class='data col-xs-12'>
+			                        <input type='hidden' name='filename' value='../misc/pre-shaastra1.html' />
+			                        <textarea name="data" id='data' style='min-height : 100px;'>
+			                            <?php echo $data; ?>
+			                        </textarea>
+			                    </div>
+			                </form>
+		                <?php } else { ?>
+			                <div class='data col-xs-12'>
+			                    <?php echo $data; ?>
+			                </div>
+						<?php } ?>
 					</div>
-					<hr />
 				</div>
 				<div class="col-md-5">
 					<h2 class="text-center" style="position: absolute; top: 5%; text-align: center; width: 100%;">
@@ -158,14 +166,49 @@
 			    			</g>
 						</svg>
 					</div>
+					<div class="para2">
+						<?php 
+							$data = file_get_contents('../misc/pre-shaastra2.html');
+							if ( isset($_GET['edit']) ) { ?>
+							<form method="post" action='../scripts/save_to_file.php'>
+			                    <div class='data2 col-xs-12'>
+			                        <input type='hidden' name='filename' value='../misc/pre-shaastra2.html' />
+			                        <textarea name="data" id='data2' style='min-height : 100px;'>
+			                            <?php echo $data; ?>
+			                        </textarea>
+			                    </div>
+			                </form>
+		                <?php } else { ?>
+			                <div class='data col-xs-12'>
+			                    <?php echo $data; ?>
+			                </div>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		
-
-
 		<?php include '../base/foot.php' ?>
+
+		<?php if ( isset($_GET['edit']) ) { // The fns to send data ?>
+	    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
+
+	    <script>
+	        $(document).ready(function() {
+	            CKEDITOR.inline('data')
+	            CKEDITOR.inline('data2')
+	            $(window).bind('keydown', function(event) {
+	                if (event.ctrlKey || event.metaKey) {
+	                    var letter = String.fromCharCode(event.which).toLowerCase();
+	                    if ( letter == 's' ) {
+	                        $('.cke_button__savebtn').click();
+	                        event.preventDefault();
+	                    }
+	                }
+	            });
+	        });
+	    </script>
+	    <?php } ?>
+
 		
 		<script type="text/javascript">
 			var animation_time = 3000;
