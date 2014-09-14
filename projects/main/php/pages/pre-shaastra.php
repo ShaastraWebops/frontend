@@ -143,18 +143,18 @@
 									<circle cx="100" cy="430" r="4"/>
 			        				<text x="110" y="430" font-size="20">PUNE</text>
 			    				</a>
-			    				<!-- <a xlink:href="../pages/event.php?category=Sampark&event=Bangalore" class="">
+			    				<a xlink:href="../pages/event.php?category=Sampark&event=Bangalore" class="">
 									<circle cx="220" cy="600" r="4"/>
 			        				<text x="230" y="600" font-size="20">BANGALORE</text>
-			    				</a>
+			    				</a><!--
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Vishakapatnam" class="">
 									<circle cx="300" cy="510" r="4"/>
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
-			    				</a>
+			    				</a> -->
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Hyderabad" class="">
 									<circle cx="200" cy="550" r="4"/>
 			        				<text x="210" y="550" font-size="20">HYDERABAD</text>
-			    				</a> -->
+			    				</a>
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Coimbatore" class="">
 									<circle cx="200" cy="660" r="4"/>
 			        				<text x="210" y="660" font-size="20">COIMBATORE</text>
