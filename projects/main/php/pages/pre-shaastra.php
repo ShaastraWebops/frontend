@@ -150,18 +150,18 @@
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Vishakapatnam" class="">
 									<circle cx="300" cy="510" r="4"/>
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
-			    				</a> -->
+			    				</a>
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Hyderabad" class="">
 									<circle cx="200" cy="550" r="4"/>
 			        				<text x="210" y="550" font-size="20">HYDERABAD</text>
-			    				</a>
-			    				<!-- <a xlink:href="../pages/event.php?category=Sampark&event=Coimbatore" class="">
+			    				</a> -->
+			    				<a xlink:href="../pages/event.php?category=Sampark&event=Coimbatore" class="">
 									<circle cx="200" cy="660" r="4"/>
 			        				<text x="210" y="660" font-size="20">COIMBATORE</text>
 			    				</a>
-			    				 --><a xlink:href="../pages/event.php?category=Sampark&event=Kochi" class="">
+			    				<a xlink:href="../pages/event.php?category=Sampark&event=Kochi" class="">
 									<circle cx="165" cy="680" r="4"/>
-			        				<text x="175" y="680" font-size="20">KOCHI</text>
+			        				<text x="105" y="680" font-size="20">KOCHI</text>
 			    				</a>
 			    			</g>
 						</svg>
