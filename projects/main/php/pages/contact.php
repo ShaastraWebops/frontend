@@ -9,7 +9,7 @@
 		<style>
 		.btn.btn-bluebox {
 		    background-color: rgba(14, 99, 133, 0.5);
-		    height : 100%;
+		    height : 5em;
 		    display: table-cell;
 		    vertical-align: middle;
 		    text-align: center;
@@ -153,15 +153,15 @@
 
 		<div class="container-fluid" style="height:100%;">
 			<div class="row white" style="height : 70%;">
-				<div class="col-md-5 col-md-offset-1" style="height : 100%;">
+				<div class="col-md-5 col-md-offset-1 col-xs-offset-1" style="height : 100%;">
 					<div class="container-fluid text-center white" style="height : 100%;">
-						<div class="row" style="padding: 0.3%; height : 50%;">
+						<div class="row" style="padding: 0.3%;">
 							<div
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
 								style="margin: 1px;"
 								data-toggle="modal"
 								data-target="#co-curricular">
-								<span style="display:table; height:100%; width:100%;">
+								<span style="display:table; height:100%; width:100%;" class="vertical-table">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
 										Co-Curricular<br />
@@ -173,7 +173,7 @@
 							</div>
 
 							<div
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
 								style="margin: 1px;"
 								data-toggle="modal"
 								data-target="#spons_pr">
@@ -187,34 +187,110 @@
 									</span>
 								</span>
 							</div>
-						</div>
-
-						<div class="row" style="padding: 0.3%; height : 50%;">
 							<div
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
 								style="margin: 1px;"
 								data-toggle="modal"
-								data-target="#events_queries">
+								data-target="#events">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Event<br />
-											Queries
+											Events
 										</span>
 									</span>
 								</span>
 							</div>
 
 							<div
-								class="btn btn-lg btn-bluebox col-lg-5 col-xs-12"
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
 								style="margin: 1px;"
 								data-toggle="modal"
 								data-target="#student_relations">
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Student<br />
-											Relations
+											Student Relations
+										</span>
+									</span>
+								</span>
+							</div>
+
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#design">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Design
+										</span>
+									</span>
+								</span>
+							</div>
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#evolve">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Evolve
+										</span>
+									</span>
+								</span>
+							</div>
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#facilities">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Facilities
+										</span>
+									</span>
+								</span>
+							</div>
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#qms">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											QMS
+										</span>
+									</span>
+								</span>
+							</div>
+
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#finance_catering">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Finance &amp; Catering
+										</span>
+									</span>
+								</span>
+							</div>
+
+							<div
+								class="btn btn-lg btn-bluebox col-sm-5 col-xs-12"
+								style="margin: 1px;"
+								data-toggle="modal"
+								data-target="#envisage">
+								<span style="display:table; height:100%; width:100%;">
+									<span style="display:table-cell; height:100%; vertical-align:middle;">
+										<span>
+											Envisage
 										</span>
 									</span>
 								</span>
@@ -398,7 +474,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="events_queries" tabindex="-1" role="dialog" aria-labelledby="events_queries" aria-hidden="true">
+		<div class="modal fade" id="events" tabindex="-1" role="dialog" aria-labelledby="events" aria-hidden="true">
 			<div class="modal-dialog" style="width:40%">
 				<div class="modal-content black">
 					<div class="modal-header">
@@ -451,6 +527,269 @@
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
 										E-Mail : namit@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="design" tabindex="-1" role="dialog" aria-labelledby="design" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">Design</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>ASHAY MAKIM</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9043812193
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : ashay@shaastra.org
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>AKSHAT DAVE</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 8939565908
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : akshat@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="evolve" tabindex="-1" role="dialog" aria-labelledby="evolve" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">Evolve</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>Vedant Trivedi</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9677152600
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : vedant@shaastra.org
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>Kishore Kothandram</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9487917918
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : kishore@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="facilities" tabindex="-1" role="dialog" aria-labelledby="facilities" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">Facilities</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>Abhishek Sharma</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9940116444
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : abhishek@shaastra.org
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>Mayank Singh</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9500171039
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : mayank@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="qms" tabindex="-1" role="dialog" aria-labelledby="qms" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">QMS</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>Dhruva</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9962303153 
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : dhruva@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="finance_catering" tabindex="-1" role="dialog" aria-labelledby="finance_catering" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">Finance &amp; Catering</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>VINAY </h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 7845604564
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : vinay@shaastra.org
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>NAVEEN</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 99632305052
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : naveen@shaastra.org
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="envisage" tabindex="-1" role="dialog" aria-labelledby="envisage" aria-hidden="true">
+			<div class="modal-dialog" style="width:50%">
+				<div class="modal-content black">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="title">
+							<h1 class="text-center">Envisage</h1>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>SANDEEP KRISHNA</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 9789808683
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : sandeep@shaastra.org
+									</p>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<h4>YASHWANTH VALEDI</h4>
+									<p>
+										<span class="glyphicon glyphicon-phone"></span>
+										Contact : 8754532969
+									</p>
+									<p>
+										<span class="glyphicon glyphicon-envelope"></span>
+										E-Mail : yashwanth@shaastra.org
 									</p>
 								</div>
 							</div>
