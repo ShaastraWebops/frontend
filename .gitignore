@@ -22,6 +22,7 @@
 
 # Server config files
 restart-project.sh
+config.php 
 
 # Local config files
 venv
