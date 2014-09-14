@@ -1,6 +1,0 @@
-<Files "~/public_html/2015/production/projects/main/php/pages/event.edit.php">
-AuthType Basic
-AuthName "Requesting your username and password"
-AuthUserFile "~/public_html/2015/production/projects/main/php/pages/.htpasswd"
-Require valid-user
-</Files>
