@@ -173,6 +173,8 @@
     </div>
 
     <?php include '../base/foot.php' ?>
+    <?php include '../modules/event_rightbar.php'; ?>
+    
     <script>
     $(document).ready(function() {
         $transtext = $('.transparent-text');

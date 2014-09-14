@@ -436,6 +436,7 @@
     </div>
 
     <?php include '../base/foot.php' ?>
+    <?php include '../modules/event_rightbar.php'; ?>
 
     <script type="text/javascript">
         var animation_time = 1000;
