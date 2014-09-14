@@ -77,10 +77,8 @@ if ($DEBUG) {
 	}
     @font-face {
         font-family: 'CGF Locust Resistance';
-        src: url('../../fonts/CGF Locust Resistance.ttf');
-        src: url('../../fonts/glyphicons-halflings-regular.eot');
-		src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-			url('../../fonts/CGF Locust Resistance.woff') format('woff'),
+        src: url('../../fonts/CGF Locust Resistance.eot');
+		src: url('../../fonts/CGF Locust Resistance.woff') format('woff'),
 			url('../../fonts/CGF Locust Resistance.ttf') format('truetype'),
 			url('../../fonts/CGF Locust Resistance.svg') format('svg');
     }
