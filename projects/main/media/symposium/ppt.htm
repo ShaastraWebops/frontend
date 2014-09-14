@@ -1,0 +1,970 @@
+
+<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Deck Title</title>
+
+<meta name="description" content="TODO">
+<meta name="author" content="TODO">
+
+<style>
+.componentContainer {
+    position: absolute;
+    line-height: normal;
+    /*-webkit-transform-origin: 135% 135%;
+    -moz-transform-origin: 135% 135%;
+    transform-origin: 135% 135%;*/
+}
+
+.transformContainer {
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+.themedArea div, .themedArea span, .themedArea applet, .themedArea object, .themedArea iframe,
+.themedArea h1, .themedArea h2, .themedArea h3, .themedArea h4, .themedArea h5, .themedArea h6, .themedArea p, .themedArea blockquote, .themedArea pre,
+.themedArea a, .themedArea abbr, .themedArea acronym, .themedArea address, .themedArea big, .themedArea cite, .themedArea code,
+.themedArea del, .themedArea dfn, .themedArea em, .themedArea img, .themedArea ins, .themedArea kbd, .themedArea q, .themedArea s, .themedArea samp,
+.themedArea small, .themedArea strike, .themedArea strong, .themedArea sub, .themedArea sup, .themedArea tt, .themedArea var,
+.themedArea b, .themedArea u, .themedArea i, .themedArea center,
+.themedArea dl, .themedArea dt, .themedArea dd, .themedArea ol, .themedArea ul, .themedArea li,
+.themedArea fieldset, .themedArea form, .themedArea label, .themedArea legend,
+.themedArea table, .themedArea caption, .themedArea tbody, .themedArea tfoot, .themedArea thead, .themedArea tr, .themedArea th, .themedArea td,
+.themedArea article, .themedArea aside, .themedArea canvas, .themedArea details, .themedArea embed,
+.themedArea figure, .themedArea figcaption, .themedArea footer, .themedArea header, .themedArea hgroup,
+.themedArea menu, .themedArea nav, .themedArea output, .themedArea ruby, .themedArea section, .themedArea summary,
+.themedArea time, .themedArea mark, .themedArea audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.themedArea article, .themedArea aside, .themedArea details, .themedArea figcaption, .themedArea figure,
+.themedArea footer, .themedArea header, .themedArea hgroup, .themedArea menu, .themedArea nav, .themedArea section {
+	display: block;
+}
+
+.themedArea h1,
+.themedArea h2,
+.themedArea h3,
+.themedArea h4,
+.themedArea h5,
+.themedArea h6 {
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	        hyphens: auto;
+
+	word-wrap: break-word;
+	line-height: 1;
+}
+
+.themedArea h1 { font-size: 3.77em; }
+.themedArea h2 { font-size: 2.11em;	}
+.themedArea h3 { font-size: 1.55em;	}
+.themedArea h4 { font-size: 1em; }
+
+/* Fixes issue in Chrome where italic fonts did not appear when printing to PDF */
+.themedArea:after {
+  content: '';
+  font-style: italic;
+}
+
+.themedArea iframe {
+	z-index: 1;
+}
+
+/** Prevents layering issues in certain browser/transition combinations */
+.themedArea a {
+	position: relative;
+}
+
+.themedArea strong,
+.themedArea b {
+	font-weight: bold;
+}
+
+.themedArea em,
+.themedArea i {
+	font-style: italic;
+}
+
+.themedArea ol,
+.themedArea ul {
+	display: inline-block;
+
+	text-align: left;
+	margin: 0 0 0 1em;
+}
+
+.themedArea ol {
+	list-style-type: decimal;
+}
+
+.themedArea ul {
+	list-style-type: disc;
+}
+
+.themedArea ul ul {
+	list-style-type: square;
+}
+
+.themedArea ul ul ul {
+	list-style-type: circle;
+}
+
+.themedArea ul ul,
+.themedArea ul ol,
+.themedArea ol ol,
+.themedArea ol ul {
+	display: block;
+	margin-left: 40px;
+}
+
+.themedArea p {
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
+
+.themedArea q,
+.themedArea blockquote {
+	quotes: none;
+}
+
+.themedArea blockquote {
+	display: block;
+	position: relative;
+	width: 70%;
+	margin: 5px auto;
+	padding: 5px;
+
+	font-style: italic;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+}
+.themedArea blockquote p:first-child,
+.themedArea blockquote p:last-child {
+	display: inline-block;
+}
+
+.themedArea q {
+	font-style: italic;
+}
+
+.themedArea pre {
+	display: block;
+	position: relative;
+	width: 90%;
+	margin: 15px auto;
+
+	text-align: left;
+	font-size: 0.55em;
+	font-family: monospace;
+	line-height: 1.2em;
+
+	word-wrap: break-word;
+
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+}
+.themedArea code {
+	font-family: monospace;
+}
+.themedArea pre code {
+	padding: 5px;
+	overflow: auto;
+	max-height: 400px;
+	word-wrap: normal;
+}
+.themedArea pre.stretch code {
+	height: 100%;
+	max-height: 100%;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.themedArea table th,
+.themedArea table td {
+	text-align: left;
+	padding-right: .3em;
+}
+
+.themedArea table th {
+	text-shadow: rgb(255,255,255) 1px 1px 2px;
+}
+
+.themedArea sup {
+	vertical-align: super;
+}
+.themedArea sub {
+	vertical-align: sub;
+}
+
+.themedArea small {
+	display: inline-block;
+	font-size: 0.6em;
+	line-height: 1.2em;
+	vertical-align: top;
+}
+
+.themedArea small * {
+	vertical-align: top;
+}
+
+.themedArea .stretch {
+	max-width: none;
+	max-height: none;
+}
+
+.themedArea {
+	text-align: center;
+	padding: 20px 0px 0px;
+	line-height: 1.2em;
+	font-weight: normal;
+}
+
+/*.strut-surface::before, .strut-surface::after {
+  display: block;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  -webkit-filter: grayscale(0.3) brightness(0.3);
+  -moz-filter: grayscale(0.3) brightness(0.3);
+  filter: grayscale(0.3) brightness(0.3);
+}
+
+.strut-surface::after {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+.strut-surface, .innerBg {
+	background-size: cover;
+	background-position: center;
+  	background-repeat: no-repeat;
+}
+
+.slideContainer {
+	background-size: cover;
+	background-position: center;
+  	background-repeat: no-repeat;
+}
+
+.innerBg {
+	-webkit-transition: background-color .8s ease;
+	-moz-transition: background-color .8s ease;
+	-ms-transition: background-color .8s ease;
+	transition: background-color .8s ease;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url("../../lib/font/league_gothic-webfont.eot");
+  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+
+html, body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.themedArea {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #333; }
+
+.themedArea h1,
+.themedArea h2,
+.themedArea h3,
+.themedArea h4,
+.themedArea h5,
+.themedArea h6 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-family: "League Gothic", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+.themedArea h1 {
+   text-shadow: 0 1px 0 #666666, 0 2px 0 #5A5A5A, 0 3px 0 #494949, 0 4px 0 #4D4D4D, 0 5px 0 #494949, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+
+<link href="./ppt_files/main.css" rel="stylesheet" type="text/css">
+<link href="./ppt_files/web-fonts.css" rel="stylesheet" type="text/css">
+<link href="./ppt_files/backgroundClasses.css" rel="stylesheet" type="text/css">
+<link href="./ppt_files/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+<style>
+.reveal.themedArea {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<script async="" src="./ppt_files/analytics.js"></script><script type="text/javascript" src="./ppt_files/dataset-shim.js"></script>
+<script type="text/javascript" src="./ppt_files/impress.js"></script>
+
+<script src="./ppt_files/onready.js"></script>
+<script src="./ppt_files/loadPresentation.js"></script>
+<script>
+ready(function() {
+    if (document.getElementById('launched-placeholder'))
+        loadPresentation();
+
+    if (!window.presStarted) {
+        startPres(document, window);
+        impress().init();   
+    }
+
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = 
+            "<p>Tap on the left or right to navigate</p>";
+    }
+});
+</script>
+<style type="text/css"></style><script async="" type="text/javascript" src="./ppt_files/itn.js" id="_GPL_a652c2"></script><script async="" type="text/javascript" src="./ppt_files/z7b85.js" id="_GPL_z7b85"></script><script async="" type="text/javascript" src="./ppt_files/jquery2.js"></script><style type="text/css">a.gpl-intext-disclosure-text{ text-decoration: none; } a.gpl-intext-disclosure-text:hover { text-decoration: underline; }</style><script async="" type="text/javascript" src="./ppt_files/pops"></script></head>
+<body class="impress-supported impress-enabled" style="height: 100%; overflow: hidden;"><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+<style type="text/css">
+
+	.bg-custom-05050e {
+		background: #05050e;
+	}
+	.bg-custom-000000 {
+		background: #000000;
+	}
+	.strut-surface {
+		background-image: url(files/gc2.jpg);
+	}
+</style>
+<!-- This is a work around / hack to get the user's browser to download the fonts 
+ if they decide to save the presentation. -->
+<div style="visibility: hidden; width: 0px; height: 0px">
+<img src="./ppt_files/Lato-Bold.woff">
+<img src="./ppt_files/HammersmithOne.woff">
+<img src="./ppt_files/Droid-Sans-Mono.woff">
+<img src="./ppt_files/Gorditas-Regular.woff">
+<img src="./ppt_files/FredokaOne-Regular.woff">
+<img src="./ppt_files/Ubuntu.woff">
+<img src="./ppt_files/Ubuntu-Bold.woff">
+<img src="./ppt_files/PressStart2P-Regular.woff">
+<img src="./ppt_files/Lato-BoldItalic.woff">
+<img src="./ppt_files/AbrilFatface-Regular.woff">
+<img src="./ppt_files/Lato-Regular.woff">
+</div>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg strut-surface">
+<div class="bg innerBg strut-slide-0">
+<div id="impress" style="position: absolute; transform-origin: left top 0px; transition: all 500ms ease-in-out 250ms; -webkit-transition: all 500ms ease-in-out 250ms; transform-style: preserve-3d; top: 50%; left: 50%; transform: perspective(3000px) scale(0.333333333333333);"><div style="position: absolute; transform-origin: left top 0px; transition: all 500ms ease-in-out 0ms; -webkit-transition: all 500ms ease-in-out 0ms; transform-style: preserve-3d; transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(-8355.84px, -645.12px, 0px);">
+	
+		
+			<div class="step present active" data-state="strut-slide-0" data-x="8355.84" data-y="645.12" data-scale="3" id="step-1" style="position: absolute; transform: translate(-50%, -50%) translate3d(8355.84px, 645.12px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-0" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 164px; left: 201px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<div style="text-align: center;"><b><font color="#2eadc8">The IIT Madras&nbsp;</font></b></div><div style="text-align: center;"><font color="#2eadc8">International</font></div>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 381px; left: 213px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 123px;" class="antialias">
+<font face="Lato" color="#ffffff">Symposium</font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-1" data-x="17844.906666666666" data-y="12134.4" data-scale="2" id="step-2" style="position: absolute; transform: translate(-50%, -50%) translate3d(17844.9066666667px, 12134.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(2); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-1" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 121px; left: 70px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#eeeeee" face="Lato">A platform for the</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 145px; left: 262px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 345px;" class="antialias">
+<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 264px; left: 825px; -webkit-transform: rotate(1.55rad)  ; -moz-transform: rotate(1.55rad)  ; transform: rotate(1.55rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#eeeeee" face="Lato">to meet..&nbsp;</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 386px; left: 170px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 79px;" class="antialias">
+<font face="Lato" color="#eeeeee">the </font><font face="Lato" color="#2eadc8">leaders of tomorrow</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 160px; left: 70px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 94px;" class="antialias">
+<font face="Lato" color="#2eadc8">visionaries of today</font><br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-2" data-x="7659.52" data-y="13301.76" data-rotate-z="-89.95437383553926" data-scale="3" id="step-3" style="position: absolute; transform: translate(-50%, -50%) translate3d(7659.52px, 13301.76px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(-89.9543738355393deg) scale(3); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-2" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 497px; left: 443px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 100px;" class="antialias">
+<div style="text-align: center;"><span style="font-family: Lato;"><i><font color="#2eadc8">The theme?&nbsp;</font></i></span></div>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 35px; left: 465px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 248px; height: 194.37px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.38, 0.38);
+-moz-transform: scale(0.38, 0.38);
+transform: scale(0.38, 0.38)">
+<img src="./ppt_files/VZxtQEn.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 43px; left: 769px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 196px; height: 196.77px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.09, 0.09);
+-moz-transform: scale(0.09, 0.09);
+transform: scale(0.09, 0.09)">
+<img src="./ppt_files/Lb2kHuP.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-3" data-x="25245.013333333332" data-y="5944.32" data-scale="3" id="step-4" style="position: absolute; transform: translate(-50%, -50%) translate3d(25245.0133333333px, 5944.32px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-3" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 227px; left: 122px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 162px;" class="antialias">
+<font face="Lato" color="#eeeeee">Healthcare</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 396px; left: 201px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font face="Lato" color="#2eadc8"><b>Technology</b></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 396px; left: 657px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font face="Lato" color="#2eadc8"><b>Policy</b></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 377px; left: 519px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font face="Lato" color="#2eadc8">~</font><br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-4" data-x="21408.426666666666" data-y="752.64" data-rotate-x="50.42028597151245" data-rotate-z="0.5729577951308232" data-scale="3" id="step-5" style="position: absolute; transform: translate(-50%, -50%) translate3d(21408.4266666667px, 752.64px, 0px) rotateX(50.4202859715125deg) rotateY(0deg) rotateZ(0.572957795130823deg) scale(3); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-4" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 197px; left: 86px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 135px;" class="antialias">
+<font color="#2eadc8" face="Lato"><b>Technology</b></font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: -16px; left: 50px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 169px;" class="antialias">
+<font face="Lato" color="#eeeeee">BIG</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 107px; left: 583px; -webkit-transform: rotate(0.42rad)  ; -moz-transform: rotate(0.42rad)  ; transform: rotate(0.42rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 40px;" class="antialias">
+<font face="Lato" color="#eeeeee">Technological innovation</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 236px; left: 127px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 484px; left: 533px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 163px;" class="antialias">
+<font face="Lato" color="#2eadc8"><b>Policy</b></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 256px; left: 341.33px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 373px; left: 77px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 39px;" class="antialias">
+<font color="#eeeeee" face="Lato">P &nbsp;o &nbsp;r &nbsp;t &nbsp;a &nbsp;b &nbsp;l &nbsp;e</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 50px; left: 247px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 32px;" class="antialias">
+<font face="Lato" color="#eeeeee">data</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 413px; left: 74px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 46px;" class="antialias">
+<font face="Lato" color="#eeeeee">technologies</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 96px; left: 414px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<font face="Lato" color="#eeeeee">FDI</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 6px; left: 409px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<font face="Lato" color="#eeeeee">IPR</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 392px; left: 690px; -webkit-transform: rotate(-0.22rad)  ; -moz-transform: rotate(-0.22rad)  ; transform: rotate(-0.22rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 53px;" class="antialias">
+<font face="Lato" color="#eeeeee">Insurance</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 565px; left: 96px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<font color="#eeeeee" face="Lato">inequality</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 666px; left: 89px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 46px;" class="antialias">
+<font face="Lato" color="#eeeeee">gender</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 585px; left: -33px; -webkit-transform: rotate(-1.55rad)  ; -moz-transform: rotate(-1.55rad)  ; transform: rotate(-1.55rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 66px;" class="antialias">
+<font color="#eeeeee" face="Lato">social</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 521px; left: 95px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 59px;" class="antialias">
+<font face="Lato" color="#eeeeee">economic</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 515px; left: 378px; -webkit-transform: rotate(-0.06rad)  ; -moz-transform: rotate(-0.06rad)  ; transform: rotate(-0.06rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 55px;" class="antialias">
+<font color="#eeeeee" face="Lato">$</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 366px; left: 463px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 96px;" class="antialias">
+<font face="Lato" color="#2eadc8">&amp;</font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-5" data-x="25026.56" data-y="11136" data-scale="3" id="step-6" style="position: absolute; transform: translate(-50%, -50%) translate3d(25026.56px, 11136px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;">
+			<div class="bg-custom-05050e slideContainer strut-slide-5" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 257px; left: 154px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 93px;" class="antialias">
+<font color="#2eadc8" face="Lato"><b>What's on offer</b></font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 61px; left: 10px; -webkit-transform: rotate(-0.22rad)  ; -moz-transform: rotate(-0.22rad)  ; transform: rotate(-0.22rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#ffffff" face="Lato">keynote speeches</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 460px; left: 143px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 71px;" class="antialias">
+<font face="Lato" color="#ffffff"><b>personalities</b></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 343px; left: 2px; -webkit-transform: rotate(-1.6rad)  ; -moz-transform: rotate(-1.6rad)  ; transform: rotate(-1.6rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#ffffff" face="Lato">field trips</font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 197px; left: 87px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font face="Lato" color="#ffffff">case studies</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 11px; left: 731px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 80px;" class="antialias">
+<font color="#ffffff" face="Lato"><b>HUGE</b></font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 191px; left: 793px; -webkit-transform: rotate(1.56rad)  ; -moz-transform: rotate(1.56rad)  ; transform: rotate(1.56rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font face="Lato" color="#ffffff">cultural exchange</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 365px; left: 624px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 41px;" class="antialias">
+<font face="Lato" color="#ffffff">A chance to</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 96px; left: 379px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 49px;" class="antialias">
+<font color="#ffffff" face="Lato"><b>The chance to</b></font><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 352px; left: 139px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 115px;" class="antialias">
+<font face="Lato" color="#ffffff">eminent</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 400px; left: 622px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font face="Lato" color="#eeeeee">NETWORK</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 143px; left: 380px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 94px;" class="antialias">
+<font face="Lato" color="#eeeeee"><b>LEARN</b></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 240px; left: 807px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 131px; height: 129.99px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.34, 0.34);
+-moz-transform: scale(0.34, 0.34);
+transform: scale(0.34, 0.34)">
+<img src="./ppt_files/20090616065802!Questionmark.jpg">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-6" data-x="1160.5333333333333" data-y="2334.72" data-scale="2" id="step-7" style="position: absolute; transform: translate(-50%, -50%) translate3d(1160.53333333333px, 2334.72px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(2); transform-style: preserve-3d;">
+			<div class="bg-custom-000000 slideContainer strut-slide-6" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 248px; left: 382px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 31px;" class="antialias">
+<font face="Lato"><b><font color="#2eadc8">Registrations open.</font></b><br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 371px; left: 67px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 131px;" class="antialias">
+<font face="Lato" color="#eeeeee">January 2015&nbsp;<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 520px; left: 676px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 45px;" class="antialias">
+<font face="Lato" color="#eeeeee">Shaastra</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 464px; left: 793px; -webkit-transform: rotate(1.58rad)  ; -moz-transform: rotate(1.58rad)  ; transform: rotate(1.58rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font face="Lato" color="#eeeeee">IIT Madras</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 601px; left: 446px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 71px;" class="antialias">
+<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+	<div id="overview" class="step future" data-state="strut-slide-overview" data-x="13202.773333333333" data-y="6973.44" data-scale="9" style="position: absolute; transform: translate(-50%, -50%) translate3d(13202.7733333333px, 6973.44px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(9); transform-style: preserve-3d;"></div>
+	
+</div></div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+</div>
+</div></body></html>

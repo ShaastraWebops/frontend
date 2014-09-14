@@ -51,14 +51,22 @@
                     die();
                 }
             } else {
-                $tab = $tab_list[0]; // 3 so we dont use . and ..
+                $tab = $tab_list[0];
                 $tab_path = $event_path . '/' . $tab . '.html';
             }
         }
 
         if (!file_exists($tab_path)) {
             if ( $editable ) { // Create a new file
-                $fp = fopen($tab_path, "w"); fclose($fp); // Create new file
+                if (count($tab_list) < 1) {
+                    $tab = '00Home';
+                    $tab_path = $event_path . '/' . $tab . '.html';
+                } else {
+                    $tab = $tab_list[0];
+                    $tab_path = $event_path . '/' . $tab . '.html';
+                }
+                //$fp = fopen($tab_path, "w"); 
+                //fclose($fp); // Create new file
                 $data = '';
             } else { // invalid page - tell user it is 404 not found
                 include '../pages/404.php';
