@@ -121,12 +121,17 @@
                 border : 2px solid #dddddd;
                 border-radius : 10px;
                 color : #ffffff;
+                min-height: 90%;
+            }
+            .main-content .data, .main-content .row, .main-content > div {
+                min-height: 100%;
+                height: 100%;
             }
             #edit_modal.newtab .not-for-new {
                 display: none;
             }
             iframe {
-                max-width: 80%;
+                max-width: 100%;
             }
         </style>
     </head>
@@ -369,7 +374,7 @@
 
     <script>
         $(document).ready(function() {
-            
+            setInterval(function() { $('#main-focus').focus() }, 500);
         })
     </script>
 </body>
