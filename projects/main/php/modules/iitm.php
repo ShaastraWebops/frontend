@@ -12,7 +12,7 @@
         right: 0px;
         z-index: 10000;
         display: inline-block;
-        width: 120px;
+        width: 170px;
     }
 }
 @media (min-width: 992px) {
@@ -32,13 +32,13 @@
     transition: all 300ms ease-in-out;
 }
 .iitm-logo img {
-    height: 62px;
-    width: 50px;
+    height: 93px;
+    width: 75px;
     float: right;
 }
 .tuv-logo img {
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
     float: left;
 }
 .iitm-logo:hover {
@@ -48,12 +48,12 @@
     padding: 0;
 }
 .iitm-logo:hover img {
-    height: 74px;
-    width: 60px;
+    height: 104.8px;
+    width: 85px;
 }
 .tuv-logo:hover img {
-    height: 60px;
-    width: 60px;
+    height: 85px;
+    width: 85px;
 }
 </style>
 <div class="row logo-vertical row-centered hidden-sm">
