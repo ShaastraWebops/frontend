@@ -1,14 +1,11 @@
 <?php
-/*if ( version_compare(phpversion(), '5.4.0', '>=') ) {
-    if ( session_status() !== PHP_SESSION_ACTIVE )
-    	session_start();
+
+if ( file_exists('../base/config.php') ) {
+	include('../base/config.php');
 } else {
-    if ( session_id() === '' )
-    	session_start();
-}*/
-//session_start();
-$DEBUG = 1;
-$ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+	$DEBUG = 1;
+	$ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+}
 
 if ($DEBUG) {
 	ini_set('display_errors', 1);
