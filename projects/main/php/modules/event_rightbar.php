@@ -112,7 +112,7 @@
 			<a href="../pages/eventlist.php?category=Involve"><span class="text">Involve</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/eventlist.php?category=Quizzing"><span class="text">Quizzing</span> <span class="glyphicon-md glyphicon glyphicon-comment"></span></a>
+			<a href="../pages/eventlist.php?category=Quizzing"><span class="text">Quizzing</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
 		</li>
 		<li class="line hidden-xs">
 			<a href="../pages/eventlist.php?category=Spotlight"><span class="text">Spotlight</span> <span class="glyphicon-md glyphicon glyphicon-screenshot"></span></a>

@@ -467,7 +467,19 @@
 						_this.scene.add(dice);
 						_this.dices.push(dice);
 						_this.world.add(dice.body);
-
+// var loader = new THREE.ColladaLoader();
+						// loader.options.convertUpAxis = true;
+						// loader.load('sd1.dae',function(collada) {
+						// 	var dice = collada.scene;
+						// 	var skin = collada.skins[0];
+						// 	dice.position.set(0,0,0);
+						// 	dice.scale.set(1.5,1.5,1.5);
+						// 	dice.castShadow = true;
+						// 	//dice.body = new CANNON.RigidBody(that.dice_mass,
+						// 	//	dice.geometry.cannon_shape, _this.dice_body_material);
+						// 	dice.body = new CANNON.RigidBody(that.dice_mass,
+						// 		that.dice_geometry.cannon_shape, _this.dice_body_material);
+						
 						that.dice_material = new THREE.MeshFaceMaterial(
 							that.create_dice_materials(that.dice_face_labels2, that.scale, that.scale/5));
 
