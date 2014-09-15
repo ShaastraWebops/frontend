@@ -293,7 +293,7 @@
                 <?php if (isset($editable) && $editable) { ?>
                 <form method="post" action='../scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
-                        <input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
+                        <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
                         <textarea name="data" id='data' style='min-height : 100px;'>
                             <?php echo $data; ?>
                         </textarea>
@@ -330,7 +330,7 @@
                 $('#edit_modal').find('.newname').val('New Tab');
                 $('#edit_modal').find('.oldpriority').val('');
                 $('#edit_modal').find('.newpriority').val(0);
-                $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+                $('#edit_modal').find('.dirname').val("<?php echo $event_path; ?>")
                 $('#edit_modal').addClass('newtab')
             } else {
                 $(k).find('h3').html("Edit Tab");
@@ -341,7 +341,7 @@
                 $('#edit_modal').find('.newname').val(oldname);
                 $('#edit_modal').find('.oldpriority').val(oldpriority);
                 $('#edit_modal').find('.newpriority').val(oldpriority);
-                $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+                $('#edit_modal').find('.dirname').val("<?php echo $event_path; ?>")
                 console.log($('#edit_modal').find('.taburl'));
                 $('#edit_modal').find('.taburl').prop('href', "<?php
                     if ($editable) {
