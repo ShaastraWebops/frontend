@@ -133,6 +133,12 @@
             iframe {
                 max-width: 100%;
             }
+            .navbar-inverse .navbar-brand {
+                color: #fff;
+            }
+            .navbar-inverse .navbar-brand:hover {
+                color: #eee;
+            }
         </style>
     </head>
 
@@ -150,7 +156,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand title" style="letter-spacing: 0.1em" href=''><?php echo $event; ?></a>
+                    <a class="navbar-brand title white" style="letter-spacing: 0.1em" href=''><?php echo $event; ?></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

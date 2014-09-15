@@ -598,7 +598,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Vedant Trivedi</h4>
+									<h4>VEDANT TRIVEDI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9677152600
@@ -611,7 +611,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Kishore Kothandram</h4>
+									<h4>KISHORE KOTHANDARAMAN</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9487917918
@@ -644,7 +644,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Abhishek Sharma</h4>
+									<h4>ABHISHEK SHARMA</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9940116444
@@ -657,7 +657,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Mayank Singh</h4>
+									<h4>MAYANK SINGH</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9500171039
@@ -690,7 +690,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Dhruva</h4>
+									<h4>DHRUVA KATREKAR</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9962303153 
@@ -723,7 +723,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>VINAY </h4>
+									<h4>VINAY CHITTETI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 7845604564
@@ -736,7 +736,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>NAVEEN</h4>
+									<h4>NAVEEN VELLIMUTTAM</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 99632305052
@@ -782,7 +782,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>YASHWANTH VALEDI</h4>
+									<h4>YASHWANTH VELIDI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 8754532969

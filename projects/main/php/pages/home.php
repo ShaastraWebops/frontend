@@ -239,6 +239,7 @@
 								</div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
+								<div class="dates">3<sup>rd</sup> to 6<sup>th</sup> January</div>
 							</div>
 						</span>
 					</span>
