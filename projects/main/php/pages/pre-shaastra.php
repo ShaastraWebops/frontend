@@ -146,7 +146,8 @@
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Bangalore" class="">
 									<circle cx="180" cy="630" r="4"/>
 			        				<text x="60" y="625" font-size="20">BANGALORE</text>
-			    				</a><!--
+			    				</a>
+
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Vishakapatnam" class="">
 									<circle cx="300" cy="510" r="4"/>
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
