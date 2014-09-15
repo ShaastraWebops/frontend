@@ -49,8 +49,8 @@
             color: #fff;
             font-size: 1.5em;
             font-weight: 900;
-            font-family: "Times New Roman", sans-serif;
-            /*font-family: "Helvetica", sans-serif;*/
+            /*font-family: "Times New Roman", sans-serif;*/
+            font-family: "Helvetica", sans-serif;
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
