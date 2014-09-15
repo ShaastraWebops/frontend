@@ -122,8 +122,9 @@
                                 <div class="container-fluid">
                                     <div class="row" style="padding-bottom: 1em;">
                                         <div class="col-md-12" style="font-size:1.2em;text-align:center;vertical-align:middle">
+                                            <button class="pull-left btn btn-info edit">Edit Profile</button>
                                             <span class="bold">Profile Details</span>
-                                            <button class="pull-right btn btn-info edit">Edit Profile</button>
+                                            <a class="pull-right btn btn-info" href="../scripts/logout.php">Logout</a>
                                         </div>
                                     </div>
                                     <div class="container-fluid">
