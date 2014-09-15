@@ -22,29 +22,18 @@
 	 font-weight:500;
  }
 <<<<<<< HEAD
- #menu a{
-=======
  #menu-nav a{
->>>>>>> bd3a4718f812039201283c0b4856dc341dee87c5
 	 color:#FFF;
 	 font-size:20px;
 	 font-family: Arial, Helvetica, sans-serif;
 	 font-weight:bold;
 	 font-size: initial !important;
  }
-<<<<<<< HEAD
- #menu a:hover{
-	 color:#00425A;
-	 background:none;
- }
- #menu li.active a{
-=======
  #menu-nav a:hover{
 	 color:#00425A;
 	 background:none;
  }
  #menu-nav li.active a{
->>>>>>> bd3a4718f812039201283c0b4856dc341dee87c5
 	 background:#00425A;
 	 background:rgba(0,66,90,0.7);
 	 color:#FFF;
@@ -63,11 +52,7 @@
 
 }
 .navbar-custom{
-<<<<<<< HEAD
-	background-color:transparent;
-=======
 	background-color:rgba(0,0,0,0.5);
->>>>>>> bd3a4718f812039201283c0b4856dc341dee87c5
 	border-color:transparent;
 	color:#FFF;
 	border-radius:0;

@@ -650,3 +650,31 @@
 [15-Sep-2014 11:21:04 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 130
 [15-Sep-2014 11:28:12 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 11
 [15-Sep-2014 11:28:12 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 30
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 133
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: first_name in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 137
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: last_name in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 138
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: email in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 144
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 211
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 342
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 360
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 362
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 391
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 393
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 478
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 502
+[15-Sep-2014 12:07:33 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 504
+[15-Sep-2014 12:11:41 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 11
+[15-Sep-2014 12:11:41 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 30
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 133
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: first_name in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 137
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: last_name in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 138
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: email in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 144
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 211
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 342
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 360
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 362
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 391
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 393
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 478
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: user_id in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 502
+[15-Sep-2014 12:16:58 America/Chicago] PHP Notice:  Undefined index: token in /home/shaastra/public_html/2015/production/projects/main/php/pages/dashboard.php on line 504
