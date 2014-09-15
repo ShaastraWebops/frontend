@@ -109,7 +109,7 @@
             <div class="row" >
                 <div class="col-md-10 col-md-offset-1">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs col-md-6 col-md-offset-3" id="dashboard-tabs" role="tablist" style="margin-bottom: 1em;">
+                    <ul class="hidden nav nav-tabs col-md-6 col-md-offset-3" id="dashboard-tabs" role="tablist" style="margin-bottom: 1em;">
                         <li class="active"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
                         <li><a href="#teams" role="tab" data-toggle="tab">Teams</a></li>
                         <li><a href="#events" role="tab" data-toggle="tab">Events</a></li>
@@ -157,8 +157,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">College Name</div>
-                                            <div class="col-sm-8 label" name="college"></div>
-                                            <input class="col-sm-8 form" name="college" type="text" placeholder="eg: IIT Madras" required />
+                                            <div class="col-sm-8 label" name="college_text"></div>
+                                            <input class="col-sm-8 form" name="college_text" type="text" placeholder="eg: IIT Madras" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Roll No</div>
@@ -168,7 +168,10 @@
                                         <div class="row">
                                             <div class="col-sm-4 head">Branch</div>
                                             <div class="col-sm-8 label" name="branch"></div>
-                                            <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required />
+                                            <!-- <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required /> -->
+                                            <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required >
+
+                                            </select>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">City</div>
@@ -177,13 +180,13 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Phone</div>
-                                            <div class="col-sm-8 label" name="phone"></div>
+                                            <div class="col-sm-8 label" name="mobile_number"></div>
                                             <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Password</div>
                                             <div class="col-sm-8 label" name="password"></div>
-                                            <input class="col-sm-8 form" name="password" type="text" placeholder="Change password" required />
+                                            <input class="col-sm-8 form" name="password" type="text" placeholder="Change password" />
                                         </div>
                                         <div class="row" style="border-bottom: 0px;">
                                             <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save Profile" />
@@ -284,6 +287,7 @@
             </div>
         </div>
         <script type="text/javascript">
+            var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');
             function toggle_form(e) {
                 if($('#profile .form').css('display') == 'none') {
                     $("#profile .edit").html('View Profile');
@@ -348,6 +352,7 @@
 
             }
             $(document).ready(function() {
+
                 // ------------------------------------------------
                 // Initial queries
                 $.ajax({ // GET USER PROFILE INFO
@@ -447,6 +452,9 @@
                 })
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
+                $.each(branches, function(i, k) {
+                    $('#profile .form[name=branch]').append($('<option value=' + k + '>' + k + '</option>'))
+                });
                 
                 $('#teams form').submit(function(e) {
                     e.preventDefault()
