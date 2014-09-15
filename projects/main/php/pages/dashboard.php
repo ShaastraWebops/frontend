@@ -130,7 +130,7 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-sm-6 head">Shaastra ID</div>
-                                            <div class="col-sm-6"><?php echo $_SESSION['user_id']; ?></div>
+                                            <div class="col-sm-6"><?php echo 'SH14' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Name</div>
