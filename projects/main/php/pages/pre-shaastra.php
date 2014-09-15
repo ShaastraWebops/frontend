@@ -144,9 +144,15 @@
 			        				<text x="110" y="430" font-size="20">PUNE</text>
 			    				</a>
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Bangalore" class="">
+<<<<<<< HEAD
 									<circle cx="220" cy="600" r="4"/>
 			        				<text x="230" y="600" font-size="20">BANGALORE</text>
 			    				</a><!--
+=======
+									<circle cx="180" cy="630" r="4"/>
+			        				<text x="60" y="625" font-size="20">BANGALORE</text>
+			    				</a>
+>>>>>>> 0a55af250b5daaeb9dc0503855dcbd11d8e7fd40
 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Vishakapatnam" class="">
 									<circle cx="300" cy="510" r="4"/>
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
