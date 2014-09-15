@@ -27,9 +27,8 @@
     </div>
     <div class="row">
     	<div class="col-xs-8 col-xs-offset-2 comingSoon">
-    		<p>This year, its only going to get bigger and better. <br>
-				All the wait is worth for the release of the second edition 
-				of India's largest Lecture Series at Shaastra!
+    		<p>
+Stay tuned for the unveiling of the 2nd edition of the Shaastra Lecture Series
 			</p>
     	</div>
     </div>
