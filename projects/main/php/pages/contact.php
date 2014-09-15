@@ -494,7 +494,7 @@
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : trshivaprasad@gmail.com
+									E-Mail : shiva@shaastra.org
 								</p>
 							</div>
 						</div>
