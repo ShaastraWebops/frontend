@@ -123,6 +123,7 @@
 				</div>
 			</div>
 		</div>
+-->
 		
 		<div class="page" id="page3">
 			<div class="container-fluid white centered">

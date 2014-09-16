@@ -130,7 +130,7 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-sm-6 head">Shaastra ID</div>
-                                            <div class="col-sm-6"><?php echo 'SH14' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?></div>
+                                            <div class="col-sm-6"><?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Name</div>
@@ -208,7 +208,7 @@
                                     <div class="form-group first member">
                                         <label for="member" class="col-md-4 member-label">Member</label>
                                         <div class="col-md-8" style="padding: 0">
-                                            <input readonly="readonly" type="text" name="member" class="form-control form" placeholder="Shaastra ID" value="<?php echo 'SH14' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?>">
+                                            <input readonly="readonly" type="text" name="member" class="form-control form" placeholder="Shaastra ID" value="<?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?>">
                                             <!-- <a href="" class="remove_member inset-remove"> Remove </a> -->
                                         </div>
                                     </div>
