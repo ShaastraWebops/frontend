@@ -87,9 +87,11 @@
 
 <div class="container-fluid right-menu">
 	<ul class="row">
+<!--
 		<li class="line hidden-xs">
 			<a ><span class="text">Search</span> <span class="glyphicon-md glyphicon glyphicon-search"></span></a>
 		</li>
+-->
 		<li class="line hidden-xs">
 			<a href="../pages/eventlist.php?category=Aerofest"><span class="text">Aerofest</span> <span class="glyphicon-md glyphicon glyphicon-send"></span></a>
 		</li>
