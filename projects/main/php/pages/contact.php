@@ -236,7 +236,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Evolve
+											Lectures </br>
+                                            and </br>
+                                            Exhibitions
 										</span>
 									</span>
 								</span>
@@ -262,7 +264,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											QMS
+											Quality </br>
+                                            Management </br>
+                                            Systems
 										</span>
 									</span>
 								</span>
@@ -319,7 +323,7 @@
 
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-1">
-								<button class="btn btn-lg btn-primary" style="margin-top: 2%" data-toggle="modal" data-target="#comments">
+								<button class="btn btn-lg btn-primary" style="margin-top: 2%; outline: none" data-toggle="modal" data-target="#comments">
 									Could not find what you are looking for?
 								</button>
 							</div>
@@ -374,8 +378,8 @@
 					</form>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary" style="outline: none">Submit</button>
 					</div>
 				</div>
 			</div>
@@ -410,7 +414,7 @@
 					</div>
 
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -469,7 +473,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -500,7 +504,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -533,7 +537,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -579,7 +583,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -625,7 +629,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -671,7 +675,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -704,7 +708,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -750,7 +754,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -796,7 +800,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
