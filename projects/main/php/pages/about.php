@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <p>
-                        <span class='shaastra-title'>Shaastra</span> is the technical festival of Indian Institute of Technology-Madras, Chennai, India
+                        <span class='shaastra-title'>Shaastra</span> is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind.
                     </p>
                     <br />
                     <p><span class=''>Shaastra</span> returns in its 16th edition, bringing with it an experience of innovation, competition and learning that has become its hallmark over the years.
@@ -57,7 +57,7 @@
                     </p>
                     <br />
                     <p>
-                        The classic events of <span class=''>Shaastra</span> shall return bigger and better and be joined by an injection of new exciting competitions. Envisage 3.0 will showcase several new acts crafted completely by students. With Airshow, Fire and Ice, Shaastra Junior Quiz, Robowars and several such competitions entertaining challenging the contestants. One can also head back indoors to hear some of the pioneers of technology across the globe speak their minds on the latest happenings of the world. We shall also celebrate the contributions of Indian researchers across all branches of science by hosting the Research Expo, giving students a stage to showcase their groundbreaking research.
+                        The classic events of <span class=''>Shaastra</span> shall return bigger and better and be joined by an injection of new exciting competitions. Envisage 3.0 will showcase several new acts crafted completely by students. With Airshow, Fire and Ice, Shaastra Junior Quiz, Robowars and several such competitions will both entertain and challenge the participants. One can also head back indoors to hear some of the pioneers of technology across the globe share their views on the latest happenings of the world. We shall also celebrate the contributions of Indian researchers across all branches of science by hosting the Research Expo, giving students a stage to showcase their groundbreaking research.
                     </p>
                 </div>
             </div>
