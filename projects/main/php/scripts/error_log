@@ -27,3 +27,34 @@
 [15-Sep-2014 01:48:23 America/Chicago] PHP Warning:  fopen(../events/Sampark/Coimbatore/02Android W/S.html) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/scripts/event.php on line 21
 [15-Sep-2014 01:48:23 America/Chicago] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/shaastra/public_html/2015/production/projects/main/php/scripts/event.php on line 22
 [15-Sep-2014 01:48:23 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/scripts/event.php:21) in /home/shaastra/public_html/2015/production/projects/main/php/scripts/event.php on line 31
+[15-Sep-2014 13:11:30 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 13:12:29 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 13:12:56 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 15:12:42 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 20:28:29 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 21:14:52 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 23:45:10 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 23:47:47 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[15-Sep-2014 23:48:18 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 02:06:47 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 02:07:43 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 03:48:39 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:01:55 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:02:53 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:09:06 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:13:02 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:20:57 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:21:21 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:21:45 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 04:22:20 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:53:48 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:53:48 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:53:49 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:53:49 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:53:49 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 05:54:31 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 07:02:14 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 07:54:51 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 07:56:27 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 07:57:49 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
+[16-Sep-2014 08:06:41 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/shaastra/public_html/2015/production/projects/main/php/scripts/login.php on line 21
