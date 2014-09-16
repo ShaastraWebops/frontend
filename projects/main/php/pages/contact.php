@@ -236,7 +236,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Evolve
+											Lectures </br>
+                                            and </br>
+                                            Exhibitions
 										</span>
 									</span>
 								</span>
@@ -262,7 +264,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											QMS
+											Quality </br>
+                                            Management </br>
+                                            Systems
 										</span>
 									</span>
 								</span>
