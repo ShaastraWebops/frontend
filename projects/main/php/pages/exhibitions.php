@@ -57,7 +57,7 @@
 					<div id="navbarCollapse" class="collapse navbar-collapse"> 
 						<ul id="menu-nav" class="nav nav-pills nav-justified">
 							<li class="active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
-							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">CFI</a></li>
+<!--							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">CFI</a></li>-->
 							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Magic Materials</a></li>
 							<!-- <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li> -->
 						</ul>
@@ -101,6 +101,7 @@
 			</div>
 		</div>
 
+<!--
 		<div class="page" id="page2">
 			<div class="container-fluid white centered">
 		        <div class="row">
@@ -121,6 +122,7 @@
 				</div>
 			</div>
 		</div>
+-->
 		
 		<div class="page" id="page3">
 			<div class="container-fluid white centered">
