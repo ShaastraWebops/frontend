@@ -315,7 +315,7 @@
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
                         <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) { ?>
                             <textarea name="data" id='data' style='min-height : 100px;' class="black">
-                                echo $data;
+                                <?php echo $data; ?>
                             </textarea>
                         <?php //} else { ?>
                             <!-- <h2>Please contact webops to edit this.</h2> -->
