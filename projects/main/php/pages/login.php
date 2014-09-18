@@ -295,9 +295,9 @@
                     </a>
                 </div>
             </div>
-            <div class="row row-centered">
+            <div class="row row-centered hidden">
                 <div class="col-md-4 text-center col-centered">
-                    <a class="social-icon google" href="<?php echo $ERP_SITE_URL; ?>login/google?type=participant">
+                    <a class="social-icon google" href="<?php echo $ERP_SITE_URL; ?>login/google-oauth2?type=participant">
                         <span class="text">Login using Google</span>
                     </a>
                 </div>
