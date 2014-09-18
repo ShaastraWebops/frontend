@@ -13,6 +13,9 @@
         if ( isset($_REQUEST['event']) ) {
             $event = $_REQUEST['event'];
             $event_path = $category_path . '/' . $event;
+            
+            $notifications_path = $event_path . '/notifications.txt';  //for marquee
+            
         if (!is_dir($event_path)) { // Invalid event
             header('Location: ../pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
@@ -74,6 +77,7 @@
             }
         } else {
             $data = file_get_contents($tab_path);
+            $notifications_data = file_get_contents($notifications_path);   //for marquee
         }
 
         if ($editable && $data == '') { // empty file, show help
@@ -165,6 +169,7 @@
                             foreach(scandir($event_path) as $file) {
                                 if ( '.' === $file ) continue;
                                 if ( '..' === $file ) continue;
+                                if ('notifications.txt' === $file ) continue;  //for marquee
                                 $filetab = str_replace('.html', '', $file);
                                 ?>
                                 <li class="default <?php if ($file == $tab . '.html') echo 'active'; ?>" >
@@ -297,6 +302,14 @@
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
+                <!-- for marquee start -->
+                <form method="post" action="../scripts/save_to_notifications.php">
+                    <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                    <textarea name="marquee" id="marquee">
+                        <?php echo $notifications_data; ?>
+                    </textarea>
+                </form>    
+                <!-- for marquee end -->
                 <form method="post" action='../scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
@@ -310,6 +323,11 @@
                     </div>
                 </form>
                 <?php } else { ?>
+                <!-- for marquee start -->
+                <marquee bgcolor="" vspace="10px" direction="left">
+                    <div><?php echo $notifications_data; ?></div>
+                </marquee>
+                <!-- for marquee end -->
                 <div class='data col-xs-8 col-xs-offset-2'>
                     <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
                         //eval($data);
@@ -376,6 +394,7 @@
         }
         $(document).ready(function() {
             CKEDITOR.inline('data')
+            CKEDITOR.replace('marquee') //for marquee
             $(window).bind('keydown', function(event) {
                 if (event.ctrlKey || event.metaKey) {
                     var letter = String.fromCharCode(event.which).toLowerCase();
