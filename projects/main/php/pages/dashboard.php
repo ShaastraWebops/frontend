@@ -118,7 +118,7 @@
                     <!-- Tab panes -->
                     <div class="tab-content col-md-12">
                         <div class="tab-pane active col-md-8 col-md-offset-2" id="profile" style="">
-                            <form method="POST" action="<?php echo $ERP_SITE_URL; ?>api/mobile/profile/">
+                            <form method="POST">
                                 <div class="container-fluid">
                                     <div class="row" style="padding-bottom: 1em;">
                                         <div class="col-md-12" style="font-size:1.2em;text-align:center;vertical-align:middle">
@@ -519,7 +519,7 @@
                     e.preventDefault();
                     var $el = $(this)
                     var json_info = {
-                        'name' : $el.find('.name')
+                        //'name' : $el.find('.name')
                     }
                     $el.find('.form').each(function(i, el) {
                         var $el = $(el);
@@ -536,8 +536,7 @@
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
                         chache: false,
-                        data: json_info,
-                        processData: false
+                        data: json_info
                     }).done(function(res) {
                         data = res['data']
                         console.log(data)
