@@ -300,14 +300,23 @@
                 <form method="post" action='../scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
-                        <textarea name="data" id='data' style='min-height : 100px;'>
-                            <?php echo $data; ?>
-                        </textarea>
+                        <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) { ?>
+                            <textarea name="data" id='data' style='min-height : 100px;' class="black">
+                                echo $data;
+                            </textarea>
+                        <?php //} else { ?>
+                            <!-- <h2>Please contact webops to edit this.</h2> -->
+                        <?php //} ?>
                     </div>
                 </form>
                 <?php } else { ?>
                 <div class='data col-xs-8 col-xs-offset-2'>
-                    <?php echo $data; ?>
+                    <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
+                        //eval($data);
+                    //} 
+                    //else { 
+                        echo $data; 
+                    //} ?>
                 </div>
                 <?php } ?>
             </div>
@@ -320,7 +329,9 @@
     <?php include '../modules/iitm.php' ?>
     <?php include '../modules/event_rightbar.php'; ?>
 
-    <?php if ( $editable ) { // The fns to send data ?>
+    <?php if ( $editable 
+        //&& !strtolower(substr($tab, 2)) == "registration" 
+        ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>

@@ -18,7 +18,7 @@ $_SESSION['last_name'] = $_REQUEST['last_name'];
 $_SESSION['email'] = $_REQUEST['email'];
 
 //header('Location: ../pages/dashboard.php')
-if ( isset($_REQUEST['social']) {
+if ( isset($_REQUEST['redirect']) ) {
 	header('Location: ../pages/dashboard.php');
 }
 else {
