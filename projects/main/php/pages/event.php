@@ -143,6 +143,12 @@
             .navbar-inverse .navbar-brand:hover {
                 color: #eee;
             }
+            marquee p {
+                display: inline-block;
+            }
+            marquee p:before {
+                content: "•"
+            }
         </style>
     </head>
 
@@ -196,6 +202,24 @@
                 </ul>
             </div>
             <!-- <div contenteditable="true">Hello</div> -->
+                
+            <?php if (isset($editable) && $editable) { ?>
+                <!-- for marquee start -->
+                <form method="post" action="../scripts/save_to_file.php">
+                    <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                    <textarea name="data" id="marquee">
+                        <?php echo $notifications_data; ?>
+                    </textarea>
+                </form>    
+                <!-- for marquee end -->
+            <?php } else if ($notifications_data != "") { ?>
+                <!-- for marquee start -->
+                <marquee bgcolor="" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    <!-- <div><?php echo $notifications_data; ?></div> -->
+                    <div><?php echo str_replace(array("<br>", "<br/>", "<br />"), 'a', $notifications_data); ?></div>
+                </marquee>
+                <!-- for marquee end -->
+            <?php } ?>
         </div>
     </div>
     <!-- / TABBAR -->
@@ -298,18 +322,10 @@
     <?php } ?>
 
     <!-- MAIN CONTENT OF A TAB -->
-    <div class="main-content" style='margin:75px 75px 75px 75px; min-height : 80%'>
+    <div class="main-content" style='margin:125px 75px 75px 75px; min-height : 80%'>
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
-                <!-- for marquee start -->
-                <form method="post" action="../scripts/save_to_notifications.php">
-                    <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
-                    <textarea name="marquee" id="marquee">
-                        <?php echo $notifications_data; ?>
-                    </textarea>
-                </form>    
-                <!-- for marquee end -->
                 <form method="post" action='../scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
@@ -323,11 +339,6 @@
                     </div>
                 </form>
                 <?php } else { ?>
-                <!-- for marquee start -->
-                <marquee bgcolor="" vspace="10px" direction="left">
-                    <div><?php echo $notifications_data; ?></div>
-                </marquee>
-                <!-- for marquee end -->
                 <div class='data col-xs-8 col-xs-offset-2'>
                     <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
                         //eval($data);
@@ -394,7 +405,7 @@
         }
         $(document).ready(function() {
             CKEDITOR.inline('data')
-            CKEDITOR.replace('marquee') //for marquee
+            CKEDITOR.inline('marquee') //for marquee
             $(window).bind('keydown', function(event) {
                 if (event.ctrlKey || event.metaKey) {
                     var letter = String.fromCharCode(event.which).toLowerCase();
