@@ -152,8 +152,8 @@
                                                 <option>F</option>
                                             </select>
                                             <div class="col-sm-2 head">Age</div>
-                                            <div class="col-sm-3 label" name="branch"></div>
-                                            <input class="col-sm-3 form" name="branch" type="text" placeholder="" required />
+                                            <div class="col-sm-3 label" name="age"></div>
+                                            <input class="col-sm-3 form" name="age" type="text" placeholder="" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">College Name</div>
@@ -163,7 +163,7 @@
                                         <div class="row">
                                             <div class="col-sm-4 head">Roll No</div>
                                             <div class="col-sm-8 label" name="college_roll"></div>
-                                            <input class="col-sm-8 form" name="college_roll" type="text" placeholder="eg: EP12B001" required />
+                                            <input class="col-sm-8 form" name="college_roll" type="text" placeholder="eg: EP12B001" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Branch</div>
@@ -329,6 +329,7 @@
             var teams = Array();
             
             function toggle_form(e) {
+                e.preventDefault()
                 if($('#profile .form').css('display') == 'none') {
                     $("#profile .edit").html('View Profile');
                     $('#profile .label').hide()
@@ -345,7 +346,6 @@
                     if ($lab.length)
                         $el.val($lab.text())
                 })
-                e.preventDefault()
             }
             function pad(n, width, z) {
                 z = z || '0';
@@ -516,6 +516,7 @@
                     })
                 })
                 $('#profile form').submit(function(e) {
+                    e.preventDefault();
                     var $el = $(this)
                     var json_info = {
                         'name' : $el.find('.name')
@@ -535,17 +536,18 @@
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
                         chache: false,
-                        data: json_info
+                        data: json_info,
+                        processData: false
                     }).done(function(res) {
                         data = res['data']
-                        //console.log(data)
-                        window.location.href = window.location.origin + window.location.pathname + "?first_name=" + data.first_name + "&last_name=" + data.last_name
+                        console.log(data)
+                        // window.location.href = window.location.origin + window.location.pathname + "?first_name=" + data.first_name + "&last_name=" + data.last_name
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })
-                    e.preventDefault();
                 })
                 $('#events form').submit(function(e) {
+                    e.preventDefault();
                     var $el = $(this)
                     // var json_info = {}
                     // $el.find('.form').each(function(i, el) {
@@ -571,7 +573,6 @@
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })
-                    e.preventDefault();
                 })
             })
             function init_profile() {
