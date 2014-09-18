@@ -295,9 +295,9 @@
                     </a>
                 </div>
             </div>
-            <div class="row row-centered">
+            <div class="row row-centered hidden">
                 <div class="col-md-4 text-center col-centered">
-                    <a class="social-icon google" href="<?php echo $ERP_SITE_URL; ?>login/google?type=participant">
+                    <a class="social-icon google" href="<?php echo $ERP_SITE_URL; ?>login/google-oauth2?type=participant">
                         <span class="text">Login using Google</span>
                     </a>
                 </div>
@@ -439,9 +439,10 @@
                     'email' : data['email'],
                     'user_id' : data['user_id'],
                     'token' : data['token']
-                }).done(function() { // Logged into php and django, go to dash
+                }).done(function(data) { // Logged into php and django, go to dash
                     window.location.href = "../pages/dashboard.php"
-                    //alert('login')
+                    // alert('login')
+                    // console.log(data)
                 }).fail(function() { // php error
                     var $el = $('.error-msg').show().find('.text')
                     $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> COntact : <a href="mailto:webops@shaastra.org">webops@shaastra.org</a>')
@@ -477,8 +478,8 @@
                     'user_id' : data['user_id'],
                     'token' : data['token']
                 }).done(function(data) { // Logged into php and django, go to dash
-                    //window.location.href = "../pages/dashboard.php"
-                    console.log(data)
+                    window.location.href = "../pages/dashboard.php"
+                    //console.log(data)
                 }).fail(function() { // php error
                     var $el = $('.error-msg').show().find('.text')
                     $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> COntact : <a href="mailto:webops@shaastra.org">webops@shaastra.org</a>')
