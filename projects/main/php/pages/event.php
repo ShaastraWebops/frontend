@@ -354,9 +354,12 @@
     <!-- END MAIN CONTENT OF A TAB -->
 
     <?php include '../base/foot.php' ?>
-    <?php include '../modules/social.php' ?>
     <?php include '../modules/iitm.php' ?>
     <?php include '../modules/event_rightbar.php'; ?>
+    <?php if ( $event == "Symposium" ) {
+        $facebook = "https://www.facebook.com/iitm.internationalsymposium";
+    }?>
+    <?php include '../modules/social.php' ?>
 
     <?php if ( $editable 
         //&& !strtolower(substr($tab, 2)) == "registration" 
