@@ -4,6 +4,22 @@
 		<title>Shaastra '15</title>
 
 		<?php include '../base/head.php'; ?>
+        
+ <!-- for notif start -->       
+    <?php 
+        if ( isset($_REQUEST['edit']) ) {
+            $editable = 1;
+        }
+        else {
+            $editable = 0;   
+        }
+        
+            $notifications_data = file_get_contents('../pages/homeNotif.txt');  
+            $notifications_path = '../pages/homeNotif.txt';
+    ?>
+        
+ <!-- for notif end -->    
+        
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -201,13 +217,48 @@
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 				}
 			}
+            #notifications_display {
+                z-index: 1000;
+                top: 5%;
+            }
+            #notifications_display p {
+                display: block;   
+            }
+            #notifications_display p:before {
+                content: "•" 
+            }
 		</style>
 	</head>
 
-	<body>
+	<body> 
+    <!-- for notif start -->    
+     <?php if (isset($editable) && $editable) { ?>
+	   <?php include '../base/menu.php'; ?>
+        <div class="col-xs-10 col-xs-offset-1">
+            <form method="post" action="../scripts/save_to_file.php">
+                <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                <textarea name="data" id="notif">
+                    <?php echo $notifications_data; ?>
+                </textarea>
+            </form>   
+        </div>
+    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>    
+    <script>
+        $(document).ready(function() {
+           CKEDITOR.replace('notif'); 
+        });
+    </script>    
+   <!-- for notif end -->
+
+        
+<?php } else { ?>
 	<?php include '../base/menu.php'; ?>
 
-	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
+    <div id="notifications_display" class="col-xs-4 col-xs-offset-1" onmouseover="notifStop()" onmouseout="notifStart()">
+        <?php echo $notifications_data; ?>
+    </div>    
+
+    <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
 				<span class="vertical-table">
@@ -339,8 +390,15 @@
 		</div>
 	</div>
 	<?php include '../base/foot.php'; ?>
+
+        
 	<script>
 		$(document).ready(function() {
+        //for notif start    
+            $notifications_fade = setInterval(function() {
+                                    $('#notifications_display').fadeToggle(500);
+                                }, 700);
+        // for notif end    
 			$('.notif').click(function() {
 
 			})
@@ -988,5 +1046,7 @@
 			});
 		}
 		</script>
+<?php } ?>
+        
 	</body>
 </html>
