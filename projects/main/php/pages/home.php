@@ -222,7 +222,7 @@
 		</div>
 	</div>
 	<div id="canvas" class="hidden-xs">
-		
+
 	</div>
 	<div id="page" class="container-fluid white text-center">
 		<div id="main-logo" class="logo container-fluid">
@@ -314,8 +314,8 @@
 		<?php include '../modules/iitm.php'; ?>
 		<?php include '../modules/home_rightbar.php'; ?>
 	</div>
-		
-	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">	
+
+	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">
 		<div class="modal-dialog black">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -324,9 +324,9 @@
 				</div>
 				<div class="modal-body">
 					<ul>
-						<li> 
-							Hi 
-							<span class="label label-danger">New</span> 
+						<li>
+							Hi
+							<span class="label label-danger">New</span>
 						</li>
 						<li>
 						</li>
@@ -373,7 +373,7 @@
 				// GL is there and not mobile
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.")
-				setInterval(function() { 
+				setInterval(function() {
 					$('.help .text').fadeToggle(500)
 				}, 700)
 
@@ -435,7 +435,7 @@
 						// 	//	dice.geometry.cannon_shape, _this.dice_body_material);
 						// 	dice.body = new CANNON.RigidBody(that.dice_mass,
 						// 		that.dice_geometry.cannon_shape, _this.dice_body_material);
-						
+
 						that.dice_material = new THREE.MeshFaceMaterial(
 							that.create_dice_materials(that.dice_face_labels2, that.scale, that.scale/5));
 
@@ -555,7 +555,7 @@
 						}
 
 						//this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
-						this.dice_face_labels = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
+						this.dice_face_labels = [' ', '0', '2_', '2_', '2_', '2_', '2', '2'];
 						this.dice_face_labels2 = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
 
 						this.create_dice_materials = function(face_labels, size, margin) {
