@@ -1,0 +1,6 @@
+AuthName "htaccess password prompt"
+AuthType Basic
+AuthUserFile /home/shaastra/public_html/2015/production/secure/.htpasswd
+<Files "event.edit.php">
+Require valid-user
+</Files>
