@@ -32,10 +32,13 @@ CKEDITOR.plugins.add( 'savebtn', {
                 })
                 .done(function(response) {
                     console.log(response);
-                    if (response.msg == 'error')
-                        alert('There\'s a problem and we cannot save your data ! Copy all the info so you dont lose it, and contact the webops team');
-                    else
+                    if (response.msg == 'error') {
+                        alert('There\'s a problem and we cannot save your data ! Copy all the info so you dont lose it, and contact the webops team if it persists. (PS : Try refreshing once)');
+                    }
+                    else {
                         alert('Saved successfully !');
+                    }
+                        
 
                 })
                 .fail(function() {

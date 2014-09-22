@@ -105,7 +105,7 @@
 			<a href="../pages/eventlist.php?category=Department+Flagship"><span class="text">Department Flagship</span> <span class="glyphicon-md glyphicon glyphicon-flag"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/eventlist.php?category=Design+and+Build"><span class="text">Design And Build</span> <span class="glyphicon-md glyphicon glyphicon-phone-alt"></span></a>
+			<a href="../pages/eventlist.php?category=Design+and+Build"><span class="text">Design And Build</span> <span class="glyphicon-md glyphicon glyphicon-cog"></span></a>
 		</li>
 		<li class="line hidden-xs">
 			<a href="../pages/eventlist.php?category=Electronics+Fest"><span class="text">Electronics Fest</span> <span class="glyphicon-md glyphicon glyphicon-flash"></span></a>

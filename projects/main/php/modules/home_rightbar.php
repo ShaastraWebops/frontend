@@ -85,10 +85,18 @@
 <div class="container-fluid right-menu">
 	<ul class="row">
 		<li class="line hidden-xs">
-			<a href="../pages/login.php"><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
+			<?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
+				<a href="../pages/dashboard.php"><span class="text">Dashboard</span> <span class="glyphicon-md glyphicon glyphicon-tasks"></span></a>
+			<?php } else { ?>
+				<a href="../pages/login.php"><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
+			<?php } ?>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
+			<?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
+				<a href="../scripts/logout.php"><span class="text">Logout</span> <span class="glyphicon-md glyphicon glyphicon-remove"></span></a>
+			<?php } else { ?>
+				<a href="../pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
+			<?php } ?>
 		</li>
 		<li class="line hidden-xs">
 			<a href="../pages/hospi.php"><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>

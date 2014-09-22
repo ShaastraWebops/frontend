@@ -236,7 +236,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Evolve
+											Lectures </br>
+                                            and </br>
+                                            Exhibitions
 										</span>
 									</span>
 								</span>
@@ -262,7 +264,9 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											QMS
+											Quality </br>
+                                            Management </br>
+                                            Systems
 										</span>
 									</span>
 								</span>
@@ -319,7 +323,7 @@
 
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-1">
-								<button class="btn btn-lg btn-primary" style="margin-top: 2%" data-toggle="modal" data-target="#comments">
+								<button class="btn btn-lg btn-primary" style="margin-top: 2%; outline: none" data-toggle="modal" data-target="#comments">
 									Could not find what you are looking for?
 								</button>
 							</div>
@@ -374,8 +378,8 @@
 					</form>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary" style="outline: none">Submit</button>
 					</div>
 				</div>
 			</div>
@@ -410,7 +414,7 @@
 					</div>
 
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -469,7 +473,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -494,13 +498,13 @@
 								</p>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
-									E-Mail : trshivaprasad@gmail.com
+									E-Mail : shiva@shaastra.org
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -533,7 +537,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -579,7 +583,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -598,7 +602,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Vedant Trivedi</h4>
+									<h4>VEDANT TRIVEDI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9677152600
@@ -611,7 +615,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Kishore Kothandram</h4>
+									<h4>KISHORE KOTHANDARAMAN</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9487917918
@@ -625,7 +629,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -644,7 +648,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Abhishek Sharma</h4>
+									<h4>ABHISHEK SHARMA</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9940116444
@@ -657,7 +661,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Mayank Singh</h4>
+									<h4>MAYANK SINGH</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9500171039
@@ -671,7 +675,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -690,7 +694,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>Dhruva</h4>
+									<h4>DHRUVA KATREKAR</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 9962303153 
@@ -704,7 +708,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -723,7 +727,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>VINAY </h4>
+									<h4>VINAY CHITTETI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 7845604564
@@ -736,7 +740,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>NAVEEN</h4>
+									<h4>NAVEEN VELLIMUTTAM</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 99632305052
@@ -750,7 +754,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -782,7 +786,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<h4>YASHWANTH VALEDI</h4>
+									<h4>YASHWANTH VELIDI</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
 										Contact : 8754532969
@@ -796,7 +800,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="outline: none" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>

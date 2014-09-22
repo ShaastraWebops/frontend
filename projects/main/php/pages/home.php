@@ -167,42 +167,10 @@
 				-o-transition: all 300ms ease-in-out;
 				transition: all 300ms ease-in-out;
 			}
-			.notif {
-				display: none;
-			}
-			.notif .glyphicon {
-				width: 1em;
-				height: 1em;
-				background-color: #ddd;
-				color: #000;
-				border-radius: 0.5em;
-				font-family: "Times New Roman", sans-serif;
-				font-size: 1em;
-				line-height: 1em;
-			}
-			.notif .text {
-				font-size: 0.5em;
-				line-height: 1em;
-				opacity: 0;
-			}
-			.notif:hover {
-				text-decoration: none;
-				color: #fff;
-			}
-			.notif:hover .text {
-				opacity: 1;
-			}
-			.notif:hover .glyphicon {
-				background-color: #000;
-				background-color: rgba(255, 255, 255, 0.2);
-				border: 1px solid #fff;
-				color: #fff;
-			}
 			@media (min-width: 768px) {
 				#page .ngon-row {
 					height: 25%;
 				}
-
 				#page .ngon-row .text:hover {
 					letter-spacing: 0.2em;
 					font-size: 2em;
@@ -232,21 +200,12 @@
 					background: radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 				}
-				.notif {
-					position: absolute;
-					right: 0.25em;
-					top: 0.25em;
-					z-index: 5;
-					display: inline-block;
-					cursor: pointer;
-					font-size: 3em;
-				}
 			}
 		</style>
 	</head>
 
 	<body>
-		<?php include '../base/menu.php'; ?>
+	<?php include '../base/menu.php'; ?>
 
 	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
@@ -263,7 +222,7 @@
 		</div>
 	</div>
 	<div id="canvas" class="hidden-xs">
-		
+
 	</div>
 	<div id="page" class="container-fluid white text-center">
 		<div id="main-logo" class="logo container-fluid">
@@ -280,6 +239,7 @@
 								</div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
+								<div class="dates">3<sup>rd</sup> to 6<sup>th</sup> January</div>
 							</div>
 						</span>
 					</span>
@@ -333,7 +293,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra</a>
+						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br/> Activities</a>
 					</span>
 				</span>
 			</div>
@@ -350,16 +310,12 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<!-- <a class="notif" data-toggle="modal" data-target="#notif-modal"  role="button">
-			<span class="text">Notifications</span>
-			<span class="glyphicon glyphicon-info-sig">i</span>
-		</a> -->
 		<?php include '../modules/social.php'; ?>
 		<?php include '../modules/iitm.php'; ?>
 		<?php include '../modules/home_rightbar.php'; ?>
 	</div>
-		
-	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">	
+
+	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">
 		<div class="modal-dialog black">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -368,9 +324,9 @@
 				</div>
 				<div class="modal-body">
 					<ul>
-						<li> 
-							Hi 
-							<span class="label label-danger">New</span> 
+						<li>
+							Hi
+							<span class="label label-danger">New</span>
 						</li>
 						<li>
 						</li>
@@ -417,7 +373,7 @@
 				// GL is there and not mobile
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.")
-				setInterval(function() { 
+				setInterval(function() {
 					$('.help .text').fadeToggle(500)
 				}, 700)
 
@@ -479,7 +435,7 @@
 						// 	//	dice.geometry.cannon_shape, _this.dice_body_material);
 						// 	dice.body = new CANNON.RigidBody(that.dice_mass,
 						// 		that.dice_geometry.cannon_shape, _this.dice_body_material);
-						
+
 						that.dice_material = new THREE.MeshFaceMaterial(
 							that.create_dice_materials(that.dice_face_labels2, that.scale, that.scale/5));
 
@@ -599,7 +555,7 @@
 						}
 
 						//this.dice_face_labels = [' ', '0', '1', '2', '3', '4', '5', '6'];
-						this.dice_face_labels = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
+						this.dice_face_labels = [' ', '0', '2_', '2_', '2_', '2_', '2', '2'];
 						this.dice_face_labels2 = [' ', '0', '2_', '2_', '2_', '2_', '2_', '2'];
 
 						this.create_dice_materials = function(face_labels, size, margin) {

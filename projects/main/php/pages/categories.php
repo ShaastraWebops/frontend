@@ -49,8 +49,8 @@
             color: #fff;
             font-size: 1.5em;
             font-weight: 900;
-            font-family: "Times New Roman", sans-serif;
-            /*font-family: "Helvetica", sans-serif;*/
+            /*font-family: "Times New Roman", sans-serif;*/
+            font-family: "Helvetica", sans-serif;
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
@@ -264,11 +264,6 @@
                 -moz-transform: rotate(60deg);
             }
         }
-        .animation.sampark>svg#samparkMap{
-            -webkit-transform: scale(0.8);
-               -moz-transform: scale(0.8);
-                    transform: scale(0.8);
-        }
     </style>
 </head>
 <body>
@@ -295,6 +290,7 @@
             unset($event_list[array_search('.', $event_list)]);
             unset($event_list[array_search('..', $event_list)]);
             unset($event_list[array_search('Sampark', $event_list)]);
+            unset($event_list[array_search('Others', $event_list)]);
             unset($event_list[array_search('sample.html', $event_list)]);
             $event_row_count = 5;
             $event_count = count($event_list);

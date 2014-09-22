@@ -1,7 +1,7 @@
 <?php
 $data = stripslashes( $_REQUEST['data'] ) ;
 $file_name = $_REQUEST['filename'];
- 
+// echo $file_name;
 $fp = fopen ($file_name, "w+");
 if ( !$fp ) {
     echo json_encode(array(

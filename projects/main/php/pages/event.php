@@ -133,6 +133,12 @@
             iframe {
                 max-width: 100%;
             }
+            .navbar-inverse .navbar-brand {
+                color: #fff;
+            }
+            .navbar-inverse .navbar-brand:hover {
+                color: #eee;
+            }
         </style>
     </head>
 
@@ -150,7 +156,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand title" style="letter-spacing: 0.1em" href=''><?php echo $event; ?></a>
+                    <a class="navbar-brand title white" style="letter-spacing: 0.1em" href=''><?php echo $event; ?></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -292,16 +298,25 @@
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
                 <form method="post" action='../scripts/save_to_file.php'>
-                    <div class='data col-md-offset-2 col-md-8'>
-                        <input type='hidden' name='filename' value='<?php echo $tab_path; ?>' />
-                        <textarea name="data" id='data' style='min-height : 100px;'>
-                            <?php echo $data; ?>
-                        </textarea>
+                    <div class='data col-xs-8 col-xs-offset-2'>
+                        <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
+                        <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) { ?>
+                            <textarea name="data" id='data' style='min-height : 100px;' class="black">
+                                echo $data;
+                            </textarea>
+                        <?php //} else { ?>
+                            <!-- <h2>Please contact webops to edit this.</h2> -->
+                        <?php //} ?>
                     </div>
                 </form>
                 <?php } else { ?>
-                <div class='data col-md-offset-2 col-md-8'>
-                    <?php echo $data; ?>
+                <div class='data col-xs-8 col-xs-offset-2'>
+                    <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
+                        //eval($data);
+                    //} 
+                    //else { 
+                        echo $data; 
+                    //} ?>
                 </div>
                 <?php } ?>
             </div>
@@ -314,7 +329,9 @@
     <?php include '../modules/iitm.php' ?>
     <?php include '../modules/event_rightbar.php'; ?>
 
-    <?php if ( $editable ) { // The fns to send data ?>
+    <?php if ( $editable 
+        //&& !strtolower(substr($tab, 2)) == "registration" 
+        ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>
@@ -330,7 +347,7 @@
                 $('#edit_modal').find('.newname').val('New Tab');
                 $('#edit_modal').find('.oldpriority').val('');
                 $('#edit_modal').find('.newpriority').val(0);
-                $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+                $('#edit_modal').find('.dirname').val("<?php echo $event_path; ?>")
                 $('#edit_modal').addClass('newtab')
             } else {
                 $(k).find('h3').html("Edit Tab");
@@ -341,7 +358,7 @@
                 $('#edit_modal').find('.newname').val(oldname);
                 $('#edit_modal').find('.oldpriority').val(oldpriority);
                 $('#edit_modal').find('.newpriority').val(oldpriority);
-                $('#edit_modal').find('.dirname').val('<?php echo $event_path; ?>')
+                $('#edit_modal').find('.dirname').val("<?php echo $event_path; ?>")
                 console.log($('#edit_modal').find('.taburl'));
                 $('#edit_modal').find('.taburl').prop('href', "<?php
                     if ($editable) {
