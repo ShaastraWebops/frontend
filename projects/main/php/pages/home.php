@@ -219,10 +219,11 @@
 			}
             #notifications_display {
                 z-index: 1000;
-                top: 5%;
+                top: 3%;
             }
             #notifications_display p {
-                display: block;   
+            	position: absolute; 
+            	display: none;
             }
             #notifications_display p:before {
                 content: "•" 
@@ -231,30 +232,10 @@
 	</head>
 
 	<body> 
-    <!-- for notif start -->    
-     <?php if (isset($editable) && $editable) { ?>
-	   <?php include '../base/menu.php'; ?>
-        <div class="col-xs-10 col-xs-offset-1">
-            <form method="post" action="../scripts/save_to_file.php">
-                <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
-                <textarea name="data" id="notif">
-                    <?php echo $notifications_data; ?>
-                </textarea>
-            </form>   
-        </div>
-    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>    
-    <script>
-        $(document).ready(function() {
-           CKEDITOR.replace('notif'); 
-        });
-    </script>    
-   <!-- for notif end -->
 
-        
-<?php } else { ?>
 	<?php include '../base/menu.php'; ?>
 
-    <div id="notifications_display" class="col-xs-4 col-xs-offset-1" onmouseover="notifStop()" onmouseout="notifStart()">
+    <div id="notifications_display" class="col-xs-4 col-xs-offset-10">
         <?php echo $notifications_data; ?>
     </div>    
 
@@ -391,17 +372,27 @@
 	</div>
 	<?php include '../base/foot.php'; ?>
 
-        
+    <!-- for notif start -->    
+     <?php if (isset($editable) && $editable) { ?>
+        <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
+            <form method="post" action="../scripts/save_to_file.php">
+                <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                <textarea name="data" id="notif">
+                    <?php echo $notifications_data; ?>
+                </textarea>
+            </form>   
+        </div>
+    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>    
+    <script>
+        $(document).ready(function() {
+           CKEDITOR.inline('notif'); 
+        });
+    </script>    
+   <!-- for notif end -->
+
+<?php } else { ?>        
 	<script>
 		$(document).ready(function() {
-        //for notif start    
-            $notifications_fade = setInterval(function() {
-                                    $('#notifications_display').fadeToggle(500);
-                                }, 700);
-        // for notif end    
-			$('.notif').click(function() {
-
-			})
 			var asa; var canvas; var dcanvas; var gl; var expmt;
 
 			var canvas = $('<canvas></canvas>');
@@ -1046,6 +1037,38 @@
 			});
 		}
 		</script>
+		<!-- for notif start -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			num_of_children = $("div#notifications_display p").length;
+			if(num_of_children == 1) {
+		    	myFunc1($("div#notifications_display p:nth-child(1)"));
+			}
+			else {
+				myFuncN($("div#notifications_display p:nth-child(1)"));
+			}
+    	});
+		function myFuncN(oEle) {
+			oEle.fadeIn('fast');
+	       	oEle.delay(2000).fadeOut('fast', function(){
+    	        if (oEle.next().length) {
+               		oEle.next().fadeIn(500, function(){
+                   	myFuncN(oEle.next());
+                	});
+            	}	
+           		else
+               		oEle.siblings(":first").fadeIn(500, function(){
+               		myFuncN(oEle.siblings(":first"));
+               		});
+        		});
+		}    	
+		function myFunc1(oEle) {
+			oEle.fadeIn('fast');
+			oEle.delay(1000).fadeOut('fast').delay(500);
+			myFunc1(oEle);
+		}
+		</script>
+		<!-- for notif end -->
 <?php } ?>
         
 	</body>
