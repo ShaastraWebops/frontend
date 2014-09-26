@@ -4,6 +4,22 @@
 		<title>Shaastra '15</title>
 
 		<?php include '../base/head.php'; ?>
+
+ <!-- for notif start -->
+    <?php
+        if ( isset($_REQUEST['edit']) ) {
+            $editable = 1;
+        }
+        else {
+            $editable = 0;
+        }
+
+            $notifications_data = file_get_contents('../misc/home_notifications.txt');
+            $notifications_path = '../misc/home_notifications.txt';
+    ?>
+
+ <!-- for notif end -->
+
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -201,13 +217,43 @@
 					background: -webkit-radial-gradient(50% 30%, circle, #3A3A3A, #101010, #0A0A0A);
 				}
 			}
+            #notifications_display {
+                z-index: 1000;
+                top: 3%;
+            }
+            #notifications_display p {
+            	position: absolute;
+            	display: none;
+                font-weight: 600;
+                padding-right: 1em;
+                text-align: center;
+            }
+            #notifications_display p:before {
+                content: ""
+            }
+            .cke_button_icon.cke_button__savebtn_icon {
+                width : 70px;
+                background-position:right !important;
+            }
+            .cke_button_icon.cke_button__savebtn_icon:after {
+                content:'Save';
+            }
+            .cke_editable {
+                border: 1px solid #fff;
+            }
+
 		</style>
 	</head>
 
 	<body>
+
 	<?php include '../base/menu.php'; ?>
 
-	<div id="fallback" class="container-fluid hidden hidden-xs text-center" >
+    <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
+        <?php echo $notifications_data; ?>
+    </div>
+
+    <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
 				<span class="vertical-table">
@@ -293,7 +339,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br/> Activities</a>
+						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
 					</span>
 				</span>
 			</div>
@@ -339,11 +385,28 @@
 		</div>
 	</div>
 	<?php include '../base/foot.php'; ?>
+
+    <!-- for notif start -->
+     <?php if (isset($editable) && $editable) { ?>
+        <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
+            <form method="post" action="../scripts/save_to_file.php">
+                <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                <textarea name="data" id="notif">
+                    <?php echo $notifications_data; ?>
+                </textarea>
+            </form>
+        </div>
+    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
+    <script>
+        $(document).ready(function() {
+           CKEDITOR.inline('notif');
+        });
+    </script>
+   <!-- for notif end -->
+
+<?php } else { ?>
 	<script>
 		$(document).ready(function() {
-			$('.notif').click(function() {
-
-			})
 			var asa; var canvas; var dcanvas; var gl; var expmt;
 
 			var canvas = $('<canvas></canvas>');
@@ -988,5 +1051,39 @@
 			});
 		}
 		</script>
+		<!-- for notif start -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			num_of_children = $("div#notifications_display p").length;
+			if(num_of_children == 1) {
+		    	myFunc1($("div#notifications_display p:nth-child(1)"));
+			}
+			else {
+				myFuncN($("div#notifications_display p:nth-child(1)"));
+			}
+    	});
+		function myFuncN(oEle) {
+			oEle.fadeIn('fast');
+	       	oEle.delay(2000).fadeOut('fast', function(){
+    	        if (oEle.next().length) {
+               		oEle.next().fadeIn(500, function(){
+                   	myFuncN(oEle.next());
+                	});
+            	}
+           		else
+               		oEle.siblings(":first").fadeIn(500, function(){
+               		myFuncN(oEle.siblings(":first"));
+               		});
+        		});
+		}
+		function myFunc1(oEle) {
+			oEle.fadeIn('fast');
+			oEle.delay(1000).fadeOut('fast').delay(500);
+			myFunc1(oEle);
+		}
+		</script>
+		<!-- for notif end -->
+<?php } ?>
+
 	</body>
 </html>

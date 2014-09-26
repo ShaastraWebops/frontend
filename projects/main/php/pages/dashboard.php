@@ -617,22 +617,24 @@
                     data: {'action_for' : 'all'},
                 }).done(function(res) {
                     var data = res['data']
+                    $('#events .event-msg').html('You have not registered to any events :(')
                     if ( data.length == 0 ) { // no teams
                         $('#events .event-msg').html('You have not registered to any events :(')
                     } else {
-                        $('#events .event-msg').hide()
-                        
                         $.each(data, function(key, val) {
                             console.log(val)
                             var is_mine = false;
                             var team_id = -1;
-                            if ( val.users_registered.indexOf(<?php echo $_SESSION['user_id'] ?>) > -1 )
+                            if ( val.users_registered.indexOf(<?php echo $_SESSION['user_id'] ?>) > -1 ) {
                                 is_mine = true
+                                $('#events .event-msg').hide()
+                            }
                             else {
                                 for( var i = 0; i < val.teams_registered.length; i++ ) {
                                     if ( teams.indexOf(val.teams_registered[i]) > -1 ) {
                                         is_mine = true
                                         team_id = val.teams_registered[i]
+                                        $('#events .event-msg').hide()
                                         break;
                                     }
                                 }
@@ -693,6 +695,8 @@
                             })
                             $('#events .current .template').after($el)
                         })
+                        if ( events.
+                            $('#events .event-msg').html('You have not registered to any events :(')
                     }
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) { // error

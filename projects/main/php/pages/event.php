@@ -13,6 +13,9 @@
         if ( isset($_REQUEST['event']) ) {
             $event = $_REQUEST['event'];
             $event_path = $category_path . '/' . $event;
+
+            $notifications_path = $event_path . '/notifications.txt';  //for marquee
+
         if (!is_dir($event_path)) { // Invalid event
             header('Location: ../pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
@@ -65,7 +68,7 @@
                     $tab = $tab_list[0];
                     $tab_path = $event_path . '/' . $tab . '.html';
                 }
-                //$fp = fopen($tab_path, "w"); 
+                //$fp = fopen($tab_path, "w");
                 //fclose($fp); // Create new file
                 $data = '';
             } else { // invalid page - tell user it is 404 not found
@@ -74,6 +77,7 @@
             }
         } else {
             $data = file_get_contents($tab_path);
+            $notifications_data = file_get_contents($notifications_path);   //for marquee
         }
 
         if ($editable && $data == '') { // empty file, show help
@@ -139,6 +143,12 @@
             .navbar-inverse .navbar-brand:hover {
                 color: #eee;
             }
+            marquee p {
+                display: inline-block;
+            }
+            marquee p:before {
+                content: "•"
+            }
         </style>
     </head>
 
@@ -165,6 +175,7 @@
                             foreach(scandir($event_path) as $file) {
                                 if ( '.' === $file ) continue;
                                 if ( '..' === $file ) continue;
+                                if ('notifications.txt' === $file ) continue;  //for marquee
                                 $filetab = str_replace('.html', '', $file);
                                 ?>
                                 <li class="default <?php if ($file == $tab . '.html') echo 'active'; ?>" >
@@ -191,6 +202,24 @@
                 </ul>
             </div>
             <!-- <div contenteditable="true">Hello</div> -->
+
+            <?php if (isset($editable) && $editable) { ?>
+                <!-- for marquee start -->
+                <form method="post" action="../scripts/save_to_file.php">
+                    <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
+                    <textarea name="data" id="marquee">
+                        <?php echo $notifications_data; ?>
+                    </textarea>
+                </form>
+                <!-- for marquee end -->
+            <?php } else if ($notifications_data != "") { ?>
+                <!-- for marquee start -->
+                <marquee bgcolor="" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    <!-- <div><?php echo $notifications_data; ?></div> -->
+                    <div><?php echo str_replace(array("<br>", "<br/>", "<br />"), 'a', $notifications_data); ?></div>
+                </marquee>
+                <!-- for marquee end -->
+            <?php } ?>
         </div>
     </div>
     <!-- / TABBAR -->
@@ -293,7 +322,7 @@
     <?php } ?>
 
     <!-- MAIN CONTENT OF A TAB -->
-    <div class="main-content" style='margin:75px 75px 75px 75px; min-height : 80%'>
+    <div class="main-content" style='margin:125px 75px 75px 75px; min-height : 80%'>
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
@@ -302,7 +331,7 @@
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
                         <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) { ?>
                             <textarea name="data" id='data' style='min-height : 100px;' class="black">
-                                echo $data;
+                                <?php echo $data; ?>
                             </textarea>
                         <?php //} else { ?>
                             <!-- <h2>Please contact webops to edit this.</h2> -->
@@ -313,9 +342,9 @@
                 <div class='data col-xs-8 col-xs-offset-2'>
                     <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
                         //eval($data);
-                    //} 
-                    //else { 
-                        echo $data; 
+                    //}
+                    //else {
+                        echo $data;
                     //} ?>
                 </div>
                 <?php } ?>
@@ -325,12 +354,15 @@
     <!-- END MAIN CONTENT OF A TAB -->
 
     <?php include '../base/foot.php' ?>
-    <?php include '../modules/social.php' ?>
     <?php include '../modules/iitm.php' ?>
     <?php include '../modules/event_rightbar.php'; ?>
+    <?php if ( $event == "Symposium" ) {
+        $facebook = "https://www.facebook.com/iitm.internationalsymposium";
+    }?>
+    <?php include '../modules/social.php' ?>
 
-    <?php if ( $editable 
-        //&& !strtolower(substr($tab, 2)) == "registration" 
+    <?php if ( $editable
+        //&& !strtolower(substr($tab, 2)) == "registration"
         ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
@@ -376,6 +408,7 @@
         }
         $(document).ready(function() {
             CKEDITOR.inline('data')
+            CKEDITOR.inline('marquee') //for marquee
             $(window).bind('keydown', function(event) {
                 if (event.ctrlKey || event.metaKey) {
                     var letter = String.fromCharCode(event.which).toLowerCase();
