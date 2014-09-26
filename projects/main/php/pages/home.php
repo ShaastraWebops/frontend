@@ -4,22 +4,22 @@
 		<title>Shaastra '15</title>
 
 		<?php include '../base/head.php'; ?>
-        
- <!-- for notif start -->       
-    <?php 
+
+ <!-- for notif start -->
+    <?php
         if ( isset($_REQUEST['edit']) ) {
             $editable = 1;
         }
         else {
-            $editable = 0;   
+            $editable = 0;
         }
-        
-            $notifications_data = file_get_contents('../pages/homeNotif.txt');  
-            $notifications_path = '../pages/homeNotif.txt';
+
+            $notifications_data = file_get_contents('../misc/home_notifications.txt');
+            $notifications_path = '../misc/home_notifications.txt';
     ?>
-        
- <!-- for notif end -->    
-        
+
+ <!-- for notif end -->
+
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -222,22 +222,36 @@
                 top: 3%;
             }
             #notifications_display p {
-            	position: absolute; 
+            	position: absolute;
             	display: none;
+                font-weight: 600;
+                padding-right: 1em;
+                text-align: center;
             }
             #notifications_display p:before {
-                content: "•" 
+                content: ""
             }
+            .cke_button_icon.cke_button__savebtn_icon {
+                width : 70px;
+                background-position:right !important;
+            }
+            .cke_button_icon.cke_button__savebtn_icon:after {
+                content:'Save';
+            }
+            .cke_editable {
+                border: 1px solid #fff;
+            }
+
 		</style>
 	</head>
 
-	<body> 
+	<body>
 
 	<?php include '../base/menu.php'; ?>
 
-    <div id="notifications_display" class="col-xs-4 col-xs-offset-10">
+    <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
-    </div>    
+    </div>
 
     <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
@@ -254,7 +268,7 @@
 		</div>
 	</div>
 	<div id="canvas" class="hidden-xs">
-		
+
 	</div>
 	<div id="page" class="container-fluid white text-center">
 		<div id="main-logo" class="logo container-fluid">
@@ -325,7 +339,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br/> Activities</a>
+						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
 					</span>
 				</span>
 			</div>
@@ -346,8 +360,8 @@
 		<?php include '../modules/iitm.php'; ?>
 		<?php include '../modules/home_rightbar.php'; ?>
 	</div>
-		
-	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">	
+
+	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">
 		<div class="modal-dialog black">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -356,9 +370,9 @@
 				</div>
 				<div class="modal-body">
 					<ul>
-						<li> 
-							Hi 
-							<span class="label label-danger">New</span> 
+						<li>
+							Hi
+							<span class="label label-danger">New</span>
 						</li>
 						<li>
 						</li>
@@ -372,7 +386,7 @@
 	</div>
 	<?php include '../base/foot.php'; ?>
 
-    <!-- for notif start -->    
+    <!-- for notif start -->
      <?php if (isset($editable) && $editable) { ?>
         <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
             <form method="post" action="../scripts/save_to_file.php">
@@ -380,17 +394,17 @@
                 <textarea name="data" id="notif">
                     <?php echo $notifications_data; ?>
                 </textarea>
-            </form>   
+            </form>
         </div>
-    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>    
+    <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
     <script>
         $(document).ready(function() {
-           CKEDITOR.inline('notif'); 
+           CKEDITOR.inline('notif');
         });
-    </script>    
+    </script>
    <!-- for notif end -->
 
-<?php } else { ?>        
+<?php } else { ?>
 	<script>
 		$(document).ready(function() {
 			var asa; var canvas; var dcanvas; var gl; var expmt;
@@ -422,7 +436,7 @@
 				// GL is there and not mobile
 				console.log("loading webgl content.");
 				$('.help .text').text("Click and drag anywhere to play with the dice.")
-				setInterval(function() { 
+				setInterval(function() {
 					$('.help .text').fadeToggle(500)
 				}, 700)
 
@@ -484,7 +498,7 @@
 						// 	//	dice.geometry.cannon_shape, _this.dice_body_material);
 						// 	dice.body = new CANNON.RigidBody(that.dice_mass,
 						// 		that.dice_geometry.cannon_shape, _this.dice_body_material);
-						
+
 						that.dice_material = new THREE.MeshFaceMaterial(
 							that.create_dice_materials(that.dice_face_labels2, that.scale, that.scale/5));
 
@@ -1055,13 +1069,13 @@
                		oEle.next().fadeIn(500, function(){
                    	myFuncN(oEle.next());
                 	});
-            	}	
+            	}
            		else
                		oEle.siblings(":first").fadeIn(500, function(){
                		myFuncN(oEle.siblings(":first"));
                		});
         		});
-		}    	
+		}
 		function myFunc1(oEle) {
 			oEle.fadeIn('fast');
 			oEle.delay(1000).fadeOut('fast').delay(500);
@@ -1070,6 +1084,6 @@
 		</script>
 		<!-- for notif end -->
 <?php } ?>
-        
+
 	</body>
 </html>

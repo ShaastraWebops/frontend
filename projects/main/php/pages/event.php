@@ -13,9 +13,9 @@
         if ( isset($_REQUEST['event']) ) {
             $event = $_REQUEST['event'];
             $event_path = $category_path . '/' . $event;
-            
+
             $notifications_path = $event_path . '/notifications.txt';  //for marquee
-            
+
         if (!is_dir($event_path)) { // Invalid event
             header('Location: ../pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
@@ -68,7 +68,7 @@
                     $tab = $tab_list[0];
                     $tab_path = $event_path . '/' . $tab . '.html';
                 }
-                //$fp = fopen($tab_path, "w"); 
+                //$fp = fopen($tab_path, "w");
                 //fclose($fp); // Create new file
                 $data = '';
             } else { // invalid page - tell user it is 404 not found
@@ -202,7 +202,7 @@
                 </ul>
             </div>
             <!-- <div contenteditable="true">Hello</div> -->
-                
+
             <?php if (isset($editable) && $editable) { ?>
                 <!-- for marquee start -->
                 <form method="post" action="../scripts/save_to_file.php">
@@ -210,7 +210,7 @@
                     <textarea name="data" id="marquee">
                         <?php echo $notifications_data; ?>
                     </textarea>
-                </form>    
+                </form>
                 <!-- for marquee end -->
             <?php } else if ($notifications_data != "") { ?>
                 <!-- for marquee start -->
@@ -342,9 +342,9 @@
                 <div class='data col-xs-8 col-xs-offset-2'>
                     <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
                         //eval($data);
-                    //} 
-                    //else { 
-                        echo $data; 
+                    //}
+                    //else {
+                        echo $data;
                     //} ?>
                 </div>
                 <?php } ?>
@@ -361,8 +361,8 @@
     }?>
     <?php include '../modules/social.php' ?>
 
-    <?php if ( $editable 
-        //&& !strtolower(substr($tab, 2)) == "registration" 
+    <?php if ( $editable
+        //&& !strtolower(substr($tab, 2)) == "registration"
         ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
