@@ -145,9 +145,11 @@
             }
             marquee p {
                 display: inline-block;
+                margin: 0 3em;
             }
             marquee p:before {
-                content: "•"
+                content: "•";
+                margin-right: 0.5em;
             }
         </style>
     </head>
