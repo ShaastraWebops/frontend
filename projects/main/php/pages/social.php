@@ -52,34 +52,54 @@
 	            </div>
 	        </div>
 	    </div>
-    <div class="row">
+    <!--<div class="row">
     	<div class="col-xs-8 col-xs-offset-2 comingSoon">
     		<h2 class="text-center" style="margin-top: 10%;">
     			Under Construction
 			</h2>
     	</div>
-    </div>
+    </div>-->
 
-		<!-- <div class="container-fluid" style="padding-top : 1em">
-			<div class="row row-centered">
-				<div class="col-md-4 col-centered align-top">
-					<div class="well well-custom">
-						<h4 class="text-center">Pledge a Book</h4>
-						<p class="text-justify">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-centered align-top">
-					</div>	
-				</div>
-			</div>
-		</div> -->
+	  <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <center><h2 class="featurette-heading">Pledge-A-Book<br><span class="text-muted">A social event</span></h2></center>
+          <p class="lead">The Pledge-A-Book campaign is Shaastra's attempt to give back to society and to create impact in the fields of education and literacy.<br>This campaign aims to collect books which are donated by patrons of Shaastra, and use these books to set up libraries for underprivileged students. <br>The campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. Since then, there have been several collection drives within the campus, including one at the Terry Fox Run Chennai, all of which have received a great response.<br> 
+Shaastra has already confirmed associations with well-known NGO the Indian Development Foundation, and Avanti Fellows, and other associations are in the pipeline. The books collected through the campaign are being used to set up libraries for underprivileged students at IDF's Bal Gurukuls, as well as at Avanti Fellows' Learning Centres.<br> The Pledge-A-Book campaign is our humble attempt at bringing change and helping design the dreams of the young. We would appreciate your support in this initiative.<br> Join us, and help be the change!<br></p>
+        </div>
+        <div class="col-md-5">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=" class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=" class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500">
+        </div>
+        <div class="col-md-7">
+          <center><h2 class="featurette-heading">The past<!--<span class="text-muted">See for yourself.</span></h2>--></center>
+          <p class="lead">Shaastra 2014's motto was "Breaking Boundaries", and to this regard, a number of initiatives were taken up and executed. Among them were movements like Computer Literacy For All, Intellectual Property Rights Awareness Drive, Ideas Challenge and Shaastra Sparsh.<br> <b>Computer Literacy For All</b>, expanded from its successful 2013 edition, was a movement that aimed at productively dealing with e-waste. The computers collected by the institute were serviced and subsequently distributed in a school in the college's rural neighborhood. <b>The Intellectual Property Rights Awareness Drive</b> was an initiative aimed at spreading awareness about IPR and copyright protection among the youth through fun initiatives such as quizzes and competitions. <b>Ideas Challenge</b> was a competition where participants attempted to solve socially-relevant problem statements suggested by NGOs and RuTAG using their technical skills and engineering knowledge. <b>Shaastra Sparsh</b> was a movement that associated with schools in Chennai, aimed at interacting with younger children.<br> In addition to such wholly independent initiatives, a number of events at Shaastra are themed with relevant social issues in the backdrop. Events which have sustainable development and environment-friendly issues as their central theme are a rapidly evolving genre at Shaastra. For example, Shaastra 2014 had <b>Sustainable Cityscape</b> as a key event. <b>Shaastra Symposium</b>, a key event in any iteration of Shaastra, serves as a platform for rigourous debate on relevant social issues. For example, Shaastra 2013 Symposium discussed "Education and Governance", Shaastra 2014's symposium was on "Agriculture in India".<br></p>
+		  <style>
+			padding-left: 50px;
+		  </style>
+		</div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#"style="margin-right: 50px;">Back to top</a></p>
+        <center><p><a href="#" >Shaastra</a> . <a href="#" >Donate</a></p></center>
+      </footer>
+	<!-- /END OF FOOTER -->
 
 		<?php include '../base/foot.php' ?>
 		
