@@ -52,14 +52,13 @@
 	            </div>
 	        </div>
 	    </div>
-    <div class="row">
+    <!--<div class="row">
     	<div class="col-xs-8 col-xs-offset-2 comingSoon">
     		<h2 class="text-center" style="margin-top: 10%;">
     			Under Construction
 			</h2>
     	</div>
-    </div>
-
+    </div>-->
 	<style>
 		#feature {
 			padding-left: 50px;
