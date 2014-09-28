@@ -1,20 +1,16 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php
-        if ( isset($_REQUEST['category']) ) {
-            $category = $_REQUEST['category'];
-            $category_path = '../events/' . $category ;
-        }
-        if (!isset($category) || $category=="") { // No category given, redirect to categories page
-            header('Location: ../pages/categories.php');
-        }
-        if ( isset($_REQUEST['event']) ) {
-            $event = $_REQUEST['event'];
-            $event_path = $category_path . '/' . $event;
+<?php
+    if ( isset($_REQUEST['category']) ) {
+        $category = $_REQUEST['category'];
+        $category_path = '../events/' . $category ;
+    }
+    if (!isset($category) || $category=="") { // No category given, redirect to categories page
+        header('Location: ../pages/categories.php');
+    }
+    if ( isset($_REQUEST['event']) ) {
+        $event = $_REQUEST['event'];
+        $event_path = $category_path . '/' . $event;
 
-            $notifications_path = $event_path . '/notifications.txt';  //for marquee
+        $notifications_path = $event_path . '/notifications.txt';  //for marquee
 
         if (!is_dir($event_path)) { // Invalid event
             header('Location: ../pages/eventlist.php?category=' . urlencode($category));
@@ -29,14 +25,20 @@
             }
             $tab_list = array_values($tab_list);
         }
-        } else { // No event given, redirect to the corresponding eventlist page
-            header('Location: ../pages/eventlist.php?category=' . urlencode($category));
-        }
-        if ( isset($_REQUEST['tab']) ) {
-            $tab = $_REQUEST['tab'];
-            $tab_path = $event_path . '/' . $tab . '.html';
-        }
+    } else { // No event given, redirect to the corresponding eventlist page
+        header('Location: ../pages/eventlist.php?category=' . urlencode($category));
+    }
+    if ( isset($_REQUEST['tab']) ) {
+        $tab = $_REQUEST['tab'];
+        $tab_path = $event_path . '/' . $tab . '.html';
+    }
 
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php
 
         if ( isset($_REQUEST['edit']) ) {
             $editable = 1;
