@@ -169,7 +169,7 @@
                                             <div class="col-sm-4 head">Branch</div>
                                             <div class="col-sm-8 label" name="branch"></div>
                                             <!-- <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required /> -->
-                                            <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required >
+                                            <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering">
 
                                             </select>
                                         </div>
