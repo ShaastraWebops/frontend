@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+
         <title>Dashboard | Shaastra '15</title>
         <?php include '../base/head.php' ?>
         <style>
@@ -77,7 +77,7 @@
                 color: #4875B4;
                 z-index: 10;
                 padding: 8px;
-                cursor: pointer;        
+                cursor: pointer;
             }
         </style>
     </head>
@@ -102,7 +102,7 @@
             <div class="row row-centered">
                 <div class="alert alert-info alert-dismissible hidden error-msg col-md-10 col-centered" role="alert">
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <span class="bold head"></span> 
+                    <span class="bold head"></span>
                     <span class="text"></span>
                 </div>
             </div>
@@ -234,7 +234,7 @@
                                     <div class="panel panel-default template team">
                                         <div class="panel-heading">
                                             <h4 class="panel-title bold">
-                                                <a data-toggle="collapse" data-parent="#team-accordion" href="#team-accordion-no"> 
+                                                <a data-toggle="collapse" data-parent="#team-accordion" href="#team-accordion-no">
                                                     Team: <span class="name">Name</span>
                                                 </a>
                                                 <div class="btn-group pull-right">
@@ -245,7 +245,7 @@
                                         </div>
                                         <div id="team-accordion-no" class="panel-collapse collapse">
                                             <div class="panel-body content black ">
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -301,7 +301,7 @@
                                     <div class="panel panel-default template event">
                                         <div class="panel-heading">
                                             <h4 class="panel-title bold">
-                                                <a data-toggle="collapse" data-parent="#event-accordion" href="#event-accordion-no"> 
+                                                <a data-toggle="collapse" data-parent="#event-accordion" href="#event-accordion-no">
                                                     Event: <span class="name">Name</span>
                                                 </a>
                                                 <div class="btn-group pull-right">
@@ -312,7 +312,7 @@
                                         </div>
                                         <div id="event-accordion-no" class="panel-collapse collapse">
                                             <div class="panel-body content black ">
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -327,7 +327,7 @@
             var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');
             var events = Array();
             var teams = Array();
-            
+
             function toggle_form(e) {
                 e.preventDefault()
                 if($('#profile .form').css('display') == 'none') {
@@ -369,7 +369,7 @@
                 $('#teams .create .member').not('.first').not('.template').remove()
                 $('#teams .create [name=name]').val('')
                 //$('#teams .create .first [name=member]').val('')
-                
+
             }
             function team_edit(el) { // Edit team
                 var $el = $(el)
@@ -384,8 +384,8 @@
                     }
                     var $mem = team_create_add()
                     $mem.find('[name=member]').val($(val).text())
-                    
-                })               
+
+                })
             }
             function team_delete(el) {
                 var confirmation = confirm('Are you sure you want to delete the team ?')
@@ -478,7 +478,7 @@
                     window.location.hash = $el.attr('href').substr($el.attr('href').indexOf('#'))
                 })
                 hash = window.location.hash; // retrieve current hash value
-                if ( $(hash).length ) {
+                if ( hash != "#_=_" && $(hash).length ) {
                     console.log($('#dashboard-tabs a[href=' + hash + ']').length)
                     console.log(hash)
                     setTimeout(function() {
@@ -500,7 +500,7 @@
                     }
                     if ( $('#teams .create').data('id') )
                         json_info['id'] = $('#teams .create').data('id')
-                    
+
                     $.ajax({ // SEND POST INFO FOR TEAM
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/teams/",
@@ -651,41 +651,41 @@
                             $el.find('.content').html('')
                             if ( val.team_size_max > 1 ) {
                                 $el.data('team_event', true)
-                                $el.find('.content').html($el.find('.content').html() + 
+                                $el.find('.content').html($el.find('.content').html() +
                                     '<b>Team size</b> : ')
                                 if (val.team_size_min == val.team_size_max) {
-                                    $el.find('.content').html($el.find('.content').html() + 
+                                    $el.find('.content').html($el.find('.content').html() +
                                         $el.team_size_min + "<br />")
                                 } else {
                                     if ( val.team_size_min ) {
-                                        $el.find('.content').html($el.find('.content').html() + 
+                                        $el.find('.content').html($el.find('.content').html() +
                                             $el.team_size_min + " - ")
                                     }
-                                    $el.find('.content').html($el.find('.content').html() + 
+                                    $el.find('.content').html($el.find('.content').html() +
                                         $el.team_size_max + "<br />")
-                                    
+
                                 }
                             } else {
                                 $el.data('team_event', false)
                             }
 
                             if ( val.registration_ends ) {
-                                $el.find('.content').html($el.find('.content').html() + 
+                                $el.find('.content').html($el.find('.content').html() +
                                     '<b>Registration Ends</b> : ' + val.registration_ends + "<br />")
                             } else {
-                                $el.find('.content').html($el.find('.content').html() + 
+                                $el.find('.content').html($el.find('.content').html() +
                                     '<b>Registration Ends</b> : Not announced yet'  + "<br />")
                             }
                             if ( val.has_tdp ) {
-                                $el.find('.content').html($el.find('.content').html() + 
+                                $el.find('.content').html($el.find('.content').html() +
                                     '<b>TDP</b> : Required' + "<br />")
                             } else {
-                                $el.find('.content').html($el.find('.content').html() + 
+                                $el.find('.content').html($el.find('.content').html() +
                                     '<b>TDP</b> : None' + "<br />")
                             }
                             $el.find('#event-accordion-no').attr('id', 'event-accordion-' + key)
                             $el.find('.panel-title a').attr('href', '#event-accordion-' + key)
-                            
+
 
                             $el.find('.edit').click( function(e) {
                                 event_edit($(this))
@@ -695,7 +695,7 @@
                             })
                             $('#events .current .template').after($el)
                         })
-                        if ( events.
+                        if ( events.length == 0 )
                             $('#events .event-msg').html('You have not registered to any events :(')
                     }
                 }).fail(function(xhr) {
@@ -730,15 +730,15 @@
                         $.each(data, function(key, val) {
                             teams.push(val)
                             $('#events .register .team [name=team]').append('<option name="' + val.id + '">' + val.name + '</option>')
-                            
+
                             var $inp = $('#teams .current .template').clone().removeClass("template")
                             $inp.find('.name').html(val.name)
                             var members = val.members
 
                             $.each(members, function(key, val) {
-                                $inp.find('.content').html( $inp.find('.content').html() 
+                                $inp.find('.content').html( $inp.find('.content').html()
                                     + "<div class='col-md-12 member'>"
-                                    + "<b class='member_id'>SH15" + pad(val.id, 5, 0) + "</b> - " 
+                                    + "<b class='member_id'>SH15" + pad(val.id, 5, 0) + "</b> - "
                                     + "<span class='member_name'>" + val.first_name + " " + val.last_name + "</span>"
                                     //+ " - " + val.email
                                     + "</div>"
