@@ -334,11 +334,13 @@
                     $("#profile .edit").html('View Profile');
                     $('#profile .label').hide()
                     $('#profile .form').show()
+                    window.location.hash = "edit-profile"
                 }
                 else{
                     $("#profile .edit").html('Edit Profile');
                     $('#profile .label').show()
                     $('#profile .form').hide()
+                    window.location.hash = "profile"
                 }
                 $('#profile .form').each(function(i, el) {
                     var $el = $(el);
@@ -478,12 +480,17 @@
                     window.location.hash = $el.attr('href').substr($el.attr('href').indexOf('#'))
                 })
                 hash = window.location.hash; // retrieve current hash value
-                if ( hash != "#_=_" && $(hash).length ) {
-                    console.log($('#dashboard-tabs a[href=' + hash + ']').length)
-                    console.log(hash)
+                if ( hash ==  "#_=_" ) {
+
+                } else if ( hash == "#edit" ) {
+                    setTimeout(function() {
+                        $('#dashboard-tabs a[href="#profile"]').tab('show')
+                        toggle_form(); // and show form
+                    }, 500); // This is a random time - jugaad.
+                } else if ( $(hash).length ) {
                     setTimeout(function() {
                         $('#dashboard-tabs a[href="' + hash + '"]').tab('show')
-                    }, 500); // This si a random time - jugaad.
+                    }, 500); // This is a random time - jugaad.
                 }
 
                 $('#teams form').submit(function(e) {
@@ -594,7 +601,7 @@
                     if ( xhr.status == 500 ) { // error
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
-                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a>")
+                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code PROFILE_ERROR_500")
                         $el.hide().removeClass("hidden").slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
@@ -702,13 +709,13 @@
                     if ( xhr.status == 500 ) { // error
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
-                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a>")
+                        $el.find('.text').html("There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code EVENT_ERROR_500")
                         $el.hide().removeClass("hidden").slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
                         var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
                         $el.find('.head').html("Wait Up ! ")
-                        $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
+                        $el.find('.text').html("We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
                         $el.hide().removeClass("hidden").slideDown(500, toggle_form);
                         $('body').scrollTop(0)
                     }
@@ -769,7 +776,7 @@
                     if ( xhr.status == 500 ) { // error
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
-                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a>")
+                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAMS_ERROR_500")
                         $el.hide().removeClass("hidden").slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
