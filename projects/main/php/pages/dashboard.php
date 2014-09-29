@@ -492,6 +492,7 @@
                         $alert = $('.error-msg').removeClass('hidden')
                         $alert.find('.text').html("You have already registered for this event. If you wish to edit your entry, please click the '<b>edit</b>' button near the event name in <b>Your Current Events</b> list ")
                         $alert.find('.head').html("Note ")
+                        setTimeout(function() {$alert.fadeOut(500)}, 1000)
                         $el.find(':selected').removeAttr('selected')
                     }
 
@@ -597,8 +598,6 @@
                     //     json_info[$el.attr('name')] = $el.val()
                     // })
                     var json_info = new FormData($el[0]);
-                    console.log(json_info)
-                    console.log($el[0])
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/", //<?php echo $_SESSION['user_id']; ?>/",

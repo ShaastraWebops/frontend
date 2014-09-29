@@ -145,6 +145,10 @@
             .navbar-inverse .navbar-brand:hover {
                 color: #eee;
             }
+            .form {
+                margin: 0.2em 0;
+                color: black;
+            }
             marquee p {
                 display: inline-block;
                 margin: 0 3em;
@@ -346,23 +350,68 @@
     </div>
 
     <?php if ( $editable ) { ?>
-    <div>
+    <div class="container" id="event-info">
+        <div class="row row-centered">
+            <div class="col-md-5 col-centered">
+                <h3 class="centered"><span class="head">Event Information</span></h3>
+                <form role="form" action="" method="POST">
+                    <input type="hidden" name="name" class="form-control form" value="<?php echo $event ?>">
+                    <div class="form-group">
+                        <label for="team_max_size" class="col-md-4 member-label">Team Size (Min)</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <input type="number" name="team_size_min" class="form form-control" placeholder="" style="width: 5em" min="1" max="10" value="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="team_max_size" class="col-md-4 member-label">Team Size (Max)</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <input type="number" name="team_size_max" class="form form-control" placeholder="" style="width: 5em" min="1" max="10" value="1">
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="registration_starts" class="col-md-4 member-label">Registration Starts</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <input type="date" name="registration_starts" class="form-control form" placeholder="" required style="width: 15em">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registration_ends" class="col-md-4 member-label">Registration Ends</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <input type="date" name="registration_ends" class="form-control form" placeholder="" required style="width: 15em" value="">
+                        </div>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="has_tdp" class="col-md-4">TDP Submission Needed</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <select type="text" name="has_tdp" class="form form-control" required style="width: 10em">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="form-group row-centered">
+                        <button type="submit" class="btn btn-primary col-md-5 col-centered save" style="margin: 0.2em 0;">Save Submission</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-5 col-centered">
+            </div>
+        </div>
     </div>
     <?php } ?>
 
 
     <?php include '../base/foot.php' ?>
-    <?php include '../modules/iitm.php' ?>
+    <?php if ( ! $editable ) include '../modules/iitm.php'; ?>
     <?php include '../modules/event_rightbar.php'; ?>
     <?php if ( $event == "Symposium" ) {
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
     <?php include '../modules/social.php' ?>
 
-    <?php if ( $editable
-        //&& !strtolower(substr($tab, 2)) == "registration"
-        ) { // The fns to send data ?>
+    <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>
@@ -404,6 +453,26 @@
                 $('#edit_modal').removeClass('newtab')
             }
             $('#edit_modal').modal()
+        }
+        function submit_event_details() {
+            var $el = $('#event-info form')
+            var json_info = new FormData($el[0]);
+            $.ajax({ // SEND INFO FOR PROFILE
+                type: "POST",
+                url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                },
+                chache: false,
+                data: json_info,
+                contentType: false,
+                processData: false,
+            }).done(function(res) {
+                window.location.reload()
+            }).fail(function(xhr) {
+                console.log(xhr.status)
+                console.log(xhr)
+            })
         }
         $(document).ready(function() {
             CKEDITOR.inline('data')
