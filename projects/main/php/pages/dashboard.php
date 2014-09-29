@@ -137,7 +137,7 @@
                                             <div class="col-sm-4 label" name="first_name"><?php echo $_SESSION['first_name']; ?></div>
                                             <div class="col-sm-4 label" name="last_name"><?php echo $_SESSION['last_name']; ?></div>
                                             <input class="col-sm-4 form" name="first_name" type="text" placeholder="First Name" required />
-                                            <input class="col-sm-4 form" name="last_name" type="text" placeholder="Last Name" required />
+                                            <input class="col-sm-4 form" name="last_name" type="text" placeholder="Last Name" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Email id</div>
@@ -419,14 +419,16 @@
                 $('#events .register [name=name]').val('')
                 $('#events .register .team').hide()
                 $('#events .register .participant').show()
+                $('#events .register .tdp').show()
             }
             function event_edit(el) { // Edit team
                 var $el = $(el).closest('.event')
                 event_create_reset();
-                console.log(events.filter(customFilter({'id' : $el.data('event_id')}))[0].name)
-                $('#events .register [name=name]').val(events.filter(customFilter({'id' : $el.data('event_id')}))[0].name)
+                //console.log(events.filter(customFilter({'id' : $el.data('event_id')}))[0].name)
+                this_event = events.filter(customFilter({'id' : $el.data('event_id')}))[0]
+                $('#events .register [name=name]').val(this_event.name)
                 $('#events .register .head').html('Edit Event Registration')
-                if ( $el.data('team_event') ) {
+                if ( this_event.team_size_max > 1 ) { // Needs a Team
                     $('#events .register .team').show()
                     $('#events .register .participant').hide()
                     $('#events .register .team [name=name]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
@@ -434,19 +436,26 @@
                     $('#events .register .team').hide()
                     $('#events .register .participant').show()
                 }
+                if ( this_event.has_tdp ) { // Needs a TDP
+                    $('#events .register .tdp').show()
+                } else {
+                    $('#events .register .tdp').hide()
+                }
+
             }
             function event_delete(el) {
-                var confirmation = confirm('Are you sure you want to delete the team ?')
+                $el = $(el).closest('.event')
+                var confirmation = confirm('Are you sure you want to unregister from the event ?')
                 if (confirmation) {
-                    var $el = $(el);
                     json_info = {
-                        'action' : 'delete',
-                        'event_name' : '',
+                        'action' : 'unregister',
+                        'event_id' : $el.data('event_id'),
                         'user_id' : <?php echo $_SESSION['user_id']; ?>
                     }
+                    console.log(json_info)
                     $.ajax({ // SEND POST INFO FOR TEAM
                         type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/teams/",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
@@ -475,6 +484,33 @@
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
+
+                $('#events .register select[name=name]').change(function(ev) {
+                    $el = $(this)
+                    this_event = events.filter(customFilter({'id' : parseInt($el.find(":selected").attr('name'))}))
+                    if ( this_event.length && this_event[0].is_mine ) {
+                        $alert = $('.error-msg').removeClass('hidden')
+                        $alert.find('.text').html("You have already registered for this event. If you wish to edit your entry, please click the '<b>edit</b>' button near the event name in <b>Your Current Events</b> list ")
+                        $alert.find('.head').html("Note ")
+                        $el.find(':selected').removeAttr('selected')
+                    }
+
+                    if ( this_event.team_size_max > 1 ) { // Needs a Team
+                        $('#events .register .team').show()
+                        $('#events .register .participant').hide()
+                        $('#events .register .team [name=name]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
+                    } else {
+                        $('#events .register .team').hide()
+                        $('#events .register .participant').show()
+                    }
+                    if ( this_event.has_tdp ) { // Needs a TDP
+                        $('#events .register .tdp').show()
+                    } else {
+                        $('#events .register .tdp').hide()
+                    }
+
+                })
+
                 $('#dashboard-tabs a').click(function (e) {
                     var $el = $(this)
                     window.location.hash = $el.attr('href').substr($el.attr('href').indexOf('#'))
@@ -575,7 +611,10 @@
                         processData: false,
                     }).done(function(res) {
                         data = res['data']
-                        console.log(data)
+                        $alert = $('.error-msg').removeClass('hidden')
+                        $alert.find('.text').html("Your submission has been saved. The results will be declared soon. You can edit your by clicking the edit button")
+                        $alert.find('.head').html("Submitted")
+                        setTimeout(function() { window.location.reload() }, 500 )
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })
@@ -692,7 +731,6 @@
                             }
                             $el.find('#event-accordion-no').attr('id', 'event-accordion-' + key)
                             $el.find('.panel-title a').attr('href', '#event-accordion-' + key)
-
 
                             $el.find('.edit').click( function(e) {
                                 event_edit($(this))

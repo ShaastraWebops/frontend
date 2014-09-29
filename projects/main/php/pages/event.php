@@ -229,8 +229,7 @@
     </div>
     <!-- / TABBAR -->
 
-    <?php if ( $editable ) { // Modal used as form ?>
-    <!-- EDITABLE MODAL -->
+    <?php if ( $editable ) { ?>
     <div class="modal container-fluid fade" id='edit_modal'>
         <div class="modal-dialog black" style='width : 80%'>
             <div class="modal-content">
@@ -323,10 +322,8 @@
             </div>
         </div>
     </div>
-    <!-- /EDITABLE MODAL -->
     <?php } ?>
 
-    <!-- MAIN CONTENT OF A TAB -->
     <div class="main-content" style='margin:125px 75px 75px 75px; min-height : 80%'>
         <div class="container-fluid">
             <div class='row'>
@@ -334,29 +331,26 @@
                 <form method="post" action='../scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
-                        <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) { ?>
-                            <textarea name="data" id='data' style='min-height : 100px;' class="black">
-                                <?php echo $data; ?>
-                            </textarea>
-                        <?php //} else { ?>
-                            <!-- <h2>Please contact webops to edit this.</h2> -->
-                        <?php //} ?>
+                        <textarea name="data" id='data' style='min-height : 100px;' class="black">
+                            <?php echo $data; ?>
+                        </textarea>
                     </div>
                 </form>
                 <?php } else { ?>
                 <div class='data col-xs-8 col-xs-offset-2'>
-                    <?php //if ( strtolower(substr($tab, 2)) == "registration" && !$editable ) {
-                        //eval($data);
-                    //}
-                    //else {
-                        echo $data;
-                    //} ?>
+                    <?php echo $data; ?>
                 </div>
                 <?php } ?>
             </div>
         </div>
     </div>
-    <!-- END MAIN CONTENT OF A TAB -->
+
+    <?php if ( $editable ) { ?>
+    <div>
+
+    </div>
+    <?php } ?>
+
 
     <?php include '../base/foot.php' ?>
     <?php include '../modules/iitm.php' ?>
