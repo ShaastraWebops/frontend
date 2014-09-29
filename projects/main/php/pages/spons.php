@@ -53,7 +53,7 @@
 
     <script>
         $(document).ready(function() {
-        $('#tab0').load('../modules/tab.htm #Tab0');
+        $('#tab1').load('../modules/tab.htm #Tab1');
         $('.tabs .tab-links a').on('click', function(e)  {
             var currentAttrValue = $(this).attr('href');
             $('.tabs ' + currentAttrValue).show().siblings().hide();
@@ -101,10 +101,7 @@
             <div class="tabs col-md-10 col-md-offset-1">
                 <ul class="tab-links">
                     <li class="active">
-						<a href="#tab0">2015</a>
-					</li>
-					<li>
-                        <a href="#tab1" onclick="$('#tab1').load('../modules/tab.htm #Tab1');">2014</a>
+                        <a href="#tab1">2014</a>
                     </li>
                     <li>
                         <a href="#tab2" onclick="$('#tab2').load('../modules/tab.htm #Tab2');">2013</a>
@@ -117,9 +114,8 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab0" class="tab active"></div>
-                    <div id="tab1" class="tab"></div>
-					<div id="tab2" class="tab"></div>
+                    <div id="tab1" class="tab active"></div>
+                    <div id="tab2" class="tab"></div>
                     <div id="tab3" class="tab"></div>
                     <div id="tab4" class="tab"></div>
                 </div>
