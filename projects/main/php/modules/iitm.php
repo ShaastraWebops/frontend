@@ -41,10 +41,18 @@
     width: 75px;
     float: left;
 }
+.unesco-logo img {
+    height: 75px;
+    width: 75px;
+    float: right;
+}
 .iitm-logo:hover {
     padding: 0;
 }
 .tuv-logo:hover {
+    padding: 0;
+}
+.unesco-logo:hover {
     padding: 0;
 }
 .iitm-logo:hover img {
@@ -55,6 +63,10 @@
     height: 85px;
     width: 85px;
 }
+.unesco-logo:hover img {
+    height: 85px;
+    width: 85px;
+}
 </style>
 <div class="row logo-vertical row-centered hidden-sm">
     <a target="_blank" class="tuv-logo col-xs-6 col-centered" href="../pages/about.php">
@@ -62,5 +74,8 @@
     </a>
     <a target="_blank" class="iitm-logo col-xs-6 col-centered" href="http://www.iitm.ac.in">
         <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
+    </a>
+    <a target="_blank" class="unesco-logo col-xs-6 col-centered" href="http://www.unesco.org">
+        <img class="img-responsive" src="../../img/logo/unesco.png">
     </a>
 </div>
