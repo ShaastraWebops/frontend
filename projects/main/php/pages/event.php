@@ -350,7 +350,7 @@
     </div>
 
     <?php if ( $editable ) { ?>
-    <div class="container" id="event-info">
+    <div class="container hidden" id="event-info">
         <div class="row row-centered">
             <div class="col-md-5 col-centered">
                 <h3 class="centered"><span class="head">Event Information</span></h3>
@@ -461,7 +461,7 @@
                 type: "POST",
                 url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                    xhr.setRequestHeader('Authorization', "Token <?php ?>");
                 },
                 chache: false,
                 data: json_info,
