@@ -1,16 +1,16 @@
 <?php
     session_start();
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
-        header('Location: ../pages/dashboard.php');
+        header('Location: ../../php/pages/dashboard.php');
     } else {
-        //header('Location: ../pages/login.php');
+        //header('Location: ../../php/pages/login.php');
     }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Login | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <?php include '../../php/base/head.php' ?>
 
         <style>
             .my-tab {
@@ -252,11 +252,11 @@
                 color: #fff;
             }
             .inset-forgot-password {
-                position: absolute; 
-                bottom: 0; 
-                right: 0; 
-                color: #4875B4; 
-                z-index: 10; 
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: #4875B4;
+                z-index: 10;
                 padding: 8px;
                 cursor: pointer;
             }
@@ -265,7 +265,7 @@
     </head>
 
     <body>
-        <?php include '../base/menu.php' ?>
+        <?php include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
@@ -316,9 +316,9 @@
                         <button data-tab=".tab-login" type="button" class="my-tab-link active btn btn-primary btn-lg">Login</button>
                         <button data-tab=".tab-register" type="button" class="my-tab-link btn btn-primary btn-lg">Register</button>
                     </div>
-                    
+
                 </div>
-            </div>        
+            </div>
 
             <div class="row row-centered error-msg" style="padding: 1em; display: none;">
                 <div class="col-md-6 text-center col-centered">
@@ -340,7 +340,7 @@
                                 <input type="password" class="form-control password" placeholder="Password" required style="border-top-right-radius: 0px;border-bottom-right-radius: 4px;">
                                 <a data-tab=".tab-forgot" class="pull-right my-tab-link inset-forgot-password" >Forgot Password</a>
                             </div>
-                        </div>                    
+                        </div>
                         <button type="submit" class="btn btn-primary col-md-4 col-centered login-btn">Login</button>
                     </form>
                 </div>
@@ -363,7 +363,7 @@
                                 <span class="input-group-addon">@</span>
                                 <input type="email" class="form-control email" placeholder="Enter a valid email id" required>
                             </div>
-                        </div>                    
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Password</label>
                             <div class="input-group col-md-9">
@@ -385,7 +385,7 @@
                         <div class="form-group">
                             <label class="control-label hidden">Email address</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter a E-Mail id, Shaastra ID or Barcode" required>
-                        </div>                    
+                        </div>
                         <button type="submit" class="btn btn-darkest col-md-4 col-centered forgot-btn">Forgot Password</button>
                     </form>
                 </div>
@@ -393,14 +393,14 @@
 
         </div>
     </body>
-    <?php include '../base/foot.php' ?>
+    <?php include '../../php/base/foot.php' ?>
     <script>
     function toTitleCase(str) {
         return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     }
     function show_tab(iden) {
         if ( $(".my-tab " + iden).hasClass("active") ) {
-            return  
+            return
         }
         $(".my-tab").slideUp(500).removeClass("active");
         $(".my-tab" + iden).slideDown(500).addClass("active");
@@ -413,7 +413,7 @@
 
             $(".my-tab-link").removeClass("active")
             $el.addClass('active')
-        })  
+        })
         $('#login-form').submit(function(e) {
             var $el = $(this)
             // django login
@@ -433,14 +433,14 @@
                     }
                 }
             }).done(function(data) { // now php's turn
-                $.post('../scripts/login.php', {
+                $.post('../../php/scripts/login.php', {
                     'first_name' : data['first_name'],
                     'last_name' : data['last_name'],
                     'email' : data['email'],
                     'user_id' : data['user_id'],
                     'token' : data['token']
                 }).done(function(data) { // Logged into php and django, go to dash
-                    window.location.href = "../pages/dashboard.php"
+                    window.location.href = "../../php/pages/dashboard.php"
                     // alert('login')
                     // console.log(data)
                 }).fail(function() { // php error
@@ -471,14 +471,14 @@
                     }
                 }
             }).done(function(data) { // now php's turn
-                $.post('../scripts/login.php', {
+                $.post('../../php/scripts/login.php', {
                     'first_name' : data['first_name'],
                     'last_name' : data['last_name'],
                     'email' : data['email'],
                     'user_id' : data['user_id'],
                     'token' : data['token']
                 }).done(function(data) { // Logged into php and django, go to dash
-                    window.location.href = "../pages/dashboard.php"
+                    window.location.href = "../../php/pages/dashboard.php"
                     //console.log(data)
                 }).fail(function() { // php error
                     var $el = $('.error-msg').show().find('.text')

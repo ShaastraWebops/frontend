@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Hospitality | Shaastra '15</title>
-		<?php include '../base/head.php' ?>
+		<?php include '../../php/base/head.php' ?>
 
 		<style type="text/css">
 			.hospi_row > div {
@@ -22,9 +22,9 @@
 			}
 		</style>
 	</head>
-	
+
 	<body>
-		<?php include '../base/menu.php' ?>
+		<?php include '../../php/base/menu.php' ?>
 		<div class="container-fluid white centered">
 	        <div class="row">
 	            <div class="col-xs-12">
@@ -45,10 +45,10 @@
 					<div class="panel-group" id="hospi-accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab1"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab1">
                                 	<h4 class="panel-title bold">
                                         Introduction <span class="muted"> - Hope to see you at Shaastra 2015</span>
-                                   	</h4> 
+                                   	</h4>
                                 </a>
                             </div>
                             <div id="tab1" class="panel-collapse collapse">
@@ -62,10 +62,10 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab2"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab2">
                                 	<h4 class="panel-title bold">
                                         Reaching IITM <span class="muted"> - Find out how to get to Shaastra 2015 by Train, Plane, Car or even walking</span>
-                                	</h4>    
+                                	</h4>
                                 </a>
                             </div>
                             <div id="tab2" class="panel-collapse collapse">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab3"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab3">
                                 	<h4 class="panel-title bold">
                                         Hospi Desk <span class="muted"> </span>
                                 	</h4>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab4"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab4">
                                 	<h4 class="panel-title bold">
                                         Accomodation <span class="muted"> - Hope to see you at Shaastra 2015</span>
                                 	</h4>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab5"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab5">
                                 	<h4 class="panel-title bold">
                                         Frequently Asked Questions
                                 	</h4>
@@ -155,7 +155,7 @@
 
 		                            <b>What should I do after coming to the campus ?</b><br />
 		                            Outstation participants who have registered for accommodation are requested to report to the control room where the required formalities involving checking of documents and allotment of rooms will be finished. We shall not be providing accommodation for local participants. All the participants who are accommodated at IITM are supposed to collect their Shaastra ID Cards from the Student Relations team.<br /><br />
-		                            
+
 		                            <b>What should I bring with me ?</b><br />
 		                            <ul>
 		                                <li>It is mandatory for all participants or company representatives to carry college IDs or company IDs, and have a Xerox copy of each one of them.</li>
@@ -167,47 +167,47 @@
 		                            <br /><br />
 		                            <b>How is accommodation provided ?</b><br />
 		                            Accommodation to outstation participants will be provided if they have applied for accommodation on the Shaastra website and their accommodation has been approved by us. The rooms will be allotted on a sharing basis due to space constraints. We have common rooms, and single rooms for accommodation. We will be providing essential commodities like mattresses and pillows. The participants who have not been confirmed for accommodation are requested to arrange for their stay outside the Institute in Hotels or lodges. A list of Hotels and lodges in Chennai has been provided on the website.<br /><br />
-		                            
+
 		                            <b>Will all the team members be given accommodation at the same place ?</b><br />
 		                            We will strive for that but we cannot guarantee it.<br /><br />
-		                            
+
 		                            <b>What about the charges for accommodation ?</b><br />
 		                            A nominal payment will have to be made by participants for accommodation while registering at control room. Please note that in case some of your team members have not been confirmed for accommodation then the charges for accommodation will be applicable to only those team members who have been provided accommodation.<br /><br />
-		                            
+
 		                            <b>Can we adjust the remaining team members of our team in the space provided to us ?</b><br />
 		                            No, the members of your team who have not been provided accommodation cannot stay in your allotted rooms. They are requested to stay at nearby hotels or lodges outside the campus.<br /><br />
-		                            
+
 		                            <b>What about the eating facilities ?</b><br />
 		                            A variety of food stalls shall be set up in the heart of the festive area which will cater to all your food requirements. Apart from that, there are numerous other eating outlets in and around the campus like Cafe Coffee Day, IRCTC Canteen, Supraba Tiffin center, Campus Cafe, Gurunath canteen to name a few whose location would be available in the map. <br /><br />
-		                            
+
 		                            <b>What about the Hospital facility ?</b><br />
 		                            There is an Institute Hospital located close to Gajendra Circle. In case you fall ill, you are advised to report to us at control room. We shall make appropriate arrangements for you to be treated at the Institute Hospital.<br /><br />
-		                            
+
 		                            <b>What about the security facilities ?</b><br />
 		                            IITM campus has a vigilant and round-the-clock security service. To ensure the safety of the participants, there will be additional security guards in hostels in order to avoid thefts and other mishaps. However, the Shaastra team will not take responsibility of any theft or other mishaps. Therefore, participants are requested to take care of their belongings.<br /><br />
-		                            
+
 		                            <b>What about certificates and prize money ?</b><br />
 		                            For competitive events, certificates will be given only to the teams coming first, second and third. For major events all participants qualifying to the final round will be issued certificates. <br />
 		                            Participation certificates will not be given. Instead, a general letter of participation will be given to the participants. For more information, visit the certificate policy tab in the Shaastra website. The cash prize amount is event-specific and details can be found out by visiting the events page on the Shaastra website.<br /><br />
-		                            
+
 		                            <b>One of our team members who had been provided accommodation is unable to come, so can we replace him with our other team member ?</b><br />
 		                            First, kindly get approval for replacement of your old team member from the coordinator of the event in which your team member was supposed to participate. After consulting with the event coordinator we will inform you whether we will be able to accommodate your new team member. The new team member coming should have all the documents that the other member was supposed to have.<br /><br />
-		                            
+
 		                            <b>Are there ATMs inside the campus ?</b><br />
 		                            There are SBI, ICICI and Canara Bank ATMs and an SBI branch inside the campus. <br /><br />
-		                            
+
 		                            <b>Is there any internal transport keeping in mind the huge area of the campus ?</b><br />
 		                            Internal transportation is available inside the campus in the form of buses that are available at various bus stops located throughout the campus. <br /><br />
-		                            
+
 		                            <b>Will there be any kind of transportation facility from airport/railway station to IIT-M campus for participants ?</b><br />
 		                            Yes, we will be receiving participants from Chennai central via Institute buses several times a day. The Hospitality team will be there to greet you. The timings for the buses will be communicated later.<br /><br />
-		                        
+
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab6"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab6">
                                 	<h4 class="panel-title bold">
                                         Instructions
                                 	</h4>
@@ -228,7 +228,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab7"> 
+                                <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab7">
                                 	<h4 class="panel-title bold">
                                         Contact Us
                                 	</h4>
@@ -242,12 +242,9 @@
                         </div>
                     </div>
                 </div>
-            </div>                
+            </div>
 		</div>
-		<?php include '../base/foot.php' ?>
-		
-		<script type="text/javascript">
-			
-		</script>
+		<?php include '../../php/base/foot.php' ?>
+
 	</body>
 </html>

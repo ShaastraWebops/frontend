@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 
-header('Location: ../pages/home.php')
+header('Location: ../../php/pages/home.php')
 ?>

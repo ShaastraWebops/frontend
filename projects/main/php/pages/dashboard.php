@@ -1,9 +1,9 @@
 <?php
     session_start();
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
-        //header('Location: ../pages/dashboard.php');
+        //header('Location: ../../php/pages/dashboard.php');
     } else {
-        header('Location: ../pages/login.php');
+        header('Location: ../../php/pages/login.php');
     }
 
     if ( isset($_GET['first_name']) ) {
@@ -18,7 +18,7 @@
     <head>
 
         <title>Dashboard | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <?php include '../../php/base/head.php' ?>
         <style>
             #profile .row {
                 border-bottom: 1px solid #fff;
@@ -83,7 +83,7 @@
     </head>
 
     <body>
-        <?php include '../base/menu.php' ?>
+        <?php include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
@@ -124,7 +124,7 @@
                                         <div class="col-md-12" style="font-size:1.2em;text-align:center;vertical-align:middle">
                                             <button class="pull-left btn btn-info edit">Edit Profile</button>
                                             <span class="bold">Profile Details</span>
-                                            <a class="pull-right btn btn-info" href="../scripts/logout.php">Logout</a>
+                                            <a class="pull-right btn btn-info" href="../../php/scripts/logout.php">Logout</a>
                                         </div>
                                     </div>
                                     <div class="container-fluid">
@@ -842,5 +842,5 @@
             }
             </script>
     </body>
-    <?php include '../base/foot.php' ?>
+    <?php include '../../php/base/foot.php' ?>
 </html>

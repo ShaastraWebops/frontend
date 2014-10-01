@@ -1,10 +1,10 @@
 <?php
     if ( isset($_REQUEST['category']) ) {
         $category = $_REQUEST['category'];
-        $category_path = '../events/' . $category ;
+        $category_path = '../../php/events/' . $category ;
     }
     if (!isset($category) || $category=="") { // No category given, redirect to categories page
-        header('Location: ../pages/categories.php');
+        header('Location: ../../php/pages/categories.php');
     }
     if ( isset($_REQUEST['event']) ) {
         $event = $_REQUEST['event'];
@@ -13,7 +13,7 @@
         $notifications_path = $event_path . '/notifications.txt';  //for marquee
 
         if (!is_dir($event_path)) { // Invalid event
-            header('Location: ../pages/eventlist.php?category=' . urlencode($category));
+            header('Location: ../../php/pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
             $tab_list = scandir($event_path);
             foreach ($tab_list as $tab_i => $tab_file_name) {
@@ -26,7 +26,7 @@
             $tab_list = array_values($tab_list);
         }
     } else { // No event given, redirect to the corresponding eventlist page
-        header('Location: ../pages/eventlist.php?category=' . urlencode($category));
+        header('Location: ../../php/pages/eventlist.php?category=' . urlencode($category));
     }
     if ( isset($_REQUEST['tab']) ) {
         $tab = $_REQUEST['tab'];
@@ -52,7 +52,7 @@
                     $tab = '00Home';
                     $tab_path = $event_path . '/' . $tab . '.html';
                 } else { // No tab exists - tell user under construction and die.
-                    include '../pages/under_construction.php';
+                    include '../../php/pages/under_construction.php';
                     die();
                 }
             } else {
@@ -74,7 +74,7 @@
                 //fclose($fp); // Create new file
                 $data = '';
             } else { // invalid page - tell user it is 404 not found
-                include '../pages/404.php';
+                include '../../php/pages/404.php';
                 die();
             }
         } else {
@@ -83,11 +83,11 @@
         }
 
         if ($editable && $data == '') { // empty file, show help
-            $data = file_get_contents('../events/sample.html');
+            $data = file_get_contents('../../php/events/sample.html');
         }
         ?>
         <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <?php include '../../php/base/head.php' ?>
         <style>
             .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
                 background-image: url(../../img/icons/arrow.png);
@@ -163,7 +163,7 @@
 
     <body class=''>
 
-        <?php include '../base/menu.php'; ?>
+        <?php include '../../php/base/menu.php'; ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
@@ -214,7 +214,7 @@
 
             <?php if (isset($editable) && $editable) { ?>
                 <!-- for marquee start -->
-                <form method="post" action="../scripts/save_to_file.php">
+                <form method="post" action="../../php/scripts/save_to_file.php">
                     <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
                     <textarea name="data" id="marquee">
                         <?php echo $notifications_data; ?>
@@ -244,7 +244,7 @@
                     <h4 class="modal-title">Tab Properties</h4>
                 </div>
                 <div class="modal-body">
-                    <form action='../scripts/event.php' method='POST'>
+                    <form action='../../php/scripts/event.php' method='POST'>
                         <div class='container-fluid rename'>
                             <div class='row row-centered'>
                                 <div class='col-md-4 col-centered not-for-new'>
@@ -332,7 +332,7 @@
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
-                <form method="post" action='../scripts/save_to_file.php'>
+                <form method="post" action='../../php/scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
                         <textarea name="data" id='data' style='min-height : 100px;' class="black">
@@ -403,13 +403,13 @@
     <?php } ?>
 
 
-    <?php include '../base/foot.php' ?>
-    <?php if ( ! $editable ) include '../modules/iitm.php'; ?>
-    <?php include '../modules/event_rightbar.php'; ?>
+    <?php include '../../php/base/foot.php' ?>
+    <?php if ( ! $editable ) include '../../php/modules/iitm.php'; ?>
+    <?php include '../../php/modules/event_rightbar.php'; ?>
     <?php if ( $event == "Symposium" ) {
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
-    <?php include '../modules/social.php' ?>
+    <?php include '../../php/modules/social.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>

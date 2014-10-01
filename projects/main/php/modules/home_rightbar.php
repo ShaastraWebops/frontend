@@ -2,7 +2,7 @@
 	.right-menu {
 		display: none;
 	}
-	
+
 	@media (min-width: 768px) {
 	    .right-menu {
 			position: fixed;
@@ -45,7 +45,7 @@
 	    -moz-transition: all 300ms ease-in-out;
 	    -o-transition: all 300ms ease-in-out;
 	    transition: all 300ms ease-in-out;
-	    position: absolute; 
+	    position: absolute;
 	    opacity: 1;
 		overflow-x: hidden;
 		cursor: pointer;
@@ -86,29 +86,29 @@
 	<ul class="row">
 		<li class="line hidden-xs">
 			<?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
-				<a href="../pages/dashboard.php"><span class="text">Dashboard</span> <span class="glyphicon-md glyphicon glyphicon-tasks"></span></a>
+				<a href="../../php/pages/dashboard.php"><span class="text">Dashboard</span> <span class="glyphicon-md glyphicon glyphicon-tasks"></span></a>
 			<?php } else { ?>
-				<a href="../pages/login.php"><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
+				<a href="../../php/pages/login.php"><span class="text">Login</span> <span class="glyphicon-md glyphicon glyphicon-lock"></span></a>
 			<?php } ?>
 		</li>
 		<li class="line hidden-xs">
 			<?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
-				<a href="../scripts/logout.php"><span class="text">Logout</span> <span class="glyphicon-md glyphicon glyphicon-remove"></span></a>
+				<a href="../../php/scripts/logout.php"><span class="text">Logout</span> <span class="glyphicon-md glyphicon glyphicon-remove"></span></a>
 			<?php } else { ?>
-				<a href="../pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
+				<a href="../../php/pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
 			<?php } ?>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/hospi.php"><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>
+			<a href="../../php/pages/hospi.php"><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/spons.php"><span class="text">Sponsors</span> <span class="glyphicon-md glyphicon glyphicon-usd"></span></a>
+			<a href="../../php/pages/spons.php"><span class="text">Sponsors</span> <span class="glyphicon-md glyphicon glyphicon-usd"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/about.php"><span class="text">About Us</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
+			<a href="../../php/pages/about.php"><span class="text">About Us</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
 		</li>
 		<li class="line hidden-xs">
-			<a href="../pages/contact.php"><span class="text">Contact Us</span> <span class="glyphicon-md glyphicon glyphicon-phone-alt"></span></a>
+			<a href="../../php/pages/contact.php"><span class="text">Contact Us</span> <span class="glyphicon-md glyphicon glyphicon-phone-alt"></span></a>
 		</li>
 	</ul>
 </div>

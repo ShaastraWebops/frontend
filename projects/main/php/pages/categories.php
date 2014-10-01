@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <title>Events | Shaastra '15</title>
-    <?php include '../base/head.php' ?>
+    <?php include '../../php/base/head.php' ?>
     <style>
         #event-list {
             color: #fff;
@@ -220,7 +220,7 @@
             -webkit-transform-origin:center center;
                -moz-transform-origin:center center;
             -webkit-animation: tightenNut 1s ease-in-out 1s forwards;
-               -moz-animation: tightenNut 1s ease-in-out 1s forwards;            
+               -moz-animation: tightenNut 1s ease-in-out 1s forwards;
         }
         @-webkit-keyframes moveSpanner{
             0%{
@@ -267,7 +267,7 @@
     </style>
 </head>
 <body>
-    <?php include '../base/menu.php' ?>
+    <?php include '../../php/base/menu.php' ?>
     <div class="container-fluid white centered">
         <div class="row">
             <div class="col-xs-12">
@@ -286,7 +286,7 @@
     <div id="event-list" class="container-fluid">
         <?php
             $default_img = '../../img/logo/200x200_dice_white.png';
-            $event_list = scandir('../events');
+            $event_list = scandir('../../php/events');
             unset($event_list[array_search('.', $event_list)]);
             unset($event_list[array_search('..', $event_list)]);
             unset($event_list[array_search('Sampark', $event_list)]);
@@ -296,14 +296,14 @@
             $event_count = count($event_list);
             $event_i = 0;
             foreach ( $event_list as $event ) {
-                if (!is_dir('../events/' . $event)) continue;
-                
+                if (!is_dir('../../php/events/' . $event)) continue;
+
                 $event_img = '../../img/events/categories/' . strtolower(str_replace("'", "", $event)) . ".jpg";
                 if (!file_exists($event_img)) {
                     $event_img = $default_img;
                 }
         ?>
-            <?php if ( $event_i % $event_row_count == 0 ) { 
+            <?php if ( $event_i % $event_row_count == 0 ) {
                 ?>
                 <div class="row row-centered event-group
                 <?php
@@ -321,7 +321,7 @@
                         <div>
                             <div class="dummy"></div>
                             <a class="category-link <?php echo str_replace(' ', '_', strtolower($event)) ?>"
-                                href="../pages/eventlist.php?category=<?php echo urlencode($event); ?>">
+                                href="../../php/pages/eventlist.php?category=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell">
@@ -431,8 +431,8 @@
             height: 100%; width: 100%; top:0%; left:0%;display:none">
     </div>
 
-    <?php include '../base/foot.php' ?>
-    <?php include '../modules/event_rightbar.php'; ?>
+    <?php include '../../php/base/foot.php' ?>
+    <?php include '../../php/modules/event_rightbar.php'; ?>
 
     <script type="text/javascript">
         var animation_time = 1000;
@@ -699,7 +699,7 @@
                             $(".cities g:nth-child("+i+")").animate({opacity:"1"},animation_time*0.05);
                         },animation_time*0.05*i + 1100);
                     }
-                
+
                 } else if($el.hasClass("shows")) {
                     animation_time = 1100;
                     $(".animation.shows").css("z-index", 10000);

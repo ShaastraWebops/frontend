@@ -2,46 +2,46 @@
 <!doctype html public "" "">
 <html>
 	<head>
-		<?php 
+		<?php
 			$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
 			if ( isset($_REQUEST['name']) ) {
 				$speaker_name = $_REQUEST['name'];
-				$speaker_path = '../lectures/' . $speaker_name . '.html';
+				$speaker_path = '../../php/lectures/' . $speaker_name . '.html';
 			}
 			if (!isset($speaker_name) || !in_array($speaker_name, $speakers)){ // No such speaker
-				header('Location: ../pages/lectures.php');
+				header('Location: ../../php/pages/lectures.php');
 			}
-			
+
 			if ( isset($_REQUEST['edit']) ) {
 				$editable = 1;
 			} else {
 				$editable = 0;
 			}
-			
-			
+
+
 			if (!file_exists($speaker_path)) {
 				if ( $editable ) { // Create a new file
 					$fp = fopen($speaker_path, "w"); fclose($fp); // Create new file
 					$data = '';
 				} else { // invalid page - tell user it is 404 not found
-					include '../pages/404.php';
+					include '../../php/pages/404.php';
 				die();
 				}
 			} else {
 				$data = file_get_contents($speaker_path);
 			}
 			if ($editable && $data == '') { // empty file, show help
-				$data = ''; //file_get_contents('../events/sample.html');
+				$data = ''; //file_get_contents('../../php/events/sample.html');
 			}
 		?>
-	
+
 		<title>Lectures | Shaastra '15</title>
-    
-		<?php include '../base/head.php' ?>
+
+		<?php include '../../php/base/head.php' ?>
 		<style>
-			
+
 			.speaker-list {
-				
+
 			}
 			.speaker-list .speaker-link {
 				width: 100%;
@@ -75,7 +75,7 @@
 					text-align: center;
 				}
 			}
-			
+
 			.speaker-audio-fft {
 				overflow-y : hidden;
 				display: block;
@@ -93,10 +93,10 @@
 				z-index: 2;
 				position: relative;
 			}
-			
+
 			.cke_button_icon.cke_button__savebtn_icon {
 				width : 70px;
-				background-position:right !important; 
+				background-position:right !important;
 			}
 			.cke_button_icon.cke_button__savebtn_icon:after {
 			    content:'Save';
@@ -116,7 +116,7 @@
 		</style>
 	</head>
 <body>
-<?php include '../base/menu.php' ?>
+<?php include '../../php/base/menu.php' ?>
 	<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
@@ -190,17 +190,17 @@
 	</div>
 	<div class="container-fluid" id="speaker-content">
 		<?php if (isset($editable) && $editable) { ?>
-		    <form method="post" action='../scripts/save_to_file.php'>
+		    <form method="post" action='../../php/scripts/save_to_file.php'>
         	        <div class='data col-md-offset-1 col-md-10'>
         		    <input type='hidden' name='filename' value='<?php echo $speaker_path; ?>' />
             		    <textarea name="data" id='data' style='min-height : 100px;'>
         			<?php echo $data; ?>
         		    </textarea>
         		</div>
-                    </form> 
+                    </form>
                 <?php } else { ?>
                     <div class='data col-md-offset-1 col-md-10'>
-                        <?php echo file_get_contents('../lectures/' . $speaker_name . '.html');; ?>
+                        <?php echo file_get_contents('../../php/lectures/' . $speaker_name . '.html');; ?>
                     </div>
                 <?php } ?>
 	</div>
@@ -219,25 +219,25 @@
                     <?php
 			$speaker_count = count($speakers);
 			for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-			
+
 			<li>
 			    <a class="speaker-link" href="?name=<?php echo urlencode($speakers[$speaker_i]); ?>">
 			        <span class="name"><?php echo $speakers[$speaker_i]; ?></span>
 				<span class="speaker-image"
 				      style="background: url(../../img/logo/200x200_dice_white.png) no-repeat center center; background-size: cover;">
 					<!-- style="background: url(../../img/lectures/<?php echo $speakers[$speaker_i]; ?>.jpg) no-repeat center center; background-size: cover;">-->
-				      
-					
+
+
 				</span>
 			    </a>
 			</li>
-			
+
 		    <?php } ?>
                 </ul>
             </div>
         </div>
     </div>
-	<?php include '../base/foot.php' ?>
+	<?php include '../../php/base/foot.php' ?>
         <?php if ( $editable ) { // The fns to send data ?>
 		<script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
@@ -248,7 +248,7 @@
 				    if (event.ctrlKey || event.metaKey) {
 				        var letter = String.fromCharCode(event.which).toLowerCase();
 				        if ( letter == 's' ) {
-				            $('.cke_button__savebtn').click(); 
+				            $('.cke_button__savebtn').click();
 				            event.preventDefault();
 				        }
 				    }

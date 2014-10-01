@@ -3,7 +3,7 @@
 	<head>
 		<title>Shaastra '15</title>
 
-		<?php include '../base/head.php'; ?>
+		<?php include '../../php/base/head.php'; ?>
 
  <!-- for notif start -->
     <?php
@@ -14,8 +14,8 @@
             $editable = 0;
         }
 
-            $notifications_data = file_get_contents('../misc/home_notifications.txt');
-            $notifications_path = '../misc/home_notifications.txt';
+            $notifications_data = file_get_contents('../../php/misc/home_notifications.txt');
+            $notifications_path = '../../php/misc/home_notifications.txt';
     ?>
 
  <!-- for notif end -->
@@ -247,7 +247,7 @@
 
 	<body>
 
-	<?php include '../base/menu.php'; ?>
+	<?php include '../../php/base/menu.php'; ?>
 
     <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
@@ -281,7 +281,7 @@
 							</div>
 							<div class="down">
 								<div class="text shaastra-title shaastra-logo">
-									<!--<a href="../pages/about.php" class="no-style about">-->SHAASTRA <span class="shaastra-blue">2015</span><!--</a>-->
+									<!--<a href="../../php/pages/about.php" class="no-style about">-->SHAASTRA <span class="shaastra-blue">2015</span><!--</a>-->
 								</div>
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
@@ -307,7 +307,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/categories.php" class="title head1 text">Events</a>
+						<a href="../../php/pages/categories.php" class="title head1 text">Events</a>
 					</span>
 				</span>
 			</div>
@@ -316,14 +316,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/eventlist.php?category=Workshops" class="title head2 text">Workshops</a>
+						<a href="../../php/pages/eventlist.php?category=Workshops" class="title head2 text">Workshops</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/exhibitions.php" class="title head3 text">Exhibitions</a>
+						<a href="../../php/pages/exhibitions.php" class="title head3 text">Exhibitions</a>
 					</span>
 				</span>
 			</div>
@@ -332,14 +332,14 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/lectures.php" class="title head4 text">Lectures</a>
+						<a href="../../php/pages/lectures.php" class="title head4 text">Lectures</a>
 					</span>
 				</span>
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
+						<a href="../../php/pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
 					</span>
 				</span>
 			</div>
@@ -348,7 +348,7 @@
 			<div class="col-sm-12 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/social.php" class="title head6 text">Social Cause</a>
+						<a href="../../php/pages/social.php" class="title head6 text">Social Cause</a>
 					</span>
 				</span>
 			</div>
@@ -356,9 +356,109 @@
 		<div class="help hidden-xs">
 			<div class="text">Click and drag anywhere to roll dice</div>
 		</div>
-		<?php include '../modules/social.php'; ?>
-		<?php include '../modules/iitm.php'; ?>
-		<?php include '../modules/home_rightbar.php'; ?>
+        <style>
+            .logo-vertical {
+                display: none;
+            }
+            .logo-vertical .col-centered {
+                padding: 5px;
+            }
+            @media (min-width: 768px) {
+                .logo-vertical {
+                    position: fixed;
+                    bottom: 10px;
+                    right: 0px;
+                    z-index: 10000;
+                    display: inline-block;
+                    width: 170px;
+                }
+                .social-cause-logo-vertical {
+                    display: none;
+                    left: 0px;
+                }
+            }
+            @media (min-width: 992px) {
+                .logo-vertical {
+                    display: inline-block;
+                    right: 20px;
+                }
+                .social-cause-logo-vertical {
+                    display: inline-block;
+                    left: 20px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .logo-vertical {
+                    display: inline-block;
+                    right: 50px;
+                }
+                .social-cause-logo-vertical {
+                    display: inline-block;
+                    left: 20px;
+
+                }
+            }
+            .col-centered img, .col-centered {
+                -webkit-transition: all 300ms ease-in-out;
+                -moz-transition: all 300ms ease-in-out;
+                -o-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+            }
+            .iitm-logo img {
+                height: 93px;
+                width: 75px;
+                float: right;
+            }
+            .tuv-logo img {
+                height: 75px;
+                width: 75px;
+                float: left;
+            }
+            .unesco-logo img {
+                height: 75px;
+                width: 150px;
+                float: left;
+            }
+            .iitm-logo:hover {
+                padding: 0;
+            }
+            .tuv-logo:hover {
+                padding: 0;
+            }
+            .unesco-logo:hover {
+                padding: 0;
+            }
+            .iitm-logo:hover img {
+                height: 104.8px;
+                width: 85px;
+            }
+            .tuv-logo:hover img {
+                height: 85px;
+                width: 85px;
+            }
+            .unesco-logo:hover img {
+                height: 85px;
+                width: 170px;
+            }
+            </style>
+            <div class="row logo-vertical row-centered hidden-sm">
+                <a target="_blank" class="iitm-logo col-xs-6 col-centered" href="http://www.iitm.ac.in">
+                    <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
+                </a>
+                <a target="_blank" class="tuv-logo col-xs-6 col-centered" href="../../php/pages/about.php">
+                    <img class="img-responsive" src="../../img/logo/iso_white.png"/>
+                </a>
+            </div>
+            <div class="row logo-vertical social-cause-logo-vertical row-centered hidden-sm">
+                <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
+                    <img class="img-responsive" src="../../img/logo/unesco.png">
+                </a>
+                <!-- <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
+                    <img class="img-responsive" src="http://placehold.it/150x75">
+                </a> -->
+            </div>
+		<?php include '../../php/modules/social.php'; ?>
+		<?php include '../../php/modules/home_rightbar.php'; ?>
 	</div>
 
 	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">
@@ -384,12 +484,12 @@
 			</div>
 		</div>
 	</div>
-	<?php include '../base/foot.php'; ?>
+	<?php include '../../php/base/foot.php'; ?>
 
     <!-- for notif start -->
      <?php if (isset($editable) && $editable) { ?>
         <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
-            <form method="post" action="../scripts/save_to_file.php">
+            <form method="post" action="../../php/scripts/save_to_file.php">
                 <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
                 <textarea name="data" id="notif">
                     <?php echo $notifications_data; ?>

@@ -5,7 +5,7 @@
 
 		<title>Contact Us | Shaastra 2015</title>
 
-		<?php include '../base/head.php' ?>
+		<?php include '../../php/base/head.php' ?>
 		<style>
 		.btn.btn-bluebox {
 		    background-color: rgba(14, 99, 133, 0.5);
@@ -137,7 +137,7 @@
 	</head>
 
 	<body>
-		<?php include '../base/menu.php' ?>
+		<?php include '../../php/base/menu.php' ?>
 		<div class="container-fluid title white centered" style="margin-bottom:2%;">
 			<div class="row">
 				<div class="col-xs-12">
@@ -345,7 +345,7 @@
 						</div>
 					</div>
 					<div class="modal-body">
-					<form name='contact' action='../scripts/contact_submit.php' method='post'>
+					<form name='contact' action='../../php/scripts/contact_submit.php' method='post'>
 						<div class="row">
 							<div class="input-group margin-bottom-5 col-xs-6 col-xs-offset-3">
 								<span class="input-group-addon">
@@ -697,7 +697,7 @@
 									<h4>DHRUVA KATREKAR</h4>
 									<p>
 										<span class="glyphicon glyphicon-phone"></span>
-										Contact : 9962303153 
+										Contact : 9962303153
 									</p>
 									<p>
 										<span class="glyphicon glyphicon-envelope"></span>
@@ -809,7 +809,7 @@
 		<!-- modals for boxes end -->
 
 		<!-- JS -->
-		<?php include '../base/foot.php' ?>
+		<?php include '../../php/base/foot.php' ?>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 		<script>
