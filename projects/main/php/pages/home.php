@@ -339,7 +339,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
+						<a href="../pages/pre-shaastra2.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
 					</span>
 				</span>
 			</div>

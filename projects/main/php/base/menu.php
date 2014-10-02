@@ -496,7 +496,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/pre-shaastra.php" class="table">
+                <a href="../pages/pre-shaastra2.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->

@@ -71,7 +71,7 @@
             		fill-opacity:1;
           		}
         	}
-        	.background{
+        		.background{
                     background-color: black;
                     color: white;
                     text-decoration: none;
@@ -85,6 +85,8 @@
         		color:#FFE4C4	;
         	}
         	.border{
+                border:1px solid #778899;
+                border-top-style:none;
                 border:1px solid white;
                 border-top-style:initial;
         	}
@@ -112,6 +114,7 @@
 	            </div>
 	        </div>
 	    </div>
+
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-5 col-md-offset-1">
@@ -119,7 +122,10 @@
 					  <div class="panel background">
 					    <div class="panel-heading background1" data-ride="carousel">
 					      <h4 class="panel-title text-center title background1" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" style="text-decoration:none;" class="background1">
+
 					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:none;" class="background1">
+
 					          LECTURES
 					        </a>
 					      </h4>
@@ -127,6 +133,11 @@
 					    <div id="collapseOne" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
 					      	  <?php 
+								$data = file_get_contents('../misc/pre-shaastra/lectures.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/lectures.html' />
 								$data = file_get_contents('../misc/lectures.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -157,6 +168,11 @@
 					    <div id="collapseTwo" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
 					            <?php 
+								$data = file_get_contents('../misc/pre-shaastra/workshops.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/workshops.html' />
 								$data = file_get_contents('../misc/workshops.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -187,6 +203,11 @@
 					    <div id="collapseThree" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
 					        <?php 
+								$data = file_get_contents('../misc/pre-shaastra/events.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/events.html' />
 								$data = file_get_contents('../misc/events.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -241,7 +262,13 @@
 									<circle cx="300" cy="510" r="4"/>
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
 			    				</a>
- -->			    				<a xlink:href="../pages/event.php?category=Sampark&event=Hyderabad" class="">
+ -->
+ 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Madhurai" class="">
+									<circle cx="210" cy="685" r="4"/>
+			        				<text x="220" y="685" font-size="20">MADHURAI</text>
+			    				</a>
+
+ 				    			<a xlink:href="../pages/event.php?category=Sampark&event=Hyderabad" class="">
 									<circle cx="200" cy="550" r="4"/>
 			        				<text x="210" y="550" font-size="20">HYDERABAD</text>
 			    				</a>
@@ -258,11 +285,11 @@
 					</div>
 					<div class="para2">
 						<?php 
-							$data = file_get_contents('../misc/pre-shaastra/pre-shaastra2.html');
+							$data = file_get_contents('../misc/pre-shaastra2.html');
 							if ( isset($_GET['edit']) ) { ?>
 							<form method="post" action='../scripts/save_to_file.php'>
 			                    <div class='data2 col-xs-12'>
-			                        <input type='hidden' name='filename' value='../misc/pre-shaastra/pre-shaastra2.html' />
+			                        <input type='hidden' name='filename' value='../misc/pre-shaastra2.html' />
 			                        <textarea name="data" id='data2' style='min-height : 100px;'>
 			                            <?php echo $data; ?>
 			                        </textarea>
@@ -345,4 +372,5 @@
 		</script>
 	</body>
 </html>
+
 
