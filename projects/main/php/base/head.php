@@ -6,6 +6,7 @@ if ( file_exists('../../php/base/config.php') ) {
 	$DEBUG = 1;
 	$SITE_URL = "http://localhost/shaastra/projects/main/"; // Do not forget the trailing slash
     $ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+    $ERP_TOKEN = "";
 }
 
 if ($DEBUG) {

@@ -450,9 +450,11 @@
                     json_info = {
                         'action' : 'unregister',
                         'event_id' : $el.data('event_id'),
-                        'user_id' : <?php echo $_SESSION['user_id']; ?>
+                        'user_id' : <?php echo $_SESSION['user_id']; ?>,
                     }
-                    console.log(json_info)
+                    if ( $el.data('team_id') ) {
+                        json_info['team'] = this_team = teams.filter(customFilter({'id' : parseInt($el.data('team_id'))}))[0].name
+                    }
                     $.ajax({ // SEND POST INFO FOR TEAM
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
@@ -473,8 +475,8 @@
                 // ------------------------------------------------
                 // Initial queries
                 init_profile();
-                init_events();
                 init_teams();
+                init_events();
                 // ------------------------------------------------
                 // Form submits and clicks
                 $('#profile .form').hide()
@@ -491,6 +493,21 @@
                         $alert = $('.error-msg').show()
                         $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code EVENT_SELECT_NOT_FOUND")
                         $alert.find('.head').html("Error ")
+                        //setTimeout(function() {$alert.fadeOut(500)}, 1000)
+                        $el.find(':selected').removeAttr('selected')
+                        return
+                    }
+                    if ( new Date(this_event.registration_ends) > new Date() ) {
+                        $alert = $('.error-msg').show().removeClass('alret-danger').addClass('alert-info')
+                        $el.find('.text').html(" The registrations for this event are over.")
+                        $alert.find('.head').html("Note ")
+                        //setTimeout(function() {$alert.fadeOut(500)}, 1000)
+                        $el.find(':selected').removeAttr('selected')
+                        return
+                    } else if ( new Date(this_event.registration_starts) < new Date() ) {
+                        $alert = $('.error-msg').show().removeClass('alret-danger').addClass('alert-info')
+                        $el.find('.text').html(" The registrations for this event have not yet started.")
+                        $alert.find('.head').html("Note ")
                         //setTimeout(function() {$alert.fadeOut(500)}, 1000)
                         $el.find(':selected').removeAttr('selected')
                         return
@@ -635,7 +652,6 @@
                         data: json_info
                     }).done(function(res) {
                         data = res['data']
-                        console.log(data)
                         window.location.href = window.location.origin + window.location.pathname +
                             "?first_name=" + data.first_name +
                             "&last_name=" + data.last_name +
@@ -661,7 +677,6 @@
                         $('#events .event-msg').html('You have not registered to any events :(')
                     } else {
                         $.each(data, function(key, val) {
-                            console.log(val)
                             var is_mine = false;
                             var team_id = -1;
                             if ( val.users_registered.indexOf(<?php echo $_SESSION['user_id'] ?>) > -1 ) {
@@ -670,11 +685,11 @@
                             }
                             else {
                                 for( var i = 0; i < val.teams_registered.length; i++ ) {
-                                    if ( teams.indexOf(val.teams_registered[i]) > -1 ) {
+                                    if ( teams.filter(customFilter({'id' : val.teams_registered[i]})).length ) {
                                         is_mine = true
                                         team_id = val.teams_registered[i]
                                         $('#events .event-msg').hide()
-                                        break;
+                                        // break;
                                     }
                                 }
                             }
@@ -690,36 +705,50 @@
                             $el.find('.content').html('')
                             if ( val.team_size_max > 1 ) {
                                 $el.data('team_event', true)
-                                $el.find('.content').html($el.find('.content').html() +
-                                    '<b>Team size</b> : ')
-                                if (val.team_size_min == val.team_size_max) {
-                                    $el.find('.content').html($el.find('.content').html() +
-                                        $el.team_size_min + "<br />")
-                                } else {
-                                    if ( val.team_size_min ) {
-                                        $el.find('.content').html($el.find('.content').html() +
-                                            $el.team_size_min + " - ")
-                                    }
-                                    $el.find('.content').html($el.find('.content').html() +
-                                        $el.team_size_max + "<br />")
-                                }
+                                // $el.find('.content').html($el.find('.content').html() +
+                                //     '<b>Team size</b> : ')
+                                // if (val.team_size_min == val.team_size_max) {
+                                //     $el.find('.content').html($el.find('.content').html() +
+                                //         $el.team_size_min + "<br />")
+                                // } else {
+                                //     if ( val.team_size_min ) {
+                                //         $el.find('.content').html($el.find('.content').html() +
+                                //             $el.team_size_min + " - ")
+                                //     }
+                                //     $el.find('.content').html($el.find('.content').html() +
+                                //         $el.team_size_max + "<br />")
+                                // }
                             } else {
                                 $el.data('team_event', false)
                             }
-
-                            if ( val.registration_ends ) {
+                            // if ( val.registration_ends ) {
+                            //     $el.find('.content').html($el.find('.content').html() +
+                            //         '<b>Registration Ends</b> : ' + val.registration_ends + "<br />")
+                            // } else {
+                            //     $el.find('.content').html($el.find('.content').html() +
+                            //         '<b>Registration Ends</b> : Not announced yet'  + "<br />")
+                            // }
+                            if ( val.has_tdp && val.tdp_submitted ) {
                                 $el.find('.content').html($el.find('.content').html() +
-                                    '<b>Registration Ends</b> : ' + val.registration_ends + "<br />")
+                                    '<b>TDP</b> : Required. ' + "Latest submitted TDP can be seen <a href='" + val.tdp_submitted + "'>here</a>" + "<br />")
+                            } else if ( val.has_tdp ) {
+                                $el.find('.content').html($el.find('.content').html() +
+                                    '<b>TDP</b> : Required - needs to be submitted' + "<br />")
                             } else {
                                 $el.find('.content').html($el.find('.content').html() +
-                                    '<b>Registration Ends</b> : Not announced yet'  + "<br />")
+                                    '<b>TDP</b> : Not required' + "<br />")
                             }
-                            if ( val.has_tdp ) {
+                            if ( val.team_size_max > 1 ) {
                                 $el.find('.content').html($el.find('.content').html() +
-                                    '<b>TDP</b> : Required' + "<br />")
+                                    "<b>Team Size</b> : " + val.team_size_min + " to " + val.team_size_max + "<br />")
+                                if ( val.is_mine ) {
+                                    this_team = teams.filter(customFilter({'id' : team_id}))[0]
+                                    $el.find('.content').html($el.find('.content').html() +
+                                        "<b>Team Registered</b> : " + this_team.name + " (" + this_team.members.length + " member" + ( (this_team.members.length>=1)?'s':'' ) + ")"  + "<br />")
+                                }
                             } else {
                                 $el.find('.content').html($el.find('.content').html() +
-                                    '<b>TDP</b> : None' + "<br />")
+                                    "<b>Team Size</b> : Single participant event - No teams<br />")
                             }
                             $el.find('#event-accordion-no').attr('id', 'event-accordion-' + key)
                             $el.find('.panel-title a').attr('href', '#event-accordion-' + key)
@@ -784,7 +813,7 @@
                         $alert = $('.error-msg').show()
                         $alert.find('.text').html("Your submission has been saved. The results will be declared soon. You can edit your by clicking the edit button")
                         $alert.find('.head').html("Submitted")
-                        setTimeout(function() { window.location.reload() }, 500 )
+                        // setTimeout(function() { window.location.reload() }, 500 )
                     }).fail(function(xhr) {
                         if ( xhr.status == 500 ) { // error
                             var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
@@ -819,6 +848,7 @@
                         xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                     },
                     chache: false,
+                    async : false
                 }).done(function(res) {
                     var data = res['data']
                     if ( data.length == 0 ) { // no teams
