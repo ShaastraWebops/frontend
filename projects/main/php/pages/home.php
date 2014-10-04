@@ -3,18 +3,18 @@
 	<head>
 		<title>Shaastra 2015</title>
 		<?php include '../../php/base/head.php'; ?>
- <!-- for notif start -->
-    <?php
-        if ( isset($_REQUEST['edit']) ) {
-            $editable = 1;
-        }
-        else {
-            $editable = 0;
-        }
+        <!-- for notif start -->
+        <?php
+            if ( isset($_REQUEST['edit']) ) {
+                $editable = 1;
+            }
+            else {
+                $editable = 0;
+            }
             $notifications_data = file_get_contents('../../php/misc/home_notifications.txt');
             $notifications_path = '../../php/misc/home_notifications.txt';
-    ?>
- <!-- for notif end -->
+        ?>
+        <!-- for notif end -->
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -236,7 +236,6 @@
             .cke_editable {
                 border: 1px solid #fff;
             }
-
 		</style>
 	</head>
 
