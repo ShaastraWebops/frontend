@@ -1,10 +1,10 @@
 <?php
     if ( isset($_REQUEST['category']) ) {
         $category = $_REQUEST['category'];
-        $category_path = '../events/' . $category ;
+        $category_path = '../../php/events/' . $category ;
     }
     if (!isset($category) || $category=="") { // No category given, redirect to categories page
-        header('Location: ../pages/categories.php');
+        header('Location: ../../php/pages/categories.php');
     }
     if ( isset($_REQUEST['event']) ) {
         $event = $_REQUEST['event'];
@@ -13,7 +13,7 @@
         $notifications_path = $event_path . '/notifications.txt';  //for marquee
 
         if (!is_dir($event_path)) { // Invalid event
-            header('Location: ../pages/eventlist.php?category=' . urlencode($category));
+            header('Location: ../../php/pages/eventlist.php?category=' . urlencode($category));
         } else {// get tab list
             $tab_list = scandir($event_path);
             foreach ($tab_list as $tab_i => $tab_file_name) {
@@ -26,7 +26,7 @@
             $tab_list = array_values($tab_list);
         }
     } else { // No event given, redirect to the corresponding eventlist page
-        header('Location: ../pages/eventlist.php?category=' . urlencode($category));
+        header('Location: ../../php/pages/eventlist.php?category=' . urlencode($category));
     }
     if ( isset($_REQUEST['tab']) ) {
         $tab = $_REQUEST['tab'];
@@ -52,7 +52,7 @@
                     $tab = '00Home';
                     $tab_path = $event_path . '/' . $tab . '.html';
                 } else { // No tab exists - tell user under construction and die.
-                    include '../pages/under_construction.php';
+                    include '../../php/pages/under_construction.php';
                     die();
                 }
             } else {
@@ -74,7 +74,7 @@
                 //fclose($fp); // Create new file
                 $data = '';
             } else { // invalid page - tell user it is 404 not found
-                include '../pages/404.php';
+                include '../../php/pages/404.php';
                 die();
             }
         } else {
@@ -83,11 +83,11 @@
         }
 
         if ($editable && $data == '') { // empty file, show help
-            $data = file_get_contents('../events/sample.html');
+            $data = file_get_contents('../../php/events/sample.html');
         }
         ?>
-        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra 2015</title>
+        <?php include '../../php/base/head.php' ?>
         <style>
             .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
                 background-image: url(../../img/icons/arrow.png);
@@ -148,6 +148,8 @@
             .form {
                 margin: 0.2em 0;
                 color: black;
+                display: inline-block;
+                text-align: left;
             }
             marquee p {
                 display: inline-block;
@@ -163,7 +165,7 @@
 
     <body class=''>
 
-        <?php include '../base/menu.php'; ?>
+        <?php include '../../php/base/menu.php'; ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
@@ -214,7 +216,7 @@
 
             <?php if (isset($editable) && $editable) { ?>
                 <!-- for marquee start -->
-                <form method="post" action="../scripts/save_to_file.php">
+                <form method="post" action="../../php/scripts/save_to_file.php">
                     <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
                     <textarea name="data" id="marquee">
                         <?php echo $notifications_data; ?>
@@ -244,7 +246,7 @@
                     <h4 class="modal-title">Tab Properties</h4>
                 </div>
                 <div class="modal-body">
-                    <form action='../scripts/event.php' method='POST'>
+                    <form action='../../php/scripts/event.php' method='POST'>
                         <div class='container-fluid rename'>
                             <div class='row row-centered'>
                                 <div class='col-md-4 col-centered not-for-new'>
@@ -332,7 +334,7 @@
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>
-                <form method="post" action='../scripts/save_to_file.php'>
+                <form method="post" action='../../php/scripts/save_to_file.php'>
                     <div class='data col-xs-8 col-xs-offset-2'>
                         <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
                         <textarea name="data" id='data' style='min-height : 100px;' class="black">
@@ -350,40 +352,50 @@
     </div>
 
     <?php if ( $editable ) { ?>
-    <div class="container hidden" id="event-info">
+    <div class="container" id="event-info">
+        <div class="row row-centered">
+            <div class="alert alert-danger alert-dismissible error-msg col-md-10 col-centered" role="alert" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <span class="bold head"></span>
+                <span class="text"></span>
+            </div>
+        </div>
         <div class="row row-centered">
             <div class="col-md-5 col-centered">
                 <h3 class="centered"><span class="head">Event Information</span></h3>
                 <form role="form" action="" method="POST">
                     <input type="hidden" name="name" class="form-control form" value="<?php echo $event ?>">
-                    <div class="form-group">
-                        <label for="team_max_size" class="col-md-4 member-label">Team Size (Min)</label>
-                        <div class="col-md-8" style="padding: 0">
+                    <div class="form-group team_size_min">
+                        <label for="team_size_min" class="col-md-4 member-label">Team Size (Min)</label>
+                        <div class="col-md-8 text-left" style="padding: 0">
                             <input type="number" name="team_size_min" class="form form-control" placeholder="" style="width: 5em" min="1" max="10" value="1">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="team_max_size" class="col-md-4 member-label">Team Size (Max)</label>
-                        <div class="col-md-8" style="padding: 0">
+                    <div class="form-group team_size_max">
+                        <label for="team_size_max" class="col-md-4 member-label">Team Size (Max)</label>
+                        <div class="col-md-8 text-left" style="padding: 0">
                             <input type="number" name="team_size_max" class="form form-control" placeholder="" style="width: 5em" min="1" max="10" value="1">
+                            <a class="pull-right" href="javascript:void(0)" onclick="$('#event-info .team_size_min input').val(1) && $('#event-info .team_size_max input').val(1)">Not a team event</a>
                         </div>
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group registration_starts">
                         <label for="registration_starts" class="col-md-4 member-label">Registration Starts</label>
-                        <div class="col-md-8" style="padding: 0">
-                            <input type="date" name="registration_starts" class="form-control form" placeholder="" required style="width: 15em">
+                        <div class="col-md-8 text-left" style="padding: 0">
+                            <input type="text" name="registration_starts" class="form-control form" placeholder="" required style="width: 10em">
+                            <span class="pull-right">(yyyy-mm-dd)</span>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group registration_ends">
                         <label for="registration_ends" class="col-md-4 member-label">Registration Ends</label>
-                        <div class="col-md-8" style="padding: 0">
-                            <input type="date" name="registration_ends" class="form-control form" placeholder="" required style="width: 15em" value="">
+                        <div class="col-md-8 text-left" style="padding: 0">
+                            <input type="text" name="registration_ends" class="form-control form" placeholder="" required style="width: 10em" value="">
+                            <span class="pull-right">(yyyy-mm-dd)</span>
                         </div>
-                    </div> -->
-                    <div class="form-group">
+                    </div>
+                    <div class="form-group has_tdp">
                         <label for="has_tdp" class="col-md-4">TDP Submission Needed</label>
-                        <div class="col-md-8" style="padding: 0">
-                            <select type="text" name="has_tdp" class="form form-control" required style="width: 10em">
+                        <div class="col-md-8 text-left" style="padding: 0">
+                            <select name="has_tdp" class="form form-control" required style="width: 5em">
                                 <option value="0">No</option>
                                 <option value="1">Yes</option>
                             </select>
@@ -403,18 +415,19 @@
     <?php } ?>
 
 
-    <?php include '../base/foot.php' ?>
-    <?php if ( ! $editable ) include '../modules/iitm.php'; ?>
-    <?php include '../modules/event_rightbar.php'; ?>
+    <?php include '../../php/base/foot.php' ?>
+    <?php if ( ! $editable ) include '../../php/modules/iitm.php'; ?>
+    <?php include '../../php/modules/event_rightbar.php'; ?>
     <?php if ( $event == "Symposium" ) {
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
-    <?php include '../modules/social.php' ?>
+    <?php include '../../php/modules/social.php' ?>
 
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>
+        var this_event = null
         function tab_name_edit(el) {
             var $el = $(el);
             $el.prop('disabled',true);
@@ -454,27 +467,71 @@
             }
             $('#edit_modal').modal()
         }
-        function submit_event_details() {
+        function init_event_info() {
             var $el = $('#event-info form')
-            var json_info = new FormData($el[0]);
+            var json_info = {
+                "action_for" : "name",
+                "action_for_id" : "<?php echo $event; ?>",
+            }
             $.ajax({ // SEND INFO FOR PROFILE
-                type: "POST",
+                type: "GET",
                 url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader('Authorization', "Token <?php ?>");
+                    xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                 },
                 chache: false,
-                data: json_info,
-                contentType: false,
-                processData: false,
+                data: json_info
             }).done(function(res) {
-                window.location.reload()
+                var data = res.data
+                if ( data.length != 1 ) {
+                    var $el = $('#event-info .error-msg').show()
+                    $el.find('.head').html("Error : ")
+                    $el.find('.text').html("Contact webops team. Your event doesn't seem to exist. Give them the error code : EVENT_LENGTH_0")
+                    return
+                }
+                data = data[0]
+                this_event = data
+                $('#event-info [name=has_tdp]').val((this_event.has_tdp)?1:0)
+                $('#event-info [name=team_size_min]').val(this_event.team_size_min)
+                $('#event-info [name=team_size_max]').val(this_event.team_size_max)
+                $('#event-info [name=registration_starts]').val(this_event.registration_starts.split("T")[0])
+                $('#event-info [name=registration_ends]').val(this_event.registration_ends.split("T")[0])
+
             }).fail(function(xhr) {
                 console.log(xhr.status)
                 console.log(xhr)
             })
+            $('#event-info form').submit(function(e) {
+                e && e.preventDefault()
+                var $el = $(this)
+                var json_info = {
+                    "action" : "edit",
+                    "event_id" : this_event.id,
+                    "has_tdp" : $('#event-info [name=has_tdp]').find(":selected").attr("value") == "1",
+                    "registration_starts" : $('#event-info [name=registration_starts]').val(),
+                    "registration_ends" : $('#event-info [name=registration_ends]').val(),
+                    "team_size_min" : parseInt($('#event-info [name=team_size_min]').val()),
+                    "team_size_max" : parseInt($('#event-info [name=team_size_max]').val()),
+                }
+                $.ajax({ // SEND INFO FOR PROFILE
+                    type: "POST",
+                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                    },
+                    chache: false,
+                    data: json_info
+                }).done(function(res) {
+                    // window.location.reload()
+                    console.log(res)
+                }).fail(function(xhr) {
+                    console.log(xhr.status)
+                    console.log(xhr)
+                })
+            })
         }
         $(document).ready(function() {
+            init_event_info()
             CKEDITOR.inline('data')
             CKEDITOR.inline('marquee') //for marquee
             $(window).bind('keydown', function(event) {

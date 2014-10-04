@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pre Shaastra | Shaastra '15</title>
+		<title>Pre Shaastra | Shaastra 2015</title>
 		<?php include '../base/head.php' ?>
 
 		<style type="text/css">
@@ -9,10 +9,10 @@
 				overflow-y: auto;
 			}
 			.animation.anim-sampark {
-				z-index : 1; 
+				z-index : 1;
 				margin: auto;
 				text-align: center;
-			}	
+			}
 	        svg#samparkMap {
     		}
     		svg#samparkMap a {
@@ -71,6 +71,25 @@
             		fill-opacity:1;
           		}
         	}
+        		.background{
+                    background-color: black;
+                    color: white;
+                    text-decoration: none;
+        	}
+        	.background1{
+                background-color: #ddd;
+                color: black;
+                text-decoration: none;
+        	}
+        	a.background1:hover{
+        		color:#666;
+        	}
+        	.border{
+                border:1px solid #778899;
+                border-top-style:none;
+                border:1px solid white;
+                border-top-style:initial;
+        	}
         	.cke_button_icon.cke_button__savebtn_icon {
                 width : 70px;
                 background-position:right !important;
@@ -78,9 +97,12 @@
             .cke_button_icon.cke_button__savebtn_icon:after {
                 content:'Save';
             }
+            .cke_editable {
+                border: 1px solid #fff;
+            }
 		</style>
 	</head>
-	
+
 	<body>
 		<?php include '../base/menu.php' ?>
 		<div class="container-fluid white centered">
@@ -99,24 +121,118 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-5 col-md-offset-1">
-					<div class="para1">
-						<?php 
-							$data = file_get_contents('../misc/pre-shaastra1.html');
-							if ( isset($_GET['edit']) ) { ?>
-							<form method="post" action='../scripts/save_to_file.php'>
-			                    <div class='data col-xs-12'>
-			                        <input type='hidden' name='filename' value='../misc/pre-shaastra1.html' />
-			                        <textarea name="data" id='data' style='min-height : 100px;'>
-			                            <?php echo $data; ?>
-			                        </textarea>
-			                    </div>
-			                </form>
-		                <?php } else { ?>
-			                <div class='data col-xs-12'>
-			                    <?php echo $data; ?>
-			                </div>
-						<?php } ?>
+					<div class="panel-group" id="accordion" id="myCarousel" >
+					  <div class="panel background">
+					    <div class="panel-heading background1" data-ride="carousel">
+					      <h4 class="panel-title text-center title background1" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" style="text-decoration:none;" class="background1">
+
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:none;" class="background1">
+
+					          LECTURES
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse background">
+					      <div class="panel-body background border">
+					      	  <?php
+								$data = file_get_contents('../misc/pre-shaastra/lectures.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/lectures.html' />
+				                        <textarea name="data" id='data-lectures' style='min-height : 100px;'>
+				                            <?php echo $data; ?>
+				                        </textarea>
+				                    </div>
+				                </form>
+			                <?php } else { ?>
+				                <div class='data col-xs-12'>
+				                    <?php echo $data; ?>
+				                </div>
+							<?php } ?>
+					 	   </div>
+					    </div>
+					  </div>
+					  <p>&nbsp;</p>
+					  <div class="panel background">
+					    <div class="panel-heading background1">
+					      <h4 class="panel-title text-center title background1" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="text-decoration:none;" class="background1">
+					          WORKSHOPS
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse background">
+					      <div class="panel-body background border">
+					            <?php
+					            $data = file_get_contents('../misc/pre-shaastra/workshops.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/workshops.html' />
+				                        <textarea name="data" id='data-workshops' style='min-height : 100px;'>
+				                            <?php echo $data; ?>
+				                        </textarea>
+				                    </div>
+				                </form>
+			                <?php } else { ?>
+				                <div class='data col-xs-12'>
+				                    <?php echo $data; ?>
+				                </div>
+							<?php } ?>
+					      </div>
+					    </div>
+					  </div>
+					  <p>&nbsp;</p>
+					  <div class="panel background">
+					    <div class="panel-heading background1">
+					      <h4 class="panel-title text-center title background1" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="text-decoration:none;" class="background1">
+					          EVENTS
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse background">
+					      <div class="panel-body background border">
+					        <?php
+								$data = file_get_contents('../misc/pre-shaastra/events.html');
+								if ( isset($_GET['edit']) ) { ?>
+								<form method="post" action='../scripts/save_to_file.php'>
+				                    <div class='data col-xs-12'>
+				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/events.html' />
+				                        <textarea name="data" id='data-events' style='min-height : 100px;'>
+				                            <?php echo $data; ?>
+				                        </textarea>
+				                    </div>
+				                </form>
+			                <?php } else { ?>
+				                <div class='data col-xs-12'>
+				                    <?php echo $data; ?>
+				                </div>
+							<?php } ?>
+					      </div>
+					    </div>
+					  </div>
 					</div>
+                    <div class="para">
+                        <?php
+                            $data = file_get_contents('../misc/pre-shaastra/sampark.html');
+                            if ( isset($_GET['edit']) ) { ?>
+                            <form method="post" action='../scripts/save_to_file.php'>
+                                <div class='data2 col-xs-12'>
+                                    <input type='hidden' name='filename' value='../misc/pre-shaastra/sampark.html' />
+                                    <textarea name="data" id='data' style='min-height : 100px;'>
+                                        <?php echo $data; ?>
+                                    </textarea>
+                                </div>
+                            </form>
+                        <?php } else { ?>
+                            <div class='data col-xs-12'>
+                                <?php echo $data; ?>
+                            </div>
+                        <?php } ?>
+                    </div>
 				</div>
 				<div class="col-md-5">
 					<h2 class="text-center" style="position: absolute; top: 7.5%; text-align: center; width: 100%;">
@@ -173,24 +289,6 @@
 			    			</g>
 						</svg>
 					</div>
-					<div class="para2">
-						<?php 
-							$data = file_get_contents('../misc/pre-shaastra2.html');
-							if ( isset($_GET['edit']) ) { ?>
-							<form method="post" action='../scripts/save_to_file.php'>
-			                    <div class='data2 col-xs-12'>
-			                        <input type='hidden' name='filename' value='../misc/pre-shaastra2.html' />
-			                        <textarea name="data" id='data2' style='min-height : 100px;'>
-			                            <?php echo $data; ?>
-			                        </textarea>
-			                    </div>
-			                </form>
-		                <?php } else { ?>
-			                <div class='data col-xs-12'>
-			                    <?php echo $data; ?>
-			                </div>
-						<?php } ?>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -201,8 +299,10 @@
 
 	    <script>
 	        $(document).ready(function() {
-	            CKEDITOR.inline('data')
-	            CKEDITOR.inline('data2')
+	            CKEDITOR.inline('data-lectures')
+	            CKEDITOR.inline('data-workshops')
+	            CKEDITOR.inline('data-events')
+                CKEDITOR.inline('data')
 	            $(window).bind('keydown', function(event) {
 	                if (event.ctrlKey || event.metaKey) {
 	                    var letter = String.fromCharCode(event.which).toLowerCase();
@@ -216,7 +316,7 @@
 	    </script>
 	    <?php } ?>
 
-		
+
 		<script type="text/javascript">
 			var animation_time = 3000;
 			function sampark(i){
@@ -225,15 +325,15 @@
 					$("svg#samparkMap .cities a:nth-child("+i+")").animate({opacity:"1"},animation_time*0.05);
 				},animation_time*0.05*i + 1100);
 			}
-			
+
 			$(document).ready(function() {
 				var $el = $(this);
-				
+
 				animation_time = 3500;
 				setTimeout(function(){
 					$(".animation.anim-sampark").fadeIn(animation_time*0.1);
 				}, animation_time*0.05);
-				
+
 				//----------------mapBorder animation
 				var ifFirefox = /firefox/.test(navigator.userAgent.toLowerCase());
 				// console.log(ifFirefox+" "+pathLength);
@@ -250,14 +350,16 @@
 				x.style.WebkitAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 				x.style.mozAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 				x.style.oAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
-				x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";				
+				x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 
 				//----------------location animation
 				var n = 8; //no. of sampark locations
 				for(var i=1; i<=n; i++){
 					sampark(i);
 				}
-			});			
+			});
 		</script>
 	</body>
 </html>
+
+

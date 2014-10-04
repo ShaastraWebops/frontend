@@ -2,9 +2,9 @@
 <!doctype html public "" "">
 <html>
 	<head>
-		<title>Lectures | Shaastra '15</title>
+		<title>Lectures | Shaastra 2015</title>
 
-		<?php include '../base/head.php' ?>
+		<?php include '../../php/base/head.php' ?>
 </head>
 <style type="text/css">
 	.comingSoon p{
@@ -13,7 +13,7 @@
 	}
 </style>
 <body>
-<?php include '../base/menu.php' ?>
+<?php include '../../php/base/menu.php' ?>
 <div class="container-fluid white centered">
     <div class="row">
         <div class="col-xs-12">
@@ -33,11 +33,11 @@ Stay tuned for the unveiling of the 2nd edition of the Shaastra Lecture Series
     	</div>
     </div>
 </div>
-	<?php include '../base/foot.php' ?>
+	<?php include '../../php/base/foot.php' ?>
 	<script type="text/javascript">
 		function verticalAlignC(cl,n,type){
 			x = document.getElementsByClassName(cl);
-			for (var i = x.length - 1; i >= 0; i--) {	
+			for (var i = x.length - 1; i >= 0; i--) {
 				x[i].style.position = type;
 				x[i].style.top = (1-(x[i].clientHeight/window.innerHeight))*n+"%";
 			};

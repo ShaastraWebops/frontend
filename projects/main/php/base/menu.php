@@ -458,7 +458,7 @@
         <span class="menu-bar bar2"></span>
     </span>
     <span class="title title-menu hidden-sm hidden-xs">MENU</span>
-    
+
 </div>
 
 <!-- menu popup start -->
@@ -467,7 +467,7 @@
         <ul class="nav">
             <li>
                 <span class="bg"></span>
-                <a href="../pages/home.php" class="table">
+                <a href="../../php/pages/home.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Go back to the</span> -->
@@ -478,7 +478,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/dashboard.php" class="table">
+                <a href="../../php/pages/dashboard.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Interact with us</span> -->
@@ -496,18 +496,18 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/pre-shaastra.php" class="table">
+                <a href="../../php/pages/pre-shaastra.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
-                            <span class="big">Pre Shaastra <span class="hidden-xs">Activities</span></span>
+                            <span class="big">Pre Shaastra <span class="hidden">Activities</span></span>
                         </span>
                     </span>
                 </a>
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/categories.php" class="table">
+                <a href="../../php/pages/categories.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Check out our</span> -->
@@ -518,7 +518,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/eventlist.php?category=Workshops" class="table">
+                <a href="../../php/pages/eventlist.php?category=Workshops" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Check out our</span> -->
@@ -529,7 +529,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/lectures.php" class="table">
+                <a href="../../php/pages/lectures.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Learn from the best</span> -->
@@ -540,7 +540,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/exhibitions.php" class="table">
+                <a href="../../php/pages/exhibitions.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Be fascinated by</span> -->
@@ -551,7 +551,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/hospi.php" class="table">
+                <a href="../../php/pages/hospi.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
@@ -562,7 +562,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/spons.php" class="table">
+                <a href="../../php/pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
@@ -573,7 +573,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/about.php" class="table">
+                <a href="../../php/pages/about.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Reach out to</span> -->
@@ -584,7 +584,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="../pages/contact.php" class="table">
+                <a href="../../php/pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Reach out to</span> -->

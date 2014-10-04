@@ -1,10 +1,12 @@
 <?php
 
-if ( file_exists('../base/config.php') ) {
-	include('../base/config.php');
+if ( file_exists('../../php/base/config.php') ) {
+	include('../../php/base/config.php');
 } else {
 	$DEBUG = 1;
-	$ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+	$SITE_URL = "http://localhost/shaastra/projects/main/"; // Do not forget the trailing slash
+    $ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+    $ERP_TOKEN = "";
 }
 
 if ($DEBUG) {
@@ -21,7 +23,7 @@ if ($DEBUG) {
 		}
 	</script>
 
-<?php } 
+<?php }
 ?>
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -93,7 +95,7 @@ if ($DEBUG) {
         -ms-font-smoothing: antialiased;
         -o-font-smoothing: antialiased;
         font-smoothing: antialiased;
-    }   
+    }
     .title{
     	font-family: 'Dosis', sans-serif;
         font-weight: bold;
@@ -301,4 +303,4 @@ fieldset[disabled] .btn-darkest.active {
 
 </script>
 
-<?php include_once '../base/phpfuncs.php'; ?>
+<?php include_once '../../php/base/phpfuncs.php'; ?>
