@@ -1,7 +1,8 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hospitality | Shaastra '15</title>
+		<title>Hospitality | Shaastra 2015</title>
 		<?php include '../../php/base/head.php' ?>
 
 		<style type="text/css">

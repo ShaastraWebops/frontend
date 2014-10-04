@@ -40,7 +40,7 @@
             $data = file_get_contents('../../php/events/sample.html');
         }
         ?>
-        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra '15</title>
+        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
         <style>
             .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{

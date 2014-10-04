@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dashboard | Shaastra '15</title>
+        <title>Dashboard | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
         <style>
             #profile .row {
@@ -205,7 +205,7 @@
                                     <div class="form-group">
                                         <label for="team_name" class="col-md-4">Team Name</label>
                                         <div class="col-md-8" style="padding: 0">
-                                            <input type="text" name="name" class="form-control form" placeholder="Team Name">
+                                            <input type="text" name="name" class="form-control form" placeholder="Team Name" required>
                                         </div>
                                     </div>
                                     <div class="form-group first member">
@@ -374,7 +374,6 @@
                 $('#teams .create .member').not('.first').not('.template').remove()
                 $('#teams .create [name=name]').val('')
                 //$('#teams .create .first [name=member]').val('')
-
             }
             function team_edit(el) { // Edit team
                 var $el = $(el)
@@ -389,7 +388,6 @@
                     }
                     var $mem = team_create_add()
                     $mem.find('[name=member]').val($(val).text())
-
                 })
             }
             function team_delete(el) {
@@ -444,7 +442,6 @@
                 } else {
                     $('#events .register .tdp').hide()
                 }
-
             }
             function event_delete(el) {
                 $el = $(el).closest('.event')
@@ -487,38 +484,35 @@
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
-                <?php
-                    if ( isset($_SESSION['valid_profile']) && $_SESSION['valid_profile'] == "0" ) {
-                ?>
-
-                    var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
-                    $el.find('.head').html("Wait Up ! ")
-                    $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
-                    $el.hide().slideDown(500);
-                    $('body').scrollTop(0)
-                    // setTimeout(function() {$alert.fadeOut(500)}, 1500)
-                    window.location.hash = "#edit-profile"
-                <?php
-                    }
-                ?>
-
                 $('#events .register select[name=name]').change(function(ev) {
                     $el = $(this)
-                    this_event = events.filter(customFilter({'id' : parseInt($el.find(":selected").attr('name'))}))[0]
-                    if ( this_event.length && this_event[0].is_mine ) {
+                    this_event = events.filter(customFilter({'id' : parseInt($el.find(":selected").attr('name'))}))
+                    if ( this_event.length != 1 ) {
                         $alert = $('.error-msg').show()
+                        $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code EVENT_SELECT_NOT_FOUND")
+                        $alert.find('.head').html("Error ")
+                        //setTimeout(function() {$alert.fadeOut(500)}, 1000)
+                        $el.find(':selected').removeAttr('selected')
+                        return
+                    }
+                    this_event = this_event[0]
+                    if ( this_event.is_mine ) {
+                        $alert = $('.error-msg').show(500)
                         $alert.find('.text').html("You have already registered for this event. If you wish to edit your entry, please click the '<b>edit</b>' button near the event name in <b>Your Current Events</b> list ")
                         $alert.find('.head').html("Note ")
-                        setTimeout(function() {$alert.fadeOut(500)}, 1000)
+                        setTimeout(function() {$alert.fadeOut(500)}, 4000)
                         $el.find(':selected').removeAttr('selected')
                     }
                     if ( this_event.team_size_max > 1 ) { // Needs a Team
                         $('#events .register .team').show()
                         $('#events .register .participant').hide()
-                        $("#events .register .team .team-help").show().html(
-                            '<p>Team size allowed : ' + this_event.team_size_min + " - " + this_event.team_size_max + "</p>"
-                            + "<p style='display: none' class='text2'></p>"
-                        )
+                        var my_msg = '<p>Team size allowed : ' + this_event.team_size_min + " - " + this_event.team_size_max + "</p>"
+
+                        if ( teams.length == 0 )
+                            my_msg += "<p style='' class='text2'>You do not have any teams. You can add it in the <a onclick=\"$('#dashboard-tabs a[href=#teams]').click()\" href='javascript:void(0)'>teams</a> section</p>"
+                        else
+                            my_msg += "<p style='display: none' class='text2'></p>"
+                        $("#events .register .team .team-help").show().html(my_msg)
                     } else {
                         $('#events .register .team').hide()
                         $('#events .register .participant').show()
@@ -537,19 +531,42 @@
                         $('#events .register .team').show()
                         $('#events .register .participant').hide()
                         var my_text = "Size of Team " + this_team.name + " : " + this_team.members.length
-                        if ( this_team.members.length <= this_event.team_size_max && this_team.members.length >= this_event.team_size_min )
+                        if ( this_team.members.length <= this_event.team_size_max && this_team.members.length >= this_event.team_size_min ) {
                             my_text += "<b class='pull-right label label-success' style='font-size: 0.9em'> Valid </b>"
-                        else
+                            $('#events .register [type=submit]').removeAttr("disabled")
+                        }
+                        else {
                             my_text += "<b class='pull-right label label-danger' style='font-size: 0.9em> Invalid </b>"
+                            $('#events .register [type=submit]').attr("disabled", "")
+                        }
                         $("#events .register .team .team-help .text2").show().html(my_text)
                     } else {
                     }
                 })
 
-                $('#dashboard-tabs a').click(function (e) {
-                    var $el = $(this)
-                    window.location.hash = $el.attr('href').substr($el.attr('href').indexOf('#'))
-                })
+                <?php
+                    if ( isset($_SESSION['valid_profile']) && $_SESSION['valid_profile'] == "0" ) {
+                ?>
+
+                    var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
+                    $el.find('.head').html("Wait Up ! ")
+                    $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
+                    $el.hide().slideDown(500);
+                    $('body').scrollTop(0)
+                    window.location.hash = "#edit-profile"
+                    $('#dashboard-tabs a').each(function(i,v) {
+                        v.href = "" // Disabling all links
+                    })
+                <?php
+                    } else {
+                ?>
+                    $('#dashboard-tabs a').click(function (e) {
+                        var $el = $(this)
+                        window.location.hash = $el.attr('href').substr($el.attr('href').indexOf('#'))
+                    })
+                <?php
+                    }
+                ?>
                 hash = window.location.hash; // retrieve current hash value
                 if ( hash ==  "#_=_" ) {
 
@@ -769,7 +786,28 @@
                         $alert.find('.head').html("Submitted")
                         setTimeout(function() { window.location.reload() }, 500 )
                     }).fail(function(xhr) {
-                        console.log(xhr.status)
+                        if ( xhr.status == 500 ) { // error
+                            var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
+                            $el.find('.head').html("Error ")
+                            $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAM_SUBMIT_ERROR_500")
+                            $el.hide().slideDown(500);
+                            $('body').scrollTop(0)
+                        } else if ( xhr.status == 404 ) { // Couldnt find the page o.O
+                            var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
+                            $el.find('.head').html("Error ")
+                            $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAM_SUBMIT_ERROR_404")
+                            $el.hide().slideDown(500, toggle_form);
+                            $('body').scrollTop(0)
+                        } else if ( xhr.status == 400 ) { // Bad request
+                            var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger').show()
+                            var data = xhr.responseJSON
+                            $el.find('.head').html("Error(s) found while submitting your request")
+                            $el.find('.text').html('<br />')
+                            for (var key in data) {
+                                $el.find('.text').html($el.find('.text').html() + '<b>' + toTitleCase(key) + '</b>' + ' - ' + data[key] + '<br />')
+                            }
+                            $('body').scrollTop(0)
+                        }
                     })
                 })
             }
@@ -865,7 +903,28 @@
                     }).done(function(res) { // Refresh to get back data :)
                         window.location.reload()
                     }).fail(function(xhr) {
-                        console.log(xhr.status)
+                        if ( xhr.status == 500 ) { // error
+                            var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
+                            $el.find('.head').html("Error ")
+                            $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAM_SUBMIT_ERROR_500")
+                            $el.hide().slideDown(500);
+                            $('body').scrollTop(0)
+                        } else if ( xhr.status == 404 ) { // Couldnt find the page o.O
+                            var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
+                            $el.find('.head').html("Error ")
+                            $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAM_SUBMIT_ERROR_404")
+                            $el.hide().slideDown(500, toggle_form);
+                            $('body').scrollTop(0)
+                        } else if ( xhr.status == 400 ) { // Bad request
+                            var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger').show()
+                            var data = xhr.responseJSON
+                            $el.find('.head').html("Error(s) found while submitting your request")
+                            $el.find('.text').html('<br />')
+                            for (var key in data) {
+                                $el.find('.text').html($el.find('.text').html() + '<b>' + toTitleCase(key) + '</b>' + ' - ' + data[key] + '<br />')
+                            }
+                            $('body').scrollTop(0)
+                        }
                     })
                 })
             }
@@ -882,6 +941,9 @@
                     }
                     return answer;
                }
+            }
+            function toTitleCase(str) {
+                return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
             }
             </script>
     </body>

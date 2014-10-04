@@ -18,7 +18,7 @@
 		}
         $default_img = '../../img/logo/200x200_dice_white.png';
 	?>
-    <title><?php echo $category; ?> Events | Shaastra '15</title>
+    <title><?php echo $category; ?> Events | Shaastra 2015</title>
 
     <?php include '../../php/base/head.php' ?>
     <style>

@@ -4,7 +4,8 @@ if ( file_exists('../../php/base/config.php') ) {
 	include('../../php/base/config.php');
 } else {
 	$DEBUG = 1;
-	$ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
+	$SITE_URL = "http://localhost/shaastra/projects/main/"; // Do not forget the trailing slash
+    $ERP_SITE_URL = "http://localhost:8000/"; // Do not forget the trailing slash
 }
 
 if ($DEBUG) {

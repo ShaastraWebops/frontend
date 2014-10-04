@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<title>Contact Us | Shaastra 2015</title>
 
 		<?php include '../../php/base/head.php' ?>

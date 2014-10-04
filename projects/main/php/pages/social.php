@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Social Cause | Shaastra '15</title>
+        <title>Social Cause | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
 
         <style type="text/css">

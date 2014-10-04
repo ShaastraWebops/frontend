@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About | Shaastra '15</title>
+        <title>About | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
         <style>
             .main {

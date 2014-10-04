@@ -2,7 +2,7 @@
 <!doctype html public "" "">
 <html>
 	<head>
-		<title>Lectures | Shaastra '15</title>
+		<title>Lectures | Shaastra 2015</title>
 
 		<?php include '../../php/base/head.php' ?>
 	<style>

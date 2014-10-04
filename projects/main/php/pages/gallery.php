@@ -19,7 +19,7 @@
                 show404();
             }
         ?>
-        <title>Gallery | Shaastra '15</title>
+        <title>Gallery | Shaastra 2015</title>
 
         <?php include '../../php/base/head.php' ?>
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery.css">

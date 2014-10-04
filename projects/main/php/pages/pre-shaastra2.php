@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pre Shaastra | Shaastra '15</title>
+		<title>Pre Shaastra | Shaastra 2015</title>
 		<?php include '../base/head.php' ?>
 
 		<style type="text/css">
@@ -9,10 +9,10 @@
 				overflow-y: auto;
 			}
 			.animation.anim-sampark {
-				z-index : 1; 
+				z-index : 1;
 				margin: auto;
 				text-align: center;
-			}	
+			}
 	        svg#samparkMap {
     		}
     		svg#samparkMap a {
@@ -97,7 +97,7 @@
             }
 		</style>
 	</head>
-	
+
 	<body>
 		<?php include '../base/menu.php' ?>
 		<div class="container-fluid white centered">
@@ -126,7 +126,7 @@
 					    </div>
 					    <div id="collapseOne" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-					      	  <?php 
+					      	  <?php
 								$data = file_get_contents('../misc/lectures.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -156,7 +156,7 @@
 					    </div>
 					    <div id="collapseTwo" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-					            <?php 
+					            <?php
 								$data = file_get_contents('../misc/workshops.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -186,7 +186,7 @@
 					    </div>
 					    <div id="collapseThree" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-					        <?php 
+					        <?php
 								$data = file_get_contents('../misc/events.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
@@ -257,7 +257,7 @@
 						</svg>
 					</div>
 					<div class="para2">
-						<?php 
+						<?php
 							$data = file_get_contents('../misc/pre-shaastra/pre-shaastra2.html');
 							if ( isset($_GET['edit']) ) { ?>
 							<form method="post" action='../scripts/save_to_file.php'>
@@ -300,7 +300,7 @@
 	    </script>
 	    <?php } ?>
 
-		
+
 		<script type="text/javascript">
 			var animation_time = 3000;
 			function sampark(i){
@@ -309,15 +309,15 @@
 					$("svg#samparkMap .cities a:nth-child("+i+")").animate({opacity:"1"},animation_time*0.05);
 				},animation_time*0.05*i + 1100);
 			}
-			
+
 			$(document).ready(function() {
 				var $el = $(this);
-				
+
 				animation_time = 3500;
 				setTimeout(function(){
 					$(".animation.anim-sampark").fadeIn(animation_time*0.1);
 				}, animation_time*0.05);
-				
+
 				//----------------mapBorder animation
 				var ifFirefox = /firefox/.test(navigator.userAgent.toLowerCase());
 				// console.log(ifFirefox+" "+pathLength);
@@ -334,14 +334,14 @@
 				x.style.WebkitAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 				x.style.mozAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 				x.style.oAnimation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
-				x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";				
+				x.style.animation = "mapBorder "+duration+"s ease-in-out "+delay+"s forwards";
 
 				//----------------location animation
 				var n = 8; //no. of sampark locations
 				for(var i=1; i<=n; i++){
 					sampark(i);
 				}
-			});			
+			});
 		</script>
 	</body>
 </html>

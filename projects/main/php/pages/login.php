@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login | Shaastra '15</title>
+        <title>Login | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
 
         <style>
