@@ -500,7 +500,7 @@
                     <span class="table-cell">
                         <span>
                             <!-- <span class="small hidden-xs">Know our</span> -->
-                            <span class="big">Pre Shaastra <span class="hidden-xs">Activities</span></span>
+                            <span class="big">Pre Shaastra <span class="hidden">Activities</span></span>
                         </span>
                     </span>
                 </a>

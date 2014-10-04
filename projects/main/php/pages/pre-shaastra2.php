@@ -77,12 +77,12 @@
                     text-decoration: none;
         	}
         	.background1{
-                   background-color:#778899	;
-                    color: black;
-                    text-decoration: none;
+                background-color: #ddd;
+                color: black;
+                text-decoration: none;
         	}
         	a.background1:hover{
-        		color:#FFE4C4	;
+        		color:#666;
         	}
         	.border{
                 border:1px solid #778899;
@@ -132,21 +132,12 @@
 					    </div>
 					    <div id="collapseOne" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-<<<<<<< HEAD
 					      	  <?php
-=======
-					      	  <?php 
 								$data = file_get_contents('../misc/pre-shaastra/lectures.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
 				                    <div class='data col-xs-12'>
 				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/lectures.html' />
->>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
-								$data = file_get_contents('../misc/lectures.html');
-								if ( isset($_GET['edit']) ) { ?>
-								<form method="post" action='../scripts/save_to_file.php'>
-				                    <div class='data col-xs-12'>
-				                        <input type='hidden' name='filename' value='../misc/lectures.html' />
 				                        <textarea name="data" id='data-lectures' style='min-height : 100px;'>
 				                            <?php echo $data; ?>
 				                        </textarea>
@@ -171,21 +162,12 @@
 					    </div>
 					    <div id="collapseTwo" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-<<<<<<< HEAD
 					            <?php
-=======
-					            <?php 
-								$data = file_get_contents('../misc/pre-shaastra/workshops.html');
+					            $data = file_get_contents('../misc/pre-shaastra/workshops.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
 				                    <div class='data col-xs-12'>
 				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/workshops.html' />
->>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
-								$data = file_get_contents('../misc/workshops.html');
-								if ( isset($_GET['edit']) ) { ?>
-								<form method="post" action='../scripts/save_to_file.php'>
-				                    <div class='data col-xs-12'>
-				                        <input type='hidden' name='filename' value='../misc/workshops.html' />
 				                        <textarea name="data" id='data-workshops' style='min-height : 100px;'>
 				                            <?php echo $data; ?>
 				                        </textarea>
@@ -210,21 +192,12 @@
 					    </div>
 					    <div id="collapseThree" class="panel-collapse collapse background">
 					      <div class="panel-body background border">
-<<<<<<< HEAD
 					        <?php
-=======
-					        <?php 
 								$data = file_get_contents('../misc/pre-shaastra/events.html');
 								if ( isset($_GET['edit']) ) { ?>
 								<form method="post" action='../scripts/save_to_file.php'>
 				                    <div class='data col-xs-12'>
 				                        <input type='hidden' name='filename' value='../misc/pre-shaastra/events.html' />
->>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
-								$data = file_get_contents('../misc/events.html');
-								if ( isset($_GET['edit']) ) { ?>
-								<form method="post" action='../scripts/save_to_file.php'>
-				                    <div class='data col-xs-12'>
-				                        <input type='hidden' name='filename' value='../misc/events.html' />
 				                        <textarea name="data" id='data-events' style='min-height : 100px;'>
 				                            <?php echo $data; ?>
 				                        </textarea>
@@ -296,18 +269,13 @@
 						</svg>
 					</div>
 					<div class="para2">
-<<<<<<< HEAD
 						<?php
-							$data = file_get_contents('../misc/pre-shaastra/pre-shaastra2.html');
-=======
-						<?php 
-							$data = file_get_contents('../misc/pre-shaastra2.html');
->>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
+							$data = file_get_contents('../misc/pre-shaastra/sampark.html');
 							if ( isset($_GET['edit']) ) { ?>
 							<form method="post" action='../scripts/save_to_file.php'>
 			                    <div class='data2 col-xs-12'>
-			                        <input type='hidden' name='filename' value='../misc/pre-shaastra2.html' />
-			                        <textarea name="data" id='data2' style='min-height : 100px;'>
+			                        <input type='hidden' name='filename' value='../misc/pre-shaastra/sampark.html' />
+			                        <textarea name="data" id='data' style='min-height : 100px;'>
 			                            <?php echo $data; ?>
 			                        </textarea>
 			                    </div>
@@ -331,6 +299,7 @@
 	            CKEDITOR.inline('data-lectures')
 	            CKEDITOR.inline('data-workshops')
 	            CKEDITOR.inline('data-events')
+                CKEDITOR.inline('data')
 	            $(window).bind('keydown', function(event) {
 	                if (event.ctrlKey || event.metaKey) {
 	                    var letter = String.fromCharCode(event.which).toLowerCase();

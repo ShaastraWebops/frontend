@@ -54,7 +54,7 @@
 				width: 100%;
 			}
 			.shaastra-logo {
-				font-size: 2em;
+				font-size: 1.8em;
 				text-shadow : 2px 2px #000;
 			}
 			.shaastra-blue {
@@ -308,14 +308,14 @@
 			</div>
 		</div>
 		<div class="row ngon-row">
-			<div class="col-sm-6 col-xs-12">
+			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../../php/pages/eventlist.php?category=Workshops" class="title head2 text">Workshops</a>
 					</span>
 				</span>
 			</div>
-			<div class="col-sm-6 col-xs-12">
+			<div class="col-sm-5 col-sm-offset-2 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../../php/pages/exhibitions.php" class="title head3 text">Exhibitions</a>
@@ -324,22 +324,18 @@
 			</div>
 		</div>
 		<div class="row ngon-row">
-			<div class="col-sm-6 col-xs-12">
+			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<a href="../../php/pages/lectures.php" class="title head4 text">Lectures</a>
 					</span>
 				</span>
 			</div>
-			<div class="col-sm-6 col-xs-12">
+			<div class="col-sm-5 col-sm-offset-2 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-<<<<<<< HEAD
 						<a href="../../php/pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
-=======
-						<a href="../pages/pre-shaastra2.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
->>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
-					</span>
+         			</span>
 				</span>
 			</div>
 		</div>
