@@ -6,17 +6,19 @@
         header('Location: ../../php/pages/login.php');
     }
 
-    if ( isset($_GET['first_name']) ) {
-        $_SESSION['first_name'] = $_GET['first_name'];
+    if ( isset($_REQUEST['first_name']) ) {
+        $_SESSION['first_name'] = $_REQUEST['first_name'];
     }
-    if ( isset($_GET['last_name']) ) {
-        $_SESSION['last_name'] = $_GET['last_name'];
+    if ( isset($_REQUEST['last_name']) ) {
+        $_SESSION['last_name'] = $_REQUEST['last_name'];
+    }
+    if ( isset($_REQUEST['valid_profile']) ) {
+        $_SESSION['valid_profile'] = $_REQUEST['valid_profile'];
     }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-
         <title>Dashboard | Shaastra '15</title>
         <?php include '../../php/base/head.php' ?>
         <style>
@@ -45,6 +47,7 @@
                 font-size: 1em;
                 font-weight: 100;
                 border-radius: 0em;
+                text-align: left;
             }
             :empty {
                 display: inline-block;
@@ -100,7 +103,7 @@
 
         <div class="container main white">
             <div class="row row-centered">
-                <div class="alert alert-info alert-dismissible hidden error-msg col-md-10 col-centered" role="alert">
+                <div class="alert alert-info alert-dismissible error-msg col-md-10 col-centered" role="alert" style="display: none;">
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <span class="bold head"></span>
                     <span class="text"></span>
@@ -121,7 +124,7 @@
                             <form method="POST">
                                 <div class="container-fluid">
                                     <div class="row" style="padding-bottom: 1em;">
-                                        <div class="col-md-12" style="font-size:1.2em;text-align:center;vertical-align:middle">
+                                        <div class="col-md-12 text-center" style="font-size:1.2em; vertical-align:middle">
                                             <button class="pull-left btn btn-info edit">Edit Profile</button>
                                             <span class="bold">Profile Details</span>
                                             <a class="pull-right btn btn-info" href="../../php/scripts/logout.php">Logout</a>
@@ -129,45 +132,45 @@
                                     </div>
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-sm-6 head">Shaastra ID</div>
-                                            <div class="col-sm-6"><?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?></div>
+                                            <div class="col-sm-4 head">Shaastra ID</div>
+                                            <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"><?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Name</div>
-                                            <div class="col-sm-4 label" name="first_name"><?php echo $_SESSION['first_name']; ?></div>
-                                            <div class="col-sm-4 label" name="last_name"><?php echo $_SESSION['last_name']; ?></div>
+                                            <div class="col-sm-4 label text-left" style="width: auto" name="first_name"><?php echo $_SESSION['first_name']; ?></div>
+                                            <div class="col-sm-4 label text-left" name="last_name"><?php echo $_SESSION['last_name']; ?></div>
                                             <input class="col-sm-4 form" name="first_name" type="text" placeholder="First Name" required />
                                             <input class="col-sm-4 form" name="last_name" type="text" placeholder="Last Name" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Email id</div>
-                                            <div class="col-sm-8"><?php echo $_SESSION['email']; ?></div>
+                                            <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"><?php echo $_SESSION['email']; ?></div>
                                             <!-- <input class="col-sm-8 form" name="email" type="email" placeholder="eg: me@example.com" /> -->
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Gender</div>
-                                            <div class="col-sm-3 label" name="gender"  style="">M</div>
+                                            <div class="col-sm-3 label text-left" name="gender"  style="">M</div>
                                             <select class="col-sm-3 form" name="gender" required >
                                                 <option>M</option>
                                                 <option>F</option>
                                             </select>
                                             <div class="col-sm-2 head">Age</div>
-                                            <div class="col-sm-3 label" name="age"></div>
-                                            <input class="col-sm-3 form" name="age" type="text" placeholder="" />
+                                            <div class="col-sm-3 label text-left" name="age"></div>
+                                            <input class="col-sm-3 form" name="age" type="number" placeholder="" min="10" max="90" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">College Name</div>
-                                            <div class="col-sm-8 label" name="college_text"></div>
+                                            <div class="col-sm-8 label text-left" name="college_text"></div>
                                             <input class="col-sm-8 form" name="college_text" type="text" placeholder="eg: IIT Madras" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Roll No</div>
-                                            <div class="col-sm-8 label" name="college_roll"></div>
+                                            <div class="col-sm-8 label text-left" name="college_roll"></div>
                                             <input class="col-sm-8 form" name="college_roll" type="text" placeholder="eg: EP12B001" />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Branch</div>
-                                            <div class="col-sm-8 label" name="branch"></div>
+                                            <div class="col-sm-8 label text-left" name="branch"></div>
                                             <!-- <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required /> -->
                                             <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering">
 
@@ -175,17 +178,17 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">City</div>
-                                            <div class="col-sm-8 label" name="city"></div>
+                                            <div class="col-sm-8 label text-left" name="city"></div>
                                             <input class="col-sm-8 form" name="city" type="text" placeholder="eg: Chennai" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Phone</div>
-                                            <div class="col-sm-8 label" name="mobile_number"></div>
+                                            <div class="col-sm-8 label text-left" name="mobile_number"></div>
                                             <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Password</div>
-                                            <div class="col-sm-8 label" name="password"></div>
+                                            <div class="col-sm-8 label text-left" name="password"></div>
                                             <input class="col-sm-8 form" name="password" type="text" placeholder="Change password" />
                                         </div>
                                         <div class="row" style="border-bottom: 0px;">
@@ -264,27 +267,27 @@
                                                 <!-- <option value="Symposium">Symposium</option> -->
                                             </select>
                                         </div>
-                                        <div class="form-group participant">
-                                            <label for="participant" class="col-md-4 member-label">Participant</label>
-                                            <div class="col-md-8" style="padding: 0">
-                                                <input readonly="readonly" type="text" name="participant" class="form-control form" placeholder="Shaastra ID" value="<?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?>">
-                                                <!-- <a href="" class="remove_member inset-remove"> Remove </a> -->
-                                            </div>
+                                    </div>
+                                    <div class="form-group participant">
+                                        <label for="participant" class="col-md-4 member-label">Participant</label>
+                                        <div class="col-md-8" style="padding: 0">
+                                            <input readonly="readonly" type="text" name="participant" class="form-control form" placeholder="Shaastra ID" value="<?php echo 'SH15' . str_pad($_SESSION['user_id'], 5, '0', STR_PAD_LEFT); ?>">
+                                            <!-- <a href="" class="remove_member inset-remove"> Remove </a> -->
                                         </div>
-                                        <div class="form-group team hidden">
-                                            <label for="team" class="col-md-4 member-label">Team</label>
-                                            <div class="col-md-8" style="padding: 0">
-                                                <select type="text" name="team" class="form-control form" placeholder="Team Name">
-                                                    <option value="">-----</option>
-                                                </select>
-                                                <!-- <a class="remove_member inset-remove"> Remove </a> -->
-                                            </div>
+                                    </div>
+                                    <div class="form-group team" style="display: none">
+                                        <label for="team" class="col-md-4 member-label">Team</label>
+                                        <div class="col-md-8" style="padding: 0">
+                                            <select type="text" name="team" class="form-control form" placeholder="Team Name">
+                                                <option value="">-----</option>
+                                            </select>
+                                            <span class="team-help text">hello</span>
                                         </div>
-                                        <div class="form-group tdp">
-                                            <label for="tdp" class="col-md-4 member-label">Submission</label>
-                                            <div class="col-md-8" style="padding: 0">
-                                                <input type="file" name="tdp" class="form" placeholder="">
-                                            </div>
+                                    </div>
+                                    <div class="form-group tdp">
+                                        <label for="tdp" class="col-md-4 member-label">Submission</label>
+                                        <div class="col-md-8" style="padding: 0">
+                                            <input type="file" name="tdp" class="form" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group row-centered">
@@ -329,7 +332,7 @@
             var teams = Array();
 
             function toggle_form(e) {
-                e.preventDefault()
+                e && e.preventDefault()
                 if($('#profile .form').css('display') == 'none') {
                     $("#profile .edit").html('View Profile');
                     $('#profile .label').hide()
@@ -484,32 +487,63 @@
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
+                <?php
+                    if ( isset($_SESSION['valid_profile']) && $_SESSION['valid_profile'] == "0" ) {
+                ?>
+
+                    var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
+                    $el.find('.head').html("Wait Up ! ")
+                    $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
+                    $el.hide().slideDown(500);
+                    $('body').scrollTop(0)
+                    // setTimeout(function() {$alert.fadeOut(500)}, 1500)
+                    window.location.hash = "#edit-profile"
+                <?php
+                    }
+                ?>
 
                 $('#events .register select[name=name]').change(function(ev) {
                     $el = $(this)
-                    this_event = events.filter(customFilter({'id' : parseInt($el.find(":selected").attr('name'))}))
+                    this_event = events.filter(customFilter({'id' : parseInt($el.find(":selected").attr('name'))}))[0]
                     if ( this_event.length && this_event[0].is_mine ) {
-                        $alert = $('.error-msg').removeClass('hidden')
+                        $alert = $('.error-msg').show()
                         $alert.find('.text').html("You have already registered for this event. If you wish to edit your entry, please click the '<b>edit</b>' button near the event name in <b>Your Current Events</b> list ")
                         $alert.find('.head').html("Note ")
                         setTimeout(function() {$alert.fadeOut(500)}, 1000)
                         $el.find(':selected').removeAttr('selected')
                     }
-
                     if ( this_event.team_size_max > 1 ) { // Needs a Team
                         $('#events .register .team').show()
                         $('#events .register .participant').hide()
-                        $('#events .register .team [name=name]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
+                        $("#events .register .team .team-help").show().html(
+                            '<p>Team size allowed : ' + this_event.team_size_min + " - " + this_event.team_size_max + "</p>"
+                            + "<p style='display: none' class='text2'></p>"
+                        )
                     } else {
                         $('#events .register .team').hide()
                         $('#events .register .participant').show()
+                        $("#events .register .team .team-help").hide().html('')
                     }
                     if ( this_event.has_tdp ) { // Needs a TDP
                         $('#events .register .tdp').show()
                     } else {
                         $('#events .register .tdp').hide()
                     }
-
+                })
+                $('#events .register select[name=team]').change(function(ev) {
+                    this_event = events.filter(customFilter({'id' : parseInt($('#events .register select[name=name]').find(":selected").attr('name'))}))[0]
+                    this_team = teams.filter(customFilter({'id' : parseInt($(this).find(":selected").attr('name'))}))[0]
+                    if ( this_event.team_size_max > 1 ) { // Needs a Team
+                        $('#events .register .team').show()
+                        $('#events .register .participant').hide()
+                        var my_text = "Size of Team " + this_team.name + " : " + this_team.members.length
+                        if ( this_team.members.length <= this_event.team_size_max && this_team.members.length >= this_event.team_size_min )
+                            my_text += "<b class='pull-right label label-success' style='font-size: 0.9em'> Valid </b>"
+                        else
+                            my_text += "<b class='pull-right label label-danger' style='font-size: 0.9em> Invalid </b>"
+                        $("#events .register .team .team-help .text2").show().html(my_text)
+                    } else {
+                    }
                 })
 
                 $('#dashboard-tabs a').click(function (e) {
@@ -519,7 +553,7 @@
                 hash = window.location.hash; // retrieve current hash value
                 if ( hash ==  "#_=_" ) {
 
-                } else if ( hash == "#edit" ) {
+                } else if ( hash == "#edit-profile" ) {
                     setTimeout(function() {
                         $('#dashboard-tabs a[href="#profile"]').tab('show')
                         toggle_form(); // and show form
@@ -529,95 +563,6 @@
                         $('#dashboard-tabs a[href="' + hash + '"]').tab('show')
                     }, 500); // This is a random time - jugaad.
                 }
-
-                $('#teams form').submit(function(e) {
-                    e.preventDefault()
-                    var $el = $(this);
-                    var member_info = []
-                    $('#teams .create .member').not('.template').each(function(key, val) {
-                        $inp = $(val).find('[name=member]')
-                        member_info.push(parseInt($inp.val().substr(4, $inp.val().length)))
-                    })
-                    json_info = {
-                        'name' : $('#teams .create [name=name]').val(),
-                        'member' : member_info
-                    }
-                    if ( $('#teams .create').data('id') )
-                        json_info['id'] = $('#teams .create').data('id')
-
-                    $.ajax({ // SEND POST INFO FOR TEAM
-                        type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/teams/",
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
-                        },
-                        chache: false,
-                        data: json_info
-                    }).done(function(res) { // Refresh to get back data :)
-                        window.location.reload()
-                    }).fail(function(xhr) {
-                        console.log(xhr.status)
-                    })
-                })
-                $('#profile form').submit(function(e) {
-                    e.preventDefault();
-                    var $el = $(this)
-                    var json_info = {
-                        //'name' : $el.find('.name')
-                    }
-                    $el.find('.form').each(function(i, el) {
-                        var $el = $(el);
-                        json_info[$el.attr('name')] = $el.val()
-                    })
-                    if ( json_info['password'] == "" ) {
-                        delete json_info['password']
-                    }
-                    console.log(json_info)
-                    $.ajax({ // SEND INFO FOR PROFILE
-                        type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
-                        },
-                        chache: false,
-                        data: json_info
-                    }).done(function(res) {
-                        data = res['data']
-                        console.log(data)
-                        // window.location.href = window.location.origin + window.location.pathname + "?first_name=" + data.first_name + "&last_name=" + data.last_name
-                    }).fail(function(xhr) {
-                        console.log(xhr.status)
-                    })
-                })
-                $('#events form').submit(function(e) {
-                    e.preventDefault();
-                    var $el = $(this)
-                    // var json_info = {}
-                    // $el.find('.form').each(function(i, el) {
-                    //     var $el = $(el);
-                    //     json_info[$el.attr('name')] = $el.val()
-                    // })
-                    var json_info = new FormData($el[0]);
-                    $.ajax({ // SEND INFO FOR PROFILE
-                        type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/", //<?php echo $_SESSION['user_id']; ?>/",
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
-                        },
-                        chache: false,
-                        data: json_info,
-                        contentType: false,
-                        processData: false,
-                    }).done(function(res) {
-                        data = res['data']
-                        $alert = $('.error-msg').removeClass('hidden')
-                        $alert.find('.text').html("Your submission has been saved. The results will be declared soon. You can edit your by clicking the edit button")
-                        $alert.find('.head').html("Submitted")
-                        setTimeout(function() { window.location.reload() }, 500 )
-                    }).fail(function(xhr) {
-                        console.log(xhr.status)
-                    })
-                })
             })
             function init_profile() {
                 $.ajax({ // GET USER PROFILE INFO
@@ -640,15 +585,47 @@
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
                         $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code PROFILE_ERROR_500")
-                        $el.hide().removeClass("hidden").slideDown(500);
+                        $el.hide().slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
                         var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
                         $el.find('.head').html("Wait Up ! ")
                         $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
-                        $el.hide().removeClass("hidden").slideDown(500, toggle_form);
+                        $el.hide().slideDown(500, toggle_form);
                         $('body').scrollTop(0)
                     }
+                })
+                $('#profile form').submit(function(e) {
+                    e.preventDefault();
+                    var $el = $(this)
+                    var json_info = {
+                        //'name' : $el.find('.name')
+                    }
+                    $el.find('.form').each(function(i, el) {
+                        var $el = $(el);
+                        json_info[$el.attr('name')] = $el.val()
+                    })
+                    if ( json_info['password'] == "" ) {
+                        delete json_info['password']
+                    }
+                    $.ajax({ // SEND INFO FOR PROFILE
+                        type: "POST",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                        },
+                        chache: false,
+                        data: json_info
+                    }).done(function(res) {
+                        data = res['data']
+                        console.log(data)
+                        window.location.href = window.location.origin + window.location.pathname +
+                            "?first_name=" + data.first_name +
+                            "&last_name=" + data.last_name +
+                            "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
+                    }).fail(function(xhr) {
+                        console.log(xhr.status)
+                    })
                 })
             }
             function init_events() {
@@ -708,7 +685,6 @@
                                     }
                                     $el.find('.content').html($el.find('.content').html() +
                                         $el.team_size_max + "<br />")
-
                                 }
                             } else {
                                 $el.data('team_event', false)
@@ -731,6 +707,16 @@
                             $el.find('#event-accordion-no').attr('id', 'event-accordion-' + key)
                             $el.find('.panel-title a').attr('href', '#event-accordion-' + key)
 
+                            $el.find('.edit').click(function(e) {
+                                $('#events .register').css('border', 'solid 2px #fff')
+                                    .animate({'border-width': 0}, {
+                                        duration: 500,
+                                        step: function( cur_width ) {
+                                            $('#events .register').css( {'border' : 'solid 2px rgba(255, 255, 255, ' + cur_width / 2 + ')' });
+                                        }
+                                    }, function() { $('#events .register').css( {'border' : '0' }) });
+                                team_edit($(this).closest('.team')[0])
+                            })
                             $el.find('.edit').click( function(e) {
                                 event_edit($(this))
                             })
@@ -747,15 +733,44 @@
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
                         $el.find('.text').html("There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code EVENT_ERROR_500")
-                        $el.hide().removeClass("hidden").slideDown(500);
+                        $el.hide().slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
                         var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
                         $el.find('.head').html("Wait Up ! ")
                         $el.find('.text').html("We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
-                        $el.hide().removeClass("hidden").slideDown(500, toggle_form);
+                        $el.hide().slideDown(500, toggle_form);
                         $('body').scrollTop(0)
                     }
+                })
+                $('#events form').submit(function(e) {
+                    e.preventDefault();
+                    var $el = $(this)
+                    // var json_info = {}
+                    // $el.find('.form').each(function(i, el) {
+                    //     var $el = $(el);
+                    //     json_info[$el.attr('name')] = $el.val()
+                    // })
+                    var json_info = new FormData($el[0]);
+                    $.ajax({ // SEND INFO FOR PROFILE
+                        type: "POST",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/", //<?php echo $_SESSION['user_id']; ?>/",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                        },
+                        chache: false,
+                        data: json_info,
+                        contentType: false,
+                        processData: false,
+                    }).done(function(res) {
+                        data = res['data']
+                        $alert = $('.error-msg').show()
+                        $alert.find('.text').html("Your submission has been saved. The results will be declared soon. You can edit your by clicking the edit button")
+                        $alert.find('.head').html("Submitted")
+                        setTimeout(function() { window.location.reload() }, 500 )
+                    }).fail(function(xhr) {
+                        console.log(xhr.status)
+                    })
                 })
             }
             function init_teams() {
@@ -814,15 +829,44 @@
                         var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
                         $el.find('.head').html("Error ")
                         $el.find('.text').html(" There seems to be an error in our systems. We're probably on it already, but you can send us an error report at <a href='mailto:webops@shaastra.org'>webops@shaastra.org</a> with the error code TEAMS_ERROR_500")
-                        $el.hide().removeClass("hidden").slideDown(500);
+                        $el.hide().slideDown(500);
                         $('body').scrollTop(0)
                     } else if ( xhr.status == 404 ) { // UserProfile doesnt exist - show error
                         var $el = $('.error-msg').addClass('alert-info').removeClass('alert-danger')
                         $el.find('.head').html("Wait Up ! ")
                         $el.find('.text').html(" We need some basic information about yourself before proceeding. Please fill in the profile information and submit it.")
-                        $el.hide().removeClass("hidden").slideDown(500, toggle_form);
+                        $el.hide().slideDown(500, toggle_form);
                         $('body').scrollTop(0)
                     }
+                })
+                $('#teams form').submit(function(e) {
+                    e.preventDefault()
+                    var $el = $(this);
+                    var member_info = []
+                    $('#teams .create .member').not('.template').each(function(key, val) {
+                        $inp = $(val).find('[name=member]')
+                        member_info.push(parseInt($inp.val().substr(4, $inp.val().length)))
+                    })
+                    json_info = {
+                        'name' : $('#teams .create [name=name]').val(),
+                        'member' : member_info
+                    }
+                    if ( $('#teams .create').data('id') )
+                        json_info['id'] = $('#teams .create').data('id')
+
+                    $.ajax({ // SEND POST INFO FOR TEAM
+                        type: "POST",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/teams/",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                        },
+                        chache: false,
+                        data: json_info
+                    }).done(function(res) { // Refresh to get back data :)
+                        window.location.reload()
+                    }).fail(function(xhr) {
+                        console.log(xhr.status)
+                    })
                 })
             }
             function customFilter(values) {
@@ -830,7 +874,6 @@
                     var r = el;
                     var keys = Object.keys( values );
                     var answer = true;
-
                     for( var i = 0, len = keys.length; i < len; i++) {
                         if( r[keys[i]] !== values[keys[i]] ) {
                             answer = false;

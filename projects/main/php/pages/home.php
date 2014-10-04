@@ -78,7 +78,7 @@
 					display: block;
 					z-index: 5;
 				}
-			}
+    		}
 			#main-logo .logo-wrapper > div {
 				-webkit-transition: all 300ms ease-in-out;
 				-moz-transition: all 300ms ease-in-out;
