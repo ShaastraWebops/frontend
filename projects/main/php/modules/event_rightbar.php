@@ -85,42 +85,42 @@
 	}
 </style>
 
-<div class="container-fluid right-menu">
+<div class="container-fluid right-menu hidden-xs">
 	<ul class="row">
 <!--
 		<li class="line hidden-xs">
 			<a ><span class="text">Search</span> <span class="glyphicon-md glyphicon glyphicon-search"></span></a>
 		</li>
 -->
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Aerofest"><span class="text">Aerofest</span> <span class="glyphicon-md glyphicon glyphicon-send"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Aerofest"><span class="text">Aerofest</span> <span class="glyphicon-md glyphicon glyphicon-send"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=B-Events"><span class="text">B-Events</span> <span class="glyphicon-md glyphicon glyphicon-stats"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=B-Events"><span class="text">B-Events</span> <span class="glyphicon-md glyphicon glyphicon-stats"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Coding"><span class="text">Coding</span> <span class="glyphicon-md glyphicon glyphicon-qrcode"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Coding"><span class="text">Coding</span> <span class="glyphicon-md glyphicon glyphicon-qrcode"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Department+Flagship"><span class="text">Department Flagship</span> <span class="glyphicon-md glyphicon glyphicon-flag"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Department+Flagship"><span class="text">Department Flagship</span> <span class="glyphicon-md glyphicon glyphicon-flag"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Design+and+Build"><span class="text">Design And Build</span> <span class="glyphicon-md glyphicon glyphicon-cog"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Design+and+Build"><span class="text">Design And Build</span> <span class="glyphicon-md glyphicon glyphicon-cog"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Electronics+Fest"><span class="text">Electronics Fest</span> <span class="glyphicon-md glyphicon glyphicon-flash"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Electronics+Fest"><span class="text">Electronics Fest</span> <span class="glyphicon-md glyphicon glyphicon-flash"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Involve"><span class="text">Involve</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Involve"><span class="text">Involve</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Quizzing"><span class="text">Quizzing</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Quizzing"><span class="text">Quizzing</span> <span class="glyphicon-md glyphicon glyphicon-question-sign"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Spotlight"><span class="text">Spotlight</span> <span class="glyphicon-md glyphicon glyphicon-screenshot"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Spotlight"><span class="text">Spotlight</span> <span class="glyphicon-md glyphicon glyphicon-screenshot"></span></a>
 		</li>
-		<li class="line hidden-xs">
-			<a href="../../php/pages/eventlist.php?category=Workshops"><span class="text">Workshops</span> <span class="glyphicon-md glyphicon glyphicon-briefcase"></span></a>
+		<li class="line">
+			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Workshops"><span class="text">Workshops</span> <span class="glyphicon-md glyphicon glyphicon-briefcase"></span></a>
 		</li>
 	</ul>
 </div>

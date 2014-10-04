@@ -86,7 +86,7 @@
             $data = file_get_contents('../../php/events/sample.html');
         }
         ?>
-        <title><?php echo $event . ' - ' . substr($tab, 2); ?> | Shaastra 2015</title>
+        <title><?php echo $event . ' - ' . ucwords(substr($tab, 2)); ?> | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
         <style>
             .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
@@ -193,7 +193,7 @@
                                     <a href="<?php if ($editable)
                                     echo 'javascript:void(0)';
                                     else
-                                        echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
+                                        echo $SITE_URL . '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
                                     ?>"
                                     <?php if ($editable)
                                     echo ' data-tabname="' . $filetab . '" onclick="tab_name_edit(this)" ';
