@@ -334,7 +334,11 @@
 			<div class="col-sm-6 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
+<<<<<<< HEAD
 						<a href="../../php/pages/pre-shaastra.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
+=======
+						<a href="../pages/pre-shaastra2.php" class="title head5 text">Pre-Shaastra <br class="hidden-xs" /> Activities</a>
+>>>>>>> 3eafcb04de188d4ba0e1f1625f53bdd9a1326ff9
 					</span>
 				</span>
 			</div>
