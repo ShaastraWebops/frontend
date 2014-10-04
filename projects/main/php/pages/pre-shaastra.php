@@ -269,9 +269,9 @@
 			        				<text x="310" y="510" font-size="20">VISHAKAPATNAM</text>
 			    				</a>
  -->
- 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Madhurai" class="">
+ 			    				<a xlink:href="../pages/event.php?category=Sampark&event=Madurai" class="">
 									<circle cx="210" cy="685" r="4"/>
-			        				<text x="220" y="685" font-size="20">MADHURAI</text>
+			        				<text x="220" y="685" font-size="20">MADURAI</text>
 			    				</a>
 
  				    			<a xlink:href="../pages/event.php?category=Sampark&event=Hyderabad" class="">
