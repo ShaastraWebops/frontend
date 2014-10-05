@@ -11,9 +11,23 @@ if ( ! ( isset($_FILES['upload']['tmp_name']) && $_FILES['upload']['tmp_name'] !
     $file = $_FILES['upload'];
     $folder = $_REQUEST['folder'];
     if ($file) {
-        $target = "../../media/uploads/" . $folder . "/";
+        $target = "../../media/" . $folder . "/";
     } else {
-        $target = "../../media/uploads/";
+        $target = "../../media/";
+    }
+    if (!file_exists($target)) {
+        die (json_encode(array(
+            'script' => 'upload',
+            'status' => 'error',
+            'msg' => 'Path doesnt exist : ' . $target
+        )));
+    }
+    if (!is_writeable($target)) {
+        die (json_encode(array(
+            'script' => 'upload',
+            'status' => 'error',
+            'msg' => 'Cannot write to the folder ' . $target
+        )));
     }
     $target = $target . basename( $_FILES['upload']['name']);
     $res = file_exists($target);
@@ -26,7 +40,7 @@ if ( ! ( isset($_FILES['upload']['tmp_name']) && $_FILES['upload']['tmp_name'] !
     } else {
 
         $res = move_uploaded_file( $_FILES['upload']['tmp_name'], $target );
-        echo $res;
+        //echo $res;
         if ( $res ) {
             echo json_encode(array(
                 'script' => 'upload',

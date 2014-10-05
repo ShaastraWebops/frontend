@@ -586,7 +586,7 @@
                     if ( data['status'] == "error" ) {
                         $('#event-uploads form .help-text').html("<b>Error</b> - " + data.msg)
                     } else if ( data['status'] == "success" ) {
-                        $('#event-uploads form .help-text').html("<b>Success</b> The link is : " + data['msg'])
+                        $('#event-uploads form .help-text').html("<b>Success</b> The link is : <a href='" + data['msg'] + "'>" + data['msg'] + "</a>")
                     // window.location.reload()
                     }
                 }).fail(function(xhr) {
