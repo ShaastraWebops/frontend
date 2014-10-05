@@ -207,8 +207,6 @@
                     <?php } ?>
                 </ul>
             </div>
-            <!-- <div contenteditable="true">Hello</div> -->
-
             <?php if (isset($editable) && $editable) { ?>
                 <!-- for marquee start -->
                 <form method="post" action="../../php/scripts/save_to_file.php">
@@ -347,7 +345,7 @@
     </div>
 
     <?php if ( $editable ) { ?>
-    <div class="container" id="event-info">
+    <div class="container">
         <div class="row row-centered">
             <div class="alert alert-danger alert-dismissible error-msg col-md-10 col-centered" role="alert" style="display: none;">
                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -356,9 +354,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-1" id="event-info">
                 <h3 class="centered"><span class="head">Event Information</span></h3>
                 <form role="form" action="" method="POST">
+                    <div class="help-text" style="border-top: 1px solid #fff; border-bottom: 1px solid #fff;"> </div>
                     <input type="hidden" name="name" class="form-control form" value="<?php echo $event ?>">
                     <div class="form-group team_size_min">
                         <label for="team_size_min" class="col-md-4 member-label">Team Size (Min)</label>
@@ -405,7 +404,8 @@
             </div>
             <div class="col-md-5" id="event-uploads">
                 <h3 class="centered"><span class="head">Uploads</span></h3>
-                <form method="POST" enctype="multipart/form-data" role="form">
+                <form method="POST" enctype="multipart/form-data" role="form" action="">
+                    <div class="help-text" style="border-top: 1px solid #fff; border-bottom: 1px solid #fff;"> </div>
                     <div class="form-group">
                         <label for="upload" class="col-md-4 member-label">Upload file</label>
                         <div class="col-md-8" style="padding: 0">
@@ -414,14 +414,16 @@
                         <input type="hidden" name="folder" class="form" value="<?php echo $event; ?>" />
                     </div>
                     <div class="form-group row-centered">
-                        <button type="submit" class="btn btn-primary col-md-5 col-centered upload" style="margin: 0.2em 0;">Upload File</button>
+                        <button class="btn btn-primary col-md-5 col-centered upload" style="margin: 0.2em 0;">Upload File</button>
                     </div>
                 </form>
                 <h3>Uploaded files : </h3>
                 <ul class="upload-list">
                     <?php
-                        if ( ! file_exists("../../media/" . $event) )
-                            mkdir("../../media/" . $event);
+                        if ( ! file_exists("../../media/" . $event) ) {
+                            mkdir("../../media/" . $event, 0777);
+                            // chmod("../../media/" . $event, 0777);
+                        }
                         foreach(scandir("../../media/" . $event) as $file) {
                             if ( '.' === $file ) continue;
                             if ( '..' === $file ) continue;
@@ -442,7 +444,7 @@
     <?php include '../../php/base/foot.php' ?>
     <?php if ( ! $editable ) include '../../php/modules/iitm.php'; ?>
     <?php include '../../php/modules/event_rightbar.php'; ?>
-    <?php if ( $event == "Symposium" ) {
+    <?php if ( $event == "Symposium" ) { // Cuz sympo wanted their fb page
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
     <?php include '../../php/modules/social.php' ?>
@@ -503,7 +505,7 @@
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                 },
-                chache: false,
+                cache: false,
                 data: json_info
             }).done(function(res) {
                 var data = res.data
@@ -528,6 +530,7 @@
             $('#event-info form').submit(function(e) {
                 e && e.preventDefault()
                 var $el = $(this)
+                $('#event-info form .help-text').html("Submitting ... please wait")
                 var json_info = {
                     "action" : "edit",
                     "event_id" : this_event.id,
@@ -537,20 +540,30 @@
                     "team_size_min" : parseInt($('#event-info [name=team_size_min]').val()),
                     "team_size_max" : parseInt($('#event-info [name=team_size_max]').val()),
                 }
-                $.ajax({ // SEND INFO FOR PROFILE
+                $.ajax({ // SEND EVENT INFO
                     type: "POST",
                     url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                     },
-                    chache: false,
+                    cache: false,
                     data: json_info
                 }).done(function(res) {
                     // window.location.reload()
                     console.log(res)
                 }).fail(function(xhr) {
-                    console.log(xhr.status)
-                    console.log(xhr)
+                    if ( xhr.status == 500 ) {
+                        $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_500. If it persists, tell the webops team")
+                    } else if ( xhr.status == 404 ) {
+                        $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_404. If it persists, tell the webops team")
+                    } else if ( xhr.status == 400 ) {
+                        var data = xhr.responseJSON
+                        var $el = $('#event-info form .help-text')
+                        $el.html("<b>Some errors were found in your submission</b>")
+                        for (var key in data) {
+                            $el.html($el.html() + '<b>' + toTitleCase(key) + '</b> - ' + data[key] + '<br />')
+                        }
+                    }
                 })
             })
         }
@@ -558,25 +571,40 @@
             $('#event-uploads form').submit(function(e) {
                 e && e.preventDefault()
                 var $el = $(this)
-                $.ajax({ // SEND INFO FOR PROFILE
+                var json_info = new FormData($el[0]);
+                $('#event-uploads form .help-text').html("Submitting ... please wait")
+                $.ajax({ // UPLOAD
                     type: "POST",
-                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
-                    beforeSend: function(xhr) {
-                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
-                    },
-                    chache: false,
-                    data: json_info
+                    url: "<?php echo $SITE_URL; ?>../../php/scripts/upload.php",
+                    cache: false,
+                    data: json_info,
+                    contentType: false,
+                    processData: false,
                 }).done(function(res) {
+                    data = JSON.parse(res)
+                    console.log(data)
+                    if ( data['status'] == "error" ) {
+                        $('#event-uploads form .help-text').html("<b>Error</b> - " + data.msg)
+                    } else if ( data['status'] == "success" ) {
+                        $('#event-uploads form .help-text').html("<b>Success</b> The link is : " + data['msg'])
                     // window.location.reload()
-                    console.log(res)
+                    }
                 }).fail(function(xhr) {
-                    console.log(xhr.status)
-                    console.log(xhr)
+                    if ( xhr.status == 500 ) {
+                        $('#event-uploads form .help-text').html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the webops team")
+                    } else if ( xhr.status == 404 ) {
+                        $('#event-uploads form .help-text').html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the webops team")
+                    } else if ( xhr.status == 400 ) {
+                        var data = xhr.responseJSON
+                        var $el = $('#event-uploads form .help-text')
+                        $el.html("<b>Some errors were found in your submission. Tell webops team you got the error UPLOAD_SUBMIT_400</b>")
+                    }
                 })
             })
         }
         $(document).ready(function() {
             init_event_info()
+            init_event_uploads()
             CKEDITOR.inline('data')
             CKEDITOR.inline('marquee') //for marquee
             $(window).bind('keydown', function(event) {
