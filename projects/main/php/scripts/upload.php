@@ -24,7 +24,9 @@ if ( ! ( isset($_FILES['upload']['tmp_name']) && $_FILES['upload']['tmp_name'] !
             'msg' => 'File already exists. Try changing name or check <a href="' . $target . '">this</a>'
         ));
     } else {
+
         $res = move_uploaded_file( $_FILES['upload']['tmp_name'], $target );
+        echo $res;
         if ( $res ) {
             echo json_encode(array(
                 'script' => 'upload',
