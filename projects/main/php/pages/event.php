@@ -182,7 +182,6 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <?php
-                        /*if ($dir_event_handle = opendir($event_path)) {*/
                             foreach(scandir($event_path) as $file) {
                                 if ( '.' === $file ) continue;
                                 if ( '..' === $file ) continue;
@@ -193,7 +192,7 @@
                                     <a href="<?php if ($editable)
                                     echo 'javascript:void(0)';
                                     else
-                                        echo $SITE_URL . '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
+                                        echo '?category=' . urlencode($category) . '&event=' . urlencode($event) . '&tab=' . urlencode($filetab);
                                     ?>"
                                     <?php if ($editable)
                                     echo ' data-tabname="' . $filetab . '" onclick="tab_name_edit(this)" ';
@@ -202,11 +201,7 @@
                                     <?php echo substr($filetab, 2); ?>
                                 </a>
                             </li>
-                            <?php
-                        }
-                        /*closedir($dir_event_handle);*/
-                    /*}*/
-                    ?>
+                        <?php } ?>
                     <?php if ($editable) { ?>
                     <li class="default"><a href="javascript:void(0)" data-tabname='+' onclick='tab_name_edit(this);' class='newtab'>+</a></li>
                     <?php } ?>
@@ -360,8 +355,8 @@
                 <span class="text"></span>
             </div>
         </div>
-        <div class="row row-centered">
-            <div class="col-md-5 col-centered">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
                 <h3 class="centered"><span class="head">Event Information</span></h3>
                 <form role="form" action="" method="POST">
                     <input type="hidden" name="name" class="form-control form" value="<?php echo $event ?>">
@@ -408,7 +403,36 @@
 
                 </form>
             </div>
-            <div class="col-md-5 col-centered">
+            <div class="col-md-5" id="event-uploads">
+                <h3 class="centered"><span class="head">Uploads</span></h3>
+                <form method="POST" enctype="multipart/form-data" role="form">
+                    <div class="form-group">
+                        <label for="upload" class="col-md-4 member-label">Upload file</label>
+                        <div class="col-md-8" style="padding: 0">
+                            <input type="file" name="upload" class="form white" style="color: #fff;" />
+                        </div>
+                        <input type="hidden" name="folder" class="form" value="<?php echo $event; ?>" />
+                    </div>
+                    <div class="form-group row-centered">
+                        <button type="submit" class="btn btn-primary col-md-5 col-centered upload" style="margin: 0.2em 0;">Upload File</button>
+                    </div>
+                </form>
+                <h3>Uploaded files : </h3>
+                <ul class="upload-list">
+                    <?php
+                        if ( ! file_exists("../../media/" . $event) )
+                            mkdir("../../media/" . $event);
+                        foreach(scandir("../../media/" . $event) as $file) {
+                            if ( '.' === $file ) continue;
+                            if ( '..' === $file ) continue;
+                    ?>
+                        <li> <?php echo $file; ?> -
+                            <a href="../../media/<?php echo $event . '/' . $file ?>">
+                                ../../media/<?php echo $event . '/' . $file ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
             </div>
         </div>
     </div>
@@ -513,6 +537,27 @@
                     "team_size_min" : parseInt($('#event-info [name=team_size_min]').val()),
                     "team_size_max" : parseInt($('#event-info [name=team_size_max]').val()),
                 }
+                $.ajax({ // SEND INFO FOR PROFILE
+                    type: "POST",
+                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                    },
+                    chache: false,
+                    data: json_info
+                }).done(function(res) {
+                    // window.location.reload()
+                    console.log(res)
+                }).fail(function(xhr) {
+                    console.log(xhr.status)
+                    console.log(xhr)
+                })
+            })
+        }
+        function init_event_uploads() {
+            $('#event-uploads form').submit(function(e) {
+                e && e.preventDefault()
+                var $el = $(this)
                 $.ajax({ // SEND INFO FOR PROFILE
                     type: "POST",
                     url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
