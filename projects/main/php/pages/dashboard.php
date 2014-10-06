@@ -404,7 +404,7 @@
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
-                        chache: false,
+                        cache: false,
                         data: json_info
                     }).done(function(res) { // Refresh to get back data :)
                         window.location.reload()
@@ -461,7 +461,7 @@
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
-                        chache: false,
+                        cache: false,
                         data: json_info
                     }).done(function(res) { // Refresh to get back data :)
                         window.location.reload()
@@ -605,7 +605,7 @@
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                     },
-                    chache: false,
+                    cache: false,
                 }).done(function(res) {
                     var data = res['data']
                     $.each(data, function(key, val) {
@@ -648,7 +648,7 @@
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
-                        chache: false,
+                        cache: false,
                         data: json_info
                     }).done(function(res) {
                         data = res['data']
@@ -668,7 +668,7 @@
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                     },
-                    chache: false,
+                    cache: false,
                     data: {'action_for' : 'all'},
                 }).done(function(res) {
                     var data = res['data']
@@ -804,7 +804,7 @@
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
-                        chache: false,
+                        cache: false,
                         data: json_info,
                         contentType: false,
                         processData: false,
@@ -847,7 +847,7 @@
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                     },
-                    chache: false,
+                    cache: false,
                     async : false
                 }).done(function(res) {
                     var data = res['data']
@@ -928,7 +928,7 @@
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
                         },
-                        chache: false,
+                        cache: false,
                         data: json_info
                     }).done(function(res) { // Refresh to get back data :)
                         window.location.reload()
