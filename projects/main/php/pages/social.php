@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Social Cause | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <title>Social Cause | Shaastra 2015</title>
+        <?php include '../../php/base/head.php' ?>
 
         <style type="text/css">
         .lead{
@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <?php include '../base/menu.php' ?>
+        <?php include '../../php/base/menu.php' ?>
         <div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
@@ -53,7 +53,7 @@
 
         </div>
 
-        <?php include '../base/foot.php' ?>
+        <?php include '../../php/base/foot.php' ?>
 
         <script type="text/javascript">
 

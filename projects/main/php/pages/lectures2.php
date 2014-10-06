@@ -2,9 +2,9 @@
 <!doctype html public "" "">
 <html>
 	<head>
-		<title>Lectures | Shaastra '15</title>
+		<title>Lectures | Shaastra 2015</title>
 
-		<?php include '../base/head.php' ?>
+		<?php include '../../php/base/head.php' ?>
 	<style>
 
 		.speaker-list, .speaker-list .speaker-group {
@@ -88,18 +88,18 @@
 	</style>
 </head>
 <body>
-<?php include '../base/menu.php' ?>
+<?php include '../../php/base/menu.php' ?>
 <div class="container-fluid white centered">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="text-center title">Lectures</h1>            
+            <h1 class="text-center title">Lectures</h1>
         </div>
     </div>
 </div>
 <div class="container-fluid speaker-list">
     <?php
-	$speakers = array(	"arogyaswami paulraj", "pawan sinha", "rajeeva karandikar", "vivek wadhwa", "vijay govindraj", 
-						"rakesh agarwal", "ajit balakrishnan", "sunil kumar", "romila thapar", "ila bhatt", 
+	$speakers = array(	"arogyaswami paulraj", "pawan sinha", "rajeeva karandikar", "vivek wadhwa", "vijay govindraj",
+						"rakesh agarwal", "ajit balakrishnan", "sunil kumar", "romila thapar", "ila bhatt",
 						"archana sharma", "archana sharma", "robert langer", "anil kakodkar");
 	$speaker_count = count($speakers);
 	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
@@ -114,11 +114,11 @@
 	            			if (!file_exists($speaker_img)) {
 	            				$speaker_img = '../../img/lectures/' . $speakers[$speaker_i] . ".png";
 	            			}
-                 			if (!file_exists($speaker_img)) {   
+                 			if (!file_exists($speaker_img)) {
                  			   	$speaker_img = $default_img;
-                			} 
+                			}
         			?>
-	                <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" 
+	                <a href="../../php/pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>"
 	                	style="background:url('<?php echo $speaker_img; ?>') no-repeat center center">
 		            <div>
 						<span class='vertical-table'>
@@ -135,7 +135,7 @@
 	    <?php } ?>
     <?php } ?>
 </div>
-	<?php include '../base/foot.php' ?>
+	<?php include '../../php/base/foot.php' ?>
 
     <script>
 		function show_speakers() {
@@ -187,14 +187,14 @@
 									.css({'height':'100%', 'width':'0%'})
 									.animate({'width': '25%'}, delay)
 								setTimeout(function() {
-									
+
 								}, delay)
 							}, 10);
 						}, delay)
 					}, delay)
 				}, delay);
 			}, 1);
-			
+
 		}
 
 		$(document).ready(function() {
@@ -212,7 +212,7 @@
 	    		$(".speaker-list").height( $(window).height() - 70 );
 	    	});
 	    	$(window).resize();
-			
+
 		})
 	</script>
     </body>

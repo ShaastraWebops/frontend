@@ -5,22 +5,22 @@
     <?php
 		if ( isset($_REQUEST['category']) ) {
 			$category = $_REQUEST['category'];
-			$category_path = '../events/' . $category ;
+			$category_path = '../../php/events/' . $category ;
 		}
                 if (!isset($category) || $category=="") { // No category, send back to categories page
-                    header('Location: ../pages/categories.php');
+                    header('Location: ../../php/pages/categories.php');
                 }
 
                 if (!is_dir($category_path)) {
-		    header('Location: ../pages/categories.php');
+		    header('Location: ../../php/pages/categories.php');
 		} else {
 		    $event_list = scandir($category_path);
 		}
         $default_img = '../../img/logo/200x200_dice_white.png';
 	?>
-    <title><?php echo $category; ?> Events | Shaastra '15</title>
+    <title><?php echo $category; ?> Events | Shaastra 2015</title>
 
-    <?php include '../base/head.php' ?>
+    <?php include '../../php/base/head.php' ?>
     <style>
         #event-list {
             color: #fff;
@@ -88,7 +88,7 @@
             width: 100%;
             display: inline-block;
             padding: 0;
-            -webkit-transition: all 0.5s;  
+            -webkit-transition: all 0.5s;
             -moz-transition: all 0.5s;
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
@@ -102,7 +102,7 @@
 </head>
 <body>
 
-    <?php include '../base/menu.php' ?>
+    <?php include '../../php/base/menu.php' ?>
     <div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
@@ -150,7 +150,7 @@
                     ?>" style="background:url('<?php echo $event_img; ?>') no-repeat; background-size: 100% 100%;">
                         <div>
                             <div class="dummy"></div>
-                            <a href="../pages/event.php?category=<?php echo urlencode($category); ?>&event=<?php echo urlencode($event); ?>">
+                            <a href="../../php/pages/event.php?category=<?php echo urlencode($category); ?>&event=<?php echo urlencode($event); ?>">
                                 <div>
                                     <span class="vertical-table">
                                         <span class="vertical-table-cell text-center transparent-text"><!--
@@ -172,9 +172,9 @@
     </div>
     </div>
 
-    <?php include '../base/foot.php' ?>
-    <?php include '../modules/event_rightbar.php'; ?>
-    
+    <?php include '../../php/base/foot.php' ?>
+    <?php include '../../php/modules/event_rightbar.php'; ?>
+
     <script>
     $(document).ready(function() {
         $transtext = $('.transparent-text');

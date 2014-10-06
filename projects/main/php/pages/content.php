@@ -6,7 +6,7 @@
         $type = $_REQUEST['type'];
     }
     $filename = "../misc/pre-shaastra/" . $type . "/" . $name . ".html";
-    
+
     if (!file_exists($filename)) { // Invalid filename
         echo "NOT DIR";
         //header('Location: ../pages/404.php');
@@ -16,9 +16,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo $name; ?> | Shaastra '15</title>
+    <title><?php echo $name; ?> | Shaastra 2015</title>
     <?php include '../base/head.php' ?>
     <style>
+    .title{
+        letter-spacing: 0.2em;
+    }
     </style>
 </head>
 
@@ -39,7 +42,7 @@
     <div class="main-content" style='margin:25px 75px 75px 75px; min-height : 80%'>
         <div class="container-fluid">
             <div class='row'>
-                <?php 
+                <?php
                     $data = file_get_contents($filename);
                     if (isset($_REQUEST['edit'])) { ?>
                     <form method="post" action='../scripts/save_to_file.php'>
@@ -52,7 +55,6 @@
                     </form>
                 <?php } else { ?>
                 <div class='data col-xs-8 col-xs-offset-2'>
-
                     <?php echo $data; ?>
                 </div>
                 <?php } ?>
@@ -62,15 +64,12 @@
     <!-- END MAIN CONTENT OF A TAB -->
 
     <?php include '../base/foot.php' ?>
-    <?php include '../modules/iitm.php' ?>
+    <!-- <?php include '../modules/iitm.php' ?> -->
     <?php include '../modules/event_rightbar.php'; ?>
     <?php include '../modules/social.php' ?>
-
     <?php if ( isset($_GET['edit']) ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
-
     <script>
-        
         $(document).ready(function() {
             CKEDITOR.inline('data')
             $(window).bind('keydown', function(event) {
