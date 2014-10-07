@@ -429,7 +429,7 @@
                             if ( '..' === $file ) continue;
                     ?>
                         <li> <?php echo $file; ?> -
-                            <a href="../../media/<?php echo $event . '/' . $file ?>">
+                            <a href="<?php echo $SITE_URL; ?>../../media/<?php echo $event . '/' . $file ?>">
                                 ../../media/<?php echo $event . '/' . $file ?>
                             </a>
                         </li>
@@ -623,6 +623,9 @@
     <script>
         $(document).ready(function() {
             setInterval(function() { $('#main-focus').focus() }, 500);
+            $('.data a').each(function(i, v) {
+                $(v).attr("target", "_blank")
+            })
         })
     </script>
 </body>
