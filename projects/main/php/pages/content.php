@@ -47,7 +47,7 @@
                     if (isset($_REQUEST['edit'])) { ?>
                     <form method="post" action='../scripts/save_to_file.php'>
                         <div class='data col-xs-8 col-xs-offset-2'>
-                            <input type='hidden' name='filename' value="<?php echo $tab_path; ?>" />
+                            <input type='hidden' name='filename' value="<?php echo $filename; ?>" />
                             <textarea name="data" id='data' style='min-height : 100px;' class="black">
                             <?php echo $data; ?>
                             </textarea>
@@ -67,7 +67,7 @@
     <!-- <?php include '../modules/iitm.php' ?> -->
     <?php include '../modules/event_rightbar.php'; ?>
     <?php include '../modules/social.php' ?>
-    <?php if ( isset($_GET['edit']) ) { // The fns to send data ?>
+    <?php if ( isset($_REQUEST['edit']) ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
     <script>
         $(document).ready(function() {
