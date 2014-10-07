@@ -319,3 +319,12 @@
 [06-Oct-2014 12:22:35 America/Chicago] PHP Warning:  fopen(&lt;br /&gt;
 &lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: tab_path in &lt;b&gt;/home/shaastra/public_html/2015/production/projects/main/php/pages/content.php&lt;/b&gt; on line &lt;b&gt;50&lt;/b&gt;&lt;br /&gt;
 ) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 5
+[06-Oct-2014 14:40:49 America/Chicago] PHP Warning:  fopen(&lt;br /&gt;
+&lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: tab_path in &lt;b&gt;/home/shaastra/public_html/2015/production/projects/main/php/pages/content.php&lt;/b&gt; on line &lt;b&gt;50&lt;/b&gt;&lt;br /&gt;
+) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 5
+[07-Oct-2014 07:45:28 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
+[07-Oct-2014 07:47:01 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
+[07-Oct-2014 07:47:40 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
+[07-Oct-2014 07:49:52 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
+[07-Oct-2014 07:50:23 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
+[07-Oct-2014 07:51:32 America/Chicago] PHP Warning:  json_encode() [<a href='function.json-encode'>function.json-encode</a>]: type is unsupported, encoded as null in /home/shaastra/public_html/2015/production/projects/main/php/scripts/save_to_file.php on line 25
