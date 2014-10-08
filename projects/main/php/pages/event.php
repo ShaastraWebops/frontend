@@ -622,10 +622,18 @@
 
     <script>
         $(document).ready(function() {
-            setInterval(function() { $('#main-focus').focus() }, 500);
+            if ($('#main-focus').length)
+                setInterval(function() { $('#main-focus').focus() }, 500);
             $('.data a').each(function(i, v) {
                 $(v).attr("target", "_blank")
+                $(v).attr("href", $(v).attr("href")
+                    .replace("http://www.edit.", "http://www.")
+                    .replace("http://edit.", "http://www.")
+                    .replace("www.edit.", "http://www.")
+                    .replace("edit.", "http://www.")
+                )
             })
+
         })
     </script>
 </body>
