@@ -618,12 +618,9 @@
             });
         });
     </script>
-    <?php } ?>
-
+    <?php } else { ?>
     <script>
         $(document).ready(function() {
-            if ($('#main-focus').length)
-                setInterval(function() { $('#main-focus').focus() }, 500);
             $('.data a').each(function(i, v) {
                 $(v).attr("target", "_blank")
                 $(v).attr("href", $(v).attr("href")
@@ -634,6 +631,14 @@
                 )
             })
 
+        })
+    </script>
+    <?php } ?>
+
+    <script>
+        $(document).ready(function() {
+            if ($('#main-focus').length)
+                setInterval(function() { $('#main-focus').focus() }, 500);
         })
     </script>
 </body>
