@@ -153,10 +153,10 @@
                         </div>
                     </div>
                     <br />
-					<div class="panel background">
-					    <div class="panel-heading background1" data-ride="carousel">
-                            <h4 class="panel-title text-center title background1" style="font-size:26px">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:none;" class="background1">
+					<div class="panel panel-default">
+					    <div class="panel-heading panel-default" data-ride="carousel">
+                            <h4 class="panel-title text-center title" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 LECTURES
 					        </a>
                             </h4>
@@ -184,10 +184,10 @@
     				    </div>
                     </div>
 					<br />
-					<div class="panel background">
-					    <div class="panel-heading background1">
-					        <h4 class="panel-title text-center title background1" style="font-size:26px">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="text-decoration:none;" class="background1">
+					<div class="panel panel-default">
+					    <div class="panel-heading panel-default">
+					        <h4 class="panel-title text-center title" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 					          WORKSHOPS
 					        </a>
 					        </h4>
@@ -214,10 +214,10 @@
 					    </div>
 					</div>
 					<br />
-					<div class="panel background">
-					    <div class="panel-heading background1">
-					        <h4 class="panel-title text-center title background1" style="font-size:26px">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="text-decoration:none;" class="background1">
+					<div class="panel panel-default">
+					    <div class="panel-heading">
+					        <h4 class="panel-title text-center title" style="font-size:26px">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 					          EVENTS
 					        </a>
 					        </h4>
@@ -324,6 +324,21 @@
 	            });
 	        });
 	    </script>
+        <?php } else { ?>
+        <script>
+            $(document).ready(function() {
+                $('.data a').each(function(i, v) {
+                    $(v).attr("target", "_blank")
+                    $(v).attr("href", $(v).attr("href")
+                        .replace("http://www.edit.", "http://www.")
+                        .replace("http://edit.", "http://www.")
+                        .replace("www.edit.", "http://www.")
+                        .replace("edit.", "http://www.")
+                    )
+                })
+
+            })
+        </script>
 	    <?php } ?>
 
 
