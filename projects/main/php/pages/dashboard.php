@@ -348,8 +348,9 @@
                 $('#profile .form').each(function(i, el) {
                     var $el = $(el);
                     var $lab = $el.siblings("#profile .label[name=" + $el.attr('name') + "]")
-                    if ($lab.length)
+                    if ($lab.length) {
                         $el.val($lab.text())
+                    }
                 })
             }
             function pad(n, width, z) {
@@ -482,7 +483,8 @@
                 $('#profile .form').hide()
                 $('#profile .edit').click(toggle_form)
                 $.each(branches, function(i, k) {
-                    $('#profile .form[name=branch]').append($('<option value=' + k + '>' + k + '</option>'))
+                    $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
+                    console.log(k)
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
@@ -611,6 +613,9 @@
                     $.each(data, function(key, val) {
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
+                            if ( $inp.prop('tagName') == "SELECT") {
+                                $inp.text(val)
+                            }
                             $inp.text(val)
                         }
                     })
@@ -694,8 +699,16 @@
                                 }
                             }
                             val.is_mine = is_mine
+                            if (! val.registration_sarts) {
+                                val.registration_starts = new Date(null)
+                            }
+                            if (! val.registration_ends) {
+                                val.registration_ends = new Date(null)
+                            }
                             events.push(val)
-                            $('#events .register [name=name]').append('<option name="' + val.id + '">' + val.name + '</option>')
+                            if (new Date(val.registration_ends) > new Date() && new Date(val.registration_starts) < new Date()) {
+                                $('#events .register [name=name]').append('<option name="' + val.id + '">' + val.name + '</option>')
+                            }
                             if ( ! is_mine ) return;
                             // else add to current list
                             var $el = $('#events .current .template').clone().removeClass('template')
