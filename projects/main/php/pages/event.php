@@ -525,7 +525,18 @@
 
             }).fail(function(xhr) {
                 console.log(xhr.status)
-                console.log(xhr)
+                if ( xhr.status == 500 ) {
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_500. If it persists, tell the webops team")
+                } else if ( xhr.status == 404 ) {
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_404. If it persists, tell the webops team")
+                } else if ( xhr.status == 400 ) {
+                    var data = xhr.responseJSON
+                    var $el = $('#event-info form .help-text')
+                    $el.html("<b>We got some errors when trying to get data. Contact the webops team !</b><br />")
+                    for (var key in data) {
+                        $el.html($el.html() + '<b>' + toTitleCase(key) + '</b> - ' + data[key] + '<br />')
+                    }
+                }
             })
             $('#event-info form').submit(function(e) {
                 e && e.preventDefault()
@@ -549,7 +560,7 @@
                     cache: false,
                     data: json_info
                 }).done(function(res) {
-                    // window.location.reload()
+                    window.location.reload()
                     console.log(res)
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) {
@@ -587,7 +598,7 @@
                         $('#event-uploads form .help-text').html("<b>Error</b> - " + data.msg)
                     } else if ( data['status'] == "success" ) {
                         $('#event-uploads form .help-text').html("<b>Success</b> The link is : <a href='" + data['msg'] + "'>" + data['msg'] + "</a>")
-                    // window.location.reload()
+                        window.location.reload()
                     }
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) {
@@ -640,6 +651,9 @@
             if ($('#main-focus').length)
                 setInterval(function() { $('#main-focus').focus() }, 500);
         })
+        function toTitleCase(str) {
+            return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        }
     </script>
 </body>
 </html>

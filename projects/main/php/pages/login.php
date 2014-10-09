@@ -338,7 +338,7 @@
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="text" class="form-control email" placeholder="Username or Email or Shaastra ID" required style="border-top-right-radius: 4px;">
                                 <input type="password" class="form-control password" placeholder="Password" required style="border-top-right-radius: 0px;border-bottom-right-radius: 4px;">
-                                <a data-tab=".tab-forgot" class="pull-right my-tab-link inset-forgot-password" >Forgot Password</a>
+                                <!-- <a data-tab=".tab-forgot" class="pull-right my-tab-link inset-forgot-password" >Forgot Password</a> -->
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary col-md-4 col-centered login-btn">Login</button>
@@ -489,7 +489,7 @@
             e.preventDefault()
         })
         $('#forgot-form').submit(function(e) {
-            alert('forgot')
+            // Need to implement
             e.preventDefault()
         })
     })
