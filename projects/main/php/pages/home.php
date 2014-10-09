@@ -521,7 +521,9 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <a target="_blank" class="social-icon facebook" href="<?php if ( isset($facebook) ) echo $facebook; else echo 'https://www.facebook.com/Shaastra'; ?>"></a>
-                        <div class="fb-like hidden-sm" data-href="https://www.facebook.com/Shaastra" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                        <div style="margin-top: 20px;" class="hidden-sm">
+                            <div class="fb-like hidden-sm" data-href="https://www.facebook.com/Shaastra" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
