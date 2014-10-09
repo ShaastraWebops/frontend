@@ -517,6 +517,7 @@
                 }
                 data = data[0]
                 this_event = data
+                console.log(data)
                 $('#event-info [name=has_tdp]').val((this_event.has_tdp)?1:0)
                 $('#event-info [name=team_size_min]').val(this_event.team_size_min)
                 $('#event-info [name=team_size_max]').val(this_event.team_size_max)

@@ -484,7 +484,7 @@
                 $('#profile .edit').click(toggle_form)
                 $.each(branches, function(i, k) {
                     $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
-                    console.log(k)
+                    // console.log(k)
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
