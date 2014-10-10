@@ -3,3 +3,5 @@
 <p>Event registrations will begin soon!</p>
 
 <p>Problem Statements have been released!</p>
+
+<p>Registration for Hyderabad and Madurai Sampark have commenced.</p>
