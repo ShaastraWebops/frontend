@@ -278,7 +278,7 @@
                     <span class="right"></span>
                 </div>
                 <br />
-                <p class="text-center">For any queries, contact <a href="mail.google.com/mail/?view=cm&fs=1&to=events@shaastra.org">events@shaastra.org</a></p>
+                <p class="text-center">For any queries, contact <a href="https://mail.google.com/mail/?view=cm&fs=1&to=events@shaastra.org">events@shaastra.org</a></p>
             </div>
         </div>
     </div>
