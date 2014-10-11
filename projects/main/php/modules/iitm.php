@@ -32,8 +32,8 @@
     transition: all 300ms ease-in-out;
 }
 .iitm-logo img {
-    height: 93px;
-    width: 75px;
+    height: 75px;
+    width: 60.4px;
     float: right;
 }
 .tuv-logo img {
@@ -51,8 +51,8 @@
     padding: 0;
 }
 .iitm-logo:hover img {
-    height: 104.8px;
-    width: 85px;
+    height: 85px;
+    width: 68.5px;
 }
 .tuv-logo:hover img {
     height: 85px;
@@ -60,10 +60,10 @@
 }
 </style>
 <div class="row logo-vertical row-centered hidden-sm">
-    <a target="_blank" class="tuv-logo col-xs-6 col-centered" href="../../php/pages/about.php">
-        <img class="img-responsive" src="../../img/logo/iso_white.png"/>
-    </a>
     <a target="_blank" class="iitm-logo col-xs-6 col-centered" href="http://www.iitm.ac.in">
         <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
+    </a>
+    <a target="_blank" class="tuv-logo col-xs-6 col-centered" href="../../php/pages/about.php">
+        <img class="img-responsive" src="../../img/logo/iso_white.png"/>
     </a>
 </div>
