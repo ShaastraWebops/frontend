@@ -1,6 +1,6 @@
 <p>Symposium registrations have started!</p>
 
-<p>Event registrations will begin soon!</p>
+<p>Events registration&nbsp;have started</p>
 
 <p>Problem Statements have been released!</p>
 
