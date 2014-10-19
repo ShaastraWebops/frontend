@@ -4,18 +4,20 @@
         <title>Pledge a book</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
 		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+        <script src="js/flipclock.min.js" type="text/javascript"></script>
 
 		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/flipclock.css" type="text/css" media="screen" />
 
 		<script src="cufon/cufon-yui.js" type="text/javascript"></script>
 		<script src="cufon/ChunkFive_400.font.js" type="text/javascript"></script>
 		<script src="cufon/Note_this_400.font.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			Cufon.replace('h1,p,.b-counter,#tab');
+			Cufon.replace('.b-load h1,.b-load p,#tab,#head-sub h4');
 			Cufon.replace('.book_wrapper a', {hover:true});
 			Cufon.replace('.title', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
 			Cufon.replace('.reference a', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
@@ -23,192 +25,135 @@
 		</script>
     </head>
     <body>
-		<h1 class="title" style="text-align:center;">Pledge a book</h1>
+    	<div class="header">
+        <div id="head-sub">
+        <img src="pics/Copy of 2015 LOGO WHITE BG.png" width="160" height="110" style="margin-left:100px;"  />
+        <img src="pics/Pledge-A-Book Logo.png" width="110" height="110" />
+        </div>
+        <div id="head-sub">
+        <h3 style="margin-left:10px;padding-top:10px;font-family:locust;">SHAASTRA <h4 style="margin-left:100px;">presents</h4> </h3>
+		<h2  style="margin-left:130px;font-family:lobster !important;font-size:42px;">Pledge-A-Book</h2>
+        </div>
+        <div id="head-sub">
+        <img src="pics/Copy of ISO_9001_TUV_Blue.png" width="90" height="90" style="padding-top:5px;margin-left:60px;" />
+        <img src="pics/office_new_dehi_cluster_en Logo.png" width="250" height="90" />
+        </div>
+        </div>
 		<div class="book_wrapper">
 			<a id="next_page_button"></a>
 			<a id="prev_page_button"></a>
 			<div id="loading" class="loading">Loading pages...</div>
             <div id="bookmark">
             <ul>
-            <li id="tab">slider</li>
-            <li id="tab">Portfolio</li>
-            <li id="tab">overlay</li>
-            <li id="tab">Bubbler</li>
+            <li id="tab" class="active">About Pledge-A-Book</li>
+            <li id="tab">How to support</li>
+            <li id="tab">Contact Us</li>
             </ul>
+            </div>
+            <div id="hit-count">
+            <div class="clock"></div>
+            <p class="increment">I support this campaign</p>
+            
             </div>
 			<div id="mybook" style="display:none;">
 				<div class="b-load">
 					<div>
-						<img src="images/1.jpg" alt=""/>
-						<h1>Slider Gallery</h1>
-						<p>This tutorial is about creating a creative gallery with a
-							slider for the thumbnails. The idea is to have an expanding
-							thumbnails area which opens once an album is chosen.
-							The thumbnails will scroll to the end and move back to
-							the first image. The user can scroll through the thumbnails
-							by using the slider controls. When a thumbnail is clicked,
-							it moves to the center and the full image preview opens.</p>
-						<a href="http://tympanus.net/codrops/2010/10/07/slider-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/SliderGallery/" target="_blank" class="demo">Demo</a>
+					<!--<img src="images/1.jpg" alt=""/>-->
+						<h1>About Pledge-A-Book</h1>
+                        <br />
+						<p>Shaastra, IIT Madras takes up a notable social cause every year to contribute in giving back to the society. This year we have planned a vast social campaign, taking up the cause of children's education, the Pledge-A-Book campaign. We hope to do our bit to help and spread education, literacy, multilingualism and encourage a reading habit among underprivileged children. The books collected under this campaign would be used to set up libraries for underprivileged children in and around Chennai and in various places across the country..</p>
+                        <br />
+                        <p>The Pledge-A-Book campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. With the support of UNESCO and associations with notable NGOs such as Indian Development Foundation , Avanti, and charitable organisations we envision to take this campaign to a much larger scale.<p>
+                     <!--   <a target="_blank" class="article">More</a>-->
+
 					</div>
 					<div>
-						<img src="images/2.jpg" alt="" />
-						<h1>Animated Portfolio Gallery</h1>
-						<p>Today we will create an animated portfolio gallery with jQuery.
-							The gallery will contain a scroller for thumbnails and a
-							content area where we will display details about the portfolio
-							item. The image can be enlarged by clicking on it, making
-							it appear as an overlay.</p>
-						<a href="http://tympanus.net/codrops/2010/11/14/animated-portfolio-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/AnimatedPortfolioGallery/" target="_blank" class="demo">Demo</a>
+                    <h1>How to support:</h1>
+					<p>You can support the campaign by pledging your old books. We accept wide range of books.
+					You can donate children's books, novels, JEE preparation materials. You can also support the campaign by pledging your engineering books.
+					You can support the campaign by taking part in collection drives. We regularly organize collection drives inside the green campus of IIT Madras. You can also contribute to the campaign by dropping the books at IDF collection centers. At all IDF collection centers book box has been planted. 
+</p>
+					<br />
+                    <p style="color:#09F">Pledge-A-Book Collection Centers- </p>
+
+                    <p style="color:#003">IDF (Head Office) MUMBAI</p>
+                    <p>L 10/ 3&4 Jal Ratan Deep, Bangur Nagar, Goregaon(West), Mumbai 400 104.</p>
+					<p>Tel. 022 - 28762008 / 28763008</p>
+					<p>	Cell: +91 - 9819131388 </p>
+					<p>	Email: idfindia@gmail.com/ info@idf.org.in </p>
+
 					</div>
 					<div>
-						<img src="images/3.jpg" alt="" />
-						<h1>Annotation Overlay Effect</h1>
-						<p>Today we will create a simple overlay effect to display annotations in e.g. portfolio
-							items of a web designers portfolio. We got the idea from the wonderful
-							portfolio of www.rareview.com where Flash is used to create the
-							effect. We will use jQuery.</p>
-						<a href="http://tympanus.net/codrops/2010/10/12/annotation-overlay-effect/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/AnnotationOverlayEffect/" target="_blank" class="demo">Demo</a>
+
+				    <p style="color:#003">IDF (Southern Region) CHENNAI</p>
+                    <p>6/PP1, School Street, Mogappair West, Chennai 600 037</p>
+					<p>Tel. 044 - 26531168</p>
+					<p>	Cell: +91 - 9840040191 </p>
+					<p>	Email: idftamilnadu@gmail.com </p>
+                    <br />
+                    <p style="color:#003">IDF (Karnataka) BANGALORE</p>
+                    <p>C/o.#B.202, Suraj Ganga Socrates, No. 87/2, Vajrahalli, Kanakapura MainRoad, Bangalore 560062</p>
+					<p>	Cell: +91 - 9449074443  </p>
+					<p>	Email: idfsouthindia@gmail.com </p>
+                    <br />
+                    <p style="color:#003">IDF (Northern Region) JAIPUR </p>
+                    <p>%Sarthak Manav Kushthashram 3-Dha-1 Jawahar Nagar Jaipur 302 004</p>
+					<p>Tel. + 91 - 0141 -2655406 </p>
+					<p>	Cell: +91 - 9785647318 - 8003514069 </p>
+					<p>	Email: idfjaipur@gmail.com ; idfkovid@gmail.com </p>
+						<a href="" target="_blank" class="article">More</a>
+					
 					</div>
 					<div>
-						<img src="images/4.jpg" alt="" />
-						<h1>Bubbleriffic Image Gallery</h1>
-						<p>In this tutorial we will create a bubbly image gallery that
-							shows your images in a unique way. The idea is to show the
-							thumbnails of albums in a rounded fashion allowing the
-							user to scroll them automatically by moving the mouse.
-							Clicking on a thumbnail will zoom in a big circle and
-							the full image which will be automatically resized to
-							fit into the screen.</p>
-						<a href="http://tympanus.net/codrops/2010/12/10/bubbleriffic-image-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/BubblerifficImageGallery/" target="_blank" class="demo">Demo</a>
+					<p style="color:#003">IDF (Andhra Pradesh) HYDERABAD</p>
+                    <p>Plot No. 432, (Old No. 1-1-742/A) Near Narmada Hospital, Gandhi Nagar , HYDERABAD, Andhra Pradesh  500 080</p>
+					<p>	Cell: +91 -  8978993222  </p>
+					<p>	Email: idfap01@gmail.com </p>
+                    <br />
+					<p style="color:#003">IDF GOA</p>
+                    <p># 88, Dr. Miranda Road MARGAO Goa  403 601</p>
+					<p>	Cell: +91 -  9823396178  </p>
+					<p>	Email: idfmario@gmail.com </p>
+                    <br />	
+                    <p>Or you can mail the books to the following address:</p>
+                    <p>Shaastra,</p><p>Office of Deans of Students,</p><p>IIT Madras,</p><p>Chennai 600036.</p>
 					</div>
 					<div>
-						<img src="images/5.jpg" alt="" />
-						<h1>Collapsing Site Navigation</h1>
-						<p>Today we will create a collapsing menu that contains vertical
-							navigation bars and a slide out content area. When hovering
-							over a menu item, an image slides down from the top and a
-							submenu slides up from the bottom. Clicking on one of the
-							submenu items will make the whole menu collapse like a card
-							deck and the respective content area will slide out.</p>
-						<a href="http://tympanus.net/codrops/2010/09/06/collapsing-site-navigation/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/CollapsingSiteNavigation/" target="_blank" class="demo">Demo</a>
+						<h1>Contact Us</h1>
+                        <p style="color:#06F"><strong>Public Relations Team</strong></p>
+                        <br />
+                        <p style="color:#003">SHUBHAM JAIN</p>
+                   	    <p>Contact : 9962035992</p>
+						<p>	E-Mail : shubham@shaastra.org  </p>
+						<br />
+                        <p style="color:#003">NEHA ASHOK</p>
+                   	    <p>Contact : 9840922780</p>
+						<p>	E-Mail : neha@shaastra.org  </p>
+						<br />
+                        <p style="color:#003">DEVAANSH SAMANT</p>
+                   	    <p>Contact : 9871077607</p>
+						<p>	E-Mail : devaansh@shaastra.org  </p>
+						<br />
 					</div>
 					<div>
 						<img src="images/6.jpg" alt="" />
-						<h1>Custom Animation Banner</h1>
-						<p>In today’s tutorial we will be creating a custom animation banner with jQuery.
-							The idea is to have different elements in a banner that will
-							animate step-wise in a custom way.</p>
-						<p>We will be using the jQuery Easing Plugin and the jQuery 2D
-							Transform Plugin to create some nifty animations.</p>
-						<a href="http://tympanus.net/codrops/2010/10/18/custom-animation-banner/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/CustomAnimationBanner/" target="_blank" class="demo">Demo</a>
+
 					</div>
 					<div>
-						<img src="images/7.jpg" alt="" />
-						<h1>Full Page Image Gallery</h1>
-						<p>In this tutorial we are going to create a stunning full page
-							gallery with scrollable thumbnails and a scrollable full
-							screen preview. The idea is to have a thumbnails bar at
-							the bottom of the page that scrolls automatically when
-							the user moves the mouse. When a thumbnail is clicked,
-							it moves to the center of the page and the full screen
-							image is loaded in the background.</p>
-						<a href="http://tympanus.net/codrops/2010/09/08/full-page-image-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/FullPageImageGallery/" target="_blank" class="demo">Demo</a>
+
 					</div>
-					<div>
-						<img src="images/8.jpg" alt="" />
-						<h1>Hover Slide Effect</h1>
-						<p>Today we will create a neat effect with some images using
-							jQuery. The main idea is to have an image area with several
-							images that slide out when we hover over them, revealing
-							other images. The sliding effect will be random, i.e.
-							the images will slide to the top or bottom, left or
-							right, fading out or not. When we click on any area,
-							all areas will slide their images out.</p>
-						<a href="http://tympanus.net/codrops/2010/11/16/hover-slide-effect/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/HoverSlideEffect/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/9.jpg" alt="" />
-						<h1>Merging Image Boxes</h1>
-						<p>Today we will show you a nice effect for images with jQuery.
-							The idea is to have a set of rotated thumbnails that,
-							once clicked, animate to form the selected image.
-							You can navigate through the images with previous
-							and next buttons and when the big image gets clicked
-							it will scatter into the little box shaped thumbnails again.</p>
-						<a href="http://tympanus.net/codrops/2010/11/30/merging-image-boxes/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Development/MergingImageBoxes/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/10.jpg" alt="" />
-						<h1>Compact News Previewer</h1>
-						<p>Today we will create a news previewer that let’s you
-							show your latest articles or news in a compact way.
-							The news previewer will show some list of articles
-							on the left side and the preview of the article with a
-							longer description on the right. Once a news on the left
-							is clicked, the preview will slide in.</p>
-						<a href="http://tympanus.net/codrops/2010/10/03/compact-news-previewer/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/CompactNewsPreviewer/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/11.jpg" alt="" />
-						<h1>Overlay Effect Menu</h1>
-						<p>In this tutorial we are going to create a simple menu
-							that will stand out once we hover over it by covering
-							everything except the menu with a dark overlay.
-							The menu will stay white and a submenu area will
-							expand. We will create this effect using jQuery.</p>
-						<a href="http://tympanus.net/codrops/2010/11/25/overlay-effect-menu/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/OverlayEffectMenu/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/12.jpg" alt="" />
-						<h1>Polaroid Photobar Gallery</h1>
-						<p>In this tutorial we are going to create an image gallery
-							with a Polaroid look. We will have albums that will expand
-							to sets of slightly rotated thumbnails that pop out on hover.
-							The full image will slide in from the bottom once a thumbnail
-							is clicked. In the full image view the user can navigate
-							through the pictures or simply choose another thumbnail
-							to be displayed.</p>
-						<a href="http://tympanus.net/codrops/2010/09/28/polaroid-photobar-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/PolaroidPhotobarGallery/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/13.jpg" alt="" />
-						<h1>Pull Out Content Panel</h1>
-						<p>In this tutorial we will create a content panel that 
-							slides out at a predefined scroll position. It will 
-							reveal a teaser with related content and it can be 
-							expanded to full page size to show more. A custom 
-							slider allows to scroll through many items in the 
-							panel.</p>
-						<a href="http://tympanus.net/codrops/2010/11/01/pull-out-content-panel/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/PullOutContentPanel/" target="_blank" class="demo">Demo</a>
-					</div>
-					<div>
-						<img src="images/14.jpg" alt="" />
-						<h1>Thumbnails Navigation Gallery</h1>
-						<p>In this tutorial we are going to create an extraordinary
-							gallery with scrollable thumbnails that slide out from a
-							navigation. We are going to use jQuery and some CSS3
-							properties for the style. The main idea is to have a
-							menu of albums where each item will reveal a horizontal
-							bar with thumbnails when clicked.</p>
-						<a href="http://tympanus.net/codrops/2010/07/29/thumbnails-navigation-gallery/" target="_blank" class="article">Article</a>
-						<a href="http://tympanus.net/Tutorials/ThumbnailsNavigationGallery/" target="_blank" class="demo">Demo</a>
-					</div>
+
+
+
+
 				</div>
 			</div>
 		</div>
+        <div id="sponsors">
+        <h1 style="font-family:lobster;">Sponsors</h1>
+        <img src="pics/avanti.jpg" width="280" height="160" />
+        <img src="pics/IDF logo - cyan.png" width="130" height="160" />
+        </div>
         <!-- The JavaScript -->
 
         <script type="text/javascript">
@@ -284,6 +229,88 @@
 				});
 				
 			});
+
         </script>
+        <script type="text/javascript">
+				$(document).ready(function(e) {
+				var prev_index = 1;
+                $("#bookmark").find('li').click(function(){
+					var $el = $(this)
+					var index= $el.index()+1;
+				<!--	console.log(index);-->
+					$("#bookmark").find('li').removeClass('active');
+					$el.addClass('active');
+					switch(index)
+					{
+						case 1: page = 1;
+								break;
+						case 2: page = 2;
+								break;
+						case 3: page = 5;
+								break;
+						case 4: page = 6;
+								break;
+					}
+					switch(prev_index)
+					{
+						case 1: prev_page = 1;
+								break;
+						case 2: prev_page = 2;
+								break;
+						case 3: prev_page = 5;
+								break;
+						case 4: prev_page = 6;
+								break;
+					}
+					if(prev_page < page){
+						if((page-prev_page) % 2 == 0 || prev_page % 2 == 0)
+						for (var i=1;i <=(page - prev_page)/2; i++){
+							setTimeout(function() {
+									$("#next_page_button").click()
+									},(i-1)*700);
+									console.log(i);
+						}
+						else if(prev_page % 2 == 1)
+						for (var i=0;i < (page-prev_page); i++){
+							setTimeout(function() {
+									$("#next_page_button").click()
+									},(i)*700);
+						}
+					}
+					else if(page < prev_page){
+						if((prev_page-page) % 2 == 0 || prev_page % 2 == 1)
+						for (var i=1;i <=(prev_page - page)/2; i++){
+							setTimeout(function(){
+									$("#prev_page_button").click()
+									},(i-1)*700);
+						}
+						else 
+						for (var i=0;i < (prev_page-page); i++){
+							setTimeout(function(){
+									$("#prev_page_button").click()
+									},(i)*700);
+						}
+					}
+					prev_index = index;
+				});
+            });
+		</script>
+        <script type="text/javascript">
+		var clock;
+
+			$(document).ready(function() {
+
+				// Instantiate a counter
+				clock = new FlipClock($('.clock'), 10001, {
+					clockFace: 'Counter'
+				});
+
+				$('.increment').click(function() {
+
+					clock.increment();
+
+				});
+			});
+			</script>
     </body>
 </html>
