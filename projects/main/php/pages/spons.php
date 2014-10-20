@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Spons | Shaastra 2015</title>
-    <?php include '../base/head.php' ?>
+    <?php include '../../php/base/head.php' ?>
 
     <style>
         .tab-links:after {
@@ -53,7 +53,7 @@
 
     <script>
         $(document).ready(function() {
-        $('#tab1').load('../modules/tab.htm #Tab1');
+        $('#tab0').load('../../php/modules/tab.htm #Tab0');
         $('.tabs .tab-links a').on('click', function(e)  {
             var currentAttrValue = $(this).attr('href');
             $('.tabs ' + currentAttrValue).show().siblings().hide();
@@ -81,7 +81,7 @@
         </style>
 </head>
 <body>
-    <?php include '../base/menu.php' ?>
+    <?php include '../../php/base/menu.php' ?>
 
     <div class="container-fluid title white centered" style='margin-bottom:2%'>
         <div class="row">
@@ -101,20 +101,24 @@
             <div class="tabs col-md-10 col-md-offset-1">
                 <ul class="tab-links">
                     <li class="active">
-                        <a href="#tab1">2014</a>
+                        <a href="#tab0">2015</a>
                     </li>
                     <li>
-                        <a href="#tab2" onclick="$('#tab2').load('../modules/tab.htm #Tab2');">2013</a>
+                        <a href="#tab1" onclick="$('#tab1').load('../../php/modules/tab.htm #Tab1');">2014</a>
                     </li>
                     <li>
-                        <a href="#tab3" onclick="$('#tab3').load('../modules/tab.htm #Tab3');">2011</a>
+                        <a href="#tab2" onclick="$('#tab2').load('../../php/modules/tab.htm #Tab2');">2013</a>
                     </li>
                     <li>
-                        <a href="#tab4" onclick="$('#tab4').load('../modules/tab.htm #Tab4');">2010</a>
+                        <a href="#tab3" onclick="$('#tab3').load('../../php/modules/tab.htm #Tab3');">2011</a>
+                    </li>
+                    <li>
+                        <a href="#tab4" onclick="$('#tab4').load('../../php/modules/tab.htm #Tab4');">2010</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab1" class="tab active"></div>
+                    <div id="tab0" class="tab active"></div>
+                    <div id="tab1" class="tab"></div>
                     <div id="tab2" class="tab"></div>
                     <div id="tab3" class="tab"></div>
                     <div id="tab4" class="tab"></div>
@@ -122,6 +126,6 @@
             </div>
         </div>
     </div>
-    <?php include '../base/foot.php' ?>
+    <?php include '../../php/base/foot.php' ?>
 </body>
 </html>

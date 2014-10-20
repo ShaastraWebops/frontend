@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 if ( !isset($_REQUEST['dirname']) ) {
-	header('Location: ../pages/categories.php');
+	header('Location: ../../php/pages/categories.php');
 }
 $dirname = $_REQUEST['dirname'];
 $oldname = $_REQUEST['oldname'];
