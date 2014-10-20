@@ -1,0 +1,58 @@
+<input style="width:222px;" type="text" id="fileid" value="0B3Zn0tCfctcFQ0JvNTEtUm9kYWM" disabled></input>
+<button id="authorize-button" onclick="handleClientLoad()">Authorize</button>
+<button id="submit-button" onclick="handleSubmitClick()" style="display:none;">Submit</button>
+<div id="main"></div>
+<script src="auth.js"></script>
+<script type="text/javascript">
+function handleSubmitClick() {
+	retrieveAllFilesInFolder(document.getElementById('fileid').value);
+}
+function retrieveAllFilesInFolder(folderId) {
+	gapi.client.load('drive', 'v2', function() {
+		var retrievePageOfChildren = function(request, result) {
+			request.execute(function(resp) {
+				result = result.concat(resp.items);
+				var nextPageToken = resp.nextPageToken;
+				if (nextPageToken) {
+					request = gapi.client.drive.children.list({
+					'folderId' : folderId,
+					'pageToken': nextPageToken
+					});
+					retrievePageOfChildren(request, result);
+				} 
+				else {
+					for(var i=0;i<resp.items.length;i++){
+						makeApiCall(resp.items[i].id);
+					}
+				}
+			});
+		}
+		var initialRequest = gapi.client.drive.children.list({
+			'folderId' : folderId
+		});
+		retrievePageOfChildren(initialRequest, []);
+	});
+}
+
+function makeApiCall(fileId) {
+	gapi.client.load('drive', 'v2', function() {
+		var request = gapi.client.drive.files.get({
+			'fileId': fileId
+		});
+		request.execute(function(resp) {
+			var str = resp.mimeType;
+			var n = str.search("image");
+			var doc = document.getElementById('main');
+			if(n == -1){
+				doc.innerHTML+=resp.title+"<br>";
+				retrieveAllFilesInFolder(fileId);
+			}
+			else{
+				doc.innerHTML+="<img style='height:100px;width:100px;' src='https://drive.google.com/uc?id="+fileId+"'>"
+				doc.innerHTML+="<br>"+resp.title+"<br>";
+			}
+		});
+	});
+}
+</script>
+<script src="https://apis.google.com/js/client.js"></script>
