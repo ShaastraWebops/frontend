@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About | Shaastra '15</title>
-        <?php include '../base/head.php' ?>
+        <title>About | Shaastra 2015</title>
+        <?php include '../../php/base/head.php' ?>
         <style>
             .main {
                 color : #ffffff;
@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <?php include '../base/menu.php' ?>
+        <?php include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style="margin-bottom:2%">
             <div class="row">
@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <?php include '../base/foot.php' ?>
+        <?php include '../../php/base/foot.php' ?>
     </body>
 
 </html>

@@ -19,15 +19,15 @@
                 show404();
             }
         ?>
-        <title>Gallery | Shaastra '15</title>
-        
-        <?php include '../base/head.php' ?>
+        <title>Gallery | Shaastra 2015</title>
+
+        <?php include '../../php/base/head.php' ?>
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery.css">
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery-indicator.css">
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery-video.css">
     </head>
     <body>
-        
+
         <?php
             // Possible types of gallery : facebook, google drive, foldername, dropbox
             if ($type == 'facebook') {
@@ -36,12 +36,12 @@
                  1. Open a facebook album. Example url : https://www.facebook.com/media/set/?set=a.123445064367882.12691.105321269513595&type=3
                  2. Take the first number after a. till the next <dot>
                  3. Save this as facebook album id and pass it here. */
-                
+
                 if ( isset($_REQUEST['id']) ) {
                     $fbid = $_REQUEST['id'];
                     $url = 'https://graph.facebook.com/' . $fbid . '/photos';
                 } else {
-                    include '../pages/404.php';
+                    include '../../php/pages/404.php';
                     die();
                 }
             } elseif ($type == 'folder') {
@@ -58,10 +58,12 @@
                 }
             }
         ?>
-        <?php if (isset($iframe) && $iframe ) {
-		include '../base/menu.php'
+
+        <?php
+        include '../../php/base/menu.php';
+        if (isset($iframe) && $iframe ) {
 	?>
-        
+
         <div class="container-fluid white centered" style="margin-bottom:2%">
             <div class="row">
                 <div class="col-xs-12">
@@ -131,7 +133,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 
 			<div class="row">
 	    		<div class="col-xs-8 col-xs-offset-2">
@@ -151,8 +153,8 @@
 				</div>
 			</div>
 		</div>
-        
-        <?php include '../base/foot.php' ?>
+
+        <?php include '../../php/base/foot.php' ?>
         <script>
         	img_list = {
         		'big': [],
@@ -174,7 +176,7 @@
 					}
 <?php } elseif ( $type == "folder" ) {
 	$img_list = scandir($folder_name);
-	
+
     foreach ($img_list as $img) {
         if ( $img === '.' || $img === '..' ) continue;
         if ( endsWith($img, '.jpg') || endsWith($img, '.png') || endsWith($img, '.gif') || endsWith($img, '.bmp') || endsWith($img, '.jpeg') || endsWith($img, '.svg') ) {
@@ -190,10 +192,10 @@
                  	$img = $('<a></a>').addClass('img')
                      	.prop('href', img_list.big[i])
                      	.append($('<img>').prop('src', img_list.small[i]).css({"max-height":"200px", "max-width":"200px"}))
-                     	.attr('data-gallery', '')	
+                     	.attr('data-gallery', '')
                      	//.prop('title', img_list.title[i])
                  	$('#links').append($img);
-                 	
+
                 }
                 blueimp.Gallery( document.getElementById('links').getElementsByTagName('a'), {
                	 	container: '#blueimp-gallery-carousel',
@@ -213,6 +215,6 @@
         <script src="../../js/blueimp-gallery-youtube.js"></script>
 
         <script src="../../js/blueimp-gallery.js"></script>
-        
+
     </body>
 </html>

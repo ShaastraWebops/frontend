@@ -8,20 +8,20 @@ function slugify($text) {
     }
     $text = strtolower($text);
     $text = preg_replace('~[^-\w]+~', '', $text);
- 
+
     if (empty($text)) {
         return 'n-a';
     }
     return $text;
 }
- 
- 
+
+
 function endsWith($haystack, $needle) {
     return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
 }
 
 function show404() {
-    include '../pages/404.php';
+    include '../../php/pages/404.php';
     die();
 }
 
