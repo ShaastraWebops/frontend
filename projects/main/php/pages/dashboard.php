@@ -286,7 +286,7 @@
                                             <select type="text" name="team" class="form-control form" placeholder="Team Name">
                                                 <option value="">-----</option>
                                             </select>
-                                            <span class="team-help text">hello</span>
+                                            <span class="team-help text"></span>
                                         </div>
                                     </div>
                                     <div class="form-group tdp">
@@ -438,7 +438,8 @@
                 if ( this_event.team_size_max > 1 ) { // Needs a Team
                     $('#events .register .team').show()
                     $('#events .register .participant').hide()
-                    $('#events .register .team [name=name]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
+                    console.log(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].id)
+                    $('#events .register [name=team]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
                 } else {
                     $('#events .register .team').hide()
                     $('#events .register .participant').show()

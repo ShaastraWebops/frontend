@@ -437,6 +437,52 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="event_registrations">
+                <h3 class="text-center">Registrations</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover table_user ">
+                        <thead>
+                            <th>S No</th>
+                            <th>Shaastra ID</th>
+                            <th colspan="2">Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr class="template">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped table-bordered table-hover table_team">
+                        <thead>
+                            <th>S No</th>
+                            <th>Shaastra ID</th>
+                            <th colspan="2">Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr class="template">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <?php } ?>
 
@@ -509,10 +555,12 @@
                 data: json_info
             }).done(function(res) {
                 var data = res.data
+                console.log("Getting event info")
                 if ( data.length != 1 ) {
                     var $el = $('#event-info .error-msg').show()
                     $el.find('.head').html("Error : ")
                     $el.find('.text').html("Contact webops team. Your event doesn't seem to exist. Give them the error code : EVENT_LENGTH_0")
+                    console.log("No event found")
                     return
                 }
                 data = data[0]

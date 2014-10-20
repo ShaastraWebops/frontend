@@ -12,8 +12,8 @@ if ( isset($_SESSION['user_id']) ) {
     $_SESSION['email'] = $_COOKIE['email'];
 }
 //echo $_COOKIE['user_id'];
-if ( isset($_SESSION['valid_profile']) && $_SESSION['valid_profile'] == "0" ) {
-    //header('Location: ../../php/pages/dashboard.php');
-    die();
-}
+// if ( isset($_SESSION['valid_profile']) && $_SESSION['valid_profile'] == "0" ) {
+//     header('Location: ../../php/pages/dashboard.php');
+//     die();
+//}
 ?>
