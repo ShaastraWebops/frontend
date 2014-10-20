@@ -699,6 +699,8 @@
                                         }
                                     }
                                 }
+                            } else {
+                                val.is_mine = false
                             }
                             console.log(val.is_mine)
                             if (! val.registration_sarts) {
@@ -748,7 +750,7 @@
                                     '<b>TDP</b> : Required. ' + "Latest submitted TDP can be seen <a href='" + val.tdp_submitted + "'>here</a>" + "<br />")
                             } else if ( val.has_tdp ) {
                                 $el.find('.content').html($el.find('.content').html() +
-                                    '<b>TDP</b> : Required - needs to be submitted' + "<br />")
+                                    '<b>TDP</b> : Required - <span style="color:red">needs to be submitted</span>' + "<br />")
                             } else {
                                 $el.find('.content').html($el.find('.content').html() +
                                     '<b>TDP</b> : Not required' + "<br />")
