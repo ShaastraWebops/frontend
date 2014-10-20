@@ -2,8 +2,10 @@
 	margin:0;
 	padding:0;
 }
+
 body{
-	background:#ccc url(../images/wood.jpg) repeat top left;
+	background:url(../pics/cause_bg.png) repeat;
+	background-position:0px 100px;
 	font-family: Arial, Helvetica, sans-serif;
 	color:#444;
 	font-size:12px;
@@ -12,7 +14,7 @@ body{
 h1{
 	color:#2F1B0C;
 	font-size:40px;
-	margin:20px 0px 0px 20px;
+	margin:0px 0px 0px 20px;
 }
 span.reference{
 	font-family:Arial;
@@ -173,25 +175,28 @@ a#prev_page_button:hover{
 #bookmark{
 	position:absolute;
 	display:block;
-	left:460px;
-	top:10px;
-	width:400px;
-	height:40px;
+	left:880px;
+	top:50px;
+	width:100px;
+	height:400px;
 }
 #bookmark ul{
-	height:100%;
+	width:100%;
 	padding:8px 0px;
 	margin:0px;
+	list-style-type:none;
 }
 #bookmark li{
-	display:inline;
-	background-color:rgba(255, 255, 153, 1);
+	background-color:rgba(255, 255, 200, 1);
 	padding:20px;
-	height:100%;
+	width:100%;
 	text-align:center;
 	padding-top:10px;
+	margin-bottom: 10px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	font-size:18px;
 	-moz-box-shadow:1px 1px 1px #000;
 	-webkit-box-shadow:1px 1px 1px #000;
@@ -200,4 +205,44 @@ a#prev_page_button:hover{
 #bookmark li:hover{
 	cursor:pointer;
 	background-color:rgba(255, 255, 153, 0.5);
+}
+.header{
+	z-index:0;
+	width:100%;
+	height:120px !important;
+	top:0px !important;
+	padding-top:10px;
+	padding-bottom:10px;
+	background-color:#FFF ;
+}
+.article{
+	margin-left:200px;
+}
+.active{
+	background-color:#FFF !important;
+}
+#head-sub{
+	height:100%;
+	margin:0px;
+	float:left;
+}
+#head-sub img{
+	margin-right:20px;
+}
+#sponsors{
+	padding-top:15px;
+	padding-bottom:15px;
+	height:250px;
+	width:100%;
+	background-color:#FFF;
+	margin-top:45px;
+	text-align:center;
+}
+@font-face{
+	font-family:lobster;
+	src:url(../fonts/Lobster%201.4.otf);
+}
+@font-face{
+	font-family:locust;
+	src:url(../fonts/CGF%20Locust%20Resistance.ttf);
 }

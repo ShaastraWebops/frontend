@@ -35,6 +35,9 @@
 				padding: 50px 0 0 0;
 				min-height: 100%;
 			}
+			.navbar-header{
+				width:inherit !important;
+			}
 			@media (min-width: 768px) {
 				.navbar-custom {
 					background-color : rgba(0, 0, 0, 0.9);
