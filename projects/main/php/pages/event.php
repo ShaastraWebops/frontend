@@ -33,7 +33,7 @@
         $tab_path = $event_path . '/' . $tab . '.html';
     }
 
-    session_start();
+    include '../../php/base/logmein.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

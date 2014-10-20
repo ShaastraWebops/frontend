@@ -1,19 +1,24 @@
 <?php
-    session_start();
+    include '../../php/base/logmein.php';
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
         //header('Location: ../../php/pages/dashboard.php');
     } else {
         header('Location: ../../php/pages/login.php');
+        die();
     }
 
+    $cooktime = time()+60*60*24*30;
     if ( isset($_REQUEST['first_name']) ) {
         $_SESSION['first_name'] = $_REQUEST['first_name'];
+        setcookie("first_name", $_SESSION['first_name'], $cooktime);
     }
     if ( isset($_REQUEST['last_name']) ) {
         $_SESSION['last_name'] = $_REQUEST['last_name'];
+        setcookie("last_name", $_SESSION['last_name'], $cooktime);
     }
     if ( isset($_REQUEST['valid_profile']) ) {
         $_SESSION['valid_profile'] = $_REQUEST['valid_profile'];
+        setcookie("valid_profile", $_SESSION['valid_profile'], $cooktime);
     }
 ?>
 <!DOCTYPE html>
