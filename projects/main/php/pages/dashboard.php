@@ -1,19 +1,24 @@
 <?php
-    session_start();
+    include '../../php/base/logmein.php';
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
         //header('Location: ../../php/pages/dashboard.php');
     } else {
         header('Location: ../../php/pages/login.php');
+        die();
     }
 
+    $cooktime = time()+60*60*24*30;
     if ( isset($_REQUEST['first_name']) ) {
         $_SESSION['first_name'] = $_REQUEST['first_name'];
+        setcookie("first_name", $_SESSION['first_name'], $cooktime);
     }
     if ( isset($_REQUEST['last_name']) ) {
         $_SESSION['last_name'] = $_REQUEST['last_name'];
+        setcookie("last_name", $_SESSION['last_name'], $cooktime);
     }
     if ( isset($_REQUEST['valid_profile']) ) {
         $_SESSION['valid_profile'] = $_REQUEST['valid_profile'];
+        setcookie("valid_profile", $_SESSION['valid_profile'], $cooktime);
     }
 ?>
 <!DOCTYPE html>
@@ -125,7 +130,7 @@
                                 <div class="container-fluid">
                                     <div class="row" style="padding-bottom: 1em;">
                                         <div class="col-md-12 text-center" style="font-size:1.2em; vertical-align:middle">
-                                            <button class="pull-left btn btn-info edit">Edit Profile</button>
+                                            <a class="pull-left btn btn-info edit">Edit Profile</a>
                                             <span class="bold">Profile Details</span>
                                             <a class="pull-right btn btn-info" href="../../php/scripts/logout.php">Logout</a>
                                         </div>
@@ -223,7 +228,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row-centered">
-                                        <button class="btn btn-success col-md-5 col-centered add" style="margin: 0.2em 0;">Add Member</button>
+                                        <a class="btn btn-success col-md-5 col-centered add" style="margin: 0.2em 0;">Add Member</a>
                                         <button type="submit" class="btn btn-primary col-md-5 col-centered save" style="margin: 0.2em 0;">Save Team</button>
                                     </div>
                                 </form>
@@ -453,8 +458,9 @@
                         'event_id' : $el.data('event_id'),
                         'user_id' : <?php echo $_SESSION['user_id']; ?>,
                     }
-                    if ( $el.data('team_id') ) {
-                        json_info['team'] = this_team = teams.filter(customFilter({'id' : parseInt($el.data('team_id'))}))[0].name
+                    if ( parseInt($el.data('team_id')) > 0) {
+                        console.log($el.data('team_id'))
+                        json_info['team'] = teams.filter(customFilter({'id' : parseInt($el.data('team_id'))}))[0].name
                     }
                     $.ajax({ // SEND POST INFO FOR TEAM
                         type: "POST",
@@ -682,23 +688,19 @@
                         $('#events .event-msg').html('You have not registered to any events :(')
                     } else {
                         $.each(data, function(key, val) {
-                            var is_mine = false;
                             var team_id = -1;
-                            if ( val.users_registered.indexOf(<?php echo $_SESSION['user_id'] ?>) > -1 ) {
-                                is_mine = true
+                            if ( val.is_mine ) {
                                 $('#events .event-msg').hide()
-                            }
-                            else {
-                                for( var i = 0; i < val.teams_registered.length; i++ ) {
-                                    if ( teams.filter(customFilter({'id' : val.teams_registered[i]})).length ) {
-                                        is_mine = true
-                                        team_id = val.teams_registered[i]
-                                        $('#events .event-msg').hide()
-                                        // break;
+                                if (val.team_size_max > 1) {
+                                    for( var i = 0; i < val.teams_registered.length; i++ ) { // If is_mine, find the registered team
+                                        if ( teams.filter(customFilter({'id' : val.teams_registered[i]})).length ) {
+                                            team_id = val.teams_registered[i]
+                                            $('#events .event-msg').hide()
+                                        }
                                     }
                                 }
                             }
-                            val.is_mine = is_mine
+                            console.log(val.is_mine)
                             if (! val.registration_sarts) {
                                 val.registration_starts = new Date(null)
                             }
@@ -709,7 +711,7 @@
                             if (new Date(val.registration_ends) > new Date() && new Date(val.registration_starts) < new Date()) {
                                 $('#events .register [name=name]').append('<option name="' + val.id + '">' + val.name + '</option>')
                             }
-                            if ( ! is_mine ) return;
+                            if ( ! val.is_mine ) return;
                             // else add to current list
                             var $el = $('#events .current .template').clone().removeClass('template')
                             $el.find('.name').html(val.name)
@@ -811,6 +813,11 @@
                     //     json_info[$el.attr('name')] = $el.val()
                     // })
                     var json_info = new FormData($el[0]);
+                    var this_event = events.filter(customFilter({'id' : parseInt($('#events .register select[name=name]').find(":selected").attr('name'))}))[0]
+                    if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" ) {
+                        var confirmation = confirm('Are you sure you want to delete the old submission and submit the current document ?')
+                        if ( ! confirmation ) return;
+                    }
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/", //<?php echo $_SESSION['user_id']; ?>/",
@@ -824,9 +831,9 @@
                     }).done(function(res) {
                         data = res['data']
                         $alert = $('.error-msg').show()
-                        $alert.find('.text').html("Your submission has been saved. The results will be declared soon. You can edit your by clicking the edit button")
+                        $alert.find('.text').html("Your submission has been saved. You can edit your submission by clicking the edit button")
                         $alert.find('.head').html("Submitted")
-                        // setTimeout(function() { window.location.reload() }, 500 )
+                        setTimeout(function() { window.location.reload() }, 500 )
                     }).fail(function(xhr) {
                         if ( xhr.status == 500 ) { // error
                             var $el = $('.error-msg').addClass('alert-danger').removeClass('alert-info')
