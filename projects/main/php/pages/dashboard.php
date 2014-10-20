@@ -130,7 +130,7 @@
                                 <div class="container-fluid">
                                     <div class="row" style="padding-bottom: 1em;">
                                         <div class="col-md-12 text-center" style="font-size:1.2em; vertical-align:middle">
-                                            <button class="pull-left btn btn-info edit">Edit Profile</button>
+                                            <a class="pull-left btn btn-info edit">Edit Profile</a>
                                             <span class="bold">Profile Details</span>
                                             <a class="pull-right btn btn-info" href="../../php/scripts/logout.php">Logout</a>
                                         </div>
@@ -228,7 +228,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row-centered">
-                                        <button class="btn btn-success col-md-5 col-centered add" style="margin: 0.2em 0;">Add Member</button>
+                                        <a class="btn btn-success col-md-5 col-centered add" style="margin: 0.2em 0;">Add Member</a>
                                         <button type="submit" class="btn btn-primary col-md-5 col-centered save" style="margin: 0.2em 0;">Save Team</button>
                                     </div>
                                 </form>
