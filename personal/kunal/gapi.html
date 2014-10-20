@@ -1,13 +1,15 @@
-<input style="width:222px;" type="text" id="fileid" value="0B3Zn0tCfctcFQ0JvNTEtUm9kYWM" disabled></input>
+<center><strong>
+<input style="width:222px;" type="text" id="fileid" value="0B88YUemuOsIddU12YkdITlduM2M" disabled></input>
 <button id="authorize-button" onclick="handleClientLoad()">Authorize</button>
 <button id="submit-button" onclick="handleSubmitClick()" style="display:none;">Submit</button>
-<div id="main"></div>
+<div id="main" class="container-fluid"></div>
+</strong></center>
 <script src="auth.js"></script>
 <script type="text/javascript">
 function handleSubmitClick() {
-	retrieveAllFilesInFolder(document.getElementById('fileid').value);
+	retrieveAllFilesInFolder(document.getElementById('fileid').value,0);
 }
-function retrieveAllFilesInFolder(folderId) {
+function retrieveAllFilesInFolder(folderId,j) {
 	gapi.client.load('drive', 'v2', function() {
 		var retrievePageOfChildren = function(request, result) {
 			request.execute(function(resp) {
@@ -22,7 +24,7 @@ function retrieveAllFilesInFolder(folderId) {
 				} 
 				else {
 					for(var i=0;i<resp.items.length;i++){
-						makeApiCall(resp.items[i].id);
+						makeApiCall(resp.items[i].id,i,j);
 					}
 				}
 			});
@@ -34,7 +36,7 @@ function retrieveAllFilesInFolder(folderId) {
 	});
 }
 
-function makeApiCall(fileId) {
+function makeApiCall(fileId,i,j) {
 	gapi.client.load('drive', 'v2', function() {
 		var request = gapi.client.drive.files.get({
 			'fileId': fileId
@@ -43,13 +45,13 @@ function makeApiCall(fileId) {
 			var str = resp.mimeType;
 			var n = str.search("image");
 			var doc = document.getElementById('main');
+			var divTag = document.getElementById(j);
 			if(n == -1){
-				doc.innerHTML+=resp.title+"<br>";
-				retrieveAllFilesInFolder(fileId);
+				doc.innerHTML+="<div class='row'><div class='col-xs-12 d12' id='"+i+"'>"+resp.title+"<br></div></div>";
+				retrieveAllFilesInFolder(fileId,i);
 			}
 			else{
-				doc.innerHTML+="<img style='height:100px;width:100px;' src='https://drive.google.com/uc?id="+fileId+"'>"
-				doc.innerHTML+="<br>"+resp.title+"<br>";
+				divTag.innerHTML+="<img style='height:100px;width:100px;' src='https://drive.google.com/uc?id="+fileId+"'>";
 			}
 		});
 	});
