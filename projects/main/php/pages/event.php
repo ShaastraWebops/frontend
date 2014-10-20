@@ -453,7 +453,7 @@
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>
-        var this_event = null
+        window.this_event = null
         function tab_name_edit(el) {
             var $el = $(el);
             $el.prop('disabled',true);
@@ -528,13 +528,13 @@
                     data.registration_ends = new Date(data.registration_ends);
                 }
 
-                this_event = data
+                window.this_event = data
                 console.log(data)
-                $('#event-info [name=has_tdp]').val((this_event.has_tdp)?1:0)
-                $('#event-info [name=team_size_min]').val(this_event.team_size_min)
-                $('#event-info [name=team_size_max]').val(this_event.team_size_max)
-                $('#event-info [name=registration_starts]').val(this_event.registration_starts.yyyy_mm_dd())
-                $('#event-info [name=registration_ends]').val(this_event.registration_ends.yyyy_mm_dd())
+                $('#event-info [name=has_tdp]').val((window.this_event.has_tdp)?1:0)
+                $('#event-info [name=team_size_min]').val(window.this_event.team_size_min)
+                $('#event-info [name=team_size_max]').val(window.this_event.team_size_max)
+                $('#event-info [name=registration_starts]').val(window.this_event.registration_starts.yyyy_mm_dd())
+                $('#event-info [name=registration_ends]').val(window.this_event.registration_ends.yyyy_mm_dd())
 
             }).fail(function(xhr) {
                 console.log(xhr.status)
@@ -557,7 +557,7 @@
                 $('#event-info form .help-text').html("Submitting ... please wait")
                 var json_info = {
                     "action" : "edit",
-                    "event_id" : this_event.id,
+                    "event_id" : window.this_event.id,
                     "has_tdp" : $('#event-info [name=has_tdp]').find(":selected").attr("value") == "1",
                     "registration_starts" : $('#event-info [name=registration_starts]').val(),
                     "registration_ends" : $('#event-info [name=registration_ends]').val(),
