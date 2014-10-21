@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include '../../php/base/logmein.php';
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) {
         header('Location: ../../php/pages/dashboard.php');
     } else {
@@ -444,9 +444,9 @@
                     window.location.href = "../../php/pages/dashboard.php"
                     // alert('login')
                     // console.log(data)
-                }).fail(function() { // php error
+                }).fail(function(xhr) { // php error
                     var $el = $('.error-msg').show().find('.text')
-                    $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> Contact : <a href="mailto:webops@shaastra.org">webops@shaastra.org</a>')
+                    $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> If the issue persists, contact <a href="mailto:webops@shaastra.org">webops@shaastra.org</a> with the error code LOGIN_SUBMIT_' + xhr.status)
                 })
             });
             e.preventDefault()
@@ -462,7 +462,7 @@
             }).fail(function(xhr) {
                 if ( xhr.status == 500 || xhr.status == 401 ) {
                     var $el = $('.error-msg').show().find('.text')
-                    $el.html('Unable to register. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> Contact : <a href="mailto:webops@shaastra.org">webops@shaastra.org</a>')
+                    $el.html('Unable to register. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> If the issue persists, contact <a href="mailto:webops@shaastra.org">webops@shaastra.org</a> with the error code REGISTER_SUBMIT_' + xhr.status)
                 } else if ( xhr.status == 400 ) {
                     var data = xhr.responseJSON
                     var $el = $('.error-msg').show().find('.text')
@@ -481,9 +481,18 @@
                 }).done(function(data) { // Logged into php and django, go to dash
                     window.location.href = "../../php/pages/dashboard.php"
                     //console.log(data)
-                }).fail(function() { // php error
-                    var $el = $('.error-msg').show().find('.text')
-                    $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> Contact : <a href="mailto:webops@shaastra.org">webops@shaastra.org</a>')
+                }).fail(function(xhr) { // php error
+                    if ( xhr.status == 500 || xhr.status == 401 ) {
+                        var $el = $('.error-msg').show().find('.text')
+                        $el.html('Unable to login. There was an error in our servers. <br />We\'re probably on it already, but you can tell us the issue anyway :) <br /> If the issue persists, contact <a href="mailto:webops@shaastra.org">webops@shaastra.org</a> with the error code LOGIN_SCRIPT_' + xhr.status)
+                    } else if ( xhr.status == 400 ) {
+                        var data = xhr.responseJSON
+                        var $el = $('.error-msg').show().find('.text')
+                        $el.html('<br />')
+                        for (var key in data) {
+                            $el.html($el.html() + '<b>' + toTitleCase(key) + '</b>' + ' - ' + data[key] + '<br />')
+                        }
+                    }
                 })
             });
             e.preventDefault()

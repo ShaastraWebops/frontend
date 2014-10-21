@@ -1,3 +1,4 @@
+<?php include '../../php/base/logmein.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -33,6 +34,9 @@
 			.page {
 				padding: 50px 0 0 0;
 				min-height: 100%;
+			}
+			.navbar-header{
+				width:inherit !important;
 			}
 			@media (min-width: 768px) {
 				.navbar-custom {

@@ -33,7 +33,7 @@
         $tab_path = $event_path . '/' . $tab . '.html';
     }
 
-    session_start();
+    include '../../php/base/logmein.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -437,6 +437,52 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="event_registrations">
+                <h3 class="text-center">Registrations</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover table_user ">
+                        <thead>
+                            <th>S No</th>
+                            <th>Shaastra ID</th>
+                            <th colspan="2">Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr class="template">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped table-bordered table-hover table_team">
+                        <thead>
+                            <th>S No</th>
+                            <th>Shaastra ID</th>
+                            <th colspan="2">Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr class="template">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <?php } ?>
 
@@ -453,7 +499,7 @@
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <script>
-        var this_event = null
+        window.this_event = null
         function tab_name_edit(el) {
             var $el = $(el);
             $el.prop('disabled',true);
@@ -509,20 +555,34 @@
                 data: json_info
             }).done(function(res) {
                 var data = res.data
+                console.log("Getting event info")
                 if ( data.length != 1 ) {
                     var $el = $('#event-info .error-msg').show()
                     $el.find('.head').html("Error : ")
                     $el.find('.text').html("Contact webops team. Your event doesn't seem to exist. Give them the error code : EVENT_LENGTH_0")
+                    console.log("No event found")
                     return
                 }
                 data = data[0]
-                this_event = data
+                if (! data.registration_sarts) {
+                    data.registration_starts = new Date(null);
+                } else {
+                    data.registration_starts = new Date(data.registration_starts);
+                }
+                if (! data.registration_ends) {
+                    data.registration_ends = new Date(null);
+                    console.log("end")
+                } else {
+                    data.registration_ends = new Date(data.registration_ends);
+                }
+
+                window.this_event = data
                 console.log(data)
-                $('#event-info [name=has_tdp]').val((this_event.has_tdp)?1:0)
-                $('#event-info [name=team_size_min]').val(this_event.team_size_min)
-                $('#event-info [name=team_size_max]').val(this_event.team_size_max)
-                $('#event-info [name=registration_starts]').val(this_event.registration_starts.split("T")[0])
-                $('#event-info [name=registration_ends]').val(this_event.registration_ends.split("T")[0])
+                $('#event-info [name=has_tdp]').val((window.this_event.has_tdp)?1:0)
+                $('#event-info [name=team_size_min]').val(window.this_event.team_size_min)
+                $('#event-info [name=team_size_max]').val(window.this_event.team_size_max)
+                $('#event-info [name=registration_starts]').val(window.this_event.registration_starts.yyyy_mm_dd())
+                $('#event-info [name=registration_ends]').val(window.this_event.registration_ends.yyyy_mm_dd())
 
             }).fail(function(xhr) {
                 console.log(xhr.status)
@@ -545,7 +605,7 @@
                 $('#event-info form .help-text').html("Submitting ... please wait")
                 var json_info = {
                     "action" : "edit",
-                    "event_id" : this_event.id,
+                    "event_id" : window.this_event.id,
                     "has_tdp" : $('#event-info [name=has_tdp]').find(":selected").attr("value") == "1",
                     "registration_starts" : $('#event-info [name=registration_starts]').val(),
                     "registration_ends" : $('#event-info [name=registration_ends]').val(),
@@ -655,6 +715,13 @@
         function toTitleCase(str) {
             return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         }
+        Date.prototype.yyyy_mm_dd = function() {
+            var yyyy = this.getFullYear().toString();
+            var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
+            var dd  = this.getDate().toString();
+            return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
+        };
+
     </script>
 </body>
 </html>

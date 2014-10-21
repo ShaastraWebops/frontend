@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include '../../php/base/logmein.php'; ?>
 <html>
 	<head>
 		<title>Shaastra 2015</title>

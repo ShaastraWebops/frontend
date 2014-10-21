@@ -1,3 +1,7 @@
-<p>Problem Statements have been released!&nbsp;</p>
-
 <p>Registration for the event has started!</p>
+
+<p><span style="background-color:rgb(34, 34, 34)">TDP Template is out.</span></p>
+
+<p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been released!</span></p>
+
+<p><span style="background-color:rgb(34, 34, 34)">The last date&nbsp;for TDP submission is 30th October.</span></p>

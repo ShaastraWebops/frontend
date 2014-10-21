@@ -1,7 +1,0 @@
-
-RewriteEngine on
-
-RewriteCond %{HTTP_HOST} ^sampark\.shaastra\.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.sampark\.shaastra\.org$
-RewriteRule ^/?$ "http\:\/\/shaastra\.org\/2015\/main\/php\/pages\/pre\-shaastra\.php" [R=301,L]
-
