@@ -1,0 +1,2 @@
+<p><br />
+<strong>Notice</strong>: Undefined variable: notifications_data in <strong>/home/shaastra/public_html/2015/production/projects/main/php/pages/event.php</strong> on line <strong>215</strong></p>
