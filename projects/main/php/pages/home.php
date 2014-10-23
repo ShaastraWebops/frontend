@@ -399,8 +399,8 @@
                 transition: all 300ms ease-in-out;
             }
             .iitm-logo img {
-                height: 93px;
-                width: 75px;
+                height: 75px;
+                width: 60.4px;
                 float: right;
             }
             .tuv-logo img {
@@ -423,8 +423,8 @@
                 padding: 0;
             }
             .iitm-logo:hover img {
-                height: 104.8px;
-                width: 85px;
+                height: 85px;
+                width: 68.5px;
             }
             .tuv-logo:hover img {
                 height: 85px;
@@ -436,10 +436,10 @@
             }
             </style>
             <div class="row logo-vertical row-centered hidden-sm">
-                <a target="_blank" class="iitm-logo col-xs-6 col-centered" href="http://www.iitm.ac.in">
+                <a target="_blank" class="iitm-logo col-centered" href="http://www.iitm.ac.in">
                     <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
                 </a>
-                <a target="_blank" class="tuv-logo col-xs-6 col-centered" href="../../php/pages/about.php">
+                <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
                     <img class="img-responsive" src="../../img/logo/iso_white.png"/>
                 </a>
             </div>
@@ -451,33 +451,108 @@
                     <img class="img-responsive" src="http://placehold.it/150x75">
                 </a> -->
             </div>
-		<?php include '../../php/modules/social.php'; ?>
+    		<style>
+                /* Social Icons used in places */
+                a.social-icon {
+                    margin:5px 5px 0px 5px;
+                    padding:0px 0px 0px 0px;
+                    width:50px;
+                    height:50px;
+                    float:left;
+                    background: #191919;
+                    border:solid 1px #222121;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius:5px;
+                    border-radius:5px;
+                    border: 2px solid #fff;
+                    border: 2px outset rgba(255, 255, 255, 0.8);
+                }
+                a.social-icon.facebook {
+                    background: #191919 url(../../img/icons/facebook.png) no-repeat -0px -75px;
+                    -webkit-transition:All 0.3s ease-out;
+                    -moz-transition:All 0.3s ease-out;
+                    -o-transition:All 0.3s ease-out;
+                }
+                a.social-icon.facebook:hover {
+                    background-position: -0px -0px;
+                }
+                a.social-icon.twitter {
+                    background: #191919 url(../../img/icons/twitter.png) no-repeat -0px -75px;
+                    -webkit-transition:All 0.3s ease-out;
+                    -moz-transition:All 0.3s ease-out;
+                    -o-transition:All 0.3s ease-out;
+                }
+                a.social-icon.twitter:hover {
+                    background-position: -0px -0px;
+                }
+                a.social-icon.google {
+                    background:#191919 url(../../img/icons/google.png) no-repeat -0px -75px;
+                    -webkit-transition:All 0.3s ease-out;
+                    -moz-transition:All 0.3s ease-out;
+                    -o-transition:All 0.3s ease-out;
+                }
+                a.social-icon.google:hover {
+                    background-position: -0px -0px;
+                }
+                a.social-icon.youtube {
+                    background:#191919 url(../../img/icons/youtube.png) no-repeat -0px -75px;
+                    -webkit-transition:All 0.3s ease-out;
+                    -moz-transition:All 0.3s ease-out;
+                    -o-transition:All 0.3s ease-out;
+                }
+                a.social-icon.youtube:hover {
+                    background-position: -0px -0px;
+                }
+                .social-vertical {
+                    display: none;
+                }
+                @media (min-width: 768px) {
+                    .social-vertical {
+                        position: fixed;
+                        top: 35%;
+                        left: 10px;
+                        z-index: 5;
+                        display: inline-block;
+                        width: 120px;
+                    }
+                }
+            </style>
+            <div class="row social-vertical">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a target="_blank" class="social-icon facebook" href="<?php if ( isset($facebook) ) echo $facebook; else echo 'https://www.facebook.com/Shaastra'; ?>"></a>
+                        <div style="margin-top: 20px;" class="hidden-sm">
+                            <div class="fb-like hidden-sm" data-href="https://www.facebook.com/Shaastra" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a target="_blank" class="social-icon twitter" href="https://twitter.com/ShaastraIITM"></a>
+                        <div style="margin-top: 20px" class="hidden-sm">
+                            <a class="twitter-follow-button" style="margin-top: 20px"
+                                href="https://twitter.com/ShaastraIITM"
+                                data-show-count="false"
+                                data-size="medium"
+                                data-width="60px">
+                                    Follow
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a target="_blank" class="social-icon youtube" href="https://www.youtube.com/user/iitmshaastra"></a>
+                        <!-- <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="" style="display: inline-block; width: 60px; overflow-x: hidde">
+                            <div class="g-ytsubscribe" data-channel="iitmshaastra" data-layout="default" data-count="hidden" ></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
 		<?php include '../../php/modules/home_rightbar.php'; ?>
 	</div>
 
-	<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="notif-modal-label" aria-hidden="true">
-		<div class="modal-dialog black">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Notifications</h4>
-				</div>
-				<div class="modal-body">
-					<ul>
-						<li>
-							Hi
-							<span class="label label-danger">New</span>
-						</li>
-						<li>
-						</li>
-					</ul>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
 	<?php include '../../php/base/foot.php'; ?>
 
     <!-- for notif start -->
@@ -1179,5 +1254,25 @@
 		<!-- for notif end -->
 <?php } ?>
 
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=504743989546857&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <script type="text/javascript">
+        window.twttr = (function (d, s, id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src= "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+        }(document, "script", "twitter-wjs"));
+        </script>
 	</body>
 </html>

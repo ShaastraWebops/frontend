@@ -737,7 +737,7 @@
                     </a>
                 </span><!--
                 --><span>
-                    <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
+                    <a class="linkedin-color" href="http://www.linkedin.com/company/shaastra-iit-madras?trk=tyah&trkInfo=tarId%3A1412232683503%2Ctas%3Ashaastra%2Cidx%3A2-1-4" target="_blank">
                         <span class="icon"></span>
                     </a>
                 </span>
