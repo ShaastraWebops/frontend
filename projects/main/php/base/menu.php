@@ -737,7 +737,7 @@
                     </a>
                 </span><!--
                 --><span>
-                    <a class="linkedin-color" href="http://www.linkedin.com/company/shaastra-iit-madras?trk=tyah&trkInfo=tarId%3A1412232683503%2Ctas%3Ashaastra%2Cidx%3A2-1-4" target="_blank">
+                    <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
                         <span class="icon"></span>
                     </a>
                 </span>
@@ -792,7 +792,7 @@
     //                     var anchor = document.createElement('a');
     //                     var make_plus = list[i][j].split(" ").join("+");
     //                     var redirect_list = "../../php/pages/event.php?category=" + eve[i] + "&event=" + make_plus;
-    //                     anchor.setAttribute('href', redirect_list);
+    //                     anchor.setAttribute('href', redirect_l   ist);
     //                     anchor.innerHTML = list[i][j];
     //                     disp.appendChild(anchor);
     //                     disp.appendChild(br);
@@ -830,11 +830,11 @@
 
         /*need to fix this */
 
-        // $('body').click(function(e){ // clicked somewhere else
-        //     if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
-        //         hide_menu();
-        //     }
-        // });
+        $('#menu-btn').click(function(e){ // click on the close bars
+            if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
+                hide_menu();
+            }
+        });
         
         /*need to fix this */
 
