@@ -1,1 +1,1 @@
-<p>Registrations will begin soon</p>
+<p><strong>Registrations will begin soon</strong></p>

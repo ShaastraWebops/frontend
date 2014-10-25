@@ -1,11 +1,11 @@
-<?php session_start(); ?>
+<?php include '../../php/base/logmein.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Pre Shaastra | Shaastra 2015</title>
     <?php include '../../php/base/head.php' ?>
     <style>
-       
+
         .dummy {
             margin-top: 100%; /* This is the height:width ratio */;
         }
@@ -70,7 +70,7 @@
         	padding-right:0;
         	-webkit-box-shadow(inset 0 0 1px transparent);
    -moz-box-shadow(inset 0 0 1px transparent);
-     
+
         box-shadow(inset 0 0 1px transparent);
         }
     </style>
@@ -109,7 +109,7 @@
                                         <span class="vertical-table-cell">
                                             <span>
                                                 <span class="transparent-text" style="font-size:50px;">
-                                                   SAMPARK        
+                                                   SAMPARK
                                                 </span>
                                             </span>
                                         </span>
@@ -131,7 +131,7 @@
                                         <span class="vertical-table-cell">
                                             <span>
                                                 <span class="transparent-text">
-                                                   LECTURES       
+                                                   LECTURES
                                                 </span>
                                             </span>
                                         </span>
@@ -152,7 +152,7 @@
                                         <span class="vertical-table-cell">
                                             <span>
                                                 <span class="transparent-text">
-                                                   WORKSHOPS       
+                                                   WORKSHOPS
                                                 </span>
                                             </span>
                                         </span>
@@ -171,7 +171,7 @@
                                         <span class="vertical-table-cell">
                                             <span>
                                                 <span class="transparent-text" >
-                                                   EVENTS       
+                                                   EVENTS
                                                 </span>
                                             </span>
                                         </span>

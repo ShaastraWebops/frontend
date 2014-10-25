@@ -5,15 +5,14 @@
     $filename = "../misc/pre-shaastra/"  . $name . ".html";
 
     if (!file_exists($filename)) { // Invalid filename
-        echo "NOT DIR";
-        //header('Location: ../pages/404.php');
+        header('Location: ../pages/404.php');
     }
     session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo $name; ?> | Shaastra 2015</title>
+    <title><?php echo ucfirst($name); ?> | Shaastra 2015</title>
     <?php include '../base/head.php' ?>
     <style>
     .title{
@@ -43,7 +42,7 @@
                     $data = file_get_contents($filename);
                     if (isset($_REQUEST['edit'])) { ?>
                     <form method="post" action='../scripts/save_to_file.php'>
-                        <div class='data col-xs-8 col-xs-offset-1'>
+                        <div class='data col-xs-10 col-xs-offset-1'>
                             <input type='hidden' name='filename' value="<?php echo $filename; ?>" />
                             <textarea name="data" id='data' style='min-height : 100px;' class="black">
                             <?php echo $data; ?>
@@ -51,7 +50,7 @@
                         </div>
                     </form>
                 <?php } else { ?>
-                <div class='data col-xs-8 col-xs-offset-1'>
+                <div class='data col-xs-10 col-xs-offset-1'>
                     <?php echo $data; ?>
                 </div>
                 <?php } ?>

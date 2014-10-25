@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include '../../php/base/logmein.php'; ?>
 <!doctype html public "" "">
 <html>
 	<head>

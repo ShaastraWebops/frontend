@@ -11,7 +11,7 @@
         echo "NOT DIR";
         //header('Location: ../pages/404.php');
     }
-    session_start();
+    include '../../php/base/logmein.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
