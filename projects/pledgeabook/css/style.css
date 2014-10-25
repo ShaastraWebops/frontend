@@ -250,6 +250,12 @@ a#prev_page_button:hover{
 	margin-top:45px;
 	text-align:center;
 }
+#next_page_button {
+    display: none !important;
+}
+#prev_page_button {
+    display: none !important;
+}
 @font-face{
 	font-family:lobster;
 	src:url(../fonts/Lobster%201.4.otf);
