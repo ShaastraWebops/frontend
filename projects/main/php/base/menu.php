@@ -355,10 +355,6 @@
         letter-spacing: 3px;
         font-weight: 900;
     }
-
-
-
-
     #menu .nav li.social {
         text-align: center;
     }
@@ -442,9 +438,79 @@
             height: 8.33%; /* placeholder - Change depending in number of items in menu */
         }
     }
+    /*for search start */
+.searchform {
+  display: block;
+  margin: 0;
+}
+
+.searchform label,
+.searchform input {
+  color: #737373;
+  float: left;
+  vertical-align: baseline;
+}
+
+.searchform label { margin: .125em .125em 0 0; }
+
+.searchform input[type=search] {
+/*  font: 1em/1.618 Open Sans, Arial, Sans-serif;
+*/  font-size: 1.1em;
+  border: .125em solid #737373;
+  border-width: 0 0 2px;
+  background-color: transparent;
+  padding: .1875em .375em;
+  width: 80%;
+}
+
+.searchform input[type=search]:focus {
+  border-color: #328fa7;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  outline: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  .searchform input[type=search]{ width: 50%; }
+}
+
+#search_display a {
+   color: #FFFFFF;
+   font-size: 1.1em;
+}
+
+#search_display a:hover {
+    text-decoration: none;
+    color: #328fa7;
+}
+    /*for search end */
 
 </style>
 
+<!--...................................for search start......................-->
+<?php
+    $i = 0;
+    $menu_event_list = array();
+    $list = array();
+    $result_list = scandir('../events');
+    foreach($result_list as $res) {
+        $list[$i] = array();
+        if($res === '.' or $res === '..')
+            continue;
+        if(is_dir('../events/' . $res)) {
+            array_push($menu_event_list, $res);
+            $dummy = scandir('../events/' . $res);
+            foreach($dummy as $dum) {
+                if($dum === '.' or $dum === '..')
+                    continue;
+                if(is_dir('../events/' . $res))
+                    array_push($list[$i], $dum);
+            }
+        }
+        $i++;
+    }
+?>
+<!--...................................for search end......................-->
 <div id="menu-btn" style="">
     <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
     <span class='menubars'>
@@ -458,11 +524,72 @@
         <span class="menu-bar bar2"></span>
     </span>
     <span class="title title-menu hidden-sm hidden-xs">MENU</span>
-
 </div>
+
+<!--####################### for search start ############################-->
+<script type="text/javascript">
+    list = <?php echo json_encode($list); ?>;
+    eve = <?php echo json_encode($menu_event_list); ?>;
+
+    function search() {
+        var l = -1;
+        var e = -1;
+        disp = document.getElementById('search_display');
+        squery = document.getElementById('search_box').value.toUpperCase();
+        while(disp.firstChild)
+            disp.removeChild(disp.firstChild);
+        if(squery.length >= 1) {
+            for (var i = 0; i < eve.length; i++) {
+                e = eve[i].toUpperCase().indexOf(squery);
+                if(e > -1) {
+                    var br = document.createElement('br');
+                    var anchor = document.createElement('a');
+                    var redirect_eve = "../../php/pages/eventlist.php?category=" + eve[i];
+                    anchor.setAttribute('href', redirect_eve);
+                    anchor.innerHTML = eve[i];
+                    disp.appendChild(anchor);
+                    disp.appendChild(br);
+                }
+            };
+            for (var i = 0; i < (list.length - 1); i++) {
+                for (var j = 0; j < list[i].length; j++) {
+                    l = list[i][j].toUpperCase().indexOf(squery);
+                    if(l > -1) {
+                        var br = document.createElement('br');
+                        var anchor = document.createElement('a');
+                        var make_plus = list[i][j].split(" ").join("+");
+                        var redirect_list = "../../php/pages/event.php?category=" + eve[i] + "&event=" + make_plus;
+                        anchor.setAttribute('href', redirect_list);
+                        anchor.innerHTML = list[i][j];
+                        disp.appendChild(anchor);
+                        disp.appendChild(br);
+                    }
+                };
+            };
+        }
+        if(squery.length < 1) {
+            while(disp.firstChild)
+                disp.removeChild(disp.firstChild);
+        }
+    }
+</script>
+<!--###################### for search end #############################-->
 
 <!-- menu popup start -->
 <div id='menu-bg'>
+<!-- for search start -->
+    <div style="width:35%; margin:1% auto; z-index:2000">
+        <form class="searchform">
+            <label for="search_box">
+                <span style="color:white; font-size:1.1em;">Dice It!&nbsp;&nbsp;</span>
+            </label>
+            <input type="search" id="search_box" onchange="search()" placeholder="Search events and workshops" />
+        </form>
+    </div>
+    <div style="width:25%; margin:5% auto; z-index:2000">
+        <div id="search_display"></div>
+    </div>
+<!-- for search end -->
     <nav id="menu">
         <ul class="nav">
             <li>
@@ -610,7 +737,7 @@
                     </a>
                 </span><!--
                 --><span>
-                    <a class="linkedin-color" href="http://www.linkedin.com/company/shaastra-iit-madras?trk=tyah&trkInfo=tarId%3A1412232683503%2Ctas%3Ashaastra%2Cidx%3A2-1-4" target="_blank">
+                    <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
                         <span class="icon"></span>
                     </a>
                 </span>
@@ -619,8 +746,8 @@
     </nav>
 </div>
 <!-- menu popup end -->
-
 <script>
+
     function show_menu () {
         $("#menu").addClass('open')
         $("#menu-btn").addClass('menu-open')
@@ -634,6 +761,53 @@
         $('body').removeClass('no-scroll')
     }
 
+    // /****** for search start ********/
+    // function search(list, eve) {
+    //     var l = -1;
+    //     var e = -1;
+    //     disp = document.getElementById('search_display');
+    //     squery = document.getElementById('search_box').value.toUpperCase();
+    //     while(disp.firstChild)
+    //         disp.removeChild(disp.firstChild);
+    //     if(squery.length >= 1) {
+    //         for (var i = 0; i < eve.length; i++) {
+    //             e = eve[i].toUpperCase().indexOf(squery);
+    //             if(e > -1) {
+    //                 var br = document.createElement('br');
+    //                 var anchor = document.createElement('a');
+    //                 var redirect_eve = "../../php/pages/eventlist.php?category=" + eve[i];
+    //                 console.log(n);
+    //                 anchor.setAttribute('href', redirect_eve);
+    //                 anchor.innerHTML = eve[i];
+    //                 disp.appendChild(anchor);
+    //                 disp.appendChild(br);
+    //             }
+    //         };
+    //         console.log(list);
+    //         for (var i = 0; i < (list.length - 1); i++) {
+    //             for (var j = 0; j < list[i].length; j++) {
+    //                 l = list[i][j].toUpperCase().indexOf(squery);
+    //                 if(l > -1) {
+    //                     var br = document.createElement('br');
+    //                     var anchor = document.createElement('a');
+    //                     var make_plus = list[i][j].split(" ").join("+");
+    //                     var redirect_list = "../../php/pages/event.php?category=" + eve[i] + "&event=" + make_plus;
+    //                     anchor.setAttribute('href', redirect_l   ist);
+    //                     anchor.innerHTML = list[i][j];
+    //                     disp.appendChild(anchor);
+    //                     disp.appendChild(br);
+    //                 }
+    //             };
+    //         };
+    //     }
+    //     if(squery.length < 1) {
+    //             // console.log(squery.length);
+    //         while(disp.firstChild)
+    //             disp.removeChild(disp.firstChild);
+    //     }
+    // }
+    // /******** for search end *******/
+
     $(document).ready(function(){
         $("#menu-btn").click(function(ev){
             show_menu();
@@ -645,13 +819,25 @@
             if(e.which == 27){ // escape key
                 hide_menu();
             }
+            /********* for search to ensure dynamic search **********/
+            else{
+                search();
+            }
+            /********* for search to ensure dynamic search **********/
         });
-        $('body').click(function(e){ // clicked somewhere else
+
+
+
+        /*need to fix this */
+
+        $('#menu-btn').click(function(e){ // click on the close bars
             if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
                 hide_menu();
             }
         });
-    });
 
+        /*need to fix this */
+
+    });
 
 </script>
