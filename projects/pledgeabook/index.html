@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Pledge a book | Shaastra</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="./pics/favicon.png">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+        <script src="js/flipclock.min.js" type="text/javascript"></script>
+
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/flipclock.css" type="text/css" media="screen" />
+
+		<script src="cufon/cufon-yui.js" type="text/javascript"></script>
+		<script src="cufon/ChunkFive_400.font.js" type="text/javascript"></script>
+		<script src="cufon/Note_this_400.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('.b-load h1,.b-load p,#tab,#head-sub h4,#hit-count h4,#count1 h4,#count2 h4');
+			Cufon.replace('.article', {hover:true});
+			Cufon.replace('.title', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
+			Cufon.replace('.reference a', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
+			Cufon.replace('.loading', {textShadow: '1px 1px #000', fontFamily:'ChunkFive'});
+		</script>
+        <style>
+            .header-inner {
+                margin-top: -10px;
+            }
+            #head-sub {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+    	<div class="header" style="text-align:center">
+            <div class="header-inner" style="display: inline-block">
+                <div id="head-sub">
+                    <img src="pics/shaastra_black.png" width="200" height="137" />
+                </div><div id="head-sub">
+                    <img src="pics/Pledge-A-Book.png" width="110" height="110"  style="padding-top: 10px" />
+                </div>
+                <div id="head-sub">
+                    <h3 style="margin-left:0px;padding-top:10px;font-family:locust;">SHAASTRA
+                        <h4 style="margin-left:0px;">presents</h4>
+                    </h3>
+                    <h2  style="margin:0 30px;font-family:lobster !important;font-size:42px;">Pledge-A-Book</h2>
+                </div>
+                <div id="head-sub">
+                    <img src="pics/tuv_blue.png" width="90" height="90" style="padding-top: 20px;" />
+                    <img src="pics/office_new_dehi_cluster_en Logo.png" width="250" height="90" />
+                </div>
+            </div>
+        </div>
+		<div class="book_wrapper">
+			<a id="next_page_button"></a>
+			<a id="prev_page_button"></a>
+			<div id="loading" class="loading">Loading pages...</div>
+            <div id="bookmark">
+                <ul>
+                    <li id="tab" class="active">About Pledge-A-Book</li>
+                    <li id="tab">How to support</li>
+                    <li id="tab">Contact Us</li>
+                </ul>
+            </div>
+            <div id="hit-count">
+                <h4 style="font-size:19px;font-weight:bold;padding-left:10px;">Supporters</h4>
+                <div class="clock"></div>
+                <p class="increment">I support this campaign</p>
+            </div>
+            <div id="count1">
+                <h4 style="font-size:19px;font-weight:bold;padding-left:10px;">books Collected</h4>
+                <div class="clock1"></div>
+            </div>
+            <div id="count2">
+                <h4 style="font-size:19px;font-weight:bold;padding-left:10px;">Libraries</h4>
+                <div class="clock2"></div>
+            </div>
+			<div id="mybook" style="display:none;">
+				<div class="b-load">
+					<div>
+					<!--<img src="images/1.jpg" alt=""/>-->
+						<h1>About Pledge-A-Book</h1>
+                        <br />
+						<p>Shaastra, IIT Madras takes up a notable social cause every year to contribute in giving back to the society. This year we have planned a vast social campaign, taking up the cause of children's education, the Pledge-A-Book campaign. We hope to do our bit to help and spread education, literacy, multilingualism and encourage a reading habit among underprivileged children. The books collected under this campaign would be used to set up libraries for underprivileged children in and around Chennai and in various places across the country..</p>
+                        <br />
+                        <p>The Pledge-A-Book campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. With the support of UNESCO and associations with notable NGOs such as Indian Development Foundation , Avanti, and charitable organisations we envision to take this campaign to a much larger scale.<p>
+                     <!--   <a target="_blank" class="article">More</a>-->
+
+					</div>
+					<div>
+                    <h1>How to support:</h1>
+					<p>You can support the campaign by pledging your old books. We accept wide range of books.
+					You can donate children's books, novels, JEE preparation materials. You can also support the campaign by pledging your engineering books.
+					You can support the campaign by taking part in collection drives. We regularly organize collection drives inside the green campus of IIT Madras. You can also contribute to the campaign by dropping the books at IDF collection centers. At all IDF collection centers book box has been planted.
+</p>
+					<br />
+                    <p style="color:#09F">Pledge-A-Book Collection Centers- </p>
+
+                    <p style="color:#003">IDF (Head Office) MUMBAI</p>
+                    <p>L 10/ 3&4 Jal Ratan Deep, Bangur Nagar, Goregaon(West), Mumbai 400 104.</p>
+					<p>Tel. 022 - 28762008 / 28763008</p>
+					<p>	Cell: +91 - 9819131388 </p>
+					<p>	Email: idfindia@gmail.com/ info@idf.org.in </p>
+
+					</div>
+					<div>
+
+				    <p style="color:#003">IDF (Southern Region) CHENNAI</p>
+                    <p>6/PP1, School Street, Mogappair West, Chennai 600 037</p>
+					<p>Tel. 044 - 26531168</p>
+					<p>	Cell: +91 - 9840040191 </p>
+					<p>	Email: idftamilnadu@gmail.com </p>
+                    <br />
+                    <p style="color:#003">IDF (Karnataka) BANGALORE</p>
+                    <p>C/o.#B.202, Suraj Ganga Socrates, No. 87/2, Vajrahalli, Kanakapura MainRoad, Bangalore 560062</p>
+					<p>	Cell: +91 - 9449074443  </p>
+					<p>	Email: idfsouthindia@gmail.com </p>
+                    <br />
+                    <p style="color:#003">IDF (Northern Region) JAIPUR </p>
+                    <p>%Sarthak Manav Kushthashram 3-Dha-1 Jawahar Nagar Jaipur 302 004</p>
+					<p>Tel. + 91 - 0141 -2655406 </p>
+					<p>	Cell: +91 - 9785647318 - 8003514069 </p>
+					<p>	Email: idfjaipur@gmail.com ; idfkovid@gmail.com </p>
+						<a href="" target="_blank" class="article">More</a>
+
+					</div>
+					<div>
+					<p style="color:#003">IDF (Andhra Pradesh) HYDERABAD</p>
+                    <p>Plot No. 432, (Old No. 1-1-742/A) Near Narmada Hospital, Gandhi Nagar , HYDERABAD, Andhra Pradesh  500 080</p>
+					<p>	Cell: +91 -  8978993222  </p>
+					<p>	Email: idfap01@gmail.com </p>
+                    <br />
+					<p style="color:#003">IDF GOA</p>
+                    <p># 88, Dr. Miranda Road MARGAO Goa  403 601</p>
+					<p>	Cell: +91 -  9823396178  </p>
+					<p>	Email: idfmario@gmail.com </p>
+                    <br />
+                    <p>Or you can mail the books to the following address:</p>
+                    <p>Shaastra,</p><p>Office of Deans of Students,</p><p>IIT Madras,</p><p>Chennai 600036.</p>
+					</div>
+					<div>
+						<h1>Contact Us</h1>
+                        <p style="color:#06F"><strong>Public Relations Team</strong></p>
+                        <br />
+                        <p style="color:#003">SHUBHAM JAIN</p>
+                   	    <p>Contact : 9962035992</p>
+						<p>	E-Mail : shubham@shaastra.org  </p>
+						<br />
+                        <p style="color:#003">NEHA ASHOK</p>
+                   	    <p>Contact : 9840922780</p>
+						<p>	E-Mail : neha@shaastra.org  </p>
+						<br />
+                        <p style="color:#003">DEVAANSH SAMANT</p>
+                   	    <p>Contact : 9871077607</p>
+						<p>	E-Mail : devaansh@shaastra.org  </p>
+						<br />
+					</div>
+					<div>
+						<img src="images/6.jpg" alt="" />
+
+					</div>
+					<div>
+
+					</div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+        <div id="sponsors">
+        <h1 style="font-family:lobster;">Sponsors</h1>
+        <img src="pics/avanti.jpg" width="280" height="160" />
+        <img src="pics/IDF logo - cyan.png" width="130" height="160" />
+        </div>
+        <!-- The JavaScript -->
+
+        <script type="text/javascript">
+			$(function() {
+				var $mybook 		= $('#mybook');
+				var $bttn_next		= $('#next_page_button');
+				var $bttn_prev		= $('#prev_page_button');
+				var $loading		= $('#loading');
+				var $mybook_images	= $mybook.find('img');
+				var cnt_images		= $mybook_images.length;
+				var loaded			= 0;
+				//preload all the images in the book,
+				//and then call the booklet plugin
+
+				$mybook_images.each(function(){
+					var $img 	= $(this);
+					var source	= $img.attr('src');
+					$('<img/>').load(function(){
+						++loaded;
+						if(loaded == cnt_images){
+							$loading.hide();
+							$bttn_next.show();
+							$bttn_prev.show();
+							$mybook.show().booklet({
+								name:               null,                            // name of the booklet to display in the document title bar
+								width:              800,                             // container width
+								height:             500,                             // container height
+								speed:              600,                             // speed of the transition between pages
+								direction:          'LTR',                           // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
+								startingPage:       0,                               // index of the first page to be displayed
+								easing:             'easeInOutQuad',                 // easing method for complete transition
+								easeIn:             'easeInQuad',                    // easing method for first half of transition
+								easeOut:            'easeOutQuad',                   // easing method for second half of transition
+
+								closed:             true,                           // start with the book "closed", will add empty pages to beginning and end of book
+								closedFrontTitle:   null,                            // used with "closed", "menu" and "pageSelector", determines title of blank starting page
+								closedFrontChapter: null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
+								closedBackTitle:    null,                            // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
+								closedBackChapter:  null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
+								covers:             false,                           // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
+
+								pagePadding:        10,                              // padding for each page wrapper
+								pageNumbers:        true,                            // display page numbers on each page
+
+								hovers:             false,                            // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
+								overlays:           false,                            // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
+								tabs:               false,                           // adds tabs along the top of the pages
+								tabWidth:           60,                              // set the width of the tabs
+								tabHeight:          20,                              // set the height of the tabs
+								arrows:             false,                           // adds arrows overlayed over the book edges
+								cursor:             'pointer',                       // cursor css setting for side bar areas
+
+								hash:               false,                           // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
+								keyboard:           true,                            // enables navigation with arrow keys (left: previous, right: next)
+								next:               $bttn_next,          			// selector for element to use as click trigger for next page
+								prev:               $bttn_prev,          			// selector for element to use as click trigger for previous page
+
+								menu:               null,                            // selector for element to use as the menu area, required for 'pageSelector'
+								pageSelector:       false,                           // enables navigation with a dropdown menu of pages, requires 'menu'
+								chapterSelector:    false,                           // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
+
+								shadows:            true,                            // display shadows on page animations
+								shadowTopFwdWidth:  166,                             // shadow width for top forward anim
+								shadowTopBackWidth: 166,                             // shadow width for top back anim
+								shadowBtmWidth:     50,                              // shadow width for bottom shadow
+
+								before:             function(){},                    // callback invoked before each page turn animation
+								after:              function(){}                     // callback invoked after each page turn animation
+							});
+							Cufon.refresh();
+						}
+					}).attr('src',source);
+				});
+
+			});
+
+        </script>
+        <script type="text/javascript">
+				$(document).ready(function(e) {
+				var prev_index = 1;
+                $("#bookmark").find('li').click(function(){
+					var $el = $(this)
+					var index= $el.index()+1;
+				<!--	console.log(index);-->
+					$("#bookmark").find('li').removeClass('active');
+					$el.addClass('active');
+					switch(index)
+					{
+						case 1: page = 1;
+								break;
+						case 2: page = 2;
+								break;
+						case 3: page = 5;
+								break;
+						case 4: page = 6;
+								break;
+					}
+					switch(prev_index)
+					{
+						case 1: prev_page = 1;
+								break;
+						case 2: prev_page = 2;
+								break;
+						case 3: prev_page = 5;
+								break;
+						case 4: prev_page = 6;
+								break;
+					}
+					if(prev_page < page){
+						if((page-prev_page) % 2 == 0 || prev_page % 2 == 0)
+						for (var i=1;i <=(page - prev_page)/2; i++){
+							setTimeout(function() {
+									$("#next_page_button").click()
+									},(i-1)*700);
+									console.log(i);
+						}
+						else if(prev_page % 2 == 1)
+						for (var i=0;i < (page-prev_page); i++){
+							setTimeout(function() {
+									$("#next_page_button").click()
+									},(i)*700);
+						}
+					}
+					else if(page < prev_page){
+						if((prev_page-page) % 2 == 0 || prev_page % 2 == 1)
+						for (var i=1;i <=(prev_page - page)/2; i++){
+							setTimeout(function(){
+									$("#prev_page_button").click()
+									},(i-1)*700);
+						}
+						else
+						for (var i=0;i < (prev_page-page); i++){
+							setTimeout(function(){
+									$("#prev_page_button").click()
+									},(i)*700);
+						}
+					}
+					prev_index = index;
+				});
+            });
+		</script>
+        <script type="text/javascript">
+		var clock;
+		var clock1;
+		var clock2;
+			$(document).ready(function() {
+
+				// Instantiate a counter
+				clock = new FlipClock($('.clock'), 10001, {
+					clockFace: 'Counter'
+				});
+
+				clock1 = new FlipClock($('.clock1'), 1001, {
+					clockFace: 'Counter'
+				});
+
+				clock2 = new FlipClock($('.clock2'), 1001, {
+					clockFace: 'Counter'
+				});
+				$('.increment').click(function() {
+
+					clock.increment();
+
+				});
+			});
+			</script>
+    </body>
+</html>
