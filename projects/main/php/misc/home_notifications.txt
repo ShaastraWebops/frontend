@@ -5,5 +5,3 @@
 <p>Problem Statements have been released!</p>
 
 <p>TDP deadline &nbsp;is on 30th Oct 2014.</p>
-
-<p>&nbsp;</p>
