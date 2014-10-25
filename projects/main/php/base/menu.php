@@ -440,11 +440,11 @@
     }
     /*for search start */
 .searchform {
-  display: block;   
+  display: block;
   margin: 0;
 }
 
-.searchform label, 
+.searchform label,
 .searchform input {
   color: #737373;
   float: left;
@@ -475,7 +475,7 @@
 }
 
 #search_display a {
-   color: #FFFFFF; 
+   color: #FFFFFF;
    font-size: 1.1em;
 }
 
@@ -490,7 +490,7 @@
 <!--...................................for search start......................-->
 <?php
     $i = 0;
-    $event_list = array();
+    $menu_event_list = array();
     $list = array();
     $result_list = scandir('../events');
     foreach($result_list as $res) {
@@ -498,12 +498,12 @@
         if($res === '.' or $res === '..')
             continue;
         if(is_dir('../events/' . $res)) {
-            array_push($event_list, $res);
+            array_push($menu_event_list, $res);
             $dummy = scandir('../events/' . $res);
             foreach($dummy as $dum) {
                 if($dum === '.' or $dum === '..')
                     continue;
-                if(is_dir('../events/' . $res)) 
+                if(is_dir('../events/' . $res))
                     array_push($list[$i], $dum);
             }
         }
@@ -529,14 +529,14 @@
 <!--####################### for search start ############################-->
 <script type="text/javascript">
     list = <?php echo json_encode($list); ?>;
-    eve = <?php echo json_encode($event_list); ?>;
+    eve = <?php echo json_encode($menu_event_list); ?>;
 
     function search() {
         var l = -1;
         var e = -1;
         disp = document.getElementById('search_display');
         squery = document.getElementById('search_box').value.toUpperCase();
-        while(disp.firstChild) 
+        while(disp.firstChild)
             disp.removeChild(disp.firstChild);
         if(squery.length >= 1) {
             for (var i = 0; i < eve.length; i++) {
@@ -568,8 +568,8 @@
             };
         }
         if(squery.length < 1) {
-            while(disp.firstChild) 
-                disp.removeChild(disp.firstChild);  
+            while(disp.firstChild)
+                disp.removeChild(disp.firstChild);
         }
     }
 </script>
@@ -767,7 +767,7 @@
     //     var e = -1;
     //     disp = document.getElementById('search_display');
     //     squery = document.getElementById('search_box').value.toUpperCase();
-    //     while(disp.firstChild) 
+    //     while(disp.firstChild)
     //         disp.removeChild(disp.firstChild);
     //     if(squery.length >= 1) {
     //         for (var i = 0; i < eve.length; i++) {
@@ -802,8 +802,8 @@
     //     }
     //     if(squery.length < 1) {
     //             // console.log(squery.length);
-    //         while(disp.firstChild) 
-    //             disp.removeChild(disp.firstChild);            
+    //         while(disp.firstChild)
+    //             disp.removeChild(disp.firstChild);
     //     }
     // }
     // /******** for search end *******/
@@ -835,7 +835,7 @@
                 hide_menu();
             }
         });
-        
+
         /*need to fix this */
 
     });

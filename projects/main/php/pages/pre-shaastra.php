@@ -12,9 +12,7 @@
         .dummy2{
                 margin:50%;
         }
-        .curtain
-        {
-
+        .curtain {
 			-moz-box-shadow: inset 0 0 0px 2px black;
 			-webkit-box-shadow: inset 0 0 0px 2px black;
 			box-shadow: inset 0 0 0px 2px black;
