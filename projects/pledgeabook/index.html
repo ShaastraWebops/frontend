@@ -60,7 +60,7 @@
             <div id="hit-count">
                 <h4 style="font-size:19px;font-weight:bold;padding-left:10px;">Supporters</h4>
                 <div class="clock"></div>
-                <p class="increment">I support this campaign</p>
+                <!-- <p class="increment">I support this campaign</p> -->
             </div>
             <div id="count1">
                 <h4 style="font-size:19px;font-weight:bold;padding-left:10px;">books Collected</h4>
@@ -87,7 +87,7 @@
 					<p>You can support the campaign by pledging your old books. We accept wide range of books.
 					You can donate children's books, novels, JEE preparation materials. You can also support the campaign by pledging your engineering books.
 					You can support the campaign by taking part in collection drives. We regularly organize collection drives inside the green campus of IIT Madras. You can also contribute to the campaign by dropping the books at IDF collection centers. At all IDF collection centers book box has been planted.
-</p>
+                    </p>
 					<br />
                     <p style="color:#09F">Pledge-A-Book Collection Centers- </p>
 
@@ -316,16 +316,16 @@
 		var clock2;
 			$(document).ready(function() {
 
-				// Instantiate a counter
-				clock = new FlipClock($('.clock'), 10001, {
+				// Instantiate a countercounter
+				clock = new FlipClock($('.clock'), 0, { //
 					clockFace: 'Counter'
 				});
 
-				clock1 = new FlipClock($('.clock1'), 1001, {
+				clock1 = new FlipClock($('.clock1'), 1273, { // books
 					clockFace: 'Counter'
 				});
 
-				clock2 = new FlipClock($('.clock2'), 1001, {
+				clock2 = new FlipClock($('.clock2'), 3, { // libraries
 					clockFace: 'Counter'
 				});
 				$('.increment').click(function() {
