@@ -428,8 +428,10 @@
     opacity: 1; }
 
   100% {
-    opacity: 0; } }
+    opacity: 0; }
+}
 .clock {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
@@ -437,7 +439,8 @@
 	-moz-transform: scale(0.5)
 	width:350px;
 }
-.clock1{
+.clock1 {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
@@ -445,7 +448,8 @@
 	-moz-transform: scale(0.5)
 	width:350px;
 }
-.clock2{
+.clock2 {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
