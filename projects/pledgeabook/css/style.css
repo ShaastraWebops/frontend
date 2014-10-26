@@ -227,6 +227,9 @@ a#prev_page_button:hover{
 .article{
 	margin-left:200px;
 }
+.article.left {
+    margin-left:0px;
+}
 #head-sub{
 	height:100%;
 	margin:0px;
@@ -258,9 +261,17 @@ a#prev_page_button:hover{
 }
 @font-face{
 	font-family:lobster;
-	src:url(../fonts/Lobster%201.4.otf);
+	/*src:url(../fonts/Lobster%201.4.otf);*/
+    src:url(../fonts/ampersand.ttf);
 }
 @font-face{
 	font-family:locust;
 	src:url(../fonts/CGF%20Locust%20Resistance.ttf);
+}
+
+.bullet {
+    float:left;
+    height: 5px;
+    width: 5px !important;
+
 }
