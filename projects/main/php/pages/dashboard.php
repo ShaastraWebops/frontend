@@ -91,6 +91,7 @@
     </head>
 
     <body>
+
         <?php include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
@@ -817,7 +818,8 @@
                     // })
                     var json_info = new FormData($el[0]);
                     var this_event = events.filter(customFilter({'id' : parseInt($('#events .register select[name=name]').find(":selected").attr('name'))}))[0]
-                    if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" ) {
+                    if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" && this_event.tdp_submission) {
+                        console.log(this_event)
                         var confirmation = confirm('Are you sure you want to delete the old submission and submit the current document ?')
                         if ( ! confirmation ) return;
                     }
