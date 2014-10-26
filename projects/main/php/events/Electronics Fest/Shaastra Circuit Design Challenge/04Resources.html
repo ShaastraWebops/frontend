@@ -1,60 +1,58 @@
-<p style="text-align:center"><strong><span style="font-size:26px">Resources</span></strong></p>
+<p style="text-align:center"><span style="font-size:28px"><span style="font-family:arial,helvetica,sans-serif"><strong>Resources</strong></span></span></p>
 
 <p>&nbsp;</p>
 
-<p><span style="font-size:20px"><strong>Getting Your Datasheets</strong></span> -&nbsp;You can find datasheets for all ICs at : <a href="http://www.alldatasheet.com">AllDataSheets</a></p>
+<p><span style="font-size:22px"><span style="font-family:arial,helvetica,sans-serif"><strong>Getting Your Datasheets</strong></span></span> -&nbsp;<span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">You can find datasheets for all ICs at : <a href="http://www.alldatasheet.com">AllDataSheets</a></span></span></p>
 
-<p><span style="font-size:20px"><strong>Building a Counter</strong></span> - One of the most basic elements in a circuit is a counter. The below will give you a basic understanding of a counter.</p>
+<p><span style="font-size:22px"><span style="font-family:arial,helvetica,sans-serif"><strong>Building a Counter</strong></span></span> - <span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">One of the most basic elements in a circuit is a counter. The below will give you a basic understanding of a counter.</span></span></p>
 
-<p style="margin-left:40px">The purpose of a counter is to count events. A counter can be made in various ways. Assuming the occurence of the event gives a digital high, here is how a digital counter could be made. There are readymade counter IC&#39;s available. There are 0-9, 4 bit, 7bit, 8 bit, 12 bit, etc counters available, which require just a clock, precisely the occurence of the event bit as input, and with each high input, it increments. You can&nbsp;visit&nbsp;<a href="http://www.kpsec.freeuk.com/components/cmos.htm#4017">here</a>&nbsp;for more information about these IC&#39;s.</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">The purpose of a counter is to count events. A counter can be made in various ways. Assuming the occurence of the event gives a digital high, here is how a digital counter could be made. There are readymade counter IC&#39;s available. There are 0-9, 4 bit, 7bit, 8 bit, 12 bit, etc counters available, which require just a clock, precisely the occurence of the event bit as input, and with each high input, it increments. You can&nbsp;visit&nbsp;<a href="http://www.kpsec.freeuk.com/components/cmos.htm#4017">here</a>&nbsp;for more information about these IC&#39;s.</span></span></p>
 
-<p><img alt="" src="http://3.bp.blogspot.com/-6Xa7mr3d5WQ/TixdempZeEI/AAAAAAAABE4/UcQqaiQTNq0/s1600/4+bit+DFF.png" style="float:right; height:497px; margin-left:10px; margin-right:10px; width:400px" /></p>
+<p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><img alt="" src="http://3.bp.blogspot.com/-6Xa7mr3d5WQ/TixdempZeEI/AAAAAAAABE4/UcQqaiQTNq0/s1600/4+bit+DFF.png" style="float:right; height:497px; margin-left:10px; margin-right:10px; width:400px" /></span></span></p>
 
-<p style="margin-left:40px">Counters can also be easily made using just flip flops and logic gates. Let us design a 4 bit counter.</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Counters can also be easily made using just flip flops and logic gates. Let us design a 4 bit counter.</span></span></p>
 
-<p style="margin-left:40px">Following table shows what we exactly want :</p>
-
-<p style="margin-left:40px">&nbsp;</p>
-
-<p style="margin-left:40px"><strong><u>4 Bit Asynchronous Counter</u></strong></p>
-
-<p style="margin-left:40px">A 4 bit asynchronous counter is pretty easy to make. By observation it can be seen that, whenever the input is 1, the LSB always toggles. The second bit toggles whenever there is a negative edge on the LSB, the third bit toggles whenever there is a negative edge on the second bit and the MSB toggles whenver there is a negative edge on the third bit. Therefore, the input could be used as a clock to the LSB TFF, its output could be used as a clock for the TFF containing the second bit and so on. Here is a block diagram to illustrate the same (assuming the TFF toggles on the negative edge)</p>
-
-<p style="margin-left:40px"><img alt="" src="http://3.bp.blogspot.com/-DGbw4oYBiQs/TixjFQtks4I/AAAAAAAABE8/DqG8W969tZc/s1600/TFF.png" style="float:left; height:128px; width:300px" /></p>
-
-<p>&nbsp;</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Following table shows what we exactly want :</span></span></p>
 
 <p style="margin-left:40px">&nbsp;</p>
 
-<p style="margin-left:40px">&nbsp;</p>
+<p style="margin-left:40px"><span style="font-size:22px"><span style="font-family:arial,helvetica,sans-serif"><strong><u>4 Bit Asynchronous Counter</u></strong></span></span></p>
 
-<p>&nbsp;</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">A 4 bit asynchronous counter is pretty easy to make. By observation it can be seen that, whenever the input is 1, the LSB always toggles. The second bit toggles whenever there is a negative edge on the LSB, the third bit toggles whenever there is a negative edge on the second bit and the MSB toggles whenver there is a negative edge on the third bit. Therefore, the input could be used as a clock to the LSB TFF, its output could be used as a clock for the TFF containing the second bit and so on. Here is a block diagram to illustrate the same (assuming the TFF toggles on the negative edge)</span></span></p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><img alt="" src="http://3.bp.blogspot.com/-DGbw4oYBiQs/TixjFQtks4I/AAAAAAAABE8/DqG8W969tZc/s1600/TFF.png" style="float:left; height:128px; width:300px" /></span></span></p>
 
 <p>&nbsp;</p>
 
 <p style="margin-left:40px">&nbsp;</p>
 
-<p style="margin-left:40px; text-align:center"><img alt="" src="http://1.bp.blogspot.com/-nXOxyul-FwE/Ti0Bh3al_wI/AAAAAAAABFA/ImNpmdT5i_M/s1600/dff_counter.png" style="float:left; height:395px; margin-left:20px; margin-right:20px; width:400px" /></p>
+<p style="margin-left:40px">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:center"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><img alt="" src="http://1.bp.blogspot.com/-nXOxyul-FwE/Ti0Bh3al_wI/AAAAAAAABFA/ImNpmdT5i_M/s1600/dff_counter.png" style="float:left; height:395px; margin-left:20px; margin-right:20px; width:400px" /></span></span></p>
 
 <p style="margin-left:40px">&nbsp;</p>
 
 <p style="margin-left:40px">&nbsp;</p>
 
-<p style="margin-left:40px"><u><strong>4 Bit Synchronous Counter</strong></u></p>
+<p style="margin-left:40px"><span style="font-size:22px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>4 Bit Synchronous Counter</strong></u></span></span></p>
 
-<p style="margin-left:40px">Observing the state table,</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Observing the state table,</span></span></p>
 
-<p style="margin-left:40px"><strong><em>D0 = A0 xor E</em></strong></p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong><em>D0 = A0 xor E</em></strong></span></span></p>
 
-<p style="margin-left:40px"><strong><em>D1 = A1 xor(A0.E)</em></strong></p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong><em>D1 = A1 xor(A0.E)</em></strong></span></span></p>
 
-<p style="margin-left:40px"><strong><em>D2 = (A1.A0.E) xor A2</em></strong></p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong><em>D2 = (A1.A0.E) xor A2</em></strong></span></span></p>
 
-<p style="margin-left:40px"><strong><em>D3 = (A2.A1.A0.E) xor A3</em></strong></p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong><em>D3 = (A2.A1.A0.E) xor A3</em></strong></span></span></p>
 
-<p style="margin-left:40px">And here&#39;s the block diagram for the same:</p>
-
-<p style="margin-left:40px">&nbsp;</p>
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">And here&#39;s the block diagram for the same:</span></span></p>
 
 <p style="margin-left:40px">&nbsp;</p>
 
@@ -62,8 +60,10 @@
 
 <p style="margin-left:40px">&nbsp;</p>
 
-<p style="margin-left:40px; text-align:center"><strong><span style="font-size:18px">You can also view these on the youtube video we made :</span></strong></p>
+<p style="margin-left:40px">&nbsp;</p>
 
-<p style="margin-left:40px; text-align:center"><strong><span style="font-size:18px"><iframe align="middle" frameborder="0" height="300" scrolling="no" src="https://www.youtube.com/embed/95bHBmsW6h4" width="400"></iframe></span></strong></p>
+<p style="margin-left:40px; text-align:center"><span style="font-size:22px"><span style="font-family:arial,helvetica,sans-serif"><strong>You can also view these on the youtube video we made :</strong></span></span></p>
+
+<p style="margin-left:40px; text-align:center"><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong><iframe align="middle" frameborder="0" height="300" scrolling="no" src="https://www.youtube.com/embed/95bHBmsW6h4" width="400"></iframe></strong></span></span></p>
 
 <p style="margin-left:40px">&nbsp;</p>
