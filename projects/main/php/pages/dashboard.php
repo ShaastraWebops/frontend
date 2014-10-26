@@ -8,16 +8,16 @@
     }
 
     $cooktime = time()+60*60*24*30;
-    if ( isset($_REQUEST['first_name']) ) {
-        $_SESSION['first_name'] = $_REQUEST['first_name'];
+    if ( isset($_GET['first_name']) ) {
+        $_SESSION['first_name'] = $_GET['first_name'];
         setcookie("first_name", $_SESSION['first_name'], $cooktime);
     }
-    if ( isset($_REQUEST['last_name']) ) {
-        $_SESSION['last_name'] = $_REQUEST['last_name'];
+    if ( isset($_GET['last_name']) ) {
+        $_SESSION['last_name'] = $_GET['last_name'];
         setcookie("last_name", $_SESSION['last_name'], $cooktime);
     }
-    if ( isset($_REQUEST['valid_profile']) ) {
-        $_SESSION['valid_profile'] = $_REQUEST['valid_profile'];
+    if ( isset($_GET['valid_profile']) ) {
+        $_SESSION['valid_profile'] = $_GET['valid_profile'];
         setcookie("valid_profile", $_SESSION['valid_profile'], $cooktime);
     }
 ?>
@@ -91,7 +91,6 @@
     </head>
 
     <body>
-
         <?php include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
