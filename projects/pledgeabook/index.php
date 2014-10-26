@@ -29,12 +29,12 @@
     <body>
     	<div class="header" style="text-align:center;">
             <div class="header-inner" style="display: inline-block; width: 100%;">
-                <img src="pics/shaastra_hr.png" width="269" height="70" style="display:inline-block;"/>
+                <img src="pics/shaastra_hr.png" width="400" height="105" style="display:inline-block;"/>
                 <span style="display:inline-block; font-size:1.6em; vertical-align: top; padding: 40px 10px 0px 20px">presents</span>
-                <span style="font-family:lobster !important; display:inline-block; font-size:5em; padding:10px 20px 0 20px; vertical-align: top;">Pledge-A-Book</span>
+                <span style="font-family:lobster !important; display:inline-block; font-size:3em; padding:30px 20px 0 20px; vertical-align: top;">Pledge-A-Book     </span>
                 <span style="display:inline-block; font-size:1.6em; vertical-align: top; padding: 40px 10px 0 20px">with the support of</span>
-                <img src="pics/unesco.png" width="194" height="70" style="padding-top: 20px" />
-            <div id="social-icons-header" style="margin-top:-5px">
+                <img src="pics/unesco.png" width="250" height="90" />
+            <div id="social-icons-header" style="margin-top:-20px">
                 <img src="images/social_fb_color.png" onclick="window.open('http://www.facebook.com/Shaastra','_blank');">
                 <img src="images/social_youtube_color.png" onclick="window.open('http://www.youtube.com/user/iitmshaastra','_blank');">
                 <img src="images/social_google_color.png" onclick="window.open('https://plus.google.com/u/0/109668817957263291803/about','_blank');">
@@ -154,6 +154,7 @@
                             6/PP1, School Street, Mogappair West<br />
                             Chennai 600 037<br />
                             Tel. 044 2653 1168,  +91 98400 40191<br />
+                            Email : idftamilnadu@gmail.com
                         </p>
                         <br />
                         <p style="color:#003">Agni Shine</p>
@@ -176,11 +177,10 @@
 
                         <p><b>MUMBAI</b></p>
                         <p style="color:#003">Indian Developemnt Foundation</p>
-                        <p>
-                            L 10/ 3&4 Jal Ratan Deep, Bangur Nagar, <br />
-                            Goregaon(West), Mumbai 400 104.<br />
-                            Tel : 022 28762008, 022 28763008, +91 - 9819131388
-                        </p>
+                        <p>L 10/ 3&4 Jal Ratan Deep, Bangur Nagar, <br />
+                        Goregaon(West), Mumbai 400 104.</p>
+                        <p>Tel : 022 28762008, 022 28763008, +91 - 9819131388 </p>
+                        <p> Email : idfindia@gmail.com / info@idf.org.in </p>
                         <br >
                         <hr />
                         <br /><br /><br /><br /><br /><br /><br />
@@ -202,20 +202,19 @@
                         <br ><br />
                         <p><b> BANGALORE</b></p>
                         <p style="color:#003">Indian Developemnt Foundation</p>
-                        <p>
-                            C/o. #B.202, Suraj Ganga Socrates, No. 87/2, <br />
-                            Vajrahalli, Kanakapura MainRoad, Bangalore 560062
-                            Cell: +91 9449074443
-                        </p>
+                        <p>C/o. #B.202, Suraj Ganga Socrates, No. 87/2, <br />
+                        Vajrahalli, Kanakapura MainRoad, Bangalore 560062</p>
+                        <p> Cell: +91 9449074443  </p>
+                        <p> Email: idfsouthindia@gmail.com </p>
                         <br />
                         <hr />
                         <br />
                         <p><b>HYDERABAD</b></p>
     					<p style="color:#003">Indian Development Foundation</p>
-                        <p>
-                            Plot No. 432, (Old No. 1-1-742/A) Near Narmada Hospital, <br />
-                            Gandhi Nagar, Hyderabad - 500 080<br />
-                            Cell: +91 89789 93222  </p>
+                        <p>Plot No. 432, (Old No. 1-1-742/A) Near Narmada Hospital, <br />
+                        Gandhi Nagar, Hyderabad - 500 080</p>
+    					<p>	Cell: +91 -  8978993222  </p>
+    					<p>	Email: idfap01@gmail.com </p>
                         <br /><br />
                         <hr />
                         <br /><br />
@@ -229,7 +228,7 @@
                         <br />
                         <p style="color:#06F"><strong>Pledge a Book Team :</strong></p>
                         <br />
-                        <p> <span style="color:#003">Romil Shah</span> - 9962878911</p>
+                        <p> <span style="color:#003">Romil Shah</span> - 9962035992</p>
                         <p> <span style="color:#003">Ayush Sirothia</span> - 9884180433</p>
                         <p> <span style="color:#003">Yash Dixit</span> - 9840256679</p>
                         <p> <span style="color:#003">Mazhar Shaikh</span> - 9003107267</p>
@@ -265,12 +264,12 @@
 					</div>
 				</div>
 			</div>
-            <!-- <div style="display: inline-block; float:left;" class="btn">
+            <div style="display: inline-block; float:left;" class="btn">
                 <b>&larr; Previous</b>
             </div>
             <div style="display: inline-block; float:right;" class="btn">
                 <b>Next &rarr;</b>
-            </div> -->
+            </div>
 		</div>
         <div id="sponsors">
         <h1 style="font-family:lobster;">Partners</h1>
