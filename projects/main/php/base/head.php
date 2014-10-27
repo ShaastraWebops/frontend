@@ -115,6 +115,9 @@ if ($DEBUG) {
         font-family: 'CGF Locust Resistance';
         font-weight: 100;
     }
+    .glyphicon-md {
+        font-size: 2em;
+    }
 	/* Breaker - A nice little shaastra separator */
     .breaker {
 		width:387px;

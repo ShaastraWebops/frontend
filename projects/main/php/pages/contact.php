@@ -208,7 +208,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Student Relations
+											Accomodation <br />&amp;<br /> Student Relations
 										</span>
 									</span>
 								</span>
@@ -235,7 +235,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Lectures </br>
+											Symposium, Lectures </br>
                                             and </br>
                                             Exhibitions
 										</span>
@@ -514,7 +514,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Student Relations</h1>
+							<h1 class="text-center">Accomodation &amp; Student Relations</h1>
 						</div>
 					</div>
 
@@ -593,7 +593,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Evolve</h1>
+							<h1 class="text-center">Symposium, Lectures &amp; Exhibitions</h1>
 						</div>
 					</div>
 

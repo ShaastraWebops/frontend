@@ -98,6 +98,14 @@
 
     <div class="container-fluid black">
         <div class="row">
+            <div class="col-md-20 col-md-offset-1 text-center white">
+                <br />
+                <b> For any queries, please contact <a href='mailto:devaansh@shaastra.org'>devaansh@shaastra.org</a>, <a href='mailto:neha@shaastra.org'>neha@shaastra.org</a> or <a href='mailto:shubham@shaastra.org'>shubham@shaastra.org</a> </b>
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="row">
             <div class="tabs col-md-10 col-md-offset-1">
                 <ul class="tab-links">
                     <li class="active">
