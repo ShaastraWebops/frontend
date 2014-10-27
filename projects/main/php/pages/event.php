@@ -437,7 +437,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row hidden">
+        <div class="row">
             <div class="col-md-10 col-md-offset-1" id="event_registrations">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
