@@ -216,11 +216,10 @@
                     </textarea>
                 </form>
                 <!-- for marquee end -->
-            <?php } else if ($notifications_data != "") { ?>
+            <?php } else { ?>
                 <!-- for marquee start -->
                 <marquee bgcolor="" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-                    <!-- <div><?php echo $notifications_data; ?></div> -->
-                    <div><?php echo str_replace(array("<br>", "<br/>", "<br />"), 'a', $notifications_data); ?></div>
+                    <?php echo str_replace(array("<br>", "<br/>", "<br />", "<div>", "</div>"), '', $notifications_data); ?>
                 </marquee>
                 <!-- for marquee end -->
             <?php } ?>
