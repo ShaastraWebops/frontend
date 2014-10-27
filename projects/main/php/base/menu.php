@@ -525,7 +525,7 @@
 </style>
 
 <div id="menu-btn" style="">
-    <div>
+    <div class="menu-menu">
         <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
         <span class='menubars'>
             <span class="menu-bar bar1"></span>
@@ -540,7 +540,7 @@
         <span class="title title-menu hidden-sm hidden-xs">MENU</span>
     </div>
     <?php if ( isset($back) ) { ?>
-        <a style="display:block; color:#fff; text-decoration:none" href="<?php echo $back; ?>">
+        <a class="menu-back" style="display:block; color:#fff; text-decoration:none" href="<?php echo $back; ?>">
             <span class='menubars-back'>
                 <span class="glyphicon-arrow-left glyphicon glyphicon-md"> </span>
             </span>
@@ -733,13 +733,16 @@
 
     var search_list = null;
     $(document).ready(function(){
-        $("#menu-btn").click(function(ev){
+        $(".menu-menu").click(function(ev){
             if($("#menu-btn").hasClass('menu-open') && ev.clientX > 200){
                 hide_menu();
             } else {
                 show_menu();
             }
         });
+        $(".menu-back").click(function(e) {
+            e.stopPropogation()
+        })
         $("#menu-btn.menu-open").click(function(ev){
             hide_menu();
         });
