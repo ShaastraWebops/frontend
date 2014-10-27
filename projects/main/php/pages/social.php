@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Social Cause | Shaastra 2015</title>
-        <?php include '../../php/base/head.php' ?>
+        <?php $back="../../php/pages/home.php"; include '../../php/base/head.php' ?>
 
         <style type="text/css">
         .lead{

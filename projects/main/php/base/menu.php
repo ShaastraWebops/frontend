@@ -13,7 +13,7 @@
         top: 0px;
         left: 0px;
         width: 100px;
-        height: 40px;
+        height: 60px;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
@@ -28,17 +28,17 @@
         vertical-align: middle;
         text-transform: uppercase;
     }
-    #menu-btn .title-menu {
+    #menu-btn .title-menu, #menu-btn .title-back {
         display: none;
     }
-    #menu-btn:hover .title-menu {
+    #menu-btn:hover .title-menu, #menu-btn:hover .title-back {
         display: inline-block;
     }
     /* Handle text when menu is open/closed */
     #menu-btn.menu-open {
         margin-left: 220px !important;
     }
-    #menu-btn.menu-open .title-menu {
+    #menu-btn.menu-open .title-menu, #menu-btn.menu-open .title-back {
         display: none;
     }
     #menu-btn .title-close {
@@ -53,13 +53,19 @@
     #menu-btn.menu-open .title.title-close {
         display: inline-block;
     }
-    #menu-btn .menubars {
+    #menu-btn .menubars, #menu-btn .menubars-back {
         width: 29px;
         height: 19px;
         position: relative;
         top: 1px;
     }
-    #menu-btn.menu-open .menubars {
+    #menu-btn .title-back {
+        margin-top: 13px;
+    }
+    #menu-btn .menubars-back {
+        margin-top: 0px;
+    }
+    #menu-btn.menu-open .menubars, #menu-btn.menu-open .menubars-back {
         display: none;
     }
     #menu-btn .menubars-close {
@@ -438,8 +444,6 @@
             height: 8.33%; /* placeholder - Change depending in number of items in menu */
         }
     }
-
-
     .search-container {
         padding-left: 200px;
         margin-top: 60px;
@@ -479,25 +483,27 @@
     .search-container #search-display .search-display-wrapper {
         overflow-y: auto;
         height: 100%;
-
     }
     .search-container .search-element {
         cursor: pointer;
         background: #000;
         background: rgba(0,0,0,0.9);
+        margin: 0;
+        padding: 0;
     }
     .search-container .search-element .wrapper {
         border-radius : 5px;
         border: 1px solid #fff;
         color: #fff;
-        margin: 10px 0px;
+        margin: 10px 5px;
     }
     .search-container .search-element.template {
         display: none;
     }
     .search-container .search-element .head {
         font-size: 1.2em;
-        height: 2.5em;
+        line-height: 1.3em;
+        height: 2.6em;
         width: 100%;
         /*text-overflow:ellipsis;
         white-space: nowrap;*/
@@ -519,18 +525,28 @@
 </style>
 
 <div id="menu-btn" style="">
-    <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
-    <span class='menubars'>
-        <span class="menu-bar bar1"></span>
-        <span class="menu-bar bar2"></span>
-        <span class="menu-bar bar3"></span>
-        <span class="menu-bar bar4"></span>
-    </span>
-    <span class='menubars-close'>
-        <span class="menu-bar bar1"></span>
-        <span class="menu-bar bar2"></span>
-    </span>
-    <span class="title title-menu hidden-sm hidden-xs">MENU</span>
+    <div>
+        <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
+        <span class='menubars'>
+            <span class="menu-bar bar1"></span>
+            <span class="menu-bar bar2"></span>
+            <span class="menu-bar bar3"></span>
+            <span class="menu-bar bar4"></span>
+        </span>
+        <span class='menubars-close'>
+            <span class="menu-bar bar1"></span>
+            <span class="menu-bar bar2"></span>
+        </span>
+        <span class="title title-menu hidden-sm hidden-xs">MENU</span>
+    </div>
+    <?php if ( isset($back) ) { ?>
+        <a style="display:block; color:#fff; text-decoration:none" href="<?php echo $back; ?>">
+            <span class='menubars-back'>
+                <span class="glyphicon-arrow-left glyphicon glyphicon-md"> </span>
+            </span>
+            <span class="title title-back hidden-sm hidden-xs">BACK</span>
+        </a>
+    <?php } ?>
 </div>
 
 
@@ -738,7 +754,7 @@
         $('#search-input').click(function(e) {
             e.preventDefault()
         })
-        show_menu()
+
         $.ajax({
             dataType: "json",
             cache: true,

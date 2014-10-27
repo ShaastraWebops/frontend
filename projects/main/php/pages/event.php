@@ -165,7 +165,7 @@
 
     <body class=''>
 
-        <?php include '../../php/base/menu.php'; ?>
+        <?php $back="../../php/pages/eventlist.php?category=" . $category; include '../../php/base/menu.php'; ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>

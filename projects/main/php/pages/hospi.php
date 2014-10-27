@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<?php include '../../php/base/menu.php' ?>
+		<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 		<div class="container-fluid white centered">
 	        <div class="row">
 	            <div class="col-xs-12">

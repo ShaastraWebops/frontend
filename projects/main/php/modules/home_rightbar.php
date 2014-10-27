@@ -11,8 +11,7 @@
 	        z-index: 5;
 	        display: inline-block;
 		    width: 3em;
-		    height: 18em;
-		    /*height: 100%;*/
+		    height: 21em;
 	    }
 	}
 	.right-menu {
@@ -98,6 +97,9 @@
 				<a href="../../php/pages/login.php"><span class="text">Register</span> <span class="glyphicon-md glyphicon glyphicon-user"></span></a>
 			<?php } ?>
 		</li>
+        <li class="line hidden-xs">
+            <a href="javascript:void(0)" onclick="show_menu()"><span class="text">Search</span> <span class="glyphicon-md glyphicon glyphicon-search"></span></a>
+        </li>
 		<li class="line hidden-xs">
 			<a href="../../php/pages/hospi.php"><span class="text">Accomodation</span> <span class="glyphicon-md glyphicon glyphicon-home"></span></a>
 		</li>
