@@ -1,5 +1,3 @@
-<p><strong><span style="font-size:16px">Problem Statement has been released! </span></strong></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><strong><span style="font-size:16px">TDP Template is updated. Visit the TDP tab for details.</span></strong></span></p>
 
-<p><strong><span style="font-size:16px">TDP Template is out. </span></strong></p>
-
-<p><strong><span style="font-size:16px">Deadline for TDP submission is 30<sup>th</sup> October</span></strong></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><strong><span style="font-size:16px">Deadline for TDP submission is 30<sup>th</sup> October</span></strong></span></p>
