@@ -521,6 +521,7 @@
     .search-container .search-element .img {
         width: 100%;
         padding: 5px;
+        background: url('../../img/icons/loading.gif') no-repeat 100% 100%;
     }
 </style>
 
@@ -801,10 +802,10 @@
                     setTimeout(function() {
                         if ( val.url ) $el.prop("href", val.url)
                     }, 500);
-                    if ( val.img ) $el.find('.img').prop("src", val.img)
+                    if ( val.img ) {
+                        $el.find('.img').prop("src", val.img)
+                    }
                     $el.insertAfter('.search-container .search-element.template')
-                    // $el.hide().slideDown(500)
-                    console.log(key)
                 }
             })
             if ( $('.search-container .search-element').not(".template").length == 0 )
