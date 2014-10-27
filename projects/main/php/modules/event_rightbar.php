@@ -87,11 +87,9 @@
 
 <div class="container-fluid right-menu hidden-xs">
 	<ul class="row">
-<!--
-		<li class="line hidden-xs">
-			<a ><span class="text">Search</span> <span class="glyphicon-md glyphicon glyphicon-search"></span></a>
+		<li class="line">
+			<a href="javascript:void(0)" onclick="show_menu()"><span class="text">Search</span> <span class="glyphicon-md glyphicon glyphicon-search"></span></a>
 		</li>
--->
 		<li class="line">
 			<a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Aerofest"><span class="text">Aerofest</span> <span class="glyphicon-md glyphicon glyphicon-send"></span></a>
 		</li>

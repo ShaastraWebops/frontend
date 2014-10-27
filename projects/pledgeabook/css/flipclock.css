@@ -161,6 +161,12 @@
   font-size: 70px; }
 
 .flip-clock-wrapper ul li a div.up div.inn {
+  background-color: #222;
+  color: #bbb;
+}
+
+
+.flip-clock-wrapper ul li a div.up div.inn {
   top: 0; }
 
 .flip-clock-wrapper ul li a div.down div.inn {
@@ -428,30 +434,35 @@
     opacity: 1; }
 
   100% {
-    opacity: 0; } }
+    opacity: 0; }
+}
 .clock {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
 	zoom:0.5;
-	-moz-transform: scale(0.5)
+	-moz-transform: scale(0.5);
 	width:350px;
 }
-.clock1{
+.clock1 {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
 	zoom:0.5;
-	-moz-transform: scale(0.5)
+	-moz-transform: scale(0.5);
 	width:350px;
 }
-.clock2{
+.clock2 {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
 	top:30px;
 	left:40px;
 	zoom:0.5;
-	-moz-transform: scale(0.5)
-	width:350px;
+	-moz-transform: scale(0.5);
+	width:175px;
+    margin-left:87px;
 }
 #hit-count{
 	position:absolute;
@@ -510,3 +521,9 @@
 	z-index:-1000;
 	font-family:lobster;
 }
+
+
+
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: #ddd !important;}

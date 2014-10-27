@@ -1,4 +1,5 @@
-<hr />
 <p>PROBLEM STATEMENT IS RELEASED!</p>
 
-<p>TDP IS RELEASED!</p>
+<p>TDP TEMPLATE IS RELEASED! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>TDP DEADLINE IS NOV 5th!!</p>

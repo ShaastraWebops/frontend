@@ -1,3 +1,7 @@
-<p><strong>Problem Statement to be released soon!</strong>&nbsp;</p>
+<p>Registration for the event has started!</p>
 
-<p><strong>Stay tuned!</strong></p>
+<p>TDP Template is out.</p>
+
+<p>Problem Statement&nbsp;has&nbsp;been released!</p>
+
+<p>The last date&nbsp;for TDP submission is 30th October.</p>

@@ -13,7 +13,7 @@
         top: 0px;
         left: 0px;
         width: 100px;
-        height: 40px;
+        height: 60px;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
@@ -28,17 +28,17 @@
         vertical-align: middle;
         text-transform: uppercase;
     }
-    #menu-btn .title-menu {
+    #menu-btn .title-menu, #menu-btn .title-back {
         display: none;
     }
-    #menu-btn:hover .title-menu {
+    #menu-btn:hover .title-menu, #menu-btn:hover .title-back {
         display: inline-block;
     }
     /* Handle text when menu is open/closed */
     #menu-btn.menu-open {
         margin-left: 220px !important;
     }
-    #menu-btn.menu-open .title-menu {
+    #menu-btn.menu-open .title-menu, #menu-btn.menu-open .title-back {
         display: none;
     }
     #menu-btn .title-close {
@@ -53,13 +53,19 @@
     #menu-btn.menu-open .title.title-close {
         display: inline-block;
     }
-    #menu-btn .menubars {
+    #menu-btn .menubars, #menu-btn .menubars-back {
         width: 29px;
         height: 19px;
         position: relative;
         top: 1px;
     }
-    #menu-btn.menu-open .menubars {
+    #menu-btn .title-back {
+        margin-top: 13px;
+    }
+    #menu-btn .menubars-back {
+        margin-top: 0px;
+    }
+    #menu-btn.menu-open .menubars, #menu-btn.menu-open .menubars-back {
         display: none;
     }
     #menu-btn .menubars-close {
@@ -168,7 +174,7 @@
     #menu-bg {
         opacity: 0;
         background-color: #aaaaaa;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.85);
         width: 100%;
         height: 100%;
         position: fixed;
@@ -438,158 +444,132 @@
             height: 8.33%; /* placeholder - Change depending in number of items in menu */
         }
     }
-    /*for search start */
-.searchform {
-  display: block;
-  margin: 0;
-}
+    .search-container {
+        padding-left: 200px;
+        margin-top: 60px;
+        width: 100%;
+        height: 100%;
+    }
 
-.searchform label,
-.searchform input {
-  color: #737373;
-  float: left;
-  vertical-align: baseline;
-}
+    .search-container #search-input {
+        font-size: 2.5em;
+        border: .125em solid #737373;
+        border-width: 0 0 2px 0;
+        background-color: transparent;
+        padding: .1em .3em;
+        width: 100%;
+        outline: 0;
+    }
 
-.searchform label { margin: .125em .125em 0 0; }
-
-.searchform input[type=search] {
-/*  font: 1em/1.618 Open Sans, Arial, Sans-serif;
-*/  font-size: 1.1em;
-  border: .125em solid #737373;
-  border-width: 0 0 2px;
-  background-color: transparent;
-  padding: .1875em .375em;
-  width: 80%;
-}
-
-.searchform input[type=search]:focus {
-  border-color: #328fa7;
-  color: #FFFFFF;
-  font-size: 1.1em;
-  outline: 0;
-}
-
-@media only screen and (min-width: 48em) {
-  .searchform input[type=search]{ width: 50%; }
-}
-
-#search_display a {
-   color: #FFFFFF;
-   font-size: 1.1em;
-}
-
-#search_display a:hover {
-    text-decoration: none;
-    color: #328fa7;
-}
-    /*for search end */
-
+    .searchform #search-input:focus {
+        border-color: #328fa7;
+        color: #FFFFFF;
+        outline: 0;
+    }
+    #search-input {
+        font-size: 3em;
+        width: 100%;
+    }
+    #search-message {
+        font-size: 1.5em;
+        color: #f55;
+        padding: 20px 50px;
+        text-align: center;
+    }
+    .search-container #search-display {
+        padding-bottom: 150px;
+        height: 100%;
+    }
+    .search-container #search-display .search-display-wrapper {
+        overflow-y: auto;
+        height: 100%;
+    }
+    .search-container .search-element {
+        cursor: pointer;
+        background: #000;
+        background: rgba(0,0,0,0.9);
+        margin: 0;
+        padding: 0;
+    }
+    .search-container .search-element .wrapper {
+        border-radius : 5px;
+        border: 1px solid #fff;
+        color: #fff;
+        margin: 10px 5px;
+    }
+    .search-container .search-element.template {
+        display: none;
+    }
+    .search-container .search-element .head {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        height: 2.6em;
+        width: 100%;
+        /*text-overflow:ellipsis;
+        white-space: nowrap;*/
+        overflow: hidden;
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
+    .search-container .search-element .wrapper:hover {
+        text-decoration: none;
+        color: #328fa7;
+        background-color: rgba(255,255,255,0.1);
+        text-decoration: none;
+    }
+    .search-container .search-element .img {
+        width: 100%;
+        padding: 5px;
+        background: url('../../img/icons/loading.gif') no-repeat 100% 100%;
+    }
 </style>
 
-<!--...................................for search start......................-->
-<?php
-    $i = 0;
-    $menu_event_list = array();
-    $list = array();
-    $result_list = scandir('../events');
-    foreach($result_list as $res) {
-        $list[$i] = array();
-        if($res === '.' or $res === '..')
-            continue;
-        if(is_dir('../events/' . $res)) {
-            array_push($menu_event_list, $res);
-            $dummy = scandir('../events/' . $res);
-            foreach($dummy as $dum) {
-                if($dum === '.' or $dum === '..')
-                    continue;
-                if(is_dir('../events/' . $res))
-                    array_push($list[$i], $dum);
-            }
-        }
-        $i++;
-    }
-?>
-<!--...................................for search end......................-->
 <div id="menu-btn" style="">
-    <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
-    <span class='menubars'>
-        <span class="menu-bar bar1"></span>
-        <span class="menu-bar bar2"></span>
-        <span class="menu-bar bar3"></span>
-        <span class="menu-bar bar4"></span>
-    </span>
-    <span class='menubars-close'>
-        <span class="menu-bar bar1"></span>
-        <span class="menu-bar bar2"></span>
-    </span>
-    <span class="title title-menu hidden-sm hidden-xs">MENU</span>
+    <div class="menu-menu">
+        <span class="title title-close hidden-sm hidden-xs">CLOSE</span>
+        <span class='menubars'>
+            <span class="menu-bar bar1"></span>
+            <span class="menu-bar bar2"></span>
+            <span class="menu-bar bar3"></span>
+            <span class="menu-bar bar4"></span>
+        </span>
+        <span class='menubars-close'>
+            <span class="menu-bar bar1"></span>
+            <span class="menu-bar bar2"></span>
+        </span>
+        <span class="title title-menu hidden-sm hidden-xs">MENU</span>
+    </div>
+    <?php if ( isset($back) ) { ?>
+        <a class="menu-back" style="display:block; color:#fff; text-decoration:none" href="<?php echo $back; ?>">
+            <span class='menubars-back'>
+                <span class="glyphicon-arrow-left glyphicon glyphicon-md"> </span>
+            </span>
+            <span class="title title-back hidden-sm hidden-xs">BACK</span>
+        </a>
+    <?php } ?>
 </div>
 
-<!--####################### for search start ############################-->
-<script type="text/javascript">
-    list = <?php echo json_encode($list); ?>;
-    eve = <?php echo json_encode($menu_event_list); ?>;
-
-    function search() {
-        var l = -1;
-        var e = -1;
-        disp = document.getElementById('search_display');
-        squery = document.getElementById('search_box').value.toUpperCase();
-        while(disp.firstChild)
-            disp.removeChild(disp.firstChild);
-        if(squery.length >= 1) {
-            for (var i = 0; i < eve.length; i++) {
-                e = eve[i].toUpperCase().indexOf(squery);
-                if(e > -1) {
-                    var br = document.createElement('br');
-                    var anchor = document.createElement('a');
-                    var redirect_eve = "../../php/pages/eventlist.php?category=" + eve[i];
-                    anchor.setAttribute('href', redirect_eve);
-                    anchor.innerHTML = eve[i];
-                    disp.appendChild(anchor);
-                    disp.appendChild(br);
-                }
-            };
-            for (var i = 0; i < (list.length - 1); i++) {
-                for (var j = 0; j < list[i].length; j++) {
-                    l = list[i][j].toUpperCase().indexOf(squery);
-                    if(l > -1) {
-                        var br = document.createElement('br');
-                        var anchor = document.createElement('a');
-                        var make_plus = list[i][j].split(" ").join("+");
-                        var redirect_list = "../../php/pages/event.php?category=" + eve[i] + "&event=" + make_plus;
-                        anchor.setAttribute('href', redirect_list);
-                        anchor.innerHTML = list[i][j];
-                        disp.appendChild(anchor);
-                        disp.appendChild(br);
-                    }
-                };
-            };
-        }
-        if(squery.length < 1) {
-            while(disp.firstChild)
-                disp.removeChild(disp.firstChild);
-        }
-    }
-</script>
-<!--###################### for search end #############################-->
 
 <!-- menu popup start -->
 <div id='menu-bg'>
-<!-- for search start -->
-    <div style="width:35%; margin:1% auto; z-index:2000">
+    <div class="search-container container-fluid">
         <form class="searchform">
-            <label for="search_box">
-                <span style="color:white; font-size:1.1em;">Dice It!&nbsp;&nbsp;</span>
-            </label>
-            <input type="search" id="search_box" onchange="search()" placeholder="Search events and workshops" />
+            <input type="search" id="search-input" placeholder="Search events and workshops" autocomplete="off" />
         </form>
+        <div id="search-message">Please wait, the search is not yet ready</div>
+        <div id="search-display" class="col-xs-12">
+            <div class="search-display-wrapper">
+            <a class="search-element col-sm-2 col-xs-6 template">
+                <div class="wrapper">
+                    <span class="head"></span>
+                    <img class="loading-img" style="display:none" src="../../img/icons/loading.gif" />
+                    <img class="img" src="../../img/icons/loading.gif" />
+                </div>
+            </a>
+            </div>
+        </div>
     </div>
-    <div style="width:25%; margin:5% auto; z-index:2000">
-        <div id="search_display"></div>
-    </div>
-<!-- for search end -->
     <nav id="menu">
         <ul class="nav">
             <li>
@@ -597,7 +577,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/home.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Go back to the</span> -->
                             <span class="big">Home</span>
                         </span>
                     </span>
@@ -608,7 +587,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/dashboard.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Interact with us</span> -->
                             <span class="big">
                                 <?php
                                     if(isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 )
@@ -626,7 +604,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/pre-shaastra.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Know our</span> -->
                             <span class="big">Pre Shaastra <span class="hidden">Activities</span></span>
                         </span>
                     </span>
@@ -637,7 +614,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/categories.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Check out our</span> -->
                             <span class="big">Events</span>
                         </span>
                     </span>
@@ -648,7 +624,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/eventlist.php?category=Workshops" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Check out our</span> -->
                             <span class="big">Workshops</span>
                         </span>
                     </span>
@@ -659,7 +634,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/lectures.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Learn from the best</span> -->
                             <span class="big">Lectures</span>
                         </span>
                     </span>
@@ -670,7 +644,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/exhibitions.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Be fascinated by</span> -->
                             <span class="big">Exhibitions</span>
                         </span>
                     </span>
@@ -681,7 +654,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/hospi.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Know our</span> -->
                             <span class="big">Hospitality</span>
                         </span>
                     </span>
@@ -692,7 +664,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/spons.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Know our</span> -->
                             <span class="big">Sponsors</span>
                         </span>
                     </span>
@@ -714,7 +685,6 @@
                 <a href="<?php echo $SITE_URL; ?>../../php/pages/contact.php" class="table">
                     <span class="table-cell">
                         <span>
-                            <!-- <span class="small hidden-xs">Reach out to</span> -->
                             <span class="big">Contact Us</span>
                         </span>
                     </span>
@@ -753,65 +723,28 @@
         $("#menu-btn").addClass('menu-open')
         $("#menu-bg").addClass('menu-open')
         $('body').addClass('no-scroll')
+        $('#search-input').focus()
     }
     function hide_menu () {
         $("#menu").removeClass('open')
         $("#menu-btn").removeClass('menu-open')
         $("#menu-bg").removeClass('menu-open')
         $('body').removeClass('no-scroll')
+        $('#search-input').blur()
     }
 
-    // /****** for search start ********/
-    // function search(list, eve) {
-    //     var l = -1;
-    //     var e = -1;
-    //     disp = document.getElementById('search_display');
-    //     squery = document.getElementById('search_box').value.toUpperCase();
-    //     while(disp.firstChild)
-    //         disp.removeChild(disp.firstChild);
-    //     if(squery.length >= 1) {
-    //         for (var i = 0; i < eve.length; i++) {
-    //             e = eve[i].toUpperCase().indexOf(squery);
-    //             if(e > -1) {
-    //                 var br = document.createElement('br');
-    //                 var anchor = document.createElement('a');
-    //                 var redirect_eve = "../../php/pages/eventlist.php?category=" + eve[i];
-    //                 console.log(n);
-    //                 anchor.setAttribute('href', redirect_eve);
-    //                 anchor.innerHTML = eve[i];
-    //                 disp.appendChild(anchor);
-    //                 disp.appendChild(br);
-    //             }
-    //         };
-    //         console.log(list);
-    //         for (var i = 0; i < (list.length - 1); i++) {
-    //             for (var j = 0; j < list[i].length; j++) {
-    //                 l = list[i][j].toUpperCase().indexOf(squery);
-    //                 if(l > -1) {
-    //                     var br = document.createElement('br');
-    //                     var anchor = document.createElement('a');
-    //                     var make_plus = list[i][j].split(" ").join("+");
-    //                     var redirect_list = "../../php/pages/event.php?category=" + eve[i] + "&event=" + make_plus;
-    //                     anchor.setAttribute('href', redirect_l   ist);
-    //                     anchor.innerHTML = list[i][j];
-    //                     disp.appendChild(anchor);
-    //                     disp.appendChild(br);
-    //                 }
-    //             };
-    //         };
-    //     }
-    //     if(squery.length < 1) {
-    //             // console.log(squery.length);
-    //         while(disp.firstChild)
-    //             disp.removeChild(disp.firstChild);
-    //     }
-    // }
-    // /******** for search end *******/
-
+    var search_list = null;
     $(document).ready(function(){
-        $("#menu-btn").click(function(ev){
-            show_menu();
+        $(".menu-menu").click(function(ev){
+            if($("#menu-btn").hasClass('menu-open') && ev.clientX > 200){
+                hide_menu();
+            } else {
+                show_menu();
+            }
         });
+        $(".menu-back").click(function(e) {
+            e.stopPropogation()
+        })
         $("#menu-btn.menu-open").click(function(ev){
             hide_menu();
         });
@@ -819,25 +752,72 @@
             if(e.which == 27){ // escape key
                 hide_menu();
             }
-            /********* for search to ensure dynamic search **********/
-            else{
+            else {
                 search();
             }
-            /********* for search to ensure dynamic search **********/
         });
+        $('#search-input').click(function(e) {
+            e.preventDefault()
+        })
 
-
-
-        /*need to fix this */
-
-        $('#menu-btn').click(function(e){ // click on the close bars
-            if($("#menu-btn").hasClass('menu-open') && e.clientX > 200){
-                hide_menu();
-            }
+        $.ajax({
+            dataType: "json",
+            cache: true,
+            url: "../../php/scripts/search_list.php",
+            async: true
+        }).done(function(data) {
+            window.search_list = data
+            $('#search-message').slideUp(500)
+            $('#search-input').keyup(search)
+        }).fail(function(xhr) {
+            $('#search-message').show().html("Error ! There seems to be an error. We cannot prepare the search as we are unable to connect to the internet")
+            window.search_list = null
         });
-
-        /*need to fix this */
-
     });
+    function search(e) {
+        if ( search_list == null ) {
+            $('#search-message').show()
+            return
+        }
+        $('#search-message').hide()
 
+        query = $('#search-input').val().toLowerCase()
+        if ( query == "" ) {
+            $('.search-container .search-element').not(".template").remove()
+        } else {
+            queries = query.split(' ')
+            $('.search-container .search-element').not(".template").remove()
+            $.each(search_list, function(key, val) {
+                found_substr = 0
+                for ( var i = 0; i < queries.length; i++ ) {
+                    if ( val.tags.toLowerCase().indexOf(query.toLowerCase()) != -1 ) {
+                        found_substr = 1
+                        break;
+                    }
+                }
+
+                if  ( found_substr ) {
+                    var $el = $('.search-container .search-element.template')
+                        .clone().removeClass("template")
+                    $el.find('.head').text(key)
+                    setTimeout(function() {
+                        if ( val.url ) $el.prop("href", val.url)
+                    }, 500);
+                    if ( val.img ) {
+                        $el.find('.img').prop("src", val.img).hide()
+                        $el.find('.loading-img').show()
+                        $el.find('.img').on("load", function() {
+                            var $el = $(this).closest("a")
+                            $el.find('.img').show()
+                            $el.find('.loading-img').hide()
+                        })
+                    }
+                    $el.insertAfter('.search-container .search-element.template')
+                }
+            })
+            if ( $('.search-container .search-element').not(".template").length == 0 )
+                $('#search-message').show().html("Your search did not match any activity at Shaastra.")
+
+        }
+    }
 </script>
