@@ -440,43 +440,10 @@
             <div class="col-md-10 col-md-offset-1" id="event_registrations">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover table_user ">
+                    <table class="table table-bordered">
                         <thead>
-                            <th>S No</th>
-                            <th>Shaastra ID</th>
-                            <th colspan="2">Name</th>
-                            <th>Email</th>
-                            <th>City</th>
-                            <th></th>
                         </thead>
                         <tbody>
-                            <tr class="template">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="table table-striped table-bordered table-hover table_team">
-                        <thead>
-                            <th>S No</th>
-                            <th>Shaastra ID</th>
-                            <th colspan="2">Name</th>
-                            <th>Email</th>
-                            <th>City</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            <tr class="template">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -544,7 +511,7 @@
                 "action_for" : "name",
                 "action_for_id" : "<?php echo $event; ?>",
             }
-            $.ajax({ // SEND INFO FOR PROFILE
+            $.ajax({ // EGT EVENT INFO
                 type: "GET",
                 url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                 beforeSend: function(xhr) {
@@ -576,13 +543,105 @@
                 }
 
                 window.this_event = data
-                console.log(data)
+                // Show event info
                 $('#event-info [name=has_tdp]').val((window.this_event.has_tdp)?1:0)
                 $('#event-info [name=team_size_min]').val(window.this_event.team_size_min)
                 $('#event-info [name=team_size_max]').val(window.this_event.team_size_max)
                 $('#event-info [name=registration_starts]').val(window.this_event.registration_starts.yyyy_mm_dd())
                 $('#event-info [name=registration_ends]').val(window.this_event.registration_ends.yyyy_mm_dd())
 
+                // Show event Registrations
+                $.ajax({ // GET REGISTERED PEOPLE
+                    type: "POST",
+                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                    },
+                    cache: false,
+                    data: {
+                        "event_id": this_event.id,
+                        "action": "list"
+                    }
+                }).done(function(res) {
+                    var data = res.data
+                    console.log(data)
+                    //console.log(this_event.team_size_max)
+                    var $tab = $("#event_registrations table")
+                    if ( this_event.team_size_max == 1 ) { // Single person event
+                        var $row = $("<tr></tr>")
+                        $row.append("<th>ID</th>")
+                        $row.append("<th>Name</th>")
+                        $row.append("<th>Email</th>")
+                        if ( this_event.has_tdp )
+                            $row.append("<th>TDP</th>")
+                        $tab.find("thead").append($row)
+
+                        $.each(data, function(key, val) {
+                            var $row = $("<tr></tr>")
+                            $row.append("<td>" + val.id + "</td>")
+                            $row.append("<td>" + val.first_name + " " + val.last_name + "</td>")
+                            $row.append("<td>" + val.email + "</td>")
+                            if ( this_event.has_tdp ) {
+                                console.log(val)
+                                if ( val.tdp_submitted && val.tdp_submitted != "")
+                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + "yes" + "</a></td>")
+                                else
+                                    $row.append("<td>no</td>")
+                            }
+                            $tab.find("tbody").append($row)
+                        })
+                    } else { // Team event
+                        var $row = $("<tr></tr>")
+                        $row.append("<th></th>")
+                        $row.append("<th></th>")
+                        for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                            $row.append("<th colspan='3'>Participant " + (i+1) + "</th>")
+                        }
+                        if ( this_event.has_tdp )
+                            $row.append("<th></th>")
+                        $tab.find("thead").append($row)
+
+                        $row = $("<tr></tr>")
+                        $row.append("<th>ID</th>")
+                        $row.append("<th>Name</th>")
+                        for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                            $row.append("<th>ID</th>")
+                            $row.append("<th>Name</th>")
+                            $row.append("<th>Email</th>")
+                        }
+                        if ( this_event.has_tdp )
+                            $row.append("<th>TDP</th>")
+                        $tab.find("thead").append($row)
+
+                        $.each(data, function(key, val) {
+                            var $row = $("<tr></tr>")
+                            $row.append("<td>" + val.id + "</td>")
+                            $row.append("<td>" + val.name + "</td>")
+                            for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                                if ( i < val.members.length ) {
+                                    $row.append("<td>" + val.members[i].id + "</td>")
+                                    $row.append("<td>" + val.members[i].first_name + "  " + val.members[i].last_name + "</td>")
+                                    $row.append("<td>" + val.members[i].email + "</td>")
+                                } else {
+                                    $row.append("<td>-</td>")
+                                    $row.append("<td>-</td>")
+                                    $row.append("<td>-</td>")
+                                }
+                            }
+                            if ( this_event.has_tdp ) {
+                                if ( val.tdp_submitted )
+                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + yes + "</a></td>")
+                                else
+                                    $row.append("<td>no</td>")
+                            }
+                            $tab.find("tbody").append($row)
+                        })
+                    }
+                }).fail(function(xhr) {
+                    var $el = $("#event_registrations table").parent()
+                    $("#event_registrations table").remove()
+                    $el.append("<h4>ERROR ! Please refresh to reload the list. If it persistes, contact WebOps !</h4>")
+                })
             }).fail(function(xhr) {
                 console.log(xhr.status)
                 if ( xhr.status == 500 ) {
