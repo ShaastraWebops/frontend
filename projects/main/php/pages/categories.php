@@ -77,22 +77,6 @@
         #event-list .event-group .event-item a div > span > span {
             margin: auto;
         }
-        /*@media screen and (-webkit-min-device-pixel-ratio:0) {
-            #event-list .event-group .event-item .transparent-text {
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.2px;
-                -moz-text-stroke-width: 0.2px;
-                text-stroke-width: 0.2px;
-                -webkit-text-stroke-color: white;
-                -moz-text-stroke-color: white;
-                text-stroke-color: white;
-            }
-        }*/
         #event-list .event-group.first .event-item a:hover div {
             margin-top: 100%;
         }
@@ -267,7 +251,7 @@
     </style>
 </head>
 <body>
-    <?php include '../../php/base/menu.php' ?>
+    <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
     <div class="container-fluid white centered">
         <div class="row">
             <div class="col-xs-12">

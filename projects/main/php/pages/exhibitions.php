@@ -47,8 +47,7 @@
 	</head>
 
 	<body>
-		<?php include '../../php/base/menu.php' ?>
-
+		<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
 			<div class="container-fluid col-md-offset-1 col-md-10">
 				<div class="navbar-header">

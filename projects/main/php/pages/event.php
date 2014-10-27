@@ -165,7 +165,7 @@
 
     <body class=''>
 
-        <?php include '../../php/base/menu.php'; ?>
+        <?php $back="../../php/pages/eventlist.php?category=" . $category; include '../../php/base/menu.php'; ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
@@ -437,7 +437,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row hidden">
+        <div class="row">
             <div class="col-md-10 col-md-offset-1" id="event_registrations">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
