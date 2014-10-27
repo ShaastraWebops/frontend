@@ -563,6 +563,7 @@
             <a class="search-element col-sm-2 col-xs-6 template">
                 <div class="wrapper">
                     <span class="head"></span>
+                    <img class="loading-img" style="display:none" src="../../img/icons/loading.gif" />
                     <img class="img" src="../../img/icons/loading.gif" />
                 </div>
             </a>
@@ -803,7 +804,13 @@
                         if ( val.url ) $el.prop("href", val.url)
                     }, 500);
                     if ( val.img ) {
-                        $el.find('.img').prop("src", val.img)
+                        $el.find('.img').prop("src", val.img).hide()
+                        $el.find('.loading-img').show()
+                        $el.find('.img').on("load", function() {
+                            var $el = $(this).closest("a")
+                            $el.find('.img').show()
+                            $el.find('.loading-img').hide()
+                        })
                     }
                     $el.insertAfter('.search-container .search-element.template')
                 }
