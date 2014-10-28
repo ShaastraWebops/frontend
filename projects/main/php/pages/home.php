@@ -3,7 +3,9 @@
 	<head>
 		<title>Shaastra 2015</title>
 		<?php include '../../php/base/head.php'; ?>
-        <!-- for notif start -->
+        <?php 
+        	$poll_path = '../../php/misc/poll.cairo_svg_version_to_string(version)';
+        ?>
         <?php
             if ( isset($_REQUEST['edit']) ) {
                 $editable = 1;
@@ -11,10 +13,13 @@
             else {
                 $editable = 0;
             }
+        //<!-- for notif start -->
             $notifications_data = file_get_contents('../../php/misc/home_notifications.txt');
             $notifications_path = '../../php/misc/home_notifications.txt';
+        //<!-- for notif end -->
         ?>
-        <!-- for notif end -->
+
+
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -226,6 +231,28 @@
             #notifications_display p:before {
                 content: ""
             }
+            #poll_display {
+            	z-index: 1000;
+            	top: 8%;
+            	position: absolute;
+                font-weight: 600;
+                padding-right: 1em;
+                text-align: center;            	
+            }
+            #poll_button {
+            	background-color: #00445e;
+            	border: hidden;
+            	border-radius: 1px;
+            	outline: none;
+            	padding: 5px;
+            }
+            #poll_button: hover {
+            	background-color: #00045e;
+            	cursor: pointer;
+            }
+            #poll_before > input: hover {
+            	cursor: pointer;
+            }
             .cke_button_icon.cke_button__savebtn_icon {
                 width : 70px;
                 background-position:right !important;
@@ -246,7 +273,46 @@
     <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
-
+<!-- for poll start -->
+    <div id="poll_display" class="col-xs-offset-8 col-xs-4 pull-right hidden-xs">
+        	<form method="post" action="../../php/scripts/save_to_file.php">
+        	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
+        		<div id="poll_before">
+        			<h3><b> Question ??? </b></h3>
+        				<li>
+        					<input type="radio" name="data" value="answer 1">
+        					Answer 1	
+        				</li>
+        				<li>
+        					<input type="radio" name="data" value="answer 2">
+        					Answer 2	
+        				</li>
+        				<li>
+        					<input type="radio" name="data" value="answer 3">
+        					Answer 3	
+        				</li>
+        		<br />
+        			<p>
+        				<button id="poll_button" type="submit">Vote!</button>
+        			</p>
+        		</div>	
+        		<div id="poll_after" style="display:none"> Thank You for your answer </div>	
+        	</form>
+    </div>
+    <script>
+    	$('#poll_button').click(function() {
+    		$('#poll_before').css({
+    			'display': 'none'
+    		});
+    		$('#poll_after').css({
+    			'display': 'initial'
+    		});
+    		$('poll_button').attr({
+    			'disabled': true
+    		});
+    	});
+    </script>
+<!-- for poll end -->
     <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
