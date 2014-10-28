@@ -4,7 +4,7 @@
 		<title>Shaastra 2015</title>
 		<?php include '../../php/base/head.php'; ?>
         <?php 
-        	$poll_path = '../../php/misc/poll.cairo_svg_version_to_string(version)';
+        	$poll_path = '../../php/misc/poll.csv';
         ?>
         <?php
             if ( isset($_REQUEST['edit']) ) {
@@ -237,8 +237,9 @@
             	position: absolute;
                 font-weight: 600;
                 padding-right: 1em;
-                text-align: center;            	
-            }
+                text-align: center;
+/*                border: 1px solid white;            	
+*/            }
             #poll_button {
             	background-color: #00445e;
             	border: hidden;
@@ -274,24 +275,33 @@
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-xs-offset-8 col-xs-4 pull-right hidden-xs">
+    <div id="poll_display" class="col-xs-offset-9 col-xs-2 pull-right hidden-xs">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
         			<h3><b> Question ??? </b></h3>
-        				<li>
-        					<input type="radio" name="data" value="answer 1">
-        					Answer 1	
-        				</li>
-        				<li>
-        					<input type="radio" name="data" value="answer 2">
-        					Answer 2	
-        				</li>
-        				<li>
-        					<input type="radio" name="data" value="answer 3">
-        					Answer 3	
-        				</li>
-        		<br />
+        			<table style="width:100%;">
+        				<tr>
+        					<td>
+        						<input type="radio" name="data" id="option_one" value="answer_1,">
+        						<label for="option_one">Answer 1</label>	
+        					</td>
+        					<td>	
+        						<input type="radio" name="data" value="answer_2,">
+        						<label for="option_two">Answer 2</label>	
+        					</td>	
+        				</tr>	
+	        			<tr>
+	        				<td>
+        						<input type="radio" name="data" value="answer_3,">
+        						<label for="option_three">Answer 3</label>	
+        					</td>
+        					<td>	
+        						<input type="radio" name="data" value="none," checked>
+        						<label for="option_none">None</label>	
+        					</td>
+        				</tr>		
+        			</table>
         			<p>
         				<button id="poll_button" type="submit">Vote!</button>
         			</p>
@@ -306,9 +316,6 @@
     		});
     		$('#poll_after').css({
     			'display': 'initial'
-    		});
-    		$('poll_button').attr({
-    			'disabled': true
     		});
     	});
     </script>
