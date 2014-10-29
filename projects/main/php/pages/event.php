@@ -630,7 +630,7 @@
                             }
                             if ( this_event.has_tdp ) {
                                 if ( val.tdp_submitted )
-                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + yes + "</a></td>")
+                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + "yes" + "</a></td>")
                                 else
                                     $row.append("<td>no</td>")
                             }
