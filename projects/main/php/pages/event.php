@@ -569,6 +569,7 @@
                     var $tab = $("#event_registrations table")
                     if ( this_event.team_size_max == 1 ) { // Single person event
                         var $row = $("<tr></tr>")
+                        $row.append("<th>SNo</th>")
                         $row.append("<th>ID</th>")
                         $row.append("<th>Name</th>")
                         $row.append("<th>Email</th>")
@@ -578,6 +579,7 @@
 
                         $.each(data, function(key, val) {
                             var $row = $("<tr></tr>")
+                            $row.append("<td>" + (key+1) + "</td>")
                             $row.append("<td>" + val.id + "</td>")
                             $row.append("<td>" + val.first_name + " " + val.last_name + "</td>")
                             $row.append("<td>" + val.email + "</td>")
@@ -602,6 +604,7 @@
                         $tab.find("thead").append($row)
 
                         $row = $("<tr></tr>")
+                        $row.append("<th>SNo</th>")
                         $row.append("<th>ID</th>")
                         $row.append("<th>Name</th>")
                         for ( var i = 0; i < this_event.team_size_max; i++ ) {
@@ -615,6 +618,7 @@
 
                         $.each(data, function(key, val) {
                             var $row = $("<tr></tr>")
+                            $row.append("<td>" + (key+1) + "</td>")
                             $row.append("<td>" + val.id + "</td>")
                             $row.append("<td>" + val.name + "</td>")
                             for ( var i = 0; i < this_event.team_size_max; i++ ) {
