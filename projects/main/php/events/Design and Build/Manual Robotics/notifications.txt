@@ -1,7 +1,9 @@
+<p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been updated!</span></p>
+
+<p><span style="line-height:1.42857">Please check out</span><span style="line-height:1.42857">&nbsp;the version 2 of Manual Robotics Problem Statement.</span></p>
+
 <p>Registration for the event has started!</p>
 
-<p><span style="background-color:rgb(34, 34, 34)">TDP Template is out.</span></p>
+<p>TDP Template is out.</p>
 
-<p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been released!</span></p>
-
-<p><span style="background-color:rgb(34, 34, 34)">The last date&nbsp;for TDP submission is 30th October.</span></p>
+<p>The last date&nbsp;for TDP submission is 30th October</p>
