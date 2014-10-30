@@ -1,11 +1,13 @@
 <?php
 	$directory = "../../img/spons/";
 	$files = glob($directory . "*", GLOB_ONLYDIR);
+    //echo "files:".$files."\n";
 	foreach($files as $dirname){
 		$images = scandir($dirname);
 		$ignore = Array(".", "..");
-		$title = explode(".",$dirname)['5'];//to remove the numbering system from directory names
-		echo "<div class='row'>\n<div class='col-xs-12 d4'>".$title."<br>\n";//this would represent category of sponsors
+		$title2 = explode(".",$dirname);
+        $title  = $title2[5];//to remove the numbering system from directory names
+	    echo "<div class='row'>\n<div class='col-xs-12 d4'>".$title."<br>\n";//this would represent category of sponsors
 		foreach($images as $curimg){
 			if(!in_array($curimg, $ignore)) {
 				$explode = explode(".",$curimg);//image extension trimming for getting URL START

@@ -710,6 +710,8 @@
                             if (! val.registration_ends) {
                                 val.registration_ends = new Date(null)
                             }
+                            if ( val.team_size_max > 1 && team_id == -1 )
+                                val.is_mine = false // For man robotics
                             events.push(val)
                             if (new Date(val.registration_ends) > new Date() && new Date(val.registration_starts) < new Date()) {
                                 $('#events .register [name=name]').append('<option name="' + val.id + '">' + val.name + '</option>')
@@ -761,6 +763,7 @@
                                     "<b>Team Size</b> : " + val.team_size_min + " to " + val.team_size_max + "<br />")
                                 if ( val.is_mine ) {
                                     this_team = teams.filter(customFilter({'id' : team_id}))[0]
+              console.log(team_id);
                                     $el.find('.content').html($el.find('.content').html() +
                                         "<b>Team Registered</b> : " + this_team.name + " (" + this_team.members.length + " member" + ( (this_team.members.length>=1)?'s':'' ) + ")"  + "<br />")
                                 }
