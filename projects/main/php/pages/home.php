@@ -275,32 +275,39 @@
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-xs-offset-9 col-xs-2 pull-right hidden-xs">
+    <div id="poll_display" class="col-xs-offset-8 col-xs-4 pull-right hidden-xs">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
-        			<h3><b> Question ??? </b></h3>
+        			<h3><b> Which events interest you most at Shaastra? </b></h3>
         			<table style="width:100%;">
         				<tr>
         					<td>
         						<input type="radio" name="data" id="option_one" value="answer_1,">
-        						<label for="option_one">Answer 1</label>	
+        						<label for="option_one">B-Events</label>	
         					</td>
         					<td>	
         						<input type="radio" name="data" value="answer_2,">
-        						<label for="option_two">Answer 2</label>	
+        						<label for="option_two">Coding</label>	
         					</td>	
         				</tr>	
 	        			<tr>
 	        				<td>
         						<input type="radio" name="data" value="answer_3,">
-        						<label for="option_three">Answer 3</label>	
+        						<label for="option_three">Design and Build</label>	
         					</td>
         					<td>	
-        						<input type="radio" name="data" value="none," checked>
-        						<label for="option_none">None</label>	
+        						<input type="radio" name="data" value="none,">
+        						<label for="option_none">Quizzing Events</label>	
         					</td>
         				</tr>		
+        				<tr>
+        					<td>	
+        						<input type="radio" name="data" value="none," checked>
+        						<label for="option_none">Other</label>	
+        					</td>
+        				</tr>		
+
         			</table>
         			<p>
         				<button id="poll_button" type="submit">Vote!</button>
