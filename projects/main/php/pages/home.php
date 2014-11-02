@@ -233,7 +233,7 @@
             }
             #poll_display {
             	z-index: 1000;
-            	top: 8%;
+            	top: 0%;
             	position: absolute;
                 font-weight: 600;
                 padding-right: 1em;
@@ -275,43 +275,46 @@
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-xs-offset-8 col-xs-4 pull-right hidden-xs">
+    <div id="poll_display" class="col-xs-offset-1 col-xs-3 pull-right hidden-xs">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
-        			<h3><b> Which events interest you most at Shaastra? </b></h3>
         			<table style="width:100%;">
         				<tr>
+        					<h3><b> Which events interest you most at Shaastra? </b></h3>
+        				</tr>	
+        				<tr>
         					<td>
-        						<input type="radio" name="data" id="option_one" value="answer_1,">
+        						<input type="radio" name="data" id="option_one" value="b_events">
         						<label for="option_one">B-Events</label>	
         					</td>
         					<td>	
-        						<input type="radio" name="data" value="answer_2,">
+        						<input type="radio" name="data" id="option_two=" value="coding">
         						<label for="option_two">Coding</label>	
         					</td>	
         				</tr>	
 	        			<tr>
 	        				<td>
-        						<input type="radio" name="data" value="answer_3,">
+        						<input type="radio" name="data" id="option_three" value="design_n_build">
         						<label for="option_three">Design and Build</label>	
         					</td>
         					<td>	
-        						<input type="radio" name="data" value="none,">
-        						<label for="option_none">Quizzing Events</label>	
+        						<input type="radio" name="data" id="option_four" value="quizzing">
+        						<label for="option_four">Quizzing Events</label>	
         					</td>
         				</tr>		
         				<tr>
         					<td>	
-        						<input type="radio" name="data" value="none," checked>
-        						<label for="option_none">Other</label>	
+        						<input type="radio" name="data" id="option_other" value="other" checked>
+        						<label for="option_other">Other</label>	
         					</td>
         				</tr>		
-
         			</table>
-        			<p>
-        				<button id="poll_button" type="submit">Vote!</button>
-        			</p>
+        			<table style="width:100%;">
+        				<tr style="text-align:center">
+        					<p><button id="poll_button" type="submit">Vote!</button></p>
+        				</tr>	
+        			</table>
         		</div>	
         		<div id="poll_after" style="display:none"> Thank You for your answer </div>	
         	</form>
