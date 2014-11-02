@@ -2,7 +2,10 @@
 $data = stripslashes( $_REQUEST['data'] ) ;
 $file_name = $_REQUEST['filename'];
 // echo $file_name;
-$fp = fopen ($file_name, "w+");
+if (strcmp($file_name, '../../php/misc/poll.csv') == 0)
+    $fp = fopen ($file_name, "a+");
+else
+    $fp = fopen ($file_name, "w+");
 if ( !$fp ) {
     echo json_encode(array(
         'script' => 'save_to_file', 

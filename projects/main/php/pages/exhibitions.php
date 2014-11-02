@@ -1,3 +1,4 @@
+<?php include '../../php/base/logmein.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
