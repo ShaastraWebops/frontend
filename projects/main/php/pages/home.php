@@ -233,7 +233,7 @@
             }
             #poll_display {
             	z-index: 1000;
-            	top: 0%;
+            	top: 3%;
             	position: absolute;
                 font-weight: 600;
                 padding-right: 1em;
@@ -245,7 +245,7 @@
             	border: hidden;
             	border-radius: 1px;
             	outline: none;
-            	padding: 5px;
+            	padding: 2px;
             }
             #poll_button: hover {
             	background-color: #00045e;
@@ -254,7 +254,10 @@
             #poll_before > input: hover {
             	cursor: pointer;
             }
-            .cke_button_icon.cke_button__savebtn_icon {
+/*            #poll_before > tr > td {
+            	margin-left: 10%;
+            }
+*/            .cke_button_icon.cke_button__savebtn_icon {
                 width : 70px;
                 background-position:right !important;
             }
@@ -275,13 +278,13 @@
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-xs-offset-1 col-xs-3 pull-right hidden-xs">
+    <div id="poll_display" class="col-xs-offset-0 col-xs-5 pull-right hidden-xs">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
         			<table style="width:100%;">
         				<tr>
-        					<h3><b> Which events interest you most at Shaastra? </b></h3>
+        					<h3 style="float:left"><b> Which events interest you most at Shaastra? </b></h3>
         				</tr>	
         				<tr>
         					<td>
@@ -308,14 +311,14 @@
         						<input type="radio" name="data" id="option_other" value="other" checked>
         						<label for="option_other">Other</label>	
         					</td>
+        					<td><p><button id="poll_button" type="submit">Vote!</button></p></td>
         				</tr>		
         			</table>
-        			<table style="width:100%;">
+<!--         			<table style="width:100%;">
         				<tr style="text-align:center">
-        					<p><button id="poll_button" type="submit">Vote!</button></p>
         				</tr>	
         			</table>
-        		</div>	
+ -->        		</div>	
         		<div id="poll_after" style="display:none"> Thank You for your answer </div>	
         	</form>
     </div>
@@ -389,7 +392,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row ngon-row">
+		<div class="row ngon-row" style="z-index:1001">
 			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
