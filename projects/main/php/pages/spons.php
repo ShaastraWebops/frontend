@@ -53,7 +53,7 @@
 
     <script>
         $(document).ready(function() {
-        $('#tab0').load('../../php/modules/tab.htm #Tab0');
+        //$('#tab0').load('../../php/modules/tab.htm #Tab0');
         $('.tabs .tab-links a').on('click', function(e)  {
             var currentAttrValue = $(this).attr('href');
             $('.tabs ' + currentAttrValue).show().siblings().hide();
@@ -125,7 +125,15 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab0" class="tab active"></div>
+                    <div id="tab0" class="tab active">
+                        <div id="Tab0">
+			    <center><strong>
+				<div class="container-fluid">
+					<?php include '../../img/spons/test.php' ?>
+				</div>
+			    </strong></center>
+			</div>
+                    </div>
                     <div id="tab1" class="tab"></div>
                     <div id="tab2" class="tab"></div>
                     <div id="tab3" class="tab"></div>

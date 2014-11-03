@@ -437,7 +437,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-md-offset-1" id="event_registrations">
+            <div class="col-md-10 col-md-offset-1" id="event_registrations" style="z-index: 2000">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -455,7 +455,7 @@
 
     <?php include '../../php/base/foot.php' ?>
     <?php if ( ! $editable ) include '../../php/modules/iitm.php'; ?>
-    <?php include '../../php/modules/event_rightbar.php'; ?>
+    <?php if( ! $editable ) include '../../php/modules/event_rightbar.php'; ?>
     <?php if ( $event == "Symposium" ) { // Cuz sympo wanted their fb page
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
@@ -649,13 +649,13 @@
             }).fail(function(xhr) {
                 console.log(xhr.status)
                 if ( xhr.status == 500 ) {
-                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_500. If it persists, tell the webops team")
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_500. If it persists, tell the WebOps team")
                 } else if ( xhr.status == 404 ) {
-                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_404. If it persists, tell the webops team")
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_404. If it persists, tell the WebOps team")
                 } else if ( xhr.status == 400 ) {
                     var data = xhr.responseJSON
                     var $el = $('#event-info form .help-text')
-                    $el.html("<b>We got some errors when trying to get data. Contact the webops team !</b><br />")
+                    $el.html("<b>We got some errors when trying to get data. Contact the WebOps team !</b><br />")
                     for (var key in data) {
                         $el.html($el.html() + '<b>' + toTitleCase(key) + '</b> - ' + data[key] + '<br />')
                     }
