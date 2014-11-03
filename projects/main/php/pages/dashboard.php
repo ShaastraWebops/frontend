@@ -192,9 +192,18 @@
                                             <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
                                         </div>
                                         <div class="row">
+                                            <div class="col-sm-4 head">Accomodation</div>
+                                            <div class="col-sm-8 label text-left" name="want_accomodation"></div>
+                                            <select class="col-sm-3 form" name="want_accomodation" required >
+                                                <option>Not Wanted</option>
+                                                <option>Wanted</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm-4 head">Password</div>
                                             <div class="col-sm-8 label text-left" name="password"></div>
-                                            <input class="col-sm-8 form" name="password" type="text" placeholder="Change password" />
+                                            <input class="col-sm-8 form" name="password" type="check" placeholder="Change password" />
                                         </div>
                                         <div class="row" style="border-bottom: 0px;">
                                             <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save Profile" />
@@ -620,10 +629,10 @@
                     $.each(data, function(key, val) {
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
-                            if ( $inp.prop('tagName') == "SELECT") {
+                            if ( key == "want_accomodation" )
+                                $inp.text((val)?"Wanted":"Not Wanted")
+                            else
                                 $inp.text(val)
-                            }
-                            $inp.text(val)
                         }
                     })
                 }).fail(function(xhr) {
@@ -761,6 +770,7 @@
                                     "<b>Team Size</b> : " + val.team_size_min + " to " + val.team_size_max + "<br />")
                                 if ( val.is_mine ) {
                                     this_team = teams.filter(customFilter({'id' : team_id}))[0]
+                                    console.log(this_team)
                                     $el.find('.content').html($el.find('.content').html() +
                                         "<b>Team Registered</b> : " + this_team.name + " (" + this_team.members.length + " member" + ( (this_team.members.length>=1)?'s':'' ) + ")"  + "<br />")
                                 }
