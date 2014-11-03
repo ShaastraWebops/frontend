@@ -233,7 +233,7 @@
             }
             #poll_display {
             	z-index: 1000;
-            	top: 3%;
+            	top: 7%;
             	position: absolute;
                 font-weight: 600;
                 padding-right: 1em;
@@ -278,13 +278,13 @@
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-xs-offset-0 col-xs-5 pull-right hidden-xs">
+    <div id="poll_display" class="col-md-offset-0 col-md-5 pull-right hidden-xs hidden-sm">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
         			<table style="width:100%;">
         				<tr>
-        					<h3 style="float:left"><b> Which events interest you most at Shaastra? </b></h3>
+        					<h4 style="float:left"><b> Which events interest you most at Shaastra? </b></h4>
         				</tr>	
         				<tr>
         					<td>
