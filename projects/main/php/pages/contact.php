@@ -250,7 +250,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Facilities
+											Facilities &amp; Catering
 										</span>
 									</span>
 								</span>
@@ -279,7 +279,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Finance &amp; Catering
+											Finance &amp; Sales
 										</span>
 									</span>
 								</span>
@@ -639,7 +639,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Facilities</h1>
+							<h1 class="text-center">Facilities &amp; Catering</h1>
 						</div>
 					</div>
 
@@ -718,7 +718,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Finance &amp; Catering</h1>
+							<h1 class="text-center">Finance &amp; Sales</h1>
 						</div>
 					</div>
 
