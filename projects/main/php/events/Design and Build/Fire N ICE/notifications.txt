@@ -1,3 +1,5 @@
 <p><span style="font-family:arial,helvetica,sans-serif"><strong><span style="font-size:16px">TDP Template is updated. Visit the TDP tab for details.</span></strong></span></p>
 
-<p><span style="font-family:arial,helvetica,sans-serif"><strong><span style="font-size:16px">Deadline for TDP submission is 30<sup>th</sup> October</span></strong></span></p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Registrations for the 2<sup>nd</sup> Phase has started, upload your TDP&#39;s if you haven&#39;t.</strong></span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Results for the Phase-1 are posted.&nbsp;</strong></span></span></p>

@@ -1,7 +1,3 @@
-<p><span style="font-size:16px">Problem statement has&nbsp;been released.</span></p>
+<p><span style="font-size:16px">Results for TDP Phase-1 submission can be found in Results tab.</span></p>
 
-<p><span style="font-size:16px">Registrations have started.</span></p>
-
-<p><span style="font-size:16px">TDP template has&nbsp;been released.</span></p>
-
-<p><span style="font-size:16px">Deadline for TDP submission is 30th October, 2014.</span></p>
+<p><span style="font-size:16px">Phase-2 TDP submission has started. Deadline for the same will be 20th November, 2014.</span></p>
