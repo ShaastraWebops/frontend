@@ -523,7 +523,7 @@
                 var data = res.data
                 console.log("Getting event info")
                 if ( data.length != 1 ) {
-                    var $el = $('#event-info .error-msg').show()
+                    var $el = $('.error-msg').show()
                     $el.find('.head').html("Error : ")
                     $el.find('.text').html("Contact webops team. Your event doesn't seem to exist. Give them the error code : EVENT_LENGTH_0")
                     console.log("No event found")
