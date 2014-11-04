@@ -277,63 +277,62 @@
 
 	<?php include '../../php/base/menu.php'; ?>
 
-<!--     <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
-        <?php echo $notifications_data; ?>
-    </div>
- -->
     <div style="font-size:1.5em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
     <div id="poll_display" class="col-md-4 pull-right hidden-xs hidden-sm">
-        	<form method="post" action="../../php/scripts/save_to_file.php">
-        	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
-        		<div id="poll_before">
-        			<table style="width:100%;">
-        				<tr>
-        					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
-        				</tr>	
-        				<tr>
-        					<td style=""> 
-        						<input type="radio" name="data" id="option_one" value="b_events">
-        						<label for="option_one">B-Events</label>	
-        					</td>
-        					<td>	
-        						<input type="radio" name="data" id="option_two=" value="coding">
-        						<label for="option_two">Coding Events</label>	
-        					</td>	
-        				</tr>	
-	        			<tr>
-	        				<td>
-        						<input type="radio" name="data" id="option_three" value="design_n_build">
-        						<label for="option_three">Design and Build</label>	
-        					</td>
-        					<td>	
-        						<input type="radio" name="data" id="option_four" value="quizzing">
-        						<label for="option_four">Quizzing Events</label>	
-        					</td>
-        				</tr>		
-        				<tr>
-        					<td>	
-        						<input type="radio" name="data" id="option_other" value="other" checked>
-        						<label for="option_other">Other</label>	
-        					</td>
-        					<td><p><button id="poll_button" type="submit">Vote!</button></p></td>
-        				</tr>		
-        			</table>
-        		</div>	
-        		<div id="poll_after" style="display:none"><h4> Thank You for your answer </h4></div>	
-        	</form>
+   		<div id="poll_before">
+   			<table style="width:100%;">
+   				<thead>
+   					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
+   				</thead>	
+   				<tr>
+        			<td style=""> 
+        				<input type="radio" name="data" id="option_one" value="b_events" onclick="poll_save(this.value)">
+        				<label for="option_one">B-Events</label>	
+        			</td>
+        			<td>	
+        				<input type="radio" name="data" id="option_two=" value="coding" onclick="poll_save(this.value)">
+        				<label for="option_two">Coding Events</label>	
+        			</td>	
+        		</tr>	
+	        	<tr>
+	        		<td>
+        				<input type="radio" name="data" id="option_three" value="design_n_build" onclick="poll_save(this.value)">
+        				<label for="option_three">Design and Build</label>	
+        			</td>
+        			<td>	
+        				<input type="radio" name="data" id="option_four" value="quizzing" onclick="poll_save(this.value)">
+        				<label for="option_four">Quizzing Events</label>	
+        			</td>
+        		</tr>		
+        		<tr>
+        			<td>	
+        				<input type="radio" name="data" id="option_other" value="other" onclick="poll_save(this.value)">
+        				<label for="option_other">Other</label>	
+        			</td>
+        		</tr>		
+        	</table>
+        </div>	
     </div>
     <script>
-    	$('#poll_button').click(function() {
-    		$('#poll_before').css({
-    			'display': 'none'
-    		});
-    		$('#poll_after').css({
-    			'display': 'initial'
-    		});
-    	});
+    	function poll_save(vote) {
+    		var my_vote;
+    		if(window.XMLHttpRequest) {		//for latest browsers
+    			my_vote = new XMLHttpRequest();
+    		}
+    		else {		//for i.e:6 and i.e:5
+    			my_vote = new ActiveXObject("Microsoft.XMLHTTP")
+    		}	
+    		my_vote.onreadystatechange = function() {
+    			if(my_vote.readyState == 4 && my_vote.status == 200) {
+    				document.getElementById('poll_display').innerHTML = my_vote.responseText;
+    			}
+    		}
+    		my_vote.open("GET", "../../php/scripts/save_poll.php?vote="+vote, true);
+    		my_vote.send();	
+    	}
     </script>
 <!-- for poll end -->
     <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
