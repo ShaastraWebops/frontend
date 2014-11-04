@@ -241,6 +241,11 @@
                 text-align: center;
                 border: 1px solid white;            	
             }
+            #poll_display table {
+            	border-collapse: separate;
+            	border-spacing: 20px 0;
+            	font-size: 1.1em;
+            }
             #poll_button {
             	background-color: #00445e;
             	border: hidden;
@@ -276,11 +281,11 @@
         <?php echo $notifications_data; ?>
     </div>
  -->
-    <div id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
+    <div style="font-size:1.5em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
-    <div id="poll_display" class="col-md-3 pull-right hidden-xs hidden-sm">
+    <div id="poll_display" class="col-md-4 pull-right hidden-xs hidden-sm">
         	<form method="post" action="../../php/scripts/save_to_file.php">
         	<input type="hidden" name="filename" value="<?php echo $poll_path; ?>" />
         		<div id="poll_before">
@@ -289,13 +294,13 @@
         					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
         				</tr>	
         				<tr>
-        					<td>
+        					<td style=""> 
         						<input type="radio" name="data" id="option_one" value="b_events">
         						<label for="option_one">B-Events</label>	
         					</td>
         					<td>	
         						<input type="radio" name="data" id="option_two=" value="coding">
-        						<label for="option_two">Coding</label>	
+        						<label for="option_two">Coding Events</label>	
         					</td>	
         				</tr>	
 	        			<tr>
