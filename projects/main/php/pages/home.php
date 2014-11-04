@@ -322,7 +322,7 @@
         				</tr>		
         			</table>
         		</div>	
-        		<div id="poll_after" style="display:none"> Thank You for your answer </div>	
+        		<div id="poll_after" style="display:none"><h4> Thank You for your answer </h4></div>	
         	</form>
     </div>
     <script>
