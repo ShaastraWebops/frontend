@@ -3,7 +3,9 @@
 	<head>
 		<title>Shaastra 2015</title>
 		<?php include '../../php/base/head.php'; ?>
-        <!-- for notif start -->
+        <?php 
+        	$poll_path = '../../php/misc/poll.csv';
+        ?>
         <?php
             if ( isset($_REQUEST['edit']) ) {
                 $editable = 1;
@@ -11,10 +13,13 @@
             else {
                 $editable = 0;
             }
+        //<!-- for notif start -->
             $notifications_data = file_get_contents('../../php/misc/home_notifications.txt');
             $notifications_path = '../../php/misc/home_notifications.txt';
+        //<!-- for notif end -->
         ?>
-        <!-- for notif end -->
+
+
 		<style>
 			body * {
 				-webkit-touch-callout: none;
@@ -226,6 +231,35 @@
             #notifications_display p:before {
                 content: ""
             }
+            #poll_display {
+            	z-index: 1000;
+            	top: 1%;
+            	margin-left: 65%;
+            	position: absolute;
+                font-weight: 600;
+                /*padding-right: 1em;*/
+                text-align: center;
+                border: 1px solid white;            	
+            }
+            #poll_display table {
+            	border-collapse: separate;
+            	border-spacing: 20px 0;
+            	font-size: 1.1em;
+            }
+            #poll_button {
+            	background-color: #00445e;
+            	border: hidden;
+            	border-radius: 2px;
+            	outline: none;
+            	padding: 0 2px;
+            }
+            #poll_button: hover {
+            	background-color: #00045e;
+            	cursor: pointer;
+            }
+            #poll_before > input: hover {
+            	cursor: pointer;
+            }
             .cke_button_icon.cke_button__savebtn_icon {
                 width : 70px;
                 background-position:right !important;
@@ -243,10 +277,64 @@
 
 	<?php include '../../php/base/menu.php'; ?>
 
-    <div id="notifications_display" class="col-xs-3 pull-right hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
+    <div style="font-size:1.5em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
-
+<!-- for poll start -->
+    <div id="poll_display" class="col-md-4 pull-right hidden-xs hidden-sm">
+   		<div id="poll_before">
+   			<table style="width:100%;">
+   				<thead>
+   					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
+   				</thead>	
+   				<tr>
+        			<td style=""> 
+        				<input type="radio" name="data" id="option_one" value="b_events" onclick="poll_save(this.value)">
+        				<label for="option_one">B-Events</label>	
+        			</td>
+        			<td>	
+        				<input type="radio" name="data" id="option_two=" value="coding" onclick="poll_save(this.value)">
+        				<label for="option_two">Coding Events</label>	
+        			</td>	
+        		</tr>	
+	        	<tr>
+	        		<td>
+        				<input type="radio" name="data" id="option_three" value="design_n_build" onclick="poll_save(this.value)">
+        				<label for="option_three">Design and Build</label>	
+        			</td>
+        			<td>	
+        				<input type="radio" name="data" id="option_four" value="quizzing" onclick="poll_save(this.value)">
+        				<label for="option_four">Quizzing Events</label>	
+        			</td>
+        		</tr>		
+        		<tr>
+        			<td>	
+        				<input type="radio" name="data" id="option_other" value="other" onclick="poll_save(this.value)">
+        				<label for="option_other">Other</label>	
+        			</td>
+        		</tr>		
+        	</table>
+        </div>	
+    </div>
+    <script>
+    	function poll_save(vote) {
+    		var my_vote;
+    		if(window.XMLHttpRequest) {		//for latest browsers
+    			my_vote = new XMLHttpRequest();
+    		}
+    		else {		//for i.e:6 and i.e:5
+    			my_vote = new ActiveXObject("Microsoft.XMLHTTP")
+    		}	
+    		my_vote.onreadystatechange = function() {
+    			if(my_vote.readyState == 4 && my_vote.status == 200) {
+    				document.getElementById('poll_display').innerHTML = my_vote.responseText;
+    			}
+    		}
+    		my_vote.open("GET", "../../php/scripts/save_poll.php?vote="+vote, true);
+    		my_vote.send();	
+    	}
+    </script>
+<!-- for poll end -->
     <div id="fallback" class="container-fluid hidden hidden-xs text-center" >
 		<div class="row">
 			<div class="col-xs-12">
@@ -306,7 +394,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row ngon-row">
+		<div class="row ngon-row" style="z-index:1001">
 			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
