@@ -277,7 +277,7 @@
 
 	<?php include '../../php/base/menu.php'; ?>
 
-    <div style="font-size:1.5em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
+    <div style="font-size:1.2em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->

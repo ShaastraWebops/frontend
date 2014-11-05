@@ -437,7 +437,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-md-offset-1" id="event_registrations" style="z-index: 2000">
+            <div class="col-md-10 col-md-offset-0" id="event_registrations" style="z-index: 2000">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
                     <table class="table table-bordered">
