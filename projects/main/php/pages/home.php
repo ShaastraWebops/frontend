@@ -645,7 +645,7 @@
 
     <!-- for notif start -->
      <?php if (isset($editable) && $editable) { ?>
-        <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
+        <div class="col-xs-2" style="position:absolute; z-index: 1000; top: 0%; margin-left:10%;">
             <form method="post" action="../../php/scripts/save_to_file.php">
                 <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
                 <textarea name="data" id="notif">
