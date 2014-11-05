@@ -1,3 +1,7 @@
 <p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Problem statement has&nbsp;been released.</span></span></p>
 
 <p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Registrations have started.</span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">TDP phase 1 results have been anounced.</span></span></p>
+
+<p><span style="font-size:18px">TDP phase 2 started.</span></p>
