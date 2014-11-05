@@ -2,7 +2,7 @@
 
 <p>Events registration&nbsp;have started!</p>
 
-<p>For any help with registration. please refer to <a href="http://www.shaastra.org/help.pdf">www.shaatsra.org/help.pdf</a></p>
+<p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaatsra.org/help.pdf</a></p>
 
 <p>Problem Statements have been released!</p>
 
