@@ -437,10 +437,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-md-offset-0" id="event_registrations" style="z-index: 2000">
+            <div class="col-md-10 col-md-offset-0" id="event_registrations" style="z-index: 2000;">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table id="reg_table" class="table table-bordered display">
                         <thead>
                         </thead>
                         <tbody>
@@ -464,6 +464,15 @@
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
+    <!-- for datatables start -->
+    <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css">
+    <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css">
+  
+    <script type="text/javascript" src="../../js/dataTables/jquery.js"></script>
+    <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script>
+    <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script>
+    <!-- for datatables end -->
     <script>
         window.this_event = null
         function tab_name_edit(el) {
@@ -752,6 +761,32 @@
             });
         });
     </script>
+
+<!-- for datatables start -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var table = $('#reg_table').DataTable( {
+            dom: 'T<"clear">lfrtip',
+            tableTools: {
+                sSwfPath: "../../js/dataTables/swf/copy_csv_xls_pdf.swf",
+                aButtons: [
+                    "copy",
+                    "print",
+                    {
+                        "sExtends": "collection",
+                        "sButtonText": "Save",
+                        "aButtons": [ "csv", "xls", "pdf" ]
+                    }
+                ]
+            // "aoColumns": [
+            //     null
+            // ]
+            }
+        });
+    });
+    </script>
+<!-- for datatables end -->
+
     <?php } else { ?>
     <script>
         $(document).ready(function() {
