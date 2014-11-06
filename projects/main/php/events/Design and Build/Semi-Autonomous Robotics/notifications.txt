@@ -1,7 +1,11 @@
-<p>Registration for the event has started!</p>
+<p>Results for first round of TDP submission are out!</p>
 
-<p>TDP Template is out.</p>
+<p>Problem Statement&nbsp;has&nbsp;been updated!</p>
 
-<p>Problem Statement&nbsp;has&nbsp;been released!</p>
+<p>Please check out&nbsp;the version 2 of Semi-AutonomousRobotics Problem Statement.</p>
 
-<p>The last date&nbsp;for TDP submission is 30th October.</p>
+<p>TDP template has been modified. Kindly check out the new template.</p>
+
+<p>The second round of TDP&nbsp;submission has started!</p>
+
+<p>The last date&nbsp;for TDP submission is 20th November.</p>
