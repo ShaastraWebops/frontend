@@ -465,16 +465,15 @@
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <!-- for datatables start -->
-    <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script>
+    <!-- // <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script> -->
 
-    <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css">
     <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/TableTools_JUI.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.bootstrap.css"> -->
-
-    <script type="text/javascript" src="../../js/dataTables/jquery.js"></script>
-    <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css"> -->
+  
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script> -->
     <!-- for datatables end -->
     <script>
         window.this_event = null
@@ -607,17 +606,16 @@
                         // for datatables start 
                         var table = $('#reg_table').DataTable( {
                             "dom": 'T<"clear">lfrtip',
-                            // "bJQueryUI": true,
                             "tableTools": {
                                 // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                                "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                                "sSwfPath": "../../js/dataTables/swf/copy_csv_xls_pdf.swf",
                                 "aButtons": [
                                      // "copy",
                                     // "print",
                                     {
                                         "sExtends": "collection",
                                         "sButtonText": "Save",
-                                        "aButtons": [ "csv", "xls", "pdf" ]
+                                        "aButtons": [ "csv", "xls" ]
                                     }
                                 ]
                             }
@@ -675,28 +673,7 @@
                         })
                     }
                     // for datatables start 
-                    // var table = $('#reg_table').DataTable( {
-                    //     // "dom": 'T<"clear">lfrtip',
-                    //     // "bJQueryUI": true,
-                    //     // "sPaginationType": "full_numbers",
-                    //     // "aaSorting": [[ 3, "desc" ]],
-                    //     "sDom": '<"H"Tfr>t<"F"ip>',
-                    //     "tableTools": {
-                    //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                    //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
-                    //         "aButtons": [
-                    //         // "copy",
-                    //         // "print",
-                    //             {
-                    //                 "sExtends": "collection",
-                    //                 "sButtonText": "Save",
-                    //                 "aButtons": [ "csv", "xls" ]
-                    //             }
-                    //         ]
-                    //     }
-                    // });
-
-                    var table = $('#reg_table').DataTable({
+                    var table = $('#reg_table').DataTable( {
                         "dom": 'T<"clear">lfrtip',
                         "tableTools": {
                             // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
@@ -707,14 +684,11 @@
                                 {
                                     "sExtends": "collection",
                                     "sButtonText": "Save",
-                                    "aButtons": [ "csv", "xls", "pdf" ]
+                                    "aButtons": [ "csv", "xls" ]
                                 }
                             ]
-                        }     
+                        }
                     });
-                    // var tt = new $.fn.dataTable.TableTools( table );
-                    // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');    
-
                     // for datatables end
 
 
@@ -740,9 +714,9 @@
             })
 // for datatables start
 
-            $('#reg_table tbody').css({
-                'background-color': 'transparent'
-            });
+            // $('#reg_table tbody').css({
+            //     'background-color': 'transparent'
+            // });
 
 // for datatables end
 
