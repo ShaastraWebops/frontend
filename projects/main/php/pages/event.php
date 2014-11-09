@@ -165,7 +165,7 @@
 
     <body class=''>
 
-        <?php include '../../php/base/menu.php'; ?>
+        <?php $back="../../php/pages/eventlist.php?category=" . $category; include '../../php/base/menu.php'; ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
@@ -216,11 +216,10 @@
                     </textarea>
                 </form>
                 <!-- for marquee end -->
-            <?php } else if ($notifications_data != "") { ?>
+            <?php } else { ?>
                 <!-- for marquee start -->
                 <marquee bgcolor="" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-                    <!-- <div><?php echo $notifications_data; ?></div> -->
-                    <div><?php echo str_replace(array("<br>", "<br/>", "<br />"), 'a', $notifications_data); ?></div>
+                    <?php echo str_replace(array("<br>", "<br/>", "<br />", "<div>", "</div>"), '', $notifications_data); ?>
                 </marquee>
                 <!-- for marquee end -->
             <?php } ?>
@@ -437,47 +436,14 @@
                 </ul>
             </div>
         </div>
-        <div class="row hidden">
-            <div class="col-md-10 col-md-offset-1" id="event_registrations">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-0" id="event_registrations" style="z-index: 2000;">
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover table_user ">
-                        <thead>
-                            <th>S No</th>
-                            <th>Shaastra ID</th>
-                            <th colspan="2">Name</th>
-                            <th>Email</th>
-                            <th>City</th>
-                            <th></th>
+                    <table id="reg_table" class="table table-bordered display">
+                        <thead style="color: white; background-color:transparent;">
                         </thead>
                         <tbody>
-                            <tr class="template">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="table table-striped table-bordered table-hover table_team">
-                        <thead>
-                            <th>S No</th>
-                            <th>Shaastra ID</th>
-                            <th colspan="2">Name</th>
-                            <th>Email</th>
-                            <th>City</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            <tr class="template">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -489,7 +455,7 @@
 
     <?php include '../../php/base/foot.php' ?>
     <?php if ( ! $editable ) include '../../php/modules/iitm.php'; ?>
-    <?php include '../../php/modules/event_rightbar.php'; ?>
+    <?php if( ! $editable ) include '../../php/modules/event_rightbar.php'; ?>
     <?php if ( $event == "Symposium" ) { // Cuz sympo wanted their fb page
         $facebook = "https://www.facebook.com/iitm.internationalsymposium";
     }?>
@@ -498,6 +464,17 @@
     <?php if ( $editable ) { // The fns to send data ?>
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
+    <!-- for datatables start -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/TableTools_JUI.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css"> -->
+  
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script> -->
+    <!-- for datatables end -->
     <script>
         window.this_event = null
         function tab_name_edit(el) {
@@ -545,7 +522,7 @@
                 "action_for" : "name",
                 "action_for_id" : "<?php echo $event; ?>",
             }
-            $.ajax({ // SEND INFO FOR PROFILE
+            $.ajax({ // EGT EVENT INFO
                 type: "GET",
                 url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
                 beforeSend: function(xhr) {
@@ -557,7 +534,7 @@
                 var data = res.data
                 console.log("Getting event info")
                 if ( data.length != 1 ) {
-                    var $el = $('#event-info .error-msg').show()
+                    var $el = $('.error-msg').show()
                     $el.find('.head').html("Error : ")
                     $el.find('.text').html("Contact webops team. Your event doesn't seem to exist. Give them the error code : EVENT_LENGTH_0")
                     console.log("No event found")
@@ -577,28 +554,172 @@
                 }
 
                 window.this_event = data
-                console.log(data)
+                // Show event info
                 $('#event-info [name=has_tdp]').val((window.this_event.has_tdp)?1:0)
                 $('#event-info [name=team_size_min]').val(window.this_event.team_size_min)
                 $('#event-info [name=team_size_max]').val(window.this_event.team_size_max)
                 $('#event-info [name=registration_starts]').val(window.this_event.registration_starts.yyyy_mm_dd())
                 $('#event-info [name=registration_ends]').val(window.this_event.registration_ends.yyyy_mm_dd())
 
+                // Show event Registrations
+                $.ajax({ // GET REGISTERED PEOPLE
+                    type: "POST",
+                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                    },
+                    cache: false,
+                    data: {
+                        "event_id": this_event.id,
+                        "action": "list"
+                    }
+                }).done(function(res) {
+                    var data = res.data
+                    console.log(data)
+                    //console.log(this_event.team_size_max)
+                    var $tab = $("#event_registrations table")
+                    if ( this_event.team_size_max == 1 ) { // Single person event
+                        var $row = $("<tr></tr>")
+                        $row.append("<th>SNo</th>")
+                        $row.append("<th>ID</th>")
+                        $row.append("<th>Name</th>")
+                        $row.append("<th>Email</th>")
+                        if ( this_event.has_tdp )
+                            $row.append("<th>TDP</th>")
+                        $tab.find("thead").append($row)
+
+                        $.each(data, function(key, val) {
+                            var $row = $("<tr></tr>")
+                            $row.append("<td>" + (key+1) + "</td>")
+                            $row.append("<td>" + val.id + "</td>")
+                            $row.append("<td>" + val.first_name + " " + val.last_name + "</td>")
+                            $row.append("<td>" + val.email + "</td>")
+                            if ( this_event.has_tdp ) {
+                                console.log(val)
+                                if ( val.tdp_submitted && val.tdp_submitted != "")
+                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + "yes" + "</a></td>")
+                                else
+                                    $row.append("<td>no</td>")
+                            }
+                            $tab.find("tbody").append($row)
+                        })
+                        // // for datatables start 
+                        // var table = $('#reg_table').DataTable( {
+                        //     "dom": 'T<"clear">lfrtip',
+                        //     "tableTools": {
+                        //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                        //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                        //         "aButtons": [
+                        //              // "copy",
+                        //             // "print",
+                        //             {
+                        //                 "sExtends": "collection",
+                        //                 "sButtonText": "Save",
+                        //                 "aButtons": [ "csv", "xls" ]
+                        //             }
+                        //         ]
+                        //     }
+                        //  });
+                        // // for datatables end
+
+
+                    } else { // Team event
+                        var $row = $("<tr></tr>")
+                        $row.append("<th></th>")
+                        $row.append("<th></th>")
+                        for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                            $row.append("<th colspan='3'>Participant " + (i+1) + "</th>")
+                        }
+                        if ( this_event.has_tdp )
+                            $row.append("<th></th>")
+                        $tab.find("thead").append($row)
+
+                        $row = $("<tr></tr>")
+                        $row.append("<th>SNo</th>")
+                        $row.append("<th>ID</th>")
+                        $row.append("<th>Name</th>")
+                        for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                            $row.append("<th>ID</th>")
+                            $row.append("<th>Name</th>")
+                            $row.append("<th>Email</th>")
+                        }
+                        if ( this_event.has_tdp )
+                            $row.append("<th>TDP</th>")
+                        $tab.find("thead").append($row)
+
+                        $.each(data, function(key, val) {
+                            var $row = $("<tr></tr>")
+                            $row.append("<td>" + (key+1) + "</td>")
+                            $row.append("<td>" + val.id + "</td>")
+                            $row.append("<td>" + val.name + "</td>")
+                            for ( var i = 0; i < this_event.team_size_max; i++ ) {
+                                if ( i < val.members.length ) {
+                                    $row.append("<td>" + val.members[i].id + "</td>")
+                                    $row.append("<td>" + val.members[i].first_name + "  " + val.members[i].last_name + "</td>")
+                                    $row.append("<td>" + val.members[i].email + "</td>")
+                                } else {
+                                    $row.append("<td>-</td>")
+                                    $row.append("<td>-</td>")
+                                    $row.append("<td>-</td>")
+                                }
+                            }
+                            if ( this_event.has_tdp ) {
+                                if ( val.tdp_submitted )
+                                    $row.append("<td><a href='" + val.tdp_submitted + "'>" + "yes" + "</a></td>")
+                                else
+                                    $row.append("<td>no</td>")
+                            }
+                            $tab.find("tbody").append($row)
+                        })
+                    }
+                    // // for datatables start 
+                    // var table = $('#reg_table').DataTable( {
+                    //     "dom": 'T<"clear">lfrtip',
+                    //     "tableTools": {
+                    //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                    //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                    //         "aButtons": [
+                    //         // "copy",
+                    //         // "print",
+                    //             {
+                    //                 "sExtends": "collection",
+                    //                 "sButtonText": "Save",
+                    //                 "aButtons": [ "csv", "xls" ]
+                    //             }
+                    //         ]
+                    //     }
+                    // });
+                    // // for datatables end
+
+
+                }).fail(function(xhr) {
+                    var $el = $("#event_registrations table").parent()
+                    $("#event_registrations table").remove()
+                    $el.append("<h4>ERROR ! Please refresh to reload the list. If it persistes, contact WebOps !</h4>")
+                })
             }).fail(function(xhr) {
                 console.log(xhr.status)
                 if ( xhr.status == 500 ) {
-                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_500. If it persists, tell the webops team")
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_500. If it persists, tell the WebOps team")
                 } else if ( xhr.status == 404 ) {
-                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_404. If it persists, tell the webops team")
+                    $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_FETCH_404. If it persists, tell the WebOps team")
                 } else if ( xhr.status == 400 ) {
                     var data = xhr.responseJSON
                     var $el = $('#event-info form .help-text')
-                    $el.html("<b>We got some errors when trying to get data. Contact the webops team !</b><br />")
+                    $el.html("<b>We got some errors when trying to get data. Contact the WebOps team !</b><br />")
                     for (var key in data) {
                         $el.html($el.html() + '<b>' + toTitleCase(key) + '</b> - ' + data[key] + '<br />')
                     }
                 }
             })
+// for datatables start
+
+            // $('#reg_table tbody').css({
+            //     'background-color': 'transparent'
+            // });
+
+// for datatables end
+
             $('#event-info form').submit(function(e) {
                 e && e.preventDefault()
                 var $el = $(this)
@@ -690,6 +811,7 @@
             });
         });
     </script>
+
     <?php } else { ?>
     <script>
         $(document).ready(function() {

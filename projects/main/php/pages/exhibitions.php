@@ -47,8 +47,7 @@
 	</head>
 
 	<body>
-		<?php include '../../php/base/menu.php' ?>
-
+		<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
 			<div class="container-fluid col-md-offset-1 col-md-10">
 				<div class="navbar-header">
@@ -88,18 +87,13 @@
 					<div class="col-md-10 col-md-offset-1">
 				      	<div class="hidden-xs col-lg-6 col-md-6 ">
 				      		<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/yOYbyjE3Vtw" allowfullscreen align="right"></iframe>
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>
 							</div>
 						</div>
 		                <p><span class='shaastra-title'>Shaastra</span>, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology. After the overwhelming responses to the previous editions, Envisage is back, Bigger and Better! This time, Sit back and get ready to experience an adrenalin rush like you have never experienced before. Soak in the awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. </p>
-	                    <br />
 	                    <p>Being the only student organized event of its kind in the Whole Country, We proudly bet you will never ever forget your journey into Neverland, giving a new meaning to your idea of entertainment and turning projects undertaken by us into a memory you will long cherish! </p>
-	                    <br />
-	                    <p>The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. You will know which boxes to blame if you are unable to get sleep that night. Get ready to witness people around you floating in air. After you have a taste of the Virtual Music and Video Mixing we offer, DJs will seem old school. Ever wanted to take a selfie with a superhero, this might well be the chance. You will witness a new groundbreaking performance after watching our techno cultural show.</p>
-	                   	<br />
-	                    <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success. Join us at Shaastra 2015 to share the awe and experience the Dream Kingdom!</p>
-		                <br />
-
+	                    <p>The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. You will know which boxes to blame if you are unable to get sleep that night. Get ready to witness people around you floating in air. After you have a taste of the Virtual Music and Video Mixing we offer, DJs will seem old school. Ever wanted to take a selfie with a superhero, this might well be the chance. You will witness a new groundbreaking performance after watching our techno cultural show. Join us at Shaastra 2015 to share the awe and experience the Dream Kingdom!</p>
+	                    <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success.</p>
 					</div>
 				</div>
 			</div>

@@ -136,7 +136,7 @@
 	</head>
 
 	<body>
-		<?php include '../../php/base/menu.php' ?>
+		<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 		<div class="container-fluid title white centered" style="margin-bottom:2%;">
 			<div class="row">
 				<div class="col-xs-12">
@@ -208,7 +208,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Student Relations
+											Accomodation <br />&amp;<br /> Student Relations
 										</span>
 									</span>
 								</span>
@@ -235,7 +235,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Lectures </br>
+											Symposium, Lectures </br>
                                             and </br>
                                             Exhibitions
 										</span>
@@ -250,7 +250,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Facilities
+											Facilities &amp; Catering
 										</span>
 									</span>
 								</span>
@@ -279,7 +279,7 @@
 								<span style="display:table; height:100%; width:100%;">
 									<span style="display:table-cell; height:100%; vertical-align:middle;">
 										<span>
-											Finance &amp; Catering
+											Finance &amp; Sales
 										</span>
 									</span>
 								</span>
@@ -514,7 +514,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Student Relations</h1>
+							<h1 class="text-center">Accomodation &amp; Student Relations</h1>
 						</div>
 					</div>
 
@@ -593,7 +593,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Evolve</h1>
+							<h1 class="text-center">Symposium, Lectures &amp; Exhibitions</h1>
 						</div>
 					</div>
 
@@ -639,7 +639,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Facilities</h1>
+							<h1 class="text-center">Facilities &amp; Catering</h1>
 						</div>
 					</div>
 
@@ -718,7 +718,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="title">
-							<h1 class="text-center">Finance &amp; Catering</h1>
+							<h1 class="text-center">Finance &amp; Sales</h1>
 						</div>
 					</div>
 

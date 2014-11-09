@@ -2,6 +2,8 @@
 
 <p>Events registration&nbsp;have started!</p>
 
+<p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaatsra.org/help.pdf</a></p>
+
 <p>Problem Statements have been released!</p>
 
-<p>TDP deadline &nbsp;is on 30th Oct 2014.</p>
+<p>Stay tuned for TDP results!</p>

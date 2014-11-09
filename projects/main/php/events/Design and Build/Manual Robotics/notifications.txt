@@ -1,7 +1,9 @@
-<p>Registration for the event has started!</p>
+<p>Results for first round of TDP submission are out!</p>
 
-<p><span style="background-color:rgb(34, 34, 34)">TDP Template is out.</span></p>
+<p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been updated!</span></p>
 
-<p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been released!</span></p>
+<p>Please check out&nbsp;the version 2 of Manual Robotics Problem Statement.</p>
 
-<p><span style="background-color:rgb(34, 34, 34)">The last date&nbsp;for TDP submission is 30th October.</span></p>
+<p>The second round of TDP&nbsp;submission has started!</p>
+
+<p>The last date&nbsp;for TDP submission is 20th November.</p>

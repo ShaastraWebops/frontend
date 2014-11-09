@@ -7,11 +7,11 @@
 			$category = $_REQUEST['category'];
 			$category_path = '../../php/events/' . $category ;
 		}
-                if (!isset($category) || $category=="") { // No category, send back to categories page
-                    header('Location: ../../php/pages/categories.php');
-                }
+        if (!isset($category) || $category=="") { // No category, send back to categories page
+            header('Location: ../../php/pages/categories.php');
+        }
 
-                if (!is_dir($category_path)) {
+        if (!is_dir($category_path)) {
 		    header('Location: ../../php/pages/categories.php');
 		} else {
 		    $event_list = scandir($category_path);
@@ -101,11 +101,10 @@
     </style>
 </head>
 <body>
-
-    <?php include '../../php/base/menu.php' ?>
+    <?php $back="../../php/pages/categories.php"; include '../../php/base/menu.php' ?>
     <div class="container-fluid white centered">
-            <div class="row">
-                <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
                     <h1 class="text-center title"><?php echo $category; ?></h1>
                     <div class="white breaker">
                         <span class="left"></span>
@@ -117,7 +116,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     <div class="container-fluid vertical-table" style="height: 80%; padding: 0">
     <div class="row vertical-table-cell" style="">
     <div id="event-list" class="container-fluid">
@@ -130,11 +129,9 @@
             unset($event_list[array_search('sample.html', $event_list)]);
             $event_i = 0;
             foreach ( $event_list as $event ) {
-                //if ($event === '.' or $event === '..') continue;
-                //$event_img = '../../img/events/list/' . strtolower($category) . '/' . strtolower($event) . '.jpg';
                 $event_img = '../../img/events/list/' . strtolower(str_replace("'", "", $event)) . '.jpg';
                 if (!file_exists($event_img)) {
-                //    $event_img = $default_img;
+                    $event_img = $default_img;
                 }
         ?>
             <?php if ( $event_i % $event_row_count == 0 ) { ?>
@@ -177,34 +174,5 @@
     <?php include '../../php/base/foot.php' ?>
     <?php include '../../php/modules/event_rightbar.php'; ?>
 
-    <script>
-    $(document).ready(function() {
-        $transtext = $('.transparent-text');
-        if ( ( $transtext.css('text-stroke-color') !== undefined ||
-            $transtext.css('-webkit-text-stroke-color') !== undefined ||
-            $transtext.css('-moz-text-stroke-color') !== undefined ) &&
-            ( $transtext.css('text-stroke-width') !== undefined ||
-            $transtext.css('-webkit-text-stroke-width') !== undefined ||
-            $transtext.css('-moz-text-stroke-width') !== undefined ) &&
-            ( $transtext.css('background-clip') === 'text' ||
-            $transtext.css('-webkit-background-clip') == 'text' ||
-            $transtext.css('-moz-background-clip') === 'text' ) &&
-            ( $transtext.css('text-fill-color') !== undefined ||
-            $transtext.css('-webkit-text-fill-color') !== undefined ||
-            $transtext.css('-moz-text-fill-color') !== undefined ) &&
-            ( $transtext.css('background-clip') !== undefined ||
-            $transtext.css('-webkit-background-clip') !== undefined ||
-            $transtext.css('-moz-background-clip') !== undefined ) ) {
-            // Phew ... the condition is valid => transparent-text works !
-            $transtext.each(function(i) {
-                var $el = $(this);
-                var $el_event = $el.closest('.event-item');
-                $el.css('background-image', $el_event.css('background-image'))
-                    .css('background-repeat', $el_event.css('background-repeat'))
-                    .css('background-size', $el_event.css('background-size'));
-            })
-        }
-    })
-    </script>
 </body>
 </html>

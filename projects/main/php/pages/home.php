@@ -3,7 +3,7 @@
 	<head>
 		<title>Shaastra 2015</title>
 		<?php include '../../php/base/head.php'; ?>
-        <?php 
+        <?php
         	$poll_path = '../../php/misc/poll.csv';
         ?>
         <?php
@@ -239,7 +239,7 @@
                 font-weight: 600;
                 /*padding-right: 1em;*/
                 text-align: center;
-                border: 1px solid white;            	
+                border: 1px solid white;
             }
             #poll_display table {
             	border-collapse: separate;
@@ -277,7 +277,7 @@
 
 	<?php include '../../php/base/menu.php'; ?>
 
-    <div style="font-size:1.5em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
+    <div style="font-size:1.2em" id="notifications_display" class="col-xs-offset-1 col-xs-3 hidden-xs <?php if (isset($editable) && $editable) { ?> edit <?php } ?>">
         <?php echo $notifications_data; ?>
     </div>
 <!-- for poll start -->
@@ -286,35 +286,35 @@
    			<table style="width:100%;">
    				<thead>
    					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
-   				</thead>	
+   				</thead>
    				<tr>
-        			<td style=""> 
+        			<td style="">
         				<input type="radio" name="data" id="option_one" value="b_events" onclick="poll_save(this.value)">
-        				<label for="option_one">B-Events</label>	
+        				<label for="option_one">B-Events</label>
         			</td>
-        			<td>	
+        			<td>
         				<input type="radio" name="data" id="option_two=" value="coding" onclick="poll_save(this.value)">
-        				<label for="option_two">Coding Events</label>	
-        			</td>	
-        		</tr>	
+        				<label for="option_two">Coding Events</label>
+        			</td>
+        		</tr>
 	        	<tr>
 	        		<td>
         				<input type="radio" name="data" id="option_three" value="design_n_build" onclick="poll_save(this.value)">
-        				<label for="option_three">Design and Build</label>	
+        				<label for="option_three">Design and Build</label>
         			</td>
-        			<td>	
+        			<td>
         				<input type="radio" name="data" id="option_four" value="quizzing" onclick="poll_save(this.value)">
-        				<label for="option_four">Quizzing Events</label>	
+        				<label for="option_four">Quizzing Events</label>
         			</td>
-        		</tr>		
+        		</tr>
         		<tr>
-        			<td>	
+        			<td>
         				<input type="radio" name="data" id="option_other" value="other" onclick="poll_save(this.value)">
-        				<label for="option_other">Other</label>	
+        				<label for="option_other">Other</label>
         			</td>
-        		</tr>		
+        		</tr>
         	</table>
-        </div>	
+        </div>
     </div>
     <script>
     	function poll_save(vote) {
@@ -324,14 +324,14 @@
     		}
     		else {		//for i.e:6 and i.e:5
     			my_vote = new ActiveXObject("Microsoft.XMLHTTP")
-    		}	
+    		}
     		my_vote.onreadystatechange = function() {
     			if(my_vote.readyState == 4 && my_vote.status == 200) {
     				document.getElementById('poll_display').innerHTML = my_vote.responseText;
     			}
     		}
     		my_vote.open("GET", "../../php/scripts/save_poll.php?vote="+vote, true);
-    		my_vote.send();	
+    		my_vote.send();
     	}
     </script>
 <!-- for poll end -->
@@ -645,7 +645,7 @@
 
     <!-- for notif start -->
      <?php if (isset($editable) && $editable) { ?>
-        <div class="col-xs-2 col-xs-offset-10" style="z-index: 1000; top: 3%">
+        <div class="col-xs-2" style="position:absolute; z-index: 1000; top: 0%; margin-left:10%;">
             <form method="post" action="../../php/scripts/save_to_file.php">
                 <input type="hidden" name="filename" value="<?php echo $notifications_path; ?>" />
                 <textarea name="data" id="notif">

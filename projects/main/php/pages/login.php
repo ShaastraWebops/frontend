@@ -265,7 +265,7 @@
     </head>
 
     <body>
-        <?php include '../../php/base/menu.php' ?>
+        <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
@@ -281,12 +281,11 @@
         </div>
 
         <div class="container-fluid white" style="height: auto;">
-            <div class="row row-centered">
+            <!--<div class="row row-centered">
                 <div class="col-md-6 col-centered text-center">
                     <span style="font-size: 1.2em;">Join us with one click</span>
                 </div>
             </div>
-
             <div class="row row-centered">
 
                 <div class="col-md-4 text-center col-centered">
@@ -309,7 +308,7 @@
                     <span style="font-size: 1.2em;">, Login using your Shaastra account</span>
                 </div>
             </div>
-
+            -->
             <div class="row row-centered">
                 <div class="col-md-6 col-centered centered">
                     <div class="btn-group">

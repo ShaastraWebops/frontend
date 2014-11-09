@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<?php include '../../php/base/menu.php' ?>
+		<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 		<div class="container-fluid white centered">
 	        <div class="row">
 	            <div class="col-xs-12">
@@ -40,6 +40,14 @@
 	    </div>
 
 		<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-20 col-md-offset-1 text-center">
+                    <br />
+                    For any hospitality related queries, please contact <a href='mailto:outreach@shaastra.org'>outreach@shaastra.org</a>
+                    <br />
+                    <br />
+                </div>
+            </div>
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-justify">
 					<div class='row hospi_row'>
@@ -65,7 +73,7 @@
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#hospi-accordion" href="#tab2">
                                 	<h4 class="panel-title bold">
-                                        Reaching IITM <span class="muted"> - Find out how to get to Shaastra 2015 by Train, Plane, Car or even walking</span>
+                                        Reaching IITM <span class="muted"> - Find out how to get to Shaastra 2015 by train, plane, car or even walking</span>
                                 	</h4>
                                 </a>
                             </div>

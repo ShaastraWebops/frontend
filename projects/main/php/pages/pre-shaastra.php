@@ -12,9 +12,7 @@
         .dummy2{
                 margin:50%;
         }
-        .curtain
-        {
-
+        .curtain {
 			-moz-box-shadow: inset 0 0 0px 2px black;
 			-webkit-box-shadow: inset 0 0 0px 2px black;
 			box-shadow: inset 0 0 0px 2px black;
@@ -76,7 +74,7 @@
     </style>
 </head>
 <body>
-    <?php include '../../php/base/menu.php' ?>
+    <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
     <div class="container-fluid white centered">
         <div class="row">
             <div class="col-xs-12">

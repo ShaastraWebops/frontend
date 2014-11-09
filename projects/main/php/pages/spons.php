@@ -53,7 +53,7 @@
 
     <script>
         $(document).ready(function() {
-        $('#tab0').load('../../php/modules/tab.htm #Tab0');
+        //$('#tab0').load('../../php/modules/tab.htm #Tab0');
         $('.tabs .tab-links a').on('click', function(e)  {
             var currentAttrValue = $(this).attr('href');
             $('.tabs ' + currentAttrValue).show().siblings().hide();
@@ -81,7 +81,7 @@
         </style>
 </head>
 <body>
-    <?php include '../../php/base/menu.php' ?>
+    <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 
     <div class="container-fluid title white centered" style='margin-bottom:2%'>
         <div class="row">
@@ -97,6 +97,14 @@
     </div>
 
     <div class="container-fluid black">
+        <div class="row">
+            <div class="col-md-20 col-md-offset-1 text-center white">
+                <br />
+                <b> For any queries, please contact <a href='mailto:devaansh@shaastra.org'>devaansh@shaastra.org</a>, <a href='mailto:neha@shaastra.org'>neha@shaastra.org</a> or <a href='mailto:shubham@shaastra.org'>shubham@shaastra.org</a> </b>
+                <br />
+                <br />
+            </div>
+        </div>
         <div class="row">
             <div class="tabs col-md-10 col-md-offset-1">
                 <ul class="tab-links">
@@ -117,7 +125,15 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab0" class="tab active"></div>
+                    <div id="tab0" class="tab active">
+                        <div id="Tab0">
+			    <center><strong>
+				<div class="container-fluid">
+					<?php include '../../img/spons/test.php' ?>
+				</div>
+			    </strong></center>
+			</div>
+                    </div>
                     <div id="tab1" class="tab"></div>
                     <div id="tab2" class="tab"></div>
                     <div id="tab3" class="tab"></div>

@@ -8,16 +8,16 @@
     }
 
     $cooktime = time()+60*60*24*30;
-    if ( isset($_REQUEST['first_name']) ) {
-        $_SESSION['first_name'] = $_REQUEST['first_name'];
+    if ( isset($_GET['first_name']) ) {
+        $_SESSION['first_name'] = $_GET['first_name'];
         setcookie("first_name", $_SESSION['first_name'], $cooktime);
     }
-    if ( isset($_REQUEST['last_name']) ) {
-        $_SESSION['last_name'] = $_REQUEST['last_name'];
+    if ( isset($_GET['last_name']) ) {
+        $_SESSION['last_name'] = $_GET['last_name'];
         setcookie("last_name", $_SESSION['last_name'], $cooktime);
     }
-    if ( isset($_REQUEST['valid_profile']) ) {
-        $_SESSION['valid_profile'] = $_REQUEST['valid_profile'];
+    if ( isset($_GET['valid_profile']) ) {
+        $_SESSION['valid_profile'] = $_GET['valid_profile'];
         setcookie("valid_profile", $_SESSION['valid_profile'], $cooktime);
     }
 ?>
@@ -91,7 +91,7 @@
     </head>
 
     <body>
-        <?php include '../../php/base/menu.php' ?>
+        <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
@@ -192,9 +192,18 @@
                                             <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
                                         </div>
                                         <div class="row">
+                                            <div class="col-sm-4 head">Accomodation</div>
+                                            <div class="col-sm-8 label text-left" name="want_accomodation"></div>
+                                            <select class="col-sm-3 form" name="want_accomodation" required >
+                                                <option>Not Wanted</option>
+                                                <option>Wanted</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm-4 head">Password</div>
                                             <div class="col-sm-8 label text-left" name="password"></div>
-                                            <input class="col-sm-8 form" name="password" type="text" placeholder="Change password" />
+                                            <input class="col-sm-8 form" name="password" type="check" placeholder="Change password" />
                                         </div>
                                         <div class="row" style="border-bottom: 0px;">
                                             <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save Profile" />
@@ -620,10 +629,10 @@
                     $.each(data, function(key, val) {
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
-                            if ( $inp.prop('tagName') == "SELECT") {
+                            if ( key == "want_accomodation" )
+                                $inp.text((val)?"Wanted":"Not Wanted")
+                            else
                                 $inp.text(val)
-                            }
-                            $inp.text(val)
                         }
                     })
                 }).fail(function(xhr) {
@@ -710,6 +719,8 @@
                             if (! val.registration_ends) {
                                 val.registration_ends = new Date(null)
                             }
+                            if ( val.team_size_max > 1 && team_id == -1 )
+                                val.is_mine = false // For man robotics
                             events.push(val)
                             if (new Date(val.registration_ends) > new Date() && new Date(val.registration_starts) < new Date()) {
                                 $('#events .register [name=name]').append('<option name="' + val.id + '">' + val.name + '</option>')
@@ -817,7 +828,8 @@
                     // })
                     var json_info = new FormData($el[0]);
                     var this_event = events.filter(customFilter({'id' : parseInt($('#events .register select[name=name]').find(":selected").attr('name'))}))[0]
-                    if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" ) {
+                    if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" && this_event.tdp_submission) {
+                        console.log(this_event)
                         var confirmation = confirm('Are you sure you want to delete the old submission and submit the current document ?')
                         if ( ! confirmation ) return;
                     }
