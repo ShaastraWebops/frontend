@@ -441,7 +441,7 @@
                 <h3 class="text-center">Registrations</h3>
                 <div class="table-responsive">
                     <table id="reg_table" class="table table-bordered display">
-                        <thead>
+                        <thead style="color: white; background-color:transparent;">
                         </thead>
                         <tbody>
                         </tbody>
@@ -465,13 +465,15 @@
     <script type="text/javascript" src="../../js/ckeditor/ckeditor.js"></script>
 
     <!-- for datatables start -->
-    <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css">
-    <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css">
+    <!-- // <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/TableTools_JUI.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/jquery.dataTables.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../js/dataTables/dataTables.tableTools.css"> -->
   
-    <script type="text/javascript" src="../../js/dataTables/jquery.js"></script>
-    <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script>
-    <script type="text/javascript" src="../../js/dataTables/ZeroClipboard.js"></script>
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/jquery.dataTables.js"></script> -->
+    <!-- // <script type="text/javascript" src="../../js/dataTables/dataTables.tableTools.js"></script> -->
     <!-- for datatables end -->
     <script>
         window.this_event = null
@@ -601,6 +603,26 @@
                             }
                             $tab.find("tbody").append($row)
                         })
+                        // // for datatables start 
+                        // var table = $('#reg_table').DataTable( {
+                        //     "dom": 'T<"clear">lfrtip',
+                        //     "tableTools": {
+                        //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                        //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                        //         "aButtons": [
+                        //              // "copy",
+                        //             // "print",
+                        //             {
+                        //                 "sExtends": "collection",
+                        //                 "sButtonText": "Save",
+                        //                 "aButtons": [ "csv", "xls" ]
+                        //             }
+                        //         ]
+                        //     }
+                        //  });
+                        // // for datatables end
+
+
                     } else { // Team event
                         var $row = $("<tr></tr>")
                         $row.append("<th></th>")
@@ -650,6 +672,26 @@
                             $tab.find("tbody").append($row)
                         })
                     }
+                    // // for datatables start 
+                    // var table = $('#reg_table').DataTable( {
+                    //     "dom": 'T<"clear">lfrtip',
+                    //     "tableTools": {
+                    //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                    //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                    //         "aButtons": [
+                    //         // "copy",
+                    //         // "print",
+                    //             {
+                    //                 "sExtends": "collection",
+                    //                 "sButtonText": "Save",
+                    //                 "aButtons": [ "csv", "xls" ]
+                    //             }
+                    //         ]
+                    //     }
+                    // });
+                    // // for datatables end
+
+
                 }).fail(function(xhr) {
                     var $el = $("#event_registrations table").parent()
                     $("#event_registrations table").remove()
@@ -670,6 +712,14 @@
                     }
                 }
             })
+// for datatables start
+
+            // $('#reg_table tbody').css({
+            //     'background-color': 'transparent'
+            // });
+
+// for datatables end
+
             $('#event-info form').submit(function(e) {
                 e && e.preventDefault()
                 var $el = $(this)
@@ -761,31 +811,6 @@
             });
         });
     </script>
-
-<!-- for datatables start -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var table = $('#reg_table').DataTable( {
-            dom: 'T<"clear">lfrtip',
-            tableTools: {
-                sSwfPath: "../../js/dataTables/swf/copy_csv_xls_pdf.swf",
-                aButtons: [
-                    "copy",
-                    "print",
-                    {
-                        "sExtends": "collection",
-                        "sButtonText": "Save",
-                        "aButtons": [ "csv", "xls", "pdf" ]
-                    }
-                ]
-            // "aoColumns": [
-            //     null
-            // ]
-            }
-        });
-    });
-    </script>
-<!-- for datatables end -->
 
     <?php } else { ?>
     <script>

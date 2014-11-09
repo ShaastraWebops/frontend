@@ -7,5 +7,3 @@
 <p>The second round of TDP&nbsp;submission has started!</p>
 
 <p>The last date&nbsp;for TDP submission is 20th November.</p>
-
-<p>&nbsp;</p>
