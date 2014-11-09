@@ -443,7 +443,7 @@
                     <table id="reg_table" class="table table-bordered display">
                         <thead style="color: white; background-color:transparent;">
                         </thead>
-                        <tbody>
+                        <tbody style="color:black;">
                         </tbody>
                     </table>
                 </div>
