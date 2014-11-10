@@ -1,1 +1,1 @@
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Registration&nbsp;has&nbsp;started.</span></span></p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Registrations have started.</span></span></p>
