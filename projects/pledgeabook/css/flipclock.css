@@ -1,5 +1,9 @@
 /* Get the bourbon mixin from http://bourbon.io */
 /* Reset */
+@font-face{
+    font-family:wire;
+    src:url(../fonts/WireOne.ttf);
+}
 .flip-clock-wrapper * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -439,8 +443,8 @@
 .clock {
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	position:absolute;
-	top:30px;
-	left:40px;
+	top:40px;
+	left:44px;
 	zoom:0.5;
 	-moz-transform: scale(0.5);
 	width:350px;
@@ -470,7 +474,7 @@
 	left:-200px;
 	width:200px;
 	height:100px;
-	background-color:#CCC;
+	background-color:#2E2E2E;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 	border-top-left-radius:10px;
@@ -485,7 +489,7 @@
 	left:-200px;
 	width:200px;
 	height:80px;
-	background-color:#CCC;
+	background-color:#2E2E2E;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 	border-top-left-radius:10px;
@@ -500,7 +504,7 @@
 	left:-200px;
 	width:200px;
 	height:80px;
-	background-color:#CCC;
+	background-color:#2E2E2E;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 	border-top-left-radius:10px;
