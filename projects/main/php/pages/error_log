@@ -77,3 +77,4 @@
 [09-Nov-2014 04:54:41 America/Chicago] PHP Notice:  Undefined variable: SITE_URL in /home/shaastra/public_html/2015/frontend/projects/main/php/modules/event_rightbar.php on line 115
 [09-Nov-2014 04:54:41 America/Chicago] PHP Notice:  Undefined variable: SITE_URL in /home/shaastra/public_html/2015/frontend/projects/main/php/modules/event_rightbar.php on line 118
 [09-Nov-2014 04:54:41 America/Chicago] PHP Notice:  Undefined variable: SITE_URL in /home/shaastra/public_html/2015/frontend/projects/main/php/modules/event_rightbar.php on line 121
+[09-Nov-2014 08:09:17 America/Chicago] PHP Parse error:  syntax error, unexpected $end in /home/shaastra/public_html/2015/frontend/projects/main/php/pages/event.php on line 749
