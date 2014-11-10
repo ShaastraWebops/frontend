@@ -1,8 +1,8 @@
 <?php
 $vote = $_REQUEST['vote'];
 date_default_timezone_set("Asia/Kolkata");
-$present_time_date = date("h:i:sa") . ",  " . date("Y-m-d") . ",  " . date("l");
-$vote_time = $vote . ":  " . $present_time_date;
+$present_time_date = " | " . date("h:i:sa") . " | " . date("Y-m-d") . " | " . date("l");
+$vote_time = $vote . "," . $present_time_date;
 
 $a = strcmp($vote, "b_events");
 $b = strcmp($vote, "coding");
