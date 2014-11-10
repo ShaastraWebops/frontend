@@ -1,6 +1,8 @@
 <p>Symposium registrations have started!</p>
 
-<p>Events registration&nbsp;have started!</p>
+<p>Events registrations have started!</p>
+
+<p>Workshop&nbsp;registrations&nbsp;have started!</p>
 
 <p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaatsra.org/help.pdf</a></p>
 
