@@ -198,7 +198,8 @@
                                                 <option>Not Wanted</option>
                                                 <option>Wanted</option>
                                             </select>
-
+                                            <br />
+                                            <p class="pull-right text-right">(This does not guarantee accomodation. We will get back to you with a confirmation)</p>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 head">Password</div>
@@ -447,7 +448,6 @@
                 if ( this_event.team_size_max > 1 ) { // Needs a Team
                     $('#events .register .team').show()
                     $('#events .register .participant').hide()
-                    console.log(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].id)
                     $('#events .register [name=team]').val(teams.filter(customFilter({'id' : $el.data('team_id')}))[0].name)
                 } else {
                     $('#events .register .team').hide()
@@ -469,7 +469,6 @@
                         'user_id' : <?php echo $_SESSION['user_id']; ?>,
                     }
                     if ( parseInt($el.data('team_id')) > 0) {
-                        console.log($el.data('team_id'))
                         json_info['team'] = teams.filter(customFilter({'id' : parseInt($el.data('team_id'))}))[0].name
                     }
                     $.ajax({ // SEND POST INFO FOR TEAM
@@ -500,7 +499,6 @@
                 $('#profile .edit').click(toggle_form)
                 $.each(branches, function(i, k) {
                     $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
-                    // console.log(k)
                 });
                 $('#teams .add').click(team_create_add)
                 $('#teams .reset').click(team_create_reset)
@@ -629,10 +627,14 @@
                     $.each(data, function(key, val) {
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
-                            if ( key == "want_accomodation" )
+                            if ( key == "want_accomodation" ) {
+                                console.log(val)
                                 $inp.text((val)?"Wanted":"Not Wanted")
-                            else
+                                console.log(val)
+                            }
+                            else {
                                 $inp.text(val)
+                            }
                         }
                     })
                 }).fail(function(xhr) {
@@ -658,11 +660,15 @@
                     }
                     $el.find('.form').each(function(i, el) {
                         var $el = $(el);
-                        json_info[$el.attr('name')] = $el.val()
+                        if ( $el.attr("name") == "want_accomodation" )
+                            json_info[$el.attr('name')] = ($el.val()=="Wanted")?Number(true):Number(false);
+                        else
+                            json_info[$el.attr('name')] = $el.val()
                     })
                     if ( json_info['password'] == "" ) {
                         delete json_info['password']
                     }
+                    console.log(json_info.want_accomodation)
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
@@ -673,10 +679,11 @@
                         data: json_info
                     }).done(function(res) {
                         data = res['data']
-                        window.location.href = window.location.origin + window.location.pathname +
-                            "?first_name=" + data.first_name +
-                            "&last_name=" + data.last_name +
-                            "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
+                        console.log(data.want_accomodation)
+                        // window.location.href = window.location.origin + window.location.pathname +
+                        //     "?first_name=" + data.first_name +
+                        //     "&last_name=" + data.last_name +
+                        //     "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })
@@ -712,7 +719,6 @@
                             } else {
                                 val.is_mine = false
                             }
-                            console.log(val.is_mine)
                             if (! val.registration_sarts) {
                                 val.registration_starts = new Date(null)
                             }
@@ -829,7 +835,6 @@
                     var json_info = new FormData($el[0]);
                     var this_event = events.filter(customFilter({'id' : parseInt($('#events .register select[name=name]').find(":selected").attr('name'))}))[0]
                     if ( $('#events .register [name=tdp]').val() != "" && this_event.tdp_submission != "" && this_event.tdp_submission) {
-                        console.log(this_event)
                         var confirmation = confirm('Are you sure you want to delete the old submission and submit the current document ?')
                         if ( ! confirmation ) return;
                     }
