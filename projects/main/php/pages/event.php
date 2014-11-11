@@ -702,32 +702,7 @@
                             $tab.find("tbody").append($row)
                         })
                     }
-<<<<<<< HEAD
                     // for datatables start
-                    // var table = $('#reg_table').DataTable( {
-                    //     // "dom": 'T<"clear">lfrtip',
-                    //     // "bJQueryUI": true,
-                    //     // "sPaginationType": "full_numbers",
-                    //     // "aaSorting": [[ 3, "desc" ]],
-                    //     "sDom": '<"H"Tfr>t<"F"ip>',
-                    //     "tableTools": {
-                    //         // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                    //         "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
-                    //         "aButtons": [
-                    //         // "copy",
-                    //         // "print",
-                    //             {
-                    //                 "sExtends": "collection",
-                    //                 "sButtonText": "Save",
-                    //                 "aButtons": [ "csv", "xls" ]
-                    //             }
-                    //         ]
-                    //     }
-                    // });
-
-=======
-                    // for datatables start 
->>>>>>> 48087062918ce7da0a0fc60b9d95ee1e1bc27cd8
                     var table = $('#reg_table').DataTable({
                         "dom": 'T<"clear">lfrtip',
                         "paging":   false,
@@ -746,12 +721,8 @@
                             ]
                         }
                     });
-<<<<<<< HEAD
                     // var tt = new $.fn.dataTable.TableTools( table );
                     // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
-
-=======
->>>>>>> 48087062918ce7da0a0fc60b9d95ee1e1bc27cd8
                     // for datatables end
 
 
