@@ -51,22 +51,23 @@
                 <ul>
                     <li data-page="1" id="tab" class="active">About Pledge-A-Book</li>
                     <li data-page="2" id="tab">Campaign So Far</li>
-                    <li data-page="4" id="tab">How to support</li>
+                    <li data-page="4" id="tab">How to Pledge</li>
+                    <li data-page="6" id="tab" style="display:none !important;">How to Pledge</li>
                     <li data-page="8" id="tab">Contact Us</li>
-                    <!-- <li data-page="10" id="tab">Gallery</li> -->
+                    <li data-page="9" id="tab">Gallery</li>
                 </ul>
             </div>
             <div id="hit-count">
-                <h4 style="font-size:19px; font-weight:bold; text-align:center">Supporters</h4>
+                <h4 style="font-size:19px; font-weight:bold; text-align:center;color:#FFF;font-family:wire !important;">SUPPORTERS</h4>
                 <div class="clock"></div>
                 <!-- <p class="increment">I support this campaign</p> -->
             </div>
             <div id="count1">
-                <h4 style="font-size:19px; font-weight:bold; text-align:center">Books Collected</h4>
+                <h4 style="font-size:19px; font-weight:bold; text-align:center;color:#FFF;font-family:wire !important;">BOOKS COLLECTED</h4>
                 <div class="clock1"></div>
             </div>
             <div id="count2">
-                <h4 style="font-size:19px;font-weight:bold;text-align:center">Libraries</h4>
+                <h4 style="font-size:19px;font-weight:bold;text-align:center;color:#FFF;font-family:wire !important;">LIBRARIES</h4>
                 <div class="clock2"></div>
             </div>
             <div id="mybook" style="display:none;">
@@ -116,11 +117,11 @@
                     </p>
                     </div>
                     <div>
-                        <h1>How to support:</h1>
-                        <p>You can support the campaign by pledging your old books. We accept wide range of books.
-                        You can donate children's books, novels, JEE preparation materials. You can also support the campaign by pledging your engineering books.
-                        You can support the campaign by taking part in collection drives. We regularly organize collection drives inside the green campus of IIT Madras. You can contribute to the campaign by dropping off your books at one of the following points in your respective cities.
+                        <h1>How to pledge:</h1>
+                        <p>You can support the campaign by pledging your books. You can donate almost all kinds of books, be it children's books, novels, JEE preparation materials, higher reference books etc.
+We regularly organize collection drives both inside the campus of IIT Madras as well as outside, in various areas across Chennai. You can also support the campaign by volunteering for the book collection drives..
                         </p>
+                        <p>Books can also be dropped at our various collection centers.</p>
                         <br />
 
                         <p style="color:#008">Pledge-A-Book Collection Centers : </p>
@@ -240,26 +241,46 @@
                         <br /><br /><br /><br /><br /><br />
                         <a href="javascript:void(0)" onclick='prevpage()' class="article left">Back</a>
                     </div>
-                    <!--<div>
+                    <div>
                         <h1>Gallery</h1>
-                        <img src="pics/gallery/1.jpg" />
-                        <img src="pics/gallery/2.jpg" />
-                        <img src="pics/gallery/3.jpg" />
+                        <img src="pics/gallery/1.jpg" width="250" height="175" />
+                        <!--<img src="pics/gallery/2.jpg" />-->
+                        <img src="pics/gallery/3.jpg" width="234" height="130" />
+                        <a href="javascript:void(0)" onclick='nextpage()' class="article right">Next</a>
                     </div>
                     <div>
-                        <img src="pics/gallery/4.jpg" />
-                        <img src="pics/gallery/5.jpg" />
-                        <img src="pics/gallery/6.jpg" />
+                    	<img src="pics/gallery/2.jpg" width="260" height="375" />
+                    	<a href="javascript:void(0)" onclick='prevpage()' class="article left">Back</a>
                     </div>
                     <div>
-                        <img src="pics/gallery/7.jpg" />
-                        <img src="pics/gallery/8.jpg" />
-                        <img src="pics/gallery/9.jpg" />
-                    </div><div>
-                        <img src="pics/gallery/10.jpg" />
-                        <img src="pics/gallery/11.jpg" />
-                        <img src="pics/gallery/12.jpg" />
-                    </div>-->
+                  <!--  <img src="pics/gallery/4.jpg" width="200" height="300" />
+                        <img src="pics/gallery/5.jpg" />-->
+                        <img src="pics/gallery/6.jpg" width="310" height="174" />
+                        <img src="pics/gallery/7.jpg" width="261" height="180" />
+                        <a href="javascript:void(0)" onclick='nextpage()' class="article right">Next</a>
+                    </div>
+                    <div>
+                        <img src="pics/gallery/8.jpg" width="255" height="170" />
+                        <img src="pics/gallery/9.jpg" width="310" height="174" />
+                        <a href="javascript:void(0)" onclick='prevpage()' class="article left">Back</a>
+                    </div>
+                    <div>
+                        <img src="pics/gallery/10.jpg" width="310" height="174" />
+                        <img src="pics/gallery/11.jpg" width="100" height="180" />
+                        <a href="javascript:void(0)" onclick='nextpage()' class="article right">Next</a>
+                    </div>
+                    <div>
+                    	<img src="pics/gallery/4.jpg" width="260" height="375" />
+                    	<a href="javascript:void(0)" onclick='prevpage()' class="article left">Back</a>
+                    </div>
+                    <div>
+                    	<img src="pics/gallery/5.jpg" width="260" height="375" />
+                    	<a href="javascript:void(0)" onclick='nextpage()' class="article right">Next</a>
+                    </div>
+                    <div>
+                    	<img src="pics/gallery/11.jpg" width="260" height="375" />
+                    	<a href="javascript:void(0)" onclick='prevpage()' class="article left">Back</a>
+                    </div>
                     <div>
                         <img src="images/6.jpg" width="0" height="0" alt="" style="display:none;"/>
                     </div>
@@ -367,7 +388,7 @@
                     page = parseInt($el.data("page"))
                     pp = parseInt(prev_page/2)
                     p = parseInt(page/2)
-                    console.log(pp - p)
+                    console.log(page)
 
                     if(pp < p){ // turn front
                         for (var i=1; i <= Math.abs(pp-p); i++){
@@ -396,6 +417,20 @@
                 if ( working == 1 ) return
                 working = 1
                 $("#next_page_button").click();
+				var lin = $('.active').data("page");
+				console.log(lin);
+				//if(lin != 4 || lin != 6){
+				$("#bookmark").find("[data-page="+lin+"]").removeClass('active');
+				$("#bookmark").find("[data-page="+lin+"]").next().addClass('active');
+				
+				//else if (lin ==4){
+				//$("#bookmark").find("[data-page="+lin+"]").next().addClass('active');
+				//}
+				//else if (lin ==6){
+				//$("#bookmark").find("[data-page='4']").removeClass('active');
+				//$("#bookmark").find("[data-page="+lin+"]").next().addClass('active');
+				//}
+				console.log();
                 prev_page = (1 + parseInt(prev_page/2) ) * 2
                 setTimeout(function(){
                     working = 0
@@ -405,6 +440,11 @@
                 if ( working == 1 ) return
                 working = 1
                 $("#prev_page_button").click();
+				var lip = $('.active').data("page");
+				console.log(lip);
+				$("#bookmark").find("[data-page="+lip+"]").removeClass('active');
+				$("#bookmark").find("[data-page="+lip+"]").prev().addClass('active');
+				
                 prev_page = Math.min(parseInt(prev_page/2)-1, 0) * 2
                 setTimeout(function(){
                     working = 0
