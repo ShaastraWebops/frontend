@@ -74,3 +74,56 @@
 [10-Nov-2014 08:13:27 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
 [10-Nov-2014 08:13:27 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
 [10-Nov-2014 08:13:27 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 15
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 125
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 15:38:13 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 15:38:13 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 11
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 15
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: category in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 108
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 125
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:37 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 17:43:37 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 11
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 15
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: category in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 108
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 125
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 126
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 127
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 128
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  array_search() expects parameter 2 to be array, null given in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 129
+[10-Nov-2014 17:43:45 America/Chicago] PHP Notice:  Undefined variable: event_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 17:43:45 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 131
+[10-Nov-2014 20:37:07 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/eventlist.php on line 11
