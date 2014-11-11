@@ -604,13 +604,22 @@
                 if ( hash ==  "#_=_" ) {
 
                 } else if ( hash == "#edit-profile" ) {
-                    setTimeout(function() {
+                    window.intervalID = setInterval(function() {
+                        if ($('#dashboard-tabs a[href="#profile"]').length == 0)
+                            return
                         $('#dashboard-tabs a[href="#profile"]').tab('show')
                         toggle_form(); // and show form
+                        clearInterval(window.intervalID);
+                        window.intervalID = -1
                     }, 500); // This is a random time - jugaad.
                 } else if ( $(hash).length ) {
-                    setTimeout(function() {
+                    window.intervalID = setInterval(function() {
+                        if ($('#dashboard-tabs a[href="#profile"]').length == 0)
+                            return
                         $('#dashboard-tabs a[href="' + hash + '"]').tab('show')
+                        toggle_form(); // and show form
+                        clearInterval(window.intervalID);
+                        window.intervalID = -1
                     }, 500); // This is a random time - jugaad.
                 }
             })

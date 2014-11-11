@@ -604,7 +604,7 @@
                             }
                             $tab.find("tbody").append($row)
                         })
-                        // for datatables start 
+                        // for datatables start
                         var table = $('#reg_table').DataTable( {
                             "dom": 'T<"clear">lfrtip',
                             // "bJQueryUI": true,
@@ -674,7 +674,7 @@
                             $tab.find("tbody").append($row)
                         })
                     }
-                    // for datatables start 
+                    // for datatables start
                     // var table = $('#reg_table').DataTable( {
                     //     // "dom": 'T<"clear">lfrtip',
                     //     // "bJQueryUI": true,
@@ -710,10 +710,10 @@
                                     "aButtons": [ "csv", "xls", "pdf" ]
                                 }
                             ]
-                        }     
+                        }
                     });
                     // var tt = new $.fn.dataTable.TableTools( table );
-                    // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');    
+                    // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
 
                     // for datatables end
 
@@ -759,6 +759,7 @@
                     "team_size_min" : parseInt($('#event-info [name=team_size_min]').val()),
                     "team_size_max" : parseInt($('#event-info [name=team_size_max]').val()),
                 }
+                console.log(json_info)
                 $.ajax({ // SEND EVENT INFO
                     type: "POST",
                     url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/",
@@ -768,7 +769,10 @@
                     cache: false,
                     data: json_info
                 }).done(function(res) {
-                    window.location.reload()
+                    // if ( res.status == 1 )
+                        window.location.reload()
+                    // else
+                    //     $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_STATUS0. If it persists, tell the webops team")
                     console.log(res)
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) {
