@@ -195,7 +195,7 @@
                                             <div class="col-sm-4 head">Accomodation</div>
                                             <div class="col-sm-8 label text-left" name="want_accomodation"></div>
                                             <select class="col-sm-3 form" name="want_accomodation" required >
-                                                <option>Not Wanted</option>
+                                                <option selected>Not Wanted</option>
                                                 <option>Wanted</option>
                                             </select>
                                             <br />
@@ -637,9 +637,10 @@
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
                             if ( key == "want_accomodation" ) {
-                                console.log(val)
+                                // console.log(val)
                                 $inp.text((val)?"Wanted":"Not Wanted")
-                                console.log(val)
+                                // console.log($inp)
+                                // console.log($inp.text())
                             }
                             else {
                                 $inp.text(val)
@@ -669,15 +670,17 @@
                     }
                     $el.find('.form').each(function(i, el) {
                         var $el = $(el);
-                        if ( $el.attr("name") == "want_accomodation" )
-                            json_info[$el.attr('name')] = ($el.val()=="Wanted")?Number(true):Number(false);
-                        else
+                        if ( $el.attr("name") == "want_accomodation" ) {
+                            console.log($el.val().toLowerCase() == "wanted")
+                            json_info[$el.attr('name')] = ($el.val().toLowerCase()=="wanted")?Number(true):Number(false);
+                        } else {
                             json_info[$el.attr('name')] = $el.val()
+                        }
                     })
                     if ( json_info['password'] == "" ) {
                         delete json_info['password']
                     }
-                    console.log(json_info.want_accomodation)
+                    console.log(json_info)
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
@@ -688,11 +691,11 @@
                         data: json_info
                     }).done(function(res) {
                         data = res['data']
-                        console.log(data.want_accomodation)
-                        window.location.href = window.location.origin + window.location.pathname +
-                            "?first_name=" + data.first_name +
-                            "&last_name=" + data.last_name +
-                            "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
+                        console.log(data)
+                        // window.location.href = window.location.origin + window.location.pathname +
+                        //     "?first_name=" + data.first_name +
+                        //     "&last_name=" + data.last_name +
+                        //     "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })
