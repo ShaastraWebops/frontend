@@ -160,6 +160,32 @@
                 content: "•";
                 margin-right: 0.5em;
             }
+            /* for datatables start */
+            label {
+                color: white;
+            }
+            label > select {
+                color: black;
+            }
+            label > input {
+                color: black;
+            }
+            .DTTT_container {
+                margin-left: 5%;
+            }
+            #reg_table_info {
+                color: white;
+            }
+/*            #reg_table_paginate {
+                color: white;
+            }
+            #reg_table_previous, #reg_table_next {
+                color: white;
+            }
+            .dataTables_paginate, .paging_simple_numbers {
+                color: white;
+            }
+*/            /* for datatables end */
         </style>
     </head>
 
@@ -443,7 +469,7 @@
                     <table id="reg_table" class="table table-bordered display">
                         <thead style="color: white; background-color:transparent;">
                         </thead>
-                        <tbody style="color:black;">
+                        <tbody style="color: black;">
                         </tbody>
                     </table>
                 </div>
@@ -608,6 +634,8 @@
                         var table = $('#reg_table').DataTable( {
                             "dom": 'T<"clear">lfrtip',
                             // "bJQueryUI": true,
+                            "paging": false,
+                            // "info": false,
                             "tableTools": {
                                 // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
                                 "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
@@ -674,6 +702,7 @@
                             $tab.find("tbody").append($row)
                         })
                     }
+<<<<<<< HEAD
                     // for datatables start
                     // var table = $('#reg_table').DataTable( {
                     //     // "dom": 'T<"clear">lfrtip',
@@ -696,8 +725,13 @@
                     //     }
                     // });
 
+=======
+                    // for datatables start 
+>>>>>>> 48087062918ce7da0a0fc60b9d95ee1e1bc27cd8
                     var table = $('#reg_table').DataTable({
                         "dom": 'T<"clear">lfrtip',
+                        "paging":   false,
+                        // "info": false,
                         "tableTools": {
                             // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
                             "sSwfPath": "../../js/dataTables/swf/copy_csv_xls_pdf.swf",
@@ -712,9 +746,12 @@
                             ]
                         }
                     });
+<<<<<<< HEAD
                     // var tt = new $.fn.dataTable.TableTools( table );
                     // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
 
+=======
+>>>>>>> 48087062918ce7da0a0fc60b9d95ee1e1bc27cd8
                     // for datatables end
 
 
