@@ -20,7 +20,7 @@
                     }
                 }//image extension trimming for getting URL END
                 $url = strtr ($begin, array ('^' => '/'));//replacing '^' with '/' in the url
-                echo "<a href='http://".$url."'><img src='../../img/spons/".$dirname."/".$curimg."' class='sponsor' style='max-height:200px;max-width:500px;'></a>\n";//main img content
+                echo "<a href='http://".$url."'><img src='../../img/spons/".$dirname."/".$curimg."' class='sponsor' style='max-height:200px;max-width:400px;'></a>\n";//main img content
             }
         }
         echo "</div>\n</div>\n";
