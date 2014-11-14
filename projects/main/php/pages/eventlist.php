@@ -1,22 +1,27 @@
-<?php include '../../php/base/logmein.php'; ?>
+<?php
+    if ( isset($_REQUEST['category']) ) {
+        $category = $_REQUEST['category'];
+        $category_path = '../../php/events/' . $category ;
+    }
+    if (!isset($category) || $category=="") { // No category, send back to categories page
+        header('Location: ../../php/pages/categories.php');
+        die();
+    }
+
+    if (!is_dir($category_path)) {
+        header('Location: ../../php/pages/categories.php');
+        die();
+    } else {
+        $event_list = scandir($category_path);
+    }
+
+    include '../../php/base/logmein.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-		if ( isset($_REQUEST['category']) ) {
-			$category = $_REQUEST['category'];
-			$category_path = '../../php/events/' . $category ;
-		}
-        if (!isset($category) || $category=="") { // No category, send back to categories page
-            header('Location: ../../php/pages/categories.php');
-        }
-
-        if (!is_dir($category_path)) {
-		    header('Location: ../../php/pages/categories.php');
-		} else {
-		    $event_list = scandir($category_path);
-		}
-        $default_img = '../../img/logo/200x200_dice_white.png';
+       $default_img = '../../img/logo/200x200_dice_white.png';
 	?>
     <title><?php echo $category; ?> Events | Shaastra 2015</title>
 

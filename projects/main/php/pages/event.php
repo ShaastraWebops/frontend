@@ -582,7 +582,7 @@
 
                 window.this_event = data
                 // Show event info
-                $('#event-info [name=has_tdp]').val((window.this_event.has_tdp)?1:0)
+                $('#event-info [name=has_tdp]').val((window.this_event.has_tdp=="1" || window.this_event.has_tdp==true||window.this_event.has_tdp=="true"||window.this_event.has_tdp=="True"||window.this_event.has_tdp==1)?1:0)
                 $('#event-info [name=team_size_min]').val(window.this_event.team_size_min)
                 $('#event-info [name=team_size_max]').val(window.this_event.team_size_max)
                 $('#event-info [name=registration_starts]').val(window.this_event.registration_starts.yyyy_mm_dd())
@@ -603,7 +603,6 @@
                 }).done(function(res) {
                     var data = res.data
                     console.log(data)
-                    //console.log(this_event.team_size_max)
                     var $tab = $("#event_registrations table")
                     if ( this_event.team_size_max == 1 ) { // Single person event
                         var $row = $("<tr></tr>")
@@ -615,7 +614,7 @@
                             $row.append("<th>TDP</th>")
                         $tab.find("thead").append($row)
 
-                        $.each(data, function(key, val) {
+                            $.each(data, function(key, val) {
                             var $row = $("<tr></tr>")
                             $row.append("<td>" + (key+1) + "</td>")
                             $row.append("<td>" + val.id + "</td>")
@@ -761,7 +760,7 @@
                 var json_info = {
                     "action" : "edit",
                     "event_id" : window.this_event.id,
-                    "has_tdp" : $('#event-info [name=has_tdp]').find(":selected").attr("value") == "1",
+                    "has_tdp" : $('#event-info [name=has_tdp]').find(":selected").attr("value"),
                     "registration_starts" : $('#event-info [name=registration_starts]').val(),
                     "registration_ends" : $('#event-info [name=registration_ends]').val(),
                     "team_size_min" : parseInt($('#event-info [name=team_size_min]').val()),
@@ -778,10 +777,10 @@
                     data: json_info
                 }).done(function(res) {
                     // if ( res.status == 1 )
-                        window.location.reload()
+                        // window.location.reload()
                     // else
                     //     $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_STATUS0. If it persists, tell the webops team")
-                    console.log(res)
+                    console.log(res.data)
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) {
                         $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_500. If it persists, tell the webops team")
