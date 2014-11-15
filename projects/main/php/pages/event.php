@@ -602,7 +602,7 @@
                     }
                 }).done(function(res) {
                     var data = res.data
-                    console.log(data)
+                    // console.log(data)
                     var $tab = $("#event_registrations table")
                     if ( this_event.team_size_max == 1 ) { // Single person event
                         var $row = $("<tr></tr>")
@@ -614,7 +614,7 @@
                             $row.append("<th>TDP</th>")
                         $tab.find("thead").append($row)
 
-                            $.each(data, function(key, val) {
+                        $.each(data, function(key, val) {
                             var $row = $("<tr></tr>")
                             $row.append("<td>" + (key+1) + "</td>")
                             $row.append("<td>" + val.id + "</td>")
@@ -629,28 +629,29 @@
                             }
                             $tab.find("tbody").append($row)
                         })
-                        // for datatables start
-                        var table = $('#reg_table').DataTable( {
-                            "dom": 'T<"clear">lfrtip',
-                            // "bJQueryUI": true,
-                            "paging": false,
-                            // "info": false,
-                            "tableTools": {
-                                // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                                "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
-                                "aButtons": [
-                                     // "copy",
-                                    // "print",
-                                    {
-                                        "sExtends": "collection",
-                                        "sButtonText": "Save",
-                                        "aButtons": [ "csv", "xls", "pdf" ]
-                                    }
-                                ]
-                            }
-                         });
-                        // for datatables end
-
+                        if ( data.length != 0 ) {
+                            // for datatables start
+                            var table = $('#reg_table').DataTable( {
+                                "dom": 'T<"clear">lfrtip',
+                                // "bJQueryUI": true,
+                                "paging": false,
+                                // "info": false,
+                                "tableTools": {
+                                    // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                                    "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                                    "aButtons": [
+                                         // "copy",
+                                        // "print",
+                                        {
+                                            "sExtends": "collection",
+                                            "sButtonText": "Save",
+                                            "aButtons": [ "csv", "xls", "pdf" ]
+                                        }
+                                    ]
+                                }
+                             });
+                            // for datatables end
+                        }
 
                     } else { // Team event
                         var $row = $("<tr></tr>")
@@ -777,7 +778,7 @@
                     data: json_info
                 }).done(function(res) {
                     // if ( res.status == 1 )
-                        // window.location.reload()
+                        window.location.reload()
                     // else
                     //     $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_STATUS0. If it persists, tell the webops team")
                     console.log(res.data)
