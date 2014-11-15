@@ -1,1 +1,1 @@
-<p><span style="font-size:18px">Registration is now open.</span></p>
+<p><span style="font-size:18px">Registration are&nbsp;opened.</span></p>

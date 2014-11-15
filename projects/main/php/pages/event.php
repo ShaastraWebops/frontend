@@ -777,10 +777,7 @@
                     cache: false,
                     data: json_info
                 }).done(function(res) {
-                    // if ( res.status == 1 )
-                        window.location.reload()
-                    // else
-                    //     $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_STATUS0. If it persists, tell the webops team")
+                    window.location.reload()
                     console.log(res.data)
                 }).fail(function(xhr) {
                     if ( xhr.status == 500 ) {
