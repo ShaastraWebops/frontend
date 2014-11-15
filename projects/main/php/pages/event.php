@@ -777,7 +777,7 @@
                     data: json_info
                 }).done(function(res) {
                     // if ( res.status == 1 )
-                        // window.location.reload()
+                        //window.location.reload()
                     // else
                     //     $('#event-info form .help-text').html("There was an error. Error Code : EVENTINFO_SUBMIT_STATUS0. If it persists, tell the webops team")
                     console.log(res.data)
