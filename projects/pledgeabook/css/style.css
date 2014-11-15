@@ -260,11 +260,16 @@ a#prev_page_button:hover{
 #sponsors{
 	padding-top:15px;
 	padding-bottom:15px;
-	height:250px;
+	height:750px;
 	width:100%;
 	background-color:#FFF;
 	margin-top:45px;
 	text-align:center;
+}
+#sponsors img{
+	padding-left:15px;
+	padding-top:15px;
+	padding-right:15px;
 }
 #next_page_button {
     display: none !important;

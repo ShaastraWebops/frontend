@@ -54,7 +54,12 @@
                     <li data-page="4" id="tab">How to Pledge</li>
                     <li data-page="6" id="tab" style="display:none !important;">How to Pledge</li>
                     <li data-page="8" id="tab">Contact Us</li>
-                    <li data-page="9" id="tab">Gallery</li>
+                    <li data-page="10" id="tab">Gallery</li>
+                    <li data-page="12" id="tab" style="display:none !important;">Gallery</li>
+                    <li data-page="14" id="tab" style="display:none !important;">Gallery</li>
+                    <li data-page="16" id="tab" style="display:none !important;">Gallery</li>
+                    
+                    
                 </ul>
             </div>
             <div id="hit-count">
@@ -295,8 +300,16 @@ We regularly organize collection drives both inside the campus of IIT Madras as 
         </div>
         <div id="sponsors">
         <h1 style="font-family:lobster;">Partners</h1>
-        <img src="pics/avanti.jpg" width="280" height="160" />
-        <img src="pics/IDF logo - cyan.png" width="130" height="160" />
+        <a href="http://avantifellows.org/"><img src="pics/avanti.jpg" width="280" height="160" /></a>
+        <a href="http://www.idf.org.in/"><img src="pics/IDF logo - cyan.png" width="130" height="160" /></a>
+        <img src="pics/aarvam.PNG" width="150" height="100" /></a>
+        <a href="http://www.agnishine.com/"><img src="pics/Agni Shine.PNG" width="600" height="100" /></a>
+        <a href="http://www.aikya.org/"><img src="pics/Aikya.PNG" width="177" height="185" /></a>
+        <a href="http://www.giftafuture.org/"><img src="pics/Altius Foundation.PNG" width="200" height="100" /></a>
+        <a href="http://www.contestforacause.org/"><img src="pics/C4C Logo.jpg" width="200" height="200" /></a>
+        <a href="http://www.joinprayag.com/"><img src="pics/logo.png" width="300" height="150" /></a>
+        <a href="http://www.teameverestindia.org/"><img src="pics/Team Everest Logo.png" width="200" height="300" /></a>
+        <img src="pics/logo.jpg" width="220" height="200" /></a>
         </div>
         <!-- The JavaScript -->
 
