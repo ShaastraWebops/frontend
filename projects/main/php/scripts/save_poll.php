@@ -7,9 +7,11 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 $list = array($vote, $time, $date, $ip);
 
-$a = strcmp($vote, "Yes");
-$b = strcmp($vote, "No");
-$final = $a*$b;
+$a = strcmp($vote, "donated");
+$b = strcmp($vote, "saw_the_site");
+$c = strcmp($vote, "heard_about_it");
+$d = strcmp($vote, "no");
+$final = $a*$b*$c*$d;
 
 $filename = '../../php/misc/poll_latest.csv';
 $fp = fopen($filename, "a+");
