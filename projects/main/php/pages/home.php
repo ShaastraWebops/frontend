@@ -333,14 +333,20 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button style="outline:0;" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book ?</h4>
+        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book - Shaastra's social initiative</h4>
       			</div>
-      			<div id="poll_modal_body" style="text-align:center;" class="modal-body">
-        			<input type="radio" name="data" id="option_one" value="Yes" onclick="poll_save(this.value)">
-        			<label for="option_one">Yes, I heard about it.</label>     
-        			&nbsp;&nbsp;&nbsp;
-       				<input type="radio" name="data" id="option_two=" value="No" onclick="poll_save(this.value)">
-       				<label for="option_two">No, what is it ?</label>
+      			<div id="poll_modal_body" style="margin-left:17%;" class="modal-body">
+        			<input type="radio" name="data" id="option_one" value="donated" onclick="poll_save(this.value)">
+        			<label for="option_one">Yes, I have donated books !</label>     
+					<br />	
+       				<input type="radio" name="data" id="option_two" value="saw_the_site" onclick="poll_save(this.value)">
+       				<label for="option_two">Yes, I have seen the website</label>
+					<br />	
+       				<input type="radio" name="data" id="option_three" value="heard_about_it" onclick="poll_save(this.value)">
+       				<label for="option_three">Yes, I have heard of it</label>
+					<br />	
+       				<input type="radio" name="data" id="option_four" value="no" onclick="poll_save(this.value)">
+       				<label for="option_four">No, I have not</label>
       			</div>
       			<div class="modal-footer">
         			<button style="outline:0;" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -353,7 +359,7 @@
     	function poll_save(vote) {
     		var my_vote;
     		var var_pledge = document.createElement("a");
-    		var_pledge.setAttribute('href', '../../php/pages/social.php');
+    		var_pledge.setAttribute('href', 'http://www.shaastra.org/2015/production/projects/pledgeabook/');
     		var_pledge.innerHTML = 'here';
     		if(window.XMLHttpRequest) {		//for latest browsers
     			my_vote = new XMLHttpRequest();
@@ -372,6 +378,10 @@
     				});
     				$('#poll_before').css({
     					'display': 'none'
+    				});
+    				$('#poll_modal_body').css({
+    					'margin-left': '0%',
+    					'text-align': 'center'
     				});
     			}
     		}
