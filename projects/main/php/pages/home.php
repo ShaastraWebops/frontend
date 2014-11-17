@@ -239,7 +239,7 @@
                 font-weight: 600;
                 /*padding-right: 1em;*/
                 text-align: center;
-                border: 1px solid white;
+                /*border: 1px solid white;*/
             }
             #poll_display table {
             	border-collapse: separate;
@@ -282,13 +282,14 @@
     </div>
 <!-- for poll start -->
     <div id="poll_display" class="col-md-4 pull-right hidden-xs hidden-sm">
-   		<div id="poll_before">
-   			<table style="width:100%;">
+   		<div id="poll_before" style="padding-bottom:20px;">
+<!--    			
+			<table style="width:100%;">
    				<thead>
    					<h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
    				</thead>
    				<tr>
-        			<td style="">
+        			<td>
         				<input type="radio" name="data" id="option_one" value="b_events" onclick="poll_save(this.value)">
         				<label for="option_one">B-Events</label>
         			</td>
@@ -314,11 +315,52 @@
         			</td>
         		</tr>
         	</table>
-        </div>
+ -->        
+ 			<h4>Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+			<button style="outline:0;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				Click here to answer
+			</button>
+ 		</div>
+ 		<div id="poll_after" style="display:none;"><h4>Thank you for your time. Find out more <a href="http://www.shaastra.org/2015/production/projects/pledgeabook/">here</a></h4></div>
     </div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+	<div style="color:black;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button style="outline:0;" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+      			</div>
+      			<div id="poll_modal_body" style="margin-left:17%;" class="modal-body">
+        			<input type="radio" name="data" id="option_one" value="donated" onclick="poll_save(this.value)">
+        			<label for="option_one">Yes, I have donated books !</label>     
+					<br />	
+       				<input type="radio" name="data" id="option_two" value="saw_the_site" onclick="poll_save(this.value)">
+       				<label for="option_two">Yes, I have seen the website</label>
+					<br />	
+       				<input type="radio" name="data" id="option_three" value="heard_about_it" onclick="poll_save(this.value)">
+       				<label for="option_three">Yes, I have heard of it</label>
+					<br />	
+       				<input type="radio" name="data" id="option_four" value="no" onclick="poll_save(this.value)">
+       				<label for="option_four">No, I have not</label>
+      			</div>
+      			<div class="modal-footer">
+        			<button style="outline:0;" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+   			</div>
+  		</div>
+	</div>
+<!-- modal -->
     <script>
     	function poll_save(vote) {
     		var my_vote;
+    		var var_pledge = document.createElement("a");
+    		var_pledge.setAttribute('href', 'http://www.shaastra.org/2015/production/projects/pledgeabook/');
+    		var_pledge.innerHTML = 'here';
     		if(window.XMLHttpRequest) {		//for latest browsers
     			my_vote = new XMLHttpRequest();
     		}
@@ -327,7 +369,20 @@
     		}
     		my_vote.onreadystatechange = function() {
     			if(my_vote.readyState == 4 && my_vote.status == 200) {
-    				document.getElementById('poll_display').innerHTML = my_vote.responseText;
+    				// document.getElementById('poll_display').innerHTML = my_vote.responseText;
+    				// document.getElementById('poll_display').appendChild(var_pledge);
+    				document.getElementById('poll_modal_body').innerHTML = my_vote.responseText + "Find out more ";
+    				document.getElementById('poll_modal_body').appendChild(var_pledge);
+    				$('#poll_after').css({
+    					'display': 'initial'
+    				});
+    				$('#poll_before').css({
+    					'display': 'none'
+    				});
+    				$('#poll_modal_body').css({
+    					'margin-left': '0%',
+    					'text-align': 'center'
+    				});
     			}
     		}
     		my_vote.open("GET", "../../php/scripts/save_poll.php?vote="+vote, true);

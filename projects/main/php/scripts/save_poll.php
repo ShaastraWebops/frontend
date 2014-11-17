@@ -1,22 +1,19 @@
 <?php
 $vote = $_REQUEST['vote'];
 date_default_timezone_set("Asia/Kolkata");
-// $present_time_date = " | " . date("h:i:sa") . " | " . date("Y-m-d") . " | " . date("l");
-// $vote_time = $vote . "," . $present_time_date;
 $time = date("h:i:sa");
 $date = date("Y-m-d");
 $ip = $_SERVER['REMOTE_ADDR'];
 
 $list = array($vote, $time, $date, $ip);
 
-$a = strcmp($vote, "b_events");
-$b = strcmp($vote, "coding");
-$c = strcmp($vote, "design_n_build");
-$d = strcmp($vote, "quizzing");
-$e = strcmp($vote, "other");
-$final = $a*$b*$c*$d*$e;
+$a = strcmp($vote, "donated");
+$b = strcmp($vote, "saw_the_site");
+$c = strcmp($vote, "heard_about_it");
+$d = strcmp($vote, "no");
+$final = $a*$b*$c*$d;
 
-$filename = '../../php/misc/poll.csv';
+$filename = '../../php/misc/poll_latest.csv';
 $fp = fopen($filename, "a+");
 if( !$fp ) {
 	echo "<h4> Thank you for your feedback </h4>";			
@@ -37,6 +34,6 @@ if( !$fp ) {
 		echo "<h4> Sadly not saving ;) ! </h4>";
 		exit;
 	}	
+	fclose($fp);
 }
-fclose($fp);
 ?>
