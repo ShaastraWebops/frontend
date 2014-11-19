@@ -3,7 +3,8 @@
 <html>
 	<head>
 		<title>Contact Us | Shaastra 2015</title>
-
+        <meta name="keywords" content="contact us shaastra 2015,contact shaastra,contact us shaastra,contact">
+        <meta name"description" content="Feel free to contact the Shaastra 2015 team,IITM for any queries">
 		<?php include '../../php/base/head.php' ?>
 		<style>
 		.btn.btn-bluebox {
