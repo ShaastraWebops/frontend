@@ -637,10 +637,7 @@
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
                             if ( key == "want_accomodation" ) {
-                                // console.log(val)
                                 $inp.text((val)?"Wanted":"Not Wanted")
-                                // console.log($inp)
-                                // console.log($inp.text())
                             }
                             else {
                                 $inp.text(val)

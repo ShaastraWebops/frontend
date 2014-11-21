@@ -602,7 +602,7 @@
                     }
                 }).done(function(res) {
                     var data = res.data
-                    // console.log(data)
+                    console.log(data)
                     var $tab = $("#event_registrations table")
                     if ( this_event.team_size_max == 1 ) { // Single person event
                         var $row = $("<tr></tr>")
@@ -610,6 +610,8 @@
                         $row.append("<th>ID</th>")
                         $row.append("<th>Name</th>")
                         $row.append("<th>Email</th>")
+                        $row.append("<th>Ph No</th>")
+                        $row.append("<th>Want Accomodation</th>")
                         if ( this_event.has_tdp )
                             $row.append("<th>TDP</th>")
                         $tab.find("thead").append($row)
@@ -620,6 +622,8 @@
                             $row.append("<td>" + val.id + "</td>")
                             $row.append("<td>" + val.first_name + " " + val.last_name + "</td>")
                             $row.append("<td>" + val.email + "</td>")
+                            $row.append("<td>" + val.mobile_number + "</td>")
+                            $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
                             if ( this_event.has_tdp ) {
                                 console.log(val)
                                 if ( val.tdp_submitted && val.tdp_submitted != "")
@@ -629,39 +633,17 @@
                             }
                             $tab.find("tbody").append($row)
                         })
-                        if ( data.length != 0 ) {
-                            // for datatables start
-                            var table = $('#reg_table').DataTable( {
-                                "dom": 'T<"clear">lfrtip',
-                                // "bJQueryUI": true,
-                                "paging": false,
-                                // "info": false,
-                                "tableTools": {
-                                    // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                                    "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
-                                    "aButtons": [
-                                         // "copy",
-                                        // "print",
-                                        {
-                                            "sExtends": "collection",
-                                            "sButtonText": "Save",
-                                            "aButtons": [ "csv", "xls", "pdf" ]
-                                        }
-                                    ]
-                                }
-                             });
-                            // for datatables end
-                        }
 
                     } else { // Team event
-                        var $row = $("<tr></tr>")
-                        $row.append("<th></th>")
-                        $row.append("<th></th>")
+                        var $row = $("<tr>-</tr>")
+                        $row.append("<th>-</th>")
+                        $row.append("<th>-</th>")
+                        $row.append("<th>-</th>")
                         for ( var i = 0; i < this_event.team_size_max; i++ ) {
-                            $row.append("<th colspan='3'>Participant " + (i+1) + "</th>")
+                            $row.append("<th colspan='5'>Participant " + (i+1) + "</th>")
                         }
                         if ( this_event.has_tdp )
-                            $row.append("<th></th>")
+                            $row.append("<th>-</th>")
                         $tab.find("thead").append($row)
 
                         $row = $("<tr></tr>")
@@ -672,6 +654,8 @@
                             $row.append("<th>ID</th>")
                             $row.append("<th>Name</th>")
                             $row.append("<th>Email</th>")
+                            $row.append("<th>Ph No</th>")
+                            $row.append("<th>Want Accomodation</th>")
                         }
                         if ( this_event.has_tdp )
                             $row.append("<th>TDP</th>")
@@ -687,7 +671,11 @@
                                     $row.append("<td>" + val.members[i].id + "</td>")
                                     $row.append("<td>" + val.members[i].first_name + "  " + val.members[i].last_name + "</td>")
                                     $row.append("<td>" + val.members[i].email + "</td>")
+                                    $row.append("<td>" + val.mobile_number + "</td>")
+                                    $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
                                 } else {
+                                    $row.append("<td>-</td>")
+                                    $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
@@ -702,30 +690,29 @@
                             $tab.find("tbody").append($row)
                         })
                     }
-                    // for datatables start
-                    var table = $('#reg_table').DataTable({
-                        "dom": 'T<"clear">lfrtip',
-                        "paging":   false,
-                        // "info": false,
-                        "tableTools": {
-                            // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
-                            "sSwfPath": "../../js/dataTables/swf/copy_csv_xls_pdf.swf",
-                            "aButtons": [
-                            // "copy",
-                            // "print",
-                                {
-                                    "sExtends": "collection",
-                                    "sButtonText": "Save",
-                                    "aButtons": [ "csv", "xls", "pdf" ]
-                                }
-                            ]
-                        }
-                    });
-                    // var tt = new $.fn.dataTable.TableTools( table );
-                    // $( tt.fnContainer() ).insertBefore('div.dataTables_wrapper');
-                    // for datatables end
-
-
+                    if ( data.length != 0 ) {
+                        // for datatables start
+                        var table = $('#reg_table').DataTable( {
+                            "dom": 'T<"clear">lfrtip',
+                            // "bJQueryUI": true,
+                            "paging": false,
+                            // "info": false,
+                            "tableTools": {
+                                // "sSwfPath": "../../js/dataTables/swf/copy_csv_xls.swf",
+                                "sSwfPath": "http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf",
+                                "aButtons": [
+                                     // "copy",
+                                    // "print",
+                                    {
+                                        "sExtends": "collection",
+                                        "sButtonText": "Save",
+                                        "aButtons": [ "csv", "xls", "pdf" ]
+                                    }
+                                ]
+                            }
+                         });
+                        // for datatables end
+                    }
                 }).fail(function(xhr) {
                     var $el = $("#event_registrations table").parent()
                     $("#event_registrations table").remove()
