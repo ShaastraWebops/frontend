@@ -452,6 +452,7 @@
         })
         $('#register-form').submit(function(e) {
             var $el = $(this)
+            $(".register-btn").text("Sending your info. Please wait ...").prop("disabled", "disabled")
             // django login
             $.post('<?php echo $ERP_SITE_URL; ?>participant_registration/', {
                 'first_name' : $el.find('.first_name').val(),
