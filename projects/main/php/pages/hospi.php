@@ -245,7 +245,76 @@
                             </div>
                             <div id="tab7" class="panel-collapse collapse">
                                 <div class="panel-body content black ">
-		                            For Hospitality related queries, please reach out to us at <a href='mailto:outreach@shaastra.org'>outreach@shaastra.org</a> OR <a href='mailto:namit@shaastra.org'>namit@shaastra.org</a>
+		                            <center>For Hospitality related queries, please reach out to us at <a href='mailto:outreach@shaastra.org'>outreach@shaastra.org</a> OR <a href='mailto:namit@shaastra.org'>namit@shaastra.org</a></center>
+                                    <div class="col-md-12">
+                                        <div class="col-md-4 col-md-offset-2 text-center">
+                                            <h4>TEJASWIN P</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 8056112645
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <h4>AKSHAYKUMAR GUNDA</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 8939369717
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 col-md-offset-2 text-center">
+                                            <h4>CHITLA SANDEEP P</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9884684955
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <h4>ANAND BABU A</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 7598459521
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 col-md-offset-2 text-center">
+                                            <h4>MANDA DEVI AMULYA</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9043812203
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <h4>VIPUL MANN</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9003114344
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 col-md-offset-2 text-center">
+                                            <h4>SAURABH AWATADE</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9043808645
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <h4>SACHIN SANODIYA</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9043807193
+                                            </p>
+                                        </div>
+                                        <div class="col-md-8 col-md-offset-2 text-center">
+                                            <h4>NAMIT CHAUDHARY</h4>
+                                            <p>
+                                                <span class="glyphicon glyphicon-phone"></span>
+                                                Contact : 9962878704
+                                            </p>
+                                            <p>
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                                E-Mail : namit@shaastra.org
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
