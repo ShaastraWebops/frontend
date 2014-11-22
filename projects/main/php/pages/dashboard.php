@@ -637,10 +637,7 @@
                         var $inp = $('#profile .label[name=' + key + ']')
                         if ( $inp.length && val !== null && val !== undefined) {
                             if ( key == "want_accomodation" ) {
-                                // console.log(val)
                                 $inp.text((val)?"Wanted":"Not Wanted")
-                                // console.log($inp)
-                                // console.log($inp.text())
                             }
                             else {
                                 $inp.text(val)
@@ -850,6 +847,7 @@
                         var confirmation = confirm('Are you sure you want to delete the old submission and submit the current document ?')
                         if ( ! confirmation ) return;
                     }
+                    $el.find(".save").text("Saving .... Please wait.")
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/events/", //<?php echo $_SESSION['user_id']; ?>/",
