@@ -5,7 +5,7 @@
 		<?php
             $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
-                "ravi venkatesan", "stephen wolfram", "sunil kumar", "vaneetha narayanan",
+                "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
                 "vijay govindrajan", "vinita bali"
             );
 
@@ -52,25 +52,23 @@
 				width: 100%;
 				display: inline-block;
 				text-align: center;
-				padding: 10px 15px;
+				padding: 10px 0px;
 			}
 			.speaker-list .speaker-image {
 				height: 0px;
 				width: 0px;
 				opacity: 0;
 				display: inline-block;
-				-webkit-transition: opacity .5s ease-in-out;
-				-o-transition: opacity .5s ease-in-out;
-				transition: opacity .5s ease-in-out;
+				-webkit-transition: all .5s ease-in-out;
+				-o-transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+				transition: all .5s ease-in-out;
 			}
 			@media (min-width: 768px) {
 				.speaker-list:hover .speaker-image {
 					height: 100px;
 					width: 100px;
 					opacity: 1;
-				}
-				.speaker-list:hover .speaker-link {
-					padding: 0;
 				}
 				.speaker-list:hover .speaker-link .name {
 					position: absolute;
@@ -118,6 +116,20 @@
 			    color : #ffffff;
 			    padding: 10px;
 			}
+            .navbar.speaker-list {
+                -webkit-transition: height 0.5s;
+                -moz-transition: height 0.5s;
+                -ms-transition: height 0.5s;
+                -o-transition: height 0.5s;
+                transition: height 0.5s;
+            }
+            .speaker-link {
+                color : #ccc;
+            }
+            .speaker-link:hover {
+                color : #fff;
+
+            }
 		</style>
 	</head>
 <body>
@@ -220,25 +232,22 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse" id="speakers-list">
-                <ul class="nav navbar-nav text-center" style="margin: 0 auto; display: table; table-layout: fixed; float:none;">
-                    <?php
-			$speaker_count = count($speakers);
-			for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-
-			<li>
-			    <a class="speaker-link" href="?name=<?php echo urlencode($speakers[$speaker_i]); ?>">
-			        <span class="name"><?php echo $speakers[$speaker_i]; ?></span>
-				<span class="speaker-image"
-				      style="background: url(../../img/logo/200x200_dice_white.png) no-repeat center center; background-size: cover;">
-					<!-- style="background: url(../../img/lectures/<?php echo $speakers[$speaker_i]; ?>.jpg) no-repeat center center; background-size: cover;">-->
-
-
-				</span>
-			    </a>
-			</li>
-
-		    <?php } ?>
-                </ul>
+                <div class="row text-center">
+                    <?php for($speaker_i = 0; $speaker_i < 14; $speaker_i++) { ?>
+                        <div class="speaker text-center" style="display: inline-block; width : 14%; border: 1px solid #fff;">
+                            <div class="dummy">
+                                <a href="" class="speaker-link">
+                                    <div class=""><!--
+                                        --><span style="float:left; width : 100%;"><?php echo ucwords($speakers[$speaker_i]); ?></span><!--
+                                        --><div class="speaker-image" style="width : 100%;
+                                            background: url(../../img/logo/200x200_dice_white.png) no-repeat center center; background-size: cover;">
+                                        </div><!--
+                                    --></div>
+                                </a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
     </div>

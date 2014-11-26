@@ -26,7 +26,7 @@
 		}
 		.speaker-list .speaker-group .speaker {
 			padding: 0;
-			width: 25%;
+			width: 20%;
 			height: 100%;
 			display: inline-block;
 			font-size: 1em;
@@ -139,13 +139,14 @@
 <div class="container-fluid speaker-list">
     <?php
 	$speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
-        "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
-        "ravi venkatesan", "stephen wolfram", "sunil kumar", "vaneetha narayanan",
+        "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
+        "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
         "vijay govindrajan", "vinita bali"
     );
 	$speaker_count = count($speakers);
 	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-	    <?php if ($speaker_i == 0 || $speaker_i == 4 || $speaker_i == 8) { ?>
+
+	    <?php if ($speaker_i == 0 || $speaker_i == 5 || $speaker_i == 9) { ?>
 	    <div class="row speaker-group">
 	    <?php } ?>
 	        <div class="speaker">
@@ -171,7 +172,7 @@
     		        </a>
 		    	</div>
 	        </div>
-            <?php if ($speaker_i == 3 || $speaker_i == 7 || $speaker_i == 9) { ?>
+            <?php if ($speaker_i == 4 || $speaker_i == 8 || $speaker_i == 14) { ?>
 	    </div>
 	    <?php } ?>
     <?php } ?>
@@ -188,50 +189,58 @@
 			$(".speaker-list").show();
 
 			// First page : nothing is there
-			$speakers.hide()
-			$speaker_groups.hide()
+			$speakers.hide().css({"height" : "100%", "width" : "0"})
+			$speaker_groups.hide().css({"height" : "0", "width" : "0"})
 			setTimeout(function() {
 				// Page 2 : 1 speaker is there
-				console.log('Page 2 : 1');
-				$speakers.eq(4).show()
-					.css({'height': '100%', 'width': '0'})
-					.animate({'width': '100%'}, delay);
-				$speaker_groups.eq(1).show()
-					.css({'height' : '100%'})
-
+                $speaker_groups.eq(0).add($speaker_groups.eq(2)).show()
+                    .css({'height': '50%', 'width': '100%'})
+                $speakers.eq(0).add($speakers.eq(9)).css({"float" : "left"})
+                $speakers.eq(4).add($speakers.eq(13)).css({"float" : "right"})
+				$speakers.eq(0).add($speakers.eq(4)).add($speakers.eq(9)).add($speakers.eq(13)).show()
+					// .css({'height': '100%', 'width': '0'})
+					.animate({'width': '48%'}, delay);
 				setTimeout(function() {
-					console.log('Page 3 : 3');
 					// Page 3 : 1+1+1 speakers are there
-					$speakers.eq(0).add($speakers.eq(8)).show()
-						.css({'height':'100%', 'width':'100%'})
-					$speaker_groups.eq(0).add($speaker_groups.eq(2)).show()
-						.css({'height' : '0%'}, delay)
-					$speaker_groups.show()
-						.animate({'height' : '33%'}, delay)
+                    $speaker_groups.show()
+                        .animate({'height': '33%'}, delay)
+                        .css({'width': '100%'})
+                    $speakers.eq(1).add($speakers.eq(10)).add($speakers.eq(5)).css({"float" : "left"})
+                    $speakers.eq(3).add($speakers.eq(12)).add($speakers.eq(8)).css({"float" : "right"})
+                    // $speakers.eq(0).add($speakers.eq(1)).add($speakers.eq(3)).add($speakers.eq(4))
+                    //     .add($speakers.eq(9)).add($speakers.eq(10)).add($speakers.eq(12)).add($speakers.eq(13))
+                    //     .add($speakers.eq(5)).add($speakers.eq(8)).show()
+                    //     .css({"height" : "100%"})
+
+                    $speakers.eq(0).add($speakers.eq(1)).add($speakers.eq(3)).add($speakers.eq(4))
+                        .add($speakers.eq(9)).add($speakers.eq(10)).add($speakers.eq(12)).add($speakers.eq(13)).show()
+                        .animate({'width': '24.5%'}, delay);
+                    $speakers.eq(5).add($speakers.eq(8)).show()
+                        .animate({'width': '49%'}, delay);
 
 					setTimeout(function() {
 						// Page 4 : 2+2+2
-						$speakers.eq(0).add($speakers.eq(4)).add($speakers.eq(8))
-							.animate({'width': '50%'}, delay);
-						setTimeout(function() {
-							$speakers.eq(3).add($speakers.eq(7)).add($speakers.eq(9)).show()
-								.css({'height':'100%', 'width':'0%'})
-								.animate({'width': '50%'}, delay)
-						}, 10);
+                        $speakers.eq(2).add($speakers.eq(11)).add($speakers.eq(6)).css({"float" : "left"})
+                        $speakers.eq(7).css({"float" : "right"})
+                        $speakers.eq(0).add($speakers.eq(1)).add($speakers.eq(2)).add($speakers.eq(3)).add($speakers.eq(4))
+                            .add($speakers.eq(9)).add($speakers.eq(10)).add($speakers.eq(11)).add($speakers.eq(12)).add($speakers.eq(13)).show()
+                            .animate({'width': '20%'}, delay);
+                        $speakers.eq(5).add($speakers.eq(6)).add($speakers.eq(7)).add($speakers.eq(8)).show()
+                            .animate({'width': '25%'}, delay);
 
-						setTimeout(function() {
-							// Page 5 : 4+4+2
-							$speakers.eq(0).add($speakers.eq(3)).add($speakers.eq(4)).add($speakers.eq(7))
-								.animate({'width': '25%'}, delay)
-							setTimeout(function() {
-								$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
-									.css({'height':'100%', 'width':'0%'})
-									.animate({'width': '25%'}, delay)
-								setTimeout(function() {
+				// 		setTimeout(function() {
+				// 			// Page 5 : 4+4+2
+				// 			$speakers.eq(0).add($speakers.eq(3)).add($speakers.eq(4)).add($speakers.eq(7))
+				// 				.animate({'width': '25%'}, delay)
+				// 			setTimeout(function() {
+				// 				$speakers.eq(1).add($speakers.eq(2)).add($speakers.eq(5)).add($speakers.eq(6)).show()
+				// 					.css({'height':'100%', 'width':'0%'})
+				// 					.animate({'width': '25%'}, delay)
+				// 				setTimeout(function() {
 
-								}, delay)
-							}, 10);
-						}, delay)
+				// 				}, delay)
+				// 			}, 10);
+				// 		}, delay)
 					}, delay)
 				}, delay);
 			}, 1);
@@ -239,21 +248,11 @@
 		}
 
 		$(document).ready(function() {
-			// jsCache.load(
-   //      		<?php if ($DEBUG) { ?>
-   //          		{url: '../../js/TweenMax.min.js'},
-   //          		{url: '../../js/jquery.gsap.min.js'}
-   //      		<?php } else { ?>
-   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'},
-   //          		{url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/jquery.gsap.min.js'}
-   //      		<?php } ?>
-   //      	).then(show_speakers)
-        	//show_speakers();
         	$(window).resize(function() {
 	    		$(".speaker-list").height( $(window).height() - 70 );
 	    	});
 	    	$(window).resize();
-
+            show_speakers();
 		})
 	</script>
     </body>
