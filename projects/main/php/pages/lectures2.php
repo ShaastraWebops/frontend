@@ -85,6 +85,46 @@
 			color: #fff;
 			font-size: 1em;
 		}
+
+        #event-list .event-group .event-item a div {
+            position: relative;
+            -webkit-transition: margin 0.2s ease-out,
+                -webkit-transform 0.3s ease-out;
+            -moz-transition: margin 0.3s ease-out,
+                -moz-transform 0.3s ease-out;
+            -ms-transition: margin 0.3s ease-out,
+                -ms-transform 0.3s ease-out;
+            -o-transition: margin 0.3s ease-out,
+                -o-transform 0.3s ease-out;
+            transition: margin 0.3s ease-out,
+                transform 0.3s ease-out;
+            height: 100%;
+            width: 100%;
+        }
+        .speaker-list .speaker-group .speaker a div > span {
+            margin: 0px;
+            padding: 0px;
+        }
+        .speaker-list .speaker-group .speaker a div > span > span {
+            margin: auto;
+            text-align: center;
+        }
+
+        .speaker-list .speaker-group .speaker a div > span > span > span {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            display: inline-block;
+            padding: 0;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .speaker-list .speaker-group .speaker a:hover div > span > span > span {
+            padding: 40% 0px 40% 0px;
+            opacity: 0.01;
+        }
 	</style>
 </head>
 <body>
@@ -98,12 +138,13 @@
 </div>
 <div class="container-fluid speaker-list">
     <?php
-	$speakers = array(	"arogyaswami paulraj", "pawan sinha", "rajeeva karandikar", "vivek wadhwa", "vijay govindraj",
-						"rakesh agarwal", "ajit balakrishnan", "sunil kumar", "romila thapar", "ila bhatt",
-						"archana sharma", "archana sharma", "robert langer", "anil kakodkar");
+	$speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
+        "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
+        "ravi venkatesan", "stephen wolfram", "sunil kumar", "vaneetha narayanan",
+        "vijay govindrajan", "vinita bali"
+    );
 	$speaker_count = count($speakers);
 	for($speaker_i = 0; $speaker_i < $speaker_count; $speaker_i++) { ?>
-
 	    <?php if ($speaker_i == 0 || $speaker_i == 4 || $speaker_i == 8) { ?>
 	    <div class="row speaker-group">
 	    <?php } ?>
@@ -120,14 +161,14 @@
         			?>
 	                <a href="../../php/pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>"
 	                	style="background:url('<?php echo $speaker_img; ?>') no-repeat center center">
-		            <div>
-						<span class='vertical-table'>
-						    <span class='vertical-table-cell text-center'>
-							<span class="text"><?php echo $speakers[$speaker_i]; ?></span>
-						    </span>
-						</span>
-		            </div>
-		        </a>
+    		            <div>
+    						<span class='vertical-table'>
+    						    <span class='vertical-table-cell text-center transparent-text'>
+                                    <span class="text"><?php echo $speakers[$speaker_i]; ?></span>
+    						    </span>
+    						</span>
+    		            </div>
+    		        </a>
 		    	</div>
 	        </div>
             <?php if ($speaker_i == 3 || $speaker_i == 7 || $speaker_i == 9) { ?>

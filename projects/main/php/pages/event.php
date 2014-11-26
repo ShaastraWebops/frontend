@@ -611,6 +611,7 @@
                         $row.append("<th>Name</th>")
                         $row.append("<th>Email</th>")
                         $row.append("<th>Ph No</th>")
+                        $row.append("<th>College</th>")
                         $row.append("<th>Want Accomodation</th>")
                         if ( this_event.has_tdp )
                             $row.append("<th>TDP</th>")
@@ -623,6 +624,7 @@
                             $row.append("<td>" + val.first_name + " " + val.last_name + "</td>")
                             $row.append("<td>" + val.email + "</td>")
                             $row.append("<td>" + val.mobile_number + "</td>")
+                            $row.append("<td>" + val.college_text + "</td>")
                             $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
                             if ( this_event.has_tdp ) {
                                 console.log(val)
@@ -640,7 +642,7 @@
                         $row.append("<th>-</th>")
                         $row.append("<th>-</th>")
                         for ( var i = 0; i < this_event.team_size_max; i++ ) {
-                            $row.append("<th colspan='5'>Participant " + (i+1) + "</th>")
+                            $row.append("<th colspan='6'>Participant " + (i+1) + "</th>")
                         }
                         if ( this_event.has_tdp )
                             $row.append("<th>-</th>")
@@ -655,6 +657,7 @@
                             $row.append("<th>Name</th>")
                             $row.append("<th>Email</th>")
                             $row.append("<th>Ph No</th>")
+                            $row.append("<th>College</th>")
                             $row.append("<th>Want Accomodation</th>")
                         }
                         if ( this_event.has_tdp )
@@ -672,6 +675,7 @@
                                     $row.append("<td>" + val.members[i].first_name + "  " + val.members[i].last_name + "</td>")
                                     $row.append("<td>" + val.members[i].email + "</td>")
                                     $row.append("<td>" + val.mobile_number + "</td>")
+                                    $row.append("<td>" + val.college_text + "</td>")
                                     $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
                                 } else {
                                     $row.append("<td>-</td>")

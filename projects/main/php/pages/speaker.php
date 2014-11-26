@@ -3,7 +3,12 @@
 <html>
 	<head>
 		<?php
-			$speakers = array("Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me", "Me");
+            $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
+                "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
+                "ravi venkatesan", "stephen wolfram", "sunil kumar", "vaneetha narayanan",
+                "vijay govindrajan", "vinita bali"
+            );
+
 			if ( isset($_REQUEST['name']) ) {
 				$speaker_name = $_REQUEST['name'];
 				$speaker_path = '../../php/lectures/' . $speaker_name . '.html';
