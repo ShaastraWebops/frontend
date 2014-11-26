@@ -1,0 +1,266 @@
+$dur: 0.7s;
+@mixin flip_bottom($order){
+	opacity:0;
+	-webkit-transform: rotateX(90deg);
+	-webkit-transform-origin: 50% 100%;
+	-webkit-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-transform: rotateX(90deg);
+	-moz-transform-origin: 50% 100%;
+	-moz-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-transform: rotateX(90deg);
+	-o-transform-origin: 50% 100%;
+	-o-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	transform: rotateX(90deg);
+	transform-origin: 50% 100%;
+	animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+}
+@mixin flip_right($order){
+	opacity:0;
+	-webkit-transform: rotateY(-90deg);
+	-webkit-transform-origin: 100% 50%;
+	-webkit-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-transform: rotateY(-90deg);
+	-moz-transform-origin: 100% 50%;
+	-moz-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-transform: rotateY(-90deg);
+	-o-transform-origin: 100% 50%;
+	-o-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	transform: rotateY(-90deg);
+	transform-origin: 100% 50%;
+	animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+}
+@mixin flip_left($order){
+	opacity:0;
+	-webkit-transform: rotateY(90deg);
+	-webkit-transform-origin: 0% 50%;
+	-webkit-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-transform: rotateY(90deg);
+	-moz-transform-origin: 0% 50%;
+	-moz-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-transform: rotateY(90deg);
+	-o-transform-origin: 0% 50%;
+	-o-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	transform: rotateY(90deg);
+	transform-origin: 0% 50%;
+	animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+}
+@mixin flip_top($order){
+	opacity:0;
+	-webkit-transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0%;
+	-webkit-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-transform: rotateX(-90deg);
+	-moz-transform-origin: 50% 0%;
+	-moz-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-transform: rotateX(-90deg);
+	-o-transform-origin: 50% 0%;
+	-o-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0%;
+	animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+}
+div.animated-speaker#ajit-balakrishnan{
+	@include flip_right(5);
+}
+div.animated-speaker#archana-sharma{
+	@include flip_bottom(4);
+}
+div.animated-speaker#arogyaswami-paulraj{
+	@include flip_bottom(1);
+}
+div.animated-speaker#ela-bhatt{
+	@include flip_left(2);
+}
+div.animated-speaker#gurtej-sindhu{
+	@include flip_bottom(7);
+}
+div.animated-speaker#partha-mitra{
+	@include flip_top(6);
+}
+div.animated-speaker#pawan-sinha{
+	@include flip_bottom(3);
+}
+div.animated-speaker#rajeeva-karandikar{
+	@include flip_top(3);
+}
+div.animated-speaker#ravi-venkatesan{
+	@include flip_bottom(6);
+}
+div.animated-speaker#stephen-wolfram{
+	@include flip_top(7);
+}
+div.animated-speaker#sunil-kumar{
+	@include flip_right(2);
+}
+div.animated-speaker#vanitha-narayanan{
+	@include flip_top(1);
+}
+div.animated-speaker#vijay-govindrajan{
+	@include flip_top(4);
+}
+div.animated-speaker#vinita-bali{
+	@include flip_left(5);
+}
+@-webkit-keyframes flip_bottom{
+	from{
+		-webkit-transform: rotateX(90deg);
+		opacity: 0;
+	}
+	to{
+		-webkit-transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes flip_right{
+	from{
+		opacity: 0;
+		-webkit-transform: rotateY(-90deg);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: rotateY(0deg);
+	}
+}
+@-webkit-keyframes flip_left{
+	from{
+		opacity: 0;
+		-webkit-transform: rotateY(90deg);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: rotateY(0deg);
+	}
+}
+@-webkit-keyframes flip_top{
+	from{
+		opacity: 0;
+		-webkit-transform: rotateX(-90deg);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: rotateX(0deg);
+	}
+}
+
+@-moz-keyframes flip_bottom{
+	from{
+		-moz-transform: rotateX(90deg);
+		opacity: 0;
+	}
+	to{
+		-moz-transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+@-moz-keyframes flip_right{
+	from{
+		opacity: 0;
+		-moz-transform: rotateY(-90deg);
+	}
+	to{
+		opacity: 1;
+		-moz-transform: rotateY(0deg);
+	}
+}
+@-moz-keyframes flip_left{
+	from{
+		opacity: 0;
+		-moz-transform: rotateY(90deg);
+	}
+	to{
+		opacity: 1;
+		-moz-transform: rotateY(0deg);
+	}
+}
+@-moz-keyframes flip_top{
+	from{
+		opacity: 0;
+		-moz-transform: rotateX(-90deg);
+	}
+	to{
+		opacity: 1;
+		-moz-transform: rotateX(0deg);
+	}
+}
+
+@-o-keyframes flip_bottom{
+	from{
+		-o-transform: rotateX(90deg);
+		opacity: 0;
+	}
+	to{
+		-o-transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+@-o-keyframes flip_right{
+	from{
+		opacity: 0;
+		-o-transform: rotateY(-90deg);
+	}
+	to{
+		opacity: 1;
+		-o-transform: rotateY(0deg);
+	}
+}
+@-o-keyframes flip_left{
+	from{
+		opacity: 0;
+		-o-transform: rotateY(90deg);
+	}
+	to{
+		opacity: 1;
+		-o-transform: rotateY(0deg);
+	}
+}
+@-o-keyframes flip_top{
+	from{
+		opacity: 0;
+		-webkit-transform: rotateX(-90deg);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: rotateX(0deg);
+	}
+}
+
+@keyframes flip_bottom{
+	from{
+		transform: rotateX(90deg);
+		opacity: 0;
+	}
+	to{
+		transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+@keyframes flip_right{
+	from{
+		opacity: 0;
+		transform: rotateY(-90deg);
+	}
+	to{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+@keyframes flip_left{
+	from{
+		opacity: 0;
+		transform: rotateY(90deg);
+	}
+	to{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+@keyframes flip_top{
+	from{
+		opacity: 0;
+		transform: rotateX(-90deg);
+	}
+	to{
+		opacity: 1;
+		transform: rotateX(0deg);
+	}
+}

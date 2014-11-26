@@ -137,7 +137,7 @@
 	<div class="container-fluid white centered">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center title"><?php echo $speaker_name; ?></h1>
+                    <h1 class="text-center title"><?php echo ucwords($speaker_name); ?></h1>
                     <div class="white breaker">
                         <span class="left"></span>
                         <div class="dice white"></div>
@@ -146,65 +146,6 @@
                 </div>
             </div>
         </div>
-	<div class="container-fluid" id="speaker-audio">
-	    <div class="row">
-		<div class="col-md-12" style="text-align: center">
-			<h4>Hear the Speaker</h4>
-			<div class="speaker-audio-fft" style="margin: auto; height: 50px; width: 50%;">
-			    <img class="back" src="../../audio/<?php echo urlencode($speaker_name); ?>_fft_back.png">
-			    <div class="front" style="background:url(../../audio/<?php echo urlencode($speaker_name); ?>_fft_front.png) no-repeat; background-size:100% 100%;"></div>
-			</div>
-			<audio controls id="audio" style="width: 50%;">
-				<source src="" type=""></source>
-			</audio>
-			<script>
-				var supports_media = function(mimetype, container) {
-					var elem = document.createElement(container);
-					if(typeof elem.canPlayType == 'function'){
-						var playable = elem.canPlayType(mimetype);
-						if((playable.toLowerCase() == 'maybe')||(playable.toLowerCase() == 'probably')){
-							return true;
-						}
-					}
-					return false;
-				};
-				var set_percent = function(val) {
-					var percent = 100 * $("#audio").prop("currentTime") / $("#audio").prop("duration");
-					var time_left = 1000 * $("#audio").prop("duration") - $("#audio").prop("currentTime");
-					if ( val !== undefined ) {
-						percent = parseInt(val);
-					}
-					$(".speaker-audio-fft .front").css( {
-						'background-size': $('.speaker-audio-fft').width() + 'px ' + $('.speaker-audio-fft').height() + 'px',
-						'width': percent + '%'
-					})
-					$(".speaker-audio-fft .front").animate( {
-						'width': '100%'
-					}, time_left)
-				}
-				$(document).ready(function() {
-					if( supports_media('audio/webm', 'audio') ) {
-						$("#audio").find("source")
-							.attr("src", "../../audio/<?php echo urlencode($speaker_name); ?>.webm")
-					} else if ( supprts_media('audio/mpeg', 'audio')) {
-						$("#audio").find("source")
-							.attr("src", "../../audio/<?php echo urlencode($speaker_name); ?>.mp3")
-					} else {
-						$('#audio').after("<div class='alert alert-danger' role='alert'>Your browser does not support HTML5 audio. Please update it to hear the speaker</div>")
-					}
-					$("#audio").on('play',function(){
-						if ( isNan($('#audio').prop('duration') ) ) {
-							set_percent();
-						}
-					});
-					$("#audio").on('pause',function(){
-						$(".speaker-audio-fft .front").stop()
-					});
-				})
-			</script>
-		</div>
-	    </div>
-	</div>
 	<div class="container-fluid" id="speaker-content">
 		<?php if (isset($editable) && $editable) { ?>
 		    <form method="post" action='../../php/scripts/save_to_file.php'>
@@ -221,8 +162,7 @@
                     </div>
                 <?php } ?>
 	</div>
-
-    <div class="navbar navbar-inverse navbar-fixed-bottom speaker-list">
+    <div class="navbar navbar-inverse navbar-fixed-bottom speaker-list hidden-xs hidden-sm">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
@@ -235,14 +175,24 @@
                 <div class="row text-center">
                     <?php for($speaker_i = 0; $speaker_i < 14; $speaker_i++) { ?>
                         <div class="speaker text-center" style="display: inline-block; width : 14%; border: 1px solid #fff;">
-                            <div class="dummy">
+                            <div class="dummy" style="display:none">
                                 <a href="" class="speaker-link">
                                     <div class=""><!--
                                         --><span style="float:left; width : 100%;"><?php echo ucwords($speakers[$speaker_i]); ?></span><!--
                                         --><div class="speaker-image" style="width : 100%;
-                                            background: url(../../img/logo/200x200_dice_white.png) no-repeat center center; background-size: cover;">
+                                            background: url(../../img/logo/200x200_dice_dark.png) 
+                                            no-repeat center center; background-size: cover;">
                                         </div><!--
                                     --></div>
+                                </a>
+                            </div>
+                            <div class="real">
+                                <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" class="speaker-link">
+                                    <div class=""><!--name and image of all the speakers-->
+                                    	<span style="float:left; width : 100%;"><?php echo ucwords($speakers[$speaker_i]); ?></span>
+                                        <div class="speaker-image" style="width : 100%; background: url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg) no-repeat center center; background-size: cover;">
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
