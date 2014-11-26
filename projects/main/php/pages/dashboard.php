@@ -689,10 +689,10 @@
                     }).done(function(res) {
                         data = res['data']
                         console.log(data)
-                        // window.location.href = window.location.origin + window.location.pathname +
-                        //     "?first_name=" + data.first_name +
-                        //     "&last_name=" + data.last_name +
-                        //     "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
+                        window.location.href = window.location.origin + window.location.pathname +
+                            "?first_name=" + data.first_name +
+                            "&last_name=" + data.last_name +
+                            "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
                     }).fail(function(xhr) {
                         console.log(xhr.status)
                     })

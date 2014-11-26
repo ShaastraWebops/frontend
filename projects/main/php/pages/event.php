@@ -627,7 +627,6 @@
                             $row.append("<td>" + val.college_text + "</td>")
                             $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
                             if ( this_event.has_tdp ) {
-                                console.log(val)
                                 if ( val.tdp_submitted && val.tdp_submitted != "")
                                     $row.append("<td><a href='" + val.tdp_submitted + "'>" + "yes" + "</a></td>")
                                 else
@@ -671,13 +670,15 @@
                             $row.append("<td>" + val.name + "</td>")
                             for ( var i = 0; i < this_event.team_size_max; i++ ) {
                                 if ( i < val.members.length ) {
+                                    console.log(val)
                                     $row.append("<td>" + val.members[i].id + "</td>")
                                     $row.append("<td>" + val.members[i].first_name + "  " + val.members[i].last_name + "</td>")
                                     $row.append("<td>" + val.members[i].email + "</td>")
-                                    $row.append("<td>" + val.mobile_number + "</td>")
-                                    $row.append("<td>" + val.college_text + "</td>")
-                                    $row.append("<td>" + ((val.want_accomodation)?"yes":"no") + "</td>")
+                                    $row.append("<td>" + val.members[i].mobile_number + "</td>")
+                                    $row.append("<td>" + val.members[i].college_text + "</td>")
+                                    $row.append("<td>" + ((val.members[i].want_accomodation)?"yes":"no") + "</td>")
                                 } else {
+                                    $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
                                     $row.append("<td>-</td>")
@@ -737,14 +738,11 @@
                     }
                 }
             })
-// for datatables start
-
+            // for datatables start
             $('#reg_table tbody').css({
                 'background-color': 'transparent'
             });
-
-// for datatables end
-
+            // for datatables end
             $('#event-info form').submit(function(e) {
                 e && e.preventDefault()
                 var $el = $(this)
