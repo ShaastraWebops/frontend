@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>Spons | Shaastra 2015</title>
+    <meta name="keywords" content="spons shaastra 2015,shaastra sponsors 2015,shaastra sponsors">
+    <meta name"description" content="Shaastra the biggest student run technical festival.Find the Shaastra 2015 sponsors of Events,Lectures,Workshops,Hospitality">
     <?php include '../../php/base/head.php' ?>
 
     <style>
