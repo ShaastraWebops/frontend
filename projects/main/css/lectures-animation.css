@@ -3,16 +3,16 @@ div.animated-speaker#ajit-balakrishnan {
   opacity: 0;
   -webkit-transform: rotateY(-90deg);
   -webkit-transform-origin: 100% 50%;
-  -webkit-animation: flip_right 0.2s ease-out 2.08333s forwards;
+  -webkit-animation: flip_right 0.22222s ease-out 3.35238s forwards;
   -moz-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 50%;
-  -moz-animation: flip_right 0.2s ease-out 2.08333s forwards;
+  -moz-animation: flip_right 0.22222s ease-out 3.35238s forwards;
   -o-transform: rotateY(-90deg);
   -o-transform-origin: 100% 50%;
-  -o-animation: flip_right 0.2s ease-out 2.08333s forwards;
+  -o-animation: flip_right 0.22222s ease-out 3.35238s forwards;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
-  animation: flip_right 0.2s ease-out 2.08333s forwards;
+  animation: flip_right 0.22222s ease-out 3.35238s forwards;
 }
 
 /* line 93, ../sass/lectures-animation.scss */
@@ -20,16 +20,16 @@ div.animated-speaker#archana-sharma {
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -webkit-transform-origin: 50% 100%;
-  -webkit-animation: flip_bottom 0.25s ease-out 1.83333s forwards;
+  -webkit-animation: flip_bottom 0.28571s ease-out 3.06667s forwards;
   -moz-transform: rotateX(90deg);
   -moz-transform-origin: 50% 100%;
-  -moz-animation: flip_bottom 0.25s ease-out 1.83333s forwards;
+  -moz-animation: flip_bottom 0.28571s ease-out 3.06667s forwards;
   -o-transform: rotateX(90deg);
   -o-transform-origin: 50% 100%;
-  -o-animation: flip_bottom 0.25s ease-out 1.83333s forwards;
+  -o-animation: flip_bottom 0.28571s ease-out 3.06667s forwards;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
-  animation: flip_bottom 0.25s ease-out 1.83333s forwards;
+  animation: flip_bottom 0.28571s ease-out 3.06667s forwards;
 }
 
 /* line 96, ../sass/lectures-animation.scss */
@@ -37,16 +37,16 @@ div.animated-speaker#arogyaswami-paulraj {
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -webkit-transform-origin: 50% 100%;
-  -webkit-animation: flip_bottom 1s ease-out 0s forwards;
+  -webkit-animation: flip_bottom 2s ease-out 0s forwards;
   -moz-transform: rotateX(90deg);
   -moz-transform-origin: 50% 100%;
-  -moz-animation: flip_bottom 1s ease-out 0s forwards;
+  -moz-animation: flip_bottom 2s ease-out 0s forwards;
   -o-transform: rotateX(90deg);
   -o-transform-origin: 50% 100%;
-  -o-animation: flip_bottom 1s ease-out 0s forwards;
+  -o-animation: flip_bottom 2s ease-out 0s forwards;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
-  animation: flip_bottom 1s ease-out 0s forwards;
+  animation: flip_bottom 2s ease-out 0s forwards;
 }
 
 /* line 99, ../sass/lectures-animation.scss */
@@ -54,16 +54,16 @@ div.animated-speaker#ela-bhatt {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.5s ease-out 1s forwards;
+  -webkit-animation: flip_left 0.66667s ease-out 2s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.5s ease-out 1s forwards;
+  -moz-animation: flip_left 0.66667s ease-out 2s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.5s ease-out 1s forwards;
+  -o-animation: flip_left 0.66667s ease-out 2s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.5s ease-out 1s forwards;
+  animation: flip_left 0.66667s ease-out 2s forwards;
 }
 
 /* line 102, ../sass/lectures-animation.scss */
@@ -71,16 +71,16 @@ div.animated-speaker#gurtej-sindhu {
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -webkit-transform-origin: 50% 100%;
-  -webkit-animation: flip_bottom 0.14286s ease-out 2.45s forwards;
+  -webkit-animation: flip_bottom 0.15385s ease-out 3.75642s forwards;
   -moz-transform: rotateX(90deg);
   -moz-transform-origin: 50% 100%;
-  -moz-animation: flip_bottom 0.14286s ease-out 2.45s forwards;
+  -moz-animation: flip_bottom 0.15385s ease-out 3.75642s forwards;
   -o-transform: rotateX(90deg);
   -o-transform-origin: 50% 100%;
-  -o-animation: flip_bottom 0.14286s ease-out 2.45s forwards;
+  -o-animation: flip_bottom 0.15385s ease-out 3.75642s forwards;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
-  animation: flip_bottom 0.14286s ease-out 2.45s forwards;
+  animation: flip_bottom 0.15385s ease-out 3.75642s forwards;
 }
 
 /* line 105, ../sass/lectures-animation.scss */
@@ -88,16 +88,16 @@ div.animated-speaker#partha-mitra {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.16667s ease-out 2.28333s forwards;
+  -webkit-animation: flip_top 0.18182s ease-out 3.5746s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.16667s ease-out 2.28333s forwards;
+  -moz-animation: flip_top 0.18182s ease-out 3.5746s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.16667s ease-out 2.28333s forwards;
+  -o-animation: flip_top 0.18182s ease-out 3.5746s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.16667s ease-out 2.28333s forwards;
+  animation: flip_top 0.18182s ease-out 3.5746s forwards;
 }
 
 /* line 108, ../sass/lectures-animation.scss */
@@ -105,16 +105,16 @@ div.animated-speaker#pawan-sinha {
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -webkit-transform-origin: 50% 100%;
-  -webkit-animation: flip_bottom 0.33333s ease-out 1.5s forwards;
+  -webkit-animation: flip_bottom 0.4s ease-out 2.66667s forwards;
   -moz-transform: rotateX(90deg);
   -moz-transform-origin: 50% 100%;
-  -moz-animation: flip_bottom 0.33333s ease-out 1.5s forwards;
+  -moz-animation: flip_bottom 0.4s ease-out 2.66667s forwards;
   -o-transform: rotateX(90deg);
   -o-transform-origin: 50% 100%;
-  -o-animation: flip_bottom 0.33333s ease-out 1.5s forwards;
+  -o-animation: flip_bottom 0.4s ease-out 2.66667s forwards;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
-  animation: flip_bottom 0.33333s ease-out 1.5s forwards;
+  animation: flip_bottom 0.4s ease-out 2.66667s forwards;
 }
 
 /* line 111, ../sass/lectures-animation.scss */
@@ -122,16 +122,16 @@ div.animated-speaker#rajeeva-karandikar {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -webkit-animation: flip_top 0.4s ease-out 2.66667s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -moz-animation: flip_top 0.4s ease-out 2.66667s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -o-animation: flip_top 0.4s ease-out 2.66667s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.33333s ease-out 1.5s forwards;
+  animation: flip_top 0.4s ease-out 2.66667s forwards;
 }
 
 /* line 114, ../sass/lectures-animation.scss */
@@ -139,16 +139,16 @@ div.animated-speaker#ravi-venkatesan {
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -webkit-transform-origin: 50% 100%;
-  -webkit-animation: flip_bottom 0.16667s ease-out 2.28333s forwards;
+  -webkit-animation: flip_bottom 0.18182s ease-out 3.5746s forwards;
   -moz-transform: rotateX(90deg);
   -moz-transform-origin: 50% 100%;
-  -moz-animation: flip_bottom 0.16667s ease-out 2.28333s forwards;
+  -moz-animation: flip_bottom 0.18182s ease-out 3.5746s forwards;
   -o-transform: rotateX(90deg);
   -o-transform-origin: 50% 100%;
-  -o-animation: flip_bottom 0.16667s ease-out 2.28333s forwards;
+  -o-animation: flip_bottom 0.18182s ease-out 3.5746s forwards;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
-  animation: flip_bottom 0.16667s ease-out 2.28333s forwards;
+  animation: flip_bottom 0.18182s ease-out 3.5746s forwards;
 }
 
 /* line 117, ../sass/lectures-animation.scss */
@@ -156,16 +156,16 @@ div.animated-speaker#stephen-wolfram {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -webkit-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -moz-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -o-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.14286s ease-out 2.45s forwards;
+  animation: flip_top 0.15385s ease-out 3.75642s forwards;
 }
 
 /* line 120, ../sass/lectures-animation.scss */
@@ -173,16 +173,16 @@ div.animated-speaker#sunil-kumar {
   opacity: 0;
   -webkit-transform: rotateY(-90deg);
   -webkit-transform-origin: 100% 50%;
-  -webkit-animation: flip_right 0.5s ease-out 1s forwards;
+  -webkit-animation: flip_right 0.66667s ease-out 2s forwards;
   -moz-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 50%;
-  -moz-animation: flip_right 0.5s ease-out 1s forwards;
+  -moz-animation: flip_right 0.66667s ease-out 2s forwards;
   -o-transform: rotateY(-90deg);
   -o-transform-origin: 100% 50%;
-  -o-animation: flip_right 0.5s ease-out 1s forwards;
+  -o-animation: flip_right 0.66667s ease-out 2s forwards;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
-  animation: flip_right 0.5s ease-out 1s forwards;
+  animation: flip_right 0.66667s ease-out 2s forwards;
 }
 
 /* line 123, ../sass/lectures-animation.scss */
@@ -190,16 +190,16 @@ div.animated-speaker#vanitha-narayanan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 1s ease-out 0s forwards;
+  -webkit-animation: flip_top 2s ease-out 0s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 1s ease-out 0s forwards;
+  -moz-animation: flip_top 2s ease-out 0s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 1s ease-out 0s forwards;
+  -o-animation: flip_top 2s ease-out 0s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 1s ease-out 0s forwards;
+  animation: flip_top 2s ease-out 0s forwards;
 }
 
 /* line 126, ../sass/lectures-animation.scss */
@@ -207,16 +207,16 @@ div.animated-speaker#vijay-govindrajan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.25s ease-out 1.83333s forwards;
+  -webkit-animation: flip_top 0.28571s ease-out 3.06667s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.25s ease-out 1.83333s forwards;
+  -moz-animation: flip_top 0.28571s ease-out 3.06667s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.25s ease-out 1.83333s forwards;
+  -o-animation: flip_top 0.28571s ease-out 3.06667s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.25s ease-out 1.83333s forwards;
+  animation: flip_top 0.28571s ease-out 3.06667s forwards;
 }
 
 /* line 129, ../sass/lectures-animation.scss */
@@ -224,16 +224,16 @@ div.animated-speaker#vinita-bali {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.2s ease-out 2.08333s forwards;
+  -webkit-animation: flip_left 0.22222s ease-out 3.35238s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.2s ease-out 2.08333s forwards;
+  -moz-animation: flip_left 0.22222s ease-out 3.35238s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.2s ease-out 2.08333s forwards;
+  -o-animation: flip_left 0.22222s ease-out 3.35238s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.2s ease-out 2.08333s forwards;
+  animation: flip_left 0.22222s ease-out 3.35238s forwards;
 }
 
 /* line 133, ../sass/lectures-animation.scss */
@@ -241,16 +241,16 @@ div.unanimated-speaker#ajit-balakrishnan {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 1s ease-out 0s forwards;
+  -webkit-animation: flip_left 2s ease-out 0s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 1s ease-out 0s forwards;
+  -moz-animation: flip_left 2s ease-out 0s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 1s ease-out 0s forwards;
+  -o-animation: flip_left 2s ease-out 0s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 1s ease-out 0s forwards;
+  animation: flip_left 2s ease-out 0s forwards;
 }
 
 /* line 136, ../sass/lectures-animation.scss */
@@ -258,16 +258,16 @@ div.unanimated-speaker#archana-sharma {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.5s ease-out 1s forwards;
+  -webkit-animation: flip_left 0.66667s ease-out 2s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.5s ease-out 1s forwards;
+  -moz-animation: flip_left 0.66667s ease-out 2s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.5s ease-out 1s forwards;
+  -o-animation: flip_left 0.66667s ease-out 2s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.5s ease-out 1s forwards;
+  animation: flip_left 0.66667s ease-out 2s forwards;
 }
 
 /* line 139, ../sass/lectures-animation.scss */
@@ -275,16 +275,16 @@ div.unanimated-speaker#arogyaswami-paulraj {
   opacity: 0;
   -webkit-transform: rotateY(-90deg);
   -webkit-transform-origin: 100% 50%;
-  -webkit-animation: flip_right 0.25s ease-out 1.83333s forwards;
+  -webkit-animation: flip_right 0.28571s ease-out 3.06667s forwards;
   -moz-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 50%;
-  -moz-animation: flip_right 0.25s ease-out 1.83333s forwards;
+  -moz-animation: flip_right 0.28571s ease-out 3.06667s forwards;
   -o-transform: rotateY(-90deg);
   -o-transform-origin: 100% 50%;
-  -o-animation: flip_right 0.25s ease-out 1.83333s forwards;
+  -o-animation: flip_right 0.28571s ease-out 3.06667s forwards;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
-  animation: flip_right 0.25s ease-out 1.83333s forwards;
+  animation: flip_right 0.28571s ease-out 3.06667s forwards;
 }
 
 /* line 142, ../sass/lectures-animation.scss */
@@ -292,16 +292,16 @@ div.unanimated-speaker#ela-bhatt {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -webkit-animation: flip_top 0.4s ease-out 2.66667s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -moz-animation: flip_top 0.4s ease-out 2.66667s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.33333s ease-out 1.5s forwards;
+  -o-animation: flip_top 0.4s ease-out 2.66667s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.33333s ease-out 1.5s forwards;
+  animation: flip_top 0.4s ease-out 2.66667s forwards;
 }
 
 /* line 145, ../sass/lectures-animation.scss */
@@ -309,16 +309,16 @@ div.unanimated-speaker#gurtej-sindhu {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.2s ease-out 2.08333s forwards;
+  -webkit-animation: flip_top 0.22222s ease-out 3.35238s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.2s ease-out 2.08333s forwards;
+  -moz-animation: flip_top 0.22222s ease-out 3.35238s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.2s ease-out 2.08333s forwards;
+  -o-animation: flip_top 0.22222s ease-out 3.35238s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.2s ease-out 2.08333s forwards;
+  animation: flip_top 0.22222s ease-out 3.35238s forwards;
 }
 
 /* line 148, ../sass/lectures-animation.scss */
@@ -326,16 +326,16 @@ div.unanimated-speaker#partha-mitra {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.16667s ease-out 2.28333s forwards;
+  -webkit-animation: flip_left 0.18182s ease-out 3.5746s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.16667s ease-out 2.28333s forwards;
+  -moz-animation: flip_left 0.18182s ease-out 3.5746s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.16667s ease-out 2.28333s forwards;
+  -o-animation: flip_left 0.18182s ease-out 3.5746s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.16667s ease-out 2.28333s forwards;
+  animation: flip_left 0.18182s ease-out 3.5746s forwards;
 }
 
 /* line 151, ../sass/lectures-animation.scss */
@@ -343,16 +343,16 @@ div.unanimated-speaker#pawan-sinha {
   opacity: 0;
   -webkit-transform: rotateY(-90deg);
   -webkit-transform-origin: 100% 50%;
-  -webkit-animation: flip_right 0.125s ease-out 2.59286s forwards;
+  -webkit-animation: flip_right 0.13333s ease-out 3.91027s forwards;
   -moz-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 50%;
-  -moz-animation: flip_right 0.125s ease-out 2.59286s forwards;
+  -moz-animation: flip_right 0.13333s ease-out 3.91027s forwards;
   -o-transform: rotateY(-90deg);
   -o-transform-origin: 100% 50%;
-  -o-animation: flip_right 0.125s ease-out 2.59286s forwards;
+  -o-animation: flip_right 0.13333s ease-out 3.91027s forwards;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
-  animation: flip_right 0.125s ease-out 2.59286s forwards;
+  animation: flip_right 0.13333s ease-out 3.91027s forwards;
 }
 
 /* line 154, ../sass/lectures-animation.scss */
@@ -360,16 +360,16 @@ div.unanimated-speaker#rajeeva-karandikar {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -webkit-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -moz-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.14286s ease-out 2.45s forwards;
+  -o-animation: flip_top 0.15385s ease-out 3.75642s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.14286s ease-out 2.45s forwards;
+  animation: flip_top 0.15385s ease-out 3.75642s forwards;
 }
 
 /* line 157, ../sass/lectures-animation.scss */
@@ -377,16 +377,16 @@ div.unanimated-speaker#ravi-venkatesan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.11111s ease-out 2.71786s forwards;
+  -webkit-animation: flip_top 0.11765s ease-out 4.0436s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.11111s ease-out 2.71786s forwards;
+  -moz-animation: flip_top 0.11765s ease-out 4.0436s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.11111s ease-out 2.71786s forwards;
+  -o-animation: flip_top 0.11765s ease-out 4.0436s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.11111s ease-out 2.71786s forwards;
+  animation: flip_top 0.11765s ease-out 4.0436s forwards;
 }
 
 /* line 160, ../sass/lectures-animation.scss */
@@ -394,16 +394,16 @@ div.unanimated-speaker#stephen-wolfram {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.1s ease-out 2.82897s forwards;
+  -webkit-animation: flip_left 0.10526s ease-out 4.16125s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.1s ease-out 2.82897s forwards;
+  -moz-animation: flip_left 0.10526s ease-out 4.16125s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.1s ease-out 2.82897s forwards;
+  -o-animation: flip_left 0.10526s ease-out 4.16125s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.1s ease-out 2.82897s forwards;
+  animation: flip_left 0.10526s ease-out 4.16125s forwards;
 }
 
 /* line 163, ../sass/lectures-animation.scss */
@@ -411,16 +411,16 @@ div.unanimated-speaker#sunil-kumar {
   opacity: 0;
   -webkit-transform: rotateY(-90deg);
   -webkit-transform-origin: 100% 50%;
-  -webkit-animation: flip_right 0.08333s ease-out 3.01988s forwards;
+  -webkit-animation: flip_right 0.08696s ease-out 4.36175s forwards;
   -moz-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 50%;
-  -moz-animation: flip_right 0.08333s ease-out 3.01988s forwards;
+  -moz-animation: flip_right 0.08696s ease-out 4.36175s forwards;
   -o-transform: rotateY(-90deg);
   -o-transform-origin: 100% 50%;
-  -o-animation: flip_right 0.08333s ease-out 3.01988s forwards;
+  -o-animation: flip_right 0.08696s ease-out 4.36175s forwards;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
-  animation: flip_right 0.08333s ease-out 3.01988s forwards;
+  animation: flip_right 0.08696s ease-out 4.36175s forwards;
 }
 
 /* line 166, ../sass/lectures-animation.scss */
@@ -428,16 +428,16 @@ div.unanimated-speaker#vanitha-narayanan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.09091s ease-out 2.92897s forwards;
+  -webkit-animation: flip_top 0.09524s ease-out 4.26651s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.09091s ease-out 2.92897s forwards;
+  -moz-animation: flip_top 0.09524s ease-out 4.26651s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.09091s ease-out 2.92897s forwards;
+  -o-animation: flip_top 0.09524s ease-out 4.26651s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.09091s ease-out 2.92897s forwards;
+  animation: flip_top 0.09524s ease-out 4.26651s forwards;
 }
 
 /* line 169, ../sass/lectures-animation.scss */
@@ -445,16 +445,16 @@ div.unanimated-speaker#vijay-govindrajan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
-  -webkit-animation: flip_top 0.07692s ease-out 3.10321s forwards;
+  -webkit-animation: flip_top 0.08s ease-out 4.44871s forwards;
   -moz-transform: rotateX(-90deg);
   -moz-transform-origin: 50% 0%;
-  -moz-animation: flip_top 0.07692s ease-out 3.10321s forwards;
+  -moz-animation: flip_top 0.08s ease-out 4.44871s forwards;
   -o-transform: rotateX(-90deg);
   -o-transform-origin: 50% 0%;
-  -o-animation: flip_top 0.07692s ease-out 3.10321s forwards;
+  -o-animation: flip_top 0.08s ease-out 4.44871s forwards;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
-  animation: flip_top 0.07692s ease-out 3.10321s forwards;
+  animation: flip_top 0.08s ease-out 4.44871s forwards;
 }
 
 /* line 172, ../sass/lectures-animation.scss */
@@ -462,16 +462,16 @@ div.unanimated-speaker#vinita-bali {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation: flip_left 0.07143s ease-out 3.18013s forwards;
+  -webkit-animation: flip_left 0.07407s ease-out 4.52871s forwards;
   -moz-transform: rotateY(90deg);
   -moz-transform-origin: 0% 50%;
-  -moz-animation: flip_left 0.07143s ease-out 3.18013s forwards;
+  -moz-animation: flip_left 0.07407s ease-out 4.52871s forwards;
   -o-transform: rotateY(90deg);
   -o-transform-origin: 0% 50%;
-  -o-animation: flip_left 0.07143s ease-out 3.18013s forwards;
+  -o-animation: flip_left 0.07407s ease-out 4.52871s forwards;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
-  animation: flip_left 0.07143s ease-out 3.18013s forwards;
+  animation: flip_left 0.07407s ease-out 4.52871s forwards;
 }
 
 @-webkit-keyframes flip_bottom {

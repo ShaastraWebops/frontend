@@ -1,10 +1,10 @@
 $t: 1s;
 @mixin flip_bottom($order){
-	$dur: $t / $order;
+	$dur: $t / ($order - 0.5);
 	$del: 0s;
 	$i: $order;
 	@while $i > 1s{
-		$del: $del + ($t / ($i - 1));
+		$del: $del + ($t / ($i - 1.5));
 		$i: $i - 1;
 	}
 	opacity:0;
@@ -22,11 +22,11 @@ $t: 1s;
 	animation: flip_bottom $dur ease-out $del forwards;
 }
 @mixin flip_right($order){
-	$dur: $t / $order;
+	$dur: $t / ($order - 0.5);
 	$del: 0s;
 	$i: $order;
 	@while $i > 1s{
-		$del: $del + ($t / ($i - 1));
+		$del: $del + ($t / ($i - 1.5));
 		$i: $i - 1;
 	}
 	opacity:0;
@@ -44,11 +44,11 @@ $t: 1s;
 	animation: flip_right $dur ease-out $del forwards;
 }
 @mixin flip_left($order){
-	$dur: $t / $order;
+	$dur: $t / ($order - 0.5);
 	$del: 0s;
 	$i: $order;
 	@while $i > 1s{
-		$del: $del + ($t / ($i - 1));
+		$del: $del + ($t / ($i - 1.5));
 		$i: $i - 1;
 	}
 	opacity:0;
@@ -66,11 +66,11 @@ $t: 1s;
 	animation: flip_left $dur ease-out $del forwards;
 }
 @mixin flip_top($order){
-	$dur: $t / $order;
+	$dur: $t / ($order - 0.5);
 	$del: 0s;
 	$i: $order;
 	@while $i > 1s{
-		$del: $del + ($t / ($i - 1));
+		$del: $del + ($t / ($i - 1.5));
 		$i: $i - 1;
 	}
 	opacity:0;
