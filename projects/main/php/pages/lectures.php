@@ -20,6 +20,16 @@
 		background: no-repeat center center; 
 		background-size: cover;
 	}
+	div.animated-speaker{
+		-webkit-box-shadow: 0px 0px 5px white;
+		box-shadow: 0px 0px 5px white;
+	}
+	div.unanimated-speaker{
+		/*border: 2px solid white;*/
+		/*border-radius: 5px;*/
+		-webkit-box-shadow: 0px 0px 15px white;
+		box-shadow: 0px 0px 15px white;
+	}
 	div.speaker{
 		display: inline-block;
 		margin: auto;
@@ -27,11 +37,13 @@
 	}
 	div.speaker-list.hidden-xs.hidden-sm div.speaker{
 		width: 19.8%;
-		height: 33.2%;		
+		height: 33.2%;
+		padding: 0.2em;
+		/*padding-right: 0.2em;*/
 	}
 	div.speaker-list.visible-xs.visible-sm div.speaker{
 		height: 400px;
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 	div.speaker a{
 		color: white;

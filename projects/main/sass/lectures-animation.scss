@@ -1,63 +1,91 @@
-$dur: 0.7s;
+$t: 1s;
 @mixin flip_bottom($order){
+	$dur: $t / $order;
+	$del: 0s;
+	$i: $order;
+	@while $i > 1s{
+		$del: $del + ($t / ($i - 1));
+		$i: $i - 1;
+	}
 	opacity:0;
 	-webkit-transform: rotateX(90deg);
 	-webkit-transform-origin: 50% 100%;
-	-webkit-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	-webkit-animation: flip_bottom $dur ease-out $del forwards;
 	-moz-transform: rotateX(90deg);
 	-moz-transform-origin: 50% 100%;
-	-moz-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-animation: flip_bottom $dur ease-out $del forwards;
 	-o-transform: rotateX(90deg);
 	-o-transform-origin: 50% 100%;
-	-o-animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-animation: flip_bottom $dur ease-out $del forwards;
 	transform: rotateX(90deg);
 	transform-origin: 50% 100%;
-	animation: flip_bottom $dur ease-out ($order - 0.75)*$dur forwards;
+	animation: flip_bottom $dur ease-out $del forwards;
 }
 @mixin flip_right($order){
+	$dur: $t / $order;
+	$del: 0s;
+	$i: $order;
+	@while $i > 1s{
+		$del: $del + ($t / ($i - 1));
+		$i: $i - 1;
+	}
 	opacity:0;
 	-webkit-transform: rotateY(-90deg);
 	-webkit-transform-origin: 100% 50%;
-	-webkit-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	-webkit-animation: flip_right $dur ease-out $del forwards;
 	-moz-transform: rotateY(-90deg);
 	-moz-transform-origin: 100% 50%;
-	-moz-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-animation: flip_right $dur ease-out $del forwards;
 	-o-transform: rotateY(-90deg);
 	-o-transform-origin: 100% 50%;
-	-o-animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-animation: flip_right $dur ease-out $del forwards;
 	transform: rotateY(-90deg);
 	transform-origin: 100% 50%;
-	animation: flip_right $dur ease-out ($order - 0.75)*$dur forwards;
+	animation: flip_right $dur ease-out $del forwards;
 }
 @mixin flip_left($order){
+	$dur: $t / $order;
+	$del: 0s;
+	$i: $order;
+	@while $i > 1s{
+		$del: $del + ($t / ($i - 1));
+		$i: $i - 1;
+	}
 	opacity:0;
 	-webkit-transform: rotateY(90deg);
 	-webkit-transform-origin: 0% 50%;
-	-webkit-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	-webkit-animation: flip_left $dur ease-out $del forwards;
 	-moz-transform: rotateY(90deg);
 	-moz-transform-origin: 0% 50%;
-	-moz-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-animation: flip_left $dur ease-out $del forwards;
 	-o-transform: rotateY(90deg);
 	-o-transform-origin: 0% 50%;
-	-o-animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-animation: flip_left $dur ease-out $del forwards;
 	transform: rotateY(90deg);
 	transform-origin: 0% 50%;
-	animation: flip_left $dur ease-out ($order - 0.75)*$dur forwards;
+	animation: flip_left $dur ease-out $del forwards;
 }
 @mixin flip_top($order){
+	$dur: $t / $order;
+	$del: 0s;
+	$i: $order;
+	@while $i > 1s{
+		$del: $del + ($t / ($i - 1));
+		$i: $i - 1;
+	}
 	opacity:0;
 	-webkit-transform: rotateX(-90deg);
 	-webkit-transform-origin: 50% 0%;
-	-webkit-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	-webkit-animation: flip_top $dur ease-out $del forwards;
 	-moz-transform: rotateX(-90deg);
 	-moz-transform-origin: 50% 0%;
-	-moz-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	-moz-animation: flip_top $dur ease-out $del forwards;
 	-o-transform: rotateX(-90deg);
 	-o-transform-origin: 50% 0%;
-	-o-animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	-o-animation: flip_top $dur ease-out $del forwards;
 	transform: rotateX(-90deg);
 	transform-origin: 50% 0%;
-	animation: flip_top $dur ease-out ($order - 0.75)*$dur forwards;
+	animation: flip_top $dur ease-out $del forwards;
 }
 div.animated-speaker#ajit-balakrishnan{
 	@include flip_right(5);
