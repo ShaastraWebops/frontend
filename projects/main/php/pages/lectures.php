@@ -47,9 +47,14 @@
 		font-weight: bold;
 	}
 	div.speaker.col-sm-6 a{
-		color: #52B3D9;
-		font-size: 5em;
+		color: white;
+		font-size: 2em;
 		text-decoration: none;
+		font-family: 'Open Sans';
+		font-weight: 300;
+	}
+	div.speaker.col-sm-6 .bold{
+		font-weight: bold;
 	}
 	div.speaker span.vertical-table {
         position: relative;
@@ -164,7 +169,12 @@
 			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$i]) ?>">
 							<span class='vertical-table'>
 							    <span class='vertical-table-cell text-center'>
-									<span class="speaker-name"><?php echo $speakers[$i]; ?></span>
+									<span class="speaker-name">
+										<?php echo substr($speakers[$i],0, strpos($speakers[$i], ' ')); ?>
+									</span>
+									<span class="speaker-name bold">
+										<?php echo substr($speakers[$i],strpos($speakers[$i], ' ')); ?>
+									</span>
 					    		</span>
 							</span>
 				        </a>
@@ -178,7 +188,12 @@
 			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>">
 							<span class='vertical-table'>
 							    <span class='vertical-table-cell text-center'>
-									<span class="speaker-name"><?php echo $speakers[$speaker_i]; ?></span>
+									<span class="speaker-name">
+										<?php echo substr($speakers[$speaker_i],0, strpos($speakers[$speaker_i], ' ')); ?>
+									</span>
+									<span class="speaker-name bold">
+										<?php echo substr($speakers[$speaker_i],strpos($speakers[$speaker_i], ' ')); ?>
+									</span>
 					    		</span>
 							</span>
 				        </a>
