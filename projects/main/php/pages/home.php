@@ -316,12 +316,12 @@
         		</tr>
         	</table>
  -->        
- 			<h4>Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+ 			<h4>How do you feel about the present Shaastra site ?</h4>
 			<button style="outline:0;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 				Click here to answer
 			</button>
  		</div>
- 		<div id="poll_after" style="display:none;"><h4>Thank you for your time. Find out more <a href="http://www.shaastra.org/2015/production/projects/pledgeabook/">here</a></h4></div>
+ 		<div id="poll_after" style="display:none;"><h4>Thank you for your time</h4></div>
     </div>
 
 
@@ -333,22 +333,41 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button style="outline:0;" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Rate the present Shaastra website on a scale of five upon the following</h4>
       			</div>
-      			<div id="poll_modal_body" style="margin-left:17%;" class="modal-body">
-        			<input type="radio" name="data" id="option_one" value="donated" onclick="poll_save(this.value)">
-        			<label for="option_one">Yes, I have donated books !</label>     
-					<br />	
-       				<input type="radio" name="data" id="option_two" value="saw_the_site" onclick="poll_save(this.value)">
-       				<label for="option_two">Yes, I have seen the website</label>
-					<br />	
-       				<input type="radio" name="data" id="option_three" value="heard_about_it" onclick="poll_save(this.value)">
-       				<label for="option_three">Yes, I have heard of it</label>
-					<br />	
-       				<input type="radio" name="data" id="option_four" value="no" onclick="poll_save(this.value)">
-       				<label for="option_four">No, I have not</label>
+      			<div id="poll_modal_body" style="margin-left:25%;" class="modal-body">
+      				<div style="display:inline-block; width:20%;"><b>Design:</b></div>
+        			<select style="margin-left:5%;" name="design" onchange="design(this.value)">
+        				<option value="5">5 - Satisfied</option>
+        				<option value="4">4 - Good</option>
+        				<option value="3">3 - Average</option>
+        				<option value="2">2 - Not bad</option>
+        				<option value="1">1 - Unsatisfied</option>
+        			</select>
+					<br />	<br />
+
+      				<div style="display:inline-block; width:20%;"><b>Accessibility:</b></div>
+        			<select style="margin-left:5%;" name="accessibility" onchange="accessibility(this.value)">
+        				<option value="5">5 - Satisfied</option>
+        				<option value="4">4 - Good</option>
+        				<option value="3">3 - Average</option>
+        				<option value="2">2 - Not bad</option>
+        				<option value="1">1 - Unsatisfied</option>
+        			</select>
+					<br />	<br />
+
+      				<div style="display:inline-block; width:20%;"><b>Layout:</b></div>
+        			<select style="margin-left:5%;" name="layout" onchange="layout(this.value)">
+        				<option value="5">5 - Satisfied</option>
+        				<option value="4">4 - Good</option>
+        				<option value="3">3 - Average</option>
+        				<option value="2">2 - Not bad</option>
+        				<option value="1">1 - Unsatisfied</option>
+        			</select>
+					<br />	<br />
       			</div>
       			<div class="modal-footer">
+        			<button id="submit" style="outline:0;" type="button" onclick="poll_save()" class="btn btn-primary">Submit</button>
         			<button style="outline:0;" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       			</div>
    			</div>
@@ -356,11 +375,25 @@
 	</div>
 <!-- modal -->
     <script>
-    	function poll_save(vote) {
+    	vote = [];
+    	vote[0] = 5;
+    	vote[1] = 5;
+    	vote[2] = 5;
+
+    	function design(des) {
+    		vote[0] = des;
+    	}	
+
+    	function accessibility(acc) {
+    		vote[1] = acc;
+    	}
+
+    	function layout(lay) {
+    		vote[2] = lay;
+    	}
+
+    	function poll_save() {
     		var my_vote;
-    		var var_pledge = document.createElement("a");
-    		var_pledge.setAttribute('href', 'http://www.shaastra.org/2015/production/projects/pledgeabook/');
-    		var_pledge.innerHTML = 'here';
     		if(window.XMLHttpRequest) {		//for latest browsers
     			my_vote = new XMLHttpRequest();
     		}
@@ -371,8 +404,7 @@
     			if(my_vote.readyState == 4 && my_vote.status == 200) {
     				// document.getElementById('poll_display').innerHTML = my_vote.responseText;
     				// document.getElementById('poll_display').appendChild(var_pledge);
-    				document.getElementById('poll_modal_body').innerHTML = my_vote.responseText + "Find out more ";
-    				document.getElementById('poll_modal_body').appendChild(var_pledge);
+    				document.getElementById('poll_modal_body').innerHTML = my_vote.responseText;
     				$('#poll_after').css({
     					'display': 'initial'
     				});
@@ -382,6 +414,9 @@
     				$('#poll_modal_body').css({
     					'margin-left': '0%',
     					'text-align': 'center'
+    				});
+    				$('#submit').css({
+    					'display': 'none'
     				});
     			}
     		}
