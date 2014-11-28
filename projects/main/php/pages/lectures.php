@@ -1,101 +1,101 @@
 <?php include '../../php/base/logmein.php'; ?>
 <!doctype html public "" "">
 <html>
-<head>
-	<title>Lectures | Shaastra 2015</title>
-	<?php include '../../php/base/head.php' ?>
-	<link rel="stylesheet" type="text/css" href="../../css/lectures-animation.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-</head>
-<style type="text/css">	
-	div.speaker-list.visible-xs.visible-sm{
-	}
-	div.speaker-list.hidden-xs.hidden-sm{
-		width: 100%;
-		height: 75%;
-	}
-	div.animated-speaker,
-	div.unanimated-speaker{
-		height: 100%;
-		background: no-repeat center center; 
-		background-size: cover;
-	}
-	div.animated-speaker{
-		-webkit-box-shadow: 0px 0px 5px white;
-		box-shadow: 0px 0px 5px white;
-	}
-	div.unanimated-speaker{
-		/*border: 2px solid white;*/
-		/*border-radius: 5px;*/
-		-webkit-box-shadow: 0px 0px 15px white;
-		box-shadow: 0px 0px 15px white;
-	}
-	div.speaker{
-		display: inline-block;
-		margin: auto;
-    	-webkit-perspective: 3000px;
-	}
-	div.speaker-list.hidden-xs.hidden-sm div.speaker{
-		width: 19.8%;
-		height: 33.2%;
-		padding: 0.2em;
-		/*padding-right: 0.2em;*/
-	}
-	div.speaker-list.visible-xs.visible-sm div.speaker{
-		height: 400px;
-		margin-top: 2em;
-	}
-	div.speaker a{
-		color: white;
-		font-size: 2em;
-		text-decoration: none;
-		font-family: 'Open Sans';
-		font-weight: 300;
-	}
-	span.speaker-name{
-		text-transform: uppercase;
-	}
-	span.speaker-name .bold{
-		font-weight: bold;
-	}
-	div.speaker.col-sm-6 a{
-		color: white;
-		font-size: 2em;
-		text-decoration: none;
-		font-family: 'Open Sans';
-		font-weight: 300;
-	}
-	div.speaker.col-sm-6 .bold{
-		font-weight: bold;
-	}
-	div.speaker span.vertical-table {
-        position: relative;
-        -webkit-transition: all 0.2s ease-out,
-            -webkit-transform 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out,
-            -moz-transform 0.3s ease-out;
-        -ms-transition: all 0.3s ease-out,
-            -ms-transform 0.3s ease-out;
-        -o-transition: all 0.3s ease-out,
-            -o-transform 0.3s ease-out;
-        transition: all 0.3s ease-out,
-            transform 0.3s ease-out;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    div.speaker span.vertical-table:hover{
-    	opacity: 0;
-    }
-    div.title-tile{
-    	height: 100%;
-		background: no-repeat center center; 
-		/*background-size: cover;*/
-    }
-    div.speaker.title-tile span.vertical-table:hover{
-    	opacity: 1;
-    }
-</style>
+	<head>
+		<title>Lectures | Shaastra 2015</title>
+        <meta name="keywords" content="lectures shaastra 2015,lectures shaastra,shaastra lectures">
+        <meta name"description" content="Get ready for the intriguing Shaastra 2015 lecture series,to be held from January 3th to 6th 2015">
+		<?php include '../../php/base/head.php' ?>
+		<style type="text/css">	
+			div.speaker-list.visible-xs.visible-sm{
+			}
+			div.speaker-list.hidden-xs.hidden-sm{
+				width: 100%;
+				height: 75%;
+			}
+			div.animated-speaker,
+			div.unanimated-speaker{
+				height: 100%;
+				background: no-repeat center center; 
+				background-size: cover;
+			}
+			div.animated-speaker{
+				-webkit-box-shadow: 0px 0px 5px white;
+				box-shadow: 0px 0px 5px white;
+			}
+			div.unanimated-speaker{
+				/*border: 2px solid white;*/
+				/*border-radius: 5px;*/
+				-webkit-box-shadow: 0px 0px 15px white;
+				box-shadow: 0px 0px 15px white;
+			}
+			div.speaker{
+				display: inline-block;
+				margin: auto;
+		    	-webkit-perspective: 3000px;
+			}
+			div.speaker-list.hidden-xs.hidden-sm div.speaker{
+				width: 19.8%;
+				height: 33.2%;
+				padding: 0.2em;
+				/*padding-right: 0.2em;*/
+			}
+			div.speaker-list.visible-xs.visible-sm div.speaker{
+				height: 400px;
+				margin-top: 2em;
+			}
+			div.speaker a{
+				color: white;
+				font-size: 2em;
+				text-decoration: none;
+				font-family: 'Open Sans';
+				font-weight: 300;
+			}
+			span.speaker-name{
+				text-transform: uppercase;
+			}
+			span.speaker-name .bold{
+				font-weight: bold;
+			}
+			div.speaker.col-sm-6 a{
+				color: white;
+				font-size: 2em;
+				text-decoration: none;
+				font-family: 'Open Sans';
+				font-weight: 300;
+			}
+			div.speaker.col-sm-6 .bold{
+				font-weight: bold;
+			}
+			div.speaker span.vertical-table {
+		        position: relative;
+		        -webkit-transition: all 0.2s ease-out,
+		            -webkit-transform 0.3s ease-out;
+		        -moz-transition: all 0.3s ease-out,
+		            -moz-transform 0.3s ease-out;
+		        -ms-transition: all 0.3s ease-out,
+		            -ms-transform 0.3s ease-out;
+		        -o-transition: all 0.3s ease-out,
+		            -o-transform 0.3s ease-out;
+		        transition: all 0.3s ease-out,
+		            transform 0.3s ease-out;
+		        height: 100%;
+		        width: 100%;
+		        background-color: rgba(0, 0, 0, 0.5);
+		    }
+		    div.speaker span.vertical-table:hover{
+		    	opacity: 0;
+		    }
+		    div.title-tile{
+		    	height: 100%;
+				background: no-repeat center center; 
+				/*background-size: cover;*/
+		    }
+		    div.speaker.title-tile span.vertical-table:hover{
+		    	opacity: 1;
+		    }
+		</style>
+	</head>
 <body>
 	<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
 	<div class="container-fluid white centered">
