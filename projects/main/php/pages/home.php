@@ -471,7 +471,7 @@
 			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../../php/pages/lectures.php" class="title head4 text">Lectures</a>
+						<a href="../../php/pages/lectures2.php" class="title head4 text">Lectures</a>
 					</span>
 				</span>
 			</div>
