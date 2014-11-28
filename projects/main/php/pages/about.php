@@ -3,6 +3,8 @@
 <html>
     <head>
         <title>About | Shaastra 2015</title>
+        <meta name="keywords" content="about shaastra,about">
+        <meta name"description" content="SHAASTRA is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind to be held from January 3th to 6th 2015">
         <?php include '../../php/base/head.php' ?>
         <style>
             .main {

@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>Shaastra 2015</title>
+		<meta name="keywords" content="shaastra 2015,shaastra">
+        <meta name"description" content="Shaastra is the annual technical festival of Indian Institute of Technology Madras (IITM),Chennai, India, to be held from January 3th to 6th 2015">
 		<?php include '../../php/base/head.php'; ?>
         <?php
         	$poll_path = '../../php/misc/poll.csv';
@@ -316,12 +318,12 @@
         		</tr>
         	</table>
  -->        
- 			<h4>Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+ 			<h4>Have you heard of Pledge-A-Book ?</h4>
 			<button style="outline:0;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 				Click here to answer
 			</button>
  		</div>
- 		<div id="poll_after" style="display:none;"><h4>Thank you for your time. Find out more <a href="http://www.shaastra.org/2015/production/projects/pledgeabook/">here</a></h4></div>
+ 		<div id="poll_after" style="display:none;"><h4>Thank you for your time. Find out more <a href="../../php/pages/social.php">here</a></h4></div>
     </div>
 
 
@@ -333,7 +335,7 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button style="outline:0;" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book - Shaastra's social initiative?</h4>
+        			<h4 style="text-align:center;" class="modal-title" id="myModalLabel">Have you heard of Pledge-A-Book - Shaastra's social initiative</h4>
       			</div>
       			<div id="poll_modal_body" style="margin-left:17%;" class="modal-body">
         			<input type="radio" name="data" id="option_one" value="donated" onclick="poll_save(this.value)">
@@ -396,7 +398,7 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<div class="img">
-							<img src="../../img/logo/400x210.png" />
+							<img src="../../img/logo/400x210.png" alt="shaastra logo" />
 						</div>
 					</span>
 				</span>
@@ -469,7 +471,7 @@
 			<div class="col-sm-5 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../../php/pages/lectures.php" class="title head4 text">Lectures</a>
+						<a href="../../php/pages/lectures2.php" class="title head4 text">Lectures</a>
 					</span>
 				</span>
 			</div>
@@ -580,15 +582,15 @@
             </style>
             <div class="row logo-vertical row-centered hidden-sm">
                 <a target="_blank" class="iitm-logo col-centered" href="http://www.iitm.ac.in">
-                    <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
+                    <img class="img-responsive" src="../../img/logo/iitm_white.png" alt="iitm logo"/>
                 </a>
                 <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
-                    <img class="img-responsive" src="../../img/logo/iso_white.png"/>
+                    <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
                 </a>
             </div>
             <div class="row logo-vertical social-cause-logo-vertical row-centered hidden-sm">
                 <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
-                    <img class="img-responsive" src="../../img/logo/unesco.png">
+                    <img class="img-responsive" src="../../img/logo/unesco.png" alt="unesco logo">
                 </a>
                 <!-- <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
                     <img class="img-responsive" src="http://placehold.it/150x75">
