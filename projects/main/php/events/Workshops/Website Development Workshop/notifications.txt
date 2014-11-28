@@ -1,1 +1,1 @@
-<p><span style="font-size:18px"><strong>Thank you for the overwhelming response. We have closed registrations temporarily.</strong></span></p>
+<p><span style="font-size:18px; line-height:25.7142581939697px"><strong>REGISTRATONS ARE CLOSED !</strong></span></p>
