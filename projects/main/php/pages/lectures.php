@@ -6,6 +6,7 @@
         <meta name="keywords" content="lectures shaastra 2015,lectures shaastra,shaastra lectures">
         <meta name"description" content="Get ready for the intriguing Shaastra 2015 lecture series,to be held from January 3th to 6th 2015">
 		<?php include '../../php/base/head.php' ?>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<style type="text/css">	
 			div.speaker-list.visible-xs.visible-sm{
 			}
@@ -95,6 +96,8 @@
 		    	opacity: 1;
 		    }
 		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/lectures-animation.css">
+
 	</head>
 <body>
 	<?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
