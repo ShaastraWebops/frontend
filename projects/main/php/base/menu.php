@@ -631,7 +631,7 @@
             </li>
             <li>
                 <span class="bg"></span>
-                <a href="<?php echo $SITE_URL; ?>../../php/pages/lectures.php" class="table">
+                <a href="<?php echo $SITE_URL; ?>../../php/pages/lectures2.php" class="table">
                     <span class="table-cell">
                         <span>
                             <span class="big">Lectures</span>

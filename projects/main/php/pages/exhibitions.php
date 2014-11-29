@@ -3,6 +3,8 @@
 <html>
 	<head>
 		<title>Exhibitions | Shaastra 2015</title>
+		<meta name="keywords" content="exhibitions shaastra,exhibitions,envisage">
+        <meta name"description" content="SHAASTRA, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology.">
 		<?php include '../../php/base/head.php' ?>
 
 		<style type="text/css">
@@ -115,7 +117,7 @@
 
 			<div class="container-fluid">
 				<div class="col-md-10 col-md-offset-1">
-                    <p><img style="display: inline; width:7%" src="../../img/logo/cfi.png"> <b>C<span style="color:red">FI</span> - Centre <span style="color:red">For Innovation</span></b> is a ‘Student Innovation Lab’ of IIT Madras with a prime motto of <b>‘Walk in with an Idea, Walk out with a Product’</b>. It was established in 2008, with the help of funds donated by the 1981 batch of IIT Madras. The vision of CFI is “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”.</p>
+                    <p><img style="display: inline; width:7%" src="../../img/logo/cfi.png" alt="cfi"> <b>C<span style="color:red">FI</span> - Centre <span style="color:red">For Innovation</span></b> is a ‘Student Innovation Lab’ of IIT Madras with a prime motto of <b>‘Walk in with an Idea, Walk out with a Product’</b>. It was established in 2008, with the help of funds donated by the 1981 batch of IIT Madras. The vision of CFI is “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”.</p>
                 </div>
 				<div class="col-md-10 col-md-offset-1">
                     <br />
@@ -123,14 +125,14 @@
                     <h2 class="text-center">C<span style="color: red">FI</span> Open House Exhibition</h2>
                     <p>CFI Open House is an exhibition of numerous innovative projects, automated machines and also a mini Envisage (the first wholly student run techno-entertainment show in the country), put up by the students of IIT Madras. Some highlight projects of CFI Open House include the ‘Quadrotor’ which helped the Police Department of Chennai in a crime site investigation and projects done in collaboration with Railways, Chennai Corporation which autonomously checks the alignment changes of the overhead lines. Projects at CFI have great impact on the daily lives as well. How often does one lose a key and remain clueless about what to do? Students at CFI have come up with an ‘Electronic Lock’ wherein a password stored in mobile phones can open locked doors. Projects of Team Sahaay like a Standing Wheel Chair and Prosthetic Arms have a tremendous social impact as well. Innovations of this sort have always been a trademark of CFI.</p>
 				</div>
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-10 col-md-offset-1"> 
                     <div class="row row-centered">
                         <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_arm.jpg">
+                            <img style="width: 100%" src="../../img/cfi_arm.jpg" alt="cfi_robo arm">
                         </div>
 
                         <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_quadcopter.jpg">
+                            <img style="width: 100%" src="../../img/cfi_quadcopter.jpg" alt="cfi_quadcoptor">
                         </div>
                     </div>
                 </div>

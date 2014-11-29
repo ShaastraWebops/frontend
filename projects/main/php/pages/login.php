@@ -10,6 +10,8 @@
 <html>
     <head>
         <title>Login | Shaastra 2015</title>
+        <meta name="keywords" content="login shaastra 2015,shaastra login">
+        <meta name"description" content="Register/Login to Shaastra 2015 website and be part of us in the Fascinating technical festival IIT Madras,to be held from January 3th to 6th 2015">
         <?php include '../../php/base/head.php' ?>
 
         <style>
