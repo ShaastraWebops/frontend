@@ -1,5 +1,5 @@
-<p><span style="font-size:16px"><strong>Registrations have reopened !</strong></span> <span style="font-size:16px"><strong>!</strong></span></p>
+<p><span style="font-size:16px; line-height:22.8571186065674px"><strong><span style="font-size:18px">Check out the updated Problem Statement&nbsp;! ! !&nbsp;</span></strong></span></p>
 
 <p><span style="font-size:16px"><strong>TDP Phase-II Submissions have begun ! !</strong></span></p>
 
-<p><span style="font-size:18px"><strong>Deadline for TDP Phase-II Submissions has&nbsp;been extended to 29th November ! ! !</strong></span></p>
+<p><span style="font-size:18px"><strong>Deadline for TDP Phase-II Submissions has&nbsp;been extended to 3rd&nbsp;December ! ! !</strong></span></p>

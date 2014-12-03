@@ -6,6 +6,4 @@
 
 <p>TDP template has been modified. Kindly check out the new template.</p>
 
-<p>The second round of TDP&nbsp;submission has started!</p>
-
-<p>The last date&nbsp;for TDP submission is 20th November.</p>
+<p>The second round of TDP&nbsp;submission has started!Results for second round will be released before 8th December 2014.</p>
