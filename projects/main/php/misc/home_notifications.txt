@@ -8,10 +8,6 @@
 
 <p>Problem Statements have been released!</p>
 
-<p>TDP Phase-I results announced in respective events page!</p>
-
-<p>Deadline for TDP submission extented!</p>
-
-<p>Deadline for TDP submission phase-II is 25st Nov 2014!</p>
+<p>TDP Phase-Ii results announced in respective events page!</p>
 
 <p>Refer to events &nbsp;page for more event related updates!</p>

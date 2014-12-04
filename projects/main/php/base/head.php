@@ -55,17 +55,8 @@ if ($DEBUG) {
 <?php if (!$DEBUG) { ?>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Titillium+Web">
 <?php } ?>
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Titillium+Web">
 <style>
-<?php if ($DEBUG) { ?>
-    @font-face {
-        font-family: 'Titillium Web';
-        src: url('../../fonts/TitilliumWeb.woff');
-    }
-    @font-face {
-        font-family: 'Dosis';
-        src: url('../../fonts/Dosis.woff');
-    }
-<?php } ?>
 	@font-face {
 		font-family: 'Glyphicons Halflings';
 		src: url('../../fonts/glyphicons-halflings-regular.eot');
