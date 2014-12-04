@@ -41,7 +41,7 @@
 		?>
 
 		<title>Lectures | Shaastra 2015</title>
-
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<?php include '../../php/base/head.php' ?>
 		<style>
 
