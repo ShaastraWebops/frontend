@@ -3,7 +3,6 @@
 <html>
 	<head>
 		<title>Lectures | Shaastra 2015</title>
-
 		<?php include '../../php/base/head.php' ?>
 </head>
 <style type="text/css">

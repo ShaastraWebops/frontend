@@ -128,24 +128,31 @@
             }
             .speaker-link:hover {
                 color : #fff;
-
+            }
+            .speakers-name{
+            	font-weight: 300;
+            	font-family: 'Open Sans', sans-serif;
+            	text-transform: uppercase;
+            }
+            .speakers-name.bold{
+            	font-weight: bold;
             }
 		</style>
 	</head>
 <body>
     <?php $back="../../php/pages/lectures.php"; include '../../php/base/menu.php' ?>
 	<div class="container-fluid white centered">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center title"><?php echo ucwords($speaker_name); ?></h1>
-                    <div class="white breaker">
-                        <span class="left"></span>
-                        <div class="dice white"></div>
-                        <span class="right"></span>
-                    </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center title"><?php echo ucwords($speaker_name); ?></h1>
+                <div class="white breaker">
+                    <span class="left"></span>
+                    <div class="dice white"></div>
+                    <span class="right"></span>
                 </div>
             </div>
         </div>
+    </div>
 	<div class="container-fluid" id="speaker-content">
 		<?php if (isset($editable) && $editable) { ?>
 		    <form method="post" action='../../php/scripts/save_to_file.php'>
@@ -174,22 +181,18 @@
             <div class="navbar-collapse collapse" id="speakers-list">
                 <div class="row text-center">
                     <?php for($speaker_i = 0; $speaker_i < 14; $speaker_i++) { ?>
-                        <div class="speaker text-center" style="display: inline-block; width : 14%; border: 1px solid #fff;">
-                            <div class="dummy" style="display:none">
-                                <a href="" class="speaker-link">
-                                    <div class=""><!--
-                                        --><span style="float:left; width : 100%;"><?php echo ucwords($speakers[$speaker_i]); ?></span><!--
-                                        --><div class="speaker-image" style="width : 100%;
-                                            background: url(../../img/logo/200x200_dice_dark.png) 
-                                            no-repeat center center; background-size: cover;">
-                                        </div><!--
-                                    --></div>
-                                </a>
-                            </div>
+                        <div class="speaker text-center" style="display: inline-block; width : 14%;">                            
                             <div class="real">
                                 <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" class="speaker-link">
                                     <div class=""><!--name and image of all the speakers-->
-                                    	<span style="float:left; width : 100%;"><?php echo ucwords($speakers[$speaker_i]); ?></span>
+                                    	<span style="float:left; width : 100%;">
+                                    		<span class="speakers-name">
+												<?php echo substr($speakers[$speaker_i],0, strpos($speakers[$speaker_i], ' ')); ?>
+											</span>
+											<span class="speakers-name bold">
+												<?php echo substr($speakers[$speaker_i],strpos($speakers[$speaker_i], ' ')); ?>
+											</span>
+                                    	</span>
                                         <div class="speaker-image" style="width : 100%; background: url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg) no-repeat center center; background-size: cover;">
                                         </div>
                                     </div>
