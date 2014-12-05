@@ -144,19 +144,14 @@
         	<?php } ?>
     		<?php if($i==$speaker_count/2) { ?>
 	        	<div class="speaker title-tile" id="shaastra-lectures" style="background-image: url(../../img/logo/200x200_dice_white.png)">
-		            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$i]) ?>">
-						<!-- <span class='vertical-table'>
-						    <span class='vertical-table-cell text-center'>
-								<span class="speaker-name">SHAASTRA LECTURES</span>
-				    		</span>
-						</span> -->
+		            <a >
 			        </a>
 		        </div>
 			<?php } ?>
 			<?php if($i>$speaker_count/2) { $speaker_i=$i-1;?>
 		        <div class="speaker">
 		        	<div class="animated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$speaker_i]) ?>"
-		        	style="background-image: url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg)">
+		        	style="background-image: url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg)">
 			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>">
 							<span class='vertical-table'>
 							    <span class='vertical-table-cell text-center'>
