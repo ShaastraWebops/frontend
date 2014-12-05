@@ -203,7 +203,7 @@ div.animated-speaker#vanitha-narayanan {
 }
 
 /* line 154, ../sass/lectures-animation.scss */
-div.animated-speaker#vijay-govindrajan {
+div.animated-speaker#vijay-govindarajan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;
@@ -441,7 +441,7 @@ div.unanimated-speaker#vanitha-narayanan {
 }
 
 /* line 197, ../sass/lectures-animation.scss */
-div.unanimated-speaker#vijay-govindrajan {
+div.unanimated-speaker#vijay-govindarajan {
   opacity: 0;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 0%;

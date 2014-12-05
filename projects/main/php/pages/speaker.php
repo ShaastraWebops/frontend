@@ -6,7 +6,7 @@
             $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
                 "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
-                "vijay govindrajan", "vinita bali"
+                "vijay govindarajan", "vinita bali"
             );
 
 			if ( isset($_REQUEST['name']) ) {
@@ -193,7 +193,7 @@
 												<?php echo substr($speakers[$speaker_i],strpos($speakers[$speaker_i], ' ')); ?>
 											</span>
                                     	</span>
-                                        <div class="speaker-image" style="width : 100%; background: url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg) no-repeat center center; background-size: cover;">
+                                        <div class="speaker-image" style="width : 100%; background: url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg) no-repeat center center; background-size: cover;">
                                         </div>
                                     </div>
                                 </a>
