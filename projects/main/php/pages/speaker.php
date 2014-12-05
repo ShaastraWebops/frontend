@@ -4,7 +4,7 @@
 	<head>
 		<?php
             $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
-                "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
+                "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
                 "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
                 "vijay govindrajan", "vinita bali"
             );
@@ -162,12 +162,12 @@
         			<?php echo $data; ?>
         		    </textarea>
         		</div>
-                    </form>
-                <?php } else { ?>
-                    <div class='data col-md-offset-1 col-md-10'>
-                        <?php echo file_get_contents('../../php/lectures/' . $speaker_name . '.html');; ?>
-                    </div>
-                <?php } ?>
+            </form>
+        <?php } else { ?>
+            <div class='data col-md-offset-1 col-md-10'>
+                <?php echo file_get_contents('../../php/lectures/' . $speaker_name . '.html');; ?>
+            </div>
+        <?php } ?>
 	</div>
     <div class="navbar navbar-inverse navbar-fixed-bottom speaker-list hidden-xs hidden-sm">
         <div class="container">
@@ -181,7 +181,7 @@
             <div class="navbar-collapse collapse" id="speakers-list">
                 <div class="row text-center">
                     <?php for($speaker_i = 0; $speaker_i < 14; $speaker_i++) { ?>
-                        <div class="speaker text-center" style="display: inline-block; width : 14%;">                            
+                        <div class="speaker text-center" style="display: inline-block; width : 14%;">
                             <div class="real">
                                 <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" class="speaker-link">
                                     <div class=""><!--name and image of all the speakers-->
