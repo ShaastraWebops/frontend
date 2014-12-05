@@ -117,7 +117,7 @@
 		$speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
                 "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
-                "vijay govindrajan", "vinita bali"
+                "vijay govindarajan", "vinita bali"
             );
 		$speaker_count = count($speakers);
 	?>
@@ -126,7 +126,7 @@
 			<?php 	if($i<$speaker_count/2) {?>
 		        <div class="speaker">
 					<div class="animated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$i]) ?>"
-			        	style="background-image:url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$i]); ?>.jpg)">
+			        	style="background-image:url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$i]); ?>.jpg)">
 			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$i]) ?>">
 							<span class='vertical-table'>
 							    <span class='vertical-table-cell text-center'>
@@ -175,7 +175,7 @@
 			<?php 	if($i<$speaker_count/2) {?>
 		        <div class="speaker col-sm-6">
 					<div class="unanimated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$i]) ?>"
-			        	style="background-image:url(../../img/lectures/<?php echo str_replace(' ', '%20', $speakers[$i]); ?>.jpg)">
+			        	style="background-image:url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$i]); ?>.jpg)">
 			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$i]) ?>">
 							<span class='vertical-table'>
 							    <span class='vertical-table-cell text-center'>
