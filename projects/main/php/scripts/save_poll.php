@@ -6,7 +6,7 @@ $date = date("Y-m-d");
 $ip = $_SERVER['REMOTE_ADDR'];
 
 $list = array($vote[0], $vote[2], $vote[4], $time, $date, $ip);
-$a = array();
+$a = [];
 
 for ($i=0; $i<5; $i+=2) { 
 	if(ctype_digit((string)$vote[$i]) && $vote[$i]<=5 && $vote[$i]>=1) 

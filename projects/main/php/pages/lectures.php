@@ -7,7 +7,7 @@
         <meta name"description" content="Get ready for the intriguing Shaastra 2015 lecture series,to be held from January 3th to 6th 2015">
 		<?php include '../../php/base/head.php' ?>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-		<style type="text/css">	
+		<style type="text/css">
 			div.speaker-list.visible-xs.visible-sm{
 			}
 			div.speaker-list.hidden-xs.hidden-sm{
@@ -17,7 +17,7 @@
 			div.animated-speaker,
 			div.unanimated-speaker{
 				height: 100%;
-				background: no-repeat center center; 
+				background: no-repeat center center;
 				background-size: cover;
 			}
 			div.animated-speaker{
@@ -89,7 +89,7 @@
 		    }
 		    div.title-tile{
 		    	height: 100%;
-				background: no-repeat center center; 
+				background: no-repeat center center;
 				/*background-size: cover;*/
 		    }
 		    div.speaker.title-tile span.vertical-table:hover{
@@ -115,7 +115,7 @@
     </div>
     <?php
 		$speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
-                "ela bhatt", "gurtej sindhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
+                "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
                 "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
                 "vijay govindrajan", "vinita bali"
             );
@@ -175,7 +175,7 @@
 	    <?php } ?>
 	</div>
 	<!-- small screens (mobiles) -->
-	<div class="container-fluid speaker-list visible-xs visible-sm">	    
+	<div class="container-fluid speaker-list visible-xs visible-sm">
 		<?php for($i = 0; $i < $speaker_count+1; $i++) { ?>
 			<?php 	if($i<$speaker_count/2) {?>
 		        <div class="speaker col-sm-6">
