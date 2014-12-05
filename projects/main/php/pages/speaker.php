@@ -153,7 +153,7 @@
             </div>
         </div>
     </div>
-	<div class="container-fluid" id="speaker-content">
+	<div class="container-fluid" id="speaker-content" style="padding-bottom : 50px">
 		<?php if (isset($editable) && $editable) { ?>
 		    <form method="post" action='../../php/scripts/save_to_file.php'>
         	        <div class='data col-md-offset-1 col-md-10'>
