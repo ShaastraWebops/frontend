@@ -4,7 +4,7 @@
 
 <p>Workshop&nbsp;registrations&nbsp;have started!</p>
 
-<p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaatsra.org/help.pdf</a></p>
+<p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaastra.org/help.pdf</a></p>
 
 <p>Problem Statements have been released!</p>
 
