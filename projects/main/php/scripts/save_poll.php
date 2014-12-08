@@ -5,38 +5,39 @@ $time = date("h:i:sa");
 $date = date("Y-m-d");
 $ip = $_SERVER['REMOTE_ADDR'];
 
-$list = array($vote[0], $vote[2], $vote[4], $time, $date, $ip);
-$a = [];
+$list = array($vote, $time, $date, $ip);
+$a = array();
+$a[0] = strcmp("tech_n_research", $vote);
+$a[1] = strcmp("business_n_entrepreneurship", $vote);
+$a[2] = strcmp("sports", $vote);
+$a[3] = strcmp("entertainment", $vote);
+$a[4] = strcmp("politics", $vote);
+$a[5] = strcmp("other", $vote);
 
-for ($i=0; $i<5; $i+=2) { 
-	if(ctype_digit((string)$vote[$i]) && $vote[$i]<=5 && $vote[$i]>=1) 
-		$a[$i] = 1;
-	else
-		$a[$i] = 0;
-}
-$final = $a[0]*$a[2]*$a[4];
 
-$filename = '../../php/misc/poll_latest.csv';
+$final = $a[0]*$a[1]*$a[2]*$a[3]*$a[4]*$a[5];
+
+$filename = '../../php/misc/poll_latest_now.csv';
 $fp = fopen($filename, "a+");
 if( !$fp ) {
-	echo "<h4> Thank you for your feedback </h4>";			
-	echo "<h4> But error occurred while saving-(Type_1) </h4>";
+    echo "<h4> Thank you for your feedback </h4>";
+    echo "<h4> But error occurred while saving-(Type_1) </h4>";
 } else {
-	if($final == 1) {
-		if(fputcsv($fp, $list)) {
-			echo "<h4> Thank you for your feedback </h4>";		
-			echo "<h4> Successfully saved ! </h4>";
-			exit;
-		} else {
-			echo "<h4> Thank you for your feedback </h4>";		
-			echo "<h4> But error occurred while saving-(Type_2) </h4>";
-			exit;
-		}
-	} else {
-		echo "<h4> Good attempt to corrupt our poll data </h4>";
-		echo "<h4> Sadly not saving ;) ! </h4>";
-		exit;
-	}	
-	fclose($fp);
+    if($final == 0) {
+        if(fputcsv($fp, $list)) {
+            echo "<h4> Thank you for your feedback </h4>";
+            echo "<h4> Successfully saved ! </h4>";
+            exit;
+        } else {
+            echo "<h4> Thank you for your feedback </h4>";
+            echo "<h4> But error occurred while saving-(Type_2) </h4>";
+            exit;
+        }
+    } else {
+        echo "<h4> Good attempt to corrupt our poll data </h4>";
+        echo "<h4> Sadly not saving ;) ! </h4>";
+        exit;
+    }
+    fclose($fp);
 }
 ?>
