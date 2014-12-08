@@ -1,3 +1,1 @@
-<p><span style="color:#FF0000"><span style="font-size:16px; line-height:22.8571186065674px">* PHASE 2 &nbsp;TDP results are released.</span></span></p>
-
-<p>&nbsp;</p>
+<p><span style="color:#FF0000"><span style="font-size:16px">* PHASE 2 &nbsp;TDP results are released.</span></span></p>

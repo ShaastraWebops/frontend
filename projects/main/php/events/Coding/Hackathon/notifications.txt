@@ -1,0 +1,1 @@
+<p>Max allowed team size is 3.</p>
