@@ -191,7 +191,14 @@
 
     <body class=''>
 
-        <?php $back="../../php/pages/eventlist.php?category=" . $category; include '../../php/base/menu.php'; ?>
+        <?php
+            if ($category == "Sampark") {
+                $back="../../php/pages/contentlist.php?name=sampark";
+            } else {
+                $back="../../php/pages/eventlist.php?category=" . $category;
+            }
+            include '../../php/base/menu.php';
+        ?>
 
         <!-- TABBAR -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-size='big'>
