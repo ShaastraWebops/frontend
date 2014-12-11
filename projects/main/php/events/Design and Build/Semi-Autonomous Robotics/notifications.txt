@@ -1,7 +1,9 @@
-<p>Results for first round of TDP submission are out!</p>
+<p>Results for second round of TDP submission are out!</p>
 
-<p>Please check out&nbsp;the version 2 of Semi-AutonomousRobotics Problem Statement.</p>
+<p>Please check out&nbsp;the version 2 of Semi-Autonomous Robotics Problem Statement.</p>
 
-<p>The second round of TDP&nbsp;submission has started!</p>
+<p>The third round of TDP&nbsp;submission has started!</p>
 
-<p><span style="background-color:rgb(34, 34, 34)">The last date&nbsp;for TDP submission is Midnight 5th December 2014.</span>Results for second round will be released before 8th December 2014.</p>
+<p><span style="background-color:rgb(34, 34, 34)">The last date&nbsp;for third round TDP submission is 17th December 2014.</span></p>
+
+<p>Results for third&nbsp;round will be released before 18th December 2014.</p>
