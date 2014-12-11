@@ -134,7 +134,7 @@
 		<div class="col-md-12" style="text-align: center">
 			<h4>Hear the Speaker</h4>
 			<div class="speaker-audio-fft" style="margin: auto; height: 50px; width: 50%;">
-			    <img class="back" src="../../audio/<?php echo urlencode($speaker_name); ?>_fft_back.png">
+			    <img class="back" src="../../audio/<?php echo urlencode($speaker_name); ?>_fft_back.png" alt="<?php echo ($speaker_name); ?>">
 			    <div class="front" style="background:url(../../audio/<?php echo urlencode($speaker_name); ?>_fft_front.png) no-repeat; background-size:100% 100%;"></div>
 			</div>
 			<audio controls id="audio" style="width: 50%;">

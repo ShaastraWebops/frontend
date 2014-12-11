@@ -431,7 +431,7 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<div class="img">
-							<img src="../../img/logo/400x210.png" />
+							<img src="../../img/logo/400x210.png" alt="dice 400x210"/>
 						</div>
 					</span>
 				</span>
@@ -615,18 +615,18 @@
             </style>
             <div class="row logo-vertical row-centered hidden-sm">
                 <a target="_blank" class="iitm-logo col-centered" href="http://www.iitm.ac.in">
-                    <img class="img-responsive" src="../../img/logo/iitm_white.png"/>
+                    <img class="img-responsive" src="../../img/logo/iitm_white.png" alt="white iitm logo"/>
                 </a>
                 <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
-                    <img class="img-responsive" src="../../img/logo/iso_white.png"/>
+                    <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
                 </a>
             </div>
             <div class="row logo-vertical social-cause-logo-vertical row-centered hidden-sm">
                 <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
-                    <img class="img-responsive" src="../../img/logo/unesco.png">
+                    <img class="img-responsive" src="../../img/logo/unesco.png" alt="unesco logo">
                 </a>
                 <!-- <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
-                    <img class="img-responsive" src="http://placehold.it/150x75">
+                    <img class="img-responsive" src="http://placehold.it/150x75" alt="">
                 </a> -->
             </div>
     		<style>

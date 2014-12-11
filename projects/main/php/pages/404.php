@@ -32,8 +32,8 @@
         </style>
     </head>
     <body>
-        <img id="logo" src="../../img/logo/1000x250_dark.png">
-        <img id="tools" src="../../img/misc/tools.png">
+        <img id="logo" src="../../img/logo/1000x250_dark.png" alt="shaastra logo 1000x250">
+        <img id="tools" src="../../img/misc/tools.png" alt="tools">
 
         <br>
         <p>
