@@ -1,9 +1,9 @@
-<p>Results for first round of TDP submission are out!</p>
+<p>Results for second round of TDP submission are out!</p>
 
 <p><span style="background-color:rgb(34, 34, 34)">Problem Statement&nbsp;has&nbsp;been updated!</span></p>
 
 <p>Please check out&nbsp;the version 2 of Manual Robotics Problem Statement.</p>
 
-<p>The second round of TDP&nbsp;submission has started!</p>
+<p>The third round of TDP&nbsp;submission has started!</p>
 
-<p>The last date&nbsp;for TDP submission is 5th December.</p>
+<p>The last date&nbsp;for TDP submission is 14th December.</p>
