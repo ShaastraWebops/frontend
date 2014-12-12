@@ -5,6 +5,7 @@
 		<title>Exhibitions | Shaastra 2015</title>
 		<meta name="keywords" content="exhibitions shaastra,exhibitions,envisage">
         <meta name"description" content="SHAASTRA, IIT Madras presents Envisage, a novel techno cultural show specializing in defying your imagination, breaking boundaries and revolutionizing basic science and technology.">
+        <meta name="robots" content="NOODP">
 		<?php include '../../php/base/head.php' ?>
 
 		<style type="text/css">

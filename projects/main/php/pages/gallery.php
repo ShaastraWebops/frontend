@@ -21,6 +21,7 @@
         ?>  
         <title>Gallery | Shaastra 2015</title>
         <meta name="keywords" content="gallery,shaastra gallery,shaastra galley 2015">
+        <meta name="robots" content="NOODP">
         <?php include '../../php/base/head.php' ?>
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery.css">
         <link rel="stylesheet" type="text/css" href="../../css/blueimp-gallery-indicator.css">

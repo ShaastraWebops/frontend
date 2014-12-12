@@ -1,7 +1,10 @@
 <?php include '../../php/base/logmein.php'; ?>
 <html>
 	<head>
-		<title>Shaastra 2015</title>
+		<title>Shaastra 2015 | IIT Madras Techfest | Chennai</title>
+		<meta name="keywords" content="Shaastra 2015 home,iitm techfest,shaastra chennai,iitm chennai techfest">
+        <meta name"description" content="SHAASTRA is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind to be held from January 3th to 6th 2015">
+		<meta name="robots" content="NOODP">
 		<?php include '../../php/base/head.php'; ?>
         <?php
         	$poll_path = '../../php/misc/poll.csv';

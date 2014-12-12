@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pre Shaastra | Shaastra 2015</title>
-    <meta name="keywords" content="pre shaastra 2015,pre shaastra">
+    <title>Pre Shaastra | Shaastra 2015 | Sampark | Lectures | Workshops | Events | IIT Madras Techfest | Chennai</title>
+    <meta name="keywords" content="pre shaastra 2015,pre shaastra,sampark,lectures,workshops,events">
     <meta name"description" content="Distance doesn’t matter anymore for Shaastra comes right to your doorstep to guarantee you the experience of a lifetime.Aimed at ‘Designing Dreams’, we proudly present Sampark'14">
+    <meta name="robots" content="NOODP">
     <?php include '../../php/base/head.php' ?>
     <style>
 

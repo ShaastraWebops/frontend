@@ -1,8 +1,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" href="../../img/favicon.ico">
-
-		<title>Countdown | Shaastra 2015</title>
+        <title>Countdown | Shaastra 2015</title>
 		<link rel="stylesheet" href="../../css/flipclock.css">
 		<?php include '../../php/base/head.php' ?>
 

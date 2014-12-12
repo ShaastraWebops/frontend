@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Contact Us | Shaastra 2015</title>
-        <meta name="keywords" content="contact us shaastra 2015,contact shaastra,contact us shaastra,contact">
-        <meta name"description" content="Feel free to contact the Shaastra 2015 team,IITM for any queries">
+		<title>Contact Us | Shaastra 2015 | IITM Techfest</title>
+        <meta name="keywords" content="contact us shaastra 2015,contact shaastra,contact us shaastra,contact,co-curricular affairs secretery shaastra,sponsorship & public relations shaastra,events shaastra,accomodation and student relations shaastra,design shaastra,symposium lectures & exhibitions shaastra,facilities & catering shaastra,QMS shaastra,finanance & sales shaastra,envisage shaastra">
+        <meta name"description" content="Feel free to contact the Shaastra 2015 team,IITM for any queries regarding Shaastra 2015">
+        <meta name="robots" content="NOODP">
 		<?php include '../../php/base/head.php' ?>
 		<style>
 		.btn.btn-bluebox {

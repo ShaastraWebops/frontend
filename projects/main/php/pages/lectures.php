@@ -2,9 +2,10 @@
 <!doctype html public "" "">
 <html>
 	<head>
-		<title>Lectures | Shaastra 2015</title>
+		<title>Lectures | Shaastra 2015 | IIT Madras Techfest | Chennai</title>
         <meta name="keywords" content="lectures shaastra 2015,lectures shaastra,shaastra lectures">
         <meta name"description" content="Get ready for the intriguing Shaastra 2015 lecture series,to be held from January 3th to 6th 2015">
+        <meta name="robots" content="NOODP">
 		<?php include '../../php/base/head.php' ?>
 </head>
 <style type="text/css">

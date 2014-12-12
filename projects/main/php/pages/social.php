@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Social Cause | Shaastra 2015</title>
+        <title>Social Cause | Shaastra 2015 | Pledge-A-Book campaign | IIT Madras Techfest | Chennai</title>
         <meta name="keywords" content="social cause shaastra 2015,social cause shaastra,social cause,pledge a book">
         <meta name"description" content="The Pledge-A-Book campaign is Shaastra's attempt to give back to society and to create impact in the fields of education and literacy.">
+        <meta name="robots" content="NOODP">
         <?php $back="../../php/pages/home.php"; include '../../php/base/head.php' ?>
 
         <style type="text/css">
