@@ -573,12 +573,20 @@
                 width: 75px;
                 float: left;
             }
+            .saarang-logo img {
+                height: 70px;
+                width: 150px;
+                float: left;
+            }
             .unesco-logo img {
                 height: 75px;
                 width: 150px;
                 float: left;
             }
             .iitm-logo:hover {
+                padding: 0;
+            }
+            .saarang-logo:hover {
                 padding: 0;
             }
             .tuv-logo:hover {
@@ -591,6 +599,10 @@
                 height: 85px;
                 width: 68.5px;
             }
+            .saarang-logo:hover img {
+                height: 75px;
+                width: 160px;
+            }
             .tuv-logo:hover img {
                 height: 85px;
                 width: 85px;
@@ -601,12 +613,19 @@
             }
             </style>
             <div class="row logo-vertical row-centered hidden-sm">
-                <a target="_blank" class="iitm-logo col-centered" href="http://www.iitm.ac.in">
-                    <img class="img-responsive" src="../../img/logo/iitm_white.png" alt="iitm logo"/>
-                </a>
-                <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
-                    <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
-                </a>
+                <div>
+                    <a target="_blank" class="saarang-logo col-centered" href="http://saarang.org">
+                        <img class="img-responsive" src="../../img/logo/small_saarang_white.png" alt="saarang logo"/>
+                    </a>
+                </div>
+                <div>
+                    <a target="_blank" class="iitm-logo col-centered" href="http://www.iitm.ac.in">
+                        <img class="img-responsive" src="../../img/logo/iitm_white.png" alt="iitm logo"/>
+                    </a>
+                    <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
+                        <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
+                    </a>
+                </div>
             </div>
             <div class="row logo-vertical social-cause-logo-vertical row-centered hidden-sm">
                 <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
