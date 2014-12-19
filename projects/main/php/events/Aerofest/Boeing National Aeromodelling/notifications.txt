@@ -1,5 +1,5 @@
+<p><span style="font-size:14px"><span style="background-color:rgba(0, 0, 0, 0.498039)"><span style="font-family:arial,helvetica,sans-serif">TDP Round 1 results are out ! Deadline for round 2 T</span></span></span><span style="background-color:rgba(0, 0, 0, 0.498039); font-family:arial,helvetica,sans-serif; font-size:14.4444446563721px">DP Submission is 18th Dec 2014, 11:59 pm.</span></p>
+
 <p><span style="font-size:14px"><span style="background-color:rgba(0, 0, 0, 0.498039)"><span style="font-family:arial,helvetica,sans-serif">Registrations&nbsp;for the Event is closed&nbsp;. TDP Selections are still on.</span></span></span></p>
 
 <p><span style="font-size:14px"><span style="background-color:rgba(0, 0, 0, 0.498039)"><span style="font-family:arial,helvetica,sans-serif">Check out the Problem Statement Tab.</span></span></span></p>
-
-<p><span style="font-size:14px"><span style="background-color:rgba(0, 0, 0, 0.498039)"><span style="font-family:arial,helvetica,sans-serif">Deadline for TDP Submission is 18th Dec 2014.</span></span></span></p>
