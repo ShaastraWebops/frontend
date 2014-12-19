@@ -430,6 +430,21 @@
 								<div class="line"></div>
 								<div class="small shaastra-logo">The spirit of <span class="">Engineering</span></div>
 								<div class="dates">3<sup>rd</sup> to 6<sup>th</sup> January</div>
+
+                                <div>
+                                    <div class="hidden-xs hidden-sm col-xs-6">
+                                        <div class="text small">brought to you by</div>
+                                        <div class="">
+                                            <img src="../../img/logo/small_logo_hindu.png" />
+                                        </div>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm col-xs-6">
+                                        <div class="text small">in association with</div>
+                                        <div class="">
+                                            <img src="../../img/logo/small_logo_paypal.png" />
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 						</span>
 					</span>
