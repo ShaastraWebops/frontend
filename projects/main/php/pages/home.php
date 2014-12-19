@@ -574,7 +574,7 @@
                 float: left;
             }
             .saarang-logo img {
-                height: 70px;
+                height: 75px;
                 width: 150px;
                 float: left;
             }
@@ -600,8 +600,8 @@
                 width: 68.5px;
             }
             .saarang-logo:hover img {
-                height: 75px;
-                width: 160px;
+                height: 85px;
+                width: 170px;
             }
             .tuv-logo:hover img {
                 height: 85px;
