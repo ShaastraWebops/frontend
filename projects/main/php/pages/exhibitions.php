@@ -63,7 +63,8 @@
 						<ul id="menu-nav" class="nav nav-pills nav-justified">
 							<li class="active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
 							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">CFI</a></li>
-							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Magic Materials</a></li>
+							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Air Show</a></li>
+                            <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Others</a></li>
 							<!-- <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li> -->
 						</ul>
 					</div>
@@ -144,7 +145,7 @@
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
-		                <h1 class="text-center title">Magic Materials</h1>
+		                <h1 class="text-center title">Air Show</h1>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -156,20 +157,23 @@
 
 			<div class="container-fluid">
 				<div class="col-md-10 col-md-offset-1">
-					<p>Ever been fascinated with the idea of merging science and magic? This Shaastra you can explore it all. You can walk on water, illuminate water, create water balls out of nothing and can do much more. Yes you heard that right. You will be amazed, dazzled, surprised, stunned as Shaastra unravels the surprises and takes you through the world of magical materials.</p>
-					<h2 class="text-center">Some videos from last year :</h2>
+					<p>One of the biggest RC flying shows in the country, with planes and helicopters all twisting and twirling and fliers using the sky as the canvas for their masterpieces.</p>
+                    <p>This year, we bring to Chennai, some of world's best aeromodellers. Wolfgang Krahofer, Gernot Bruckmann from Austria and 14 years oldJase Dussia from USA are sure to amaze all with their 3d extreme aircraft flying. Watch the night, lit up with night flying and pyrotechnics.  We also bring the aeromodellers in and around Chennai with their best show.</p>
+                    <p>Shaastra Air Show never fails in leaving its spectators in Awe!</p>
+                    <p>This Shaastra 2015, the Show is in the Air! </p>
+					<h2 class="text-center">Some videos from previous years :</h2>
 					<div class="row row-centered">
 						<div class="hidden-xs col-md-4 col-centered" >
-							<h3 class="text-center">Flubber</h3>
+							
 				      		<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/2mYHGn_Pd5M" allowfullscreen align="right"></iframe>
+								<iframe align="middle" frameborder="0" height="300" name="Danie Rau" scrolling="no" src="http://www.youtube.com/embed/wNfPVdeYhtc" width="400"></iframe>
 							</div>
 
 						</div>
 			            <div class="hidden-xs col-md-4 col-centered">
-			            	<h3 class="text-center">Heat Sensitive Tiles</h3>
+			            	
 				      		<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/5yuFDiwm0Eo" allowfullscreen align="right"></iframe>
+								<iframe align="middle" frameborder="0" height="300" name="GUnther Gold" scrolling="no" src="http://www.youtube.com/embed/QSovjdncQaA" width="400"></iframe>
 							</div>
 						</div><!--
 			            <div class="hidden-xs col-md-4 col-centered">
@@ -178,24 +182,19 @@
 								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/oDGfV2KZ0EM" allowfullscreen align="right"></iframe>
 							</div>
 						</div> -->
-			            <div class="hidden-xs col-md-4 col-centered">
-			            	<h3 class="text-center">Magic Sand</h3>
-				      		<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/10EnRI80zvk" allowfullscreen align="right"></iframe>
-							</div>
-						</div>
+			            
 					</div>
 
 
 				</div>
 			</div>
 		</div>
-	<!--
+	
 		<div class="page" id="page4">
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
-		                <h1 class="text-center title">EXHIBITIONS</h1>
+		                <h1 class="text-center title">Imagine Exhibits</h1>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -206,11 +205,85 @@
 		    </div>
 
 			<div class="container-fluid">
-				<div class="col-md-12">
-
+                <div class="row">
+					<div class="col-md-10 col-md-offset-1">
+				      	<div class="hidden-xs col-lg-6 col-md-6 ">
+				      		<div class="embed-responsive embed-responsive-4by3">
+							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
+                            <img src="../../img/Exibitions/virtual-dressing-room-580x386.jpg"/>
+							</div>
+						</div>
+		                <p style="padding-top:10px;">Come drown yourself in the world where the realm of reality is expanded beyond imagination. Imaginate is a world renowned augmented reality (AR) and virtual reality (VR) technology based enterprise that offers innovative visualization products and services, which enhance the consumers experience of reality. </p>
+	                    <p><h4> TrialAR </h4> TrialAR helps you to try out different apparel and accessories in a brick and mortar store, albeit through a kiosk (LED screen) that acts as a virtual trial room. By means of an iPad, the user can access different apparel designs and sizes and send the data wirelessly to the kiosk where a web camera accesses user's body information and immerses the user in a virtual trial experience. </p>
+	                    <p><h4> GiftAR </h4>  In today’s fast paced world, it became difficult to maintain constant relationship with families & friends especially on important occasions. GiftAR presents an immersive way of gifting to your loved ones through virtual video messages augmented on physical pictures. GiftAR is a mobile app built using Augmented Reality and social media technologies. This application enable users to send and receive personalized video gift messages. GiftAR can also be utilized as a platform for sharing information within a community or group</p>
+					</div>
 				</div>
 			</div>
-		</div> -->
+            
+            <div class="container-fluid white centered" style="margin-top:100px;">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">Tanks</h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+					<div class="col-md-10 col-md-offset-1">
+				      	<div class="hidden-xs col-lg-6 col-md-6 ">
+				      		<div class="embed-responsive embed-responsive-4by3">
+							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
+                            <img src="../../img/Exibitions/Arjun Mark-II  MBT_2.jpg" width="500" height="386">
+							</div>
+						</div>
+		                <p style="padding-top:10px;">The Arjun Main Battle Tank is a third-generation MBT that has been built by the Combat Vehicles Research & Development Establishment (CVRDE) a division of the DRDO . Named after the legendary archer Arjun from the epic Mahabharat this tank weighs nearly 65 T. The Arjun features a 120 mm main rifled gun with indigenously developed APFSDS ammunition, one 7.62 mm coaxial machine gun, and a 12.7 mm machine gun. It is powered by a single MTU multi-fuel diesel engine rated at 1,400 hp, and can achieve a maximum speed of 70 km/h (43 mph) and a cross-country speed of 40 km/h (25 mph). </p>
+                        
+	                    <p><h3> Featured Models this year : </h3> </p>
+                        <p>Muntra UGV tank (Unmanned Track vehicle)</p>
+                        <p>Armoured Ambulance</p>
+                        <p>Carrier command post tracked vehicle</p>
+                        <p>Bridge layer tank</p>
+                        <p>LCA- Tejas sub-systems</p>
+                        <br />
+                        <p>all exhibited by the CVRDE,  Avadi</p>
+                        
+					</div>
+				</div>
+                
+                <div class="container-fluid white centered" style="margin-top:50px;">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">Moving Planetorium</h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+					<div class="col-md-10 col-md-offset-1">
+				      	<div class="hidden-xs col-lg-5 col-md-6 ">
+				      		<div class="embed-responsive embed-responsive-4by3">
+							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
+                            <img src="../../img/Exibitions/sky-the.gif" width="400" height="300" >
+							</div>
+						</div>
+		                <p style="padding-top:40px;">The marvels of the vast, never ending space above us, brought to you in a truck. The moving planetarium, from the TamilNadu Science and Technology Centre, is simply a delight to all star gazers. With shows everyday, it is the best space tour a person can get, and come experience that only at Shaastra 2015</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div> 
 
 		<?php include '../../php/base/foot.php' ?>
 
