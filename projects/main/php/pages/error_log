@@ -2089,3 +2089,5 @@
 [22-Dec-2014 00:22:09 America/Chicago] PHP Notice:  Undefined variable: notifications_data in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 248
 [22-Dec-2014 00:23:08 America/Chicago] PHP Notice:  Undefined variable: notifications_data in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 248
 [22-Dec-2014 15:22:12 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[23-Dec-2014 04:01:57 America/Chicago] PHP Notice:  Undefined variable: notifications_data in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 248
+[23-Dec-2014 04:02:11 America/Chicago] PHP Notice:  Undefined variable: notifications_data in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 248
