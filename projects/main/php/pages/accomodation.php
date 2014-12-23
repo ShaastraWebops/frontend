@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Hospitality | Shaastra 2015</title>
-		<meta name="keywords" content="hospitality shaastra 2015,hospitality shaastra,shaastra hospi">
+		<meta name="keywords" content="hospitality shaastra 2015,hospitality shaastra,shaastra hospi,iitm,techfest,chennai,madras,accomodation">
         <meta name"description" content="We, the Hospitality team at Shaastra have pledged to leave no stone unturned to ensure that your stay with us is enjoyable and comfortable.">
 		<?php include '../../php/base/head.php' ?>
 		<style type="text/css">
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 text-justify">
+                <div class="col-sm-10 col-sm-offset-1 text-justify">
                     <form role="form" class="form-horizontal" id="calc">
                         <center><h3>Enter Shaastra IDs and date of stay </h3></center>
                         <br /><hr /><br />
@@ -74,18 +74,20 @@
                             <div class="form-group">
                                 <div class="col-md-12 person_<?php echo $i+1; ?> person">
                                     <div class="col-md-2">
-                                        #<?php echo $i+1; ?> &nbsp;&nbsp;
-                                        <select type="select" name="gender_<?php echo $i+1; ?>" class="form-control gender" style="width : 70%; display: inline-block">
-                                            <option value="X" selected>-------</option>
-                                            <option value="M">Male  </option>
-                                            <option value="F">Female </option>
-                                        </select>
+                                        <div class="col-md-1" style="padding: 0">#<?php echo $i+1; ?></div>
+                                        <div class="col-md-11">
+                                            <select type="select" name="gender_<?php echo $i+1; ?>" class="form-control gender">
+                                                <option value="X" selected>-------</option>
+                                                <option value="M">Male  </option>
+                                                <option value="F">Female </option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="col-md-2">
                                         <input type="text" name="shid_<?php echo $i+1; ?>" class="form-control shid" placeholder="Shaastra ID" value="">
                                     </div>
                                     <label for="shid" class="col-md-1 text-right">From</label>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="col-md-6" style="padding : 0 2px;">
                                             <input type="text" name="start_date_<?php echo $i+1; ?>" class="form-control date start" placeholder="Date" value="">
                                         </div>
@@ -94,13 +96,16 @@
                                         </div>
                                     </div>
                                     <label for="shid" class="col-md-1 text-right">To</label>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="col-md-6" style="padding : 0 2px;">
                                             <input type="text" name="end_date_<?php echo $i+1; ?>" class="form-control date end" placeholder="Date" value="">
                                         </div>
                                         <div class="col-md-6" style="padding : 0 2px;">
                                             <input type="text" name="end_time_<?php echo $i+1; ?>" class="form-control time end" placeholder="Time" value="">
                                         </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h4><span class="label label-danger valid">Invalid</span></h4>
                                     </div>
                                 </div>
                             </div>
@@ -134,6 +139,9 @@
         <script>
             var people = 0, days = [0,0,0,0,0], totaldays, err_msg = "";
             function calc() {
+                err_msg = ""
+                totaldays = 0
+                people = 0
                 for ( var i = 0; i < $('.person').length; i+=1 ) {
                     var $el = $($('.person')[i]);
                     if ( $el.find(".shid").val().length ) {
@@ -141,30 +149,39 @@
                         if ( $el.find(".gender option:selected").val() == "X" ) {
                             err_gender = 1
                         }
-                        if ( datepair[i].getTimeDiff() == 0 ) { // Time is messed up
+                        if ( datepair[i].getTimeDiff() <= 0 ) { // Time is messed up
                             err_date = 1
                         }
                         if ( err_date && err_gender ) {
-                            err_msg += "<li>Member " + (i+1) + " : gender and date/time invalid</li>"
+                            err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> and <b>date/time</b> invalid</li>"
+                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                             continue;
                         } else if ( err_date ) {
-                            err_msg += "<li>Member " + (i+1) + " : dates and time entered are invalid</li>"
+                            err_msg += "<li>Member " + (i+1) + " : <b>Date and time</b> entered are invalid</li>"
+                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                             continue;
                         } else if ( err_gender ) {
-                            err_msg += "<li>Member " + (i+1) + " : gender needs to be filled</li>"
+                            err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> needs to be filled</li>"
+                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                             continue;
                         }
+                        $el.find(".valid").addClass("label-success").removeClass("label-danger").text("Valid")
                         people += 1;
-                        days[i] = datepair[i+1].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
+                        days[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
                         totaldays += days[i];
+                    } else {
+                        $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                     }
                 }
                 console.log("people : " + people + "  days : " + days)
                 if ( err_msg != "" ) {
                     $('#cost').val("ERROR")
-                    $('.error-msg').show().find(".text")
+                    $('.error-msg').show(300).find(".text")
                             .html("We got some invalid data : <ul style='text-align: left'>" + err_msg + "</ul>")
                     return 1
+                } else {
+                    $('.error-msg').hide(300).find(".text").html("")
+                    $('#cost').val(0)
                 }
                 var caution_deposit = 0
 
@@ -174,8 +191,6 @@
                     $('#cost').val("ERROR")
                     return 0
                 } else if ( people == 0 ) {
-                    // $('.error-msg').show()
-                    //     .find(".text").html("Please input the information for atleast 1 person to pay for")
                     caution_deposit = 0
                 } else if ( people == 1 )
                     caution_deposit = 700
@@ -191,7 +206,7 @@
                     return 1
                 }
                 var cost = totaldays * 250 + 200 * people + caution_deposit
-                console.log(cost)
+                console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
                 if ( people == 0 ) {
                     $("#cost").val("0")
                     $("#help").html("")
@@ -203,25 +218,22 @@
             }
             var datepair = [null, null, null, null, null];
             $(document).ready(function() {
-                $("#boys").change(calc)
-                $("#girls").change(calc)
-                $("#days").change(calc)
-                $('#calc .time').timepicker({
-                    'showDuration': true,
-                    'timeFormat': 'g:ia'
-                });
-
+                // initialize datepair
                 $('#calc .date').datepicker({
                     'format': 'yyyy-mm-dd',
                     'autoclose': true
                 });
-
-                // initialize datepair
-
                 for ( var i = 0; i < 5; i+=1 ) {
                     datepair[i] = new Datepair($('.person_' + (i+1))[0]);
                 }
 
+                $(".person input").keyup(calc)
+                $(".person").on("rangeSelected", calc)
+                // $(".person input").change(calc)
+                $('#calc .time').timepicker({
+                    'showDuration': true,
+                    'timeFormat': 'g:ia'
+                });
             })
 
         </script>
