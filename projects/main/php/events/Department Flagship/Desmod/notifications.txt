@@ -1,5 +1,3 @@
-<p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Problem statement has&nbsp;been released.</span></span></p>
-
-<p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">TDP phase 1 results have been anounced.</span></span></p>
-
-<p><span style="font-size:18px">TDP phase 2 submission deadline 30th November 11:59pm.</span></p>
+<ul>
+	<li>Results for pre-registered event &nbsp;are out</li>
+</ul>

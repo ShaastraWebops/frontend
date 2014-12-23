@@ -1,13 +1,11 @@
+<p><a href="http://shaastra.org/2015/main/media/Aerobotics/Schedule%20-%20Day%20wise.pdf">Shaastra Schedule</a></p>
+
 <p>Symposium registrations have started!</p>
-
-<p>Events registrations have started!</p>
-
-<p>Workshop&nbsp;registrations&nbsp;have started!</p>
 
 <p>For any help with registration,&nbsp;please refer to <a href="http://www.shaastra.org/help.pdf">www.shaastra.org/help.pdf</a></p>
 
 <p>Problem Statements have been released!</p>
 
-<p>TDP Phase-I&nbsp;results announced in respective events page!</p>
+<p>TDP Phase-II&nbsp;results announced in respective events page!</p>
 
 <p>Refer to events &nbsp;page for more event related updates!</p>
