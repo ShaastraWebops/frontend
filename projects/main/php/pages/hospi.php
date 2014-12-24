@@ -42,7 +42,7 @@
 
 		<div class="container-fluid">
             <div class="row">
-                <div class="col-md-20 col-md-offset-1 text-center">
+                <div class="col-md-10 col-md-offset-1 text-center">
                     <br />
                     For any hospitality related queries, please contact <a href='mailto:outreach@shaastra.org'>outreach@shaastra.org</a>
                     <br />
@@ -80,8 +80,12 @@
                             </div>
                             <div id="tab2" class="panel-collapse collapse">
                                 <div class="panel-body content black ">
-                                    IIT Madras is located on Sardar Patel Road and is bordered by Adyar, Tharamani and Velachery. The 620 acres of land which form the campus is close to the Rajbhavan. The campus is midway between the Chennai Airport and the Central Railway station. It is around 14 kms from the Central Railway station, Chennai Airport and the central bus depot and is well connected by buses. <br />
-		                            <br />
+                                    IIT Madras is located on Sardar Patel Road and is bordered by Adyar, Tharamani and Velachery. The 620 acres of land which form the campus is close to the Rajbhavan. The campus is midway between the Chennai Airport and the Central Railway station. It is around 14 kms from the Central Railway station, Chennai Airport and the central bus depot and is well connected by buses. <br /><br />
+                                    <div class="row">
+                                        <div class="col-md-offset-2 col-md-3"><a href="https://play.google.com/store/apps/details?id=com.hm.raft"><img src="../../img/logo/raft.png" style="img-responsive" /></a></div>
+                                        <div class="col-md-5 text-justify" style=""> To get updated information on schedules to get to Shaastra, you can use the android application made by Geotagg - <a href="https://play.google.com/store/apps/details?id=com.hm.raft"><b>Raft</b></a> - The ultimate public transport app for commuters in India!</div>
+		                            </div>
+                                    <br />
 		                            <ol>
 		                                <li><b>From Chennai Central </b>
 		                                    The Shaastra team will be sending Institute buses to receive participants at Chennai Central. The representatives of the Student Relations department will be present to greet you near the exit of the station. Timings of the buses will be communicated to you. If you are unable to come through the Institute buses, other means of transportation are  readily available in the city at all times.
@@ -145,7 +149,7 @@
 		                                    The IITM buses which start at the main gate take you to the Gajendra Circle, academic zone and hostels. Upon reaching the IIT Madras campus, participants are requested to report to the Control Room, which will be operational day and night (except from 6:30 - 8:30 P.M.) All participants are required to carry their SAAR (Shaastra Advanced Accommodation Registration) letter which will be mailed to people whose accommodation is confirmed, college identity cards and bonafide certificates to avail the accommodation facilities. We will not be providing accommodation for local participants and they will have to make their own arrangements. We will be issuing Shaastra ID cards to all the outstation participants which can be collected from venues that will be informed when you arrive. Participants are also expected to follow certain rules and regulations to help us maintain the festive atmosphere in the institute.</li>
 		                                <br />
 		                                <li><b>Alternate Accomodation</b><br />
-		                                    Because of limited space on campus, we might not be able to provide accommodation to all participants who apply for accommodation. <!--In case you don't receive a confirmation mail regarding your accommodation from the Hospitality team, you could always make arrangements for your stay outside campus. We have uploaded a list of hotels and lodges for your reference <a href='http://www.shaastra.org/2014/alt_acco_shaastra.xlsx'>Here</a>.--> </li>
+		                                    Because of limited space on campus, we might not be able to provide accommodation to all participants who apply for accommodation. In case you don't receive a confirmation mail regarding your accommodation from the Hospitality team, you could always make arrangements for your stay outside campus. We have uploaded a list of hotels and lodges for your reference <a href='../../media/hospi/AlternateAccommodation.xlsx'>Here</a> </li>
 		                            </ul>
                                 </div>
                             </div>

@@ -153,6 +153,12 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row text-center" style="font-size: 1.2em">
+            Want to interract with the speakers personally ? <a href="https://docs.google.com/forms/d/1xfTHqFTDxN33YSkNjvRzJbmpGyJua7GhiZhfxxEwvkA/viewform">Register Here !</a>
+            <br />
+        </div>
+    </div>
 	<div class="container-fluid" id="speaker-content" style="padding-bottom : 50px">
 		<?php if (isset($editable) && $editable) { ?>
 		    <form method="post" action='../../php/scripts/save_to_file.php'>
