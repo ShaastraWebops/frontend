@@ -38,6 +38,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Events | Shaastra 2015 | IIT Madras Techfest | Chennai</title>
+    <meta name="keywords" content="events shaastra,aerofest shaastra,b-events shaastra,coding shaastra,department flagship shaastra,design and build shaastra,electronics fest shaastra,involve shaastra,quizzing shaastra,spotlight shaastra,workshops shaastra">
+    <meta name"description" content="Get involved in Shaastra 2015 events-aerofest,b-events,coding,department flagship,design and build,electronics fest,involve,quizzing,spotlight,workshops">
+    <meta name="robots" content="NOODP">
+    <?php include '../../php/base/head.php' ?>
     <?php
 
         if ( isset($_REQUEST['edit']) ) {

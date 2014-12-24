@@ -40,8 +40,11 @@
 			}
 		?>
 
-		<title>Lectures | Shaastra 2015</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<title>Lectures | Shaastra 2015 | IIT Madras Techfest | Chennai</title>
+		<meta name="keywords" content="speakers shaastra 2015,lectures shaastra 2015,lectures shaastra,shaastra lectures">
+        <meta name"description" content="Get ready for the intriguing Shaastra 2015 lecture series,to be held from January 3th to 6th 2015">
+        <meta name="robots" content="NOODP">
+
 		<?php include '../../php/base/head.php' ?>
 		<style>
 

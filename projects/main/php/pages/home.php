@@ -1,10 +1,11 @@
 <?php include '../../php/base/logmein.php'; ?>
 <html>
-    <head>
-        <title>Shaastra 2015</title>
-        <meta name="keywords" content="shaastra 2015,shaastra">
-        <meta name"description" content="Shaastra is the annual technical festival of Indian Institute of Technology Madras (IITM),Chennai, India, to be held from January 3th to 6th 2015">
-        <?php include '../../php/base/head.php'; ?>
+	<head>
+		<title>Shaastra 2015 | IIT Madras Techfest | Chennai</title>
+		<meta name="keywords" content="Shaastra 2015 home,iitm techfest,shaastra chennai,iitm chennai techfest">
+        <meta name"description" content="SHAASTRA is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind to be held from January 3th to 6th 2015">
+		<meta name="robots" content="NOODP">
+		<?php include '../../php/base/head.php'; ?>
         <?php
             $poll_path = '../../php/misc/poll.csv';
         ?>
@@ -374,7 +375,7 @@
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
 						<div class="img">
-							<img src="../../img/logo/400x210.png" />
+							<img src="../../img/logo/400x210.png" alt="dice 400x210"/>
 						</div>
 					</span>
 				</span>
@@ -603,7 +604,7 @@
                     <img class="img-responsive" src="../../img/logo/unesco.png" alt="unesco logo">
                 </a>
                 <!-- <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
-                    <img class="img-responsive" src="http://placehold.it/150x75">
+                    <img class="img-responsive" src="http://placehold.it/150x75" alt="">
                 </a> -->
             </div>
             <style>

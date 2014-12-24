@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hospitality | Shaastra 2015</title>
+		<title>Hospitality | Shaastra 2015 | IIT Madras Techfest | Chennai</title>
 		<meta name="keywords" content="hospitality shaastra 2015,hospitality shaastra,shaastra hospi">
         <meta name"description" content="We, the Hospitality team at Shaastra have pledged to leave no stone unturned to ensure that your stay with us is enjoyable and comfortable.">
+        <meta name="robots" content="NOODP">
 		<?php include '../../php/base/head.php' ?>
 		<style type="text/css">
 			.hospi_row > div {

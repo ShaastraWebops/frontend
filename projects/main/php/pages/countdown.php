@@ -1,8 +1,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" href="../../img/favicon.ico">
-
-		<title>Countdown | Shaastra 2015</title>
+        <title>Countdown | Shaastra 2015</title>
 		<link rel="stylesheet" href="../../css/flipclock.css">
 		<?php include '../../php/base/head.php' ?>
 
@@ -37,8 +36,8 @@
 		</style>
 	</head>
 	<body>
-		<img id="logo" src="../../img/logo/1000x250_dark.png">
-		<img id="tools" src="../../img/misc/tools.png">
+		<img id="logo" src="../../img/logo/1000x250_dark.png" alt="shaastra logo 1000x250">
+		<img id="tools" src="../../img/misc/tools.png" alt="spanner and gears">
 
 		<br>
 		<a href="http://www.shaastra.org/2015/main/php/home.php">

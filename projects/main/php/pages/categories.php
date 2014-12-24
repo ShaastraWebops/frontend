@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Events | Shaastra 2015</title>
+    <title>Events | Shaastra 2015 | IIT Madras Techfest | Chennai</title>
+    <meta name="keywords" content="events shaastra,aerofest shaastra,b-events shaastra,coding shaastra,department flagship shaastra,design and build shaastra,electronics fest shaastra,involve shaastra,quizzing shaastra,spotlight shaastra,workshops shaastra">
+    <meta name"description" content="Get involved in Shaastra 2015 events-aerofest,b-events,coding,department flagship,design and build,electronics fest,involve,quizzing,spotlight,workshops">
+    <meta name="robots" content="NOODP">
     <?php include '../../php/base/head.php' ?>
     <style>
         #event-list {
@@ -379,7 +382,7 @@
              id="glow"/>
           </g>
         </svg>
-        <img id="battery" src="../../img/events/battery.svg" style="position:absolute;top:50%;left:25%;height:20%">
+        <img id="battery" src="../../img/events/battery.svg" style="position:absolute;top:50%;left:25%;height:20%" alt="battery">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
@@ -387,8 +390,8 @@
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;">
         <div id="quizzes_div">
-            <img id="speech" src="../../img/events/speech_bubble.png">
-            <img id="man" src="../../img/events/man.svg">
+            <img id="speech" src="../../img/events/speech_bubble.png" alt="speech bubble">
+            <img id="man" src="../../img/events/man.svg" alt="man">
             <p id="score">10</p>
         </div>
     </div>
@@ -396,22 +399,22 @@
     <div class="animation shows"
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
-        <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
-        <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg"/></div>
+        <div class="leftcurtain"><img src="../../img/events/frontcurtain.jpg" alt="curtain"/></div>
+        <div class="rightcurtain"><img src="../../img/events/frontcurtain.jpg" alt="curtain"/></div>
     </div>
 
     <div class="animation spotlight"
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 50%; width: 50%; top:25%; left:25%;display:none">
-        <img src="../../img/events/rcCar.png">
+        <img src="../../img/events/rcCar.png" alt="RC car">
         <canvas style="position:absolute; left:0px; top:0px;">Sorry Browser Won't Support</canvas>
     </div>
 
     <div class="animation workshops"
         style="position:fixed; z-index: -1; overflow: hidden;
             height: 100%; width: 100%; top:0%; left:0%;display:none">
-        <img id="spanner" class="img-responsive" src="../../img/events/spanner.svg">
-        <img id="nut" class="img-responsive" src="../../img/events/nut.svg">
+        <img id="spanner" class="img-responsive" src="../../img/events/spanner.svg" alt="spanner"> 
+        <img id="nut" class="img-responsive" src="../../img/events/nut.svg" alt="nuts">
     </div>
     <div class="animation background"
         style="position:fixed; z-index: 5000; overflow: hidden;background-color:rgba(0,0,0,0.7);

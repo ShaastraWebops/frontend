@@ -13,6 +13,9 @@
 <html lang="en">
 <head>
     <title><?php echo ucfirst($name); ?> | Shaastra 2015</title>
+    <meta name="keywords" content="<?php echo $name; ?> shaastra,Pre-shaastra <?php echo $name; ?>">
+    <meta name"description" content="Know more about the Pre-shaastra-<?php echo ucfirst($name); ?>">
+    <meta name="robots" content="NOODP">
     <?php include '../base/head.php' ?>
     <style>
     .title{
