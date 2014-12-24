@@ -121,6 +121,12 @@
             );
 		$speaker_count = count($speakers);
 	?>
+    <div class="container-fluid">
+        <div class="row text-center" style="font-size: 1.2em">
+            Want to interract with the speakers personally ? <a href="https://docs.google.com/forms/d/1xfTHqFTDxN33YSkNjvRzJbmpGyJua7GhiZhfxxEwvkA/viewform">Register Here !</a>
+            <br /><br />
+        </div>
+    </div>
 	<div class="container-fluid speaker-list hidden-xs hidden-sm">
 	    <?php for($i = 0; $i < $speaker_count+1; $i++) { ?>
 			<?php 	if($i<$speaker_count/2) {?>

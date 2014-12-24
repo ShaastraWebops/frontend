@@ -58,6 +58,12 @@
                     <br />
                     For any accomodation related queries, please contact <a href='mailto:namit@shaastra.org'>namit@shaastra.org</a>
                     <br />
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <img src="../../img/logo/hindu_subscription.jpg" style="width: 100%" />
                 </div>
             </div>
 
@@ -73,7 +79,7 @@
                 <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
                 <div class="col-sm-10 col-sm-offset-1 text-justify">
                     <form role="form" class="form-horizontal" id="calc" submit="#">
-                        <center><h3>Enter Shaastra IDs and date of stay </h3></center>
+                        <!-- <center><h3>Enter Shaastra IDs and date of stay </h3></center> -->
                         <br /><hr /><br />
                         <?php for ( $i = 0; $i < 5; $i++ ) { ?>
                             <div class="form-group">
