@@ -356,6 +356,13 @@
     <?php } ?>
 
     <div class="main-content" style='margin:125px 75px 75px 75px; min-height : 80%'>
+
+        <?php if ( strcmp($category, "Workshops") != 0 ) { ?>
+            <h4 class="text-center" >Get the <a href="../../media/Schedule - Events - Shaastra 2015.pdf">Shaastra 2015 Events Schedule</a></h4>
+        <?php } else { ?>
+            <h4 class="text-center" >Get the <a href="../../media/Schedule - Workshops - Shaastra 2015.pdf">Shaastra 2015 Workshops Schedule</a></h4>
+        <?php } ?>
+        <br />
         <div class="container-fluid">
             <div class='row'>
                 <?php if (isset($editable) && $editable) { ?>

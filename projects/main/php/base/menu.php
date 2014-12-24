@@ -53,7 +53,7 @@
     #menu-btn.menu-open .title.title-close {
         display: inline-block;
     }
-    #menu-btn .menubars, #menu-btn .menubars-back {
+    #menu-btn .menubars, #menu-btn .menubars-back, #menu-btn .menubars-cal {
         width: 29px;
         height: 19px;
         position: relative;
@@ -62,10 +62,16 @@
     #menu-btn .title-back {
         margin-top: 13px;
     }
+    #menu-btn .title-cal {
+        margin-top: 13px;
+    }
     #menu-btn .menubars-back {
         margin-top: 0px;
     }
-    #menu-btn.menu-open .menubars, #menu-btn.menu-open .menubars-back {
+    #menu-btn .menubars-cal {
+        margin-top: 0px;
+    }
+    #menu-btn.menu-open .menubars, #menu-btn.menu-open .menubars-back, #menu-btn.menu-open .menubars-cal {
         display: none;
     }
     #menu-btn .menubars-close {
@@ -548,6 +554,12 @@
             <span class="title title-back hidden-sm hidden-xs">BACK</span>
         </a>
     <?php } ?>
+    <!-- <a class="menu-cal" style="display:block; color:#fff; text-decoration:none" href="../../media/Schedule - Day wise - Shaastra 2015.pdf">
+        <span class='menubars-cal'>
+            <span class="glyphicon-calendar glyphicon glyphicon-md"> </span>
+        </span>
+        <span class="title title-cal hidden-sm hidden-xs">SCHEDULE</span>
+    </a> -->
 </div>
 
 

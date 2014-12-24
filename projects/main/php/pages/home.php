@@ -272,6 +272,12 @@
             .cke_editable {
                 border: 1px solid #fff;
             }
+            .gray-link {
+                color : #fff;
+            }
+            .gray-link:hover {
+                color : #ccc;
+            }
         </style>
     </head>
 
@@ -285,45 +291,10 @@
 <!-- for poll start -->
     <div id="poll_display" class="col-md-4 pull-right hidden-xs hidden-sm">
         <div id="poll_before" style="padding-bottom:20px;">
-<!--
-            <table style="width:100%;">
-                <thead>
-                    <h4 style="text-align:center;"><b> Which events interest you most at Shaastra? </b></h4>
-                </thead>
-                <tr>
-                    <td>
-                        <input type="radio" name="data" id="option_one" value="b_events" onclick="poll_save(this.value)">
-                        <label for="option_one">B-Events</label>
-                    </td>
-                    <td>
-                        <input type="radio" name="data" id="option_two=" value="coding" onclick="poll_save(this.value)">
-                        <label for="option_two">Coding Events</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="data" id="option_three" value="design_n_build" onclick="poll_save(this.value)">
-                        <label for="option_three">Design and Build</label>
-                    </td>
-                    <td>
-                        <input type="radio" name="data" id="option_four" value="quizzing" onclick="poll_save(this.value)">
-                        <label for="option_four">Quizzing Events</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="data" id="option_other" value="other" onclick="poll_save(this.value)">
-                        <label for="option_other">Other</label>
-                    </td>
-                </tr>
-            </table>
- -->
-            <h4>How do you feel about Shaastra Lecture series ?</h4>
-            <button style="outline:0;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                Click here to answer
-            </button>
+            <a class="gray-link" href="../../media/Schedule - Day wise - Shaastra 2015.pdf"><h3><span class="glyphicon glyphicon-list-alt"></span> Schedule</h3></a>
+            <h4 class="" style="color : #aaa">Get the Shaastra 2015 Schedule</h4>
         </div>
-        <div id="poll_after" style="display:none;"><h4>Thank you for your time</h4></div>
+        <!-- <div id="poll_after" style="display:none;"><h4>Thank you for your time</h4></div> -->
     </div>
 
 
