@@ -1,4 +1,7 @@
-<?php include '../../php/base/logmein.php'; ?>
+<?php include '../../php/base/logmein.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -57,6 +60,7 @@
                     <br />
                 </div>
             </div>
+
 			<div class="row">
                 <div class="row row-centered error-msg" style="padding: 1em; display: none;">
                     <div class="col-md-6 text-center col-centered">
@@ -66,8 +70,9 @@
                         </div>
                     </div>
                 </div>
+                <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
                 <div class="col-sm-10 col-sm-offset-1 text-justify">
-                    <form role="form" class="form-horizontal" id="calc">
+                    <form role="form" class="form-horizontal" id="calc" submit="#">
                         <center><h3>Enter Shaastra IDs and date of stay </h3></center>
                         <br /><hr /><br />
                         <?php for ( $i = 0; $i < 5; $i++ ) { ?>
@@ -116,7 +121,7 @@
                             <div class="col-md-2">
                                 <input class="form-control" type="text" id="cost" name="cost" value="0" disabled>
                             </div>
-                            <button type="submit" class="btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                            <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
                         <br />
                         <div class="white" style="text-align: center">
@@ -125,10 +130,16 @@
                         <div class="row" style="height: 30px"></div>
                     </form>
                 </div>
+                <?php } else { ?>
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h3> You need to login first. Please go to the <a href="../../php/pages/login.php">login page</a> and then return here.</h3>
+                    </div>
+                <?php } ?>
             </div>
 		</div>
 
 		<?php include '../../php/base/foot.php' ?>
+        <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] >= 0 ) { ?>
 
         <link rel="stylesheet" type="text/css" href="../../css/jquery.timepicker.css" />
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.css" />
@@ -168,6 +179,8 @@
                         $el.find(".valid").addClass("label-success").removeClass("label-danger").text("Valid")
                         people += 1;
                         days[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
+                        if ( datepair[i].timeDelta > 0 )
+                            days[i] += 1
                         totaldays += days[i];
                     } else {
                         $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
@@ -206,7 +219,7 @@
                     return 1
                 }
                 var cost = totaldays * 250 + 200 * people + caution_deposit
-                console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
+                // console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
                 if ( people == 0 ) {
                     $("#cost").val("0")
                     $("#help").html("")
@@ -229,13 +242,58 @@
 
                 $(".person input").keyup(calc)
                 $(".person").on("rangeSelected", calc)
-                // $(".person input").change(calc)
                 $('#calc .time').timepicker({
                     'showDuration': true,
                     'timeFormat': 'g:ia'
                 });
+
+                $(".submit").click(function(e) {
+                    e.preventDefault()
+                    var $el = $(this)
+                    var $form = $(this).closest("form")
+                    var json_info = {}
+                    for ( var i = 0; i < $('.person').length; i+=1 ) {
+                        var $el = $('.person_' + (i+1));
+                        if ( $el.find(".valid").hasClass("label-success") && !$el.find(".valid").hasClass("label-danger") ) {
+                            json_info["shid_" + (i+1)] = $el.find(".shid").val()
+                            json_info["start_date_" + (i+1)] = $el.find(".start.date").val()
+                            json_info["start_time_" + (i+1)] = $el.find(".start.time").val()
+                            json_info["end_date_" + (i+1)] = $el.find(".end.date" ).val()
+                            json_info["end_time_" + (i+1)] = $el.find(".end.time").val()
+                            json_info["gender_" + (i+1)] = $el.find(".gender").val()
+                        }
+                    }
+
+                    console.log(json_info)
+                    $.ajax({ // UPLOAD
+                        type: "POST",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/accom/", //<?php echo $_SESSION['user_id']; ?>/",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                        },
+                        cache: false,
+                        data: json_info
+                    }).done(function(res) {
+                        data = JSON.parse(res)
+                        console.log(data)
+
+                    }).fail(function(xhr) {
+                        // if ( xhr.status == 500 ) {
+                        //     $('.error-msg').show(300).find(".text")
+                        //         .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                        // } else if ( xhr.status == 404 ) {
+                        //     $('.error-msg').show(300).find(".text")
+                        //         .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                        // } else if ( xhr.status == 400 ) {
+                        //     var data = xhr.responseJSON
+                        //     var $el = $('#event-uploads form .help-text')
+                        //     $el.html("<b>Some errors were found in your submission. Tell <a href='mailto:webops@shaastra.org'>webops team</a> you got the error ACCOMODATION_SUBMIT_400</b>")
+                        // }
+                    })
+                })
             })
 
         </script>
+        <?php } ?>
 	</body>
 </html>
