@@ -1,1 +1,3 @@
-<p><span style="font-size:16px">Results for TDP Phase-1 and Phase-2 submissions can be found in Results tab.</span></p>
+<p><span style="font-size:16px">Results for TDP Phase-1 and Phase-2 submissions can be found in Results tab.&nbsp;</span></p>
+
+<p><span style="font-size:16px">Check the Problem Statement tab for updates in the Problem Statement.</span></p>
