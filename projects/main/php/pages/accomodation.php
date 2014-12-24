@@ -137,6 +137,7 @@
                     </form>
                 </div>
                 <?php } else { ?>
+
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <h3> You need to login first. Please go to the <a href="../../php/pages/login.php">login page</a> and then return here.</h3>
                     </div>
