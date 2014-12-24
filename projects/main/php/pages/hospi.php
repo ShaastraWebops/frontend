@@ -42,7 +42,7 @@
 
 		<div class="container-fluid">
             <div class="row">
-                <div class="col-md-20 col-md-offset-1 text-center">
+                <div class="col-md-10 col-md-offset-1 text-center">
                     <br />
                     For any hospitality related queries, please contact <a href='mailto:outreach@shaastra.org'>outreach@shaastra.org</a>
                     <br />
@@ -80,8 +80,12 @@
                             </div>
                             <div id="tab2" class="panel-collapse collapse">
                                 <div class="panel-body content black ">
-                                    IIT Madras is located on Sardar Patel Road and is bordered by Adyar, Tharamani and Velachery. The 620 acres of land which form the campus is close to the Rajbhavan. The campus is midway between the Chennai Airport and the Central Railway station. It is around 14 kms from the Central Railway station, Chennai Airport and the central bus depot and is well connected by buses. <br />
-		                            <br />
+                                    IIT Madras is located on Sardar Patel Road and is bordered by Adyar, Tharamani and Velachery. The 620 acres of land which form the campus is close to the Rajbhavan. The campus is midway between the Chennai Airport and the Central Railway station. It is around 14 kms from the Central Railway station, Chennai Airport and the central bus depot and is well connected by buses. <br /><br />
+                                    <div class="row">
+                                        <div class="col-md-offset-2 col-md-3"><a href="https://play.google.com/store/apps/details?id=com.hm.raft"><img src="../../img/logo/raft.png" style="img-responsive" /></a></div>
+                                        <div class="col-md-5 text-justify" style=""> To get updated information on schedules to get to Shaastra, you can use the android application made by Geotagg - <a href="https://play.google.com/store/apps/details?id=com.hm.raft"><b>Raft</b></a> - The ultimate public transport app for commuters in India!</div>
+		                            </div>
+                                    <br />
 		                            <ol>
 		                                <li><b>From Chennai Central </b>
 		                                    The Shaastra team will be sending Institute buses to receive participants at Chennai Central. The representatives of the Student Relations department will be present to greet you near the exit of the station. Timings of the buses will be communicated to you. If you are unable to come through the Institute buses, other means of transportation are  readily available in the city at all times.
