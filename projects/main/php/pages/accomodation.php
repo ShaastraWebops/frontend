@@ -190,7 +190,8 @@
                 if ( err_msg != "" ) {
                     $('#cost').val("ERROR")
                     $('.error-msg').show(300).find(".text")
-                            .html("We got some invalid data : <ul style='text-align: left'>" + err_msg + "</ul>")
+                        .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                        .html("We got some invalid data : <ul style='text-align: left'>" + err_msg + "</ul>")
                     return 1
                 } else {
                     $('.error-msg').hide(300).find(".text").html("")
@@ -276,19 +277,27 @@
                     }).done(function(res) {
                         data = JSON.parse(res)
                         console.log(data)
+                        $('.error-msg').show(300)
+                            .find(".alert").addClass("alert-success").removeClass("alert-danger")
+                        $('.error-msg').find(".text")
+                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
 
                     }).fail(function(xhr) {
-                        // if ( xhr.status == 500 ) {
-                        //     $('.error-msg').show(300).find(".text")
-                        //         .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
-                        // } else if ( xhr.status == 404 ) {
-                        //     $('.error-msg').show(300).find(".text")
-                        //         .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
-                        // } else if ( xhr.status == 400 ) {
-                        //     var data = xhr.responseJSON
-                        //     var $el = $('#event-uploads form .help-text')
-                        //     $el.html("<b>Some errors were found in your submission. Tell <a href='mailto:webops@shaastra.org'>webops team</a> you got the error ACCOMODATION_SUBMIT_400</b>")
-                        // }
+                        if ( xhr.status == 500 ) {
+                            $('.error-msg').show(300).find(".text")
+                                .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                        } else if ( xhr.status == 404 ) {
+                            $('.error-msg').show(300).find(".text")
+                                .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                        } else if ( xhr.status == 400 ) {
+                            var data = xhr.responseJSON
+                            var $el = $('.error-msg')
+                            $el.find(".text")
+                                .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                                .html("<b>Some errors were found in your submission. Tell <a href='mailto:webops@shaastra.org'>webops team</a> you got the error ACCOMODATION_SUBMIT_400</b>")
+                        }
                     })
                 })
             })
