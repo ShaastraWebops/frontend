@@ -35,6 +35,16 @@
         <div class="container-fluid">
             <div class="row featurette row-centered">
                 <div class="col-md-10 col-centered">
+                    <h2 class="text-center title">RIGHT TO EDUCATION</h2>
+                    <div class="embed-responsive embed-responsive-4by3">
+                    	<iframe class = "youtube-video embed-responsive-item col-md-5" width="560" height="315" src="//www.youtube.com/embed/SigVePGkde0" frameborder="0" allowfullscreen align="right"></iframe>
+                    </div>
+                    <p class = "lead" ><b>S</b>haastra has firmly believed in giving back to the society and the RTE campaign is a positive step in that direction. The RTE Awareness campaign is <b>S</b>haastra’s effort to make education more accessible to weaker sections of the society. According to the Right to education act (2009) every school in India is required to allocate 25% of its seats to students from weaker sections. It is unfortunate that most of these seats remain vacant due to lack of awareness about this act. Proper implementation of this act would lead to millions getting access to free and quality education. <b>S</b>haastra’s RTE awareness campaign aims to spread awareness toabout this act and to ensure that every child claims his right to education.</p>
+                	<br><p class = "lead">Quality education is a dream for many and <b>S</b>haastra hopes to make this dream a reality. We would appreciate your support in this endeavor and also help  us in putting a smile on the faces of these children.</p>
+                </div>
+            </div>
+            <div class="row featurette row-centered">
+                <div class="col-md-10 col-centered">
                     <h2 class="text-center title">PLEDGE-A-BOOK</h2>
                     <img src="../../img/misc/Social/Shaastra-2015-pledge-a-book-1.jpg" alt="pledge-a-book" class="img-responsive col-md-5">
                     <p class="lead"><b>T</b>he Pledge-A-Book campaign is Shaastra's attempt to give back to society and to create impact in the fields of education and literacy. This campaign aims to collect books which are donated by patrons of Shaastra, and use these books to set up libraries for underprivileged students.  The campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. Since then, there have been several collection drives within the campus, including one at the Terry Fox Run Chennai, all of which have received a great response.
