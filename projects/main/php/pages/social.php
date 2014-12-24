@@ -36,11 +36,18 @@
             <div class="row featurette row-centered">
                 <div class="col-md-10 col-centered">
                     <h2 class="text-center title">RIGHT TO EDUCATION</h2>
-                    <div class="embed-responsive embed-responsive-4by3">
-                    	<iframe class = "youtube-video embed-responsive-item col-md-5" width="560" height="315" src="//www.youtube.com/embed/SigVePGkde0" frameborder="0" allowfullscreen align="right"></iframe>
+                    <div class="col-md-5">
+                        <div class="embed-responsive embed-responsive-4by3">
+                        	<iframe class = "youtube-video embed-responsive-item" width="100%" height="315" src="//www.youtube.com/embed/SigVePGkde0" frameborder="0" allowfullscreen align="right"></iframe>
+                        </div>
                     </div>
                     <p class = "lead" ><b>S</b>haastra has firmly believed in giving back to the society and the RTE campaign is a positive step in that direction. The RTE Awareness campaign is <b>S</b>haastra’s effort to make education more accessible to weaker sections of the society. According to the Right to education act (2009) every school in India is required to allocate 25% of its seats to students from weaker sections. It is unfortunate that most of these seats remain vacant due to lack of awareness about this act. Proper implementation of this act would lead to millions getting access to free and quality education. <b>S</b>haastra’s RTE awareness campaign aims to spread awareness toabout this act and to ensure that every child claims his right to education.</p>
                 	<br><p class = "lead">Quality education is a dream for many and <b>S</b>haastra hopes to make this dream a reality. We would appreciate your support in this endeavor and also help  us in putting a smile on the faces of these children.</p>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <div class="col-md-10 col-centered">
+                    <hr />
                 </div>
             </div>
             <div class="row featurette row-centered">
