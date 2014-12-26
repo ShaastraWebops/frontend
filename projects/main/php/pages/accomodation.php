@@ -155,7 +155,7 @@
         <script type="text/javascript" src="../../js/datepair.js"></script>
 
         <script>
-            var people = 0, days = [0,0,0,0,0], totaldays, err_msg = "";
+            var people = 0, days = [0,0,0,0,0,0,0], totaldays, err_msg = "";
             function calc() {
                 err_msg = ""
                 totaldays = 0
@@ -194,7 +194,7 @@
                     }
                 }
                 console.log("people : " + people + "  days : " + days)
-                console.log(err_msg)
+                // console.log(err_msg)
                 if ( err_msg != "" ) {
                     $('#cost').val("ERROR")
                     $('.error-msg').show(300)
@@ -232,7 +232,7 @@
                     $("#help").val("Only 7 people at a time !")
                     return 1
                 }
-                var cost = totaldays * 250 + 200 * people + caution_deposit
+                var cost = totaldays * 250 + caution_deposit
                 // console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
                 if ( people == 0 ) {
                     $("#cost").val("0")
@@ -243,14 +243,14 @@
                 }
                 return 0
             }
-            var datepair = [null, null, null, null, null];
+            var datepair = [null, null, null, null, null, null, null];
             $(document).ready(function() {
                 // initialize datepair
                 $('#calc .date').datepicker({
                     'format': 'yyyy-mm-dd',
                     'autoclose': true
                 });
-                for ( var i = 0; i < 5; i+=1 ) {
+                for ( var i = 0; i < 7; i+=1 ) {
                     datepair[i] = new Datepair($('.person_' + (i+1))[0]);
                 }
 
@@ -288,30 +288,40 @@
                         cache: false,
                         data: json_info
                     }).done(function(res) {
-                        data = JSON.parse(res)
+                        console.log(res)
+                        // data = JSON.parse(res.data)
                         console.log(data)
+                        console.log("yohoho")
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
-                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                            .html("SUCCESS")
+                        // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
-                        console.log(xhr)
+                        console.log(xhr.status)
                         if ( xhr.status == 500 ) {
                             $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
                             $('.error-msg').find(".text")
-                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a> with the error code ACCOM_500")
+                            $('html, body').animate({scrollTop : 0},800);
                         } else if ( xhr.status == 404 ) {
                             $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
                             $('.error-msg').find(".text")
-                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
+                                .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a> with the error code ACCOM_404")
+                            $('html, body').animate({scrollTop : 0},800);
                         } else if ( xhr.status == 400 ) {
-                            var data = xhr.responseJSON
-                            $('.error-msg')
+                            $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
-                            $('.error-msg').find(".text")
-                                .html("<b>Some errors were found in your submission. Tell <a href='mailto:webops@shaastra.org'>webops team</a> you got the error ACCOMODATION_SUBMIT_400</b>")
+                            
+                            var data = xhr.responseJSON
+                            console.log(data)
+                            var msg = "<b>Some errors were found in your submission</b> <br />" + data.message;
+                            
+                            $('.error-msg').find(".text")                        
+                                .html(msg)
+                            $('html, body').animate({scrollTop : 0},800);
                         }
                     })
                 })
