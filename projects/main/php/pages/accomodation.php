@@ -63,7 +63,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <a href="www.thehindugroup.in/subscribe"><img src="../../img/logo/hindu_subscription.jpg" style="width: 100%" /></a>
+                    <a href="http://www.thehindugroup.in/subscribe"><img src="../../img/logo/hindu_subscription.jpg" style="width: 100%" /></a>
                 </div>
             </div>
 
