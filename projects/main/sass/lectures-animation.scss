@@ -142,9 +142,6 @@ div.animated-speaker#rajeeva-karandikar{
 div.animated-speaker#ravi-venkatesan{
 	@include flip_bottom(6,1);
 }
-div.animated-speaker#stephen-wolfram{
-	@include flip_top(7,1);
-}
 div.animated-speaker#sunil-kumar{
 	@include flip_right(2,1);
 }
@@ -164,11 +161,11 @@ div.unanimated-speaker#ajit-balakrishnan{
 div.unanimated-speaker#archana-sharma{
 	@include flip_left(2,0);
 }
-div.unanimated-speaker#arogyaswami-paulraj{
-	@include flip_right(4,0);
-}
 div.unanimated-speaker#ela-bhatt{
 	@include flip_top(3,0);
+}
+div.unanimated-speaker#arogyaswami-paulraj{
+	@include flip_right(4,0);
 }
 div.unanimated-speaker#gurtej-sandhu{
 	@include flip_top(5,0);
@@ -176,29 +173,26 @@ div.unanimated-speaker#gurtej-sandhu{
 div.unanimated-speaker#partha-mitra{
 	@include flip_left(6,0);
 }
-div.unanimated-speaker#pawan-sinha{
-	@include flip_right(8,0);
-}
 div.unanimated-speaker#rajeeva-karandikar{
 	@include flip_top(7,0);
+}
+div.unanimated-speaker#pawan-sinha{
+	@include flip_right(8,0);
 }
 div.unanimated-speaker#ravi-venkatesan{
 	@include flip_top(9,0);
 }
-div.unanimated-speaker#stephen-wolfram{
+div.unanimated-speaker#vanitha-narayanan{
 	@include flip_left(10,0);
 }
 div.unanimated-speaker#sunil-kumar{
-	@include flip_right(12,0);
-}
-div.unanimated-speaker#vanitha-narayanan{
 	@include flip_top(11,0);
 }
 div.unanimated-speaker#vijay-govindarajan{
-	@include flip_top(13,0);
+	@include flip_right(12,0);
 }
 div.unanimated-speaker#vinita-bali{
-	@include flip_left(14,0);
+	@include flip_top(13,0);
 }
 // keyframes
 @-webkit-keyframes flip_bottom{

@@ -81,7 +81,7 @@
                     <form role="form" class="form-horizontal" id="calc" submit="#">
                         <!-- <center><h3>Enter Shaastra IDs and date of stay </h3></center> -->
                         <br /><hr /><br />
-                        <?php for ( $i = 0; $i < 5; $i++ ) { ?>
+                        <?php for ( $i = 0; $i < 7; $i++ ) { ?>
                             <div class="form-group">
                                 <div class="col-md-12 person_<?php echo $i+1; ?> person">
                                     <div class="col-md-2">
@@ -116,7 +116,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <h4><span class="label label-danger valid">Invalid</span></h4>
+                                        <h4><span class="label label-danger valid" style="display:none">Invalid</span></h4>
                                     </div>
                                 </div>
                             </div>
@@ -183,21 +183,23 @@
                             $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                             continue;
                         }
-                        $el.find(".valid").addClass("label-success").removeClass("label-danger").text("Valid")
+                        $el.find(".valid").show().addClass("label-success").removeClass("label-danger").text("Valid")
                         people += 1;
                         days[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
                         if ( datepair[i].timeDelta > 0 )
                             days[i] += 1
                         totaldays += days[i];
                     } else {
-                        $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
+                        $el.show().find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                     }
                 }
                 console.log("people : " + people + "  days : " + days)
+                console.log(err_msg)
                 if ( err_msg != "" ) {
                     $('#cost').val("ERROR")
-                    $('.error-msg').show(300).find(".text")
+                    $('.error-msg').show(300)
                         .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                    $('.error-msg').find(".text")
                         .html("We got some invalid data : <ul style='text-align: left'>" + err_msg + "</ul>")
                     return 1
                 } else {
@@ -219,11 +221,13 @@
                     caution_deposit = 1400
                 else if ( people <= 5 )
                     caution_deposit = 2100
+                else if ( people <= 7 )
+                    caution_deposit = 2100
                 else {
                     $('.error-msg').show()
-                        .find(".text").html("You can register for 5 people at a time. <br />In case your team consists of more than 5 people, please complete payment for 5 people and do this process once again for the remaining.")
+                        .find(".text").html("You can register for 5 people at a time. <br />In case your team consists of more than 5 people, please complete payment for 7 people and do this process once again for the remaining.")
                     $('#cost').val("ERROR")
-                    $("#help").val("Only 5 people at a time !")
+                    $("#help").val("Only 7 people at a time !")
                     return 1
                 }
                 var cost = totaldays * 250 + 200 * people + caution_deposit
@@ -272,7 +276,7 @@
                         }
                     }
 
-                    console.log(json_info)
+                    // console.log(json_info)
                     $.ajax({ // UPLOAD
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/accom/", //<?php echo $_SESSION['user_id']; ?>/",
