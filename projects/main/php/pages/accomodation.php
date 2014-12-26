@@ -221,8 +221,10 @@
                     caution_deposit = 1400
                 else if ( people <= 5 )
                     caution_deposit = 2100
+                else if ( people <= 6 )
+                    caution_deposit = 2800
                 else if ( people <= 7 )
-                    caution_deposit = 2100
+                    caution_deposit = 3500
                 else {
                     $('.error-msg').show()
                         .find(".text").html("You can register for 5 people at a time. <br />In case your team consists of more than 5 people, please complete payment for 7 people and do this process once again for the remaining.")
@@ -292,21 +294,23 @@
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
                                 .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
-
                     }).fail(function(xhr) {
+                        console.log(xhr)
                         if ( xhr.status == 500 ) {
-                            $('.error-msg').show(300).find(".text")
+                            $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                            $('.error-msg').find(".text")
                                 .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
                         } else if ( xhr.status == 404 ) {
-                            $('.error-msg').show(300).find(".text")
+                            $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                            $('.error-msg').find(".text")
                                 .html("There was an error. Error Status : " + xhr.status  + ". If it persists, tell the <a href='mailto:webops@shaastra.org'>webops team</a>")
                         } else if ( xhr.status == 400 ) {
                             var data = xhr.responseJSON
-                            var $el = $('.error-msg')
-                            $el.find(".text")
+                            $('.error-msg')
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
+                            $('.error-msg').find(".text")
                                 .html("<b>Some errors were found in your submission. Tell <a href='mailto:webops@shaastra.org'>webops team</a> you got the error ACCOMODATION_SUBMIT_400</b>")
                         }
                     })

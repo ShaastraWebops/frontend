@@ -719,7 +719,7 @@
                     </a>
                 </span><!--
                 --><span>
-                    <a class="linkedin-color" href="http://in.linkedin.com/pub/shaastra-iitm/16/914/405" target="_blank">
+                    <a class="linkedin-color" href="https://www.linkedin.com/company/2701567?trk=tyah&trkInfo=tarId%3A1419432992228%2Ctas%3Ashaastra%2Cidx%3A2-1-5" target="_blank">
                         <span class="icon"></span>
                     </a>
                 </span>
@@ -771,11 +771,10 @@
         $('#search-input').click(function(e) {
             e.preventDefault()
         })
-
         $.ajax({
             dataType: "json",
             cache: true,
-            url: "../../php/scripts/search_list.php",
+            url: "../../php/scripts/cache_search_list.php",
             async: true
         }).done(function(data) {
             window.search_list = data
