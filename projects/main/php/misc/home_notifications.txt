@@ -5,3 +5,5 @@
 <p><span style="font-size:14px"><span style="font-family:arial,sans-serif">On-spot registrations are open for events and workshops.&nbsp;</span></span></p>
 
 <p><span style="font-size:14px"><span style="font-family:arial,sans-serif">Check out the Shaastra Lecture Series</span></span></p>
+
+<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">Gaming zone registrations have started!</span></span></p>
