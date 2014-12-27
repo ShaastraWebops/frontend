@@ -156,6 +156,31 @@
 
         <script>
             var people = 0, days = [0,0,0,0,0,0,0], totaldays, err_msg = "";
+            function date_checker() {
+                for ( var i = 0; i < 7; i++ ) {
+                    console.log(datepair[i].startDateInput.value)
+                    var changed = false
+                    if ( datepair[i].startDateInput.value == "" || 
+                        datepair[i].startDateInput.value < "2015-01-02" ) {
+                        datepair[i].startDateInput.value = "2015-01-02"
+                        changed = true
+                    }
+                    if ( datepair[i].endDateInput.value == "" || 
+                        datepair[i].endDateInput.value > "2015-01-06" ) {
+                        datepair[i].endDateInput.value = "2015-01-06"
+                        changed = true
+                    }
+                    if ( datepair[i].endDateInput.value == "2015-01-06" && 
+                        datepair[i].endTimeInput.value.indexOf("pm") != -1 && 
+                        parseInt(datepair[i].endTimeInput.value) > 6) {
+                        datepair[i].endTimeInput.value = "6:30pm"
+                        changed = true
+                    }
+                    if ( changed ) {
+                        $(".person_" + (i+1)).trigger('change')
+                    }
+                }
+            }
             function calc() {
                 err_msg = ""
                 totaldays = 0
@@ -163,7 +188,9 @@
                 for ( var i = 0; i < $('.person').length; i+=1 ) {
                     var $el = $($('.person')[i]);
                     if ( $el.find(".shid").val().length ) {
-                        var msg = "", err_gender = 0, err_date = 0;
+                        var msg = "", err_gender = 0, err_date = 0, show_invalid = false;
+                        if ( datepair[i].startDateInput.value != "" && datepair[i].endDateInput.value != "" && datepair[i].startTimeInput.value != "" && datepair[i].endTimeInput.value != "")
+                            show_invalid = true
                         if ( $el.find(".gender option:selected").val() == "X" ) {
                             err_gender = 1
                         }
@@ -172,23 +199,50 @@
                         }
                         if ( err_date && err_gender ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> and <b>date/time</b> invalid</li>"
-                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
                             continue;
                         } else if ( err_date ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Date and time</b> entered are invalid</li>"
-                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
                             continue;
                         } else if ( err_gender ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> needs to be filled</li>"
-                            $el.find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
                             continue;
                         }
-                        $el.find(".valid").show().addClass("label-success").removeClass("label-danger").text("Valid")
+                        if ( datepair[i].startDateInput.value != "" &&
+                            datepair[i].startDateInput.value < "2015-01-02" ) {
+                            err_msg += "<li>Member " + (i+1) + " : <b>Start Date</b> doesnt fall within Shaastra dates (3rd to 6th January 2015)</li>"
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
+                            continue;
+                        }
+                        if ( datepair[i].endDateInput.value != "" &&
+                            datepair[i].endDateInput.value > "2015-01-06" ) {
+                            err_msg += "<li>Member " + (i+1) + " : <b>End Date</b> doesnt fall within Shaastra dates (3rd to 6th January 2015)</li>"
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
+                            continue;
+                        }
+                        if ( datepair[i].endDateInput.value == "2015-01-06" && 
+                            datepair[i].endTimeInput.value.indexOf("pm") != -1 && 
+                            parseInt(datepair[i].endTimeInput.value) > 6) {
+                            err_msg += "<li>Member " + (i+1) + " : <b>End Date/Time</b> - We only allow stay upto 6pm on 6th December 2015</li>"
+                            $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days[i] = 0
+                            continue;
+                        }
+                        
                         people += 1;
                         days[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
-                        if ( datepair[i].timeDelta > 0 )
+                        if ( datepair[i].timeDelta > 0 ) {
                             days[i] += 1
+                        }
                         totaldays += days[i];
+                        $el.find(".valid").show().addClass("label-success").removeClass("label-danger").text("Valid" + " : " + days[i] + " day(s)")
                     } else {
                         $el.show().find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                     }
@@ -232,7 +286,7 @@
                     $("#help").val("Only 7 people at a time !")
                     return 1
                 }
-                var cost = totaldays * 250 + caution_deposit
+                var cost = totaldays * 300 + caution_deposit
                 // console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
                 if ( people == 0 ) {
                     $("#cost").val("0")
@@ -255,7 +309,16 @@
                 }
 
                 $(".person input").keyup(calc)
-                $(".person").on("rangeSelected", calc)
+                $(".person").on("rangeSelected", function() {
+                    // date_checker();
+                    calc();
+                })
+                $(".person").on("rangeIncomplete", function() {
+                    // date_checker();
+                })
+                $(".person").on("rangeError", function() {
+                    // date_checker();
+                })
                 $('#calc .time').timepicker({
                     'showDuration': true,
                     'timeFormat': 'g:ia'
