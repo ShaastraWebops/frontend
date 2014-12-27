@@ -454,7 +454,7 @@
 			<div class="col-sm-5 col-sm-offset-2 col-xs-12">
 				<span class="vertical-table">
 					<span class="vertical-table-cell">
-						<a href="../../php/pages/exhibitions.php" class="title head3 text">Exhibitions</a>
+						<a href="../../php/pages/exhibitions.php" class="title head3 text">Shows and Exhibitions</a>
 					</span>
 				</span>
 			</div>
