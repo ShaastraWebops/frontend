@@ -63,9 +63,11 @@
 					<div id="navbarCollapse" class="collapse navbar-collapse">
 						<ul id="menu-nav" class="nav nav-pills nav-justified">
 							<li class="active"><a data-scrolltarget="page1" href="javascript:void(0)">Envisage</a></li>
-							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">CFI</a></li>
+							<li class=""><a data-scrolltarget="page2" href="javascript:void(0)">Laser Show</a></li>
 							<li class=""><a data-scrolltarget="page3" href="javascript:void(0)">Air Show</a></li>
-                            <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Others</a></li>
+							<li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Grand Finale</a></li>
+							<li class=""><a data-scrolltarget="page5" href="javascript:void(0)">CFI</a></li>
+                            <li class=""><a data-scrolltarget="page6" href="javascript:void(0)">Exhibitions</a></li>
 							<!-- <li class=""><a data-scrolltarget="page4" href="javascript:void(0)">Exhibitions</a></li> -->
 						</ul>
 					</div>
@@ -76,7 +78,7 @@
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
-		                <h1 class="text-center title">ENVISAGE</h1>
+		                <h1 class="text-center title">Envisage</h1>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -103,11 +105,12 @@
 			</div>
 		</div>
 
+
 		<div class="page" id="page2">
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
-		                <h1 class="text-center title">C<span style="color:red">FI</span></h1>
+		                <h1 class="text-center title">Laser Show</h1>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -118,28 +121,15 @@
 		    </div>
 
 			<div class="container-fluid">
-				<div class="col-md-10 col-md-offset-1">
-                    <p><img style="display: inline; width:7%" src="../../img/logo/cfi.png" alt="cfi"> <b>C<span style="color:red">FI</span> - Centre <span style="color:red">For Innovation</span></b> is a ‘Student Innovation Lab’ of IIT Madras with a prime motto of <b>‘Walk in with an Idea, Walk out with a Product’</b>. It was established in 2008, with the help of funds donated by the 1981 batch of IIT Madras. The vision of CFI is “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”.</p>
-                </div>
-				<div class="col-md-10 col-md-offset-1">
-                    <br />
-                    <p>There are eight CFI clubs, which work on diverse projects and cater to the varying interests of students at IIT Madras. These CFI clubs put up their projects on display during the annual technical fest of IIT-Madras, Shaastra. <b>CFI teams that have participated in competitions like ABU Robocon</b>(Robotics), <b>Formula SAE</b>(Race car), <b>FIRA</b>(Robosoccer), <b>IAUVC</b>(Autonomous underwater vehicle), <b>IGVC</b>(Intelligent ground vehicle), <b>DRDO SRC</b>(Robotics) <b>also showcase their exhibits during the fest.</b></p>
-                    <h2 class="text-center">C<span style="color: red">FI</span> Open House Exhibition</h2>
-                    <p>CFI Open House is an exhibition of numerous innovative projects, automated machines and also a mini Envisage (the first wholly student run techno-entertainment show in the country), put up by the students of IIT Madras. Some highlight projects of CFI Open House include the ‘Quadrotor’ which helped the Police Department of Chennai in a crime site investigation and projects done in collaboration with Railways, Chennai Corporation which autonomously checks the alignment changes of the overhead lines. Projects at CFI have great impact on the daily lives as well. How often does one lose a key and remain clueless about what to do? Students at CFI have come up with an ‘Electronic Lock’ wherein a password stored in mobile phones can open locked doors. Projects of Team Sahaay like a Standing Wheel Chair and Prosthetic Arms have a tremendous social impact as well. Innovations of this sort have always been a trademark of CFI.</p>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+	                    <p>The Laser show, comprising of a Graphic Beam Show and a Laser Man Act, promises to be one of the best in India. The pulsating lasers promise to be a visual experience of a lifetime.</p>
+	                    <!-- <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success.</p> -->
+					</div>
 				</div>
-                <div class="col-md-10 col-md-offset-1"> 
-                    <div class="row row-centered">
-                        <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_arm.jpg" alt="cfi_robo arm">
-                        </div>
-
-                        <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_quadcopter.jpg" alt="cfi_quadcoptor">
-                        </div>
-                    </div>
-                </div>
 			</div>
 		</div>
+
 
 
 		<div class="page" id="page3">
@@ -190,12 +180,15 @@
 				</div>
 			</div>
 		</div>
-	
+
+
+
+
 		<div class="page" id="page4">
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-12">
-		                <h1 class="text-center title">Imagine Exhibits</h1>
+		                <h1 class="text-center title">Grand Finale</h1>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -206,84 +199,213 @@
 		    </div>
 
 			<div class="container-fluid">
-                <div class="row">
+				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-				      	<div class="hidden-xs col-lg-6 col-md-6 ">
+<!-- 				      	<div class="hidden-xs col-lg-6 col-md-6 ">
+				      		<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>
+							</div>
+						</div>
+ -->	                    <p style="padding-top:40px;"> Come witness a thrilling night of robotics with the finals of Robowars, Manual Robotics and Semi-Autonomous Robotics blended together to best effect. Enjoy the adrenaline rush of Robowars, feel the tension in Semi-Autonomous Robotics and witness the ingenious skill and graft on display for Manual Robotics.</p>
+	                    <p>With so much in store, this isn't a spectacle to miss for any robotics enthusiast.</p>
+	                    <!-- <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success.</p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="page" id="page5">
+			<div class="container-fluid white centered">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">C<span style="color:red">FI</span></h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+
+			<div class="container-fluid">
+				<div class="col-md-10 col-md-offset-1">
+                    <p><img style="display: inline; width:7%" src="../../img/logo/cfi.png" alt="cfi"> <b>C<span style="color:red">FI</span> - Centre <span style="color:red">For Innovation</span></b> is a ‘Student Innovation Lab’ of IIT Madras with a prime motto of <b>‘Walk in with an Idea, Walk out with a Product’</b>. It was established in 2008, with the help of funds donated by the 1981 batch of IIT Madras. The vision of CFI is “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”.</p>
+                </div>
+				<div class="col-md-10 col-md-offset-1">
+                    <br />
+                    <p>There are eight CFI clubs, which work on diverse projects and cater to the varying interests of students at IIT Madras. These CFI clubs put up their projects on display during the annual technical fest of IIT-Madras, Shaastra. <b>CFI teams that have participated in competitions like ABU Robocon</b>(Robotics), <b>Formula SAE</b>(Race car), <b>FIRA</b>(Robosoccer), <b>IAUVC</b>(Autonomous underwater vehicle), <b>IGVC</b>(Intelligent ground vehicle), <b>DRDO SRC</b>(Robotics) <b>also showcase their exhibits during the fest.</b></p>
+                    <h2 class="text-center">C<span style="color: red">FI</span> Open House Exhibition</h2>
+                    <p>CFI Open House is an exhibition of numerous innovative projects, automated machines and also a mini Envisage (the first wholly student run techno-entertainment show in the country), put up by the students of IIT Madras. Some highlight projects of CFI Open House include the ‘Quadrotor’ which helped the Police Department of Chennai in a crime site investigation and projects done in collaboration with Railways, Chennai Corporation which autonomously checks the alignment changes of the overhead lines. Projects at CFI have great impact on the daily lives as well. How often does one lose a key and remain clueless about what to do? Students at CFI have come up with an ‘Electronic Lock’ wherein a password stored in mobile phones can open locked doors. Projects of Team Sahaay like a Standing Wheel Chair and Prosthetic Arms have a tremendous social impact as well. Innovations of this sort have always been a trademark of CFI.</p>
+				</div>
+                <div class="col-md-10 col-md-offset-1"> 
+                    <div class="row row-centered">
+                        <div class="hidden-xs col-md-5 col-centered">
+                            <img style="width: 100%" src="../../img/cfi_arm.jpg" alt="cfi_robo arm">
+                        </div>
+
+                        <div class="hidden-xs col-md-5 col-centered">
+                            <img style="width: 100%" src="../../img/cfi_quadcopter.jpg" alt="cfi_quadcoptor">
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+
+	
+		<div class="page" id="page6">
+			<div class="container-fluid white centered">
+		        <div class="row">
+		            <div class="col-xs-12">
+		                <h1 class="text-center title">Exhibitions</h1>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+
+
+			<div class="container-fluid white centered">
+		        <div class="row">
+		            <div class="col-xs-5 col-xs-offset-1">
+		                <h2 class="text-center title">Imagine Exhibits</h2>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		            <div class="col-xs-5">
+		                <h2 class="text-center title">Tanks</h2>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>		            
+		        </div>
+		    </div>
+
+			<div class="container-fluid">
+                <div class="row">
+					<div class="col-md-5 col-md-offset-1">
+		                <p style="padding-top:10px;">This year, we bring you the opportunity to drown yourself in a world where the realm of reality is expanded beyond imagination! Imaginate is a world renowned augmented reality and virtual reality technology based enterprise, offering innovative visualization services which enhance users’ experience of reality. Here is a slice of the kind of excitement that’s on offer:</p>
+	                    <p><h4> TrialAR </h4>TrialAR, which helps you to try out different apparel and accessories through a kiosk (LED screen) that acts as a virtual trial room. By means of an iPad, the user can access different apparel designs and sizes and send the data wirelessly to the kiosk where a web camera accesses user's body information and immerses the user in a virtual trial experience.</p>
+	                    <p><h4> GiftAR </h4>GiftAR, which presents an immersive way of gifting to your loved ones through virtual video messages augmented on physical pictures. GiftAR is a mobile app built using Augmented Reality and social media technologies and enables users to send and receive personalized video gift messages.</p>
+				      	<div class="hidden-xs col-lg-12 col-md-12">
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
                             <img src="../../img/Exibitions/virtual-dressing-room-580x386.jpg"/>
 							</div>
 						</div>
-		                <p style="padding-top:10px;">Come drown yourself in the world where the realm of reality is expanded beyond imagination. Imaginate is a world renowned augmented reality (AR) and virtual reality (VR) technology based enterprise that offers innovative visualization products and services, which enhance the consumers experience of reality. </p>
-	                    <p><h4> TrialAR </h4> TrialAR helps you to try out different apparel and accessories in a brick and mortar store, albeit through a kiosk (LED screen) that acts as a virtual trial room. By means of an iPad, the user can access different apparel designs and sizes and send the data wirelessly to the kiosk where a web camera accesses user's body information and immerses the user in a virtual trial experience. </p>
-	                    <p><h4> GiftAR </h4>  In today’s fast paced world, it became difficult to maintain constant relationship with families & friends especially on important occasions. GiftAR presents an immersive way of gifting to your loved ones through virtual video messages augmented on physical pictures. GiftAR is a mobile app built using Augmented Reality and social media technologies. This application enable users to send and receive personalized video gift messages. GiftAR can also be utilized as a platform for sharing information within a community or group</p>
 					</div>
-				</div>
-			</div>
-            
-            <div class="container-fluid white centered" style="margin-top:100px;">
-		        <div class="row">
-		            <div class="col-xs-12">
-		                <h1 class="text-center title">Tanks</h1>
-		                <div class="white breaker">
-		                    <span class="left"></span>
-		                        <div class="dice white"></div>
-		                    <span class="right"></span>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-            
-            <div class="container-fluid">
-                <div class="row">
-					<div class="col-md-10 col-md-offset-1">
-				      	<div class="hidden-xs col-lg-6 col-md-6 ">
-				      		<div class="embed-responsive embed-responsive-4by3">
-							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
-                            <img src="../../img/Exibitions/Arjun Mark-II  MBT_2.jpg" width="500" height="386">
-							</div>
-						</div>
-		                <p style="padding-top:10px;">The Arjun Main Battle Tank is a third-generation MBT that has been built by the Combat Vehicles Research & Development Establishment (CVRDE) a division of the DRDO . Named after the legendary archer Arjun from the epic Mahabharat this tank weighs nearly 65 T. The Arjun features a 120 mm main rifled gun with indigenously developed APFSDS ammunition, one 7.62 mm coaxial machine gun, and a 12.7 mm machine gun. It is powered by a single MTU multi-fuel diesel engine rated at 1,400 hp, and can achieve a maximum speed of 70 km/h (43 mph) and a cross-country speed of 40 km/h (25 mph). </p>
+					<div class="col-md-5">
+		                <p style="padding-top:10px;">Don’t miss out on the opportunity to see live models of military battle tanks up close! This year Shaastra will be showcasing as many as six different models of several army vehicles. The main draw, the Arjun Main Battle Tank, weighs nearly 65 tonnes and features a 120 mm main rifle gun, a 7.62 mm coaxial machine gun, and a 12.7 mm machine gun. It is powered by a 1400 hp multi-fuel diesel engine and operates at maximum speeds of 70 km/h. Apart from this, we will also be featuring the following models:</p>
                         
-	                    <p><h3> Featured Models this year : </h3> </p>
-                        <p>Muntra UGV tank (Unmanned Track vehicle)</p>
-                        <p>Armoured Ambulance</p>
-                        <p>Carrier command post tracked vehicle</p>
-                        <p>Bridge layer tank</p>
-                        <p>LCA- Tejas sub-systems</p>
+                        <p>&#8226; Muntra UGV tank (Unmanned Track vehicle)</p>
+                        <p>&#8226; Armoured Ambulance</p>
+                        <p>&#8226; Carrier command post tracked vehicle</p>
+                        <p>&#8226; Bridge layer tank</p>
+                        <p>&#8226; LCA- Tejas sub-systems</p>
                         <br />
-                        <p>all exhibited by the CVRDE,  Avadi</p>
+                        <p>All the exhibits on display belong to the Combat Vehicles Research &amp; Development Establishment (CVRDE) a division of the DRDO.</p>
                         
-					</div>
+				      	<div class="hidden-xs col-lg-12 col-md-12">
+				      		<div class="embed-responsive embed-responsive-4by3">
+							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
+                            <!-- <img src="../../img/Exibitions/Arjun Mark-II  MBT_2.jpg" width="500" height="386"> -->
+                            <img src="../../img/Exibitions/tanks.jpg"/ width="500" height="386">
+							</div>
+						</div>
+					</div>					
 				</div>
+			</div>
+            
                 
-                <div class="container-fluid white centered" style="margin-top:50px;">
+            <div class="container-fluid white centered" style="margin-top:50px;">
 		        <div class="row">
-		            <div class="col-xs-12">
-		                <h1 class="text-center title">Moving Planetorium</h1>
+		            <div class="col-xs-5 col-xs-offset-1">
+		                <h2 class="text-center title">Digital Portable Planetorium</h2>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
 		                    <span class="right"></span>
 		                </div>
 		            </div>
+		            <div class="col-xs-5">
+		                <h2 class="text-center title">Redd Robotics</h2>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>		            
 		        </div>
 		    </div>
             
             <div class="container-fluid">
                 <div class="row">
-					<div class="col-md-10 col-md-offset-1">
-				      	<div class="hidden-xs col-lg-5 col-md-6 ">
+					<div class="col-md-5 col-md-offset-1">
+		                <p style="padding-top:40px;">Believe it or not, this Shaastra brings to you the absolutely unique chance to witness a portable planetarium! The marvels of the vast, never ending space above us and its innumerable secrets, brought to you in a truck! This portable planetarium, from the popular Tamil Nadu Science and Technology Centre, will be a sure delight to all star gazers. With shows planned everyday and a chance for everyone to make the most of the chance, this is the best space tour a person can get. Don’t miss out on the opportunity to have this experience, only at Shaastra 2015!</p>
+				      	<div class="hidden-xs col-lg-12 col-md-12">
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
-                            <img src="../../img/Exibitions/sky-the.gif" width="400" height="300" >
+                            <!-- <img src="../../img/Exibitions/sky-the.gif" width="500" height="386" > -->
+                            <img src="../../img/Exibitions/planetarium.jpg" width="500" height="386" >
 							</div>
 						</div>
-		                <p style="padding-top:40px;">The marvels of the vast, never ending space above us, brought to you in a truck. The moving planetarium, from the TamilNadu Science and Technology Centre, is simply a delight to all star gazers. With shows everyday, it is the best space tour a person can get, and come experience that only at Shaastra 2015</p>
 					</div>
+					<div class="col-md-5">
+		                <p style="padding-top:40px;">For a fest that has always made sure to be as tech-savvy as possible, making efforts to bring the latest technology across to all our visitors, upping the ante in this regard was only to be expected! This year Shaastra brings to you an exhibit featuring the latest in 3D printing technology. Sure to enthrall and amaze, these exhibitions will be hosted by Redd Robotics, a Chennai based startup that has quickly risen to fame for its innovative solutions to automation processes. This is one exhibition you just cannot miss, so be sure to keep an eye out for Redd Robotics!</p>
+				      	<div class="hidden-xs col-lg-12 col-md-12">
+				      		<div class="embed-responsive embed-responsive-4by3">
+							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
+                            <!-- <img src="../../img/Exibitions/sky-the.gif" width="500" height="386" > -->
+                            <img src="../../img/Exibitions/redd.jpg" width="500" height="386" >
+							</div>
+						</div>
+					</div>				
 				</div>
 			</div>
+
+
+            <div class="container-fluid white centered" style="margin-top:50px;">
+		        <div class="row">
+		            <div class="col-xs-5 col-xs-offset-1">
+		                <h2 class="text-center title">I Make Robots</h2>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>
+		            <div class="col-xs-5">
+		                <h2 class="text-center title">Physics Exhibitions</h2>
+		                <div class="white breaker">
+		                    <span class="left"></span>
+		                        <div class="dice white"></div>
+		                    <span class="right"></span>
+		                </div>
+		            </div>		            
+		        </div>
+		    </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+					<div class="col-md-5 col-md-offset-1">
+		                <p style="padding-top:40px;">We know that thousands of people at Shaastra flock for the chance to see live robots on display, and this exhibit brings just that to you. This exhibit is a must-attend for the robot enthusiasts out there, but it’s worth a visit even for those with just a passing interest! Started by an IIT Madras alumni, I Make Robots is here to display a lot of different kinds of robots- including robot dogs and humanoid tele-presence. Where else will you get to see a six foot tall humanoid with 7 degrees of freedom, one of its kind in India, in person, and a lot more besides? This exhibit promises to blow your mind- make sure you don’t miss it.</p>
+					</div>
+					<div class="col-md-5">
+		                <p style="padding-top:40px;">Are you one of those people who think Physics is really boring? Well, this exhibition is  the perfect opportunity for you to challenge that misconception! Shaastra 2015 brings to you the real taste of physics through a great physics exhibition, which promises to take you on a tour through the very evolution of physics- right from Newton and Faraday to the core of concepts like Superconductivity. To all the physics enthusiasts out there, but especially for those who find it boring, this is one exhibition you just cannot afford to miss at Shaastra.</p>
+					</div>					
+				</div>
 			</div>
+			<br />
 		</div> 
 
 		<?php include '../../php/base/foot.php' ?>
