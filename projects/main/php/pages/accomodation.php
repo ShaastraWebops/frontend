@@ -146,13 +146,21 @@
                             <div class="col-md-2">
                                 <input class="form-control" type="text" id="cost" name="cost" value="0" disabled>
                             </div>
-                            <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
                         <br />
                         <div class="white" style="text-align: center">
                             <span id="help" class=""></span>
                         </div>
                         <div class="row" style="height: 30px"></div>
+                        <div class="form-group">
+                            <label for="transaction" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text" id="transaction" name="transaction" value="">
+                            </div>
+                            <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        </div>
+                        <br />
+
                     </form>
                 </div>
                 <?php } else { ?>
@@ -337,7 +345,7 @@
                     $("#help_m").html("")
                 } else {
                     $("#cost_m").val(cost_m.toString())
-                    $("#help_m").html("Caution Deposit : Rs. <u>" + caution_deposit_m.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                    $("#help_m").html("Caution Deposit (Male) : Rs. <u>" + caution_deposit_m.toString() + "</u> - <b>This will be returned to you when you leave</b>")
                 }
 
                 if ( people_f < 0 ) {
@@ -373,7 +381,7 @@
                     $("#help_f").html("")
                 } else {
                     $("#cost_f").val(cost_f.toString())
-                    $("#help_f").html("Caution Deposit : Rs. <u>" + caution_deposit_f.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                    $("#help_f").html("Caution Deposit (Female) : Rs. <u>" + caution_deposit_f.toString() + "</u> - <b>This will be returned to you when you leave</b>")
                 }
 
                 var cost = cost_f + cost_m
@@ -383,7 +391,7 @@
                     $("#help").html("")
                 } else {
                     $("#cost").val(cost.toString())
-                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
                 }
 
                 return 0
@@ -440,7 +448,7 @@
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
-                            .html("SUCCESS")
+                            .html("SUCCESS : Your data is saved.")
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
