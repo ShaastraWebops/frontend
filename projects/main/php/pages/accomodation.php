@@ -123,21 +123,47 @@
                         <?php  } ?>
                         <br /><hr /><br />
                         <div class="form-group disabled">
+                            <label for="cost_m" class="col-md-3 text-right costm-text">Male Hostel Cost</label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text" id="cost_m" name="cost_m" value="0" disabled>
+                            </div>
+                            <label for="cost_f" class="col-md-3 text-right costf-text">Female Hostel Cost</label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text" id="cost_f" name="cost_f" value="0" disabled>
+                            </div>
+                        </div>
+                        <div class="white" style="text-align: center">
+                            <div class="col-md-6 text-center">
+                                <span id="help_m" class=""></span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <span id="help_f" class=""></span>
+                            </div>
+                        </div>
+                        <br /><br /><br />
+                        <div class="form-group disabled">
                             <label for="cost" class="col-md-4 col-md-offset-1 text-right cost-text">Final Cost</label>
                             <div class="col-md-2">
                                 <input class="form-control" type="text" id="cost" name="cost" value="0" disabled>
                             </div>
-                            <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
                         <br />
                         <div class="white" style="text-align: center">
                             <span id="help" class=""></span>
                         </div>
                         <div class="row" style="height: 30px"></div>
+                        <div class="form-group">
+                            <label for="transaction" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
+                            <div class="col-md-2">
+                                <input class="form-control" type="text" id="transaction" name="transaction" value="">
+                            </div>
+                            <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        </div>
+                        <br />
+
                     </form>
                 </div>
                 <?php } else { ?>
-
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <h3> You need to login first. Please go to the <a href="../../php/pages/login.php">login page</a> and then return here.</h3>
                     </div>
@@ -155,7 +181,8 @@
         <script type="text/javascript" src="../../js/datepair.js"></script>
 
         <script>
-            var people = 0, days = [0,0,0,0,0,0,0], totaldays, err_msg = "";
+            var people_f = 0, days_f = [0,0,0,0,0,0,0], totaldays_f, err_msg = "";
+            var people_m = 0, days_m = [0,0,0,0,0,0,0], totaldays_m;
             function date_checker() {
                 for ( var i = 0; i < 7; i++ ) {
                     console.log(datepair[i].startDateInput.value)
@@ -183,73 +210,94 @@
             }
             function calc() {
                 err_msg = ""
-                totaldays = 0
-                people = 0
+                totaldays_m = 0
+                totaldays_f = 0
+                people_m = 0
+                people_f = 0
                 for ( var i = 0; i < $('.person').length; i+=1 ) {
                     var $el = $($('.person')[i]);
+
                     if ( $el.find(".shid").val().length ) {
-                        var msg = "", err_gender = 0, err_date = 0, show_invalid = false;
+                        var msg = "", err_gender = 0, err_date = 0, show_invalid = false, male = false;
                         if ( datepair[i].startDateInput.value != "" && datepair[i].endDateInput.value != "" && datepair[i].startTimeInput.value != "" && datepair[i].endTimeInput.value != "")
                             show_invalid = true
                         if ( $el.find(".gender option:selected").val() == "X" ) {
                             err_gender = 1
-                        }
+                        } else if ($el.find(".gender option:selected").val() == "M") {
+                            male = true
+                        } else if ($el.find(".gender option:selected").val() == "F") {
+                            male = false
+                        }   
                         if ( datepair[i].getTimeDiff() <= 0 ) { // Time is messed up
                             err_date = 1
                         }
                         if ( err_date && err_gender ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> and <b>date/time</b> invalid</li>"
                             if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         } else if ( err_date ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Date and time</b> entered are invalid</li>"
                             if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         } else if ( err_gender ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Gender</b> needs to be filled</li>"
                             if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         }
                         if ( datepair[i].startDateInput.value != "" &&
                             datepair[i].startDateInput.value < "2015-01-02" ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>Start Date</b> doesnt fall within Shaastra dates (3rd to 6th January 2015)</li>"
                             if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         }
                         if ( datepair[i].endDateInput.value != "" &&
                             datepair[i].endDateInput.value > "2015-01-06" ) {
                             err_msg += "<li>Member " + (i+1) + " : <b>End Date</b> doesnt fall within Shaastra dates (3rd to 6th January 2015)</li>"
                             if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         }
                         if ( datepair[i].endDateInput.value == "2015-01-06" && 
                             datepair[i].endTimeInput.value.indexOf("pm") != -1 && 
                             parseInt(datepair[i].endTimeInput.value) > 6) {
                             err_msg += "<li>Member " + (i+1) + " : <b>End Date/Time</b> - We only allow stay upto 6pm on 6th December 2015</li>"
-                            $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
-                            days[i] = 0
+                            if ( show_invalid ) $el.find(".valid").show().removeClass("label-success").addClass("label-danger").text("Invalid")
+                            days_m[i] = 0; days_f[i] = 0
                             continue;
                         }
                         
-                        people += 1;
-                        days[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
-                        if ( datepair[i].timeDelta > 0 ) {
-                            days[i] += 1
+                        if ( male ) {
+                            people_m += 1;
+                            days_m[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
+                            if ( datepair[i].timeDelta > 0 ) {
+                                days_m[i] += 1
+                            }   
+                            totaldays_m += days_m[i];
+                            days = days_m[i]
+                        } else {
+                            people_f += 1;
+                            days_f[i] = datepair[i].dateDelta / 24 / 60 / 60 / 1000; // dateDelta was in millis
+                            if ( datepair[i].timeDelta > 0 ) {
+                                days_f[i] += 1
+                            }   
+                            days = days_f[i]
+                            totaldays_f += days_f[i];
                         }
-                        totaldays += days[i];
-                        $el.find(".valid").show().addClass("label-success").removeClass("label-danger").text("Valid" + " : " + days[i] + " day(s)")
+                        $el.find(".valid").show().addClass("label-success").removeClass("label-danger").text("Valid" + " : " + days + " day(s)")
                     } else {
                         $el.show().find(".valid").removeClass("label-success").addClass("label-danger").text("Invalid")
                     }
                 }
-                console.log("people : " + people + "  days : " + days)
+                console.log("people_m : " + people_m + "  days : " + days_m)
+                console.log("people_f : " + people_f + "  days : " + days_f)
                 // console.log(err_msg)
                 if ( err_msg != "" ) {
+                    $('#cost_f').val("ERROR")
+                    $('#cost_m').val("ERROR")
                     $('#cost').val("ERROR")
                     $('.error-msg').show(300)
                         .find(".alert").removeClass("alert-success").addClass("alert-danger")
@@ -258,27 +306,31 @@
                     return 1
                 } else {
                     $('.error-msg').hide(300).find(".text").html("")
+                    $('#cost_f').val(0)
+                    $('#cost_m').val(0)
                     $('#cost').val(0)
                 }
-                var caution_deposit = 0
+                var caution_deposit_m = 0
 
-                if ( people < 0 ) {
+                if ( people_m < 0 ) {
                     $('.error-msg').show()
                         .find(".text").html("We got invalid data. <br /> The number of people in your team cannot be negative")
+                    $('#cost_f').val("ERROR")
+                    $('#cost_m').val("ERROR")
                     $('#cost').val("ERROR")
                     return 0
-                } else if ( people == 0 ) {
-                    caution_deposit = 0
-                } else if ( people == 1 )
-                    caution_deposit = 700
-                else if ( people <= 3)
-                    caution_deposit = 1400
-                else if ( people <= 5 )
-                    caution_deposit = 2100
-                else if ( people <= 6 )
-                    caution_deposit = 2800
-                else if ( people <= 7 )
-                    caution_deposit = 3500
+                } else if ( people_m == 0 ) {
+                    caution_deposit_m = 0
+                } else if ( people_m == 1 )
+                    caution_deposit_m = 700
+                else if ( people_m <= 3)
+                    caution_deposit_m = 1400
+                else if ( people_m <= 5 )
+                    caution_deposit_m = 2100
+                else if ( people_m <= 6 )
+                    caution_deposit_m = 2800
+                else if ( people_m <= 7 )
+                    caution_deposit_m = 3500
                 else {
                     $('.error-msg').show()
                         .find(".text").html("You can register for 5 people at a time. <br />In case your team consists of more than 5 people, please complete payment for 7 people and do this process once again for the remaining.")
@@ -286,15 +338,62 @@
                     $("#help").val("Only 7 people at a time !")
                     return 1
                 }
-                var cost = totaldays * 300 + caution_deposit
+                var cost_m = totaldays_m * 300 + caution_deposit_m
                 // console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
-                if ( people == 0 ) {
+                if ( people_m == 0 ) {
+                    $("#cost_m").val("0")
+                    $("#help_m").html("")
+                } else {
+                    $("#cost_m").val(cost_m.toString())
+                    $("#help_m").html("Caution Deposit (Male) : Rs. <u>" + caution_deposit_m.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                }
+
+                if ( people_f < 0 ) {
+                    $('.error-msg').show()
+                        .find(".text").html("We got invalid data. <br /> The number of people in your team cannot be negative")
+                    $('#cost_m').val("ERROR")
+                    $('#cost_f').val("ERROR")
+                    $('#cost').val("ERROR")
+                    return 0
+                } else if ( people_f == 0 ) {
+                    caution_deposit_f = 0
+                } else if ( people_f == 1 )
+                    caution_deposit_f = 700
+                else if ( people_f <= 3)
+                    caution_deposit_f = 1400
+                else if ( people_f <= 5 )
+                    caution_deposit_f = 2100
+                else if ( people_f <= 6 )
+                    caution_deposit_f = 2800
+                else if ( people_f <= 7 )
+                    caution_deposit_f = 3500
+                else {
+                    $('.error-msg').show()
+                        .find(".text").html("You can register for 5 people at a time. <br />In case your team consists of more than 5 people, please complete payment for 7 people and do this process once again for the remaining.")
+                    $('#cost').val("ERROR")
+                    $("#help").val("Only 7 people at a time !")
+                    return 1
+                }
+                var cost_f = totaldays_f * 300 + caution_deposit_f
+                // console.log("days : " + totaldays + " people : " + people + " caution : " + caution_deposit + " cost : " + cost)
+                if ( people_f == 0 ) {
+                    $("#cost_f").val("0")
+                    $("#help_f").html("")
+                } else {
+                    $("#cost_f").val(cost_f.toString())
+                    $("#help_f").html("Caution Deposit (Female) : Rs. <u>" + caution_deposit_f.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                }
+
+                var cost = cost_f + cost_m
+                var caution_deposit = caution_deposit_f + caution_deposit_m
+                if ( people_f + people_m == 0 ) {
                     $("#cost").val("0")
                     $("#help").html("")
                 } else {
                     $("#cost").val(cost.toString())
-                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b>")
+                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
                 }
+
                 return 0
             }
             var datepair = [null, null, null, null, null, null, null];
@@ -309,16 +408,7 @@
                 }
 
                 $(".person input").keyup(calc)
-                $(".person").on("rangeSelected", function() {
-                    // date_checker();
-                    calc();
-                })
-                $(".person").on("rangeIncomplete", function() {
-                    // date_checker();
-                })
-                $(".person").on("rangeError", function() {
-                    // date_checker();
-                })
+                $(".person").on("rangeSelected", calc)
                 $('#calc .time').timepicker({
                     'showDuration': true,
                     'timeFormat': 'g:ia'
@@ -358,7 +448,7 @@
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
-                            .html("SUCCESS")
+                            .html("SUCCESS : Your data is saved.")
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
