@@ -443,12 +443,15 @@
                     }).done(function(res) {
                         console.log(res)
                         // data = JSON.parse(res.data)
-                        console.log(data)
+                        console.log(res.data)
+                        data = res.data
                         console.log("yohoho")
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
-                            .html("SUCCESS : Your data is saved.")
+                            .html("Your data is saved.")
+                        $('.error-msg').find(".bold")
+                            .html("SUCCESS : ")
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
