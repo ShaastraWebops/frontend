@@ -1,5 +1,5 @@
 <p><span style="font-size:16px"><span style="font-size:18px">Check out the updated Problem Statement&nbsp;! ! !&nbsp;</span></span></p>
 
-<p><span style="font-size:18px"><span style="line-height:25.7142581939697px"><strong>The Prize Money has been declared ! ! !</strong></span></span></p>
+<p><span style="font-size:18px"><strong>The Prize Money has been declared ! ! !</strong></span></p>
 
-<p><span style="font-size:18px"><span style="line-height:25.7142581939697px">The Results of&nbsp;Phase II TDP Submissions have been declared !&nbsp;!</span></span></p>
+<p><span style="font-size:18px">The Results of&nbsp;Phase II TDP Submissions have been declared !&nbsp;!</span></p>
