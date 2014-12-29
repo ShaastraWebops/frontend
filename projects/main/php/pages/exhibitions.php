@@ -74,6 +74,7 @@
 				</div>
 			</div>
 		</nav>
+
 		<div class="page" id="page1">
 			<div class="container-fluid white centered">
 		        <div class="row">
@@ -87,7 +88,6 @@
 		            </div>
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -119,11 +119,14 @@
 		            </div>
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-	                    <p>The Laser show, comprising of a Graphic Beam Show and a Laser Man Act, promises to be one of the best in India. The pulsating lasers promise to be a visual experience of a lifetime.</p>
+	                    <p>Shaastra Nights, the high-octane exhilarating night returns!</p>
+	                    <p>Yes, it's time for Shaastra Nights. Apart from the knowledge you gain from the plethora of events and workshops, we give you the opportunity to witness a spectacle full of technology and entertainment.</p> 
+	                    <p>This year, we present a high-flying indoor air show and a cutting-edge laser show. The Laser show, comprising of a Graphic Beam Show and a Laser Man Act, promises to be one of the best in India.</p>
+	                    <p>The pulsating lasers promise to be a visual experience of a lifetime. The indoor air show promises to be a visual treat with the best flyers from the world showcasing their breathtaking maneuvers.</p>
+	                    <p>Be there to witness a state of the art stunt show. Be a part of Shaastra Nights, a unique amalgamation of technology and entertainment.</p>
 	                    <!-- <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success.</p> -->
 					</div>
 				</div>
@@ -145,7 +148,6 @@
 		            </div>
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
 				<div class="col-md-10 col-md-offset-1">
 					<p>One of the biggest RC flying shows in the country, with planes and helicopters all twisting and twirling and fliers using the sky as the canvas for their masterpieces.</p>
@@ -154,15 +156,12 @@
                     <p>This Shaastra 2015, the Show is in the Air! </p>
 					<h2 class="text-center">Some videos from previous years :</h2>
 					<div class="row row-centered">
-						<div class="hidden-xs col-md-4 col-centered" >
-							
+						<div class="hidden-xs col-md-4 col-centered" >							
 				      		<div class="embed-responsive embed-responsive-4by3">
 								<iframe align="middle" frameborder="0" height="300" name="Danie Rau" scrolling="no" src="http://www.youtube.com/embed/wNfPVdeYhtc" width="400"></iframe>
 							</div>
-
 						</div>
-			            <div class="hidden-xs col-md-4 col-centered">
-			            	
+			            <div class="hidden-xs col-md-4 col-centered">			            	
 				      		<div class="embed-responsive embed-responsive-4by3">
 								<iframe align="middle" frameborder="0" height="300" name="GUnther Gold" scrolling="no" src="http://www.youtube.com/embed/QSovjdncQaA" width="400"></iframe>
 							</div>
@@ -172,11 +171,8 @@
 				      		<div class="embed-responsive embed-responsive-4by3">
 								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/oDGfV2KZ0EM" allowfullscreen align="right"></iframe>
 							</div>
-						</div> -->
-			            
+						</div> -->			            
 					</div>
-
-
 				</div>
 			</div>
 		</div>
@@ -197,7 +193,6 @@
 		            </div>
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -206,9 +201,26 @@
 								<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>
 							</div>
 						</div>
- -->	                    <p style="padding-top:40px;"> Come witness a thrilling night of robotics with the finals of Robowars, Manual Robotics and Semi-Autonomous Robotics blended together to best effect. Enjoy the adrenaline rush of Robowars, feel the tension in Semi-Autonomous Robotics and witness the ingenious skill and graft on display for Manual Robotics.</p>
+ -->	                    
+ 						<p style="padding-top:40px;"> Come witness a thrilling night of robotics with the finals of Robowars, Manual Robotics and Semi-Autonomous Robotics blended together to best effect. Enjoy the adrenaline rush of Robowars, feel the tension in Semi-Autonomous Robotics and witness the ingenious skill and graft on display for Manual Robotics.</p>
+						<p>“The battlefield is a scene of constant chaos. The winner will be the one who controls that chaos, both his own and the enemies.”</p>
+						<p>&nbsp;&nbsp;&nbsp;- Napoleon Bonaparte</p>
+						<p>Fiercely battled among teams from all over the country it is a feast for the crowd.</p>
+						<p>Seek and Destroy. As simple as it can get. It is a battle of life and death. The fittest may or may not survive but the smartest will.</p>
 	                    <p>With so much in store, this isn't a spectacle to miss for any robotics enthusiast.</p>
 	                    <!-- <p>Last year, we achieved a Limca World Record for the largest Holographic Projection and The First ever Virtual Band. Like a seagull skimming the waves of entertainment over the ocean of imagination, with the technical dexterity of IIT-M students to give wings to our dream, we are set to roar into the blues of success.</p> -->
+					</div>
+					<div class="row row-centered">
+						<div class="hidden-xs col-md-4 col-centered" >							
+				      		<div class="embed-responsive embed-responsive-4by3">
+	                            <img src="../../img/Exibitions/manual_robotics.jpg" alt="manual_robotics"/ width="400" height="386">
+							</div>
+						</div>
+			            <div class="hidden-xs col-md-4 col-centered">
+				      		<div class="embed-responsive embed-responsive-4by3">
+	                            <img src="../../img/Exibitions/robowars.jpg" alt="robowars"/ width="400" height="386">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -228,7 +240,6 @@
 		            </div>
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
 				<div class="col-md-10 col-md-offset-1">
                     <p><img style="display: inline; width:7%" src="../../img/logo/cfi.png" alt="cfi"> <b>C<span style="color:red">FI</span> - Centre <span style="color:red">For Innovation</span></b> is a ‘Student Innovation Lab’ of IIT Madras with a prime motto of <b>‘Walk in with an Idea, Walk out with a Product’</b>. It was established in 2008, with the help of funds donated by the 1981 batch of IIT Madras. The vision of CFI is “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”.</p>
@@ -242,11 +253,10 @@
                 <div class="col-md-10 col-md-offset-1"> 
                     <div class="row row-centered">
                         <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_arm.jpg" alt="cfi_robo arm">
+                            <img src="../../img/cfi_arm.jpg" alt="cfi_robo arm"/ width="400" height="286">
                         </div>
-
                         <div class="hidden-xs col-md-5 col-centered">
-                            <img style="width: 100%" src="../../img/cfi_quadcopter.jpg" alt="cfi_quadcoptor">
+                            <img src="../../img/cfi_quadcopter.jpg" alt="cfi_quadcoptor"/ width="400" height="286">
                         </div>
                     </div>
                 </div>
@@ -269,7 +279,6 @@
 		        </div>
 		    </div>
 
-
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-5 col-xs-offset-1">
@@ -290,7 +299,6 @@
 		            </div>		            
 		        </div>
 		    </div>
-
 			<div class="container-fluid">
                 <div class="row">
 					<div class="col-md-5 col-md-offset-1">
@@ -300,7 +308,7 @@
 				      	<div class="hidden-xs col-lg-12 col-md-12">
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
-                            <img src="../../img/Exibitions/virtual-dressing-room-580x386.jpg"/>
+                            <img src="../../img/Exibitions/virtual-dressing-room-580x386.jpg"/ width="400" height="286">
 							</div>
 						</div>
 					</div>
@@ -319,14 +327,13 @@
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
                             <!-- <img src="../../img/Exibitions/Arjun Mark-II  MBT_2.jpg" width="500" height="386"> -->
-                            <img src="../../img/Exibitions/tanks.jpg"/ width="500" height="386">
+                            <img src="../../img/Exibitions/tanks.jpg"/ width="400" height="286">
 							</div>
 						</div>
 					</div>					
 				</div>
-			</div>
-            
-                
+			</div>  
+
             <div class="container-fluid white centered" style="margin-top:50px;">
 		        <div class="row">
 		            <div class="col-xs-5 col-xs-offset-1">
@@ -346,8 +353,7 @@
 		                </div>
 		            </div>		            
 		        </div>
-		    </div>
-            
+		    </div>            
             <div class="container-fluid">
                 <div class="row">
 					<div class="col-md-5 col-md-offset-1">
@@ -356,7 +362,7 @@
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
                             <!-- <img src="../../img/Exibitions/sky-the.gif" width="500" height="386" > -->
-                            <img src="../../img/Exibitions/planetarium.jpg" width="500" height="386" >
+                            <img src="../../img/Exibitions/planetarium.jpg" width="400" height="286" >
 							</div>
 						</div>
 					</div>
@@ -366,7 +372,7 @@
 				      		<div class="embed-responsive embed-responsive-4by3">
 							<!--<iframe class="youtube-video embed-responsive-item" src="http://www.youtube.com/embed/YPIGijCOXkU" allowfullscreen align="right"></iframe>-->
                             <!-- <img src="../../img/Exibitions/sky-the.gif" width="500" height="386" > -->
-                            <img src="../../img/Exibitions/redd.jpg" width="500" height="386" >
+                            <img src="../../img/Exibitions/redd.jpg" width="400" height="286" >
 							</div>
 						</div>
 					</div>				
@@ -393,8 +399,7 @@
 		                </div>
 		            </div>		            
 		        </div>
-		    </div>
-            
+		    </div>            
             <div class="container-fluid">
                 <div class="row">
 					<div class="col-md-5 col-md-offset-1">
@@ -423,7 +428,6 @@
 						}, 1000);
 						return false;
 					}
-
 				});
 			});
 		</script>
