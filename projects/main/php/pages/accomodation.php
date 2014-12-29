@@ -391,7 +391,7 @@
                     $("#help").html("")
                 } else {
                     $("#cost").val(cost.toString())
-                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
+                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a target='_blank' href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
                 }
 
                 return 0
