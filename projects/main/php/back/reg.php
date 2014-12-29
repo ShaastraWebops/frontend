@@ -139,28 +139,31 @@
                                     <div class="row">
                                         <div class="col-sm-4 head">Password</div>
                                         <div class="col-sm-8 label text-left" name="password"></div>
-                                        <input class="col-sm-8 form" name="password" type="check" placeholder="Change password" />
+                                        <input class="col-sm-8 form" name="password" required type="check" placeholder="Password" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
-                                        <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save" />
+                                        <input class="col-sm-12 form no-form-style btn submit btn-primary" name="submit" type="submit" value="Save" />
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-8 col-md-offset-2 hidden done-data">
-                        <h3>Welcome !</h3>
+                    <div class="col-md-8 col-md-offset-2 hidden done-data text-center" style="font-size: 1.3em">
+                        <h2>Welcome !</h2>
 
                         You have been registered at Shaastra !<br />
-                        Your Shaastar ID is : <b class="shid"></b>
+                        <!-- Your Shaastar ID is : <b class="shid"></b><br /> -->
+                        Your Email is : <b class="email"></b><br />
+                        Your Name is : <b class="name"></b><br />
+                        Your College is : <b class="college_text"></b><br />
+                        <!-- Your City is : <b class="city"></b><br /> -->
+
                     </div>
                 </div>
             </div>
         </div>
         <script type="text/javascript">
             var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');
-            var events = Array();
-            var teams = Array();
 
             function toggle_form(e) {
                 e && e.preventDefault()
@@ -201,6 +204,8 @@
             })
             function init_profile() {
                 $('#profile form').submit(function(e) {
+                    $(".done-data").addClass("hidden")
+                    $(".submit").prop("disabled", "disabled").val("Processing ... ")
                     e.preventDefault();
                     var $el = $(this)
                     var json_info = {
@@ -218,35 +223,31 @@
                     if ( json_info['password'] == "" ) {
                         delete json_info['password']
                     }
-                    console.log(json_info)
+                    // console.log(json_info)
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
                         url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/",
                         beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                         },
                         cache: false,
                         data: json_info
                     }).done(function(res) {
-                        $.ajax({ // SEND INFO FOR PROFILE
-                            type: "POST",
-                            url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/",
-                            beforeSend: function(xhr) {
-                                xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
-                            },
-                            cache: false,
-                            data: json_info
-                        }).done(function(res) {
-                            data = res['data']
-                            console.log(data)
-                            // window.location.href = window.location.origin + window.location.pathname +
-                            //     "?first_name=" + data.first_name +
-                            //     "&last_name=" + data.last_name +
-                            //     "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
-
-                        }).fail(function(xhr) {
-                            console.log(xhr.status)
-                        })
+                        data = res['data']
+                        $(".submit").prop("disabled", false).val("SAVE")
+                        var $el = $(".done-data").removeClass("hidden")
+                        $el.find(".shid").html("SH15" + pad(data['id'], 5, 0))
+                        $el.find(".email").html(data['email'])
+                        $el.find(".college_text").html(data['college_text'])
+                        $el.find(".gender").html(data['gender'])
+                        $el.find(".mobile_number").html(data['mobile_number'])
+                        $el.find(".name").html(data['first_name'] + " " + data['last_name'])
+                    }).fail(function(xhr) {
+                        console.log(xhr)
+                        $(".submit").prop("disabled", false).val("SAVE")
+                        $(".alert").show(300)
+                        $(".alert .head").html("Error")
+                        $(".alert .text").html("We got the error code : " + xhr.status)
                     })
                 })
             }
