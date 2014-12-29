@@ -2508,3 +2508,5 @@
 [29-Dec-2014 12:52:27 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [29-Dec-2014 12:52:52 America/Chicago] PHP Notice:  Undefined offset: 5 in /home/shaastra/public_html/2015/production/projects/main/img/spons/test.php on line 9
 [29-Dec-2014 13:05:13 America/Chicago] PHP Notice:  Undefined offset: 5 in /home/shaastra/public_html/2015/production/projects/main/img/spons/test.php on line 9
+[29-Dec-2014 13:09:27 America/Chicago] PHP Notice:  Undefined offset: 5 in /home/shaastra/public_html/2015/production/projects/main/img/spons/test.php on line 9
+[29-Dec-2014 13:09:27 America/Chicago] PHP Notice:  Undefined offset: 5 in /home/shaastra/public_html/2015/production/projects/main/img/spons/test.php on line 9
