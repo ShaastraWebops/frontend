@@ -1,1 +1,1 @@
-<p><span style="font-size:14px">Registration for this workshop&nbsp;are OPEN now.</span></p>
+<p><span style="font-size:14px">Registration for this workshop&nbsp;are closed&nbsp;now.</span></p>

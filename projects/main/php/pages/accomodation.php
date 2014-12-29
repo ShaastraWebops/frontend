@@ -391,7 +391,7 @@
                     $("#help").html("")
                 } else {
                     $("#cost").val(cost.toString())
-                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
+                    $("#help").html("Caution Deposit : Rs. <u>" + caution_deposit.toString() + "</u> - <b>This will be returned to you when you leave</b><br /><h3 class='' style='font-weight:800'><a target='_blank' href='https://www.onlinesbi.com/prelogin/icollecthome.htm?corpID=372458'>Click Here</a> to pay and enter the transaction ID</h3>")
                 }
 
                 return 0
@@ -443,12 +443,15 @@
                     }).done(function(res) {
                         console.log(res)
                         // data = JSON.parse(res.data)
-                        console.log(data)
+                        console.log(res.data)
+                        data = res.data
                         console.log("yohoho")
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
                         $('.error-msg').find(".text")
-                            .html("SUCCESS : Your data is saved.")
+                            .html("Your data is saved.")
+                        $('.error-msg').find(".bold")
+                            .html("SUCCESS : ")
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
