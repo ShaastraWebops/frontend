@@ -58,7 +58,7 @@
         </div>
         <div class="container main white">
             <div class="row row-centered">
-                <div class="alert alert-info alert-dismissible error-msg col-md-10 col-centered" role="alert" style="display: none;">
+                <div class="alert alert-danger alert-dismissible error-msg col-md-10 col-centered" role="alert" style="display: none;">
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <span class="bold head"></span>
                     <span class="text"></span>
@@ -70,22 +70,22 @@
                     <div class="col-md-8 col-md-offset-2" id="profile" style="">
                         <form method="POST">
                             <div class="container-fluid">
-                                <div class="row" style="padding-bottom: 1em;">
-                                    <div class="col-md-12 text-center" style="font-size:1.2em; vertical-align:middle">
-                                        <a class="pull-left btn btn-info edit">Edit Profile</a>
-                                        <span class="bold">Profile Details</span>
-                                        <a class="pull-right btn btn-info" href="../../php/scripts/logout.php">Logout</a>
-                                    </div>
-                                </div>
                                 <div class="container-fluid">
                                     <div class="row ">
                                         <div class="col-sm-4 head">Shaastra ID</div>
                                         <div class="col-sm-8 text-left label" style="padding: .2em .6em .3em;"></div>
-                                        <input class="col-sm-4 form shid" name="shid" type="text" placeholder="Shaastra ID" required />
-                                        <a class="btn btn-primary col-md-2 pull-right">Get Data</a>
+                                        <input class="col-sm-3 form shid" name="shid" type="text" placeholder="Shaastra ID" />
+                                        <a class="btn btn-danger col-md-2 pull-right clear_data">Clear Data</a>
+                                        <a class="btn btn-primary col-md-2 pull-right get_data">Get Data</a>
+                                        
                                     </div>
                                     <div class="row">
-                                        <br />
+                                        <div class="col-sm-4 head">Email id</div>
+                                        <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"></div>
+                                        <input class="col-sm-8 form" name="email" type="email" placeholder="eg: me@example.com" />
+                                    </div>
+                                    <div class="row">
+                                        <br /><br />
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4 head">Name</div>
@@ -93,11 +93,6 @@
                                         <div class="col-sm-4 label text-left" name="last_name"></div>
                                         <input class="col-sm-4 form" name="first_name" type="text" placeholder="First Name" required />
                                         <input class="col-sm-4 form" name="last_name" type="text" placeholder="Last Name" />
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-4 head">Email id</div>
-                                        <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"></div>
-                                        <input class="col-sm-8 form" name="email" type="email" placeholder="eg: me@example.com" />
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4 head">Gender</div>
@@ -149,12 +144,12 @@
                                         <p class="pull-right text-right">(This does not guarantee accomodation. We will get back to you with a confirmation)</p>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4 head">Password</div>
-                                        <div class="col-sm-8 label text-left" name="password"></div>
-                                        <input class="col-sm-8 form" name="password" type="check" placeholder="Change password" />
+                                        <div class="col-sm-4 head">Barcode</div>
+                                        <div class="col-sm-8 label text-left" name="barcode"></div>
+                                        <input class="col-sm-8 form" name="barcode" type="text" placeholder="Barcode" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
-                                        <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save Profile" />
+                                        <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save" />
                                     </div>
                                 </div>
                             </div>
@@ -173,24 +168,65 @@
 
             $(document).ready(function( ) {
                 $('#profile .label').hide()
-                // $('#profile .form').show()
-                $.ajax({ // SEND INFO FOR PROFILE
+                $.each(branches, function(i, k) {
+                    $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
+                });
+                $(".get_data").click(get_data)
+                $(".clear_data").click()
+            })
+            function clear_data () {
+                $("input").val("")
+                $("select").val("")
+                $("[name=gender]").val("M")
+                $("[type=submit]").val("Save")
+            }
+            function get_data() {
+                var json_info = {}
+                if ( $("[name=shid]").val() ) {
+                    json_info["id"] = $("[name=shid]").val()
+                }
+                else if ( $("[name=email]").val() ) {
+                    json_info["email"] = $("[name=email]").val()
+                }
+                json_info['data'] = 1 
+                $.ajax({
                     type: "POST",
                     url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/",
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                     },
                     cache: false,
-                    data: {
-                        "id" : $("[name=shid]").val()
-                    }
+                    data: json_info
                 }).done(function(res) {
                     data = res['data']
-                    console.log(data)
+                    var names = ["first_name", "last_name", "gender", "email", "shid", "age", "collehe_text", "college_roll", "branch", "city", "mobile_number"]
+                    for( var i = 0; i < names.length; i++ ) {
+                        if ( names[i] == "shid" ) {
+                            $("[name=" + names[i] + "]").val(data[names[i]])    
+                        }
+                        $("[name=" + names[i] + "]").val(data[names[i]])
+                    }
                 }).fail(function(xhr) {
-                    console.log(xhr.status)
+                    console.log(xhr)
+                    if ( xhr.status == 400 ) {
+                        $(".error-msg").show(300)
+                            .find(".head").html("Error ")
+                        $(".error-msg")
+                            .find(".text").html("code : " + xhr.status + "<br />" + xhr['responseJSON']["message"])
+                    } else if ( xhr.status == 404 ) {
+                        $(".error-msg").show(300)
+                            .find(".head").html("Error ")
+                        $(".error-msg")
+                            .find(".text").html("code : " + xhr.status + "<br /> Cannot connect to the internet" )
+                    } else if ( xhr.status == 500 ) {
+                        $(".error-msg").show(300)
+                            .find(".head").html("Error ")
+                        $(".error-msg")
+                            .find(".text").html("code : " + xhr.status + "<br /> Internal error ! Contact webops" )
+                    }
+                    
                 })
-            })
+            }
         </script>
     </body>
     <?php include '../../php/base/foot.php' ?>
