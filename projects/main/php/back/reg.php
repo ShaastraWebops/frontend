@@ -165,28 +165,6 @@
         <script type="text/javascript">
             var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');
 
-            function toggle_form(e) {
-                e && e.preventDefault()
-                if($('#profile .form').css('display') == 'none') {
-                    $("#profile .edit").html('View Profile');
-                    $('#profile .label').hide()
-                    $('#profile .form').show()
-                    window.location.hash = "edit-profile"
-                }
-                else{
-                    $("#profile .edit").html('Edit Profile');
-                    $('#profile .label').show()
-                    $('#profile .form').hide()
-                    window.location.hash = "profile"
-                }
-                $('#profile .form').each(function(i, el) {
-                    var $el = $(el);
-                    var $lab = $el.siblings("#profile .label[name=" + $el.attr('name') + "]")
-                    if ($lab.length) {
-                        $el.val($lab.text())
-                    }
-                })
-            }
             function pad(n, width, z) {
                 z = z || '0';
                 n = n + '';
@@ -223,6 +201,7 @@
                     if ( json_info['password'] == "" ) {
                         delete json_info['password']
                     }
+                    json_info['create'] = 1
                     // console.log(json_info)
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",

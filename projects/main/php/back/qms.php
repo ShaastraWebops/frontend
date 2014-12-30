@@ -7,8 +7,8 @@
         <title>QMS Dash | Shaastra 2015</title>
         <?php include '../../php/base/head.php' ?>
         <style>
-                    #profile .row {
-                border-bottom: 1px solid #fff;
+            #profile .row {
+                /*border-bottom: 1px solid #fff;*/
                 padding: 0.2em 0;
             }
             #profile .head {
@@ -78,9 +78,14 @@
                                     </div>
                                 </div>
                                 <div class="container-fluid">
-                                    <div class="row hidden">
+                                    <div class="row ">
                                         <div class="col-sm-4 head">Shaastra ID</div>
-                                        <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"></div>
+                                        <div class="col-sm-8 text-left label" style="padding: .2em .6em .3em;"></div>
+                                        <input class="col-sm-4 form shid" name="shid" type="text" placeholder="Shaastra ID" required />
+                                        <a class="btn btn-primary col-md-2 pull-right">Get Data</a>
+                                    </div>
+                                    <div class="row">
+                                        <br />
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4 head">Name</div>
@@ -155,42 +160,11 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-8 col-md-offset-2 hidden">
-                        <h3>Welcome !</h3>
-
-                        You have been registered at Shaastra !<br />
-                        Your Shaastar ID is : 
-                    </div>
                 </div>
             </div>
         </div>
         <script type="text/javascript">
-            var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');
-            var events = Array();
-            var teams = Array();
-
-            function toggle_form(e) {
-                e && e.preventDefault()
-                if($('#profile .form').css('display') == 'none') {
-                    $("#profile .edit").html('View Profile');
-                    $('#profile .label').hide()
-                    $('#profile .form').show()
-                    window.location.hash = "edit-profile"
-                }
-                else{
-                    $("#profile .edit").html('Edit Profile');
-                    $('#profile .label').show()
-                    $('#profile .form').hide()
-                    window.location.hash = "profile"
-                }
-                $('#profile .form').each(function(i, el) {
-                    var $el = $(el);
-                    var $lab = $el.siblings("#profile .label[name=" + $el.attr('name') + "]")
-                    if ($lab.length) {
-                        $el.val($lab.text())
-                    }
-                })
-            }
+            var branches = Array('School', 'Arts', 'Accounting', 'Applied Mechanics', 'Mechatronics', 'Aerospace Engineering', 'Automobile Engineering', 'Biotech / Biochemical / Biomedical', 'Biology', 'Ceramic Engineering', 'Chemical Engineering', 'Chemistry', 'Design', 'Engineering Design', 'Civil Engineering', 'Computer Science and Engineering', 'Electronics and Communications Engineering', 'Electrical and Electronics Engineering', 'Electrical Engineering', 'Electronics and Instrumentation Engineering', 'Engineering Physics', 'Economics', 'Fashion Technology', 'Humanities and Social Sciences', 'Industrial Production', 'Production', 'Information Technology and Information Science', 'Management', 'Manufacturing', 'Mathematics', 'Metallurgy and Material Science', 'Mechanical Engineering', 'Ocean Engineering and Naval Architecture', 'Physics', 'Telecom', 'Textile Engineering', 'Others');        
             function pad(n, width, z) {
                 z = z || '0';
                 n = n + '';
@@ -198,74 +172,26 @@
             }
 
             $(document).ready(function( ) {
-                init_profile();
-
-                $('#profile .form').hide()
-                $('#profile .edit').click(toggle_form)
-                toggle_form()
-                $.each(branches, function(i, k) {
-                    $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
-                });
-
-            })
-            function init_profile() {
-                $('#profile form').submit(function(e) {
-                    e.preventDefault();
-                    var $el = $(this)
-                    var json_info = {
-                        //'name' : $el.find('.name')
+                $('#profile .label').hide()
+                // $('#profile .form').show()
+                $.ajax({ // SEND INFO FOR PROFILE
+                    type: "POST",
+                    url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                    },
+                    cache: false,
+                    data: {
+                        "id" : $("[name=shid]").val()
                     }
-                    $el.find('.form').each(function(i, el) {
-                        var $el = $(el);
-                        if ( $el.attr("name") == "want_accomodation" ) {
-                            console.log($el.val().toLowerCase() == "wanted")
-                            json_info[$el.attr('name')] = ($el.val().toLowerCase()=="wanted")?Number(true):Number(false);
-                        } else {
-                            json_info[$el.attr('name')] = $el.val()
-                        }
-                    })
-                    if ( json_info['password'] == "" ) {
-                        delete json_info['password']
-                    }
-                    console.log(json_info)
-                    $.ajax({ // SEND INFO FOR PROFILE
-                        type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/",
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Authorization', "Token <?php echo $_SESSION['token']; ?>");
-                        },
-                        cache: false,
-                        data: json_info
-                    }).done(function(res) {
-                        data = res['data']
-                        console.log(data)
-                        window.location.href = window.location.origin + window.location.pathname +
-                            "?first_name=" + data.first_name +
-                            "&last_name=" + data.last_name +
-                            "&valid_profile=" + ( ( data.city != "" && data.mobile_number != "" )? '1' : '0' )
-                    }).fail(function(xhr) {
-                        console.log(xhr.status)
-                    })
+                }).done(function(res) {
+                    data = res['data']
+                    console.log(data)
+                }).fail(function(xhr) {
+                    console.log(xhr.status)
                 })
-            }
-            function customFilter(values) {
-                return function(el) {
-                    var r = el;
-                    var keys = Object.keys( values );
-                    var answer = true;
-                    for( var i = 0, len = keys.length; i < len; i++) {
-                        if( r[keys[i]] !== values[keys[i]] ) {
-                            answer = false;
-                            break;
-                        }
-                    }
-                    return answer;
-               }
-            }
-            function toTitleCase(str) {
-                return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-            }
-            </script>
+            })
+        </script>
     </body>
     <?php include '../../php/base/foot.php' ?>
 </html>
