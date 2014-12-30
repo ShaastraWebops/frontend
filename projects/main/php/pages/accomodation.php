@@ -403,16 +403,17 @@
                     'format': 'yyyy-mm-dd',
                     'autoclose': true
                 });
+                $('#calc .time').timepicker({
+                    'showDuration': true,
+                    'timeFormat': 'g:ia'
+                });
                 for ( var i = 0; i < 7; i+=1 ) {
                     datepair[i] = new Datepair($('.person_' + (i+1))[0]);
                 }
 
                 $(".person input").keyup(calc)
                 $(".person").on("rangeSelected", calc)
-                $('#calc .time').timepicker({
-                    'showDuration': true,
-                    'timeFormat': 'g:ia'
-                });
+                
 
                 $(".submit").click(function(e) {
                     e.preventDefault()

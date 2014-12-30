@@ -172,15 +172,20 @@
                     $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
                 });
                 $(".get_data").click(get_data)
-                $(".clear_data").click()
+                $(".clear_data").click(clear_data)
             })
             function clear_data () {
-                $("input").val("")
-                $("select").val("")
-                $("[name=gender]").val("M")
-                $("[type=submit]").val("Save")
+                $(".clear_data").text("CLearing ...").prop("disabled", true)
+                window.setTimeout(function() {
+                    $("input").val("")
+                    $("select").val("")
+                    $("[name=gender]").val("M")
+                    $("[type=submit]").val("Save")
+                    $(".clear_data").text("Clear Data").prop("disabled", false)
+                }, 1)
             }
             function get_data() {
+                $(".get_data").text("Fetching ...").prop("disabled", true)
                 var json_info = {}
                 if ( $("[name=shid]").val() ) {
                     json_info["id"] = $("[name=shid]").val()
@@ -198,6 +203,7 @@
                     cache: false,
                     data: json_info
                 }).done(function(res) {
+                    $(".get_data").text("Fetching ...").prop("disabled", false)
                     data = res['data']
                     var names = ["first_name", "last_name", "gender", "email", "shid", "age", "collehe_text", "college_roll", "branch", "city", "mobile_number"]
                     for( var i = 0; i < names.length; i++ ) {
@@ -207,6 +213,7 @@
                         $("[name=" + names[i] + "]").val(data[names[i]])
                     }
                 }).fail(function(xhr) {
+                    $(".get_data").text("Fetching ...").prop("disabled", false)
                     console.log(xhr)
                     if ( xhr.status == 400 ) {
                         $(".error-msg").show(300)
@@ -224,7 +231,6 @@
                         $(".error-msg")
                             .find(".text").html("code : " + xhr.status + "<br /> Internal error ! Contact webops" )
                     }
-                    
                 })
             }
         </script>
