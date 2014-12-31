@@ -155,7 +155,7 @@
                         <div class="form-group">
                             <label for="ref_no" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
                             <div class="col-md-2">
-                                <input class="form-control ref_no" type="text" id="ref_no" name="ref_no" value="">
+                                <input class="form-control ref_no" type="text" id="ref_no" name="ref_no" value="" required>
                             </div>
                             <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
