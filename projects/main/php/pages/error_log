@@ -2594,3 +2594,4 @@
 [31-Dec-2014 06:13:53 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [31-Dec-2014 07:32:12 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [31-Dec-2014 07:40:07 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 08:16:38 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55

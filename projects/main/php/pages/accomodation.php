@@ -155,7 +155,7 @@
                         <div class="form-group">
                             <label for="transaction" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
                             <div class="col-md-2">
-                                <input class="form-control" type="text" id="transaction" name="transaction" value="">
+                                <input class="form-control" type="text" id="ref_no" name="ref_no" value="">
                             </div>
                             <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
@@ -416,6 +416,7 @@
                 
 
                 $(".submit").click(function(e) {
+                    $(".submit").attr("disabled", true)
                     e.preventDefault()
                     var $el = $(this)
                     var $form = $(this).closest("form")
@@ -446,6 +447,7 @@
                         // data = JSON.parse(res.data)
                         console.log(res.data)
                         data = res.data
+                    $(".submit").attr("disabled", false)
                         console.log("yohoho")
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
@@ -456,6 +458,7 @@
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
+                    $(".submit").attr("disabled", false)
                         if ( xhr.status == 500 ) {
                             $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")
