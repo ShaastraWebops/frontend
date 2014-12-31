@@ -14,19 +14,6 @@
             #profile .head {
                 font-weight: bold;
             }
-            #profile .form:not(.no-form-style) {
-                color: black;
-                display: block;
-                border: 1px solid #ccc;
-                border-radius: 2px;
-                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            }
-            #profile .form:not(.no-form-style):focus {
-            }
             #profile .label {
                 color: white;
                 font-size: 1em;
@@ -64,20 +51,79 @@
                     <span class="text"></span>
                 </div>
             </div>
-            <div class="row" >
-                <div class="col-md-10 col-md-offset-1" id="profile" style="">
+            <div class="row">
+                <div class="col-md-12 col-md-offset" id="profile" style="">
                     <form method="POST">
-                        <div class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="form-group">
+                            <!-- <div class="col-md-12  person-label text-cetner">
+                                <div class="col-md-2 text-center bold">
+                                    Shaastra ID
+                                </div>
+                                <div class="col-md-1 text-center bold">
+                                    Gender
+                                </div>
+                                <div class="col-md-2 text-center bold">
+                                    From
+                                </div>
+                                <div class="col-md-2 text-center bold">
+                                    To
+                                </div>
+                                <div class="col-md-2 text-center bold">
+                                    Mobile
+                                </div>
+                                <div class="col-md-2 text-center bold">
+                                    Email
+                                </div>
+
+                            </div> -->
+                            <?php for ( $i = 0; $i < 7; $i++ ) { ?>
+                                <div class="form-group row person_<?php echo $i+1; ?> person">
+                                    <div class="col-md-12" style="padding: 4px 0px">
+                                        <div class="col-md-1">
+                                            <input type="text" name="shid_<?php echo $i+1; ?>" class="form-control shid" placeholder="Shaastra ID" value="">
+                                        </div>
+                                        <div class="col-md-1" style="padding: 0">
+                                            <select type="select" name="gender_<?php echo $i+1; ?>" class="form-control gender">
+                                                <option value="X" selected>-------</option>
+                                                <option value="M">Male  </option>
+                                                <option value="F">Female </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="col-md-6" style="padding : 0 2px;">
+                                                <input type="text" name="start_date_<?php echo $i+1; ?>" class="form-control date start" placeholder="Checkin" value="">
+                                            </div>
+                                            <div class="col-md-6" style="padding : 0 2px;">
+                                                <input type="text" name="start_time_<?php echo $i+1; ?>" class="form-control time start" placeholder="Time" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="col-md-6" style="padding : 0 2px;">
+                                                <input type="text" name="end_date_<?php echo $i+1; ?>" class="form-control date end" placeholder="Checkout" value="">
+                                            </div>
+                                            <div class="col-md-6" style="padding : 0 2px;">
+                                                <input type="text" name="end_time_<?php echo $i+1; ?>" class="form-control time end" placeholder="Time" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="text" name="room" class="form-control date end" placeholder="Room" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php  } ?>
+                        </div>
+                        <div class="container-fluid form-group">
                             <div class="col-md-6 col-qms">
                                 <div class="row ">
                                     <div class="col-sm-4 head">Shaastra ID</div>
-                                    <div class="col-sm-8 text-left label" style="padding: .2em .6em .3em;"></div>
-                                    <input class="col-sm-3 form shid" name="shid" type="text" placeholder="Shaastra ID" />
+                                    <div class="col-sm-3" style="padding: 0">
+                                        <input class="form-control shid" name="shid" type="text" placeholder="Shaastra ID" />
+                                    </div>
                                     <div class="btn-group pull-right" role="group">
                                         <a class="btn btn-danger col-md-6 clear_data">Clear Data</a>
                                         <a class="btn btn-primary col-md-6 get_data">Get Data</a>
                                     </div>
-                                    
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-4 head">Email id</div>
@@ -102,42 +148,23 @@
                                         <option>F</option>
                                     </select>
                                     <div class="col-sm-2 head">Age</div>
-                                    <div class="col-sm-3 label text-left" name="age"></div>
                                     <input class="col-sm-3 form" name="age" type="number" placeholder="" min="10" max="90" />
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-4 head">College Name</div>
-                                    <div class="col-sm-8 label text-left" name="college_text"></div>
                                     <input class="col-sm-8 form" name="college_text" type="text" placeholder="eg: IIT Madras" required />
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-4 head">Roll No</div>
-                                    <div class="col-sm-8 label text-left" name="college_roll"></div>
-                                    <input class="col-sm-8 form" name="college_roll" type="text" placeholder="eg: EP12B001" />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Branch</div>
-                                    <div class="col-sm-8 label text-left" name="branch"></div>
-                                    <!-- <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required /> -->
-                                    <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering">
-
-                                    <option value="School">School</option><option value="Arts">Arts</option><option value="Accounting">Accounting</option><option value="Applied Mechanics">Applied Mechanics</option><option value="Mechatronics">Mechatronics</option><option value="Aerospace Engineering">Aerospace Engineering</option><option value="Automobile Engineering">Automobile Engineering</option><option value="Biotech / Biochemical / Biomedical">Biotech / Biochemical / Biomedical</option><option value="Biology">Biology</option><option value="Ceramic Engineering">Ceramic Engineering</option><option value="Chemical Engineering">Chemical Engineering</option><option value="Chemistry">Chemistry</option><option value="Design">Design</option><option value="Engineering Design">Engineering Design</option><option value="Civil Engineering">Civil Engineering</option><option value="Computer Science and Engineering">Computer Science and Engineering</option><option value="Electronics and Communications Engineering">Electronics and Communications Engineering</option><option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option><option value="Electrical Engineering">Electrical Engineering</option><option value="Electronics and Instrumentation Engineering">Electronics and Instrumentation Engineering</option><option value="Engineering Physics">Engineering Physics</option><option value="Economics">Economics</option><option value="Fashion Technology">Fashion Technology</option><option value="Humanities and Social Sciences">Humanities and Social Sciences</option><option value="Industrial Production">Industrial Production</option><option value="Production">Production</option><option value="Information Technology and Information Science">Information Technology and Information Science</option><option value="Management">Management</option><option value="Manufacturing">Manufacturing</option><option value="Mathematics">Mathematics</option><option value="Metallurgy and Material Science">Metallurgy and Material Science</option><option value="Mechanical Engineering">Mechanical Engineering</option><option value="Ocean Engineering and Naval Architecture">Ocean Engineering and Naval Architecture</option><option value="Physics">Physics</option><option value="Telecom">Telecom</option><option value="Textile Engineering">Textile Engineering</option><option value="Others">Others</option>
-                                    </select>
-                                </div>
-                                <div class="row">
                                     <div class="col-sm-4 head">City</div>
-                                    <div class="col-sm-8 label text-left" name="city"></div>
                                     <input class="col-sm-8 form" name="city" type="text" placeholder="eg: Chennai" required />
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-4 head">Phone</div>
-                                    <div class="col-sm-8 label text-left" name="mobile_number"></div>
                                     <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
                                 </div>
                                 <div class="row hidden">
                                     <div class="col-sm-4 head">Accomodation</div>
-                                    <div class="col-sm-8 label text-left" name="want_accomodation"></div>
-                                    <select class="col-sm-3 form" name="want_accomodation" required >
+                                    <select class="col-sm-3 form"   name="want_accomodation" required >
                                         <option selected>Not Wanted</option>
                                         <option>Wanted</option>
                                     </select>
@@ -146,14 +173,17 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-4 head">Barcode</div>
-                                    <div class="col-sm-8 label text-left" name="barcode"></div>
                                     <input class="col-sm-8 form" name="barcode" type="text" placeholder="Barcode" />
                                 </div>
                             </div>
                             <div class="col-md-6 col-hospi">
                                 <div class="row">
+                                    <div class="col-sm-5 head">SBIcollect Ref Number</div>
+                                    <input class="col-sm-4 form" name="ref_no" type="text" placeholder="Reference Number" value="" />
+                                    <!-- <a class="btn btn-primary col-sm-2 pull-right">Get data</a> -->
+                                </div>
+                                <div class="row">
                                     <div class="col-sm-4 head">From</div>
-                                    <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"></div>
                                     <input class="col-sm-3 form date start" name="start_date" type="text" placeholder="Date Start" value="" />
                                     <input class="col-sm-3 col-sm-offset-1 form time start" name="start_time" type="text" placeholder="Time Start" value="" />
                                 </div>
@@ -163,69 +193,9 @@
                                     <input class="col-sm-3 form date end" name="end_date" type="text" placeholder="Date End" value="" />
                                     <input class="col-sm-3 col-sm-offset-1 form time end" name="end_time" type="text" placeholder="Time End" value="" />
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">CheckIn Room</div>
-                                    <div class="col-sm-4 label text-left" style="width: auto" name="first_name"></div>
-                                    <div class="col-sm-8 label text-left" name="last_name"></div>
-                                    <input class="col-sm-4 form" name="first_name" type="text" placeholder="First Name" />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Gender</div>
-                                    <div class="col-sm-3 label text-left" name="gender"  style="">M</div>
-                                    <select class="col-sm-3 form" name="gender" required >
-                                        <option>M</option>
-                                        <option>F</option>
-                                    </select>
-                                    <div class="col-sm-2 head">Age</div>
-                                    <div class="col-sm-3 label text-left" name="age"></div>
-                                    <input class="col-sm-3 form" name="age" type="number" placeholder="" min="10" max="90" />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">College Name</div>
-                                    <div class="col-sm-8 label text-left" name="college_text"></div>
-                                    <input class="col-sm-8 form" name="college_text" type="text" placeholder="eg: IIT Madras" required />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Roll No</div>
-                                    <div class="col-sm-8 label text-left" name="college_roll"></div>
-                                    <input class="col-sm-8 form" name="college_roll" type="text" placeholder="eg: EP12B001" />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Branch</div>
-                                    <div class="col-sm-8 label text-left" name="branch"></div>
-                                    <!-- <input class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering" required /> -->
-                                    <select class="col-sm-8 form" name="branch" type="text" placeholder="eg: Electrical Engineering">
-
-                                    </select>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">City</div>
-                                    <div class="col-sm-8 label text-left" name="city"></div>
-                                    <input class="col-sm-8 form" name="city" type="text" placeholder="eg: Chennai" required />
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Phone</div>
-                                    <div class="col-sm-8 label text-left" name="mobile_number"></div>
-                                    <input class="col-sm-8 form" name="mobile_number" type="text" placeholder="eg: +919003097073" required />
-                                </div>
-                                <div class="row hidden">
-                                    <div class="col-sm-4 head">Accomodation</div>
-                                    <div class="col-sm-8 label text-left" name="want_accomodation"></div>
-                                    <select class="col-sm-3 form" name="want_accomodation" required >
-                                        <option selected>Not Wanted</option>
-                                        <option>Wanted</option>
-                                    </select>
-                                    <br />
-                                    <p class="pull-right text-right">(This does not guarantee accomodation. We will get back to you with a confirmation)</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 head">Barcode</div>
-                                    <div class="col-sm-8 label text-left" name="barcode"></div>
-                                    <input class="col-sm-8 form" name="barcode" type="text" placeholder="Barcode" />
-                                </div>
+                                
                             </div>
                         </div>
-                        <br />
                         <div class="container-fluid">
                             <div class="col-md-6 col-md-offset-3" style="border-bottom: 0px;">
                                 <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save" />
@@ -263,20 +233,20 @@
             });
             datepair[0] = new Datepair($(".col-hospi")[0]);
             $(".get_data").click(get_data)
-            $(".clear_data").click(clear_data)
+            $(".col-qms .clear_data").click(qms_clear_data)
         })
-        function clear_data () {
-            $(".clear_data").text("Clearing ...").prop("disabled", true)
+        function qms_clear_data () {
+            $(".col-qms .clear_data").text("Clearing ...").attr("disabled", true)
             window.setTimeout(function() {
-                $("input").val("")
-                $("select").val("")
-                $("[name=gender]").val("M")
-                $("[type=submit]").val("Save")
-                $(".clear_data").text("Clear Data").prop("disabled", false)
+                $(".col-qms input").val("")
+                $(".col-qms select").val("")
+                $(".col-qms [name=gender]").val("M")
+                // $(".col-qms [type=submit]").val("Save")
+                $(".col-qms .clear_data").text("Clear Data").attr("disabled", false)
             }, 1)
         }
         function get_data() {
-            $(".get_data").text("Fetching ...").prop("disabled", true)
+            $(".get_data").text("Fetching ...").attr("disabled", true)
             var json_info = {}
             if ( $("[name=shid]").val() ) {
                 json_info["id"] = $("[name=shid]").val()
@@ -294,7 +264,7 @@
                 cache: false,
                 data: json_info
             }).done(function(res) {
-                $(".get_data").text("Fetching ...").prop("disabled", false)
+                $(".get_data").text("Get Data").attr("disabled", false)
                 data = res['data']
                 var names = ["first_name", "last_name", "gender", "email", "shid", "age", "collehe_text", "college_roll", "branch", "city", "mobile_number"]
                 for( var i = 0; i < names.length; i++ ) {
@@ -304,7 +274,7 @@
                     $("[name=" + names[i] + "]").val(data[names[i]])
                 }
             }).fail(function(xhr) {
-                $(".get_data").text("Fetching ...").prop("disabled", false)
+                $(".get_data").text("Get Data").attr("disabled", false)
                 console.log(xhr)
                 if ( xhr.status == 400 ) {
                     $(".error-msg").show(300)

@@ -96,10 +96,10 @@
                                         </select>
                                         <div class="col-sm-2 head">Age</div>
                                         <div class="col-sm-3 label text-left" name="age"></div>
-                                        <input class="col-sm-3 form" name="age" type="number" placeholder="" min="10" max="90" />
+                                        <input class="col-sm-3 form" name="age" type="number" placeholder="" min="1" max="90" />
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4 head">College Name</div>
+                                        <div class="col-sm-4 head">College/Org Name</div>
                                         <div class="col-sm-8 label text-left" name="college_text"></div>
                                         <input class="col-sm-8 form" name="college_text" type="text" placeholder="eg: IIT Madras" required />
                                     </div>
@@ -139,7 +139,12 @@
                                     <div class="row">
                                         <div class="col-sm-4 head">Password</div>
                                         <div class="col-sm-8 label text-left" name="password"></div>
-                                        <input class="col-sm-8 form" name="password" required type="check" placeholder="Password" />
+                                        <input class="col-sm-8 form" name="password" required type="password" placeholder="Password" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 head">Retype Password</div>
+                                        <div class="col-sm-8 label text-left" name="password2"></div>
+                                        <input class="col-sm-8 form" name="password2" required type="password" placeholder="Retype Password" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
                                         <input class="col-sm-12 form no-form-style btn submit btn-primary" name="submit" type="submit" value="Save" />
@@ -152,7 +157,7 @@
                         <h2>Welcome !</h2>
 
                         You have been registered at Shaastra !<br />
-                        <!-- Your Shaastar ID is : <b class="shid"></b><br /> -->
+                        Your Shaastar ID is : <b class="shid"></b><br />
                         Your Email is : <b class="email"></b><br />
                         Your Name is : <b class="name"></b><br />
                         Your College is : <b class="college_text"></b><br />
