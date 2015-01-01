@@ -157,12 +157,11 @@
                         <h2>Welcome !</h2>
 
                         You have been registered at Shaastra !<br />
-                        Your Shaastar ID is : <b class="shid"></b><br />
+                        Your Shaastra ID is : <b class="shid"></b><br />
                         Your Email is : <b class="email"></b><br />
                         Your Name is : <b class="name"></b><br />
                         Your College is : <b class="college_text"></b><br />
-                        <!-- Your City is : <b class="city"></b><br /> -->
-
+                           <h3>Please note your Shaastra ID to the registration desk.</h3>
                     </div>
                 </div>
             </div>
@@ -218,9 +217,10 @@
                         data: json_info
                     }).done(function(res) {
                         data = res['data']
+                        console.log(data);
                         $(".submit").prop("disabled", false).val("SAVE")
                         var $el = $(".done-data").removeClass("hidden")
-                        $el.find(".shid").html("SH15" + pad(data['id'], 5, 0))
+                        $el.find(".shid").html("SH15" + pad(data['user'], 5, 0))
                         $el.find(".email").html(data['email'])
                         $el.find(".college_text").html(data['college_text'])
                         $el.find(".gender").html(data['gender'])

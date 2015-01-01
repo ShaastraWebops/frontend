@@ -282,7 +282,7 @@
 			<div class="container-fluid white centered">
 		        <div class="row">
 		            <div class="col-xs-5 col-xs-offset-1">
-		                <h2 class="text-center title">Imagine Exhibits</h2>
+		                <h2 class="text-center title">Imaginate Exhibits</h2>
 		                <div class="white breaker">
 		                    <span class="left"></span>
 		                        <div class="dice white"></div>
@@ -303,7 +303,6 @@
                 <div class="row">
 					<div class="col-md-5 col-md-offset-1">
 		                <p style="padding-top:10px;">This year, we bring you the opportunity to drown yourself in a world where the realm of reality is expanded beyond imagination! Imaginate is a world renowned augmented reality and virtual reality technology based enterprise, offering innovative visualization services which enhance users’ experience of reality. Here is a slice of the kind of excitement that’s on offer:</p>
-	                    <p><h4> TrialAR </h4>TrialAR, which helps you to try out different apparel and accessories through a kiosk (LED screen) that acts as a virtual trial room. By means of an iPad, the user can access different apparel designs and sizes and send the data wirelessly to the kiosk where a web camera accesses user's body information and immerses the user in a virtual trial experience.</p>
 	                    <p><h4> GiftAR </h4>GiftAR, which presents an immersive way of gifting to your loved ones through virtual video messages augmented on physical pictures. GiftAR is a mobile app built using Augmented Reality and social media technologies and enables users to send and receive personalized video gift messages.</p>
 				      	<div class="hidden-xs col-lg-12 col-md-12">
 				      		<div class="embed-responsive embed-responsive-4by3">
