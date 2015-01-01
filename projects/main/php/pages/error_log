@@ -2603,3 +2603,85 @@
 [31-Dec-2014 11:39:03 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [31-Dec-2014 11:51:32 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [31-Dec-2014 12:12:09 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 14:57:50 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 15:51:08 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 15:57:50 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 16:39:26 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 19:12:05 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 21:12:11 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 22:48:14 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[31-Dec-2014 22:50:10 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 01:26:55 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 02:55:02 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 02:56:16 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[01-Jan-2015 03:38:59 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 03:39:01 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:32:28 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:32:28 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:32:29 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:32:29 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 04:32:29 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 04:32:29 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/workshops/.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php on line 49
+[01-Jan-2015 04:32:31 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:32:33 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:42:44 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:42:45 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:42:45 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:42:49 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:42:54 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:43:04 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:47:44 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:47:45 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:47:46 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 04:47:48 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 05:42:07 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 05:42:07 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 05:42:07 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/lectures/Anil.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php on line 49
+[01-Jan-2015 05:45:43 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 05:45:43 Europe/Amsterdam] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php:11) in /home/shaastra/public_html/2015/production/projects/main/php/base/logmein.php on line 2
+[01-Jan-2015 05:45:43 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/workshops/MSP430.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php on line 49
+[01-Jan-2015 05:49:22 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 06:54:49 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 06:59:46 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 08:30:50 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[01-Jan-2015 12:40:57 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 12:40:59 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:22:18 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:22:19 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:28:02 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:28:03 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:43:05 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:56:56 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 13:56:56 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 195
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 15:59:10 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 205
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 195
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:00:47 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 205
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 195
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:15 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 205
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 195
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 205
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 195
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 199
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 202
+[01-Jan-2015 16:01:27 Europe/Amsterdam] PHP Notice:  Undefined offset: 13 in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 205
