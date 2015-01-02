@@ -2768,3 +2768,7 @@
 [02-Jan-2015 12:08:27 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/workshops/TI_workshop.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/content.php on line 49
 [02-Jan-2015 12:08:29 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [02-Jan-2015 12:09:03 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 12:42:48 Europe/Amsterdam] PHP Notice:  Undefined variable: name in /home/shaastra/public_html/2015/production/projects/main/php/pages/contentlist.php on line 32
+[02-Jan-2015 12:42:48 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/contentlist.php on line 45
+[02-Jan-2015 12:52:14 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 12:52:15 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
