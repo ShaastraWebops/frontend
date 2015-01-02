@@ -206,7 +206,7 @@
                     $(".get_data").text("Get Data").prop("disabled", false)
                     data = res['data']
                     console.log(data)
-                    var names = ["first_name", "last_name", "gender", "email", "shid", "age", "collehe_text", "college_roll", "branch", "city", "mobile_number"]
+                    var names = ["first_name", "last_name", "gender", "email", "shid", "age", "college_text", "college_roll", "branch", "city", "mobile_number"]
                     for( var i = 0; i < names.length; i++ ) {
                         if ( names[i] == "shid" ) {
                             $("[name=" + names[i] + "]").val("SH15" + pad(data['user'], 5, '0'))
