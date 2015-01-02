@@ -1,5 +1,5 @@
-<p><span style="font-family:arial,helvetica,sans-serif"><strong><span style="font-size:16px">TDP Template is updated. Visit the TDP tab for details.</span></strong></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:15.5555562973022px"><strong>Prize Money has been announced,Check the Prize Money for details.</strong></span></span></p>
 
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Registrations will be closed by 30th November 2014,11:59 PM.</strong></span></span></p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Registrations are closed, no further TDPs will be entertained!</strong></span></span></p>
 
 <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Results for Phase-2 TDP Submission is announced! Check the &quot;Results&quot; tab for details.</strong></span></span></p>
