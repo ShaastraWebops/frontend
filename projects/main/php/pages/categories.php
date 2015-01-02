@@ -266,7 +266,7 @@
                 </div>
                 <br />
                 <p class="text-center">For any queries, contact <a href="https://mail.google.com/mail/?view=cm&fs=1&to=events@shaastra.org">events@shaastra.org</a></p>
-                <h4 class="text-center" >Get the <a href="../../media/Schedule - Events - Shaastra 2015.pdf">Shaastra 2015 Events Schedule</a></h4>
+                <h4 class="text-center" >Get the <a href="../../media/Schedule - Day wise - Shaastra 2015.pdf">Shaastra 2015 Events Schedule</a></h4>
             </div>
         </div>
     </div>
