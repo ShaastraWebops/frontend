@@ -2772,3 +2772,34 @@
 [02-Jan-2015 12:42:48 Europe/Amsterdam] PHP Warning:  file_get_contents(../misc/pre-shaastra/.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/shaastra/public_html/2015/production/projects/main/php/pages/contentlist.php on line 45
 [02-Jan-2015 12:52:14 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [02-Jan-2015 12:52:15 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 13:42:48 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 13:53:37 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 13:53:37 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 13:56:29 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 14:14:27 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[02-Jan-2015 14:16:24 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[02-Jan-2015 14:16:53 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[02-Jan-2015 14:56:04 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 14:56:05 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 15:23:24 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 15:40:43 Europe/Amsterdam] PHP Notice:  Undefined variable: notifications_data in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 253
+[02-Jan-2015 15:42:15 Europe/Amsterdam] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[02-Jan-2015 16:07:02 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 16:07:03 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 16:14:28 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 16:17:04 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 16:56:43 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:22:14 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:41:50 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:42:36 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:43:50 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:43:51 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:43:59 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:44:08 Europe/Amsterdam] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 17:22:05 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 18:55:12 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 19:53:24 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 19:53:25 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 19:54:39 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 19:54:51 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[02-Jan-2015 19:54:51 America/Chicago] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55

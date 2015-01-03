@@ -1,5 +1,5 @@
-<p><strong><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Please check the &quot;WCA Registrations&quot; Tab for registrations in the WCA site. </span></span></strong></p>
+<p><strong><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Please check the &quot;WCA Registrations&quot; Tab for registrations in the WCA site, it is compulsory.</span></span></strong></p>
 
-<p><strong><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Please note that the WCA registration is compulsory for participating in the event.</span></span></strong>&nbsp;</p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>WCA Registrations will be closing tonight (2 nd JAN 11: 59 PM), do register if you haven&#39;t.&nbsp;</strong></span></span></p>
 
-<p><strong><span style="font-size:16px">The revised&nbsp;<a href="../../media/Shaastra Cube Open/Schedule_Shaastra Cube Open_revised.xlsx" target="_blank">schedule</a> for the event is out.Please also&nbsp;note that the schedule may change.</span></strong></p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>The revised&nbsp;<a href="../../media/Shaastra Cube Open/Schedule_Shaastra Cube Open_revised.xlsx" target="_blank">schedule</a> for the event is out.Please also&nbsp;note that the schedule may change.</strong></span></span></p>

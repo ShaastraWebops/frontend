@@ -186,7 +186,7 @@
                     $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
                 });
                 $(".clear").click(function() {
-					var $el = $(".done-data").removeClass("hidden")
+					var $el = $(".done-data").addClass("hidden")
                     $el.find(".shid").html("NULL")
                     $el.find(".email").html("NULL")
                     $el.find(".college_text").html("NULL")
