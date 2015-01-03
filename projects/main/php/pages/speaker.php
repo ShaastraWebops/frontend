@@ -5,7 +5,7 @@
 		<?php
             $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
-                "ravi venkatesan", "sunil kumar", "vanitha narayanan",
+                "ravi venkatesan", "arnab rai choudhuri", "sunil kumar", "vanitha narayanan",
                 "vijay govindarajan", "vinita bali"
             );
 
@@ -189,7 +189,7 @@
             </div>
             <div class="navbar-collapse collapse" id="speakers-list">
                 <div class="row text-center">
-                    <?php for($speaker_i = 0; $speaker_i < 13; $speaker_i++) { ?>
+                    <?php for($speaker_i = 0; $speaker_i < 14; $speaker_i++) { ?>
                         <div class="speaker text-center" style="display: inline-block; width : 14%;">
                             <div class="real">
                                 <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>" class="speaker-link">

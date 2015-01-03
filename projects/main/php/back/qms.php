@@ -173,6 +173,7 @@
                 });
                 $(".get_data").click(get_data)
                 $(".clear_data").click(clear_data)
+                save_data()
             })
             function clear_data () {
                 $(".clear_data").text("CLearing ...").prop("disabled", true)
@@ -253,7 +254,7 @@
                     console.log(json_info)
                     $.ajax({ // SEND INFO FOR PROFILE
                         type: "POST",
-                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", 
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
                         },
@@ -266,7 +267,7 @@
                         $(".error-msg").show(300).addClass("alert-danger").removeClass("alert-info")
                             .find(".head").html("Saved ")
                         $(".error-msg")
-                            .find(".text").html("Barcode : " data['barcode'] + ", Shaastra ID : " + data['user'])
+                            .find(".text").html("Barcode : " + data['barcode'] + ", Shaastra ID : " + data['user'])
                     }).fail(function(xhr) {
                         $(".submit").text("Save").removeClass("disabled")
                         console.log(xhr)

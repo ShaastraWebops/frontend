@@ -150,7 +150,7 @@
                                         <input class="col-sm-8 form" name="password2" required type="password" placeholder="Retype Password" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
-                                        <a class="col-sm-12 form no-form-style btn submit btn-primary"> Submit </a>
+                                        <input class="col-sm-12 form no-form-style btn submit btn-primary" value="Submit" name="submit" type="submit">
                                     </div>
                                 </div>
                             </div>
@@ -194,6 +194,7 @@
                     $el.find(".mobile_number").html("NULL")
                     $el.find(".name").html("NULL")
                     $("input").val("")
+$("input[type=submit]").val("Submit")
                     $("select[name=branch]").val("Others")
                     $("select[name=gender]").val("M")
                 })
