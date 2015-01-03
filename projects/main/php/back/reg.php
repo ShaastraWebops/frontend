@@ -42,7 +42,7 @@
     </head>
 
     <body>
-        <?php $back="../../php/pages/home.php"; include '../../php/base/menu.php' ?>
+        <!-- <?php //$back="../../php/pages/home.php"; include '../../php/base/menu.php' ?> -->
 
         <div class="container-fluid title white centered" style='margin-bottom:2%;'>
             <div class="row">
@@ -71,6 +71,9 @@
                         <form method="POST">
                             <div class="container-fluid">
                                 <div class="container-fluid">
+                                    <div class="row" style="border-bottom: 0px;">
+                                        <a class="col-sm-12 form no-form-style btn clear btn-danger"> Clear all </a> 
+                                    </div>
                                     <div class="row hidden">
                                         <div class="col-sm-4 head">Shaastra ID</div>
                                         <div class="col-sm-8 text-left" style="padding: .2em .6em .3em;"></div>
@@ -147,7 +150,7 @@
                                         <input class="col-sm-8 form" name="password2" required type="password" placeholder="Retype Password" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
-                                        <input class="col-sm-12 form no-form-style btn submit btn-primary" name="submit" type="submit" value="Save" />
+                                        <a class="col-sm-12 form no-form-style btn submit btn-primary"> Submit </a>
                                     </div>
                                 </div>
                             </div>
@@ -182,12 +185,24 @@
                 $.each(branches, function(i, k) {
                     $('#profile .form[name=branch]').append($('<option value="' + k + '">' + k + '</option>'))
                 });
+                $(".clear").click(function() {
+					var $el = $(".done-data").removeClass("hidden")
+                    $el.find(".shid").html("NULL")
+                    $el.find(".email").html("NULL")
+                    $el.find(".college_text").html("NULL")
+                    $el.find(".gender").html("NULL")
+                    $el.find(".mobile_number").html("NULL")
+                    $el.find(".name").html("NULL")
+                    $("input").val("")
+                    $("select[name=branch]").val("Others")
+                    $("select[name=gender]").val("M")
+                })
 
             })
             function init_profile() {
                 $('#profile form').submit(function(e) {
                     $(".done-data").addClass("hidden")
-                    $(".submit").prop("disabled", "disabled").val("Processing ... ")
+                    $(".submit").addClass("disabled").val("Processing ... ")
                     e.preventDefault();
                     var $el = $(this)
                     var json_info = {
@@ -218,7 +233,7 @@
                     }).done(function(res) {
                         data = res['data']
                         console.log(data);
-                        $(".submit").prop("disabled", false).val("SAVE")
+                        $(".submit").removeClass("disabled").val("SAVE")
                         var $el = $(".done-data").removeClass("hidden")
                         $el.find(".shid").html("SH15" + pad(data['user'], 5, 0))
                         $el.find(".email").html(data['email'])
@@ -228,7 +243,7 @@
                         $el.find(".name").html(data['first_name'] + " " + data['last_name'])
                     }).fail(function(xhr) {
                         console.log(xhr)
-                        $(".submit").prop("disabled", false).val("SAVE")
+                        $(".submit").removeClass("disabled").val("SAVE")
                         $(".alert").show(300)
                         $(".alert .head").html("Error")
                         $(".alert .text").html("We got the error code : " + xhr.status)
