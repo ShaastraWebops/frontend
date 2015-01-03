@@ -149,7 +149,7 @@
                                         <input class="col-sm-8 form" name="barcode" type="text" placeholder="Barcode" />
                                     </div>
                                     <div class="row" style="border-bottom: 0px;">
-                                        <input class="col-sm-12 form no-form-style btn btn-primary" name="submit" type="submit" value="Save" />
+                                        <input class="col-sm-12 form no-form-style btn btn-primary submit" name="submit" type="submit" value="Save" />
                                     </div>
                                 </div>
                             </div>
@@ -233,6 +233,60 @@
                         $(".error-msg")
                             .find(".text").html("code : " + xhr.status + "<br /> Internal error ! Contact webops" )
                     }
+                })
+            }
+            function save_data() {
+                $('#profile form').submit(function(e) {
+                    e.preventDefault();
+                    var $el = $(this)
+                    var json_info = {
+                    }
+                    $el.find('.form').each(function(i, el) {
+                        var $el = $(el);
+                        json_info[$el.attr('name')] = $el.val()
+                    })
+                    if ( json_info['password'] == "" ) {
+                        delete json_info['password']
+                    }
+                    json_info['data'] = 1
+                    $(".submit").text("Saving ...").addClass("disabled")
+                    console.log(json_info)
+                    $.ajax({ // SEND INFO FOR PROFILE
+                        type: "POST",
+                        url: "<?php echo $ERP_SITE_URL; ?>api/mobile/profile/", //<?php echo $_SESSION['user_id']; ?>/",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', "Token <?php echo $ERP_TOKEN; ?>");
+                        },
+                        cache: false,
+                        data: json_info
+                    }).done(function(res) {
+                    $(".submit").text("Save").removeClass("disabled")
+                        data = res['data']
+                        console.log(data)
+                        $(".error-msg").show(300).addClass("alert-danger").removeClass("alert-info")
+                            .find(".head").html("Saved ")
+                        $(".error-msg")
+                            .find(".text").html("Barcode : " data['barcode'] + ", Shaastra ID : " + data['user'])
+                    }).fail(function(xhr) {
+                        $(".submit").text("Save").removeClass("disabled")
+                        console.log(xhr)
+                        if ( xhr.status == 400 ) {
+                            $(".error-msg").show(300).addClass("alert-danger").removeClass("alert-info")
+                                .find(".head").html("Error Saving ")
+                            $(".error-msg")
+                                .find(".text").html("code : " + xhr.status + "<br />" + xhr['responseJSON']["message"])
+                        } else if ( xhr.status == 404 ) {
+                            $(".error-msg").show(300).addClass("alert-danger").removeClass("alert-info")
+                                .find(".head").html("Error Saving ")
+                            $(".error-msg")
+                                .find(".text").html("code : " + xhr.status + "<br /> Cannot connect to the internet" )
+                        } else if ( xhr.status == 500 ) {
+                            $(".error-msg").show(300).addClass("alert-danger").removeClass("alert-info")
+                                .find(".head").html("Error Saving ")
+                            $(".error-msg")
+                                .find(".text").html("code : " + xhr.status + "<br /> Internal error ! Contact webops" )
+                        }
+                    })
                 })
             }
         </script>
