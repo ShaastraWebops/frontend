@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <title><?php echo $name; ?> | Shaastra 2015</title>
-    <meta name="keywords" content="<?php echo $name; ?> shaastra,shaastra <?php echo $type; ?>">
+    <meta name="keywords" content="<?php echo $name; ?> shaastra,shaastra">
     <meta name"description" content="Know more about the Lecture given by <?php echo $name; ?> in Pre-shaastra Lecture series">
     <meta name="robots" content="NOODP">
     <?php include '../base/head.php' ?>
