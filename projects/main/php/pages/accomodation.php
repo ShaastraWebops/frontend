@@ -153,9 +153,9 @@
                         </div>
                         <div class="row" style="height: 30px"></div>
                         <div class="form-group">
-                            <label for="transaction" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
+                            <label for="ref_no" class="col-md-4 col-md-offset-1 text-right cost-text">SB Collect Reference Number</label>
                             <div class="col-md-2">
-                                <input class="form-control" type="text" id="transaction" name="transaction" value="">
+                                <input class="form-control ref_no" type="text" id="ref_no" name="ref_no" value="" required>
                             </div>
                             <button class="submit btn btn-primary col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         </div>
@@ -403,18 +403,20 @@
                     'format': 'yyyy-mm-dd',
                     'autoclose': true
                 });
+                $('#calc .time').timepicker({
+                    'showDuration': true,
+                    'timeFormat': 'g:ia'
+                });
                 for ( var i = 0; i < 7; i+=1 ) {
                     datepair[i] = new Datepair($('.person_' + (i+1))[0]);
                 }
 
                 $(".person input").keyup(calc)
                 $(".person").on("rangeSelected", calc)
-                $('#calc .time').timepicker({
-                    'showDuration': true,
-                    'timeFormat': 'g:ia'
-                });
+                
 
                 $(".submit").click(function(e) {
+                    $(".submit").attr("disabled", true)
                     e.preventDefault()
                     var $el = $(this)
                     var $form = $(this).closest("form")
@@ -428,6 +430,7 @@
                             json_info["end_date_" + (i+1)] = $el.find(".end.date" ).val()
                             json_info["end_time_" + (i+1)] = $el.find(".end.time").val()
                             json_info["gender_" + (i+1)] = $el.find(".gender").val()
+                            json_info["ref_no_" + (i+1)] = $el.closest("form").find(".ref_no").val()
                         }
                     }
 
@@ -445,6 +448,7 @@
                         // data = JSON.parse(res.data)
                         console.log(res.data)
                         data = res.data
+                    $(".submit").attr("disabled", false)
                         console.log("yohoho")
                         $('.error-msg').show(300)
                             .find(".alert").addClass("alert-success").removeClass("alert-danger")
@@ -455,6 +459,7 @@
                         // $('html, body').animate({scrollTop : 0},800);
                     }).fail(function(xhr) {
                         console.log(xhr.status)
+                    $(".submit").attr("disabled", false)
                         if ( xhr.status == 500 ) {
                             $('.error-msg').show(300)
                                 .find(".alert").removeClass("alert-success").addClass("alert-danger")

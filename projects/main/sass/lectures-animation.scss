@@ -154,6 +154,9 @@ div.animated-speaker#vijay-govindarajan{
 div.animated-speaker#vinita-bali{
 	@include flip_left(5,1);
 }
+div.animated-speaker#arnab-rai-choudhuri{
+	@include flip_top(7,1);
+}
 // mobile
 div.unanimated-speaker#ajit-balakrishnan{
 	@include flip_left(1,0);
@@ -182,17 +185,20 @@ div.unanimated-speaker#pawan-sinha{
 div.unanimated-speaker#ravi-venkatesan{
 	@include flip_top(9,0);
 }
-div.unanimated-speaker#vanitha-narayanan{
+div.unanimated-speaker#arnab-rai-choudhuri{
 	@include flip_left(10,0);
 }
-div.unanimated-speaker#sunil-kumar{
+div.unanimated-speaker#vanitha-narayanan{
 	@include flip_top(11,0);
 }
-div.unanimated-speaker#vijay-govindarajan{
+div.unanimated-speaker#sunil-kumar{
 	@include flip_right(12,0);
 }
-div.unanimated-speaker#vinita-bali{
+div.unanimated-speaker#vijay-govindarajan{
 	@include flip_top(13,0);
+}
+div.unanimated-speaker#vinita-bali{
+	@include flip_left(14,0);
 }
 // keyframes
 @-webkit-keyframes flip_bottom{

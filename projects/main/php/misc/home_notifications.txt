@@ -1,9 +1,11 @@
-<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">&nbsp;Check out &nbsp;exhibitions and shows page.</span></span></p>
+<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">Check out &nbsp;exhibitions and shows page.</span></span></p>
 
-<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">&nbsp;One of it&#39;s kind - Laser Show and Airshow - from best fliers in the world</span></span></p>
+<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">One of it&#39;s kind - Laser Show and Airshow - from best fliers in the world</span></span></p>
 
-<p><span style="font-size:14px"><span style="font-family:arial,sans-serif">On-spot registrations are open for events and workshops.&nbsp;</span></span></p>
+<p>Registrations for career guidance workshop have started. Check out the workshops page.&nbsp;</p>
 
 <p><span style="font-size:14px"><span style="font-family:arial,sans-serif">Check out the Shaastra Lecture Series</span></span></p>
 
 <p><span style="font-size:14px"><span style="font-family:arial,sans-serif">Gaming zone registrations have started!</span></span></p>
+
+<p>Get&nbsp;Immerse <a href="http://shaastra.org/2015/main/media/Immerse.pdf" target="_blank">here</a>.</p>

@@ -1,0 +1,349 @@
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td>
+			<p><span style="font-size:24px"><strong><u>Problem Statement :</u></strong></span></p>
+
+			<p><span style="font-size:18px; line-height:25.7142581939697px">As explained in the Cerner Industrial Lecture which was held on 03-01-2015 at 1:30 pm participants are required to create a FHIR app for Electronic Health Records.</span></p>
+
+			<p>Here is the Profiles by our FHIR service. Though <a href="http://www.hl7.org/implement/standards/fhir/profile.html">profiles</a> are shared as a separate resource, currently its been outlined below for better and quick understanding:</p>
+
+			<p>&nbsp;</p>
+
+			<p>Base URL:<a href="http://10.190.224.134/fhir/open">http://shaastra-fhir.herokuapp.com/fhir/open</a></p>
+
+			<p>Example: <a href="http://10.190.224.134/fhir/open/Patient/7">http://shaastra-fhir.herokuapp.com/fhir/open/Patient/7</a></p>
+
+			<p>SMART App: <a href="http://shaastra-fhir.herokuapp.com/fhir/fhir-smart-app/dashboard.html">http://shaastra-fhir.herokuapp.com/fhir/fhir-smart-app/dashboard.html</a></p>
+
+			<p>Headers:&nbsp; Accept: application/json</p>
+
+			<p>Content-Type: application/json</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="height:695px; width:746px">
+	<tbody>
+		<tr>
+			<td style="height:35px; width:173px">
+			<p>Resource (Links to Hl7.org)</p>
+			</td>
+			<td style="height:35px; width:193px">
+			<p>Profiles</p>
+			</td>
+			<td style="height:35px; width:207px">
+			<p>Example</p>
+			</td>
+			<td style="height:35px; width:173px">
+			<p>Search Parameters</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/allergyintolerance.html">AllergyIntolerance</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/AllergyIntolerance?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/AllergyIntolerance?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>/AllergyIntolerance (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/AdverseReaction/_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/AdverseReaction/1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Substance/_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Substance/1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/condition.html">Condition</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/Condition?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Condition?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>Condition.code</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Condition?encounter=_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Condition?encounter=1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>Condition.status</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:35px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:35px; width:193px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:35px; width:207px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:35px; width:173px">
+			<p>/Condition (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/encounter.html">Encounter</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/Encounter?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Encounter?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>Encounter.status</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Encounter/_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Encounter/1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>/Encounter (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Encounter?status=</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Encounter?status=Active</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Encounter</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Encounter</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/immunization.html">Immunization</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/Immunization?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Immunization?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>/Immunization (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Immunization/_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Immunization/1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:43px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/medication.html">Medication</a></p>
+			</td>
+			<td style="height:43px; width:193px">
+			<p>/Medication/_id</p>
+			</td>
+			<td style="height:43px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Medication/1</p>
+			</td>
+			<td style="height:43px; width:173px">
+			<p>/Medication (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:27px; width:173px">
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:27px; width:193px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:27px; width:207px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:27px; width:173px">
+			<p>Medication.name=</p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" dir="ltr" style="height:487px; width:746px">
+	<tbody>
+		<tr>
+			<td style="height:62px; width:173px">
+			<p>Resource (Links to Hl7.org)</p>
+			</td>
+			<td style="height:62px; width:193px">
+			<p>Profiles</p>
+			</td>
+			<td style="height:62px; width:207px">
+			<p>Example</p>
+			</td>
+			<td style="height:62px; width:173px">
+			<p>Search Parameters</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/observation.html">Observation</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/Observation?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Observation?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>/Observation (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:48px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:48px; width:193px">
+			<p>/Observation/_id</p>
+			</td>
+			<td style="height:48px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Observation/1</p>
+			</td>
+			<td style="height:48px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:63px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/medicationprescription.html">MedicationPrescription</a></p>
+			</td>
+			<td style="height:63px; width:193px">
+			<p>/MedicationPrescription?subject:Patient=_id</p>
+			</td>
+			<td style="height:63px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/MedicationPrescription?subject:Patient=1</p>
+			</td>
+			<td style="height:63px; width:173px">
+			<p>/MedicationPrescription (All instances)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:101px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:101px; width:193px">
+			<p>/MedicationPrescription/_id</p>
+			</td>
+			<td style="height:101px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/MedicationPrescription/1</p>
+			</td>
+			<td style="height:101px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:101px; width:173px">
+			<p><a href="http://www.hl7.org/implement/standards/fhir/patient.html">Patient</a></p>
+			</td>
+			<td style="height:101px; width:193px">
+			<p>/Patient?given=&amp;name=&amp;family=&amp;identifier=</p>
+			</td>
+			<td style="height:101px; width:207px">
+			<p>http://shaastra-fhir.herokuapp.com/fhir/open/Patient?given=rob</p>
+			</td>
+			<td style="height:101px; width:173px">
+			<p>/Patient (all instances<font color="#454545">)</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:48px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:48px; width:193px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:48px; width:207px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="height:48px; width:173px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

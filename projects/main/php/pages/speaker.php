@@ -5,7 +5,7 @@
 		<?php
             $speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
-                "ravi venkatesan", "stephen wolfram", "sunil kumar", "vanitha narayanan",
+                "ravi venkatesan", "arnab rai choudhuri", "sunil kumar", "vanitha narayanan",
                 "vijay govindarajan", "vinita bali"
             );
 

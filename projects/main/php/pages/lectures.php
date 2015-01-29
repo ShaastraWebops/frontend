@@ -117,7 +117,7 @@
     <?php
 		$speakers = array( "ajit balakrishnan", "archana sharma", "arogyaswami paulraj",
                 "ela bhatt", "gurtej sandhu", "partha mitra", "pawan sinha", "rajeeva karandikar",
-                "ravi venkatesan", "sunil kumar", "vanitha narayanan",
+                "ravi venkatesan", "arnab rai choudhuri", "sunil kumar", "vanitha narayanan",
                 "vijay govindarajan", "vinita bali"
             );
 		$speaker_count = count($speakers);
@@ -129,8 +129,8 @@
         </div>
     </div>
 	<div class="container-fluid speaker-list hidden-xs hidden-sm">
-	    <?php for($i = 0; $i < $speaker_count+2; $i++) { ?>
-			<?php 	if($i<=5) {?>
+	    <?php for($i = 0; $i < $speaker_count+1; $i++) { ?>
+			<?php if($i < $speaker_count/2) {?>
 		        <div class="speaker">
 					<div class="animated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$i]) ?>"
 			        	style="background-image:url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$i]); ?>.jpg)">
@@ -149,32 +149,13 @@
 	        		</div>
 		        </div>
         	<?php } ?>
-    		<?php if($i==6 || $i==8) { ?>
+    		<?php if($i == $speaker_count/2) { ?>
 	        	<div class="speaker title-tile" id="shaastra-lectures" style="background-image: url(../../img/logo/200x200_dice_white.png)">
 		            <a >
 			        </a>
 		        </div>
 			<?php } ?>
-			<?php if($i==7) { $speaker_i=$i-1;?>
-		        <div class="speaker">
-		        	<div class="animated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$speaker_i]) ?>"
-		        	style="background-image: url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg)">
-			            <a href="../pages/speaker.php?name=<?php echo urlencode($speakers[$speaker_i]) ?>">
-							<span class='vertical-table'>
-							    <span class='vertical-table-cell text-center'>
-									<span class="speaker-name">
-										<?php echo substr($speakers[$speaker_i],0, strpos($speakers[$speaker_i], ' ')); ?>
-									</span>
-									<span class="speaker-name bold">
-										<?php echo substr($speakers[$speaker_i],strpos($speakers[$speaker_i], ' ')); ?>
-									</span>
-					    		</span>
-							</span>
-				        </a>
-			        </div>
-		        </div>
-        	<?php } ?>
-			<?php if($i>=9) { $speaker_i=$i-2;?>
+			<?php if($i > $speaker_count/2) { $speaker_i=$i-1;?>
 		        <div class="speaker">
 		        	<div class="animated-speaker" id="<?php echo str_replace(' ', '-', $speakers[$speaker_i]) ?>"
 		        	style="background-image: url(../../img/lectures/small/<?php echo str_replace(' ', '%20', $speakers[$speaker_i]); ?>.jpg)">
