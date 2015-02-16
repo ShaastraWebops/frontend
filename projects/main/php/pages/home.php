@@ -545,6 +545,11 @@
                 width: 75px;
                 float: left;
             }
+            .znet-logo img {
+                height: 75px;
+                width: 100px;
+                float: left;
+            }
             .saarang-logo img {
                 height: 75px;
                 width: 150px;
@@ -564,6 +569,9 @@
             .tuv-logo:hover {
                 padding: 0;
             }
+            .znet-logo:hover {
+                padding: 0;
+            }
             .unesco-logo:hover {
                 padding: 0;
             }
@@ -578,6 +586,10 @@
             .tuv-logo:hover img {
                 height: 85px;
                 width: 85px;
+            }
+            .znet-logo:hover img {
+                height: 85px;
+                width: 170px;
             }
             .unesco-logo:hover img {
                 height: 85px;
@@ -596,6 +608,9 @@
                     </a>
                     <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
                         <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
+                    </a>
+                    <a target="_blank" class="znet-logo col-centered" href="http://www.znetlive.com">
+                        <img class="img-responsive" src="../../img/znetlive.jpg" alt="znet logo"/>
                     </a>
                 </div>
             </div>
