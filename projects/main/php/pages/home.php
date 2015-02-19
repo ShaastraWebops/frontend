@@ -609,9 +609,6 @@
                     <a target="_blank" class="tuv-logo col-centered" href="../../php/pages/about.php">
                         <img class="img-responsive" src="../../img/logo/iso_white.png" alt="iso logo"/>
                     </a>
-                    <a target="_blank" class="znet-logo col-centered" href="http://www.znetlive.com">
-                        <img class="img-responsive" src="../../img/znetlive.jpg" alt="znet logo"/>
-                    </a>
                 </div>
             </div>
             <div class="row logo-vertical social-cause-logo-vertical row-centered hidden-sm">
@@ -621,6 +618,10 @@
                 <!-- <a target="_blank" class="unesco-logo col-xs-12 col-centered" href="http://www.unesco.org">
                     <img class="img-responsive" src="http://placehold.it/150x75" alt="">
                 </a> -->
+                Website Hosted by 
+                <a target="_blank" class="znet-logo col-centered" href="https://www.znetlive.com/buy-domains/cheap-com-sale-89/">
+                    <img class="img-responsive" src="../../img/znetlive.jpg" alt="znet logo"/>
+                </a>
             </div>
             <style>
                 /* Social Icons used in places */
