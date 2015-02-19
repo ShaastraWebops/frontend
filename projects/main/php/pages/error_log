@@ -3432,3 +3432,6 @@
 [18-Feb-2015 13:51:10 Asia/Kolkata] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [18-Feb-2015 14:08:40 Asia/Kolkata] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
 [18-Feb-2015 15:56:22 Asia/Kolkata] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[18-Feb-2015 18:26:18 Asia/Kolkata] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
+[19-Feb-2015 08:55:42 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php:5) in /home/shaastra/public_html/2015/production/projects/main/php/pages/speaker.php on line 17
+[19-Feb-2015 17:23:36 Asia/Kolkata] PHP Notice:  Undefined variable: tab_list in /home/shaastra/public_html/2015/production/projects/main/php/pages/event.php on line 55
